@@ -186,7 +186,7 @@ const example = new aws.storagegateway.SmbFileShare("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/storagegateway/#SmbFileShare">SmbFileShare</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/storagegateway/#SmbFileShareArgs">SmbFileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/storagegateway/#SmbFileShare">SmbFileShare</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/storagegateway/#SmbFileShareArgs">SmbFileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -194,11 +194,11 @@ const example = new aws.storagegateway.SmbFileShare("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#SmbFileShare">NewSmbFileShare</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#SmbFileShareArgs">SmbFileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#SmbFileShare">SmbFileShare</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#SmbFileShare">NewSmbFileShare</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#SmbFileShareArgs">SmbFileShareArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#SmbFileShare">SmbFileShare</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.SmbFileShare.html">SmbFileShare</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.SmbFileShareArgs.html">SmbFileShareArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.SmbFileShare.html">SmbFileShare</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.SmbFileShareArgs.html">SmbFileShareArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -209,7 +209,7 @@ const example = new aws.storagegateway.SmbFileShare("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -278,7 +278,7 @@ const example = new aws.storagegateway.SmbFileShare("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -317,7 +317,7 @@ const example = new aws.storagegateway.SmbFileShare("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -367,7 +367,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gatewayarn_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -377,7 +377,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#locationarn_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -387,7 +387,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -397,7 +397,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#accessbasedenumeration_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Based<wbr>Enumeration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The files and folders on this share will only be visible to users with read access. Default value is `false`.
 {{% /md %}}</dd>
@@ -407,7 +407,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#adminuserlists_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that have admin access to the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -417,7 +417,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#auditdestinationarn_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Destination<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Log Group used for the audit logs.
 {{% /md %}}</dd>
@@ -427,7 +427,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
 {{% /md %}}</dd>
@@ -447,7 +447,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#casesensitivity_csharp" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The case of an object name in an Amazon S3 bucket. For `ClientSpecified`, the client determines the case sensitivity. For `CaseSensitive`, the gateway determines the case sensitivity. The default value is `ClientSpecified`.
 {{% /md %}}</dd>
@@ -457,7 +457,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#defaultstorageclass_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -467,7 +467,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#filesharename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd>
@@ -477,7 +477,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#guessmimetypeenabled_csharp" style="color: inherit; text-decoration: inherit;">Guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -487,7 +487,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#invaliduserlists_csharp" style="color: inherit; text-decoration: inherit;">Invalid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are not allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -497,7 +497,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kmsencrypted_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -517,7 +517,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#notificationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd>
@@ -527,7 +527,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#objectacl_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -537,7 +537,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -547,7 +547,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#requesterpays_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -557,7 +557,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#smbaclenabled_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Acl<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this value to `true` to enable ACL (access control list) on the SMB fileshare. Set it to `false` to map file and directory permissions to the POSIX permissions. This setting applies only to `ActiveDirectory` authentication type.
 {{% /md %}}</dd>
@@ -577,7 +577,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#validuserlists_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -593,7 +593,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gatewayarn_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -603,7 +603,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#locationarn_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -613,7 +613,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -623,7 +623,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#accessbasedenumeration_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Based<wbr>Enumeration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The files and folders on this share will only be visible to users with read access. Default value is `false`.
 {{% /md %}}</dd>
@@ -633,7 +633,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#adminuserlists_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that have admin access to the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -643,7 +643,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#auditdestinationarn_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Destination<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Log Group used for the audit logs.
 {{% /md %}}</dd>
@@ -653,7 +653,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
 {{% /md %}}</dd>
@@ -673,7 +673,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#casesensitivity_go" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The case of an object name in an Amazon S3 bucket. For `ClientSpecified`, the client determines the case sensitivity. For `CaseSensitive`, the gateway determines the case sensitivity. The default value is `ClientSpecified`.
 {{% /md %}}</dd>
@@ -683,7 +683,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#defaultstorageclass_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -693,7 +693,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#filesharename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd>
@@ -703,7 +703,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#guessmimetypeenabled_go" style="color: inherit; text-decoration: inherit;">Guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -713,7 +713,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#invaliduserlists_go" style="color: inherit; text-decoration: inherit;">Invalid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are not allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -723,7 +723,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kmsencrypted_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -733,7 +733,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -743,7 +743,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#notificationpolicy_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd>
@@ -753,7 +753,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#objectacl_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -763,7 +763,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -773,7 +773,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#requesterpays_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -783,7 +783,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#smbaclenabled_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Acl<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this value to `true` to enable ACL (access control list) on the SMB fileshare. Set it to `false` to map file and directory permissions to the POSIX permissions. This setting applies only to `ActiveDirectory` authentication type.
 {{% /md %}}</dd>
@@ -803,7 +803,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#validuserlists_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -819,7 +819,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gatewayarn_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -829,7 +829,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#locationarn_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -849,7 +849,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#accessbasedenumeration_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Based<wbr>Enumeration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The files and folders on this share will only be visible to users with read access. Default value is `false`.
 {{% /md %}}</dd>
@@ -859,7 +859,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#adminuserlists_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that have admin access to the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -869,7 +869,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#auditdestinationarn_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Destination<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Log Group used for the audit logs.
 {{% /md %}}</dd>
@@ -879,7 +879,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
 {{% /md %}}</dd>
@@ -899,7 +899,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#casesensitivity_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The case of an object name in an Amazon S3 bucket. For `ClientSpecified`, the client determines the case sensitivity. For `CaseSensitive`, the gateway determines the case sensitivity. The default value is `ClientSpecified`.
 {{% /md %}}</dd>
@@ -909,7 +909,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#defaultstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -919,7 +919,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#filesharename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd>
@@ -929,7 +929,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#guessmimetypeenabled_nodejs" style="color: inherit; text-decoration: inherit;">guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -939,7 +939,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#invaliduserlists_nodejs" style="color: inherit; text-decoration: inherit;">invalid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are not allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -949,7 +949,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kmsencrypted_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -959,7 +959,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -969,7 +969,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#notificationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd>
@@ -979,7 +979,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#objectacl_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -989,7 +989,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -999,7 +999,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1009,7 +1009,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#smbaclenabled_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Acl<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this value to `true` to enable ACL (access control list) on the SMB fileshare. Set it to `false` to map file and directory permissions to the POSIX permissions. This setting applies only to `ActiveDirectory` authentication type.
 {{% /md %}}</dd>
@@ -1029,7 +1029,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#validuserlists_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -1045,7 +1045,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#gateway_arn_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -1055,7 +1055,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#location_arn_python" style="color: inherit; text-decoration: inherit;">location_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -1065,7 +1065,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -1075,7 +1075,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#access_based_enumeration_python" style="color: inherit; text-decoration: inherit;">access_<wbr>based_<wbr>enumeration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The files and folders on this share will only be visible to users with read access. Default value is `false`.
 {{% /md %}}</dd>
@@ -1085,7 +1085,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#admin_user_lists_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that have admin access to the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -1095,7 +1095,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#audit_destination_arn_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>destination_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Log Group used for the audit logs.
 {{% /md %}}</dd>
@@ -1105,7 +1105,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
 {{% /md %}}</dd>
@@ -1125,7 +1125,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#case_sensitivity_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The case of an object name in an Amazon S3 bucket. For `ClientSpecified`, the client determines the case sensitivity. For `CaseSensitive`, the gateway determines the case sensitivity. The default value is `ClientSpecified`.
 {{% /md %}}</dd>
@@ -1135,7 +1135,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#default_storage_class_python" style="color: inherit; text-decoration: inherit;">default_<wbr>storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -1145,7 +1145,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#file_share_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd>
@@ -1155,7 +1155,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#guess_mime_type_enabled_python" style="color: inherit; text-decoration: inherit;">guess_<wbr>mime_<wbr>type_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1165,7 +1165,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#invalid_user_lists_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>user_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are not allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -1175,7 +1175,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kms_encrypted_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1185,7 +1185,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -1195,7 +1195,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#notification_policy_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd>
@@ -1205,7 +1205,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#object_acl_python" style="color: inherit; text-decoration: inherit;">object_<wbr>acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -1215,7 +1215,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1225,7 +1225,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1235,7 +1235,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#smb_acl_enabled_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>acl_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this value to `true` to enable ACL (access control list) on the SMB fileshare. Set it to `false` to map file and directory permissions to the POSIX permissions. This setting applies only to `ActiveDirectory` authentication type.
 {{% /md %}}</dd>
@@ -1255,7 +1255,7 @@ The SmbFileShare resource accepts the following [input]({{< relref "/docs/intro/
 <a href="#valid_user_lists_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>user_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -1278,7 +1278,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SMB File Share.
 {{% /md %}}</dd>
@@ -1288,7 +1288,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileshareid_csharp" style="color: inherit; text-decoration: inherit;">Fileshare<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the SMB File Share.
 {{% /md %}}</dd>
@@ -1298,7 +1298,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1307,7 +1307,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -1323,7 +1323,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SMB File Share.
 {{% /md %}}</dd>
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileshareid_go" style="color: inherit; text-decoration: inherit;">Fileshare<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the SMB File Share.
 {{% /md %}}</dd>
@@ -1343,7 +1343,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1352,7 +1352,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -1368,7 +1368,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SMB File Share.
 {{% /md %}}</dd>
@@ -1378,7 +1378,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileshareid_nodejs" style="color: inherit; text-decoration: inherit;">fileshare<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the SMB File Share.
 {{% /md %}}</dd>
@@ -1388,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1397,7 +1397,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -1413,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SMB File Share.
 {{% /md %}}</dd>
@@ -1423,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#fileshare_id_python" style="color: inherit; text-decoration: inherit;">fileshare_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the SMB File Share.
 {{% /md %}}</dd>
@@ -1433,7 +1433,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1442,7 +1442,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -1457,7 +1457,7 @@ Get an existing SmbFileShare resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/storagegateway/#SmbFileShareState">SmbFileShareState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/storagegateway/#SmbFileShare">SmbFileShare</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/storagegateway/#SmbFileShareState">SmbFileShareState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/storagegateway/#SmbFileShare">SmbFileShare</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1466,11 +1466,11 @@ Get an existing SmbFileShare resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSmbFileShare<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#SmbFileShareState">SmbFileShareState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#SmbFileShare">SmbFileShare</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSmbFileShare<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#SmbFileShareState">SmbFileShareState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/storagegateway?tab=doc#SmbFileShare">SmbFileShare</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.SmbFileShare.html">SmbFileShare</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.SmbFileShareState.html">SmbFileShareState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.SmbFileShare.html">SmbFileShare</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.StorageGateway.SmbFileShareState.html">SmbFileShareState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1581,7 +1581,7 @@ The following state arguments are supported:
 <a href="#state_accessbasedenumeration_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Based<wbr>Enumeration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The files and folders on this share will only be visible to users with read access. Default value is `false`.
 {{% /md %}}</dd>
@@ -1591,7 +1591,7 @@ The following state arguments are supported:
 <a href="#state_adminuserlists_csharp" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that have admin access to the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -1601,7 +1601,7 @@ The following state arguments are supported:
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SMB File Share.
 {{% /md %}}</dd>
@@ -1611,7 +1611,7 @@ The following state arguments are supported:
 <a href="#state_auditdestinationarn_csharp" style="color: inherit; text-decoration: inherit;">Audit<wbr>Destination<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Log Group used for the audit logs.
 {{% /md %}}</dd>
@@ -1621,7 +1621,7 @@ The following state arguments are supported:
 <a href="#state_authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
 {{% /md %}}</dd>
@@ -1641,7 +1641,7 @@ The following state arguments are supported:
 <a href="#state_casesensitivity_csharp" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The case of an object name in an Amazon S3 bucket. For `ClientSpecified`, the client determines the case sensitivity. For `CaseSensitive`, the gateway determines the case sensitivity. The default value is `ClientSpecified`.
 {{% /md %}}</dd>
@@ -1651,7 +1651,7 @@ The following state arguments are supported:
 <a href="#state_defaultstorageclass_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -1661,7 +1661,7 @@ The following state arguments are supported:
 <a href="#state_filesharename_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd>
@@ -1671,7 +1671,7 @@ The following state arguments are supported:
 <a href="#state_fileshareid_csharp" style="color: inherit; text-decoration: inherit;">Fileshare<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the SMB File Share.
 {{% /md %}}</dd>
@@ -1681,7 +1681,7 @@ The following state arguments are supported:
 <a href="#state_gatewayarn_csharp" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -1691,7 +1691,7 @@ The following state arguments are supported:
 <a href="#state_guessmimetypeenabled_csharp" style="color: inherit; text-decoration: inherit;">Guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1701,7 +1701,7 @@ The following state arguments are supported:
 <a href="#state_invaliduserlists_csharp" style="color: inherit; text-decoration: inherit;">Invalid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are not allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -1711,7 +1711,7 @@ The following state arguments are supported:
 <a href="#state_kmsencrypted_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1721,7 +1721,7 @@ The following state arguments are supported:
 <a href="#state_kmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -1731,7 +1731,7 @@ The following state arguments are supported:
 <a href="#state_locationarn_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -1741,7 +1741,7 @@ The following state arguments are supported:
 <a href="#state_notificationpolicy_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd>
@@ -1751,7 +1751,7 @@ The following state arguments are supported:
 <a href="#state_objectacl_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -1761,7 +1761,7 @@ The following state arguments are supported:
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -1771,7 +1771,7 @@ The following state arguments are supported:
 <a href="#state_readonly_csharp" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1781,7 +1781,7 @@ The following state arguments are supported:
 <a href="#state_requesterpays_csharp" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1791,7 +1791,7 @@ The following state arguments are supported:
 <a href="#state_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -1801,7 +1801,7 @@ The following state arguments are supported:
 <a href="#state_smbaclenabled_csharp" style="color: inherit; text-decoration: inherit;">Smb<wbr>Acl<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this value to `true` to enable ACL (access control list) on the SMB fileshare. Set it to `false` to map file and directory permissions to the POSIX permissions. This setting applies only to `ActiveDirectory` authentication type.
 {{% /md %}}</dd>
@@ -1821,7 +1821,7 @@ The following state arguments are supported:
 <a href="#state_validuserlists_csharp" style="color: inherit; text-decoration: inherit;">Valid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -1837,7 +1837,7 @@ The following state arguments are supported:
 <a href="#state_accessbasedenumeration_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Based<wbr>Enumeration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The files and folders on this share will only be visible to users with read access. Default value is `false`.
 {{% /md %}}</dd>
@@ -1847,7 +1847,7 @@ The following state arguments are supported:
 <a href="#state_adminuserlists_go" style="color: inherit; text-decoration: inherit;">Admin<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that have admin access to the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -1857,7 +1857,7 @@ The following state arguments are supported:
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SMB File Share.
 {{% /md %}}</dd>
@@ -1867,7 +1867,7 @@ The following state arguments are supported:
 <a href="#state_auditdestinationarn_go" style="color: inherit; text-decoration: inherit;">Audit<wbr>Destination<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Log Group used for the audit logs.
 {{% /md %}}</dd>
@@ -1877,7 +1877,7 @@ The following state arguments are supported:
 <a href="#state_authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
 {{% /md %}}</dd>
@@ -1897,7 +1897,7 @@ The following state arguments are supported:
 <a href="#state_casesensitivity_go" style="color: inherit; text-decoration: inherit;">Case<wbr>Sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The case of an object name in an Amazon S3 bucket. For `ClientSpecified`, the client determines the case sensitivity. For `CaseSensitive`, the gateway determines the case sensitivity. The default value is `ClientSpecified`.
 {{% /md %}}</dd>
@@ -1907,7 +1907,7 @@ The following state arguments are supported:
 <a href="#state_defaultstorageclass_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -1917,7 +1917,7 @@ The following state arguments are supported:
 <a href="#state_filesharename_go" style="color: inherit; text-decoration: inherit;">File<wbr>Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd>
@@ -1927,7 +1927,7 @@ The following state arguments are supported:
 <a href="#state_fileshareid_go" style="color: inherit; text-decoration: inherit;">Fileshare<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the SMB File Share.
 {{% /md %}}</dd>
@@ -1937,7 +1937,7 @@ The following state arguments are supported:
 <a href="#state_gatewayarn_go" style="color: inherit; text-decoration: inherit;">Gateway<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -1947,7 +1947,7 @@ The following state arguments are supported:
 <a href="#state_guessmimetypeenabled_go" style="color: inherit; text-decoration: inherit;">Guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1957,7 +1957,7 @@ The following state arguments are supported:
 <a href="#state_invaliduserlists_go" style="color: inherit; text-decoration: inherit;">Invalid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are not allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -1967,7 +1967,7 @@ The following state arguments are supported:
 <a href="#state_kmsencrypted_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1977,7 +1977,7 @@ The following state arguments are supported:
 <a href="#state_kmskeyarn_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -1987,7 +1987,7 @@ The following state arguments are supported:
 <a href="#state_locationarn_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -1997,7 +1997,7 @@ The following state arguments are supported:
 <a href="#state_notificationpolicy_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd>
@@ -2007,7 +2007,7 @@ The following state arguments are supported:
 <a href="#state_objectacl_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -2017,7 +2017,7 @@ The following state arguments are supported:
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -2027,7 +2027,7 @@ The following state arguments are supported:
 <a href="#state_readonly_go" style="color: inherit; text-decoration: inherit;">Read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2037,7 +2037,7 @@ The following state arguments are supported:
 <a href="#state_requesterpays_go" style="color: inherit; text-decoration: inherit;">Requester<wbr>Pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2047,7 +2047,7 @@ The following state arguments are supported:
 <a href="#state_rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -2057,7 +2057,7 @@ The following state arguments are supported:
 <a href="#state_smbaclenabled_go" style="color: inherit; text-decoration: inherit;">Smb<wbr>Acl<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this value to `true` to enable ACL (access control list) on the SMB fileshare. Set it to `false` to map file and directory permissions to the POSIX permissions. This setting applies only to `ActiveDirectory` authentication type.
 {{% /md %}}</dd>
@@ -2077,7 +2077,7 @@ The following state arguments are supported:
 <a href="#state_validuserlists_go" style="color: inherit; text-decoration: inherit;">Valid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -2093,7 +2093,7 @@ The following state arguments are supported:
 <a href="#state_accessbasedenumeration_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Based<wbr>Enumeration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The files and folders on this share will only be visible to users with read access. Default value is `false`.
 {{% /md %}}</dd>
@@ -2103,7 +2103,7 @@ The following state arguments are supported:
 <a href="#state_adminuserlists_nodejs" style="color: inherit; text-decoration: inherit;">admin<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that have admin access to the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -2113,7 +2113,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SMB File Share.
 {{% /md %}}</dd>
@@ -2123,7 +2123,7 @@ The following state arguments are supported:
 <a href="#state_auditdestinationarn_nodejs" style="color: inherit; text-decoration: inherit;">audit<wbr>Destination<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Log Group used for the audit logs.
 {{% /md %}}</dd>
@@ -2133,7 +2133,7 @@ The following state arguments are supported:
 <a href="#state_authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
 {{% /md %}}</dd>
@@ -2153,7 +2153,7 @@ The following state arguments are supported:
 <a href="#state_casesensitivity_nodejs" style="color: inherit; text-decoration: inherit;">case<wbr>Sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The case of an object name in an Amazon S3 bucket. For `ClientSpecified`, the client determines the case sensitivity. For `CaseSensitive`, the gateway determines the case sensitivity. The default value is `ClientSpecified`.
 {{% /md %}}</dd>
@@ -2163,7 +2163,7 @@ The following state arguments are supported:
 <a href="#state_defaultstorageclass_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Storage<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -2173,7 +2173,7 @@ The following state arguments are supported:
 <a href="#state_filesharename_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Share<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd>
@@ -2183,7 +2183,7 @@ The following state arguments are supported:
 <a href="#state_fileshareid_nodejs" style="color: inherit; text-decoration: inherit;">fileshare<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the SMB File Share.
 {{% /md %}}</dd>
@@ -2193,7 +2193,7 @@ The following state arguments are supported:
 <a href="#state_gatewayarn_nodejs" style="color: inherit; text-decoration: inherit;">gateway<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -2203,7 +2203,7 @@ The following state arguments are supported:
 <a href="#state_guessmimetypeenabled_nodejs" style="color: inherit; text-decoration: inherit;">guess<wbr>Mime<wbr>Type<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -2213,7 +2213,7 @@ The following state arguments are supported:
 <a href="#state_invaliduserlists_nodejs" style="color: inherit; text-decoration: inherit;">invalid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are not allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -2223,7 +2223,7 @@ The following state arguments are supported:
 <a href="#state_kmsencrypted_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2233,7 +2233,7 @@ The following state arguments are supported:
 <a href="#state_kmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -2243,7 +2243,7 @@ The following state arguments are supported:
 <a href="#state_locationarn_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -2253,7 +2253,7 @@ The following state arguments are supported:
 <a href="#state_notificationpolicy_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd>
@@ -2263,7 +2263,7 @@ The following state arguments are supported:
 <a href="#state_objectacl_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -2273,7 +2273,7 @@ The following state arguments are supported:
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -2283,7 +2283,7 @@ The following state arguments are supported:
 <a href="#state_readonly_nodejs" style="color: inherit; text-decoration: inherit;">read<wbr>Only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2293,7 +2293,7 @@ The following state arguments are supported:
 <a href="#state_requesterpays_nodejs" style="color: inherit; text-decoration: inherit;">requester<wbr>Pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2303,7 +2303,7 @@ The following state arguments are supported:
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -2313,7 +2313,7 @@ The following state arguments are supported:
 <a href="#state_smbaclenabled_nodejs" style="color: inherit; text-decoration: inherit;">smb<wbr>Acl<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this value to `true` to enable ACL (access control list) on the SMB fileshare. Set it to `false` to map file and directory permissions to the POSIX permissions. This setting applies only to `ActiveDirectory` authentication type.
 {{% /md %}}</dd>
@@ -2333,7 +2333,7 @@ The following state arguments are supported:
 <a href="#state_validuserlists_nodejs" style="color: inherit; text-decoration: inherit;">valid<wbr>User<wbr>Lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -2349,7 +2349,7 @@ The following state arguments are supported:
 <a href="#state_access_based_enumeration_python" style="color: inherit; text-decoration: inherit;">access_<wbr>based_<wbr>enumeration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The files and folders on this share will only be visible to users with read access. Default value is `false`.
 {{% /md %}}</dd>
@@ -2359,7 +2359,7 @@ The following state arguments are supported:
 <a href="#state_admin_user_lists_python" style="color: inherit; text-decoration: inherit;">admin_<wbr>user_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that have admin access to the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -2369,7 +2369,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the SMB File Share.
 {{% /md %}}</dd>
@@ -2379,7 +2379,7 @@ The following state arguments are supported:
 <a href="#state_audit_destination_arn_python" style="color: inherit; text-decoration: inherit;">audit_<wbr>destination_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the CloudWatch Log Group used for the audit logs.
 {{% /md %}}</dd>
@@ -2389,7 +2389,7 @@ The following state arguments are supported:
 <a href="#state_authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The authentication method that users use to access the file share. Defaults to `ActiveDirectory`. Valid values: `ActiveDirectory`, `GuestAccess`.
 {{% /md %}}</dd>
@@ -2409,7 +2409,7 @@ The following state arguments are supported:
 <a href="#state_case_sensitivity_python" style="color: inherit; text-decoration: inherit;">case_<wbr>sensitivity</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The case of an object name in an Amazon S3 bucket. For `ClientSpecified`, the client determines the case sensitivity. For `CaseSensitive`, the gateway determines the case sensitivity. The default value is `ClientSpecified`.
 {{% /md %}}</dd>
@@ -2419,7 +2419,7 @@ The following state arguments are supported:
 <a href="#state_default_storage_class_python" style="color: inherit; text-decoration: inherit;">default_<wbr>storage_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default storage class for objects put into an Amazon S3 bucket by the file gateway. Defaults to `S3_STANDARD`. Valid values: `S3_STANDARD`, `S3_STANDARD_IA`, `S3_ONEZONE_IA`.
 {{% /md %}}</dd>
@@ -2429,7 +2429,7 @@ The following state arguments are supported:
 <a href="#state_file_share_name_python" style="color: inherit; text-decoration: inherit;">file_<wbr>share_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the file share. Must be set if an S3 prefix name is set in `location_arn`.
 {{% /md %}}</dd>
@@ -2439,7 +2439,7 @@ The following state arguments are supported:
 <a href="#state_fileshare_id_python" style="color: inherit; text-decoration: inherit;">fileshare_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the SMB File Share.
 {{% /md %}}</dd>
@@ -2449,7 +2449,7 @@ The following state arguments are supported:
 <a href="#state_gateway_arn_python" style="color: inherit; text-decoration: inherit;">gateway_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the file gateway.
 {{% /md %}}</dd>
@@ -2459,7 +2459,7 @@ The following state arguments are supported:
 <a href="#state_guess_mime_type_enabled_python" style="color: inherit; text-decoration: inherit;">guess_<wbr>mime_<wbr>type_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value that enables guessing of the MIME type for uploaded objects based on file extensions. Defaults to `true`.
 {{% /md %}}</dd>
@@ -2469,7 +2469,7 @@ The following state arguments are supported:
 <a href="#state_invalid_user_lists_python" style="color: inherit; text-decoration: inherit;">invalid_<wbr>user_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are not allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -2479,7 +2479,7 @@ The following state arguments are supported:
 <a href="#state_kms_encrypted_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean value if `true` to use Amazon S3 server side encryption with your own AWS KMS key, or `false` to use a key managed by Amazon S3. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2489,7 +2489,7 @@ The following state arguments are supported:
 <a href="#state_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) for KMS key used for Amazon S3 server side encryption. This value can only be set when `kms_encrypted` is true.
 {{% /md %}}</dd>
@@ -2499,7 +2499,7 @@ The following state arguments are supported:
 <a href="#state_location_arn_python" style="color: inherit; text-decoration: inherit;">location_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the backed storage used for storing file data.
 {{% /md %}}</dd>
@@ -2509,7 +2509,7 @@ The following state arguments are supported:
 <a href="#state_notification_policy_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The notification policy of the file share. For more information see the [AWS Documentation](https://docs.aws.amazon.com/storagegateway/latest/APIReference/API_CreateNFSFileShare.html#StorageGateway-CreateNFSFileShare-request-NotificationPolicy). Default value is `{}`.
 {{% /md %}}</dd>
@@ -2519,7 +2519,7 @@ The following state arguments are supported:
 <a href="#state_object_acl_python" style="color: inherit; text-decoration: inherit;">object_<wbr>acl</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Access Control List permission for S3 bucket objects. Defaults to `private`.
 {{% /md %}}</dd>
@@ -2529,7 +2529,7 @@ The following state arguments are supported:
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}File share path used by the NFS client to identify the mount point.
 {{% /md %}}</dd>
@@ -2539,7 +2539,7 @@ The following state arguments are supported:
 <a href="#state_read_only_python" style="color: inherit; text-decoration: inherit;">read_<wbr>only</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to indicate write status of file share. File share does not accept writes if `true`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2549,7 +2549,7 @@ The following state arguments are supported:
 <a href="#state_requester_pays_python" style="color: inherit; text-decoration: inherit;">requester_<wbr>pays</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to `true` if you want the requester to pay instead of the bucket owner. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2559,7 +2559,7 @@ The following state arguments are supported:
 <a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.
 {{% /md %}}</dd>
@@ -2569,7 +2569,7 @@ The following state arguments are supported:
 <a href="#state_smb_acl_enabled_python" style="color: inherit; text-decoration: inherit;">smb_<wbr>acl_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this value to `true` to enable ACL (access control list) on the SMB fileshare. Set it to `false` to map file and directory permissions to the POSIX permissions. This setting applies only to `ActiveDirectory` authentication type.
 {{% /md %}}</dd>
@@ -2589,7 +2589,7 @@ The following state arguments are supported:
 <a href="#state_valid_user_lists_python" style="color: inherit; text-decoration: inherit;">valid_<wbr>user_<wbr>lists</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users in the Active Directory that are allowed to access the file share. Only valid if `authentication` is set to `ActiveDirectory`.
 {{% /md %}}</dd>
@@ -2628,7 +2628,7 @@ The following state arguments are supported:
 <a href="#cachestaletimeoutinseconds_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Stale<wbr>Timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Refreshes a file share's cache by using Time To Live (TTL).
 TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
@@ -2646,7 +2646,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#cachestaletimeoutinseconds_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Stale<wbr>Timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Refreshes a file share's cache by using Time To Live (TTL).
 TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
@@ -2664,7 +2664,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#cachestaletimeoutinseconds_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Stale<wbr>Timeout<wbr>In<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Refreshes a file share's cache by using Time To Live (TTL).
 TTL is the length of time since the last refresh after which access to the directory would cause the file gateway
@@ -2682,7 +2682,7 @@ to first refresh that directory's contents from the Amazon S3 bucket. Valid Valu
 <a href="#cache_stale_timeout_in_seconds_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>stale_<wbr>timeout_<wbr>in_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Refreshes a file share's cache by using Time To Live (TTL).
 TTL is the length of time since the last refresh after which access to the directory would cause the file gateway

@@ -88,7 +88,7 @@ const updateSmsPrefs = new aws.sns.SmsPreferences("update_sms_prefs", {});
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#SmsPreferences">SmsPreferences</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#SmsPreferencesArgs">SmsPreferencesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#SmsPreferences">SmsPreferences</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#SmsPreferencesArgs">SmsPreferencesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -96,11 +96,11 @@ const updateSmsPrefs = new aws.sns.SmsPreferences("update_sms_prefs", {});
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#SmsPreferences">NewSmsPreferences</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#SmsPreferencesArgs">SmsPreferencesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#SmsPreferences">SmsPreferences</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#SmsPreferences">NewSmsPreferences</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#SmsPreferencesArgs">SmsPreferencesArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#SmsPreferences">SmsPreferences</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.SmsPreferences.html">SmsPreferences</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.SmsPreferencesArgs.html">SmsPreferencesArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.SmsPreferences.html">SmsPreferences</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.SmsPreferencesArgs.html">SmsPreferencesArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -111,7 +111,7 @@ const updateSmsPrefs = new aws.sns.SmsPreferences("update_sms_prefs", {});
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -180,7 +180,7 @@ const updateSmsPrefs = new aws.sns.SmsPreferences("update_sms_prefs", {});
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -219,7 +219,7 @@ const updateSmsPrefs = new aws.sns.SmsPreferences("update_sms_prefs", {});
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -269,7 +269,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#defaultsenderid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sender<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
 {{% /md %}}</dd>
@@ -279,7 +279,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#defaultsmstype_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sms<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
 {{% /md %}}</dd>
@@ -289,7 +289,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystatusiamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -299,7 +299,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystatussuccesssamplingrate_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#monthlyspendlimit_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Spend<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
 {{% /md %}}</dd>
@@ -319,7 +319,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#usagereports3bucket_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Report<wbr>S3Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
 {{% /md %}}</dd>
@@ -335,7 +335,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#defaultsenderid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sender<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
 {{% /md %}}</dd>
@@ -345,7 +345,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#defaultsmstype_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sms<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
 {{% /md %}}</dd>
@@ -355,7 +355,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystatusiamrolearn_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -365,7 +365,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystatussuccesssamplingrate_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 {{% /md %}}</dd>
@@ -375,7 +375,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#monthlyspendlimit_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Spend<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#usagereports3bucket_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Report<wbr>S3Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
 {{% /md %}}</dd>
@@ -401,7 +401,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#defaultsenderid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sender<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
 {{% /md %}}</dd>
@@ -411,7 +411,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#defaultsmstype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sms<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
 {{% /md %}}</dd>
@@ -421,7 +421,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystatusiamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -431,7 +431,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#deliverystatussuccesssamplingrate_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 {{% /md %}}</dd>
@@ -441,7 +441,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#monthlyspendlimit_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Spend<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
 {{% /md %}}</dd>
@@ -451,7 +451,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#usagereports3bucket_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Report<wbr>S3Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
 {{% /md %}}</dd>
@@ -467,7 +467,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#default_sender_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sender_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
 {{% /md %}}</dd>
@@ -477,7 +477,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#default_sms_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sms_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
 {{% /md %}}</dd>
@@ -487,7 +487,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#delivery_status_iam_role_arn_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>status_<wbr>iam_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -497,7 +497,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#delivery_status_success_sampling_rate_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>status_<wbr>success_<wbr>sampling_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#monthly_spend_limit_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>spend_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
 {{% /md %}}</dd>
@@ -517,7 +517,7 @@ The SmsPreferences resource accepts the following [input]({{< relref "/docs/intr
 <a href="#usage_report_s3_bucket_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>report_<wbr>s3_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
 {{% /md %}}</dd>
@@ -540,7 +540,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -555,7 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -570,7 +570,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -585,7 +585,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -599,7 +599,7 @@ Get an existing SmsPreferences resource's state with the given name, ID, and opt
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#SmsPreferencesState">SmsPreferencesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#SmsPreferences">SmsPreferences</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#SmsPreferencesState">SmsPreferencesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#SmsPreferences">SmsPreferences</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -608,11 +608,11 @@ Get an existing SmsPreferences resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSmsPreferences<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#SmsPreferencesState">SmsPreferencesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#SmsPreferences">SmsPreferences</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSmsPreferences<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#SmsPreferencesState">SmsPreferencesState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#SmsPreferences">SmsPreferences</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.SmsPreferences.html">SmsPreferences</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.SmsPreferencesState.html">SmsPreferencesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.SmsPreferences.html">SmsPreferences</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.SmsPreferencesState.html">SmsPreferencesState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -723,7 +723,7 @@ The following state arguments are supported:
 <a href="#state_defaultsenderid_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sender<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
 {{% /md %}}</dd>
@@ -733,7 +733,7 @@ The following state arguments are supported:
 <a href="#state_defaultsmstype_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Sms<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
 {{% /md %}}</dd>
@@ -743,7 +743,7 @@ The following state arguments are supported:
 <a href="#state_deliverystatusiamrolearn_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -753,7 +753,7 @@ The following state arguments are supported:
 <a href="#state_deliverystatussuccesssamplingrate_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 {{% /md %}}</dd>
@@ -763,7 +763,7 @@ The following state arguments are supported:
 <a href="#state_monthlyspendlimit_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Spend<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
 {{% /md %}}</dd>
@@ -773,7 +773,7 @@ The following state arguments are supported:
 <a href="#state_usagereports3bucket_csharp" style="color: inherit; text-decoration: inherit;">Usage<wbr>Report<wbr>S3Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
 {{% /md %}}</dd>
@@ -789,7 +789,7 @@ The following state arguments are supported:
 <a href="#state_defaultsenderid_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sender<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
 {{% /md %}}</dd>
@@ -799,7 +799,7 @@ The following state arguments are supported:
 <a href="#state_defaultsmstype_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Sms<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
 {{% /md %}}</dd>
@@ -809,7 +809,7 @@ The following state arguments are supported:
 <a href="#state_deliverystatusiamrolearn_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -819,7 +819,7 @@ The following state arguments are supported:
 <a href="#state_deliverystatussuccesssamplingrate_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 {{% /md %}}</dd>
@@ -829,7 +829,7 @@ The following state arguments are supported:
 <a href="#state_monthlyspendlimit_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Spend<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
 {{% /md %}}</dd>
@@ -839,7 +839,7 @@ The following state arguments are supported:
 <a href="#state_usagereports3bucket_go" style="color: inherit; text-decoration: inherit;">Usage<wbr>Report<wbr>S3Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
 {{% /md %}}</dd>
@@ -855,7 +855,7 @@ The following state arguments are supported:
 <a href="#state_defaultsenderid_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sender<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
 {{% /md %}}</dd>
@@ -865,7 +865,7 @@ The following state arguments are supported:
 <a href="#state_defaultsmstype_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Sms<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
 {{% /md %}}</dd>
@@ -875,7 +875,7 @@ The following state arguments are supported:
 <a href="#state_deliverystatusiamrolearn_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Status<wbr>Iam<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -885,7 +885,7 @@ The following state arguments are supported:
 <a href="#state_deliverystatussuccesssamplingrate_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Status<wbr>Success<wbr>Sampling<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 {{% /md %}}</dd>
@@ -895,7 +895,7 @@ The following state arguments are supported:
 <a href="#state_monthlyspendlimit_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Spend<wbr>Limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
 {{% /md %}}</dd>
@@ -905,7 +905,7 @@ The following state arguments are supported:
 <a href="#state_usagereports3bucket_nodejs" style="color: inherit; text-decoration: inherit;">usage<wbr>Report<wbr>S3Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
 {{% /md %}}</dd>
@@ -921,7 +921,7 @@ The following state arguments are supported:
 <a href="#state_default_sender_id_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sender_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A string, such as your business brand, that is displayed as the sender on the receiving device.
 {{% /md %}}</dd>
@@ -931,7 +931,7 @@ The following state arguments are supported:
 <a href="#state_default_sms_type_python" style="color: inherit; text-decoration: inherit;">default_<wbr>sms_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of SMS message that you will send by default. Possible values are: Promotional, Transactional
 {{% /md %}}</dd>
@@ -941,7 +941,7 @@ The following state arguments are supported:
 <a href="#state_delivery_status_iam_role_arn_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>status_<wbr>iam_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows Amazon SNS to write logs about SMS deliveries in CloudWatch Logs.
 {{% /md %}}</dd>
@@ -951,7 +951,7 @@ The following state arguments are supported:
 <a href="#state_delivery_status_success_sampling_rate_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>status_<wbr>success_<wbr>sampling_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The percentage of successful SMS deliveries for which Amazon SNS will write logs in CloudWatch Logs. The value must be between 0 and 100.
 {{% /md %}}</dd>
@@ -961,7 +961,7 @@ The following state arguments are supported:
 <a href="#state_monthly_spend_limit_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>spend_<wbr>limit</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum amount in USD that you are willing to spend each month to send SMS messages.
 {{% /md %}}</dd>
@@ -971,7 +971,7 @@ The following state arguments are supported:
 <a href="#state_usage_report_s3_bucket_python" style="color: inherit; text-decoration: inherit;">usage_<wbr>report_<wbr>s3_<wbr>bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket to receive daily SMS usage reports from Amazon SNS.
 {{% /md %}}</dd>

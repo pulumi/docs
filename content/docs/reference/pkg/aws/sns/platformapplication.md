@@ -174,7 +174,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#PlatformApplication">PlatformApplication</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#PlatformApplicationArgs">PlatformApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#PlatformApplication">PlatformApplication</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#PlatformApplicationArgs">PlatformApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -182,11 +182,11 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#PlatformApplication">NewPlatformApplication</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#PlatformApplicationArgs">PlatformApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#PlatformApplication">PlatformApplication</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#PlatformApplication">NewPlatformApplication</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#PlatformApplicationArgs">PlatformApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#PlatformApplication">PlatformApplication</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.PlatformApplication.html">PlatformApplication</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.PlatformApplicationArgs.html">PlatformApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.PlatformApplication.html">PlatformApplication</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.PlatformApplicationArgs.html">PlatformApplicationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -197,7 +197,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -266,7 +266,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -305,7 +305,7 @@ const gcmApplication = new aws.sns.PlatformApplication("gcm_application", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -355,7 +355,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
 {{% /md %}}</dd>
@@ -365,7 +365,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platformcredential_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -375,7 +375,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventdeliveryfailuretopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventendpointcreatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -395,7 +395,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventendpointdeletedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -405,7 +405,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventendpointupdatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -415,7 +415,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#failurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -425,7 +425,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -435,7 +435,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platformprincipal_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -445,7 +445,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#successfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -455,7 +455,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#successfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -471,7 +471,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
 {{% /md %}}</dd>
@@ -481,7 +481,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platformcredential_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -491,7 +491,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventdeliveryfailuretopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -501,7 +501,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventendpointcreatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -511,7 +511,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventendpointdeletedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -521,7 +521,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventendpointupdatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -531,7 +531,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#failurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -541,7 +541,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -551,7 +551,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platformprincipal_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -561,7 +561,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#successfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -571,7 +571,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#successfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -587,7 +587,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
 {{% /md %}}</dd>
@@ -597,7 +597,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platformcredential_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -607,7 +607,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventdeliveryfailuretopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -617,7 +617,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventendpointcreatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -627,7 +627,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventendpointdeletedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -637,7 +637,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#eventendpointupdatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -647,7 +647,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#failurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -657,7 +657,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -667,7 +667,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platformprincipal_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -677,7 +677,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#successfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -687,7 +687,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#successfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -703,7 +703,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
 {{% /md %}}</dd>
@@ -713,7 +713,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platform_credential_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -723,7 +723,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#event_delivery_failure_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>failure_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -733,7 +733,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#event_endpoint_created_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>created_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -743,7 +743,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#event_endpoint_deleted_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>deleted_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -753,7 +753,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#event_endpoint_updated_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>updated_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -763,7 +763,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -773,7 +773,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -783,7 +783,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#platform_principal_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -793,7 +793,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -803,7 +803,7 @@ The PlatformApplication resource accepts the following [input]({{< relref "/docs
 <a href="#success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -826,7 +826,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -836,7 +836,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -851,7 +851,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -861,7 +861,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -876,7 +876,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -886,7 +886,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -901,7 +901,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -911,7 +911,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -925,7 +925,7 @@ Get an existing PlatformApplication resource's state with the given name, ID, an
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#PlatformApplicationState">PlatformApplicationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#PlatformApplication">PlatformApplication</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#PlatformApplicationState">PlatformApplicationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#PlatformApplication">PlatformApplication</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -934,11 +934,11 @@ Get an existing PlatformApplication resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPlatformApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#PlatformApplicationState">PlatformApplicationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#PlatformApplication">PlatformApplication</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPlatformApplication<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#PlatformApplicationState">PlatformApplicationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#PlatformApplication">PlatformApplication</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.PlatformApplication.html">PlatformApplication</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.PlatformApplicationState.html">PlatformApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.PlatformApplication.html">PlatformApplication</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.PlatformApplicationState.html">PlatformApplicationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1049,7 +1049,7 @@ The following state arguments are supported:
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -1059,7 +1059,7 @@ The following state arguments are supported:
 <a href="#state_eventdeliveryfailuretopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -1069,7 +1069,7 @@ The following state arguments are supported:
 <a href="#state_eventendpointcreatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -1079,7 +1079,7 @@ The following state arguments are supported:
 <a href="#state_eventendpointdeletedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -1089,7 +1089,7 @@ The following state arguments are supported:
 <a href="#state_eventendpointupdatedtopicarn_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -1099,7 +1099,7 @@ The following state arguments are supported:
 <a href="#state_failurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -1109,7 +1109,7 @@ The following state arguments are supported:
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -1119,7 +1119,7 @@ The following state arguments are supported:
 <a href="#state_platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
 {{% /md %}}</dd>
@@ -1129,7 +1129,7 @@ The following state arguments are supported:
 <a href="#state_platformcredential_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1139,7 +1139,7 @@ The following state arguments are supported:
 <a href="#state_platformprincipal_csharp" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1149,7 +1149,7 @@ The following state arguments are supported:
 <a href="#state_successfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -1159,7 +1159,7 @@ The following state arguments are supported:
 <a href="#state_successfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -1175,7 +1175,7 @@ The following state arguments are supported:
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -1185,7 +1185,7 @@ The following state arguments are supported:
 <a href="#state_eventdeliveryfailuretopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -1195,7 +1195,7 @@ The following state arguments are supported:
 <a href="#state_eventendpointcreatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -1205,7 +1205,7 @@ The following state arguments are supported:
 <a href="#state_eventendpointdeletedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -1215,7 +1215,7 @@ The following state arguments are supported:
 <a href="#state_eventendpointupdatedtopicarn_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -1225,7 +1225,7 @@ The following state arguments are supported:
 <a href="#state_failurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -1235,7 +1235,7 @@ The following state arguments are supported:
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -1245,7 +1245,7 @@ The following state arguments are supported:
 <a href="#state_platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
 {{% /md %}}</dd>
@@ -1255,7 +1255,7 @@ The following state arguments are supported:
 <a href="#state_platformcredential_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1265,7 +1265,7 @@ The following state arguments are supported:
 <a href="#state_platformprincipal_go" style="color: inherit; text-decoration: inherit;">Platform<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1275,7 +1275,7 @@ The following state arguments are supported:
 <a href="#state_successfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -1285,7 +1285,7 @@ The following state arguments are supported:
 <a href="#state_successfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -1301,7 +1301,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -1311,7 +1311,7 @@ The following state arguments are supported:
 <a href="#state_eventdeliveryfailuretopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Delivery<wbr>Failure<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -1321,7 +1321,7 @@ The following state arguments are supported:
 <a href="#state_eventendpointcreatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Created<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -1331,7 +1331,7 @@ The following state arguments are supported:
 <a href="#state_eventendpointdeletedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Deleted<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -1341,7 +1341,7 @@ The following state arguments are supported:
 <a href="#state_eventendpointupdatedtopicarn_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Endpoint<wbr>Updated<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -1351,7 +1351,7 @@ The following state arguments are supported:
 <a href="#state_failurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -1361,7 +1361,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -1371,7 +1371,7 @@ The following state arguments are supported:
 <a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
 {{% /md %}}</dd>
@@ -1381,7 +1381,7 @@ The following state arguments are supported:
 <a href="#state_platformcredential_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1391,7 +1391,7 @@ The following state arguments are supported:
 <a href="#state_platformprincipal_nodejs" style="color: inherit; text-decoration: inherit;">platform<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1401,7 +1401,7 @@ The following state arguments are supported:
 <a href="#state_successfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -1411,7 +1411,7 @@ The following state arguments are supported:
 <a href="#state_successfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>
@@ -1427,7 +1427,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS platform application
 {{% /md %}}</dd>
@@ -1437,7 +1437,7 @@ The following state arguments are supported:
 <a href="#state_event_delivery_failure_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>delivery_<wbr>failure_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a delivery to any of the platform endpoints associated with your platform application encounters a permanent failure.
 {{% /md %}}</dd>
@@ -1447,7 +1447,7 @@ The following state arguments are supported:
 <a href="#state_event_endpoint_created_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>created_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when a new platform endpoint is added to your platform application.
 {{% /md %}}</dd>
@@ -1457,7 +1457,7 @@ The following state arguments are supported:
 <a href="#state_event_endpoint_deleted_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>deleted_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is deleted from your platform application.
 {{% /md %}}</dd>
@@ -1467,7 +1467,7 @@ The following state arguments are supported:
 <a href="#state_event_endpoint_updated_topic_arn_python" style="color: inherit; text-decoration: inherit;">event_<wbr>endpoint_<wbr>updated_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SNS Topic triggered when an existing platform endpoint is changed from your platform application.
 {{% /md %}}</dd>
@@ -1477,7 +1477,7 @@ The following state arguments are supported:
 <a href="#state_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive failure feedback for this application.
 {{% /md %}}</dd>
@@ -1487,7 +1487,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS platform application
 {{% /md %}}</dd>
@@ -1497,7 +1497,7 @@ The following state arguments are supported:
 <a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The platform that the app is registered with. See [Platform](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for supported platforms.
 {{% /md %}}</dd>
@@ -1507,7 +1507,7 @@ The following state arguments are supported:
 <a href="#state_platform_credential_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>credential</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Platform credential. See [Credential](http://docs.aws.amazon.com/sns/latest/dg/mobile-push-send-register.html) for type of credential required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1517,7 +1517,7 @@ The following state arguments are supported:
 <a href="#state_platform_principal_python" style="color: inherit; text-decoration: inherit;">platform_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Platform principal. See [Principal](http://docs.aws.amazon.com/sns/latest/api/API_CreatePlatformApplication.html) for type of principal required for platform. The value of this attribute when stored into the state is only a hash of the real value, so therefore it is not practical to use this as an attribute for other resources.
 {{% /md %}}</dd>
@@ -1527,7 +1527,7 @@ The following state arguments are supported:
 <a href="#state_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this application.
 {{% /md %}}</dd>
@@ -1537,7 +1537,7 @@ The following state arguments are supported:
 <a href="#state_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The percentage of success to sample (0-100)
 {{% /md %}}</dd>

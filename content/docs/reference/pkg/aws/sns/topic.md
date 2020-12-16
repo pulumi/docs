@@ -251,7 +251,7 @@ const userUpdates = new aws.sns.Topic("user_updates", {});
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic">Topic</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#TopicArgs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic">Topic</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#TopicArgs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -259,11 +259,11 @@ const userUpdates = new aws.sns.Topic("user_updates", {});
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#Topic">NewTopic</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#TopicArgs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#Topic">Topic</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#Topic">NewTopic</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#TopicArgs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#Topic">Topic</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.Topic.html">Topic</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.TopicArgs.html">TopicArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.Topic.html">Topic</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.TopicArgs.html">TopicArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -274,7 +274,7 @@ const userUpdates = new aws.sns.Topic("user_updates", {});
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -343,7 +343,7 @@ const userUpdates = new aws.sns.Topic("user_updates", {});
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -382,7 +382,7 @@ const userUpdates = new aws.sns.Topic("user_updates", {});
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -432,7 +432,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#applicationfailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -442,7 +442,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#applicationsuccessfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -452,7 +452,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#applicationsuccessfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -462,7 +462,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#deliverypolicy_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -472,7 +472,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#httpfailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -492,7 +492,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#httpsuccessfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -502,7 +502,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#httpsuccessfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -512,7 +512,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#kmsmasterkeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Master<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -522,7 +522,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambdafailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -532,7 +532,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambdasuccessfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -542,7 +542,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambdasuccessfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -552,7 +552,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -562,7 +562,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -572,7 +572,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -582,7 +582,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqsfailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -592,7 +592,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqssuccessfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -602,7 +602,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqssuccessfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -628,7 +628,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#applicationfailurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -638,7 +638,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#applicationsuccessfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -648,7 +648,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#applicationsuccessfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -658,7 +658,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#deliverypolicy_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -668,7 +668,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -678,7 +678,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#httpfailurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -688,7 +688,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#httpsuccessfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -698,7 +698,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#httpsuccessfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -708,7 +708,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#kmsmasterkeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Master<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -718,7 +718,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambdafailurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -728,7 +728,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambdasuccessfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -738,7 +738,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambdasuccessfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -748,7 +748,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -758,7 +758,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -768,7 +768,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -778,7 +778,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqsfailurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -788,7 +788,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqssuccessfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -798,7 +798,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqssuccessfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -824,7 +824,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#applicationfailurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -834,7 +834,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#applicationsuccessfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -844,7 +844,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#applicationsuccessfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -854,7 +854,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#deliverypolicy_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -864,7 +864,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -874,7 +874,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#httpfailurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -884,7 +884,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#httpsuccessfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -894,7 +894,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#httpsuccessfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -904,7 +904,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#kmsmasterkeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Master<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambdafailurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -924,7 +924,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambdasuccessfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -934,7 +934,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambdasuccessfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -944,7 +944,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -954,7 +954,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -964,7 +964,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -974,7 +974,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqsfailurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -984,7 +984,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqssuccessfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -994,7 +994,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqssuccessfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1020,7 +1020,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#application_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">application_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1030,7 +1030,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#application_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">application_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1040,7 +1040,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#application_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">application_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1050,7 +1050,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#delivery_policy_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -1060,7 +1060,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -1070,7 +1070,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#http_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">http_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1080,7 +1080,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#http_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">http_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1090,7 +1090,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#http_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">http_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1100,7 +1100,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#kms_master_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>master_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -1110,7 +1110,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambda_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1120,7 +1120,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambda_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1130,7 +1130,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#lambda_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1140,7 +1140,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1150,7 +1150,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -1160,7 +1160,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -1170,7 +1170,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqs_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">sqs_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1180,7 +1180,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqs_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">sqs_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1190,7 +1190,7 @@ The Topic resource accepts the following [input]({{< relref "/docs/intro/concept
 <a href="#sqs_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">sqs_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1233,7 +1233,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -1258,7 +1258,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -1283,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -1308,7 +1308,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -1322,7 +1322,7 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#TopicState">TopicState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic">Topic</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#TopicState">TopicState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/sns/#Topic">Topic</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1331,11 +1331,11 @@ Get an existing Topic resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#TopicState">TopicState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#Topic">Topic</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTopic<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#TopicState">TopicState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/sns?tab=doc#Topic">Topic</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.Topic.html">Topic</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.TopicState.html">TopicState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.Topic.html">Topic</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Sns.TopicState.html">TopicState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1446,7 +1446,7 @@ The following state arguments are supported:
 <a href="#state_applicationfailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1456,7 +1456,7 @@ The following state arguments are supported:
 <a href="#state_applicationsuccessfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1466,7 +1466,7 @@ The following state arguments are supported:
 <a href="#state_applicationsuccessfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1486,7 +1486,7 @@ The following state arguments are supported:
 <a href="#state_deliverypolicy_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -1496,7 +1496,7 @@ The following state arguments are supported:
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -1506,7 +1506,7 @@ The following state arguments are supported:
 <a href="#state_httpfailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1516,7 +1516,7 @@ The following state arguments are supported:
 <a href="#state_httpsuccessfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1526,7 +1526,7 @@ The following state arguments are supported:
 <a href="#state_httpsuccessfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1536,7 +1536,7 @@ The following state arguments are supported:
 <a href="#state_kmsmasterkeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Master<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -1546,7 +1546,7 @@ The following state arguments are supported:
 <a href="#state_lambdafailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1556,7 +1556,7 @@ The following state arguments are supported:
 <a href="#state_lambdasuccessfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1566,7 +1566,7 @@ The following state arguments are supported:
 <a href="#state_lambdasuccessfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1576,7 +1576,7 @@ The following state arguments are supported:
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1586,7 +1586,7 @@ The following state arguments are supported:
 <a href="#state_nameprefix_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -1596,7 +1596,7 @@ The following state arguments are supported:
 <a href="#state_policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -1606,7 +1606,7 @@ The following state arguments are supported:
 <a href="#state_sqsfailurefeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1616,7 +1616,7 @@ The following state arguments are supported:
 <a href="#state_sqssuccessfeedbackrolearn_csharp" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1626,7 +1626,7 @@ The following state arguments are supported:
 <a href="#state_sqssuccessfeedbacksamplerate_csharp" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1652,7 +1652,7 @@ The following state arguments are supported:
 <a href="#state_applicationfailurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1662,7 +1662,7 @@ The following state arguments are supported:
 <a href="#state_applicationsuccessfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1672,7 +1672,7 @@ The following state arguments are supported:
 <a href="#state_applicationsuccessfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1692,7 +1692,7 @@ The following state arguments are supported:
 <a href="#state_deliverypolicy_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -1702,7 +1702,7 @@ The following state arguments are supported:
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -1712,7 +1712,7 @@ The following state arguments are supported:
 <a href="#state_httpfailurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1722,7 +1722,7 @@ The following state arguments are supported:
 <a href="#state_httpsuccessfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1732,7 +1732,7 @@ The following state arguments are supported:
 <a href="#state_httpsuccessfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1742,7 +1742,7 @@ The following state arguments are supported:
 <a href="#state_kmsmasterkeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Master<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -1752,7 +1752,7 @@ The following state arguments are supported:
 <a href="#state_lambdafailurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1762,7 +1762,7 @@ The following state arguments are supported:
 <a href="#state_lambdasuccessfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1772,7 +1772,7 @@ The following state arguments are supported:
 <a href="#state_lambdasuccessfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1782,7 +1782,7 @@ The following state arguments are supported:
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1792,7 +1792,7 @@ The following state arguments are supported:
 <a href="#state_nameprefix_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -1802,7 +1802,7 @@ The following state arguments are supported:
 <a href="#state_policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -1812,7 +1812,7 @@ The following state arguments are supported:
 <a href="#state_sqsfailurefeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1822,7 +1822,7 @@ The following state arguments are supported:
 <a href="#state_sqssuccessfeedbackrolearn_go" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1832,7 +1832,7 @@ The following state arguments are supported:
 <a href="#state_sqssuccessfeedbacksamplerate_go" style="color: inherit; text-decoration: inherit;">Sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1858,7 +1858,7 @@ The following state arguments are supported:
 <a href="#state_applicationfailurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1868,7 +1868,7 @@ The following state arguments are supported:
 <a href="#state_applicationsuccessfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1878,7 +1878,7 @@ The following state arguments are supported:
 <a href="#state_applicationsuccessfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1898,7 +1898,7 @@ The following state arguments are supported:
 <a href="#state_deliverypolicy_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -1908,7 +1908,7 @@ The following state arguments are supported:
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -1918,7 +1918,7 @@ The following state arguments are supported:
 <a href="#state_httpfailurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1928,7 +1928,7 @@ The following state arguments are supported:
 <a href="#state_httpsuccessfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1938,7 +1938,7 @@ The following state arguments are supported:
 <a href="#state_httpsuccessfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1948,7 +1948,7 @@ The following state arguments are supported:
 <a href="#state_kmsmasterkeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Master<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -1958,7 +1958,7 @@ The following state arguments are supported:
 <a href="#state_lambdafailurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -1968,7 +1968,7 @@ The following state arguments are supported:
 <a href="#state_lambdasuccessfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -1978,7 +1978,7 @@ The following state arguments are supported:
 <a href="#state_lambdasuccessfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">lambda<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -1988,7 +1988,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -1998,7 +1998,7 @@ The following state arguments are supported:
 <a href="#state_nameprefix_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -2008,7 +2008,7 @@ The following state arguments are supported:
 <a href="#state_policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -2018,7 +2018,7 @@ The following state arguments are supported:
 <a href="#state_sqsfailurefeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">sqs<wbr>Failure<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -2028,7 +2028,7 @@ The following state arguments are supported:
 <a href="#state_sqssuccessfeedbackrolearn_nodejs" style="color: inherit; text-decoration: inherit;">sqs<wbr>Success<wbr>Feedback<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -2038,7 +2038,7 @@ The following state arguments are supported:
 <a href="#state_sqssuccessfeedbacksamplerate_nodejs" style="color: inherit; text-decoration: inherit;">sqs<wbr>Success<wbr>Feedback<wbr>Sample<wbr>Rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -2064,7 +2064,7 @@ The following state arguments are supported:
 <a href="#state_application_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">application_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -2074,7 +2074,7 @@ The following state arguments are supported:
 <a href="#state_application_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">application_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -2084,7 +2084,7 @@ The following state arguments are supported:
 <a href="#state_application_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">application_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -2104,7 +2104,7 @@ The following state arguments are supported:
 <a href="#state_delivery_policy_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SNS delivery policy. More on [AWS documentation](https://docs.aws.amazon.com/sns/latest/dg/DeliveryPolicies.html)
 {{% /md %}}</dd>
@@ -2114,7 +2114,7 @@ The following state arguments are supported:
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name for the SNS topic
 {{% /md %}}</dd>
@@ -2124,7 +2124,7 @@ The following state arguments are supported:
 <a href="#state_http_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">http_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -2134,7 +2134,7 @@ The following state arguments are supported:
 <a href="#state_http_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">http_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -2144,7 +2144,7 @@ The following state arguments are supported:
 <a href="#state_http_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">http_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -2154,7 +2154,7 @@ The following state arguments are supported:
 <a href="#state_kms_master_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>master_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of an AWS-managed customer master key (CMK) for Amazon SNS or a custom CMK. For more information, see [Key Terms](https://docs.aws.amazon.com/sns/latest/dg/sns-server-side-encryption.html#sse-key-terms)
 {{% /md %}}</dd>
@@ -2164,7 +2164,7 @@ The following state arguments are supported:
 <a href="#state_lambda_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -2174,7 +2174,7 @@ The following state arguments are supported:
 <a href="#state_lambda_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -2184,7 +2184,7 @@ The following state arguments are supported:
 <a href="#state_lambda_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">lambda_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>
@@ -2194,7 +2194,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. By default generated by this provider.
 {{% /md %}}</dd>
@@ -2204,7 +2204,7 @@ The following state arguments are supported:
 <a href="#state_name_prefix_python" style="color: inherit; text-decoration: inherit;">name_<wbr>prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The friendly name for the SNS topic. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -2214,7 +2214,7 @@ The following state arguments are supported:
 <a href="#state_policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-formed AWS policy as JSON.
 {{% /md %}}</dd>
@@ -2224,7 +2224,7 @@ The following state arguments are supported:
 <a href="#state_sqs_failure_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">sqs_<wbr>failure_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IAM role for failure feedback
 {{% /md %}}</dd>
@@ -2234,7 +2234,7 @@ The following state arguments are supported:
 <a href="#state_sqs_success_feedback_role_arn_python" style="color: inherit; text-decoration: inherit;">sqs_<wbr>success_<wbr>feedback_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM role permitted to receive success feedback for this topic
 {{% /md %}}</dd>
@@ -2244,7 +2244,7 @@ The following state arguments are supported:
 <a href="#state_sqs_success_feedback_sample_rate_python" style="color: inherit; text-decoration: inherit;">sqs_<wbr>success_<wbr>feedback_<wbr>sample_<wbr>rate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Percentage of success to sample
 {{% /md %}}</dd>

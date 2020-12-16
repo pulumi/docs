@@ -131,7 +131,7 @@ The following arguments are supported:
 <a href="#dbinstanceidentifier_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the RDS instance
 {{% /md %}}</dd>
@@ -156,7 +156,7 @@ The following arguments are supported:
 <a href="#dbinstanceidentifier_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the RDS instance
 {{% /md %}}</dd>
@@ -181,7 +181,7 @@ The following arguments are supported:
 <a href="#dbinstanceidentifier_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the RDS instance
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ The following arguments are supported:
 <a href="#db_instance_identifier_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the RDS instance
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ The following output properties are available:
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the RDS instance. See also `endpoint` and `port`.
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ The following output properties are available:
 <a href="#allocatedstorage_csharp" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allocated storage size specified in gigabytes.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#autominorversionupgrade_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor version patches are applied automatically.
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ The following output properties are available:
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Availability Zone the DB instance is located in.
 {{% /md %}}</dd>
@@ -280,7 +280,7 @@ The following output properties are available:
 <a href="#backupretentionperiod_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days for which automatic DB snapshots are retained.
 {{% /md %}}</dd>
@@ -290,7 +290,7 @@ The following output properties are available:
 <a href="#cacertidentifier_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the CA certificate for the DB instance.
 {{% /md %}}</dd>
@@ -300,7 +300,7 @@ The following output properties are available:
 <a href="#dbclusteridentifier_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the DB instance is a member of a DB cluster, contains the name of the DB cluster that the DB instance is a member of.
 {{% /md %}}</dd>
@@ -310,7 +310,7 @@ The following output properties are available:
 <a href="#dbinstancearn_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB instance.
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ The following output properties are available:
 <a href="#dbinstanceclass_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the name of the compute and memory capacity class of the DB instance.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ The following output properties are available:
 <a href="#dbinstanceidentifier_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -339,7 +339,7 @@ The following output properties are available:
 <a href="#dbinstanceport_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the port that the DB instance listens on.
 {{% /md %}}</dd>
@@ -349,7 +349,7 @@ The following output properties are available:
 <a href="#dbname_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the name of the initial database of this instance that was provided at create time, if one was specified when the DB instance was created. This same name is returned for the life of the DB instance.
 {{% /md %}}</dd>
@@ -359,7 +359,7 @@ The following output properties are available:
 <a href="#dbparametergroups_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Parameter<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Provides the list of DB parameter groups applied to this DB instance.
 {{% /md %}}</dd>
@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#dbsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Provides List of DB security groups associated to this DB instance.
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#dbsubnetgroup_csharp" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the subnet group associated with the DB instance.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#enabledcloudwatchlogsexports_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch.
 {{% /md %}}</dd>
@@ -399,7 +399,7 @@ The following output properties are available:
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection endpoint in `address:port` format.
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#engine_csharp" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provides the name of the database engine to be used for this DB instance.
 {{% /md %}}</dd>
@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#engineversion_csharp" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the database engine version.
 {{% /md %}}</dd>
@@ -429,7 +429,7 @@ The following output properties are available:
 <a href="#hostedzoneid_csharp" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the DB instance (to be used in a Route 53 Alias record).
 {{% /md %}}</dd>
@@ -439,7 +439,7 @@ The following output properties are available:
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -449,7 +449,7 @@ The following output properties are available:
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the Provisioned IOPS (I/O operations per second) value.
 {{% /md %}}</dd>
@@ -459,7 +459,7 @@ The following output properties are available:
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If StorageEncrypted is true, the KMS key identifier for the encrypted DB instance.
 {{% /md %}}</dd>
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#licensemodel_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model information for this DB instance.
 {{% /md %}}</dd>
@@ -479,7 +479,7 @@ The following output properties are available:
 <a href="#masterusername_csharp" style="color: inherit; text-decoration: inherit;">Master<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the master username for the DB instance.
 {{% /md %}}</dd>
@@ -489,7 +489,7 @@ The following output properties are available:
 <a href="#monitoringinterval_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance.
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#monitoringrolearn_csharp" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to CloudWatch Logs.
 {{% /md %}}</dd>
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#multiaz_csharp" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the DB instance is a Multi-AZ deployment.
 {{% /md %}}</dd>
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#optiongroupmemberships_csharp" style="color: inherit; text-decoration: inherit;">Option<wbr>Group<wbr>Memberships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Provides the list of option group memberships for this DB instance.
 {{% /md %}}</dd>
@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#port_csharp" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port.
 {{% /md %}}</dd>
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#preferredbackupwindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the daily time range during which automated backups are created.
 {{% /md %}}</dd>
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#preferredmaintenancewindow_csharp" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the weekly time range during which system maintenance can occur in UTC.
 {{% /md %}}</dd>
@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#publiclyaccessible_csharp" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the DB instance.
 {{% /md %}}</dd>
@@ -569,7 +569,7 @@ The following output properties are available:
 <a href="#replicatesourcedb_csharp" style="color: inherit; text-decoration: inherit;">Replicate<wbr>Source<wbr>Db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the source DB that this is a replica of.
 {{% /md %}}</dd>
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RDS Resource ID of this instance.
 {{% /md %}}</dd>
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#storageencrypted_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB instance is encrypted.
 {{% /md %}}</dd>
@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#storagetype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB instance.
 {{% /md %}}</dd>
@@ -618,7 +618,7 @@ The following output properties are available:
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone of the DB instance.
 {{% /md %}}</dd>
@@ -628,7 +628,7 @@ The following output properties are available:
 <a href="#vpcsecuritygroups_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Provides a list of VPC security group elements that the DB instance belongs to.
 {{% /md %}}</dd>
@@ -644,7 +644,7 @@ The following output properties are available:
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the RDS instance. See also `endpoint` and `port`.
 {{% /md %}}</dd>
@@ -654,7 +654,7 @@ The following output properties are available:
 <a href="#allocatedstorage_go" style="color: inherit; text-decoration: inherit;">Allocated<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allocated storage size specified in gigabytes.
 {{% /md %}}</dd>
@@ -664,7 +664,7 @@ The following output properties are available:
 <a href="#autominorversionupgrade_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor version patches are applied automatically.
 {{% /md %}}</dd>
@@ -674,7 +674,7 @@ The following output properties are available:
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Availability Zone the DB instance is located in.
 {{% /md %}}</dd>
@@ -684,7 +684,7 @@ The following output properties are available:
 <a href="#backupretentionperiod_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days for which automatic DB snapshots are retained.
 {{% /md %}}</dd>
@@ -694,7 +694,7 @@ The following output properties are available:
 <a href="#cacertidentifier_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the CA certificate for the DB instance.
 {{% /md %}}</dd>
@@ -704,7 +704,7 @@ The following output properties are available:
 <a href="#dbclusteridentifier_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Cluster<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the DB instance is a member of a DB cluster, contains the name of the DB cluster that the DB instance is a member of.
 {{% /md %}}</dd>
@@ -714,7 +714,7 @@ The following output properties are available:
 <a href="#dbinstancearn_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB instance.
 {{% /md %}}</dd>
@@ -724,7 +724,7 @@ The following output properties are available:
 <a href="#dbinstanceclass_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the name of the compute and memory capacity class of the DB instance.
 {{% /md %}}</dd>
@@ -734,7 +734,7 @@ The following output properties are available:
 <a href="#dbinstanceidentifier_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -743,7 +743,7 @@ The following output properties are available:
 <a href="#dbinstanceport_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Instance<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the port that the DB instance listens on.
 {{% /md %}}</dd>
@@ -753,7 +753,7 @@ The following output properties are available:
 <a href="#dbname_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the name of the initial database of this instance that was provided at create time, if one was specified when the DB instance was created. This same name is returned for the life of the DB instance.
 {{% /md %}}</dd>
@@ -763,7 +763,7 @@ The following output properties are available:
 <a href="#dbparametergroups_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Parameter<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Provides the list of DB parameter groups applied to this DB instance.
 {{% /md %}}</dd>
@@ -773,7 +773,7 @@ The following output properties are available:
 <a href="#dbsecuritygroups_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Provides List of DB security groups associated to this DB instance.
 {{% /md %}}</dd>
@@ -783,7 +783,7 @@ The following output properties are available:
 <a href="#dbsubnetgroup_go" style="color: inherit; text-decoration: inherit;">Db<wbr>Subnet<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the subnet group associated with the DB instance.
 {{% /md %}}</dd>
@@ -793,7 +793,7 @@ The following output properties are available:
 <a href="#enabledcloudwatchlogsexports_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch.
 {{% /md %}}</dd>
@@ -803,7 +803,7 @@ The following output properties are available:
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection endpoint in `address:port` format.
 {{% /md %}}</dd>
@@ -813,7 +813,7 @@ The following output properties are available:
 <a href="#engine_go" style="color: inherit; text-decoration: inherit;">Engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provides the name of the database engine to be used for this DB instance.
 {{% /md %}}</dd>
@@ -823,7 +823,7 @@ The following output properties are available:
 <a href="#engineversion_go" style="color: inherit; text-decoration: inherit;">Engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the database engine version.
 {{% /md %}}</dd>
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#hostedzoneid_go" style="color: inherit; text-decoration: inherit;">Hosted<wbr>Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the DB instance (to be used in a Route 53 Alias record).
 {{% /md %}}</dd>
@@ -843,7 +843,7 @@ The following output properties are available:
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -853,7 +853,7 @@ The following output properties are available:
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the Provisioned IOPS (I/O operations per second) value.
 {{% /md %}}</dd>
@@ -863,7 +863,7 @@ The following output properties are available:
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If StorageEncrypted is true, the KMS key identifier for the encrypted DB instance.
 {{% /md %}}</dd>
@@ -873,7 +873,7 @@ The following output properties are available:
 <a href="#licensemodel_go" style="color: inherit; text-decoration: inherit;">License<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model information for this DB instance.
 {{% /md %}}</dd>
@@ -883,7 +883,7 @@ The following output properties are available:
 <a href="#masterusername_go" style="color: inherit; text-decoration: inherit;">Master<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the master username for the DB instance.
 {{% /md %}}</dd>
@@ -893,7 +893,7 @@ The following output properties are available:
 <a href="#monitoringinterval_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance.
 {{% /md %}}</dd>
@@ -903,7 +903,7 @@ The following output properties are available:
 <a href="#monitoringrolearn_go" style="color: inherit; text-decoration: inherit;">Monitoring<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to CloudWatch Logs.
 {{% /md %}}</dd>
@@ -913,7 +913,7 @@ The following output properties are available:
 <a href="#multiaz_go" style="color: inherit; text-decoration: inherit;">Multi<wbr>Az</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the DB instance is a Multi-AZ deployment.
 {{% /md %}}</dd>
@@ -923,7 +923,7 @@ The following output properties are available:
 <a href="#optiongroupmemberships_go" style="color: inherit; text-decoration: inherit;">Option<wbr>Group<wbr>Memberships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Provides the list of option group memberships for this DB instance.
 {{% /md %}}</dd>
@@ -933,7 +933,7 @@ The following output properties are available:
 <a href="#port_go" style="color: inherit; text-decoration: inherit;">Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port.
 {{% /md %}}</dd>
@@ -943,7 +943,7 @@ The following output properties are available:
 <a href="#preferredbackupwindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Backup<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the daily time range during which automated backups are created.
 {{% /md %}}</dd>
@@ -953,7 +953,7 @@ The following output properties are available:
 <a href="#preferredmaintenancewindow_go" style="color: inherit; text-decoration: inherit;">Preferred<wbr>Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the weekly time range during which system maintenance can occur in UTC.
 {{% /md %}}</dd>
@@ -963,7 +963,7 @@ The following output properties are available:
 <a href="#publiclyaccessible_go" style="color: inherit; text-decoration: inherit;">Publicly<wbr>Accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the DB instance.
 {{% /md %}}</dd>
@@ -973,7 +973,7 @@ The following output properties are available:
 <a href="#replicatesourcedb_go" style="color: inherit; text-decoration: inherit;">Replicate<wbr>Source<wbr>Db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the source DB that this is a replica of.
 {{% /md %}}</dd>
@@ -983,7 +983,7 @@ The following output properties are available:
 <a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RDS Resource ID of this instance.
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ The following output properties are available:
 <a href="#storageencrypted_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB instance is encrypted.
 {{% /md %}}</dd>
@@ -1003,7 +1003,7 @@ The following output properties are available:
 <a href="#storagetype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB instance.
 {{% /md %}}</dd>
@@ -1022,7 +1022,7 @@ The following output properties are available:
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone of the DB instance.
 {{% /md %}}</dd>
@@ -1032,7 +1032,7 @@ The following output properties are available:
 <a href="#vpcsecuritygroups_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Provides a list of VPC security group elements that the DB instance belongs to.
 {{% /md %}}</dd>
@@ -1048,7 +1048,7 @@ The following output properties are available:
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hostname of the RDS instance. See also `endpoint` and `port`.
 {{% /md %}}</dd>
@@ -1058,7 +1058,7 @@ The following output properties are available:
 <a href="#allocatedstorage_nodejs" style="color: inherit; text-decoration: inherit;">allocated<wbr>Storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allocated storage size specified in gigabytes.
 {{% /md %}}</dd>
@@ -1068,7 +1068,7 @@ The following output properties are available:
 <a href="#autominorversionupgrade_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Minor<wbr>Version<wbr>Upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates that minor version patches are applied automatically.
 {{% /md %}}</dd>
@@ -1078,7 +1078,7 @@ The following output properties are available:
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Availability Zone the DB instance is located in.
 {{% /md %}}</dd>
@@ -1088,7 +1088,7 @@ The following output properties are available:
 <a href="#backupretentionperiod_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Retention<wbr>Period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days for which automatic DB snapshots are retained.
 {{% /md %}}</dd>
@@ -1098,7 +1098,7 @@ The following output properties are available:
 <a href="#cacertidentifier_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the CA certificate for the DB instance.
 {{% /md %}}</dd>
@@ -1108,7 +1108,7 @@ The following output properties are available:
 <a href="#dbclusteridentifier_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Cluster<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the DB instance is a member of a DB cluster, contains the name of the DB cluster that the DB instance is a member of.
 {{% /md %}}</dd>
@@ -1118,7 +1118,7 @@ The following output properties are available:
 <a href="#dbinstancearn_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB instance.
 {{% /md %}}</dd>
@@ -1128,7 +1128,7 @@ The following output properties are available:
 <a href="#dbinstanceclass_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the name of the compute and memory capacity class of the DB instance.
 {{% /md %}}</dd>
@@ -1138,7 +1138,7 @@ The following output properties are available:
 <a href="#dbinstanceidentifier_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1147,7 +1147,7 @@ The following output properties are available:
 <a href="#dbinstanceport_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Instance<wbr>Port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the port that the DB instance listens on.
 {{% /md %}}</dd>
@@ -1157,7 +1157,7 @@ The following output properties are available:
 <a href="#dbname_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the name of the initial database of this instance that was provided at create time, if one was specified when the DB instance was created. This same name is returned for the life of the DB instance.
 {{% /md %}}</dd>
@@ -1167,7 +1167,7 @@ The following output properties are available:
 <a href="#dbparametergroups_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Parameter<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Provides the list of DB parameter groups applied to this DB instance.
 {{% /md %}}</dd>
@@ -1177,7 +1177,7 @@ The following output properties are available:
 <a href="#dbsecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Provides List of DB security groups associated to this DB instance.
 {{% /md %}}</dd>
@@ -1187,7 +1187,7 @@ The following output properties are available:
 <a href="#dbsubnetgroup_nodejs" style="color: inherit; text-decoration: inherit;">db<wbr>Subnet<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the subnet group associated with the DB instance.
 {{% /md %}}</dd>
@@ -1197,7 +1197,7 @@ The following output properties are available:
 <a href="#enabledcloudwatchlogsexports_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>Cloudwatch<wbr>Logs<wbr>Exports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch.
 {{% /md %}}</dd>
@@ -1207,7 +1207,7 @@ The following output properties are available:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The connection endpoint in `address:port` format.
 {{% /md %}}</dd>
@@ -1217,7 +1217,7 @@ The following output properties are available:
 <a href="#engine_nodejs" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provides the name of the database engine to be used for this DB instance.
 {{% /md %}}</dd>
@@ -1227,7 +1227,7 @@ The following output properties are available:
 <a href="#engineversion_nodejs" style="color: inherit; text-decoration: inherit;">engine<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the database engine version.
 {{% /md %}}</dd>
@@ -1237,7 +1237,7 @@ The following output properties are available:
 <a href="#hostedzoneid_nodejs" style="color: inherit; text-decoration: inherit;">hosted<wbr>Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the DB instance (to be used in a Route 53 Alias record).
 {{% /md %}}</dd>
@@ -1247,7 +1247,7 @@ The following output properties are available:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1257,7 +1257,7 @@ The following output properties are available:
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the Provisioned IOPS (I/O operations per second) value.
 {{% /md %}}</dd>
@@ -1267,7 +1267,7 @@ The following output properties are available:
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If StorageEncrypted is true, the KMS key identifier for the encrypted DB instance.
 {{% /md %}}</dd>
@@ -1277,7 +1277,7 @@ The following output properties are available:
 <a href="#licensemodel_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model information for this DB instance.
 {{% /md %}}</dd>
@@ -1287,7 +1287,7 @@ The following output properties are available:
 <a href="#masterusername_nodejs" style="color: inherit; text-decoration: inherit;">master<wbr>Username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Contains the master username for the DB instance.
 {{% /md %}}</dd>
@@ -1297,7 +1297,7 @@ The following output properties are available:
 <a href="#monitoringinterval_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance.
 {{% /md %}}</dd>
@@ -1307,7 +1307,7 @@ The following output properties are available:
 <a href="#monitoringrolearn_nodejs" style="color: inherit; text-decoration: inherit;">monitoring<wbr>Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to CloudWatch Logs.
 {{% /md %}}</dd>
@@ -1317,7 +1317,7 @@ The following output properties are available:
 <a href="#multiaz_nodejs" style="color: inherit; text-decoration: inherit;">multi<wbr>Az</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the DB instance is a Multi-AZ deployment.
 {{% /md %}}</dd>
@@ -1327,7 +1327,7 @@ The following output properties are available:
 <a href="#optiongroupmemberships_nodejs" style="color: inherit; text-decoration: inherit;">option<wbr>Group<wbr>Memberships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Provides the list of option group memberships for this DB instance.
 {{% /md %}}</dd>
@@ -1337,7 +1337,7 @@ The following output properties are available:
 <a href="#port_nodejs" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The database port.
 {{% /md %}}</dd>
@@ -1347,7 +1347,7 @@ The following output properties are available:
 <a href="#preferredbackupwindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Backup<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the daily time range during which automated backups are created.
 {{% /md %}}</dd>
@@ -1357,7 +1357,7 @@ The following output properties are available:
 <a href="#preferredmaintenancewindow_nodejs" style="color: inherit; text-decoration: inherit;">preferred<wbr>Maintenance<wbr>Window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the weekly time range during which system maintenance can occur in UTC.
 {{% /md %}}</dd>
@@ -1367,7 +1367,7 @@ The following output properties are available:
 <a href="#publiclyaccessible_nodejs" style="color: inherit; text-decoration: inherit;">publicly<wbr>Accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the DB instance.
 {{% /md %}}</dd>
@@ -1377,7 +1377,7 @@ The following output properties are available:
 <a href="#replicatesourcedb_nodejs" style="color: inherit; text-decoration: inherit;">replicate<wbr>Source<wbr>Db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The identifier of the source DB that this is a replica of.
 {{% /md %}}</dd>
@@ -1387,7 +1387,7 @@ The following output properties are available:
 <a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RDS Resource ID of this instance.
 {{% /md %}}</dd>
@@ -1397,7 +1397,7 @@ The following output properties are available:
 <a href="#storageencrypted_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB instance is encrypted.
 {{% /md %}}</dd>
@@ -1407,7 +1407,7 @@ The following output properties are available:
 <a href="#storagetype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB instance.
 {{% /md %}}</dd>
@@ -1426,7 +1426,7 @@ The following output properties are available:
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time zone of the DB instance.
 {{% /md %}}</dd>
@@ -1436,7 +1436,7 @@ The following output properties are available:
 <a href="#vpcsecuritygroups_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Provides a list of VPC security group elements that the DB instance belongs to.
 {{% /md %}}</dd>
@@ -1452,7 +1452,7 @@ The following output properties are available:
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hostname of the RDS instance. See also `endpoint` and `port`.
 {{% /md %}}</dd>
@@ -1462,7 +1462,7 @@ The following output properties are available:
 <a href="#allocated_storage_python" style="color: inherit; text-decoration: inherit;">allocated_<wbr>storage</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allocated storage size specified in gigabytes.
 {{% /md %}}</dd>
@@ -1472,7 +1472,7 @@ The following output properties are available:
 <a href="#auto_minor_version_upgrade_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>minor_<wbr>version_<wbr>upgrade</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates that minor version patches are applied automatically.
 {{% /md %}}</dd>
@@ -1482,7 +1482,7 @@ The following output properties are available:
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Availability Zone the DB instance is located in.
 {{% /md %}}</dd>
@@ -1492,7 +1492,7 @@ The following output properties are available:
 <a href="#backup_retention_period_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>retention_<wbr>period</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the number of days for which automatic DB snapshots are retained.
 {{% /md %}}</dd>
@@ -1502,7 +1502,7 @@ The following output properties are available:
 <a href="#ca_cert_identifier_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the identifier of the CA certificate for the DB instance.
 {{% /md %}}</dd>
@@ -1512,7 +1512,7 @@ The following output properties are available:
 <a href="#db_cluster_identifier_python" style="color: inherit; text-decoration: inherit;">db_<wbr>cluster_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If the DB instance is a member of a DB cluster, contains the name of the DB cluster that the DB instance is a member of.
 {{% /md %}}</dd>
@@ -1522,7 +1522,7 @@ The following output properties are available:
 <a href="#db_instance_arn_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB instance.
 {{% /md %}}</dd>
@@ -1532,7 +1532,7 @@ The following output properties are available:
 <a href="#db_instance_class_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the name of the compute and memory capacity class of the DB instance.
 {{% /md %}}</dd>
@@ -1542,7 +1542,7 @@ The following output properties are available:
 <a href="#db_instance_identifier_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>identifier</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1551,7 +1551,7 @@ The following output properties are available:
 <a href="#db_instance_port_python" style="color: inherit; text-decoration: inherit;">db_<wbr>instance_<wbr>port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the port that the DB instance listens on.
 {{% /md %}}</dd>
@@ -1561,7 +1561,7 @@ The following output properties are available:
 <a href="#db_name_python" style="color: inherit; text-decoration: inherit;">db_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the name of the initial database of this instance that was provided at create time, if one was specified when the DB instance was created. This same name is returned for the life of the DB instance.
 {{% /md %}}</dd>
@@ -1571,7 +1571,7 @@ The following output properties are available:
 <a href="#db_parameter_groups_python" style="color: inherit; text-decoration: inherit;">db_<wbr>parameter_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Provides the list of DB parameter groups applied to this DB instance.
 {{% /md %}}</dd>
@@ -1581,7 +1581,7 @@ The following output properties are available:
 <a href="#db_security_groups_python" style="color: inherit; text-decoration: inherit;">db_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Provides List of DB security groups associated to this DB instance.
 {{% /md %}}</dd>
@@ -1591,7 +1591,7 @@ The following output properties are available:
 <a href="#db_subnet_group_python" style="color: inherit; text-decoration: inherit;">db_<wbr>subnet_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the subnet group associated with the DB instance.
 {{% /md %}}</dd>
@@ -1601,7 +1601,7 @@ The following output properties are available:
 <a href="#enabled_cloudwatch_logs_exports_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>cloudwatch_<wbr>logs_<wbr>exports</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of log types to export to cloudwatch.
 {{% /md %}}</dd>
@@ -1611,7 +1611,7 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The connection endpoint in `address:port` format.
 {{% /md %}}</dd>
@@ -1621,7 +1621,7 @@ The following output properties are available:
 <a href="#engine_python" style="color: inherit; text-decoration: inherit;">engine</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Provides the name of the database engine to be used for this DB instance.
 {{% /md %}}</dd>
@@ -1631,7 +1631,7 @@ The following output properties are available:
 <a href="#engine_version_python" style="color: inherit; text-decoration: inherit;">engine_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates the database engine version.
 {{% /md %}}</dd>
@@ -1641,7 +1641,7 @@ The following output properties are available:
 <a href="#hosted_zone_id_python" style="color: inherit; text-decoration: inherit;">hosted_<wbr>zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The canonical hosted zone ID of the DB instance (to be used in a Route 53 Alias record).
 {{% /md %}}</dd>
@@ -1651,7 +1651,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1661,7 +1661,7 @@ The following output properties are available:
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the Provisioned IOPS (I/O operations per second) value.
 {{% /md %}}</dd>
@@ -1671,7 +1671,7 @@ The following output properties are available:
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If StorageEncrypted is true, the KMS key identifier for the encrypted DB instance.
 {{% /md %}}</dd>
@@ -1681,7 +1681,7 @@ The following output properties are available:
 <a href="#license_model_python" style="color: inherit; text-decoration: inherit;">license_<wbr>model</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}License model information for this DB instance.
 {{% /md %}}</dd>
@@ -1691,7 +1691,7 @@ The following output properties are available:
 <a href="#master_username_python" style="color: inherit; text-decoration: inherit;">master_<wbr>username</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Contains the master username for the DB instance.
 {{% /md %}}</dd>
@@ -1701,7 +1701,7 @@ The following output properties are available:
 <a href="#monitoring_interval_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance.
 {{% /md %}}</dd>
@@ -1711,7 +1711,7 @@ The following output properties are available:
 <a href="#monitoring_role_arn_python" style="color: inherit; text-decoration: inherit;">monitoring_<wbr>role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN for the IAM role that permits RDS to send Enhanced Monitoring metrics to CloudWatch Logs.
 {{% /md %}}</dd>
@@ -1721,7 +1721,7 @@ The following output properties are available:
 <a href="#multi_az_python" style="color: inherit; text-decoration: inherit;">multi_<wbr>az</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the DB instance is a Multi-AZ deployment.
 {{% /md %}}</dd>
@@ -1731,7 +1731,7 @@ The following output properties are available:
 <a href="#option_group_memberships_python" style="color: inherit; text-decoration: inherit;">option_<wbr>group_<wbr>memberships</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Provides the list of option group memberships for this DB instance.
 {{% /md %}}</dd>
@@ -1741,7 +1741,7 @@ The following output properties are available:
 <a href="#port_python" style="color: inherit; text-decoration: inherit;">port</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The database port.
 {{% /md %}}</dd>
@@ -1751,7 +1751,7 @@ The following output properties are available:
 <a href="#preferred_backup_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>backup_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the daily time range during which automated backups are created.
 {{% /md %}}</dd>
@@ -1761,7 +1761,7 @@ The following output properties are available:
 <a href="#preferred_maintenance_window_python" style="color: inherit; text-decoration: inherit;">preferred_<wbr>maintenance_<wbr>window</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the weekly time range during which system maintenance can occur in UTC.
 {{% /md %}}</dd>
@@ -1771,7 +1771,7 @@ The following output properties are available:
 <a href="#publicly_accessible_python" style="color: inherit; text-decoration: inherit;">publicly_<wbr>accessible</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies the accessibility options for the DB instance.
 {{% /md %}}</dd>
@@ -1781,7 +1781,7 @@ The following output properties are available:
 <a href="#replicate_source_db_python" style="color: inherit; text-decoration: inherit;">replicate_<wbr>source_<wbr>db</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The identifier of the source DB that this is a replica of.
 {{% /md %}}</dd>
@@ -1791,7 +1791,7 @@ The following output properties are available:
 <a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RDS Resource ID of this instance.
 {{% /md %}}</dd>
@@ -1801,7 +1801,7 @@ The following output properties are available:
 <a href="#storage_encrypted_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB instance is encrypted.
 {{% /md %}}</dd>
@@ -1811,7 +1811,7 @@ The following output properties are available:
 <a href="#storage_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the storage type associated with DB instance.
 {{% /md %}}</dd>
@@ -1830,7 +1830,7 @@ The following output properties are available:
 <a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time zone of the DB instance.
 {{% /md %}}</dd>
@@ -1840,7 +1840,7 @@ The following output properties are available:
 <a href="#vpc_security_groups_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Provides a list of VPC security group elements that the DB instance belongs to.
 {{% /md %}}</dd>

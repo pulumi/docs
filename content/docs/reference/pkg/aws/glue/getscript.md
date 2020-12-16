@@ -957,7 +957,7 @@ The following arguments are supported:
 <a href="#language_csharp" style="color: inherit; text-decoration: inherit;">Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The programming language of the resulting code from the DAG. Defaults to `PYTHON`. Valid values are `PYTHON` and `SCALA`.
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ The following arguments are supported:
 <a href="#language_go" style="color: inherit; text-decoration: inherit;">Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The programming language of the resulting code from the DAG. Defaults to `PYTHON`. Valid values are `PYTHON` and `SCALA`.
 {{% /md %}}</dd>
@@ -1029,7 +1029,7 @@ The following arguments are supported:
 <a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The programming language of the resulting code from the DAG. Defaults to `PYTHON`. Valid values are `PYTHON` and `SCALA`.
 {{% /md %}}</dd>
@@ -1065,7 +1065,7 @@ The following arguments are supported:
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The programming language of the resulting code from the DAG. Defaults to `PYTHON`. Valid values are `PYTHON` and `SCALA`.
 {{% /md %}}</dd>
@@ -1108,7 +1108,7 @@ The following output properties are available:
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1118,7 +1118,7 @@ The following output properties are available:
 <a href="#pythonscript_csharp" style="color: inherit; text-decoration: inherit;">Python<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Python script generated from the DAG when the `language` argument is set to `PYTHON`.
 {{% /md %}}</dd>
@@ -1128,7 +1128,7 @@ The following output properties are available:
 <a href="#scalacode_csharp" style="color: inherit; text-decoration: inherit;">Scala<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
 {{% /md %}}</dd>
@@ -1138,7 +1138,7 @@ The following output properties are available:
 <a href="#language_csharp" style="color: inherit; text-decoration: inherit;">Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1171,7 +1171,7 @@ The following output properties are available:
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1181,7 +1181,7 @@ The following output properties are available:
 <a href="#pythonscript_go" style="color: inherit; text-decoration: inherit;">Python<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Python script generated from the DAG when the `language` argument is set to `PYTHON`.
 {{% /md %}}</dd>
@@ -1191,7 +1191,7 @@ The following output properties are available:
 <a href="#scalacode_go" style="color: inherit; text-decoration: inherit;">Scala<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
 {{% /md %}}</dd>
@@ -1201,7 +1201,7 @@ The following output properties are available:
 <a href="#language_go" style="color: inherit; text-decoration: inherit;">Language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1234,7 +1234,7 @@ The following output properties are available:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1244,7 +1244,7 @@ The following output properties are available:
 <a href="#pythonscript_nodejs" style="color: inherit; text-decoration: inherit;">python<wbr>Script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Python script generated from the DAG when the `language` argument is set to `PYTHON`.
 {{% /md %}}</dd>
@@ -1254,7 +1254,7 @@ The following output properties are available:
 <a href="#scalacode_nodejs" style="color: inherit; text-decoration: inherit;">scala<wbr>Code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
 {{% /md %}}</dd>
@@ -1264,7 +1264,7 @@ The following output properties are available:
 <a href="#language_nodejs" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1297,7 +1297,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1307,7 +1307,7 @@ The following output properties are available:
 <a href="#python_script_python" style="color: inherit; text-decoration: inherit;">python_<wbr>script</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Python script generated from the DAG when the `language` argument is set to `PYTHON`.
 {{% /md %}}</dd>
@@ -1317,7 +1317,7 @@ The following output properties are available:
 <a href="#scala_code_python" style="color: inherit; text-decoration: inherit;">scala_<wbr>code</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
 {{% /md %}}</dd>
@@ -1327,7 +1327,7 @@ The following output properties are available:
 <a href="#language_python" style="color: inherit; text-decoration: inherit;">language</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1362,7 +1362,7 @@ The following output properties are available:
 <a href="#source_csharp" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the node at which the edge starts.
 {{% /md %}}</dd>
@@ -1372,7 +1372,7 @@ The following output properties are available:
 <a href="#target_csharp" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the node at which the edge ends.
 {{% /md %}}</dd>
@@ -1382,7 +1382,7 @@ The following output properties are available:
 <a href="#targetparameter_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target of the edge.
 {{% /md %}}</dd>
@@ -1398,7 +1398,7 @@ The following output properties are available:
 <a href="#source_go" style="color: inherit; text-decoration: inherit;">Source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the node at which the edge starts.
 {{% /md %}}</dd>
@@ -1408,7 +1408,7 @@ The following output properties are available:
 <a href="#target_go" style="color: inherit; text-decoration: inherit;">Target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the node at which the edge ends.
 {{% /md %}}</dd>
@@ -1418,7 +1418,7 @@ The following output properties are available:
 <a href="#targetparameter_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target of the edge.
 {{% /md %}}</dd>
@@ -1434,7 +1434,7 @@ The following output properties are available:
 <a href="#source_nodejs" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the node at which the edge starts.
 {{% /md %}}</dd>
@@ -1444,7 +1444,7 @@ The following output properties are available:
 <a href="#target_nodejs" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the node at which the edge ends.
 {{% /md %}}</dd>
@@ -1454,7 +1454,7 @@ The following output properties are available:
 <a href="#targetparameter_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target of the edge.
 {{% /md %}}</dd>
@@ -1470,7 +1470,7 @@ The following output properties are available:
 <a href="#source_python" style="color: inherit; text-decoration: inherit;">source</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the node at which the edge starts.
 {{% /md %}}</dd>
@@ -1480,7 +1480,7 @@ The following output properties are available:
 <a href="#target_python" style="color: inherit; text-decoration: inherit;">target</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the node at which the edge ends.
 {{% /md %}}</dd>
@@ -1490,7 +1490,7 @@ The following output properties are available:
 <a href="#target_parameter_python" style="color: inherit; text-decoration: inherit;">target_<wbr>parameter</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The target of the edge.
 {{% /md %}}</dd>
@@ -1530,7 +1530,7 @@ The following output properties are available:
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A node identifier that is unique within the node's graph.
 {{% /md %}}</dd>
@@ -1540,7 +1540,7 @@ The following output properties are available:
 <a href="#nodetype_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of node this is.
 {{% /md %}}</dd>
@@ -1550,7 +1550,7 @@ The following output properties are available:
 <a href="#linenumber_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The line number of the node.
 {{% /md %}}</dd>
@@ -1576,7 +1576,7 @@ The following output properties are available:
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A node identifier that is unique within the node's graph.
 {{% /md %}}</dd>
@@ -1586,7 +1586,7 @@ The following output properties are available:
 <a href="#nodetype_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of node this is.
 {{% /md %}}</dd>
@@ -1596,7 +1596,7 @@ The following output properties are available:
 <a href="#linenumber_go" style="color: inherit; text-decoration: inherit;">Line<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The line number of the node.
 {{% /md %}}</dd>
@@ -1622,7 +1622,7 @@ The following output properties are available:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A node identifier that is unique within the node's graph.
 {{% /md %}}</dd>
@@ -1632,7 +1632,7 @@ The following output properties are available:
 <a href="#nodetype_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of node this is.
 {{% /md %}}</dd>
@@ -1642,7 +1642,7 @@ The following output properties are available:
 <a href="#linenumber_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The line number of the node.
 {{% /md %}}</dd>
@@ -1668,7 +1668,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A node identifier that is unique within the node's graph.
 {{% /md %}}</dd>
@@ -1678,7 +1678,7 @@ The following output properties are available:
 <a href="#node_type_python" style="color: inherit; text-decoration: inherit;">node_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of node this is.
 {{% /md %}}</dd>
@@ -1688,7 +1688,7 @@ The following output properties are available:
 <a href="#line_number_python" style="color: inherit; text-decoration: inherit;">line_<wbr>number</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The line number of the node.
 {{% /md %}}</dd>
@@ -1718,7 +1718,7 @@ The following output properties are available:
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the argument or property.
 {{% /md %}}</dd>
@@ -1728,7 +1728,7 @@ The following output properties are available:
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the argument or property.
 {{% /md %}}</dd>
@@ -1738,7 +1738,7 @@ The following output properties are available:
 <a href="#param_csharp" style="color: inherit; text-decoration: inherit;">Param</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1754,7 +1754,7 @@ The following output properties are available:
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the argument or property.
 {{% /md %}}</dd>
@@ -1764,7 +1764,7 @@ The following output properties are available:
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the argument or property.
 {{% /md %}}</dd>
@@ -1774,7 +1774,7 @@ The following output properties are available:
 <a href="#param_go" style="color: inherit; text-decoration: inherit;">Param</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1790,7 +1790,7 @@ The following output properties are available:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the argument or property.
 {{% /md %}}</dd>
@@ -1800,7 +1800,7 @@ The following output properties are available:
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the argument or property.
 {{% /md %}}</dd>
@@ -1810,7 +1810,7 @@ The following output properties are available:
 <a href="#param_nodejs" style="color: inherit; text-decoration: inherit;">param</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1826,7 +1826,7 @@ The following output properties are available:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the argument or property.
 {{% /md %}}</dd>
@@ -1836,7 +1836,7 @@ The following output properties are available:
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the argument or property.
 {{% /md %}}</dd>
@@ -1846,7 +1846,7 @@ The following output properties are available:
 <a href="#param_python" style="color: inherit; text-decoration: inherit;">param</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
 {{% /md %}}</dd>
