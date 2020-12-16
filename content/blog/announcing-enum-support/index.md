@@ -198,7 +198,7 @@ While some properties make sense as "strict" enums (i.e., the input value **must
 
 A property is a "strict" enum when the input value **must** be one of the enumerated values. In this case, the property type is specified as the enum type.
 
-We will use "strict" enums when we are sure that the enum will include all legal values, such as when a provider is auto-generated from a specification provided by the cloud provider (like our [Azure NextGen](https://www.pulumi.com/blog/announcing-nextgen-azure-provider/) or [Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/#pulumi-kubernetes-provider) providers).
+We will use "strict" enums when we are sure that the enum will include all legal values, such as when a provider is auto-generated from a cloud provider specification (like our [Azure NextGen](https://www.pulumi.com/blog/announcing-nextgen-azure-provider/) or [Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/#pulumi-kubernetes-provider) providers).
 
 {{< chooser >}}
 {{< choosable language typescript >}}
