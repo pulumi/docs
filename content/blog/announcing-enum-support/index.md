@@ -270,7 +270,9 @@ type StorageAccountArgs struct {
 {{< chooser >}}
 {{< choosable language typescript >}}
 
-**Note:** When using TypeScript, "strict" enums will accept both the constant (`AccessTier.Cool`) or the literal string (`"Cool"`). If there is an accidental spelling error in the literal, you are *immediately* alerted to the issue rather than having to wait until runtime.
+{{% notes type="info" %}}
+When using TypeScript, "strict" enums will accept both the constant (`AccessTier.Cool`) or the literal string (`"Cool"`). If there is an accidental spelling error in the literal, you are *immediately* alerted to the issue rather than having to wait until runtime.
+{{% /notes %}}
 
 ![ENUM_ERROR_TYPESCRIPT](ts-enum-spelling.png)
 
