@@ -166,7 +166,6 @@ Enum properties provide discoverable and normalized constants that can be used i
 
 Using the provided constants, you can avoid referring back to the documentation to remember the valid values and save precious moments in the development cycle that would be lost to debugging errors caused by typos.
 
-{{< chooser >}}
 {{< choosable language typescript >}}
 
 ![ENUM_TYPESCRIPT](ts-enum.gif)
@@ -187,7 +186,6 @@ Using the provided constants, you can avoid referring back to the documentation 
 ![ENUM_GO](go-enum.gif)
 
 {{< /choosable >}}
-{{< /chooser >}}
 
 ## Optimized for flexibility
 
@@ -266,7 +264,6 @@ type StorageAccountArgs struct {
 {{< /choosable >}}
 {{< /chooser >}}
 
-{{< chooser language "typescript,python,csharp,go" >}}
 {{< choosable language typescript >}}
 
 {{% notes type="info" %}}
@@ -276,7 +273,6 @@ When using TypeScript, "strict" enums will accept both the constant (`AccessTier
 ![ENUM_ERROR_TYPESCRIPT](ts-enum-spelling.png)
 
 {{< /choosable >}}
-{{< /chooser >}}
 
 ### "Relaxed" enums
 
