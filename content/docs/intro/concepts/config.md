@@ -472,7 +472,7 @@ The `awskms` provider uses an existing KMS key in your AWS account for encryptio
 
 1. By ID: `awskms://1234abcd-12ab-34cd-56ef-1234567890ab?region=us-east-1`.
 2. By alias: `awskms://alias/ExampleAlias?region=us-east-1`.
-3. By ARN: `awskms://arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1`.
+3. By ARN: `awskms:///arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34bc-56ef-1234567890ab?region=us-east-1`.
 
 For example, this configures a stack to use an AWS KMS key with ID `1234abcd-12ab-34cd-56ef-1234567890ab`:
 
