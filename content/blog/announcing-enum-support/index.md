@@ -283,7 +283,7 @@ When using TypeScript, "strict" enums will accept both the constant (`AccessTier
 
 When a property is a "relaxed" enum, the property type is specified as the `Union` of the enum type and the underlying primitive type. This means that you have the convenience of using the enum constants (i.e., `s3.CannedAcl.Private`), but you may also pass in the raw string (i.e., `"private"`).
 
-In the AWS provider (and other Terraform-based providers), we have opted for **only** using "relaxed" enums. The reasoning here is twofold. Allowing the primitive type maintains backward compatibility and also allows users to use values that may not yet be represented in the Pulumi schema (e.g., a new Managed Policy ARN, EC2 Instance type, etc.).
+In the AWS provider (and other Terraform-based providers), we have opted for **only** using "relaxed" enums. The reasoning is twofold. Allowing the primitive type maintains backward compatibility and also allows users to use values that may not yet be represented in the Pulumi schema (e.g., a new Managed Policy ARN, EC2 Instance type, etc.).
 
 {{< chooser >}}
 {{< choosable language typescript >}}
