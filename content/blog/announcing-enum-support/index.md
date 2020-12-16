@@ -94,7 +94,7 @@ In the above code, the S3 `Bucket` resource has a property called `acl`, where w
 
 If we look at the [resource docs](https://www.pulumi.com/docs/reference/pkg/aws/s3/bucket/#acl_nodejs), we can see that the `acl` property can only be set to one of a few different values: `private`, `public-read`, `public-read-write`, `aws-exec-read`, `authenticated-read`, and `log-delivery-write`. The `acl` property is the perfect candidate for an enum type and is emitted as one, so you can use the following code instead.
 
-{{< chooser >}}
+{{< chooser language "typescript,python,csharp,go" >}}
 {{< choosable language typescript >}}
 
 ```typescript
@@ -199,7 +199,7 @@ A property is a "strict" enum when the input value **must** be one of the enumer
 
 We will use "strict" enums when we are sure that the enum will include all legal values, such as when a provider is auto-generated from a cloud provider specification (like our [Azure NextGen](https://www.pulumi.com/blog/announcing-nextgen-azure-provider/) or [Kubernetes](https://www.pulumi.com/docs/intro/cloud-providers/kubernetes/#pulumi-kubernetes-provider) providers).
 
-{{< chooser >}}
+{{< chooser language "typescript,python,csharp,go" >}}
 {{< choosable language typescript >}}
 
 ```typescript
@@ -266,7 +266,7 @@ type StorageAccountArgs struct {
 {{< /choosable >}}
 {{< /chooser >}}
 
-{{< chooser >}}
+{{< chooser language "typescript,python,csharp,go" >}}
 {{< choosable language typescript >}}
 
 {{% notes type="info" %}}
@@ -284,7 +284,7 @@ When a property is a "relaxed" enum, the property type is specified as the `Unio
 
 In the AWS provider (and other Terraform-based providers), we have opted for **only** using "relaxed" enums. The reasoning is twofold. Allowing the primitive type maintains backward compatibility and also allows users to use values that may not yet be represented in the Pulumi schema (e.g., a new Managed Policy ARN, EC2 Instance type, etc.).
 
-{{< chooser >}}
+{{< chooser language "typescript,python,csharp,go" >}}
 {{< choosable language typescript >}}
 
 ```typescript
