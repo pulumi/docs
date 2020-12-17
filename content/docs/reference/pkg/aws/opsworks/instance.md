@@ -2,7 +2,7 @@
 ---
 title: "Instance"
 title_tag: "aws.opsworks.Instance"
-meta_desc: "Explore the Instance resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks instance resource."
+meta_desc: "Documentation for the aws.opsworks.Instance resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -167,7 +167,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -175,11 +175,11 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#Instance">NewInstance</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#Instance">NewInstance</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.InstanceArgs.html">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Instance.html">Instance</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.InstanceArgs.html">InstanceArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -190,7 +190,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -259,7 +259,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -298,7 +298,7 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -348,7 +348,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#layerids_csharp" style="color: inherit; text-decoration: inherit;">Layer<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
 {{% /md %}}</dd>
@@ -358,7 +358,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#agentversion_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#amiid_csharp" style="color: inherit; text-decoration: inherit;">Ami<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -398,7 +398,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#autoscalingtype_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -408,7 +408,7 @@ The Instance resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -419,7 +419,7 @@ by default.
 <a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -428,7 +428,7 @@ by default.
 <a href="#deleteebs_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -437,7 +437,7 @@ by default.
 <a href="#deleteeip_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Eip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -457,7 +457,7 @@ instance.  See Block Devices below for details.
 <a href="#ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -467,7 +467,7 @@ instance.  See Block Devices below for details.
 <a href="#ecsclusterarn_csharp" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Cluster<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -476,7 +476,7 @@ instance.  See Block Devices below for details.
 <a href="#elasticip_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -496,7 +496,7 @@ instance.  See Block Devices below for details.
 <a href="#hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -506,7 +506,7 @@ instance.  See Block Devices below for details.
 <a href="#infrastructureclass_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -515,7 +515,7 @@ instance.  See Block Devices below for details.
 <a href="#installupdatesonboot_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -525,7 +525,7 @@ instance.  See Block Devices below for details.
 <a href="#instanceprofilearn_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -534,7 +534,7 @@ instance.  See Block Devices below for details.
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -544,7 +544,7 @@ instance.  See Block Devices below for details.
 <a href="#lastserviceerrorid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Service<wbr>Error<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -553,7 +553,7 @@ instance.  See Block Devices below for details.
 <a href="#os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -563,7 +563,7 @@ instance.  See Block Devices below for details.
 <a href="#platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -572,7 +572,7 @@ instance.  See Block Devices below for details.
 <a href="#privatedns_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -584,7 +584,7 @@ for your VPC
 <a href="#privateip_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -594,7 +594,7 @@ for your VPC
 <a href="#publicdns_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -605,7 +605,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -615,7 +615,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#registeredby_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -624,7 +624,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedagentversion_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -633,7 +633,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedosfamily_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -642,7 +642,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedosname_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -651,7 +651,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedosversion_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -671,7 +671,7 @@ device of the instance. See Block Devices below for details.
 <a href="#rootdevicetype_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -681,7 +681,7 @@ device of the instance. See Block Devices below for details.
 <a href="#rootdevicevolumeid_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -690,7 +690,7 @@ device of the instance. See Block Devices below for details.
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
 {{% /md %}}</dd>
@@ -700,7 +700,7 @@ device of the instance. See Block Devices below for details.
 <a href="#sshhostdsakeyfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -709,7 +709,7 @@ device of the instance. See Block Devices below for details.
 <a href="#sshhostrsakeyfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -718,7 +718,7 @@ device of the instance. See Block Devices below for details.
 <a href="#sshkeyname_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
@@ -728,7 +728,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -738,7 +738,7 @@ device of the instance. See Block Devices below for details.
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -747,7 +747,7 @@ device of the instance. See Block Devices below for details.
 <a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -757,7 +757,7 @@ device of the instance. See Block Devices below for details.
 <a href="#tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -767,7 +767,7 @@ device of the instance. See Block Devices below for details.
 <a href="#virtualizationtype_csharp" style="color: inherit; text-decoration: inherit;">Virtualization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -784,7 +784,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#layerids_go" style="color: inherit; text-decoration: inherit;">Layer<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
 {{% /md %}}</dd>
@@ -794,7 +794,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
@@ -804,7 +804,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#agentversion_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -814,7 +814,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#amiid_go" style="color: inherit; text-decoration: inherit;">Ami<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -824,7 +824,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -834,7 +834,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#autoscalingtype_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -844,7 +844,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -855,7 +855,7 @@ by default.
 <a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -864,7 +864,7 @@ by default.
 <a href="#deleteebs_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -873,7 +873,7 @@ by default.
 <a href="#deleteeip_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Eip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -893,7 +893,7 @@ instance.  See Block Devices below for details.
 <a href="#ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -903,7 +903,7 @@ instance.  See Block Devices below for details.
 <a href="#ecsclusterarn_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Cluster<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -912,7 +912,7 @@ instance.  See Block Devices below for details.
 <a href="#elasticip_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -932,7 +932,7 @@ instance.  See Block Devices below for details.
 <a href="#hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -942,7 +942,7 @@ instance.  See Block Devices below for details.
 <a href="#infrastructureclass_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -951,7 +951,7 @@ instance.  See Block Devices below for details.
 <a href="#installupdatesonboot_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -961,7 +961,7 @@ instance.  See Block Devices below for details.
 <a href="#instanceprofilearn_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -970,7 +970,7 @@ instance.  See Block Devices below for details.
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -980,7 +980,7 @@ instance.  See Block Devices below for details.
 <a href="#lastserviceerrorid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Service<wbr>Error<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -989,7 +989,7 @@ instance.  See Block Devices below for details.
 <a href="#os_go" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -999,7 +999,7 @@ instance.  See Block Devices below for details.
 <a href="#platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1008,7 +1008,7 @@ instance.  See Block Devices below for details.
 <a href="#privatedns_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -1020,7 +1020,7 @@ for your VPC
 <a href="#privateip_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -1030,7 +1030,7 @@ for your VPC
 <a href="#publicdns_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -1041,7 +1041,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -1051,7 +1051,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#registeredby_go" style="color: inherit; text-decoration: inherit;">Registered<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1060,7 +1060,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedagentversion_go" style="color: inherit; text-decoration: inherit;">Reported<wbr>Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1069,7 +1069,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedosfamily_go" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1078,7 +1078,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedosname_go" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1087,7 +1087,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedosversion_go" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1107,7 +1107,7 @@ device of the instance. See Block Devices below for details.
 <a href="#rootdevicetype_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -1117,7 +1117,7 @@ device of the instance. See Block Devices below for details.
 <a href="#rootdevicevolumeid_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1126,7 +1126,7 @@ device of the instance. See Block Devices below for details.
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
 {{% /md %}}</dd>
@@ -1136,7 +1136,7 @@ device of the instance. See Block Devices below for details.
 <a href="#sshhostdsakeyfingerprint_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1145,7 +1145,7 @@ device of the instance. See Block Devices below for details.
 <a href="#sshhostrsakeyfingerprint_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1154,7 +1154,7 @@ device of the instance. See Block Devices below for details.
 <a href="#sshkeyname_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
@@ -1164,7 +1164,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -1174,7 +1174,7 @@ device of the instance. See Block Devices below for details.
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1183,7 +1183,7 @@ device of the instance. See Block Devices below for details.
 <a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -1193,7 +1193,7 @@ device of the instance. See Block Devices below for details.
 <a href="#tenancy_go" style="color: inherit; text-decoration: inherit;">Tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -1203,7 +1203,7 @@ device of the instance. See Block Devices below for details.
 <a href="#virtualizationtype_go" style="color: inherit; text-decoration: inherit;">Virtualization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -1220,7 +1220,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#layerids_nodejs" style="color: inherit; text-decoration: inherit;">layer<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
 {{% /md %}}</dd>
@@ -1230,7 +1230,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
@@ -1240,7 +1240,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#agentversion_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -1250,7 +1250,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#amiid_nodejs" style="color: inherit; text-decoration: inherit;">ami<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -1260,7 +1260,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -1270,7 +1270,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#autoscalingtype_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -1280,7 +1280,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -1291,7 +1291,7 @@ by default.
 <a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1300,7 +1300,7 @@ by default.
 <a href="#deleteebs_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1309,7 +1309,7 @@ by default.
 <a href="#deleteeip_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Eip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1329,7 +1329,7 @@ instance.  See Block Devices below for details.
 <a href="#ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -1339,7 +1339,7 @@ instance.  See Block Devices below for details.
 <a href="#ecsclusterarn_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Cluster<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1348,7 +1348,7 @@ instance.  See Block Devices below for details.
 <a href="#elasticip_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1368,7 +1368,7 @@ instance.  See Block Devices below for details.
 <a href="#hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -1378,7 +1378,7 @@ instance.  See Block Devices below for details.
 <a href="#infrastructureclass_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1387,7 +1387,7 @@ instance.  See Block Devices below for details.
 <a href="#installupdatesonboot_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -1397,7 +1397,7 @@ instance.  See Block Devices below for details.
 <a href="#instanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1406,7 +1406,7 @@ instance.  See Block Devices below for details.
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -1416,7 +1416,7 @@ instance.  See Block Devices below for details.
 <a href="#lastserviceerrorid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Service<wbr>Error<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1425,7 +1425,7 @@ instance.  See Block Devices below for details.
 <a href="#os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -1435,7 +1435,7 @@ instance.  See Block Devices below for details.
 <a href="#platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1444,7 +1444,7 @@ instance.  See Block Devices below for details.
 <a href="#privatedns_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -1456,7 +1456,7 @@ for your VPC
 <a href="#privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -1466,7 +1466,7 @@ for your VPC
 <a href="#publicdns_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -1477,7 +1477,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -1487,7 +1487,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#registeredby_nodejs" style="color: inherit; text-decoration: inherit;">registered<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1496,7 +1496,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedagentversion_nodejs" style="color: inherit; text-decoration: inherit;">reported<wbr>Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1505,7 +1505,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedosfamily_nodejs" style="color: inherit; text-decoration: inherit;">reported<wbr>Os<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1514,7 +1514,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedosname_nodejs" style="color: inherit; text-decoration: inherit;">reported<wbr>Os<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1523,7 +1523,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reportedosversion_nodejs" style="color: inherit; text-decoration: inherit;">reported<wbr>Os<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1543,7 +1543,7 @@ device of the instance. See Block Devices below for details.
 <a href="#rootdevicetype_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Device<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -1553,7 +1553,7 @@ device of the instance. See Block Devices below for details.
 <a href="#rootdevicevolumeid_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Device<wbr>Volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1562,7 +1562,7 @@ device of the instance. See Block Devices below for details.
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
 {{% /md %}}</dd>
@@ -1572,7 +1572,7 @@ device of the instance. See Block Devices below for details.
 <a href="#sshhostdsakeyfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1581,7 +1581,7 @@ device of the instance. See Block Devices below for details.
 <a href="#sshhostrsakeyfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1590,7 +1590,7 @@ device of the instance. See Block Devices below for details.
 <a href="#sshkeyname_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
@@ -1600,7 +1600,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -1610,7 +1610,7 @@ device of the instance. See Block Devices below for details.
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1619,7 +1619,7 @@ device of the instance. See Block Devices below for details.
 <a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -1629,7 +1629,7 @@ device of the instance. See Block Devices below for details.
 <a href="#tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -1639,7 +1639,7 @@ device of the instance. See Block Devices below for details.
 <a href="#virtualizationtype_nodejs" style="color: inherit; text-decoration: inherit;">virtualization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -1656,7 +1656,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#layer_ids_python" style="color: inherit; text-decoration: inherit;">layer_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
 {{% /md %}}</dd>
@@ -1666,7 +1666,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
@@ -1676,7 +1676,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -1686,7 +1686,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#ami_id_python" style="color: inherit; text-decoration: inherit;">ami_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -1696,7 +1696,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -1706,7 +1706,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#auto_scaling_type_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -1716,7 +1716,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -1727,7 +1727,7 @@ by default.
 <a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1736,7 +1736,7 @@ by default.
 <a href="#delete_ebs_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1745,7 +1745,7 @@ by default.
 <a href="#delete_eip_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>eip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1765,7 +1765,7 @@ instance.  See Block Devices below for details.
 <a href="#ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -1775,7 +1775,7 @@ instance.  See Block Devices below for details.
 <a href="#ecs_cluster_arn_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>cluster_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1784,7 +1784,7 @@ instance.  See Block Devices below for details.
 <a href="#elastic_ip_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1804,7 +1804,7 @@ instance.  See Block Devices below for details.
 <a href="#hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -1814,7 +1814,7 @@ instance.  See Block Devices below for details.
 <a href="#infrastructure_class_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1823,7 +1823,7 @@ instance.  See Block Devices below for details.
 <a href="#install_updates_on_boot_python" style="color: inherit; text-decoration: inherit;">install_<wbr>updates_<wbr>on_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -1833,7 +1833,7 @@ instance.  See Block Devices below for details.
 <a href="#instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>profile_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1842,7 +1842,7 @@ instance.  See Block Devices below for details.
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -1852,7 +1852,7 @@ instance.  See Block Devices below for details.
 <a href="#last_service_error_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>service_<wbr>error_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1861,7 +1861,7 @@ instance.  See Block Devices below for details.
 <a href="#os_python" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -1871,7 +1871,7 @@ instance.  See Block Devices below for details.
 <a href="#platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1880,7 +1880,7 @@ instance.  See Block Devices below for details.
 <a href="#private_dns_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -1892,7 +1892,7 @@ for your VPC
 <a href="#private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -1902,7 +1902,7 @@ for your VPC
 <a href="#public_dns_python" style="color: inherit; text-decoration: inherit;">public_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -1913,7 +1913,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -1923,7 +1923,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#registered_by_python" style="color: inherit; text-decoration: inherit;">registered_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1932,7 +1932,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reported_agent_version_python" style="color: inherit; text-decoration: inherit;">reported_<wbr>agent_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1941,7 +1941,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reported_os_family_python" style="color: inherit; text-decoration: inherit;">reported_<wbr>os_<wbr>family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1950,7 +1950,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reported_os_name_python" style="color: inherit; text-decoration: inherit;">reported_<wbr>os_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1959,7 +1959,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#reported_os_version_python" style="color: inherit; text-decoration: inherit;">reported_<wbr>os_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1979,7 +1979,7 @@ device of the instance. See Block Devices below for details.
 <a href="#root_device_type_python" style="color: inherit; text-decoration: inherit;">root_<wbr>device_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -1989,7 +1989,7 @@ device of the instance. See Block Devices below for details.
 <a href="#root_device_volume_id_python" style="color: inherit; text-decoration: inherit;">root_<wbr>device_<wbr>volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1998,7 +1998,7 @@ device of the instance. See Block Devices below for details.
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
 {{% /md %}}</dd>
@@ -2008,7 +2008,7 @@ device of the instance. See Block Devices below for details.
 <a href="#ssh_host_dsa_key_fingerprint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>host_<wbr>dsa_<wbr>key_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2017,7 +2017,7 @@ device of the instance. See Block Devices below for details.
 <a href="#ssh_host_rsa_key_fingerprint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>host_<wbr>rsa_<wbr>key_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2026,7 +2026,7 @@ device of the instance. See Block Devices below for details.
 <a href="#ssh_key_name_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
@@ -2036,7 +2036,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -2046,7 +2046,7 @@ device of the instance. See Block Devices below for details.
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2055,7 +2055,7 @@ device of the instance. See Block Devices below for details.
 <a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -2065,7 +2065,7 @@ device of the instance. See Block Devices below for details.
 <a href="#tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -2075,7 +2075,7 @@ device of the instance. See Block Devices below for details.
 <a href="#virtualization_type_python" style="color: inherit; text-decoration: inherit;">virtualization_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -2099,7 +2099,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ec2instanceid_csharp" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
@@ -2109,7 +2109,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -2124,7 +2124,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ec2instanceid_go" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
@@ -2134,7 +2134,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -2149,7 +2149,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ec2instanceid_nodejs" style="color: inherit; text-decoration: inherit;">ec2Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
@@ -2159,7 +2159,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -2174,7 +2174,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#ec2_instance_id_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
@@ -2184,7 +2184,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -2198,7 +2198,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#Instance">Instance</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#Instance">Instance</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2207,11 +2207,11 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetInstance<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#InstanceState">InstanceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.InstanceState.html">InstanceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2322,7 +2322,7 @@ The following state arguments are supported:
 <a href="#state_agentversion_csharp" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -2332,7 +2332,7 @@ The following state arguments are supported:
 <a href="#state_amiid_csharp" style="color: inherit; text-decoration: inherit;">Ami<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -2342,7 +2342,7 @@ The following state arguments are supported:
 <a href="#state_architecture_csharp" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -2352,7 +2352,7 @@ The following state arguments are supported:
 <a href="#state_autoscalingtype_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -2362,7 +2362,7 @@ The following state arguments are supported:
 <a href="#state_availabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -2373,7 +2373,7 @@ by default.
 <a href="#state_createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2382,7 +2382,7 @@ by default.
 <a href="#state_deleteebs_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2391,7 +2391,7 @@ by default.
 <a href="#state_deleteeip_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>Eip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2411,7 +2411,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ebsoptimized_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -2421,7 +2421,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ec2instanceid_csharp" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
@@ -2431,7 +2431,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ecsclusterarn_csharp" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Cluster<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2440,7 +2440,7 @@ instance.  See Block Devices below for details.
 <a href="#state_elasticip_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2460,7 +2460,7 @@ instance.  See Block Devices below for details.
 <a href="#state_hostname_csharp" style="color: inherit; text-decoration: inherit;">Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -2470,7 +2470,7 @@ instance.  See Block Devices below for details.
 <a href="#state_infrastructureclass_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2479,7 +2479,7 @@ instance.  See Block Devices below for details.
 <a href="#state_installupdatesonboot_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -2489,7 +2489,7 @@ instance.  See Block Devices below for details.
 <a href="#state_instanceprofilearn_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2498,7 +2498,7 @@ instance.  See Block Devices below for details.
 <a href="#state_instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -2508,7 +2508,7 @@ instance.  See Block Devices below for details.
 <a href="#state_lastserviceerrorid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Service<wbr>Error<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2517,7 +2517,7 @@ instance.  See Block Devices below for details.
 <a href="#state_layerids_csharp" style="color: inherit; text-decoration: inherit;">Layer<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
 {{% /md %}}</dd>
@@ -2527,7 +2527,7 @@ instance.  See Block Devices below for details.
 <a href="#state_os_csharp" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -2537,7 +2537,7 @@ instance.  See Block Devices below for details.
 <a href="#state_platform_csharp" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2546,7 +2546,7 @@ instance.  See Block Devices below for details.
 <a href="#state_privatedns_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -2558,7 +2558,7 @@ for your VPC
 <a href="#state_privateip_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -2568,7 +2568,7 @@ for your VPC
 <a href="#state_publicdns_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -2579,7 +2579,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -2589,7 +2589,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_registeredby_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2598,7 +2598,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedagentversion_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2607,7 +2607,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedosfamily_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2616,7 +2616,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedosname_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2625,7 +2625,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedosversion_csharp" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2645,7 +2645,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_rootdevicetype_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -2655,7 +2655,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_rootdevicevolumeid_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2664,7 +2664,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
 {{% /md %}}</dd>
@@ -2674,7 +2674,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_sshhostdsakeyfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2683,7 +2683,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_sshhostrsakeyfingerprint_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2692,7 +2692,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_sshkeyname_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
@@ -2702,7 +2702,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
@@ -2712,7 +2712,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -2722,7 +2722,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2731,7 +2731,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -2741,7 +2741,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_tenancy_csharp" style="color: inherit; text-decoration: inherit;">Tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -2751,7 +2751,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_virtualizationtype_csharp" style="color: inherit; text-decoration: inherit;">Virtualization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -2768,7 +2768,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_agentversion_go" style="color: inherit; text-decoration: inherit;">Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -2778,7 +2778,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_amiid_go" style="color: inherit; text-decoration: inherit;">Ami<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -2788,7 +2788,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_architecture_go" style="color: inherit; text-decoration: inherit;">Architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -2798,7 +2798,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_autoscalingtype_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaling<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -2808,7 +2808,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_availabilityzone_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -2819,7 +2819,7 @@ by default.
 <a href="#state_createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2828,7 +2828,7 @@ by default.
 <a href="#state_deleteebs_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2837,7 +2837,7 @@ by default.
 <a href="#state_deleteeip_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>Eip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2857,7 +2857,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ebsoptimized_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -2867,7 +2867,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ec2instanceid_go" style="color: inherit; text-decoration: inherit;">Ec2Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
@@ -2877,7 +2877,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ecsclusterarn_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Cluster<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2886,7 +2886,7 @@ instance.  See Block Devices below for details.
 <a href="#state_elasticip_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2906,7 +2906,7 @@ instance.  See Block Devices below for details.
 <a href="#state_hostname_go" style="color: inherit; text-decoration: inherit;">Hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -2916,7 +2916,7 @@ instance.  See Block Devices below for details.
 <a href="#state_infrastructureclass_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2925,7 +2925,7 @@ instance.  See Block Devices below for details.
 <a href="#state_installupdatesonboot_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -2935,7 +2935,7 @@ instance.  See Block Devices below for details.
 <a href="#state_instanceprofilearn_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2944,7 +2944,7 @@ instance.  See Block Devices below for details.
 <a href="#state_instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -2954,7 +2954,7 @@ instance.  See Block Devices below for details.
 <a href="#state_lastserviceerrorid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Service<wbr>Error<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2963,7 +2963,7 @@ instance.  See Block Devices below for details.
 <a href="#state_layerids_go" style="color: inherit; text-decoration: inherit;">Layer<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
 {{% /md %}}</dd>
@@ -2973,7 +2973,7 @@ instance.  See Block Devices below for details.
 <a href="#state_os_go" style="color: inherit; text-decoration: inherit;">Os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -2983,7 +2983,7 @@ instance.  See Block Devices below for details.
 <a href="#state_platform_go" style="color: inherit; text-decoration: inherit;">Platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2992,7 +2992,7 @@ instance.  See Block Devices below for details.
 <a href="#state_privatedns_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -3004,7 +3004,7 @@ for your VPC
 <a href="#state_privateip_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -3014,7 +3014,7 @@ for your VPC
 <a href="#state_publicdns_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -3025,7 +3025,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -3035,7 +3035,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_registeredby_go" style="color: inherit; text-decoration: inherit;">Registered<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3044,7 +3044,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedagentversion_go" style="color: inherit; text-decoration: inherit;">Reported<wbr>Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3053,7 +3053,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedosfamily_go" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3062,7 +3062,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedosname_go" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3071,7 +3071,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedosversion_go" style="color: inherit; text-decoration: inherit;">Reported<wbr>Os<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3091,7 +3091,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_rootdevicetype_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -3101,7 +3101,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_rootdevicevolumeid_go" style="color: inherit; text-decoration: inherit;">Root<wbr>Device<wbr>Volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3110,7 +3110,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
 {{% /md %}}</dd>
@@ -3120,7 +3120,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_sshhostdsakeyfingerprint_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3129,7 +3129,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_sshhostrsakeyfingerprint_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3138,7 +3138,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_sshkeyname_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
@@ -3148,7 +3148,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
@@ -3158,7 +3158,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -3168,7 +3168,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3177,7 +3177,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -3187,7 +3187,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_tenancy_go" style="color: inherit; text-decoration: inherit;">Tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -3197,7 +3197,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_virtualizationtype_go" style="color: inherit; text-decoration: inherit;">Virtualization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -3214,7 +3214,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_agentversion_nodejs" style="color: inherit; text-decoration: inherit;">agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -3224,7 +3224,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_amiid_nodejs" style="color: inherit; text-decoration: inherit;">ami<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -3234,7 +3234,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_architecture_nodejs" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -3244,7 +3244,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_autoscalingtype_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaling<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -3254,7 +3254,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_availabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -3265,7 +3265,7 @@ by default.
 <a href="#state_createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3274,7 +3274,7 @@ by default.
 <a href="#state_deleteebs_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3283,7 +3283,7 @@ by default.
 <a href="#state_deleteeip_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>Eip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3303,7 +3303,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ebsoptimized_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -3313,7 +3313,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ec2instanceid_nodejs" style="color: inherit; text-decoration: inherit;">ec2Instance<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
@@ -3323,7 +3323,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ecsclusterarn_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Cluster<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3332,7 +3332,7 @@ instance.  See Block Devices below for details.
 <a href="#state_elasticip_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3352,7 +3352,7 @@ instance.  See Block Devices below for details.
 <a href="#state_hostname_nodejs" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -3362,7 +3362,7 @@ instance.  See Block Devices below for details.
 <a href="#state_infrastructureclass_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3371,7 +3371,7 @@ instance.  See Block Devices below for details.
 <a href="#state_installupdatesonboot_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -3381,7 +3381,7 @@ instance.  See Block Devices below for details.
 <a href="#state_instanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3390,7 +3390,7 @@ instance.  See Block Devices below for details.
 <a href="#state_instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -3400,7 +3400,7 @@ instance.  See Block Devices below for details.
 <a href="#state_lastserviceerrorid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Service<wbr>Error<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3409,7 +3409,7 @@ instance.  See Block Devices below for details.
 <a href="#state_layerids_nodejs" style="color: inherit; text-decoration: inherit;">layer<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
 {{% /md %}}</dd>
@@ -3419,7 +3419,7 @@ instance.  See Block Devices below for details.
 <a href="#state_os_nodejs" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -3429,7 +3429,7 @@ instance.  See Block Devices below for details.
 <a href="#state_platform_nodejs" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3438,7 +3438,7 @@ instance.  See Block Devices below for details.
 <a href="#state_privatedns_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -3450,7 +3450,7 @@ for your VPC
 <a href="#state_privateip_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -3460,7 +3460,7 @@ for your VPC
 <a href="#state_publicdns_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -3471,7 +3471,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -3481,7 +3481,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_registeredby_nodejs" style="color: inherit; text-decoration: inherit;">registered<wbr>By</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3490,7 +3490,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedagentversion_nodejs" style="color: inherit; text-decoration: inherit;">reported<wbr>Agent<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3499,7 +3499,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedosfamily_nodejs" style="color: inherit; text-decoration: inherit;">reported<wbr>Os<wbr>Family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3508,7 +3508,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedosname_nodejs" style="color: inherit; text-decoration: inherit;">reported<wbr>Os<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3517,7 +3517,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reportedosversion_nodejs" style="color: inherit; text-decoration: inherit;">reported<wbr>Os<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3537,7 +3537,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_rootdevicetype_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Device<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -3547,7 +3547,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_rootdevicevolumeid_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Device<wbr>Volume<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3556,7 +3556,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
 {{% /md %}}</dd>
@@ -3566,7 +3566,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_sshhostdsakeyfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3575,7 +3575,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_sshhostrsakeyfingerprint_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3584,7 +3584,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_sshkeyname_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Key<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
@@ -3594,7 +3594,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
@@ -3604,7 +3604,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -3614,7 +3614,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3623,7 +3623,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -3633,7 +3633,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_tenancy_nodejs" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -3643,7 +3643,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_virtualizationtype_nodejs" style="color: inherit; text-decoration: inherit;">virtualization<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -3660,7 +3660,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_agent_version_python" style="color: inherit; text-decoration: inherit;">agent_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -3670,7 +3670,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_ami_id_python" style="color: inherit; text-decoration: inherit;">ami_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -3680,7 +3680,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_architecture_python" style="color: inherit; text-decoration: inherit;">architecture</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -3690,7 +3690,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_auto_scaling_type_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaling_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -3700,7 +3700,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#state_availability_zone_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -3711,7 +3711,7 @@ by default.
 <a href="#state_created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3720,7 +3720,7 @@ by default.
 <a href="#state_delete_ebs_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>ebs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3729,7 +3729,7 @@ by default.
 <a href="#state_delete_eip_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>eip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3749,7 +3749,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ebs_optimized_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>optimized</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -3759,7 +3759,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ec2_instance_id_python" style="color: inherit; text-decoration: inherit;">ec2_<wbr>instance_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
@@ -3769,7 +3769,7 @@ instance.  See Block Devices below for details.
 <a href="#state_ecs_cluster_arn_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>cluster_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3778,7 +3778,7 @@ instance.  See Block Devices below for details.
 <a href="#state_elastic_ip_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3798,7 +3798,7 @@ instance.  See Block Devices below for details.
 <a href="#state_hostname_python" style="color: inherit; text-decoration: inherit;">hostname</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -3808,7 +3808,7 @@ instance.  See Block Devices below for details.
 <a href="#state_infrastructure_class_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>class</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3817,7 +3817,7 @@ instance.  See Block Devices below for details.
 <a href="#state_install_updates_on_boot_python" style="color: inherit; text-decoration: inherit;">install_<wbr>updates_<wbr>on_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -3827,7 +3827,7 @@ instance.  See Block Devices below for details.
 <a href="#state_instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>profile_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3836,7 +3836,7 @@ instance.  See Block Devices below for details.
 <a href="#state_instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -3846,7 +3846,7 @@ instance.  See Block Devices below for details.
 <a href="#state_last_service_error_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>service_<wbr>error_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3855,7 +3855,7 @@ instance.  See Block Devices below for details.
 <a href="#state_layer_ids_python" style="color: inherit; text-decoration: inherit;">layer_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
 {{% /md %}}</dd>
@@ -3865,7 +3865,7 @@ instance.  See Block Devices below for details.
 <a href="#state_os_python" style="color: inherit; text-decoration: inherit;">os</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -3875,7 +3875,7 @@ instance.  See Block Devices below for details.
 <a href="#state_platform_python" style="color: inherit; text-decoration: inherit;">platform</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3884,7 +3884,7 @@ instance.  See Block Devices below for details.
 <a href="#state_private_dns_python" style="color: inherit; text-decoration: inherit;">private_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -3896,7 +3896,7 @@ for your VPC
 <a href="#state_private_ip_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -3906,7 +3906,7 @@ for your VPC
 <a href="#state_public_dns_python" style="color: inherit; text-decoration: inherit;">public_<wbr>dns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -3917,7 +3917,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -3927,7 +3927,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_registered_by_python" style="color: inherit; text-decoration: inherit;">registered_<wbr>by</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3936,7 +3936,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reported_agent_version_python" style="color: inherit; text-decoration: inherit;">reported_<wbr>agent_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3945,7 +3945,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reported_os_family_python" style="color: inherit; text-decoration: inherit;">reported_<wbr>os_<wbr>family</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3954,7 +3954,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reported_os_name_python" style="color: inherit; text-decoration: inherit;">reported_<wbr>os_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3963,7 +3963,7 @@ is only available if you've enabled DNS hostnames for your VPC
 <a href="#state_reported_os_version_python" style="color: inherit; text-decoration: inherit;">reported_<wbr>os_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3983,7 +3983,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_root_device_type_python" style="color: inherit; text-decoration: inherit;">root_<wbr>device_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -3993,7 +3993,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_root_device_volume_id_python" style="color: inherit; text-decoration: inherit;">root_<wbr>device_<wbr>volume_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4002,7 +4002,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
 {{% /md %}}</dd>
@@ -4012,7 +4012,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_ssh_host_dsa_key_fingerprint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>host_<wbr>dsa_<wbr>key_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4021,7 +4021,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_ssh_host_rsa_key_fingerprint_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>host_<wbr>rsa_<wbr>key_<wbr>fingerprint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4030,7 +4030,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_ssh_key_name_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>key_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
@@ -4040,7 +4040,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
@@ -4050,7 +4050,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -4060,7 +4060,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4069,7 +4069,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -4079,7 +4079,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_tenancy_python" style="color: inherit; text-decoration: inherit;">tenancy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -4089,7 +4089,7 @@ device of the instance. See Block Devices below for details.
 <a href="#state_virtualization_type_python" style="color: inherit; text-decoration: inherit;">virtualization_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -4129,7 +4129,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4138,7 +4138,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4147,7 +4147,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4156,7 +4156,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#snapshotid_csharp" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4165,7 +4165,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4174,7 +4174,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4189,7 +4189,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4198,7 +4198,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4207,7 +4207,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4216,7 +4216,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#snapshotid_go" style="color: inherit; text-decoration: inherit;">Snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4225,7 +4225,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4234,7 +4234,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4249,7 +4249,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4258,7 +4258,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4267,7 +4267,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4276,7 +4276,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#snapshotid_nodejs" style="color: inherit; text-decoration: inherit;">snapshot<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4285,7 +4285,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4294,7 +4294,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4309,7 +4309,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4318,7 +4318,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4327,7 +4327,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4336,7 +4336,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#snapshot_id_python" style="color: inherit; text-decoration: inherit;">snapshot_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4345,7 +4345,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4354,7 +4354,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4383,7 +4383,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#devicename_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4392,7 +4392,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#virtualname_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4407,7 +4407,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#devicename_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4416,7 +4416,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#virtualname_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4431,7 +4431,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#devicename_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4440,7 +4440,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#virtualname_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4455,7 +4455,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#device_name_python" style="color: inherit; text-decoration: inherit;">device_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -4464,7 +4464,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#virtual_name_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4493,7 +4493,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#deleteontermination_csharp" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4502,7 +4502,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4511,7 +4511,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4520,7 +4520,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4535,7 +4535,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#deleteontermination_go" style="color: inherit; text-decoration: inherit;">Delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4544,7 +4544,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4553,7 +4553,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4562,7 +4562,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4577,7 +4577,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#deleteontermination_nodejs" style="color: inherit; text-decoration: inherit;">delete<wbr>On<wbr>Termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4586,7 +4586,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4595,7 +4595,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4604,7 +4604,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -4619,7 +4619,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#delete_on_termination_python" style="color: inherit; text-decoration: inherit;">delete_<wbr>on_<wbr>termination</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4628,7 +4628,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4637,7 +4637,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4646,7 +4646,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>

@@ -22,7 +22,7 @@ Explore the resources and functions of the events/v1beta1 module in the Kubernet
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.7.4</dd>
+	<dd>2.7.5</dd>
 </dl>
 
 

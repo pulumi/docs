@@ -129,7 +129,7 @@ The following arguments are supported:
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain that is in scope for the generated authorization token.
 {{% /md %}}</dd>
@@ -139,7 +139,7 @@ The following arguments are supported:
 <a href="#domainowner_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account number of the AWS account that owns the domain.
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ The following arguments are supported:
 <a href="#durationseconds_csharp" style="color: inherit; text-decoration: inherit;">Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
 {{% /md %}}</dd>
@@ -165,7 +165,7 @@ The following arguments are supported:
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain that is in scope for the generated authorization token.
 {{% /md %}}</dd>
@@ -175,7 +175,7 @@ The following arguments are supported:
 <a href="#domainowner_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account number of the AWS account that owns the domain.
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ The following arguments are supported:
 <a href="#durationseconds_go" style="color: inherit; text-decoration: inherit;">Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
 {{% /md %}}</dd>
@@ -201,7 +201,7 @@ The following arguments are supported:
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the domain that is in scope for the generated authorization token.
 {{% /md %}}</dd>
@@ -211,7 +211,7 @@ The following arguments are supported:
 <a href="#domainowner_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The account number of the AWS account that owns the domain.
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ The following arguments are supported:
 <a href="#durationseconds_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ The following arguments are supported:
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the domain that is in scope for the generated authorization token.
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ The following arguments are supported:
 <a href="#domain_owner_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The account number of the AWS account that owns the domain.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ The following arguments are supported:
 <a href="#duration_seconds_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that the generated authorization token is valid. Valid values are `0` and between `900` and `43200`.
 {{% /md %}}</dd>
@@ -282,7 +282,7 @@ The following output properties are available:
 <a href="#authorizationtoken_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Temporary authorization token.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ The following output properties are available:
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -301,7 +301,7 @@ The following output properties are available:
 <a href="#domainowner_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -310,7 +310,7 @@ The following output properties are available:
 <a href="#expiration_csharp" style="color: inherit; text-decoration: inherit;">Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time in UTC RFC3339 format when the authorization token expires.
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ The following output properties are available:
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ The following output properties are available:
 <a href="#durationseconds_csharp" style="color: inherit; text-decoration: inherit;">Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -345,7 +345,7 @@ The following output properties are available:
 <a href="#authorizationtoken_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Temporary authorization token.
 {{% /md %}}</dd>
@@ -355,7 +355,7 @@ The following output properties are available:
 <a href="#domain_go" style="color: inherit; text-decoration: inherit;">Domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -364,7 +364,7 @@ The following output properties are available:
 <a href="#domainowner_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -373,7 +373,7 @@ The following output properties are available:
 <a href="#expiration_go" style="color: inherit; text-decoration: inherit;">Expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time in UTC RFC3339 format when the authorization token expires.
 {{% /md %}}</dd>
@@ -383,7 +383,7 @@ The following output properties are available:
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -393,7 +393,7 @@ The following output properties are available:
 <a href="#durationseconds_go" style="color: inherit; text-decoration: inherit;">Duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -408,7 +408,7 @@ The following output properties are available:
 <a href="#authorizationtoken_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Temporary authorization token.
 {{% /md %}}</dd>
@@ -418,7 +418,7 @@ The following output properties are available:
 <a href="#domain_nodejs" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -427,7 +427,7 @@ The following output properties are available:
 <a href="#domainowner_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -436,7 +436,7 @@ The following output properties are available:
 <a href="#expiration_nodejs" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time in UTC RFC3339 format when the authorization token expires.
 {{% /md %}}</dd>
@@ -446,7 +446,7 @@ The following output properties are available:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -456,7 +456,7 @@ The following output properties are available:
 <a href="#durationseconds_nodejs" style="color: inherit; text-decoration: inherit;">duration<wbr>Seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -471,7 +471,7 @@ The following output properties are available:
 <a href="#authorization_token_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Temporary authorization token.
 {{% /md %}}</dd>
@@ -481,7 +481,7 @@ The following output properties are available:
 <a href="#domain_python" style="color: inherit; text-decoration: inherit;">domain</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -490,7 +490,7 @@ The following output properties are available:
 <a href="#domain_owner_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>owner</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#expiration_python" style="color: inherit; text-decoration: inherit;">expiration</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time in UTC RFC3339 format when the authorization token expires.
 {{% /md %}}</dd>
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#duration_seconds_python" style="color: inherit; text-decoration: inherit;">duration_<wbr>seconds</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
