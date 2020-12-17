@@ -359,4 +359,4 @@ You can find enum types integrated into `v3.19.0` of the [AWS provider](https://
 
 **AWS**: The AWS provider enums are manually identified and maintained as part of the [provider schema](https://github.com/pulumi/pulumi-aws/blob/master/provider/resources.go#L2392-L3375). We've already added many that you might find useful, such as Lambda Runtimes, EC2 Instance Types, and IAM Managed Policies, and will continue to add more in the coming months.
 
-Take the new providers for a spin and let us know what you think in the [Community Slack](https://slack.pulumi.com/)! If there are properties that you would like to see represented as enums, let us know. Or even better, submit a PR to add them to the schema!
+Take the new providers for a spin and let us know what you think in the [Community Slack](https://slack.pulumi.com/)! If there are properties that you would like to see represented as enums, let us know. Or even better, submit a PR like [this one](https://github.com/pulumi/pulumi-kubernetes/pull/1408) to add them to the schema!
