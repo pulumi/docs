@@ -14,7 +14,7 @@ posted to the Pulumi Service via [GitLab Webhooks](https://docs.gitlab.com/ee/us
 To enable the integration with your GitLab project, you will need to ensure you have done the following two things:
 
 * [Signup](https://app.pulumi.com/signup) for a Pulumi account with your GitLab identity (or link your GitLab identity with an existing account.)
-* If your GitLab Project is under a GitLab Group, ensure that the group is added to Pulumi as an [organization](https://app.pulumi.com/site/organizations/add)
+* If your GitLab Project is under a GitLab Group, ensure that the group is added to Pulumi as an [organization](https://app.pulumi.com/site/trial)
 
 ## Configuring the GitLab Webhook
 

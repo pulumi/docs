@@ -4,7 +4,7 @@ meta_desc: An overview of the CI/CD integration assistant in the Pulumi Console.
 ---
 
 > This feature is available on the Pulumi Team Pro and Enterprise editions.
-> If you would like to try this feature, [start a trial](https://app.pulumi.com/site/organizations/add) now
+> If you would like to try this feature, [start a trial](https://app.pulumi.com/site/trial) now
 > or contact us at <a href="mailto:sales@pulumi.com">sales@pulumi.com</a>.
 
 The CI/CD integration assistant helps you integrate Pulumi into CI/CD systems for automatically deploying stacks.
