@@ -7,7 +7,7 @@ aliases:
 ---
 
 > Pulumi Webhooks is a feature available on the Pulumi Team and Enterprise editions.
-> If you’re keen to try it out, start a [Team Edition trial](https://app.pulumi.com/site/organizations/add) now.
+> If you’re keen to try it out, start a [Team Edition trial](https://app.pulumi.com/site/trial) now.
 
 Pulumi Webhooks allow you to notify external services of events
 happening within your Pulumi organization or stack. For example,

@@ -27,7 +27,7 @@ to your organization's stacks
 
 You can create a new Pulumi organization directly from the Pulumi Console.
 
-<a class="btn btn-secondary" href="https://app.pulumi.com/site/organizations/add"
+<a class="btn btn-secondary" href="https://app.pulumi.com/site/trial"
 target="_blank">
     CREATE ORGANIZATION
 </a>

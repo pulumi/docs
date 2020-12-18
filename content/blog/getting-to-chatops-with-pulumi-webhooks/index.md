@@ -17,7 +17,7 @@ cloud native infrastructure.
 
 Pulumi Webhooks are available for the Team and Enterprise editions of
 Pulumi. If you're keen to try them out, start a trial of
-[Team Edition here](https://app.pulumi.com/site/organizations/add).
+[Team Edition here](https://app.pulumi.com/site/trial).
 <!--more-->
 
 ChatOps --- the idea of conversation-driven collaboration --- is an
