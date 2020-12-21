@@ -96,7 +96,7 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#Dashboard">Dashboard</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#DashboardArgs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#Dashboard">Dashboard</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#DashboardArgs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -104,11 +104,11 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#Dashboard">NewDashboard</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardArgs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#Dashboard">Dashboard</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#Dashboard">NewDashboard</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardArgs">DashboardArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#Dashboard">Dashboard</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Dashboard.html">Dashboard</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.DashboardArgs.html">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Dashboard.html">Dashboard</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.DashboardArgs.html">DashboardArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -119,7 +119,7 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -188,7 +188,7 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -227,7 +227,7 @@ const testDashboard = new wavefront.Dashboard("testDashboard", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -268,7 +268,6 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -276,129 +275,117 @@ The Dashboard resource accepts the following [input]({{< relref "/docs/intro/con
             title="Required">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sections_csharp">
 <a href="#sections_csharp" style="color: inherit; text-decoration: inherit;">Sections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsection">List&lt;Dashboard<wbr>Section<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="canmodifies_csharp">
 <a href="#canmodifies_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Modifies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="canviews_csharp">
 <a href="#canviews_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayqueryparameters_csharp">
 <a href="#displayqueryparameters_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displaysectiontableofcontents_csharp">
 <a href="#displaysectiontableofcontents_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Section<wbr>Table<wbr>Of<wbr>Contents</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventfiltertype_csharp">
 <a href="#eventfiltertype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Filter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameterdetails_csharp">
 <a href="#parameterdetails_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparameterdetail">List&lt;Dashboard<wbr>Parameter<wbr>Detail<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -407,129 +394,117 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sections_go">
 <a href="#sections_go" style="color: inherit; text-decoration: inherit;">Sections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsection">[]Dashboard<wbr>Section</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tags_go">
 <a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="canmodifies_go">
 <a href="#canmodifies_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Modifies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="canviews_go">
 <a href="#canviews_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayqueryparameters_go">
 <a href="#displayqueryparameters_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displaysectiontableofcontents_go">
 <a href="#displaysectiontableofcontents_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Section<wbr>Table<wbr>Of<wbr>Contents</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventfiltertype_go">
 <a href="#eventfiltertype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Filter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameterdetails_go">
 <a href="#parameterdetails_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparameterdetail">[]Dashboard<wbr>Parameter<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -538,129 +513,117 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sections_nodejs">
 <a href="#sections_nodejs" style="color: inherit; text-decoration: inherit;">sections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsection">Dashboard<wbr>Section[]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="canmodifies_nodejs">
 <a href="#canmodifies_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Modifies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="canviews_nodejs">
 <a href="#canviews_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayqueryparameters_nodejs">
 <a href="#displayqueryparameters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displaysectiontableofcontents_nodejs">
 <a href="#displaysectiontableofcontents_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Section<wbr>Table<wbr>Of<wbr>Contents</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="eventfiltertype_nodejs">
 <a href="#eventfiltertype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Filter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameterdetails_nodejs">
 <a href="#parameterdetails_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparameterdetail">Dashboard<wbr>Parameter<wbr>Detail[]</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -669,138 +632,122 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sections_python">
 <a href="#sections_python" style="color: inherit; text-decoration: inherit;">sections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsection">Sequence[Dashboard<wbr>Section<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="can_modifies_python">
 <a href="#can_modifies_python" style="color: inherit; text-decoration: inherit;">can_<wbr>modifies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="can_views_python">
 <a href="#can_views_python" style="color: inherit; text-decoration: inherit;">can_<wbr>views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_query_parameters_python">
 <a href="#display_query_parameters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>query_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_section_table_of_contents_python">
 <a href="#display_section_table_of_contents_python" style="color: inherit; text-decoration: inherit;">display_<wbr>section_<wbr>table_<wbr>of_<wbr>contents</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="event_filter_type_python">
 <a href="#event_filter_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>filter_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameter_details_python">
 <a href="#parameter_details_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparameterdetail">Sequence[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Dashboard resource produces the following output properties:
-
 
 
 
@@ -811,15 +758,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -828,15 +773,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -845,15 +788,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -862,18 +803,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -883,7 +819,7 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#DashboardState">DashboardState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#Dashboard">Dashboard</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#DashboardState">DashboardState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/wavefront/#Dashboard">Dashboard</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -892,11 +828,11 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardState">DashboardState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#Dashboard">Dashboard</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDashboard<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardState">DashboardState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#Dashboard">Dashboard</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Dashboard.html">Dashboard</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront..DashboardState.html">DashboardState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Dashboard.html">Dashboard</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront..DashboardState.html">DashboardState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -998,7 +934,6 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1006,129 +941,117 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_canmodifies_csharp">
 <a href="#state_canmodifies_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Modifies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_canviews_csharp">
 <a href="#state_canviews_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayqueryparameters_csharp">
 <a href="#state_displayqueryparameters_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displaysectiontableofcontents_csharp">
 <a href="#state_displaysectiontableofcontents_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Section<wbr>Table<wbr>Of<wbr>Contents</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_eventfiltertype_csharp">
 <a href="#state_eventfiltertype_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Filter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parameterdetails_csharp">
 <a href="#state_parameterdetails_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparameterdetail">List&lt;Dashboard<wbr>Parameter<wbr>Detail<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sections_csharp">
 <a href="#state_sections_csharp" style="color: inherit; text-decoration: inherit;">Sections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsection">List&lt;Dashboard<wbr>Section<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1137,129 +1060,117 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Optional">
         <span id="state_canmodifies_go">
 <a href="#state_canmodifies_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Modifies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_canviews_go">
 <a href="#state_canviews_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayqueryparameters_go">
 <a href="#state_displayqueryparameters_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displaysectiontableofcontents_go">
 <a href="#state_displaysectiontableofcontents_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Section<wbr>Table<wbr>Of<wbr>Contents</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_eventfiltertype_go">
 <a href="#state_eventfiltertype_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Filter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parameterdetails_go">
 <a href="#state_parameterdetails_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparameterdetail">[]Dashboard<wbr>Parameter<wbr>Detail</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sections_go">
 <a href="#state_sections_go" style="color: inherit; text-decoration: inherit;">Sections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsection">[]Dashboard<wbr>Section</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_go">
 <a href="#state_tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1268,129 +1179,117 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Optional">
         <span id="state_canmodifies_nodejs">
 <a href="#state_canmodifies_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Modifies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_canviews_nodejs">
 <a href="#state_canviews_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayqueryparameters_nodejs">
 <a href="#state_displayqueryparameters_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Query<wbr>Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displaysectiontableofcontents_nodejs">
 <a href="#state_displaysectiontableofcontents_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Section<wbr>Table<wbr>Of<wbr>Contents</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_eventfiltertype_nodejs">
 <a href="#state_eventfiltertype_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Filter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parameterdetails_nodejs">
 <a href="#state_parameterdetails_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparameterdetail">Dashboard<wbr>Parameter<wbr>Detail[]</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sections_nodejs">
 <a href="#state_sections_nodejs" style="color: inherit; text-decoration: inherit;">sections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsection">Dashboard<wbr>Section[]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1399,126 +1298,115 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Optional">
         <span id="state_can_modifies_python">
 <a href="#state_can_modifies_python" style="color: inherit; text-decoration: inherit;">can_<wbr>modifies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users that have modify ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_can_views_python">
 <a href="#state_can_views_python" style="color: inherit; text-decoration: inherit;">can_<wbr>views</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of users that have view ACL access to the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_display_query_parameters_python">
 <a href="#state_display_query_parameters_python" style="color: inherit; text-decoration: inherit;">display_<wbr>query_<wbr>parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the dashboard parameters section is opened by default when the dashboard
 is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_display_section_table_of_contents_python">
 <a href="#state_display_section_table_of_contents_python" style="color: inherit; text-decoration: inherit;">display_<wbr>section_<wbr>table_<wbr>of_<wbr>contents</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the "pills" quick-linked the sections of the dashboard are 
 displayed by default when the dashboard is shown
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_event_filter_type_python">
 <a href="#state_event_filter_type_python" style="color: inherit; text-decoration: inherit;">event_<wbr>filter_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How charts belonging to this dashboard should display events. BYCHART is default if 
 unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBOARD`, and `BYCHARTANDDASHBOARD`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parameter_details_python">
 <a href="#state_parameter_details_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>details</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardparameterdetail">Sequence[Dashboard<wbr>Parameter<wbr>Detail<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The current JSON representation of dashboard parameters. See parameter details
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sections_python">
 <a href="#state_sections_python" style="color: inherit; text-decoration: inherit;">sections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsection">Sequence[Dashboard<wbr>Section<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Dashboard chart sections. See dashboard sections
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tags_python">
 <a href="#state_tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A set of tags to assign to this resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier, also URL slug, of the dashboard
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1527,11 +1415,8 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="dashboardparameterdetail">Dashboard<wbr>Parameter<wbr>Detail</h4>
@@ -1542,11 +1427,10 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardParameterDetailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardParameterDetailOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardParameterDetailArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardParameterDetail.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1556,106 +1440,96 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="defaultvalue_csharp">
 <a href="#defaultvalue_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value of the parameter
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hidefromview_csharp">
 <a href="#hidefromview_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>From<wbr>View</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true` the parameter will only be shown on the edit view of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label for the parameter
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parameters
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parametertype_csharp">
 <a href="#parametertype_csharp" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the parameter. `SIMPLE`, `LIST`, or `DYNAMIC`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="valuestoreadablestrings_csharp">
 <a href="#valuestoreadablestrings_csharp" style="color: inherit; text-decoration: inherit;">Values<wbr>To<wbr>Readable<wbr>Strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A string->string map.  At least one of the keys must match the value of
 `default_value`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamicfieldtype_csharp">
 <a href="#dynamicfieldtype_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Field<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the type of the field. Valid options are `SOURCE`,
 `SOURCE_TAG`, `METRIC_NAME`, `TAG_KEY`, `MATCHING_SOURCE_TAG`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryvalue_csharp">
 <a href="#queryvalue_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the query to execute to return values
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagkey_csharp">
 <a href="#tagkey_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}for `TAG_KEY` dynamic field types, the tag key to return
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1664,106 +1538,96 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="defaultvalue_go">
 <a href="#defaultvalue_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value of the parameter
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hidefromview_go">
 <a href="#hidefromview_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>From<wbr>View</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true` the parameter will only be shown on the edit view of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label for the parameter
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parameters
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parametertype_go">
 <a href="#parametertype_go" style="color: inherit; text-decoration: inherit;">Parameter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the parameter. `SIMPLE`, `LIST`, or `DYNAMIC`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="valuestoreadablestrings_go">
 <a href="#valuestoreadablestrings_go" style="color: inherit; text-decoration: inherit;">Values<wbr>To<wbr>Readable<wbr>Strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A string->string map.  At least one of the keys must match the value of
 `default_value`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamicfieldtype_go">
 <a href="#dynamicfieldtype_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Field<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the type of the field. Valid options are `SOURCE`,
 `SOURCE_TAG`, `METRIC_NAME`, `TAG_KEY`, `MATCHING_SOURCE_TAG`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryvalue_go">
 <a href="#queryvalue_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the query to execute to return values
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagkey_go">
 <a href="#tagkey_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}for `TAG_KEY` dynamic field types, the tag key to return
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1772,106 +1636,96 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="defaultvalue_nodejs">
 <a href="#defaultvalue_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default value of the parameter
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hidefromview_nodejs">
 <a href="#hidefromview_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>From<wbr>View</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true` the parameter will only be shown on the edit view of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label for the parameter
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the parameters
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parametertype_nodejs">
 <a href="#parametertype_nodejs" style="color: inherit; text-decoration: inherit;">parameter<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the parameter. `SIMPLE`, `LIST`, or `DYNAMIC`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="valuestoreadablestrings_nodejs">
 <a href="#valuestoreadablestrings_nodejs" style="color: inherit; text-decoration: inherit;">values<wbr>To<wbr>Readable<wbr>Strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A string->string map.  At least one of the keys must match the value of
 `default_value`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamicfieldtype_nodejs">
 <a href="#dynamicfieldtype_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Field<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the type of the field. Valid options are `SOURCE`,
 `SOURCE_TAG`, `METRIC_NAME`, `TAG_KEY`, `MATCHING_SOURCE_TAG`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="queryvalue_nodejs">
 <a href="#queryvalue_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the query to execute to return values
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagkey_nodejs">
 <a href="#tagkey_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}for `TAG_KEY` dynamic field types, the tag key to return
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1880,109 +1734,96 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="default_value_python">
 <a href="#default_value_python" style="color: inherit; text-decoration: inherit;">default_<wbr>value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The default value of the parameter
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="hide_from_view_python">
 <a href="#hide_from_view_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>from_<wbr>view</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true` the parameter will only be shown on the edit view of the dashboard
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label for the parameter
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the parameters
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="parameter_type_python">
 <a href="#parameter_type_python" style="color: inherit; text-decoration: inherit;">parameter_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the parameter. `SIMPLE`, `LIST`, or `DYNAMIC`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="values_to_readable_strings_python">
 <a href="#values_to_readable_strings_python" style="color: inherit; text-decoration: inherit;">values_<wbr>to_<wbr>readable_<wbr>strings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A string->string map.  At least one of the keys must match the value of
 `default_value`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dynamic_field_type_python">
 <a href="#dynamic_field_type_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>field_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the type of the field. Valid options are `SOURCE`,
 `SOURCE_TAG`, `METRIC_NAME`, `TAG_KEY`, `MATCHING_SOURCE_TAG`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_value_python">
 <a href="#query_value_python" style="color: inherit; text-decoration: inherit;">query_<wbr>value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For `DYNAMIC` parameter types, the query to execute to return values
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_key_python">
 <a href="#tag_key_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}for `TAG_KEY` dynamic field types, the tag key to return
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="dashboardsection">Dashboard<wbr>Section</h4>
 {{% choosable language nodejs %}}
@@ -1992,11 +1833,10 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardSectionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardSection.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2006,27 +1846,24 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this section
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rows_csharp">
 <a href="#rows_csharp" style="color: inherit; text-decoration: inherit;">Rows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrow">List&lt;Dashboard<wbr>Section<wbr>Row<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See dashboard section rows
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2035,27 +1872,24 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this section
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rows_go">
 <a href="#rows_go" style="color: inherit; text-decoration: inherit;">Rows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrow">[]Dashboard<wbr>Section<wbr>Row</a></span>
     </dt>
     <dd>{{% md %}}See dashboard section rows
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2064,27 +1898,24 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of this section
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rows_nodejs">
 <a href="#rows_nodejs" style="color: inherit; text-decoration: inherit;">rows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrow">Dashboard<wbr>Section<wbr>Row[]</a></span>
     </dt>
     <dd>{{% md %}}See dashboard section rows
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2093,30 +1924,24 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of this section
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="rows_python">
 <a href="#rows_python" style="color: inherit; text-decoration: inherit;">rows</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrow">Sequence[Dashboard<wbr>Section<wbr>Row<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}See dashboard section rows
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="dashboardsectionrow">Dashboard<wbr>Section<wbr>Row</h4>
 {{% choosable language nodejs %}}
@@ -2126,11 +1951,10 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardSectionRowArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardSectionRow.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2140,16 +1964,14 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="charts_csharp">
 <a href="#charts_csharp" style="color: inherit; text-decoration: inherit;">Charts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchart">List&lt;Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Charts in this section. See dashboard chart
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2158,16 +1980,14 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="charts_go">
 <a href="#charts_go" style="color: inherit; text-decoration: inherit;">Charts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchart">[]Dashboard<wbr>Section<wbr>Row<wbr>Chart</a></span>
     </dt>
     <dd>{{% md %}}Charts in this section. See dashboard chart
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2176,16 +1996,14 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="charts_nodejs">
 <a href="#charts_nodejs" style="color: inherit; text-decoration: inherit;">charts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchart">Dashboard<wbr>Section<wbr>Row<wbr>Chart[]</a></span>
     </dt>
     <dd>{{% md %}}Charts in this section. See dashboard chart
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2194,19 +2012,14 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="charts_python">
 <a href="#charts_python" style="color: inherit; text-decoration: inherit;">charts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchart">Sequence[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Charts in this section. See dashboard chart
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="dashboardsectionrowchart">Dashboard<wbr>Section<wbr>Row<wbr>Chart</h4>
 {{% choosable language nodejs %}}
@@ -2216,11 +2029,10 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardSectionRowChartArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardSectionRowChart.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2230,82 +2042,84 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="chartsetting_csharp">
 <a href="#chartsetting_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Setting</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchartchartsetting">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Chart settings. See chart settings
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sources_csharp">
 <a href="#sources_csharp" style="color: inherit; text-decoration: inherit;">Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchartsource">List&lt;Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart. See chart source queries
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="summarization_csharp">
 <a href="#summarization_csharp" style="color: inherit; text-decoration: inherit;">Summarization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Summarization strategy for the chart. MEAN is default. Valid options are, `MEAN`, 
 `MEDIAN`, `MIN`, `MAX`, `SUM`, `COUNT`, `LAST`, `FIRST`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="units_csharp">
 <a href="#units_csharp" style="color: inherit; text-decoration: inherit;">Units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String to label the units of the chart on the Y-Axis
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="base_csharp">
+<a href="#base_csharp" style="color: inherit; text-decoration: inherit;">Base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The base of logarithmic scale charts. Omit or set to 0 for the default linear scale. Usually set to 10 for the traditional logarithmic scale.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="chartattribute_csharp">
 <a href="#chartattribute_csharp" style="color: inherit; text-decoration: inherit;">Chart<wbr>Attribute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2314,82 +2128,84 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="chartsetting_go">
 <a href="#chartsetting_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Setting</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchartchartsetting">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}Chart settings. See chart settings
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sources_go">
 <a href="#sources_go" style="color: inherit; text-decoration: inherit;">Sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchartsource">[]Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart. See chart source queries
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="summarization_go">
 <a href="#summarization_go" style="color: inherit; text-decoration: inherit;">Summarization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Summarization strategy for the chart. MEAN is default. Valid options are, `MEAN`, 
 `MEDIAN`, `MIN`, `MAX`, `SUM`, `COUNT`, `LAST`, `FIRST`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="units_go">
 <a href="#units_go" style="color: inherit; text-decoration: inherit;">Units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String to label the units of the chart on the Y-Axis
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="base_go">
+<a href="#base_go" style="color: inherit; text-decoration: inherit;">Base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The base of logarithmic scale charts. Omit or set to 0 for the default linear scale. Usually set to 10 for the traditional logarithmic scale.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="chartattribute_go">
 <a href="#chartattribute_go" style="color: inherit; text-decoration: inherit;">Chart<wbr>Attribute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2398,82 +2214,84 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="chartsetting_nodejs">
 <a href="#chartsetting_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Setting</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchartchartsetting">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}Chart settings. See chart settings
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sources_nodejs">
 <a href="#sources_nodejs" style="color: inherit; text-decoration: inherit;">sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchartsource">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart. See chart source queries
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="summarization_nodejs">
 <a href="#summarization_nodejs" style="color: inherit; text-decoration: inherit;">summarization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Summarization strategy for the chart. MEAN is default. Valid options are, `MEAN`, 
 `MEDIAN`, `MIN`, `MAX`, `SUM`, `COUNT`, `LAST`, `FIRST`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="units_nodejs">
 <a href="#units_nodejs" style="color: inherit; text-decoration: inherit;">units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String to label the units of the chart on the Y-Axis
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="base_nodejs">
+<a href="#base_nodejs" style="color: inherit; text-decoration: inherit;">base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The base of logarithmic scale charts. Omit or set to 0 for the default linear scale. Usually set to 10 for the traditional logarithmic scale.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="chartattribute_nodejs">
 <a href="#chartattribute_nodejs" style="color: inherit; text-decoration: inherit;">chart<wbr>Attribute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2482,85 +2300,84 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="chart_setting_python">
 <a href="#chart_setting_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>setting</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchartchartsetting">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Chart settings. See chart settings
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="sources_python">
 <a href="#sources_python" style="color: inherit; text-decoration: inherit;">sources</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#dashboardsectionrowchartsource">Sequence[Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart. See chart source queries
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="summarization_python">
 <a href="#summarization_python" style="color: inherit; text-decoration: inherit;">summarization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Summarization strategy for the chart. MEAN is default. Valid options are, `MEAN`, 
 `MEDIAN`, `MIN`, `MAX`, `SUM`, `COUNT`, `LAST`, `FIRST`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="units_python">
 <a href="#units_python" style="color: inherit; text-decoration: inherit;">units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String to label the units of the chart on the Y-Axis
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="base_python">
+<a href="#base_python" style="color: inherit; text-decoration: inherit;">base</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The base of logarithmic scale charts. Omit or set to 0 for the default linear scale. Usually set to 10 for the traditional logarithmic scale.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="chart_attribute_python">
 <a href="#chart_attribute_python" style="color: inherit; text-decoration: inherit;">chart_<wbr>attribute</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the chart
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="dashboardsectionrowchartchartsetting">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Chart<wbr>Setting</h4>
 {{% choosable language nodejs %}}
@@ -2570,11 +2387,10 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartChartSettingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartChartSettingOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardSectionRowChartChartSettingArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardSectionRowChartChartSetting.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2584,9 +2400,9 @@ unspecified; Valid options are: `BYCHART`, `AUTOMATIC`, `ALL`, `NONE`, `BYDASHBO
             title="Required">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Chart Type. `line` refers to the Line Plot, `scatter` to the Point Plot, `stacked-area` to 
 the Stacked Area plot, `table` to the Tabular View, `scatterploy-xy` to Scatter Plot, `markdown-widget` to the
@@ -2594,648 +2410,590 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 `stacked-area`, `stacked-column`, `table`, `scatterplot-xy`, `markdown-widget`, `sparkline`, `globe`, `nodemap`,
 `top-k`, `status-list`, `histogram`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autocolumntags_csharp">
 <a href="#autocolumntags_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Column<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="columntags_csharp">
 <a href="#columntags_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customtags_csharp">
 <a href="#customtags_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}For the tabular view, a list of point tags to display when using the `custom` tag display mode
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddataspacing_csharp">
 <a href="#expecteddataspacing_csharp" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Spacing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Threshold (in seconds) for time delta between consecutive points in a series
 above which a dotted line will replace a solid in in line plots. Default 60
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegenddisplaystats_csharp">
 <a href="#fixedlegenddisplaystats_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Display<wbr>Stats</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}For a chart with a fixed legend, a list of statistics to display in the legend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendenabled_csharp">
 <a href="#fixedlegendenabled_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable a fixed tabular legend adjacent to the chart
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendfilterfield_csharp">
 <a href="#fixedlegendfilterfield_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Filter<wbr>Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Statistic to use for determining whether a series is displayed on the fixed legend.
 Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendfilterlimit_csharp">
 <a href="#fixedlegendfilterlimit_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Filter<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of series to include in the fixed legend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendfiltersort_csharp">
 <a href="#fixedlegendfiltersort_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Filter<wbr>Sort</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to display `TOP` or `BOTTOM` ranked series in a fixed legend. Valid options
 are `TOP`, and `BOTTOM`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendhidelabel_csharp">
 <a href="#fixedlegendhidelabel_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Hide<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendposition_csharp">
 <a href="#fixedlegendposition_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Where the fixed legend should be displayed with respect ot the chart.
 Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegenduserawstats_csharp">
 <a href="#fixedlegenduserawstats_csharp" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Use<wbr>Raw<wbr>Stats</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the legend uses non-summarized stats instead of summarized
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbysource_csharp">
 <a href="#groupbysource_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to group multi metrics into a single row by a common source.
 If `false`, each source is displayed in its own row.  if `true`, multiple metrics for the same host will be displayed as different
 columns in the same row
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="invertdynamiclegendhovercontrol_csharp">
 <a href="#invertdynamiclegendhovercontrol_csharp" style="color: inherit; text-decoration: inherit;">Invert<wbr>Dynamic<wbr>Legend<wbr>Hover<wbr>Control</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable the display of the floating legend (but
 reenable it when the ctrl-key is pressed)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linetype_csharp">
 <a href="#linetype_csharp" style="color: inherit; text-decoration: inherit;">Line<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plot interpolation type.  `linear` is default. Valid options are `linear`, `step-before`, 
 `step-after`, `basis`, `cardinal`, `monotone`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_csharp">
 <a href="#max_csharp" style="color: inherit; text-decoration: inherit;">Max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Max value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_csharp">
 <a href="#min_csharp" style="color: inherit; text-decoration: inherit;">Min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Min value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numtags_csharp">
 <a href="#numtags_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For the tabular view, how many point tags to display
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plainmarkdowncontent_csharp">
 <a href="#plainmarkdowncontent_csharp" style="color: inherit; text-decoration: inherit;">Plain<wbr>Markdown<wbr>Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The markdown content for a Markdown display, in plain text.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showhosts_csharp">
 <a href="#showhosts_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display sources. Default is `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showlabels_csharp">
 <a href="#showlabels_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display labels. Default is `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showrawvalues_csharp">
 <a href="#showrawvalues_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Raw<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display raw values. Default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sortvaluesdescending_csharp">
 <a href="#sortvaluesdescending_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Values<wbr>Descending</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display display values in descending order. Default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedecimalprecision_csharp">
 <a href="#sparklinedecimalprecision_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Decimal<wbr>Precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the decimal precision of the displayed number
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplaycolor_csharp">
 <a href="#sparklinedisplaycolor_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the displayed text (when not dynamically determined). 
 Values should be in `rgba(,,,,)` format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayfontsize_csharp">
 <a href="#sparklinedisplayfontsize_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Font<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the font size of the displayed text, in percent
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayhorizontalposition_csharp">
 <a href="#sparklinedisplayhorizontalposition_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Horizontal<wbr>Position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the horizontal position of the displayed text.
 Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplaypostfix_csharp">
 <a href="#sparklinedisplaypostfix_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Postfix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to append to the displayed text
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayprefix_csharp">
 <a href="#sparklinedisplayprefix_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to add before the displayed text
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayvaluetype_csharp">
 <a href="#sparklinedisplayvaluetype_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Value<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, where to display the name of the query or the value of the query.
 Valid options are `VALUE` or `LABEL`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayverticalposition_csharp">
 <a href="#sparklinedisplayverticalposition_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Vertical<wbr>Position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinefillcolor_csharp">
 <a href="#sparklinefillcolor_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Fill<wbr>Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the background fill.  Values should be
 in `rgba(,,,,)`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinelinecolor_csharp">
 <a href="#sparklinelinecolor_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Line<wbr>Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the line.  Values should be in `rgba(,,,,)` format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinesize_csharp">
 <a href="#sparklinesize_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, This determines whether the sparkline of the statistic is displayed in the chart `BACKGROUND`, `BOTTOM`, or `NONE`.
 Valid options are `BACKGROUND`, `BOTTOM`, `NONE`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapapplyto_csharp">
 <a href="#sparklinevaluecolormapapplyto_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Apply<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, whether to apply dyunamic color settings to 
 the displayed `TEXT` or `BACKGROUND`. Valid options are `TEXT` or `BACKGROUND`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapcolors_csharp">
 <a href="#sparklinevaluecolormapcolors_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Colors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}For the single stat view, A list of colors that differing query values map to. 
 Must contain one more element than `sparkline_value_color_map_values_v2`. Values should be in `rgba(,,,,)`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapvalues_csharp">
 <a href="#sparklinevaluecolormapvalues_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapvaluesv2s_csharp">
 <a href="#sparklinevaluecolormapvaluesv2s_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Values<wbr>V2s</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;double&gt;</a></span>
+        <span class="property-type">List&lt;double&gt;</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of boundaries for mapping different
 query values to colors.  Must contain one less element than `sparkline_value_color_map_colors`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluetextmaptexts_csharp">
 <a href="#sparklinevaluetextmaptexts_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Text<wbr>Map<wbr>Texts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of display text values that different query
 values map to.  Must contain one more element than `sparkline_value_text_map_thresholds`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluetextmapthresholds_csharp">
 <a href="#sparklinevaluetextmapthresholds_csharp" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Text<wbr>Map<wbr>Thresholds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;double&gt;</a></span>
+        <span class="property-type">List&lt;double&gt;</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of threshold boundaries for 
 mapping different query values to display text.  Must contain one less element than `sparkline_value_text_map_text`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stacktype_csharp">
 <a href="#stacktype_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of stacked chart (applicable only if chart type is `stacked`). `zero` (default) means
 stacked from y=0. `expand` means normalized from 0 to 1.  `wiggle` means minimize weighted changes. `silhouette` means to
 center the stream. Valid options are `zero`, `expand`, `wiggle`, `silhouette`, `bars`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagmode_csharp">
 <a href="#tagmode_csharp" style="color: inherit; text-decoration: inherit;">Tag<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the tabular view, which mode to use to determine which point tags to display.
 Valid options are `all`, `top`, or `custom`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timebasedcoloring_csharp">
 <a href="#timebasedcoloring_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Coloring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, whether to color more recent points as darker than older points
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsize_csharp">
 <a href="#windowsize_csharp" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Width, in minutes, of the time window to use for `last` windowing
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowing_csharp">
 <a href="#windowing_csharp" style="color: inherit; text-decoration: inherit;">Windowing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to use the full time window for the query or the last X minutes.
 Valid options are `full` or `last`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xmax_csharp">
 <a href="#xmax_csharp" style="color: inherit; text-decoration: inherit;">Xmax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the X-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xmin_csharp">
 <a href="#xmin_csharp" style="color: inherit; text-decoration: inherit;">Xmin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the X-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y0scalesiby1024_csharp">
 <a href="#y0scalesiby1024_csharp" style="color: inherit; text-decoration: inherit;">Y0Scale<wbr>Si<wbr>By1024</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for left Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y0unitautoscaling_csharp">
 <a href="#y0unitautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Y0Unit<wbr>Autoscaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the left Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1scalesiby1024_csharp">
 <a href="#y1scalesiby1024_csharp" style="color: inherit; text-decoration: inherit;">Y1Scale<wbr>Si<wbr>By1024</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for right Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1unitautoscaling_csharp">
 <a href="#y1unitautoscaling_csharp" style="color: inherit; text-decoration: inherit;">Y1Unit<wbr>Autoscaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the right Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1units_csharp">
 <a href="#y1units_csharp" style="color: inherit; text-decoration: inherit;">Y1Units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, units for right side Y-axis
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1max_csharp">
 <a href="#y1max_csharp" style="color: inherit; text-decoration: inherit;">Y1max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, max value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1min_csharp">
 <a href="#y1min_csharp" style="color: inherit; text-decoration: inherit;">Y1min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, min value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ymax_csharp">
 <a href="#ymax_csharp" style="color: inherit; text-decoration: inherit;">Ymax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the Y-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ymin_csharp">
 <a href="#ymin_csharp" style="color: inherit; text-decoration: inherit;">Ymin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the Y-axis. Set to null for auto
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3244,9 +3002,9 @@ Valid options are `full` or `last`
             title="Required">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Chart Type. `line` refers to the Line Plot, `scatter` to the Point Plot, `stacked-area` to 
 the Stacked Area plot, `table` to the Tabular View, `scatterploy-xy` to Scatter Plot, `markdown-widget` to the
@@ -3254,648 +3012,590 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 `stacked-area`, `stacked-column`, `table`, `scatterplot-xy`, `markdown-widget`, `sparkline`, `globe`, `nodemap`,
 `top-k`, `status-list`, `histogram`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autocolumntags_go">
 <a href="#autocolumntags_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Column<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="columntags_go">
 <a href="#columntags_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customtags_go">
 <a href="#customtags_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}For the tabular view, a list of point tags to display when using the `custom` tag display mode
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddataspacing_go">
 <a href="#expecteddataspacing_go" style="color: inherit; text-decoration: inherit;">Expected<wbr>Data<wbr>Spacing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Threshold (in seconds) for time delta between consecutive points in a series
 above which a dotted line will replace a solid in in line plots. Default 60
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegenddisplaystats_go">
 <a href="#fixedlegenddisplaystats_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Display<wbr>Stats</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}For a chart with a fixed legend, a list of statistics to display in the legend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendenabled_go">
 <a href="#fixedlegendenabled_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable a fixed tabular legend adjacent to the chart
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendfilterfield_go">
 <a href="#fixedlegendfilterfield_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Filter<wbr>Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Statistic to use for determining whether a series is displayed on the fixed legend.
 Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendfilterlimit_go">
 <a href="#fixedlegendfilterlimit_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Filter<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of series to include in the fixed legend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendfiltersort_go">
 <a href="#fixedlegendfiltersort_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Filter<wbr>Sort</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to display `TOP` or `BOTTOM` ranked series in a fixed legend. Valid options
 are `TOP`, and `BOTTOM`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendhidelabel_go">
 <a href="#fixedlegendhidelabel_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Hide<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendposition_go">
 <a href="#fixedlegendposition_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Where the fixed legend should be displayed with respect ot the chart.
 Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegenduserawstats_go">
 <a href="#fixedlegenduserawstats_go" style="color: inherit; text-decoration: inherit;">Fixed<wbr>Legend<wbr>Use<wbr>Raw<wbr>Stats</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the legend uses non-summarized stats instead of summarized
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbysource_go">
 <a href="#groupbysource_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to group multi metrics into a single row by a common source.
 If `false`, each source is displayed in its own row.  if `true`, multiple metrics for the same host will be displayed as different
 columns in the same row
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="invertdynamiclegendhovercontrol_go">
 <a href="#invertdynamiclegendhovercontrol_go" style="color: inherit; text-decoration: inherit;">Invert<wbr>Dynamic<wbr>Legend<wbr>Hover<wbr>Control</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable the display of the floating legend (but
 reenable it when the ctrl-key is pressed)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linetype_go">
 <a href="#linetype_go" style="color: inherit; text-decoration: inherit;">Line<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plot interpolation type.  `linear` is default. Valid options are `linear`, `step-before`, 
 `step-after`, `basis`, `cardinal`, `monotone`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_go">
 <a href="#max_go" style="color: inherit; text-decoration: inherit;">Max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Max value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_go">
 <a href="#min_go" style="color: inherit; text-decoration: inherit;">Min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Min value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numtags_go">
 <a href="#numtags_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For the tabular view, how many point tags to display
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plainmarkdowncontent_go">
 <a href="#plainmarkdowncontent_go" style="color: inherit; text-decoration: inherit;">Plain<wbr>Markdown<wbr>Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The markdown content for a Markdown display, in plain text.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showhosts_go">
 <a href="#showhosts_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display sources. Default is `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showlabels_go">
 <a href="#showlabels_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display labels. Default is `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showrawvalues_go">
 <a href="#showrawvalues_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Raw<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display raw values. Default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sortvaluesdescending_go">
 <a href="#sortvaluesdescending_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Values<wbr>Descending</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display display values in descending order. Default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedecimalprecision_go">
 <a href="#sparklinedecimalprecision_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Decimal<wbr>Precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the decimal precision of the displayed number
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplaycolor_go">
 <a href="#sparklinedisplaycolor_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the displayed text (when not dynamically determined). 
 Values should be in `rgba(,,,,)` format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayfontsize_go">
 <a href="#sparklinedisplayfontsize_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Font<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the font size of the displayed text, in percent
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayhorizontalposition_go">
 <a href="#sparklinedisplayhorizontalposition_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Horizontal<wbr>Position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the horizontal position of the displayed text.
 Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplaypostfix_go">
 <a href="#sparklinedisplaypostfix_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Postfix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to append to the displayed text
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayprefix_go">
 <a href="#sparklinedisplayprefix_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to add before the displayed text
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayvaluetype_go">
 <a href="#sparklinedisplayvaluetype_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Value<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, where to display the name of the query or the value of the query.
 Valid options are `VALUE` or `LABEL`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayverticalposition_go">
 <a href="#sparklinedisplayverticalposition_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Display<wbr>Vertical<wbr>Position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinefillcolor_go">
 <a href="#sparklinefillcolor_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Fill<wbr>Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the background fill.  Values should be
 in `rgba(,,,,)`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinelinecolor_go">
 <a href="#sparklinelinecolor_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Line<wbr>Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the line.  Values should be in `rgba(,,,,)` format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinesize_go">
 <a href="#sparklinesize_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, This determines whether the sparkline of the statistic is displayed in the chart `BACKGROUND`, `BOTTOM`, or `NONE`.
 Valid options are `BACKGROUND`, `BOTTOM`, `NONE`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapapplyto_go">
 <a href="#sparklinevaluecolormapapplyto_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Apply<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, whether to apply dyunamic color settings to 
 the displayed `TEXT` or `BACKGROUND`. Valid options are `TEXT` or `BACKGROUND`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapcolors_go">
 <a href="#sparklinevaluecolormapcolors_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Colors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, A list of colors that differing query values map to. 
 Must contain one more element than `sparkline_value_color_map_values_v2`. Values should be in `rgba(,,,,)`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapvalues_go">
 <a href="#sparklinevaluecolormapvalues_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapvaluesv2s_go">
 <a href="#sparklinevaluecolormapvaluesv2s_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Values<wbr>V2s</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">[]float64</a></span>
+        <span class="property-type">[]float64</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of boundaries for mapping different
 query values to colors.  Must contain one less element than `sparkline_value_color_map_colors`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluetextmaptexts_go">
 <a href="#sparklinevaluetextmaptexts_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Text<wbr>Map<wbr>Texts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of display text values that different query
 values map to.  Must contain one more element than `sparkline_value_text_map_thresholds`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluetextmapthresholds_go">
 <a href="#sparklinevaluetextmapthresholds_go" style="color: inherit; text-decoration: inherit;">Sparkline<wbr>Value<wbr>Text<wbr>Map<wbr>Thresholds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">[]float64</a></span>
+        <span class="property-type">[]float64</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of threshold boundaries for 
 mapping different query values to display text.  Must contain one less element than `sparkline_value_text_map_text`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stacktype_go">
 <a href="#stacktype_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of stacked chart (applicable only if chart type is `stacked`). `zero` (default) means
 stacked from y=0. `expand` means normalized from 0 to 1.  `wiggle` means minimize weighted changes. `silhouette` means to
 center the stream. Valid options are `zero`, `expand`, `wiggle`, `silhouette`, `bars`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagmode_go">
 <a href="#tagmode_go" style="color: inherit; text-decoration: inherit;">Tag<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the tabular view, which mode to use to determine which point tags to display.
 Valid options are `all`, `top`, or `custom`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timebasedcoloring_go">
 <a href="#timebasedcoloring_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Based<wbr>Coloring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, whether to color more recent points as darker than older points
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsize_go">
 <a href="#windowsize_go" style="color: inherit; text-decoration: inherit;">Window<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Width, in minutes, of the time window to use for `last` windowing
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowing_go">
 <a href="#windowing_go" style="color: inherit; text-decoration: inherit;">Windowing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to use the full time window for the query or the last X minutes.
 Valid options are `full` or `last`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xmax_go">
 <a href="#xmax_go" style="color: inherit; text-decoration: inherit;">Xmax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the X-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xmin_go">
 <a href="#xmin_go" style="color: inherit; text-decoration: inherit;">Xmin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the X-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y0scalesiby1024_go">
 <a href="#y0scalesiby1024_go" style="color: inherit; text-decoration: inherit;">Y0Scale<wbr>Si<wbr>By1024</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for left Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y0unitautoscaling_go">
 <a href="#y0unitautoscaling_go" style="color: inherit; text-decoration: inherit;">Y0Unit<wbr>Autoscaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the left Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1scalesiby1024_go">
 <a href="#y1scalesiby1024_go" style="color: inherit; text-decoration: inherit;">Y1Scale<wbr>Si<wbr>By1024</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for right Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1unitautoscaling_go">
 <a href="#y1unitautoscaling_go" style="color: inherit; text-decoration: inherit;">Y1Unit<wbr>Autoscaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the right Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1units_go">
 <a href="#y1units_go" style="color: inherit; text-decoration: inherit;">Y1Units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, units for right side Y-axis
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1max_go">
 <a href="#y1max_go" style="color: inherit; text-decoration: inherit;">Y1max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, max value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1min_go">
 <a href="#y1min_go" style="color: inherit; text-decoration: inherit;">Y1min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, min value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ymax_go">
 <a href="#ymax_go" style="color: inherit; text-decoration: inherit;">Ymax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the Y-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ymin_go">
 <a href="#ymin_go" style="color: inherit; text-decoration: inherit;">Ymin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the Y-axis. Set to null for auto
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3904,9 +3604,9 @@ Valid options are `full` or `last`
             title="Required">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Chart Type. `line` refers to the Line Plot, `scatter` to the Point Plot, `stacked-area` to 
 the Stacked Area plot, `table` to the Tabular View, `scatterploy-xy` to Scatter Plot, `markdown-widget` to the
@@ -3914,648 +3614,590 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 `stacked-area`, `stacked-column`, `table`, `scatterplot-xy`, `markdown-widget`, `sparkline`, `globe`, `nodemap`,
 `top-k`, `status-list`, `histogram`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="autocolumntags_nodejs">
 <a href="#autocolumntags_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Column<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="columntags_nodejs">
 <a href="#columntags_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customtags_nodejs">
 <a href="#customtags_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}For the tabular view, a list of point tags to display when using the `custom` tag display mode
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expecteddataspacing_nodejs">
 <a href="#expecteddataspacing_nodejs" style="color: inherit; text-decoration: inherit;">expected<wbr>Data<wbr>Spacing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Threshold (in seconds) for time delta between consecutive points in a series
 above which a dotted line will replace a solid in in line plots. Default 60
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegenddisplaystats_nodejs">
 <a href="#fixedlegenddisplaystats_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Display<wbr>Stats</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}For a chart with a fixed legend, a list of statistics to display in the legend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendenabled_nodejs">
 <a href="#fixedlegendenabled_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable a fixed tabular legend adjacent to the chart
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendfilterfield_nodejs">
 <a href="#fixedlegendfilterfield_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Filter<wbr>Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Statistic to use for determining whether a series is displayed on the fixed legend.
 Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendfilterlimit_nodejs">
 <a href="#fixedlegendfilterlimit_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Filter<wbr>Limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of series to include in the fixed legend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendfiltersort_nodejs">
 <a href="#fixedlegendfiltersort_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Filter<wbr>Sort</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to display `TOP` or `BOTTOM` ranked series in a fixed legend. Valid options
 are `TOP`, and `BOTTOM`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendhidelabel_nodejs">
 <a href="#fixedlegendhidelabel_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Hide<wbr>Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegendposition_nodejs">
 <a href="#fixedlegendposition_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Where the fixed legend should be displayed with respect ot the chart.
 Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixedlegenduserawstats_nodejs">
 <a href="#fixedlegenduserawstats_nodejs" style="color: inherit; text-decoration: inherit;">fixed<wbr>Legend<wbr>Use<wbr>Raw<wbr>Stats</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, the legend uses non-summarized stats instead of summarized
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbysource_nodejs">
 <a href="#groupbysource_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to group multi metrics into a single row by a common source.
 If `false`, each source is displayed in its own row.  if `true`, multiple metrics for the same host will be displayed as different
 columns in the same row
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="invertdynamiclegendhovercontrol_nodejs">
 <a href="#invertdynamiclegendhovercontrol_nodejs" style="color: inherit; text-decoration: inherit;">invert<wbr>Dynamic<wbr>Legend<wbr>Hover<wbr>Control</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to disable the display of the floating legend (but
 reenable it when the ctrl-key is pressed)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="linetype_nodejs">
 <a href="#linetype_nodejs" style="color: inherit; text-decoration: inherit;">line<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Plot interpolation type.  `linear` is default. Valid options are `linear`, `step-before`, 
 `step-after`, `basis`, `cardinal`, `monotone`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_nodejs">
 <a href="#max_nodejs" style="color: inherit; text-decoration: inherit;">max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_nodejs">
 <a href="#min_nodejs" style="color: inherit; text-decoration: inherit;">min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Min value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="numtags_nodejs">
 <a href="#numtags_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For the tabular view, how many point tags to display
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plainmarkdowncontent_nodejs">
 <a href="#plainmarkdowncontent_nodejs" style="color: inherit; text-decoration: inherit;">plain<wbr>Markdown<wbr>Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The markdown content for a Markdown display, in plain text.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showhosts_nodejs">
 <a href="#showhosts_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display sources. Default is `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showlabels_nodejs">
 <a href="#showlabels_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display labels. Default is `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showrawvalues_nodejs">
 <a href="#showrawvalues_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Raw<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display raw values. Default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sortvaluesdescending_nodejs">
 <a href="#sortvaluesdescending_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Values<wbr>Descending</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display display values in descending order. Default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedecimalprecision_nodejs">
 <a href="#sparklinedecimalprecision_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Decimal<wbr>Precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the decimal precision of the displayed number
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplaycolor_nodejs">
 <a href="#sparklinedisplaycolor_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the displayed text (when not dynamically determined). 
 Values should be in `rgba(,,,,)` format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayfontsize_nodejs">
 <a href="#sparklinedisplayfontsize_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Font<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the font size of the displayed text, in percent
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayhorizontalposition_nodejs">
 <a href="#sparklinedisplayhorizontalposition_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Horizontal<wbr>Position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the horizontal position of the displayed text.
 Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplaypostfix_nodejs">
 <a href="#sparklinedisplaypostfix_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Postfix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to append to the displayed text
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayprefix_nodejs">
 <a href="#sparklinedisplayprefix_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to add before the displayed text
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayvaluetype_nodejs">
 <a href="#sparklinedisplayvaluetype_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Value<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, where to display the name of the query or the value of the query.
 Valid options are `VALUE` or `LABEL`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinedisplayverticalposition_nodejs">
 <a href="#sparklinedisplayverticalposition_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Display<wbr>Vertical<wbr>Position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinefillcolor_nodejs">
 <a href="#sparklinefillcolor_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Fill<wbr>Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the background fill.  Values should be
 in `rgba(,,,,)`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinelinecolor_nodejs">
 <a href="#sparklinelinecolor_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Line<wbr>Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the line.  Values should be in `rgba(,,,,)` format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinesize_nodejs">
 <a href="#sparklinesize_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, This determines whether the sparkline of the statistic is displayed in the chart `BACKGROUND`, `BOTTOM`, or `NONE`.
 Valid options are `BACKGROUND`, `BOTTOM`, `NONE`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapapplyto_nodejs">
 <a href="#sparklinevaluecolormapapplyto_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Apply<wbr>To</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the single stat view, whether to apply dyunamic color settings to 
 the displayed `TEXT` or `BACKGROUND`. Valid options are `TEXT` or `BACKGROUND`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapcolors_nodejs">
 <a href="#sparklinevaluecolormapcolors_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Colors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, A list of colors that differing query values map to. 
 Must contain one more element than `sparkline_value_color_map_values_v2`. Values should be in `rgba(,,,,)`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapvalues_nodejs">
 <a href="#sparklinevaluecolormapvalues_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluecolormapvaluesv2s_nodejs">
 <a href="#sparklinevaluecolormapvaluesv2s_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Color<wbr>Map<wbr>Values<wbr>V2s</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of boundaries for mapping different
 query values to colors.  Must contain one less element than `sparkline_value_color_map_colors`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluetextmaptexts_nodejs">
 <a href="#sparklinevaluetextmaptexts_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Text<wbr>Map<wbr>Texts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of display text values that different query
 values map to.  Must contain one more element than `sparkline_value_text_map_thresholds`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparklinevaluetextmapthresholds_nodejs">
 <a href="#sparklinevaluetextmapthresholds_nodejs" style="color: inherit; text-decoration: inherit;">sparkline<wbr>Value<wbr>Text<wbr>Map<wbr>Thresholds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of threshold boundaries for 
 mapping different query values to display text.  Must contain one less element than `sparkline_value_text_map_text`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stacktype_nodejs">
 <a href="#stacktype_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of stacked chart (applicable only if chart type is `stacked`). `zero` (default) means
 stacked from y=0. `expand` means normalized from 0 to 1.  `wiggle` means minimize weighted changes. `silhouette` means to
 center the stream. Valid options are `zero`, `expand`, `wiggle`, `silhouette`, `bars`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tagmode_nodejs">
 <a href="#tagmode_nodejs" style="color: inherit; text-decoration: inherit;">tag<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the tabular view, which mode to use to determine which point tags to display.
 Valid options are `all`, `top`, or `custom`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timebasedcoloring_nodejs">
 <a href="#timebasedcoloring_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Based<wbr>Coloring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, whether to color more recent points as darker than older points
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsize_nodejs">
 <a href="#windowsize_nodejs" style="color: inherit; text-decoration: inherit;">window<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Width, in minutes, of the time window to use for `last` windowing
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowing_nodejs">
 <a href="#windowing_nodejs" style="color: inherit; text-decoration: inherit;">windowing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to use the full time window for the query or the last X minutes.
 Valid options are `full` or `last`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xmax_nodejs">
 <a href="#xmax_nodejs" style="color: inherit; text-decoration: inherit;">xmax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the X-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xmin_nodejs">
 <a href="#xmin_nodejs" style="color: inherit; text-decoration: inherit;">xmin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the X-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y0scalesiby1024_nodejs">
 <a href="#y0scalesiby1024_nodejs" style="color: inherit; text-decoration: inherit;">y0Scale<wbr>Si<wbr>By1024</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for left Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y0unitautoscaling_nodejs">
 <a href="#y0unitautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">y0Unit<wbr>Autoscaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the left Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1scalesiby1024_nodejs">
 <a href="#y1scalesiby1024_nodejs" style="color: inherit; text-decoration: inherit;">y1Scale<wbr>Si<wbr>By1024</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for right Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1unitautoscaling_nodejs">
 <a href="#y1unitautoscaling_nodejs" style="color: inherit; text-decoration: inherit;">y1Unit<wbr>Autoscaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the right Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1units_nodejs">
 <a href="#y1units_nodejs" style="color: inherit; text-decoration: inherit;">y1Units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, units for right side Y-axis
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1max_nodejs">
 <a href="#y1max_nodejs" style="color: inherit; text-decoration: inherit;">y1max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, max value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1min_nodejs">
 <a href="#y1min_nodejs" style="color: inherit; text-decoration: inherit;">y1min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, min value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ymax_nodejs">
 <a href="#ymax_nodejs" style="color: inherit; text-decoration: inherit;">ymax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the Y-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ymin_nodejs">
 <a href="#ymin_nodejs" style="color: inherit; text-decoration: inherit;">ymin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the Y-axis. Set to null for auto
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4564,9 +4206,9 @@ Valid options are `full` or `last`
             title="Required">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Chart Type. `line` refers to the Line Plot, `scatter` to the Point Plot, `stacked-area` to 
 the Stacked Area plot, `table` to the Tabular View, `scatterploy-xy` to Scatter Plot, `markdown-widget` to the
@@ -4574,651 +4216,590 @@ Markdown display, and `sparkline` to the Single Stat view. Valid options are `l
 `stacked-area`, `stacked-column`, `table`, `scatterplot-xy`, `markdown-widget`, `sparkline`, `globe`, `nodemap`,
 `top-k`, `status-list`, `histogram`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auto_column_tags_python">
 <a href="#auto_column_tags_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>column_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="column_tags_python">
 <a href="#column_tags_python" style="color: inherit; text-decoration: inherit;">column_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_tags_python">
 <a href="#custom_tags_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}For the tabular view, a list of point tags to display when using the `custom` tag display mode
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="expected_data_spacing_python">
 <a href="#expected_data_spacing_python" style="color: inherit; text-decoration: inherit;">expected_<wbr>data_<wbr>spacing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Threshold (in seconds) for time delta between consecutive points in a series
 above which a dotted line will replace a solid in in line plots. Default 60
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_legend_display_stats_python">
 <a href="#fixed_legend_display_stats_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>display_<wbr>stats</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}For a chart with a fixed legend, a list of statistics to display in the legend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_legend_enabled_python">
 <a href="#fixed_legend_enabled_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable a fixed tabular legend adjacent to the chart
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_legend_filter_field_python">
 <a href="#fixed_legend_filter_field_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>filter_<wbr>field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Statistic to use for determining whether a series is displayed on the fixed legend.
 Valid options are `CURRENT`, `MEAN`, `MEDIAN`, `SUM`, `MIN`, `MAX`, `COUNT`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_legend_filter_limit_python">
 <a href="#fixed_legend_filter_limit_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>filter_<wbr>limit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of series to include in the fixed legend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_legend_filter_sort_python">
 <a href="#fixed_legend_filter_sort_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>filter_<wbr>sort</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether to display `TOP` or `BOTTOM` ranked series in a fixed legend. Valid options
 are `TOP`, and `BOTTOM`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_legend_hide_label_python">
 <a href="#fixed_legend_hide_label_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>hide_<wbr>label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_legend_position_python">
 <a href="#fixed_legend_position_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Where the fixed legend should be displayed with respect ot the chart.
 Valid options are `RIGHt`, `TOP`, `LEFT`, `BOTTOM`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fixed_legend_use_raw_stats_python">
 <a href="#fixed_legend_use_raw_stats_python" style="color: inherit; text-decoration: inherit;">fixed_<wbr>legend_<wbr>use_<wbr>raw_<wbr>stats</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the legend uses non-summarized stats instead of summarized
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_by_source_python">
 <a href="#group_by_source_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to group multi metrics into a single row by a common source.
 If `false`, each source is displayed in its own row.  if `true`, multiple metrics for the same host will be displayed as different
 columns in the same row
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="invert_dynamic_legend_hover_control_python">
 <a href="#invert_dynamic_legend_hover_control_python" style="color: inherit; text-decoration: inherit;">invert_<wbr>dynamic_<wbr>legend_<wbr>hover_<wbr>control</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to disable the display of the floating legend (but
 reenable it when the ctrl-key is pressed)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="line_type_python">
 <a href="#line_type_python" style="color: inherit; text-decoration: inherit;">line_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Plot interpolation type.  `linear` is default. Valid options are `linear`, `step-before`, 
 `step-after`, `basis`, `cardinal`, `monotone`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_python">
 <a href="#max_python" style="color: inherit; text-decoration: inherit;">max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Max value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_python">
 <a href="#min_python" style="color: inherit; text-decoration: inherit;">min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Min value of the Y-axis. Set to null or leave blank for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="num_tags_python">
 <a href="#num_tags_python" style="color: inherit; text-decoration: inherit;">num_<wbr>tags</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For the tabular view, how many point tags to display
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plain_markdown_content_python">
 <a href="#plain_markdown_content_python" style="color: inherit; text-decoration: inherit;">plain_<wbr>markdown_<wbr>content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The markdown content for a Markdown display, in plain text.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="show_hosts_python">
 <a href="#show_hosts_python" style="color: inherit; text-decoration: inherit;">show_<wbr>hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display sources. Default is `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="show_labels_python">
 <a href="#show_labels_python" style="color: inherit; text-decoration: inherit;">show_<wbr>labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display labels. Default is `true`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="show_raw_values_python">
 <a href="#show_raw_values_python" style="color: inherit; text-decoration: inherit;">show_<wbr>raw_<wbr>values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display raw values. Default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sort_values_descending_python">
 <a href="#sort_values_descending_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>values_<wbr>descending</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to display display values in descending order. Default is `false`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_decimal_precision_python">
 <a href="#sparkline_decimal_precision_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>decimal_<wbr>precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the decimal precision of the displayed number
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_display_color_python">
 <a href="#sparkline_display_color_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the displayed text (when not dynamically determined). 
 Values should be in `rgba(,,,,)` format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_display_font_size_python">
 <a href="#sparkline_display_font_size_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>font_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the font size of the displayed text, in percent
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_display_horizontal_position_python">
 <a href="#sparkline_display_horizontal_position_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>horizontal_<wbr>position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the horizontal position of the displayed text.
 Valid options are `MIDDLE`, `LEFT`, `RIGHT`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_display_postfix_python">
 <a href="#sparkline_display_postfix_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>postfix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to append to the displayed text
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_display_prefix_python">
 <a href="#sparkline_display_prefix_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a string to add before the displayed text
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_display_value_type_python">
 <a href="#sparkline_display_value_type_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>value_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the single stat view, where to display the name of the query or the value of the query.
 Valid options are `VALUE` or `LABEL`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_display_vertical_position_python">
 <a href="#sparkline_display_vertical_position_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>display_<wbr>vertical_<wbr>position</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_fill_color_python">
 <a href="#sparkline_fill_color_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>fill_<wbr>color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the background fill.  Values should be
 in `rgba(,,,,)`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_line_color_python">
 <a href="#sparkline_line_color_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>line_<wbr>color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the single stat view, the color of the line.  Values should be in `rgba(,,,,)` format
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_size_python">
 <a href="#sparkline_size_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the single stat view, This determines whether the sparkline of the statistic is displayed in the chart `BACKGROUND`, `BOTTOM`, or `NONE`.
 Valid options are `BACKGROUND`, `BOTTOM`, `NONE`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_value_color_map_apply_to_python">
 <a href="#sparkline_value_color_map_apply_to_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>apply_<wbr>to</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the single stat view, whether to apply dyunamic color settings to 
 the displayed `TEXT` or `BACKGROUND`. Valid options are `TEXT` or `BACKGROUND`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_value_color_map_colors_python">
 <a href="#sparkline_value_color_map_colors_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>colors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, A list of colors that differing query values map to. 
 Must contain one more element than `sparkline_value_color_map_values_v2`. Values should be in `rgba(,,,,)`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_value_color_map_values_python">
 <a href="#sparkline_value_color_map_values_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>values</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}deprecated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_value_color_map_values_v2s_python">
 <a href="#sparkline_value_color_map_values_v2s_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>color_<wbr>map_<wbr>values_<wbr>v2s</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of boundaries for mapping different
 query values to colors.  Must contain one less element than `sparkline_value_color_map_colors`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_value_text_map_texts_python">
 <a href="#sparkline_value_text_map_texts_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>text_<wbr>map_<wbr>texts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of display text values that different query
 values map to.  Must contain one more element than `sparkline_value_text_map_thresholds`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sparkline_value_text_map_thresholds_python">
 <a href="#sparkline_value_text_map_thresholds_python" style="color: inherit; text-decoration: inherit;">sparkline_<wbr>value_<wbr>text_<wbr>map_<wbr>thresholds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[float]</a></span>
+        <span class="property-type">Sequence[float]</span>
     </dt>
     <dd>{{% md %}}For the single stat view, a list of threshold boundaries for 
 mapping different query values to display text.  Must contain one less element than `sparkline_value_text_map_text`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="stack_type_python">
 <a href="#stack_type_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of stacked chart (applicable only if chart type is `stacked`). `zero` (default) means
 stacked from y=0. `expand` means normalized from 0 to 1.  `wiggle` means minimize weighted changes. `silhouette` means to
 center the stream. Valid options are `zero`, `expand`, `wiggle`, `silhouette`, `bars`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tag_mode_python">
 <a href="#tag_mode_python" style="color: inherit; text-decoration: inherit;">tag_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the tabular view, which mode to use to determine which point tags to display.
 Valid options are `all`, `top`, or `custom`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="time_based_coloring_python">
 <a href="#time_based_coloring_python" style="color: inherit; text-decoration: inherit;">time_<wbr>based_<wbr>coloring</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, whether to color more recent points as darker than older points
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="window_size_python">
 <a href="#window_size_python" style="color: inherit; text-decoration: inherit;">window_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Width, in minutes, of the time window to use for `last` windowing
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowing_python">
 <a href="#windowing_python" style="color: inherit; text-decoration: inherit;">windowing</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For the tabular view, whether to use the full time window for the query or the last X minutes.
 Valid options are `full` or `last`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xmax_python">
 <a href="#xmax_python" style="color: inherit; text-decoration: inherit;">xmax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the X-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="xmin_python">
 <a href="#xmin_python" style="color: inherit; text-decoration: inherit;">xmin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the X-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y0_scale_si_by1024_python">
 <a href="#y0_scale_si_by1024_python" style="color: inherit; text-decoration: inherit;">y0_<wbr>scale_<wbr>si_<wbr>by1024</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for left Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y0_unit_autoscaling_python">
 <a href="#y0_unit_autoscaling_python" style="color: inherit; text-decoration: inherit;">y0_<wbr>unit_<wbr>autoscaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the left Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1_scale_si_by1024_python">
 <a href="#y1_scale_si_by1024_python" style="color: inherit; text-decoration: inherit;">y1_<wbr>scale_<wbr>si_<wbr>by1024</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to scale numerical magnitude labels for right Y-axis by 1024 in the IEC/Binary manner (instead of by 1000 like SI)
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1_unit_autoscaling_python">
 <a href="#y1_unit_autoscaling_python" style="color: inherit; text-decoration: inherit;">y1_<wbr>unit_<wbr>autoscaling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically adjust magnitude labels and units for the right Y-axis to favor smaller magnitudes and larger units
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1_units_python">
 <a href="#y1_units_python" style="color: inherit; text-decoration: inherit;">y1_<wbr>units</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, units for right side Y-axis
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1max_python">
 <a href="#y1max_python" style="color: inherit; text-decoration: inherit;">y1max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, max value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="y1min_python">
 <a href="#y1min_python" style="color: inherit; text-decoration: inherit;">y1min</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}For plots with multiple Y-axes, min value for the right side Y-axis. Set null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ymax_python">
 <a href="#ymax_python" style="color: inherit; text-decoration: inherit;">ymax</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, max value for the Y-axis. Set to null for auto
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ymin_python">
 <a href="#ymin_python" style="color: inherit; text-decoration: inherit;">ymin</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}For x-y scatterplots, min value for the Y-axis. Set to null for auto
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="dashboardsectionrowchartsource">Dashboard<wbr>Section<wbr>Row<wbr>Chart<wbr>Source</h4>
 {{% choosable language nodejs %}}
@@ -5228,11 +4809,10 @@ Valid options are `full` or `last`
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-wavefront/sdk/go/wavefront/?tab=doc#DashboardSectionRowChartSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Inputs.DashboardSectionRowChartSourceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Wavefront/Pulumi.Wavefront.Outputs.DashboardSectionRowChartSource.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5242,71 +4822,64 @@ Valid options are `full` or `last`
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
 <a href="#disabled_csharp" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the source is disabled
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="querybuilderenabled_csharp">
 <a href="#querybuilderenabled_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>Builder<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether oir not this source line should have the query builder enabled
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scatterplotsource_csharp">
 <a href="#scatterplotsource_csharp" style="color: inherit; text-decoration: inherit;">Scatter<wbr>Plot<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For scatter plots, does this query source the X-axis or the Y-axis, `X`, or `Y`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcedescription_csharp">
 <a href="#sourcedescription_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the purpose of this source
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5315,71 +4888,64 @@ Valid options are `full` or `last`
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
 <a href="#disabled_go" style="color: inherit; text-decoration: inherit;">Disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the source is disabled
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="querybuilderenabled_go">
 <a href="#querybuilderenabled_go" style="color: inherit; text-decoration: inherit;">Query<wbr>Builder<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether oir not this source line should have the query builder enabled
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scatterplotsource_go">
 <a href="#scatterplotsource_go" style="color: inherit; text-decoration: inherit;">Scatter<wbr>Plot<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For scatter plots, does this query source the X-axis or the Y-axis, `X`, or `Y`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcedescription_go">
 <a href="#sourcedescription_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the purpose of this source
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5388,71 +4954,64 @@ Valid options are `full` or `last`
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
 <a href="#disabled_nodejs" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the source is disabled
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="querybuilderenabled_nodejs">
 <a href="#querybuilderenabled_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>Builder<wbr>Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether oir not this source line should have the query builder enabled
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scatterplotsource_nodejs">
 <a href="#scatterplotsource_nodejs" style="color: inherit; text-decoration: inherit;">scatter<wbr>Plot<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For scatter plots, does this query source the X-axis or the Y-axis, `X`, or `Y`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourcedescription_nodejs">
 <a href="#sourcedescription_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the purpose of this source
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5461,79 +5020,64 @@ Valid options are `full` or `last`
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the source
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Query expression to plot on the chart
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
 <a href="#disabled_python" style="color: inherit; text-decoration: inherit;">disabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the source is disabled
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="query_builder_enabled_python">
 <a href="#query_builder_enabled_python" style="color: inherit; text-decoration: inherit;">query_<wbr>builder_<wbr>enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether oir not this source line should have the query builder enabled
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="scatter_plot_source_python">
 <a href="#scatter_plot_source_python" style="color: inherit; text-decoration: inherit;">scatter_<wbr>plot_<wbr>source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For scatter plots, does this query source the X-axis or the Y-axis, `X`, or `Y`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_description_python">
 <a href="#source_description_python" style="color: inherit; text-decoration: inherit;">source_<wbr>description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description for the purpose of this source
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
