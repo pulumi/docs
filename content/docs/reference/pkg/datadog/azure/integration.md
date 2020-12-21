@@ -1,7 +1,7 @@
 
 ---
 title: "Integration"
-title_tag: "Resource Integration | Module azure | Package Datadog"
+title_tag: "datadog.azure.Integration"
 meta_desc: "Explore the Integration resource of the azure module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog - Microsoft Azure integration resource. This can be used to create and manage the integrations."
 ---
 

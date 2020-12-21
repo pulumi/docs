@@ -1,7 +1,7 @@
 
 ---
 title: "IntegrationLogCollection"
-title_tag: "Resource IntegrationLogCollection | Module aws | Package Datadog"
+title_tag: "datadog.aws.IntegrationLogCollection"
 meta_desc: "Explore the IntegrationLogCollection resource of the aws module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog - Amazon Web Services integration log collection resource. This can be used to manage which AWS services logs are collected from for an account."
 ---
 

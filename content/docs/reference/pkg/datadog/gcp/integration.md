@@ -1,7 +1,7 @@
 
 ---
 title: "Integration"
-title_tag: "Resource Integration | Module gcp | Package Datadog"
+title_tag: "datadog.gcp.Integration"
 meta_desc: "Explore the Integration resource of the gcp module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Datadog - Google Cloud Platform integration resource. This can be used to create and manage Datadog - Google Cloud Platform integration."
 ---
 
