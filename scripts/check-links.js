@@ -260,6 +260,8 @@ function getDefaultExcludedKeywords() {
         "https://blog.coinbase.com/",
         "https://www.netfilter.org/",
         "https://codepen.io",
+        "https://twitter.com",
+        "https://t.co",
     ];
 }
 
@@ -270,9 +272,6 @@ function excludeAcceptable(links) {
         // Ignore GitHub and npm 429s (rate-limited). We should really be handling these more
         // intelligently, but we can come back to that in a follow up.
         .filter(b => !(b.reason === "HTTP_429" && b.destination.match(/github.com|npmjs.com/)))
-
-        // Ignore 400s from Twitter.
-        .filter(b => !(b.reason === "HTTP_400" && b.destination.match(/twitter.com/)))
 
         // Ignore remote disconnects.
         .filter(b => b.reason !== "ERRNO_ECONNRESET")
