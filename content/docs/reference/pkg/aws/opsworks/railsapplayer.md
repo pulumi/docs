@@ -2,7 +2,7 @@
 ---
 title: "RailsAppLayer"
 title_tag: "aws.opsworks.RailsAppLayer"
-meta_desc: "Explore the RailsAppLayer resource of the opsworks module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an OpsWorks Ruby on Rails application layer resource."
+meta_desc: "Documentation for the aws.opsworks.RailsAppLayer resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -91,7 +91,7 @@ const app = new aws.opsworks.RailsAppLayer("app", {stackId: aws_opsworks_stack.m
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#RailsAppLayer">RailsAppLayer</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#RailsAppLayerArgs">RailsAppLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#RailsAppLayer">RailsAppLayer</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#RailsAppLayerArgs">RailsAppLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -99,11 +99,11 @@ const app = new aws.opsworks.RailsAppLayer("app", {stackId: aws_opsworks_stack.m
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#RailsAppLayer">NewRailsAppLayer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#RailsAppLayerArgs">RailsAppLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#RailsAppLayer">RailsAppLayer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#RailsAppLayer">NewRailsAppLayer</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#RailsAppLayerArgs">RailsAppLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#RailsAppLayer">RailsAppLayer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.RailsAppLayer.html">RailsAppLayer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.RailsAppLayerArgs.html">RailsAppLayerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.RailsAppLayer.html">RailsAppLayer</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.RailsAppLayerArgs.html">RailsAppLayerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -114,7 +114,7 @@ const app = new aws.opsworks.RailsAppLayer("app", {stackId: aws_opsworks_stack.m
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -183,7 +183,7 @@ const app = new aws.opsworks.RailsAppLayer("app", {stackId: aws_opsworks_stack.m
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -222,7 +222,7 @@ const app = new aws.opsworks.RailsAppLayer("app", {stackId: aws_opsworks_stack.m
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -272,7 +272,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -282,7 +282,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#appserver_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword for the app server to use. Defaults to "apache_passenger".
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#autoassignelasticips_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#autoassignpublicips_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -312,7 +312,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#autohealing_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -322,7 +322,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bundlerversion_csharp" style="color: inherit; text-decoration: inherit;">Bundler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
 {{% /md %}}</dd>
@@ -332,7 +332,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customconfigurerecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Configure<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -341,7 +341,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customdeployrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -350,7 +350,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custominstanceprofilearn_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -360,7 +360,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customjson_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -370,7 +370,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -380,7 +380,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customsetuprecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -389,7 +389,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customshutdownrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shutdown<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -398,7 +398,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customundeployrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Undeploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -407,7 +407,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#drainelbonshutdown_csharp" style="color: inherit; text-decoration: inherit;">Drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -427,7 +427,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#elasticloadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -437,7 +437,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#installupdatesonboot_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -447,7 +447,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#instanceshutdowntimeout_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Shutdown<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -457,7 +457,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managebundler_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Bundler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether OpsWorks should manage bundler. On by default.
 {{% /md %}}</dd>
@@ -467,7 +467,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -477,7 +477,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#passengerversion_csharp" style="color: inherit; text-decoration: inherit;">Passenger<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Passenger to use. Defaults to "4.0.46".
 {{% /md %}}</dd>
@@ -487,7 +487,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rubyversion_csharp" style="color: inherit; text-decoration: inherit;">Ruby<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Ruby to use. Defaults to "2.0.0".
 {{% /md %}}</dd>
@@ -497,7 +497,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rubygemsversion_csharp" style="color: inherit; text-decoration: inherit;">Rubygems<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of RubyGems to use. Defaults to "2.2.2".
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#systempackages_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -527,7 +527,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#useebsoptimizedinstances_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -543,7 +543,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -553,7 +553,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#appserver_go" style="color: inherit; text-decoration: inherit;">App<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword for the app server to use. Defaults to "apache_passenger".
 {{% /md %}}</dd>
@@ -563,7 +563,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#autoassignelasticips_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -573,7 +573,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#autoassignpublicips_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -583,7 +583,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#autohealing_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -593,7 +593,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bundlerversion_go" style="color: inherit; text-decoration: inherit;">Bundler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
 {{% /md %}}</dd>
@@ -603,7 +603,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customconfigurerecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Configure<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -612,7 +612,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customdeployrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -621,7 +621,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custominstanceprofilearn_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -631,7 +631,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customjson_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -641,7 +641,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -651,7 +651,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customsetuprecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -660,7 +660,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customshutdownrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shutdown<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -669,7 +669,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customundeployrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Undeploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -678,7 +678,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#drainelbonshutdown_go" style="color: inherit; text-decoration: inherit;">Drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -698,7 +698,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#elasticloadbalancer_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -708,7 +708,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#installupdatesonboot_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -718,7 +718,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#instanceshutdowntimeout_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Shutdown<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -728,7 +728,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managebundler_go" style="color: inherit; text-decoration: inherit;">Manage<wbr>Bundler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether OpsWorks should manage bundler. On by default.
 {{% /md %}}</dd>
@@ -738,7 +738,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -748,7 +748,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#passengerversion_go" style="color: inherit; text-decoration: inherit;">Passenger<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Passenger to use. Defaults to "4.0.46".
 {{% /md %}}</dd>
@@ -758,7 +758,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rubyversion_go" style="color: inherit; text-decoration: inherit;">Ruby<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Ruby to use. Defaults to "2.0.0".
 {{% /md %}}</dd>
@@ -768,7 +768,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rubygemsversion_go" style="color: inherit; text-decoration: inherit;">Rubygems<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of RubyGems to use. Defaults to "2.2.2".
 {{% /md %}}</dd>
@@ -778,7 +778,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#systempackages_go" style="color: inherit; text-decoration: inherit;">System<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -798,7 +798,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#useebsoptimizedinstances_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -814,7 +814,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -824,7 +824,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#appserver_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword for the app server to use. Defaults to "apache_passenger".
 {{% /md %}}</dd>
@@ -834,7 +834,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#autoassignelasticips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -844,7 +844,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#autoassignpublicips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -854,7 +854,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#autohealing_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -864,7 +864,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bundlerversion_nodejs" style="color: inherit; text-decoration: inherit;">bundler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
 {{% /md %}}</dd>
@@ -874,7 +874,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customconfigurerecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Configure<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -883,7 +883,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customdeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -892,7 +892,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custominstanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -902,7 +902,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customjson_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -912,7 +912,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -922,7 +922,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customsetuprecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -931,7 +931,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customshutdownrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Shutdown<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -940,7 +940,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#customundeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Undeploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -949,7 +949,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#drainelbonshutdown_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -969,7 +969,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#elasticloadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -979,7 +979,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#installupdatesonboot_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -989,7 +989,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#instanceshutdowntimeout_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Shutdown<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -999,7 +999,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managebundler_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Bundler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether OpsWorks should manage bundler. On by default.
 {{% /md %}}</dd>
@@ -1009,7 +1009,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -1019,7 +1019,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#passengerversion_nodejs" style="color: inherit; text-decoration: inherit;">passenger<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Passenger to use. Defaults to "4.0.46".
 {{% /md %}}</dd>
@@ -1029,7 +1029,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rubyversion_nodejs" style="color: inherit; text-decoration: inherit;">ruby<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Ruby to use. Defaults to "2.0.0".
 {{% /md %}}</dd>
@@ -1039,7 +1039,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rubygemsversion_nodejs" style="color: inherit; text-decoration: inherit;">rubygems<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of RubyGems to use. Defaults to "2.2.2".
 {{% /md %}}</dd>
@@ -1049,7 +1049,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#systempackages_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -1069,7 +1069,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#useebsoptimizedinstances_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -1085,7 +1085,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -1095,7 +1095,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#app_server_python" style="color: inherit; text-decoration: inherit;">app_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Keyword for the app server to use. Defaults to "apache_passenger".
 {{% /md %}}</dd>
@@ -1105,7 +1105,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#auto_assign_elastic_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>elastic_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -1115,7 +1115,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#auto_assign_public_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -1125,7 +1125,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#auto_healing_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -1135,7 +1135,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#bundler_version_python" style="color: inherit; text-decoration: inherit;">bundler_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
 {{% /md %}}</dd>
@@ -1145,7 +1145,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custom_configure_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>configure_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1154,7 +1154,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custom_deploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deploy_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1163,7 +1163,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custom_instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>instance_<wbr>profile_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -1173,7 +1173,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custom_json_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -1183,7 +1183,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custom_security_group_ids_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -1193,7 +1193,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custom_setup_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1202,7 +1202,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custom_shutdown_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>shutdown_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1211,7 +1211,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#custom_undeploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>undeploy_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1220,7 +1220,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#drain_elb_on_shutdown_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>elb_<wbr>on_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -1240,7 +1240,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#elastic_load_balancer_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>load_<wbr>balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -1250,7 +1250,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#install_updates_on_boot_python" style="color: inherit; text-decoration: inherit;">install_<wbr>updates_<wbr>on_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -1260,7 +1260,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#instance_shutdown_timeout_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>shutdown_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -1270,7 +1270,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#manage_bundler_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>bundler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether OpsWorks should manage bundler. On by default.
 {{% /md %}}</dd>
@@ -1280,7 +1280,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -1290,7 +1290,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#passenger_version_python" style="color: inherit; text-decoration: inherit;">passenger_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Passenger to use. Defaults to "4.0.46".
 {{% /md %}}</dd>
@@ -1300,7 +1300,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#ruby_version_python" style="color: inherit; text-decoration: inherit;">ruby_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Ruby to use. Defaults to "2.0.0".
 {{% /md %}}</dd>
@@ -1310,7 +1310,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#rubygems_version_python" style="color: inherit; text-decoration: inherit;">rubygems_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of RubyGems to use. Defaults to "2.2.2".
 {{% /md %}}</dd>
@@ -1320,7 +1320,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#system_packages_python" style="color: inherit; text-decoration: inherit;">system_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -1340,7 +1340,7 @@ The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro
 <a href="#use_ebs_optimized_instances_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ebs_<wbr>optimized_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -1363,7 +1363,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1373,7 +1373,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -1388,7 +1388,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1398,7 +1398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -1413,7 +1413,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1423,7 +1423,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -1438,7 +1438,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1448,7 +1448,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -1462,7 +1462,7 @@ Get an existing RailsAppLayer resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#RailsAppLayerState">RailsAppLayerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#RailsAppLayer">RailsAppLayer</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#RailsAppLayerState">RailsAppLayerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#RailsAppLayer">RailsAppLayer</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1471,11 +1471,11 @@ Get an existing RailsAppLayer resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRailsAppLayer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#RailsAppLayerState">RailsAppLayerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#RailsAppLayer">RailsAppLayer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRailsAppLayer<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#RailsAppLayerState">RailsAppLayerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/opsworks?tab=doc#RailsAppLayer">RailsAppLayer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.RailsAppLayer.html">RailsAppLayer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.RailsAppLayerState.html">RailsAppLayerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.RailsAppLayer.html">RailsAppLayer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.RailsAppLayerState.html">RailsAppLayerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1586,7 +1586,7 @@ The following state arguments are supported:
 <a href="#state_appserver_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword for the app server to use. Defaults to "apache_passenger".
 {{% /md %}}</dd>
@@ -1596,7 +1596,7 @@ The following state arguments are supported:
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1606,7 +1606,7 @@ The following state arguments are supported:
 <a href="#state_autoassignelasticips_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -1616,7 +1616,7 @@ The following state arguments are supported:
 <a href="#state_autoassignpublicips_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -1626,7 +1626,7 @@ The following state arguments are supported:
 <a href="#state_autohealing_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -1636,7 +1636,7 @@ The following state arguments are supported:
 <a href="#state_bundlerversion_csharp" style="color: inherit; text-decoration: inherit;">Bundler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
 {{% /md %}}</dd>
@@ -1646,7 +1646,7 @@ The following state arguments are supported:
 <a href="#state_customconfigurerecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Configure<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1655,7 +1655,7 @@ The following state arguments are supported:
 <a href="#state_customdeployrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1664,7 +1664,7 @@ The following state arguments are supported:
 <a href="#state_custominstanceprofilearn_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -1674,7 +1674,7 @@ The following state arguments are supported:
 <a href="#state_customjson_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -1684,7 +1684,7 @@ The following state arguments are supported:
 <a href="#state_customsecuritygroupids_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -1694,7 +1694,7 @@ The following state arguments are supported:
 <a href="#state_customsetuprecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1703,7 +1703,7 @@ The following state arguments are supported:
 <a href="#state_customshutdownrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shutdown<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1712,7 +1712,7 @@ The following state arguments are supported:
 <a href="#state_customundeployrecipes_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Undeploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1721,7 +1721,7 @@ The following state arguments are supported:
 <a href="#state_drainelbonshutdown_csharp" style="color: inherit; text-decoration: inherit;">Drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -1741,7 +1741,7 @@ The following state arguments are supported:
 <a href="#state_elasticloadbalancer_csharp" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -1751,7 +1751,7 @@ The following state arguments are supported:
 <a href="#state_installupdatesonboot_csharp" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -1761,7 +1761,7 @@ The following state arguments are supported:
 <a href="#state_instanceshutdowntimeout_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Shutdown<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -1771,7 +1771,7 @@ The following state arguments are supported:
 <a href="#state_managebundler_csharp" style="color: inherit; text-decoration: inherit;">Manage<wbr>Bundler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether OpsWorks should manage bundler. On by default.
 {{% /md %}}</dd>
@@ -1781,7 +1781,7 @@ The following state arguments are supported:
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -1791,7 +1791,7 @@ The following state arguments are supported:
 <a href="#state_passengerversion_csharp" style="color: inherit; text-decoration: inherit;">Passenger<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Passenger to use. Defaults to "4.0.46".
 {{% /md %}}</dd>
@@ -1801,7 +1801,7 @@ The following state arguments are supported:
 <a href="#state_rubyversion_csharp" style="color: inherit; text-decoration: inherit;">Ruby<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Ruby to use. Defaults to "2.0.0".
 {{% /md %}}</dd>
@@ -1811,7 +1811,7 @@ The following state arguments are supported:
 <a href="#state_rubygemsversion_csharp" style="color: inherit; text-decoration: inherit;">Rubygems<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of RubyGems to use. Defaults to "2.2.2".
 {{% /md %}}</dd>
@@ -1821,7 +1821,7 @@ The following state arguments are supported:
 <a href="#state_stackid_csharp" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -1831,7 +1831,7 @@ The following state arguments are supported:
 <a href="#state_systempackages_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -1851,7 +1851,7 @@ The following state arguments are supported:
 <a href="#state_useebsoptimizedinstances_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -1867,7 +1867,7 @@ The following state arguments are supported:
 <a href="#state_appserver_go" style="color: inherit; text-decoration: inherit;">App<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword for the app server to use. Defaults to "apache_passenger".
 {{% /md %}}</dd>
@@ -1877,7 +1877,7 @@ The following state arguments are supported:
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1887,7 +1887,7 @@ The following state arguments are supported:
 <a href="#state_autoassignelasticips_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -1897,7 +1897,7 @@ The following state arguments are supported:
 <a href="#state_autoassignpublicips_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Assign<wbr>Public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -1907,7 +1907,7 @@ The following state arguments are supported:
 <a href="#state_autohealing_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -1917,7 +1917,7 @@ The following state arguments are supported:
 <a href="#state_bundlerversion_go" style="color: inherit; text-decoration: inherit;">Bundler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
 {{% /md %}}</dd>
@@ -1927,7 +1927,7 @@ The following state arguments are supported:
 <a href="#state_customconfigurerecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Configure<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1936,7 +1936,7 @@ The following state arguments are supported:
 <a href="#state_customdeployrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Deploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1945,7 +1945,7 @@ The following state arguments are supported:
 <a href="#state_custominstanceprofilearn_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -1955,7 +1955,7 @@ The following state arguments are supported:
 <a href="#state_customjson_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -1965,7 +1965,7 @@ The following state arguments are supported:
 <a href="#state_customsecuritygroupids_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -1975,7 +1975,7 @@ The following state arguments are supported:
 <a href="#state_customsetuprecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Setup<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1984,7 +1984,7 @@ The following state arguments are supported:
 <a href="#state_customshutdownrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Shutdown<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1993,7 +1993,7 @@ The following state arguments are supported:
 <a href="#state_customundeployrecipes_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Undeploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2002,7 +2002,7 @@ The following state arguments are supported:
 <a href="#state_drainelbonshutdown_go" style="color: inherit; text-decoration: inherit;">Drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -2022,7 +2022,7 @@ The following state arguments are supported:
 <a href="#state_elasticloadbalancer_go" style="color: inherit; text-decoration: inherit;">Elastic<wbr>Load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -2032,7 +2032,7 @@ The following state arguments are supported:
 <a href="#state_installupdatesonboot_go" style="color: inherit; text-decoration: inherit;">Install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -2042,7 +2042,7 @@ The following state arguments are supported:
 <a href="#state_instanceshutdowntimeout_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Shutdown<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -2052,7 +2052,7 @@ The following state arguments are supported:
 <a href="#state_managebundler_go" style="color: inherit; text-decoration: inherit;">Manage<wbr>Bundler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether OpsWorks should manage bundler. On by default.
 {{% /md %}}</dd>
@@ -2062,7 +2062,7 @@ The following state arguments are supported:
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -2072,7 +2072,7 @@ The following state arguments are supported:
 <a href="#state_passengerversion_go" style="color: inherit; text-decoration: inherit;">Passenger<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Passenger to use. Defaults to "4.0.46".
 {{% /md %}}</dd>
@@ -2082,7 +2082,7 @@ The following state arguments are supported:
 <a href="#state_rubyversion_go" style="color: inherit; text-decoration: inherit;">Ruby<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Ruby to use. Defaults to "2.0.0".
 {{% /md %}}</dd>
@@ -2092,7 +2092,7 @@ The following state arguments are supported:
 <a href="#state_rubygemsversion_go" style="color: inherit; text-decoration: inherit;">Rubygems<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of RubyGems to use. Defaults to "2.2.2".
 {{% /md %}}</dd>
@@ -2102,7 +2102,7 @@ The following state arguments are supported:
 <a href="#state_stackid_go" style="color: inherit; text-decoration: inherit;">Stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -2112,7 +2112,7 @@ The following state arguments are supported:
 <a href="#state_systempackages_go" style="color: inherit; text-decoration: inherit;">System<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -2132,7 +2132,7 @@ The following state arguments are supported:
 <a href="#state_useebsoptimizedinstances_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -2148,7 +2148,7 @@ The following state arguments are supported:
 <a href="#state_appserver_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword for the app server to use. Defaults to "apache_passenger".
 {{% /md %}}</dd>
@@ -2158,7 +2158,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -2168,7 +2168,7 @@ The following state arguments are supported:
 <a href="#state_autoassignelasticips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Elastic<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -2178,7 +2178,7 @@ The following state arguments are supported:
 <a href="#state_autoassignpublicips_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Assign<wbr>Public<wbr>Ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -2188,7 +2188,7 @@ The following state arguments are supported:
 <a href="#state_autohealing_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -2198,7 +2198,7 @@ The following state arguments are supported:
 <a href="#state_bundlerversion_nodejs" style="color: inherit; text-decoration: inherit;">bundler<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
 {{% /md %}}</dd>
@@ -2208,7 +2208,7 @@ The following state arguments are supported:
 <a href="#state_customconfigurerecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Configure<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2217,7 +2217,7 @@ The following state arguments are supported:
 <a href="#state_customdeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Deploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2226,7 +2226,7 @@ The following state arguments are supported:
 <a href="#state_custominstanceprofilearn_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Instance<wbr>Profile<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -2236,7 +2236,7 @@ The following state arguments are supported:
 <a href="#state_customjson_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -2246,7 +2246,7 @@ The following state arguments are supported:
 <a href="#state_customsecuritygroupids_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -2256,7 +2256,7 @@ The following state arguments are supported:
 <a href="#state_customsetuprecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Setup<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2265,7 +2265,7 @@ The following state arguments are supported:
 <a href="#state_customshutdownrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Shutdown<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2274,7 +2274,7 @@ The following state arguments are supported:
 <a href="#state_customundeployrecipes_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Undeploy<wbr>Recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2283,7 +2283,7 @@ The following state arguments are supported:
 <a href="#state_drainelbonshutdown_nodejs" style="color: inherit; text-decoration: inherit;">drain<wbr>Elb<wbr>On<wbr>Shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -2303,7 +2303,7 @@ The following state arguments are supported:
 <a href="#state_elasticloadbalancer_nodejs" style="color: inherit; text-decoration: inherit;">elastic<wbr>Load<wbr>Balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -2313,7 +2313,7 @@ The following state arguments are supported:
 <a href="#state_installupdatesonboot_nodejs" style="color: inherit; text-decoration: inherit;">install<wbr>Updates<wbr>On<wbr>Boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -2323,7 +2323,7 @@ The following state arguments are supported:
 <a href="#state_instanceshutdowntimeout_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Shutdown<wbr>Timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -2333,7 +2333,7 @@ The following state arguments are supported:
 <a href="#state_managebundler_nodejs" style="color: inherit; text-decoration: inherit;">manage<wbr>Bundler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether OpsWorks should manage bundler. On by default.
 {{% /md %}}</dd>
@@ -2343,7 +2343,7 @@ The following state arguments are supported:
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -2353,7 +2353,7 @@ The following state arguments are supported:
 <a href="#state_passengerversion_nodejs" style="color: inherit; text-decoration: inherit;">passenger<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Passenger to use. Defaults to "4.0.46".
 {{% /md %}}</dd>
@@ -2363,7 +2363,7 @@ The following state arguments are supported:
 <a href="#state_rubyversion_nodejs" style="color: inherit; text-decoration: inherit;">ruby<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Ruby to use. Defaults to "2.0.0".
 {{% /md %}}</dd>
@@ -2373,7 +2373,7 @@ The following state arguments are supported:
 <a href="#state_rubygemsversion_nodejs" style="color: inherit; text-decoration: inherit;">rubygems<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of RubyGems to use. Defaults to "2.2.2".
 {{% /md %}}</dd>
@@ -2383,7 +2383,7 @@ The following state arguments are supported:
 <a href="#state_stackid_nodejs" style="color: inherit; text-decoration: inherit;">stack<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -2393,7 +2393,7 @@ The following state arguments are supported:
 <a href="#state_systempackages_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -2413,7 +2413,7 @@ The following state arguments are supported:
 <a href="#state_useebsoptimizedinstances_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Ebs<wbr>Optimized<wbr>Instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -2429,7 +2429,7 @@ The following state arguments are supported:
 <a href="#state_app_server_python" style="color: inherit; text-decoration: inherit;">app_<wbr>server</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Keyword for the app server to use. Defaults to "apache_passenger".
 {{% /md %}}</dd>
@@ -2439,7 +2439,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -2449,7 +2449,7 @@ The following state arguments are supported:
 <a href="#state_auto_assign_elastic_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>elastic_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -2459,7 +2459,7 @@ The following state arguments are supported:
 <a href="#state_auto_assign_public_ips_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>assign_<wbr>public_<wbr>ips</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -2469,7 +2469,7 @@ The following state arguments are supported:
 <a href="#state_auto_healing_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>healing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -2479,7 +2479,7 @@ The following state arguments are supported:
 <a href="#state_bundler_version_python" style="color: inherit; text-decoration: inherit;">bundler_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When OpsWorks is managing Bundler, which version to use. Defaults to "1.5.3".
 {{% /md %}}</dd>
@@ -2489,7 +2489,7 @@ The following state arguments are supported:
 <a href="#state_custom_configure_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>configure_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2498,7 +2498,7 @@ The following state arguments are supported:
 <a href="#state_custom_deploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>deploy_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2507,7 +2507,7 @@ The following state arguments are supported:
 <a href="#state_custom_instance_profile_arn_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>instance_<wbr>profile_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -2517,7 +2517,7 @@ The following state arguments are supported:
 <a href="#state_custom_json_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -2527,7 +2527,7 @@ The following state arguments are supported:
 <a href="#state_custom_security_group_ids_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -2537,7 +2537,7 @@ The following state arguments are supported:
 <a href="#state_custom_setup_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>setup_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2546,7 +2546,7 @@ The following state arguments are supported:
 <a href="#state_custom_shutdown_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>shutdown_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2555,7 +2555,7 @@ The following state arguments are supported:
 <a href="#state_custom_undeploy_recipes_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>undeploy_<wbr>recipes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2564,7 +2564,7 @@ The following state arguments are supported:
 <a href="#state_drain_elb_on_shutdown_python" style="color: inherit; text-decoration: inherit;">drain_<wbr>elb_<wbr>on_<wbr>shutdown</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -2584,7 +2584,7 @@ The following state arguments are supported:
 <a href="#state_elastic_load_balancer_python" style="color: inherit; text-decoration: inherit;">elastic_<wbr>load_<wbr>balancer</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -2594,7 +2594,7 @@ The following state arguments are supported:
 <a href="#state_install_updates_on_boot_python" style="color: inherit; text-decoration: inherit;">install_<wbr>updates_<wbr>on_<wbr>boot</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -2604,7 +2604,7 @@ The following state arguments are supported:
 <a href="#state_instance_shutdown_timeout_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>shutdown_<wbr>timeout</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -2614,7 +2614,7 @@ The following state arguments are supported:
 <a href="#state_manage_bundler_python" style="color: inherit; text-decoration: inherit;">manage_<wbr>bundler</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether OpsWorks should manage bundler. On by default.
 {{% /md %}}</dd>
@@ -2624,7 +2624,7 @@ The following state arguments are supported:
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -2634,7 +2634,7 @@ The following state arguments are supported:
 <a href="#state_passenger_version_python" style="color: inherit; text-decoration: inherit;">passenger_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Passenger to use. Defaults to "4.0.46".
 {{% /md %}}</dd>
@@ -2644,7 +2644,7 @@ The following state arguments are supported:
 <a href="#state_ruby_version_python" style="color: inherit; text-decoration: inherit;">ruby_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Ruby to use. Defaults to "2.0.0".
 {{% /md %}}</dd>
@@ -2654,7 +2654,7 @@ The following state arguments are supported:
 <a href="#state_rubygems_version_python" style="color: inherit; text-decoration: inherit;">rubygems_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of RubyGems to use. Defaults to "2.2.2".
 {{% /md %}}</dd>
@@ -2664,7 +2664,7 @@ The following state arguments are supported:
 <a href="#state_stack_id_python" style="color: inherit; text-decoration: inherit;">stack_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -2674,7 +2674,7 @@ The following state arguments are supported:
 <a href="#state_system_packages_python" style="color: inherit; text-decoration: inherit;">system_<wbr>packages</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -2694,7 +2694,7 @@ The following state arguments are supported:
 <a href="#state_use_ebs_optimized_instances_python" style="color: inherit; text-decoration: inherit;">use_<wbr>ebs_<wbr>optimized_<wbr>instances</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -2733,7 +2733,7 @@ The following state arguments are supported:
 <a href="#mountpoint_csharp" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -2743,7 +2743,7 @@ The following state arguments are supported:
 <a href="#numberofdisks_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
 {{% /md %}}</dd>
@@ -2753,7 +2753,7 @@ The following state arguments are supported:
 <a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
@@ -2763,7 +2763,7 @@ The following state arguments are supported:
 <a href="#encrypted_csharp" style="color: inherit; text-decoration: inherit;">Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2772,7 +2772,7 @@ The following state arguments are supported:
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
 {{% /md %}}</dd>
@@ -2782,7 +2782,7 @@ The following state arguments are supported:
 <a href="#raidlevel_csharp" style="color: inherit; text-decoration: inherit;">Raid<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
@@ -2792,7 +2792,7 @@ The following state arguments are supported:
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>
@@ -2808,7 +2808,7 @@ The following state arguments are supported:
 <a href="#mountpoint_go" style="color: inherit; text-decoration: inherit;">Mount<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -2818,7 +2818,7 @@ The following state arguments are supported:
 <a href="#numberofdisks_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
 {{% /md %}}</dd>
@@ -2828,7 +2828,7 @@ The following state arguments are supported:
 <a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
@@ -2838,7 +2838,7 @@ The following state arguments are supported:
 <a href="#encrypted_go" style="color: inherit; text-decoration: inherit;">Encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2847,7 +2847,7 @@ The following state arguments are supported:
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
 {{% /md %}}</dd>
@@ -2857,7 +2857,7 @@ The following state arguments are supported:
 <a href="#raidlevel_go" style="color: inherit; text-decoration: inherit;">Raid<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
@@ -2867,7 +2867,7 @@ The following state arguments are supported:
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>
@@ -2883,7 +2883,7 @@ The following state arguments are supported:
 <a href="#mountpoint_nodejs" style="color: inherit; text-decoration: inherit;">mount<wbr>Point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -2893,7 +2893,7 @@ The following state arguments are supported:
 <a href="#numberofdisks_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
 {{% /md %}}</dd>
@@ -2903,7 +2903,7 @@ The following state arguments are supported:
 <a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
@@ -2913,7 +2913,7 @@ The following state arguments are supported:
 <a href="#encrypted_nodejs" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2922,7 +2922,7 @@ The following state arguments are supported:
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
 {{% /md %}}</dd>
@@ -2932,7 +2932,7 @@ The following state arguments are supported:
 <a href="#raidlevel_nodejs" style="color: inherit; text-decoration: inherit;">raid<wbr>Level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
@@ -2942,7 +2942,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>
@@ -2958,7 +2958,7 @@ The following state arguments are supported:
 <a href="#mount_point_python" style="color: inherit; text-decoration: inherit;">mount_<wbr>point</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -2968,7 +2968,7 @@ The following state arguments are supported:
 <a href="#number_of_disks_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>disks</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
 {{% /md %}}</dd>
@@ -2978,7 +2978,7 @@ The following state arguments are supported:
 <a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
@@ -2988,7 +2988,7 @@ The following state arguments are supported:
 <a href="#encrypted_python" style="color: inherit; text-decoration: inherit;">encrypted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2997,7 +2997,7 @@ The following state arguments are supported:
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
 {{% /md %}}</dd>
@@ -3007,7 +3007,7 @@ The following state arguments are supported:
 <a href="#raid_level_python" style="color: inherit; text-decoration: inherit;">raid_<wbr>level</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
@@ -3017,7 +3017,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>

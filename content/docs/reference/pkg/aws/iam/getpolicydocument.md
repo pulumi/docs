@@ -985,7 +985,7 @@ The following arguments are supported:
 <a href="#overridejson_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import and override the
 current policy document.  Statements with non-blank `sid`s in the override
@@ -998,7 +998,7 @@ Statements without an `sid` cannot be overwritten.
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy document.
 {{% /md %}}</dd>
@@ -1008,7 +1008,7 @@ Statements without an `sid` cannot be overwritten.
 <a href="#sourcejson_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import as a base for the
 current policy document.  Statements with non-blank `sid`s in the current
@@ -1032,7 +1032,7 @@ configuring one *statement* to be included in the policy document.
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 {{% /md %}}</dd>
@@ -1048,7 +1048,7 @@ configuring one *statement* to be included in the policy document.
 <a href="#overridejson_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import and override the
 current policy document.  Statements with non-blank `sid`s in the override
@@ -1061,7 +1061,7 @@ Statements without an `sid` cannot be overwritten.
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy document.
 {{% /md %}}</dd>
@@ -1071,7 +1071,7 @@ Statements without an `sid` cannot be overwritten.
 <a href="#sourcejson_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import as a base for the
 current policy document.  Statements with non-blank `sid`s in the current
@@ -1095,7 +1095,7 @@ configuring one *statement* to be included in the policy document.
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 {{% /md %}}</dd>
@@ -1111,7 +1111,7 @@ configuring one *statement* to be included in the policy document.
 <a href="#overridejson_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import and override the
 current policy document.  Statements with non-blank `sid`s in the override
@@ -1124,7 +1124,7 @@ Statements without an `sid` cannot be overwritten.
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy document.
 {{% /md %}}</dd>
@@ -1134,7 +1134,7 @@ Statements without an `sid` cannot be overwritten.
 <a href="#sourcejson_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import as a base for the
 current policy document.  Statements with non-blank `sid`s in the current
@@ -1158,7 +1158,7 @@ configuring one *statement* to be included in the policy document.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 {{% /md %}}</dd>
@@ -1174,7 +1174,7 @@ configuring one *statement* to be included in the policy document.
 <a href="#override_json_python" style="color: inherit; text-decoration: inherit;">override_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import and override the
 current policy document.  Statements with non-blank `sid`s in the override
@@ -1187,7 +1187,7 @@ Statements without an `sid` cannot be overwritten.
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An ID for the policy document.
 {{% /md %}}</dd>
@@ -1197,7 +1197,7 @@ Statements without an `sid` cannot be overwritten.
 <a href="#source_json_python" style="color: inherit; text-decoration: inherit;">source_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import as a base for the
 current policy document.  Statements with non-blank `sid`s in the current
@@ -1221,7 +1221,7 @@ configuring one *statement* to be included in the policy document.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 {{% /md %}}</dd>
@@ -1246,7 +1246,7 @@ The following output properties are available:
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1256,7 +1256,7 @@ The following output properties are available:
 <a href="#json_csharp" style="color: inherit; text-decoration: inherit;">Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard JSON policy document.
 {{% /md %}}</dd>
@@ -1266,7 +1266,7 @@ The following output properties are available:
 <a href="#overridejson_csharp" style="color: inherit; text-decoration: inherit;">Override<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1275,7 +1275,7 @@ The following output properties are available:
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1284,7 +1284,7 @@ The following output properties are available:
 <a href="#sourcejson_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1302,7 +1302,7 @@ The following output properties are available:
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1317,7 +1317,7 @@ The following output properties are available:
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1327,7 +1327,7 @@ The following output properties are available:
 <a href="#json_go" style="color: inherit; text-decoration: inherit;">Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard JSON policy document.
 {{% /md %}}</dd>
@@ -1337,7 +1337,7 @@ The following output properties are available:
 <a href="#overridejson_go" style="color: inherit; text-decoration: inherit;">Override<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1346,7 +1346,7 @@ The following output properties are available:
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1355,7 +1355,7 @@ The following output properties are available:
 <a href="#sourcejson_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1373,7 +1373,7 @@ The following output properties are available:
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1388,7 +1388,7 @@ The following output properties are available:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1398,7 +1398,7 @@ The following output properties are available:
 <a href="#json_nodejs" style="color: inherit; text-decoration: inherit;">json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard JSON policy document.
 {{% /md %}}</dd>
@@ -1408,7 +1408,7 @@ The following output properties are available:
 <a href="#overridejson_nodejs" style="color: inherit; text-decoration: inherit;">override<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1417,7 +1417,7 @@ The following output properties are available:
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1426,7 +1426,7 @@ The following output properties are available:
 <a href="#sourcejson_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1444,7 +1444,7 @@ The following output properties are available:
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1459,7 +1459,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1469,7 +1469,7 @@ The following output properties are available:
 <a href="#json_python" style="color: inherit; text-decoration: inherit;">json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The above arguments serialized as a standard JSON policy document.
 {{% /md %}}</dd>
@@ -1479,7 +1479,7 @@ The following output properties are available:
 <a href="#override_json_python" style="color: inherit; text-decoration: inherit;">override_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1488,7 +1488,7 @@ The following output properties are available:
 <a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1497,7 +1497,7 @@ The following output properties are available:
 <a href="#source_json_python" style="color: inherit; text-decoration: inherit;">source_<wbr>json</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1515,7 +1515,7 @@ The following output properties are available:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1550,7 +1550,7 @@ The following output properties are available:
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement either allows
 or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
@@ -1573,7 +1573,7 @@ whether this statement applies.
 <a href="#effect_csharp" style="color: inherit; text-decoration: inherit;">Effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either "Allow" or "Deny", to specify whether this
 statement allows or denies the given actions. The default is "Allow".
@@ -1584,7 +1584,7 @@ statement allows or denies the given actions. The default is "Allow".
 <a href="#notactions_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement does *not*
 apply to. Used to apply a policy statement to all actions *except* those
@@ -1607,7 +1607,7 @@ the statement does *not* apply to.
 <a href="#notresources_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement
 does *not* apply to. Used to apply a policy statement to all resources
@@ -1630,7 +1630,7 @@ specifying a principal (or principal pattern) to which this statement applies.
 <a href="#resources_csharp" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement applies
 to. This is required by AWS if used for an IAM policy.
@@ -1641,7 +1641,7 @@ to. This is required by AWS if used for an IAM policy.
 <a href="#sid_csharp" style="color: inherit; text-decoration: inherit;">Sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy statement.
 {{% /md %}}</dd>
@@ -1657,7 +1657,7 @@ to. This is required by AWS if used for an IAM policy.
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement either allows
 or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
@@ -1680,7 +1680,7 @@ whether this statement applies.
 <a href="#effect_go" style="color: inherit; text-decoration: inherit;">Effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either "Allow" or "Deny", to specify whether this
 statement allows or denies the given actions. The default is "Allow".
@@ -1691,7 +1691,7 @@ statement allows or denies the given actions. The default is "Allow".
 <a href="#notactions_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement does *not*
 apply to. Used to apply a policy statement to all actions *except* those
@@ -1714,7 +1714,7 @@ the statement does *not* apply to.
 <a href="#notresources_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement
 does *not* apply to. Used to apply a policy statement to all resources
@@ -1737,7 +1737,7 @@ specifying a principal (or principal pattern) to which this statement applies.
 <a href="#resources_go" style="color: inherit; text-decoration: inherit;">Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement applies
 to. This is required by AWS if used for an IAM policy.
@@ -1748,7 +1748,7 @@ to. This is required by AWS if used for an IAM policy.
 <a href="#sid_go" style="color: inherit; text-decoration: inherit;">Sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy statement.
 {{% /md %}}</dd>
@@ -1764,7 +1764,7 @@ to. This is required by AWS if used for an IAM policy.
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement either allows
 or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
@@ -1787,7 +1787,7 @@ whether this statement applies.
 <a href="#effect_nodejs" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either "Allow" or "Deny", to specify whether this
 statement allows or denies the given actions. The default is "Allow".
@@ -1798,7 +1798,7 @@ statement allows or denies the given actions. The default is "Allow".
 <a href="#notactions_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement does *not*
 apply to. Used to apply a policy statement to all actions *except* those
@@ -1821,7 +1821,7 @@ the statement does *not* apply to.
 <a href="#notresources_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement
 does *not* apply to. Used to apply a policy statement to all resources
@@ -1844,7 +1844,7 @@ specifying a principal (or principal pattern) to which this statement applies.
 <a href="#resources_nodejs" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement applies
 to. This is required by AWS if used for an IAM policy.
@@ -1855,7 +1855,7 @@ to. This is required by AWS if used for an IAM policy.
 <a href="#sid_nodejs" style="color: inherit; text-decoration: inherit;">sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy statement.
 {{% /md %}}</dd>
@@ -1871,7 +1871,7 @@ to. This is required by AWS if used for an IAM policy.
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement either allows
 or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
@@ -1894,7 +1894,7 @@ whether this statement applies.
 <a href="#effect_python" style="color: inherit; text-decoration: inherit;">effect</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Either "Allow" or "Deny", to specify whether this
 statement allows or denies the given actions. The default is "Allow".
@@ -1905,7 +1905,7 @@ statement allows or denies the given actions. The default is "Allow".
 <a href="#not_actions_python" style="color: inherit; text-decoration: inherit;">not_<wbr>actions</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement does *not*
 apply to. Used to apply a policy statement to all actions *except* those
@@ -1928,7 +1928,7 @@ the statement does *not* apply to.
 <a href="#not_resources_python" style="color: inherit; text-decoration: inherit;">not_<wbr>resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement
 does *not* apply to. Used to apply a policy statement to all resources
@@ -1951,7 +1951,7 @@ specifying a principal (or principal pattern) to which this statement applies.
 <a href="#resources_python" style="color: inherit; text-decoration: inherit;">resources</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement applies
 to. This is required by AWS if used for an IAM policy.
@@ -1962,7 +1962,7 @@ to. This is required by AWS if used for an IAM policy.
 <a href="#sid_python" style="color: inherit; text-decoration: inherit;">sid</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An ID for the policy statement.
 {{% /md %}}</dd>
@@ -1992,7 +1992,7 @@ to. This is required by AWS if used for an IAM policy.
 <a href="#test_csharp" style="color: inherit; text-decoration: inherit;">Test</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the
 [IAM condition operator](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html)
@@ -2004,7 +2004,7 @@ to evaluate.
 <a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The values to evaluate the condition against. If multiple
 values are provided, the condition matches if at least one of them applies.
@@ -2016,7 +2016,7 @@ values are provided, the condition matches if at least one of them applies.
 <a href="#variable_csharp" style="color: inherit; text-decoration: inherit;">Variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a
 [Context Variable](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys)
@@ -2036,7 +2036,7 @@ the service name.
 <a href="#test_go" style="color: inherit; text-decoration: inherit;">Test</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the
 [IAM condition operator](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html)
@@ -2048,7 +2048,7 @@ to evaluate.
 <a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The values to evaluate the condition against. If multiple
 values are provided, the condition matches if at least one of them applies.
@@ -2060,7 +2060,7 @@ values are provided, the condition matches if at least one of them applies.
 <a href="#variable_go" style="color: inherit; text-decoration: inherit;">Variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a
 [Context Variable](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys)
@@ -2080,7 +2080,7 @@ the service name.
 <a href="#test_nodejs" style="color: inherit; text-decoration: inherit;">test</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the
 [IAM condition operator](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html)
@@ -2092,7 +2092,7 @@ to evaluate.
 <a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The values to evaluate the condition against. If multiple
 values are provided, the condition matches if at least one of them applies.
@@ -2104,7 +2104,7 @@ values are provided, the condition matches if at least one of them applies.
 <a href="#variable_nodejs" style="color: inherit; text-decoration: inherit;">variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a
 [Context Variable](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys)
@@ -2124,7 +2124,7 @@ the service name.
 <a href="#test_python" style="color: inherit; text-decoration: inherit;">test</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the
 [IAM condition operator](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition_operators.html)
@@ -2136,7 +2136,7 @@ to evaluate.
 <a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The values to evaluate the condition against. If multiple
 values are provided, the condition matches if at least one of them applies.
@@ -2148,7 +2148,7 @@ values are provided, the condition matches if at least one of them applies.
 <a href="#variable_python" style="color: inherit; text-decoration: inherit;">variable</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a
 [Context Variable](http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys)
@@ -2182,7 +2182,7 @@ the service name.
 <a href="#identifiers_csharp" style="color: inherit; text-decoration: inherit;">Identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`. When `type` is "Federated", these are web identity users or SAML provider ARNs.
@@ -2193,7 +2193,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service". For Federated access the type is "Federated".
 {{% /md %}}</dd>
@@ -2209,7 +2209,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#identifiers_go" style="color: inherit; text-decoration: inherit;">Identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`. When `type` is "Federated", these are web identity users or SAML provider ARNs.
@@ -2220,7 +2220,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service". For Federated access the type is "Federated".
 {{% /md %}}</dd>
@@ -2236,7 +2236,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#identifiers_nodejs" style="color: inherit; text-decoration: inherit;">identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`. When `type` is "Federated", these are web identity users or SAML provider ARNs.
@@ -2247,7 +2247,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service". For Federated access the type is "Federated".
 {{% /md %}}</dd>
@@ -2263,7 +2263,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#identifiers_python" style="color: inherit; text-decoration: inherit;">identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`. When `type` is "Federated", these are web identity users or SAML provider ARNs.
@@ -2274,7 +2274,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service". For Federated access the type is "Federated".
 {{% /md %}}</dd>
@@ -2304,7 +2304,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#identifiers_csharp" style="color: inherit; text-decoration: inherit;">Identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`. When `type` is "Federated", these are web identity users or SAML provider ARNs.
@@ -2315,7 +2315,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service". For Federated access the type is "Federated".
 {{% /md %}}</dd>
@@ -2331,7 +2331,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#identifiers_go" style="color: inherit; text-decoration: inherit;">Identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`. When `type` is "Federated", these are web identity users or SAML provider ARNs.
@@ -2342,7 +2342,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service". For Federated access the type is "Federated".
 {{% /md %}}</dd>
@@ -2358,7 +2358,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#identifiers_nodejs" style="color: inherit; text-decoration: inherit;">identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`. When `type` is "Federated", these are web identity users or SAML provider ARNs.
@@ -2369,7 +2369,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service". For Federated access the type is "Federated".
 {{% /md %}}</dd>
@@ -2385,7 +2385,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#identifiers_python" style="color: inherit; text-decoration: inherit;">identifiers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`. When `type` is "Federated", these are web identity users or SAML provider ARNs.
@@ -2396,7 +2396,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of principal. For AWS ARNs this is "AWS".  For AWS services (e.g. Lambda), this is "Service". For Federated access the type is "Federated".
 {{% /md %}}</dd>
