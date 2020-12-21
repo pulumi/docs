@@ -3,7 +3,7 @@ title: "Module orchestration"
 title_tag: "Module orchestration | Package @pulumi/openstack | Node.js SDK"
 linktitle: "orchestration"
 meta_desc: "Explore members of the orchestration module in the @pulumi/openstack package."
-git_sha: "a64be7c20b1581f43a04f148995e0da07d4eb6c3"
+git_sha: "df57333d628195cb0d811f787fbb5952f162dec1"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="StackV1" data-link-title="StackV1">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L51">
         Resource <strong>StackV1</strong>
     </a>
 </h3>
@@ -71,8 +71,16 @@ resources:
 });
 ```
 
+#### Import
+
+stacks can be imported using the `id`, e.g.
+
+```sh
+ $ pulumi import openstack:orchestration/stackV1:StackV1 stack_1 ea257959-eeb1-4c10-8d33-26f0409a755d
+```
+
 <h4 class="pdoc-member-header" id="StackV1-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L157"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L164"> <b>constructor</b></a>
 </h4>
 
 
@@ -86,7 +94,7 @@ Create a StackV1 resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="StackV1-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L61">method <b>get</b></a>
 </h4>
 
 
@@ -97,14 +105,14 @@ Get an existing StackV1 resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="StackV1-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L51">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="StackV1-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L72">method <b>isInstance</b></a>
 </h4>
 
 
@@ -114,8 +122,16 @@ properties used to qualify the lookup.
 Returns true if the given object is an instance of StackV1.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
+<h4 class="pdoc-member-header" id="StackV1-StackOutputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L82">property <b>StackOutputs</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>StackOutputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#StackV1StackOutput'>StackV1StackOutput</a>[]&gt;;</code></pre>
+
+A list of stack outputs.
+
 <h4 class="pdoc-member-header" id="StackV1-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L75">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L86">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>capabilities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -123,7 +139,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 List of stack capabilities for stack.
 
 <h4 class="pdoc-member-header" id="StackV1-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L82">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L93">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -134,7 +150,7 @@ For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
 is the time zone as an offset from UTC.
 
 <h4 class="pdoc-member-header" id="StackV1-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L86">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L97">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -142,7 +158,7 @@ is the time zone as an offset from UTC.
 The description of the stack resource.
 
 <h4 class="pdoc-member-header" id="StackV1-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L92">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L103">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableRollback: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -152,7 +168,7 @@ resources when a stack creation fails. Default is true, meaning all
 resources are not deleted when stack creation fails.
 
 <h4 class="pdoc-member-header" id="StackV1-environmentOpts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L99">property <b>environmentOpts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L110">property <b>environmentOpts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>environmentOpts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -163,7 +179,7 @@ Allowed keys: Bin, URL, Files. Changing this updates the existing stack
 Environment Opts.
 
 <h4 class="pdoc-member-header" id="StackV1-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -172,7 +188,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="StackV1-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L104">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L115">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -181,23 +197,15 @@ A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
 
 <h4 class="pdoc-member-header" id="StackV1-notificationTopics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L108">property <b>notificationTopics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L119">property <b>notificationTopics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationTopics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
 
 List of notification topics for stack.
 
-<h4 class="pdoc-member-header" id="StackV1-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L112">property <b>outputs</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'>public </span>outputs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#StackV1Output'>StackV1Output</a>[]&gt;;</code></pre>
-
-A list of stack outputs.
-
 <h4 class="pdoc-member-header" id="StackV1-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L117">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L124">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -206,7 +214,7 @@ User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.
 
 <h4 class="pdoc-member-header" id="StackV1-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L123">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L130">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -216,7 +224,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new stack.
 
 <h4 class="pdoc-member-header" id="StackV1-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L127">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L134">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -224,7 +232,7 @@ creates a new stack.
 The status of the stack.
 
 <h4 class="pdoc-member-header" id="StackV1-statusReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L131">property <b>statusReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L138">property <b>statusReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statusReason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -232,7 +240,7 @@ The status of the stack.
 The reason for the current status of the stack.
 
 <h4 class="pdoc-member-header" id="StackV1-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L135">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L142">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -240,7 +248,7 @@ The reason for the current status of the stack.
 A list of tags to assosciate with the Stack
 
 <h4 class="pdoc-member-header" id="StackV1-templateDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L139">property <b>templateDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L146">property <b>templateDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -248,7 +256,7 @@ A list of tags to assosciate with the Stack
 The description of the stack template.
 
 <h4 class="pdoc-member-header" id="StackV1-templateOpts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L146">property <b>templateOpts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L153">property <b>templateOpts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>templateOpts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -259,7 +267,7 @@ Allowed keys: Bin, URL, Files. Changing this updates the existing stack
 Template Opts.
 
 <h4 class="pdoc-member-header" id="StackV1-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L150">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L157">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>timeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -267,7 +275,7 @@ Template Opts.
 The timeout for stack action in minutes.
 
 <h4 class="pdoc-member-header" id="StackV1-updatedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L157">property <b>updatedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L164">property <b>updatedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatedTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -278,7 +286,7 @@ For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
 is the time zone as an offset from UTC.
 
 <h4 class="pdoc-member-header" id="StackV1-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L51">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -290,7 +298,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="StackV1Args" data-link-title="StackV1Args">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L317">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L324">
         interface <strong>StackV1Args</strong>
     </a>
 </h3>
@@ -299,8 +307,16 @@ deployments.
 
 The set of arguments for constructing a StackV1 resource.
 
+<h4 class="pdoc-member-header" id="StackV1Args-StackOutputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L328">property <b>StackOutputs</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>StackOutputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#StackV1StackOutput'>StackV1StackOutput</a>&gt;[]&gt;;</code></pre>
+
+A list of stack outputs.
+
 <h4 class="pdoc-member-header" id="StackV1Args-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L321">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L332">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -308,7 +324,7 @@ The set of arguments for constructing a StackV1 resource.
 List of stack capabilities for stack.
 
 <h4 class="pdoc-member-header" id="StackV1Args-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L328">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L339">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -319,7 +335,7 @@ For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
 is the time zone as an offset from UTC.
 
 <h4 class="pdoc-member-header" id="StackV1Args-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L332">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L343">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -327,7 +343,7 @@ is the time zone as an offset from UTC.
 The description of the stack resource.
 
 <h4 class="pdoc-member-header" id="StackV1Args-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L338">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L349">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRollback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -337,7 +353,7 @@ resources when a stack creation fails. Default is true, meaning all
 resources are not deleted when stack creation fails.
 
 <h4 class="pdoc-member-header" id="StackV1Args-environmentOpts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L345">property <b>environmentOpts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L356">property <b>environmentOpts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environmentOpts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -348,7 +364,7 @@ Allowed keys: Bin, URL, Files. Changing this updates the existing stack
 Environment Opts.
 
 <h4 class="pdoc-member-header" id="StackV1Args-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L350">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L361">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -357,23 +373,15 @@ A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
 
 <h4 class="pdoc-member-header" id="StackV1Args-notificationTopics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L354">property <b>notificationTopics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L365">property <b>notificationTopics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationTopics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
 List of notification topics for stack.
 
-<h4 class="pdoc-member-header" id="StackV1Args-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L358">property <b>outputs</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#StackV1Output'>StackV1Output</a>&gt;[]&gt;;</code></pre>
-
-A list of stack outputs.
-
 <h4 class="pdoc-member-header" id="StackV1Args-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L363">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L370">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -382,7 +390,7 @@ User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.
 
 <h4 class="pdoc-member-header" id="StackV1Args-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L369">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L376">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -392,7 +400,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new stack.
 
 <h4 class="pdoc-member-header" id="StackV1Args-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L373">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L380">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -400,7 +408,7 @@ creates a new stack.
 The status of the stack.
 
 <h4 class="pdoc-member-header" id="StackV1Args-statusReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L377">property <b>statusReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L384">property <b>statusReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statusReason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -408,7 +416,7 @@ The status of the stack.
 The reason for the current status of the stack.
 
 <h4 class="pdoc-member-header" id="StackV1Args-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L381">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L388">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -416,7 +424,7 @@ The reason for the current status of the stack.
 A list of tags to assosciate with the Stack
 
 <h4 class="pdoc-member-header" id="StackV1Args-templateDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L385">property <b>templateDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L392">property <b>templateDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -424,7 +432,7 @@ A list of tags to assosciate with the Stack
 The description of the stack template.
 
 <h4 class="pdoc-member-header" id="StackV1Args-templateOpts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L392">property <b>templateOpts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L399">property <b>templateOpts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateOpts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -435,7 +443,7 @@ Allowed keys: Bin, URL, Files. Changing this updates the existing stack
 Template Opts.
 
 <h4 class="pdoc-member-header" id="StackV1Args-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L396">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L403">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -443,7 +451,7 @@ Template Opts.
 The timeout for stack action in minutes.
 
 <h4 class="pdoc-member-header" id="StackV1Args-updatedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L403">property <b>updatedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L410">property <b>updatedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -454,7 +462,7 @@ For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
 is the time zone as an offset from UTC.
 
 <h3 class="pdoc-module-header" id="StackV1State" data-link-title="StackV1State">
-    <a href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L232">
         interface <strong>StackV1State</strong>
     </a>
 </h3>
@@ -463,8 +471,16 @@ is the time zone as an offset from UTC.
 
 Input properties used for looking up and filtering StackV1 resources.
 
+<h4 class="pdoc-member-header" id="StackV1State-StackOutputs">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L236">property <b>StackOutputs</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>StackOutputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#StackV1StackOutput'>StackV1StackOutput</a>&gt;[]&gt;;</code></pre>
+
+A list of stack outputs.
+
 <h4 class="pdoc-member-header" id="StackV1State-capabilities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L229">property <b>capabilities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L240">property <b>capabilities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capabilities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -472,7 +488,7 @@ Input properties used for looking up and filtering StackV1 resources.
 List of stack capabilities for stack.
 
 <h4 class="pdoc-member-header" id="StackV1State-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L236">property <b>creationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L247">property <b>creationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -483,7 +499,7 @@ For example, 2015-08-27T09:49:58-05:00. The ±hh:mm value, if included,
 is the time zone as an offset from UTC.
 
 <h4 class="pdoc-member-header" id="StackV1State-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L240">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L251">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -491,7 +507,7 @@ is the time zone as an offset from UTC.
 The description of the stack resource.
 
 <h4 class="pdoc-member-header" id="StackV1State-disableRollback">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L246">property <b>disableRollback</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L257">property <b>disableRollback</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRollback?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -501,7 +517,7 @@ resources when a stack creation fails. Default is true, meaning all
 resources are not deleted when stack creation fails.
 
 <h4 class="pdoc-member-header" id="StackV1State-environmentOpts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L253">property <b>environmentOpts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L264">property <b>environmentOpts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environmentOpts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -512,7 +528,7 @@ Allowed keys: Bin, URL, Files. Changing this updates the existing stack
 Environment Opts.
 
 <h4 class="pdoc-member-header" id="StackV1State-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L258">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L269">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -521,23 +537,15 @@ A unique name for the stack. It must start with an
 alphabetic character. Changing this updates the stack's name.
 
 <h4 class="pdoc-member-header" id="StackV1State-notificationTopics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L262">property <b>notificationTopics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L273">property <b>notificationTopics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationTopics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 
 List of notification topics for stack.
 
-<h4 class="pdoc-member-header" id="StackV1State-outputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L266">property <b>outputs</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>outputs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#StackV1Output'>StackV1Output</a>&gt;[]&gt;;</code></pre>
-
-A list of stack outputs.
-
 <h4 class="pdoc-member-header" id="StackV1State-parameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L271">property <b>parameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L278">property <b>parameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -546,7 +554,7 @@ User-defined key/value pairs as parameters to pass
 to the template. Changing this updates the existing stack parameters.
 
 <h4 class="pdoc-member-header" id="StackV1State-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L277">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L284">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -556,7 +564,7 @@ omitted, the `region` argument of the provider is used. Changing this
 creates a new stack.
 
 <h4 class="pdoc-member-header" id="StackV1State-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L281">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L288">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -564,7 +572,7 @@ creates a new stack.
 The status of the stack.
 
 <h4 class="pdoc-member-header" id="StackV1State-statusReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L285">property <b>statusReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L292">property <b>statusReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statusReason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -572,7 +580,7 @@ The status of the stack.
 The reason for the current status of the stack.
 
 <h4 class="pdoc-member-header" id="StackV1State-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L289">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L296">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -580,7 +588,7 @@ The reason for the current status of the stack.
 A list of tags to assosciate with the Stack
 
 <h4 class="pdoc-member-header" id="StackV1State-templateDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L293">property <b>templateDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L300">property <b>templateDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -588,7 +596,7 @@ A list of tags to assosciate with the Stack
 The description of the stack template.
 
 <h4 class="pdoc-member-header" id="StackV1State-templateOpts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L300">property <b>templateOpts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L307">property <b>templateOpts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>templateOpts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -599,7 +607,7 @@ Allowed keys: Bin, URL, Files. Changing this updates the existing stack
 Template Opts.
 
 <h4 class="pdoc-member-header" id="StackV1State-timeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L304">property <b>timeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L311">property <b>timeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>timeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -607,7 +615,7 @@ Template Opts.
 The timeout for stack action in minutes.
 
 <h4 class="pdoc-member-header" id="StackV1State-updatedTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/a64be7c20b1581f43a04f148995e0da07d4eb6c3/sdk/nodejs/orchestration/stackV1.ts#L311">property <b>updatedTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-openstack/blob/df57333d628195cb0d811f787fbb5952f162dec1/sdk/nodejs/orchestration/stackV1.ts#L318">property <b>updatedTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatedTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
