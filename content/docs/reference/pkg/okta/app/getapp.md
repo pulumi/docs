@@ -121,7 +121,6 @@ const example = pulumi.output(okta.app.getApp({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -129,49 +128,44 @@ The following arguments are supported:
             title="Optional">
         <span id="activeonly_csharp">
 <a href="#activeonly_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}tells the provider to query for only `ACTIVE` applications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`id` of application to retrieve, conflicts with `label` and `label_prefix`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label of the app to retrieve, conflicts with `label_prefix` and `id`. Label uses the `?q=<label>` query parameter exposed by Okta's API. It should be noted that at this time this searches both `name` and `label`. This is used to avoid paginating through all applications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labelprefix_csharp">
 <a href="#labelprefix_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the provider to do a `starts with` query as opposed to an `equals` query.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -180,49 +174,44 @@ The following arguments are supported:
             title="Optional">
         <span id="activeonly_go">
 <a href="#activeonly_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}tells the provider to query for only `ACTIVE` applications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`id` of application to retrieve, conflicts with `label` and `label_prefix`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label of the app to retrieve, conflicts with `label_prefix` and `id`. Label uses the `?q=<label>` query parameter exposed by Okta's API. It should be noted that at this time this searches both `name` and `label`. This is used to avoid paginating through all applications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labelprefix_go">
 <a href="#labelprefix_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the provider to do a `starts with` query as opposed to an `equals` query.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -231,49 +220,44 @@ The following arguments are supported:
             title="Optional">
         <span id="activeonly_nodejs">
 <a href="#activeonly_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}tells the provider to query for only `ACTIVE` applications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`id` of application to retrieve, conflicts with `label` and `label_prefix`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label of the app to retrieve, conflicts with `label_prefix` and `id`. Label uses the `?q=<label>` query parameter exposed by Okta's API. It should be noted that at this time this searches both `name` and `label`. This is used to avoid paginating through all applications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="labelprefix_nodejs">
 <a href="#labelprefix_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the provider to do a `starts with` query as opposed to an `equals` query.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -282,52 +266,44 @@ The following arguments are supported:
             title="Optional">
         <span id="active_only_python">
 <a href="#active_only_python" style="color: inherit; text-decoration: inherit;">active_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}tells the provider to query for only `ACTIVE` applications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`id` of application to retrieve, conflicts with `label` and `label_prefix`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label of the app to retrieve, conflicts with `label_prefix` and `id`. Label uses the `?q=<label>` query parameter exposed by Okta's API. It should be noted that at this time this searches both `name` and `label`. This is used to avoid paginating through all applications.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="label_prefix_python">
 <a href="#label_prefix_python" style="color: inherit; text-decoration: inherit;">label_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label prefix of the app to retrieve, conflicts with `label` and `id`. This will tell the provider to do a `starts with` query as opposed to an `equals` query.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -338,7 +314,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -346,80 +321,72 @@ The following output properties are available:
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`description` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`name` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`status` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="activeonly_csharp">
 <a href="#activeonly_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`id` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`label` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labelprefix_csharp">
 <a href="#labelprefix_csharp" style="color: inherit; text-decoration: inherit;">Label<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -428,80 +395,72 @@ The following output properties are available:
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`description` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`name` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`status` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="activeonly_go">
 <a href="#activeonly_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`id` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`label` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labelprefix_go">
 <a href="#labelprefix_go" style="color: inherit; text-decoration: inherit;">Label<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -510,80 +469,72 @@ The following output properties are available:
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`description` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`name` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`status` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="activeonly_nodejs">
 <a href="#activeonly_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`id` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`label` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="labelprefix_nodejs">
 <a href="#labelprefix_nodejs" style="color: inherit; text-decoration: inherit;">label<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -592,83 +543,72 @@ The following output properties are available:
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`description` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`name` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`status` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="active_only_python">
 <a href="#active_only_python" style="color: inherit; text-decoration: inherit;">active_<wbr>only</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`id` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}`label` of application.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="label_prefix_python">
 <a href="#label_prefix_python" style="color: inherit; text-decoration: inherit;">label_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

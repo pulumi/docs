@@ -1,8 +1,8 @@
 
 ---
 title: "MfaPolicyRule"
-title_tag: "Resource MfaPolicyRule | Module deprecated | Package Okta"
-meta_desc: "Explore the MfaPolicyRule resource of the deprecated module, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "okta.deprecated.MfaPolicyRule"
+meta_desc: "Documentation for the okta.deprecated.MfaPolicyRule resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -18,7 +18,7 @@ meta_desc: "Explore the MfaPolicyRule resource of the deprecated module, includi
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRule">MfaPolicyRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRuleArgs">MfaPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRule">MfaPolicyRule</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRuleArgs">MfaPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,11 +26,11 @@ meta_desc: "Explore the MfaPolicyRule resource of the deprecated module, includi
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRule">NewMfaPolicyRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRuleArgs">MfaPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRule">MfaPolicyRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRule">NewMfaPolicyRule</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRuleArgs">MfaPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRule">MfaPolicyRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicyRule.html">MfaPolicyRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicyRuleArgs.html">MfaPolicyRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicyRule.html">MfaPolicyRule</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicyRuleArgs.html">MfaPolicyRuleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ meta_desc: "Explore the MfaPolicyRule resource of the deprecated module, includi
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -110,7 +110,7 @@ meta_desc: "Explore the MfaPolicyRule resource of the deprecated module, includi
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +149,7 @@ meta_desc: "Explore the MfaPolicyRule resource of the deprecated module, includi
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -190,7 +190,6 @@ The MfaPolicyRule resource accepts the following [input]({{< relref "/docs/intro
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -198,105 +197,95 @@ The MfaPolicyRule resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="policyid_csharp">
 <a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policyid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enroll_csharp">
 <a href="#enroll_csharp" style="color: inherit; text-decoration: inherit;">Enroll</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkconnection_csharp">
 <a href="#networkconnection_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_csharp">
 <a href="#networkexcludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkincludes_csharp">
 <a href="#networkincludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_csharp">
 <a href="#priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usersexcludeds_csharp">
 <a href="#usersexcludeds_csharp" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -305,105 +294,95 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Required">
         <span id="policyid_go">
 <a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policyid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enroll_go">
 <a href="#enroll_go" style="color: inherit; text-decoration: inherit;">Enroll</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkconnection_go">
 <a href="#networkconnection_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_go">
 <a href="#networkexcludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkincludes_go">
 <a href="#networkincludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_go">
 <a href="#priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usersexcludeds_go">
 <a href="#usersexcludeds_go" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -412,105 +391,95 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Required">
         <span id="policyid_nodejs">
 <a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policyid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enroll_nodejs">
 <a href="#enroll_nodejs" style="color: inherit; text-decoration: inherit;">enroll</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkconnection_nodejs">
 <a href="#networkconnection_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkexcludes_nodejs">
 <a href="#networkexcludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="networkincludes_nodejs">
 <a href="#networkincludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Includes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_nodejs">
 <a href="#priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usersexcludeds_nodejs">
 <a href="#usersexcludeds_nodejs" style="color: inherit; text-decoration: inherit;">users<wbr>Excludeds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -519,114 +488,100 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Required">
         <span id="policyid_python">
 <a href="#policyid_python" style="color: inherit; text-decoration: inherit;">policyid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enroll_python">
 <a href="#enroll_python" style="color: inherit; text-decoration: inherit;">enroll</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_connection_python">
 <a href="#network_connection_python" style="color: inherit; text-decoration: inherit;">network_<wbr>connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_excludes_python">
 <a href="#network_excludes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_includes_python">
 <a href="#network_includes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>includes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="priority_python">
 <a href="#priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="users_excludeds_python">
 <a href="#users_excludeds_python" style="color: inherit; text-decoration: inherit;">users_<wbr>excludeds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the MfaPolicyRule resource produces the following output properties:
-
 
 
 
@@ -637,15 +592,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -654,15 +607,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -671,15 +622,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -688,18 +637,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -709,7 +653,7 @@ Get an existing MfaPolicyRule resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRuleState">MfaPolicyRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRule">MfaPolicyRule</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRuleState">MfaPolicyRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRule">MfaPolicyRule</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -718,11 +662,11 @@ Get an existing MfaPolicyRule resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMfaPolicyRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRuleState">MfaPolicyRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRule">MfaPolicyRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMfaPolicyRule<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRuleState">MfaPolicyRuleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/deprecated?tab=doc#MfaPolicyRule">MfaPolicyRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicyRule.html">MfaPolicyRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicyRuleState.html">MfaPolicyRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicyRule.html">MfaPolicyRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Okta/Pulumi.Okta.Deprecated.MfaPolicyRuleState.html">MfaPolicyRuleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -824,7 +768,6 @@ Get an existing MfaPolicyRule resource's state with the given name, ID, and opti
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -832,105 +775,95 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_enroll_csharp">
 <a href="#state_enroll_csharp" style="color: inherit; text-decoration: inherit;">Enroll</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_csharp">
 <a href="#state_networkconnection_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_csharp">
 <a href="#state_networkexcludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_csharp">
 <a href="#state_networkincludes_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyid_csharp">
 <a href="#state_policyid_csharp" style="color: inherit; text-decoration: inherit;">Policyid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_csharp">
 <a href="#state_priority_csharp" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usersexcludeds_csharp">
 <a href="#state_usersexcludeds_csharp" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -939,105 +872,95 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span id="state_enroll_go">
 <a href="#state_enroll_go" style="color: inherit; text-decoration: inherit;">Enroll</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_go">
 <a href="#state_networkconnection_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_go">
 <a href="#state_networkexcludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_go">
 <a href="#state_networkincludes_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Includes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyid_go">
 <a href="#state_policyid_go" style="color: inherit; text-decoration: inherit;">Policyid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_go">
 <a href="#state_priority_go" style="color: inherit; text-decoration: inherit;">Priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usersexcludeds_go">
 <a href="#state_usersexcludeds_go" style="color: inherit; text-decoration: inherit;">Users<wbr>Excludeds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1046,105 +969,95 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span id="state_enroll_nodejs">
 <a href="#state_enroll_nodejs" style="color: inherit; text-decoration: inherit;">enroll</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkconnection_nodejs">
 <a href="#state_networkconnection_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkexcludes_nodejs">
 <a href="#state_networkexcludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_networkincludes_nodejs">
 <a href="#state_networkincludes_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Includes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyid_nodejs">
 <a href="#state_policyid_nodejs" style="color: inherit; text-decoration: inherit;">policyid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_nodejs">
 <a href="#state_priority_nodejs" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usersexcludeds_nodejs">
 <a href="#state_usersexcludeds_nodejs" style="color: inherit; text-decoration: inherit;">users<wbr>Excludeds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1153,110 +1066,95 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span id="state_enroll_python">
 <a href="#state_enroll_python" style="color: inherit; text-decoration: inherit;">enroll</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_connection_python">
 <a href="#state_network_connection_python" style="color: inherit; text-decoration: inherit;">network_<wbr>connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_excludes_python">
 <a href="#state_network_excludes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_includes_python">
 <a href="#state_network_includes_python" style="color: inherit; text-decoration: inherit;">network_<wbr>includes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyid_python">
 <a href="#state_policyid_python" style="color: inherit; text-decoration: inherit;">policyid</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_priority_python">
 <a href="#state_priority_python" style="color: inherit; text-decoration: inherit;">priority</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_users_excludeds_python">
 <a href="#state_users_excludeds_python" style="color: inherit; text-decoration: inherit;">users_<wbr>excludeds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 

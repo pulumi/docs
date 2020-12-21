@@ -3,7 +3,7 @@ title: "Module profile"
 title_tag: "Module profile | Package @pulumi/okta | Node.js SDK"
 linktitle: "profile"
 meta_desc: "Explore members of the profile module in the @pulumi/okta package."
-git_sha: "df38f7a628913e798f4a290274f0158737c3e299"
+git_sha: "dffe59e187e00d2956a416069cb6896bfefb5d6a"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Mapping" data-link-title="Mapping">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L49">
         Resource <strong>Mapping</strong>
     </a>
 </h3>
@@ -78,7 +78,7 @@ const example = new okta.profile.Mapping("example", {
 There is no reason to import this resource. You can simply create the resource config and point it to a source ID. Once the source is deleted this resources will no longer exist.
 
 <h4 class="pdoc-member-header" id="Mapping-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L108"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L108"> <b>constructor</b></a>
 </h4>
 
 
@@ -92,7 +92,7 @@ Create a Mapping resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Mapping-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L59">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L59">method <b>get</b></a>
 </h4>
 
 
@@ -103,14 +103,14 @@ Get an existing Mapping resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Mapping-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L49">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L49">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Mapping-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L70">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L70">method <b>isInstance</b></a>
 </h4>
 
 
@@ -121,7 +121,7 @@ Returns true if the given object is an instance of Mapping.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Mapping-deleteWhenAbsent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L80">property <b>deleteWhenAbsent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L80">property <b>deleteWhenAbsent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deleteWhenAbsent: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -129,7 +129,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Tells the provider whether to attempt to delete missing mappings under profile mapping.
 
 <h4 class="pdoc-member-header" id="Mapping-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L49">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L49">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -138,7 +138,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Mapping-mappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L84">property <b>mappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L84">property <b>mappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MappingMapping'>MappingMapping</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ deployments and may be missing (undefined) during planning phases.
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="Mapping-sourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L88">property <b>sourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L88">property <b>sourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ Priority of the policy.
 Source id of the profile mapping.
 
 <h4 class="pdoc-member-header" id="Mapping-sourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L92">property <b>sourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L92">property <b>sourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ Source id of the profile mapping.
 Name of the mapping source.
 
 <h4 class="pdoc-member-header" id="Mapping-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L96">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L96">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ Name of the mapping source.
 ID of the mapping source.
 
 <h4 class="pdoc-member-header" id="Mapping-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L100">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L100">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ ID of the mapping source.
 ID of the mapping target.
 
 <h4 class="pdoc-member-header" id="Mapping-targetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L104">property <b>targetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L104">property <b>targetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ ID of the mapping target.
 Name of the mapping target.
 
 <h4 class="pdoc-member-header" id="Mapping-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L108">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L108">property <b>targetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -194,7 +194,7 @@ Name of the mapping target.
 ID of the mapping target.
 
 <h4 class="pdoc-member-header" id="Mapping-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L49">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -206,7 +206,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="MappingArgs" data-link-title="MappingArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L199">
         interface <strong>MappingArgs</strong>
     </a>
 </h3>
@@ -216,7 +216,7 @@ deployments.
 The set of arguments for constructing a Mapping resource.
 
 <h4 class="pdoc-member-header" id="MappingArgs-deleteWhenAbsent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L203">property <b>deleteWhenAbsent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L203">property <b>deleteWhenAbsent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteWhenAbsent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -224,7 +224,7 @@ The set of arguments for constructing a Mapping resource.
 Tells the provider whether to attempt to delete missing mappings under profile mapping.
 
 <h4 class="pdoc-member-header" id="MappingArgs-mappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L207">property <b>mappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L207">property <b>mappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MappingMapping'>MappingMapping</a>&gt;[]&gt;;</code></pre>
@@ -232,7 +232,7 @@ Tells the provider whether to attempt to delete missing mappings under profile m
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="MappingArgs-sourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L211">property <b>sourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L211">property <b>sourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -240,7 +240,7 @@ Priority of the policy.
 Source id of the profile mapping.
 
 <h4 class="pdoc-member-header" id="MappingArgs-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L215">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L215">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -248,7 +248,7 @@ Source id of the profile mapping.
 ID of the mapping target.
 
 <h3 class="pdoc-module-header" id="MappingState" data-link-title="MappingState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L161">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L161">
         interface <strong>MappingState</strong>
     </a>
 </h3>
@@ -258,7 +258,7 @@ ID of the mapping target.
 Input properties used for looking up and filtering Mapping resources.
 
 <h4 class="pdoc-member-header" id="MappingState-deleteWhenAbsent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L165">property <b>deleteWhenAbsent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L165">property <b>deleteWhenAbsent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteWhenAbsent?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ Input properties used for looking up and filtering Mapping resources.
 Tells the provider whether to attempt to delete missing mappings under profile mapping.
 
 <h4 class="pdoc-member-header" id="MappingState-mappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L169">property <b>mappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L169">property <b>mappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MappingMapping'>MappingMapping</a>&gt;[]&gt;;</code></pre>
@@ -274,7 +274,7 @@ Tells the provider whether to attempt to delete missing mappings under profile m
 Priority of the policy.
 
 <h4 class="pdoc-member-header" id="MappingState-sourceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L173">property <b>sourceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L173">property <b>sourceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -282,7 +282,7 @@ Priority of the policy.
 Source id of the profile mapping.
 
 <h4 class="pdoc-member-header" id="MappingState-sourceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L177">property <b>sourceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L177">property <b>sourceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -290,7 +290,7 @@ Source id of the profile mapping.
 Name of the mapping source.
 
 <h4 class="pdoc-member-header" id="MappingState-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L181">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L181">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -298,7 +298,7 @@ Name of the mapping source.
 ID of the mapping source.
 
 <h4 class="pdoc-member-header" id="MappingState-targetId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L185">property <b>targetId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L185">property <b>targetId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -306,7 +306,7 @@ ID of the mapping source.
 ID of the mapping target.
 
 <h4 class="pdoc-member-header" id="MappingState-targetName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L189">property <b>targetName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L189">property <b>targetName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -314,7 +314,7 @@ ID of the mapping target.
 Name of the mapping target.
 
 <h4 class="pdoc-member-header" id="MappingState-targetType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/profile/mapping.ts#L193">property <b>targetType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/profile/mapping.ts#L193">property <b>targetType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
