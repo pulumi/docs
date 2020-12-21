@@ -3,7 +3,7 @@ title: "Module edas"
 title_tag: "Module edas | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "edas"
 meta_desc: "Explore members of the edas module in the @pulumi/alicloud package."
-git_sha: "fcdd66dccf963899382dd7b59249d3ec24e3632c"
+git_sha: "34bfe92dd27a93a08be385d80a27b12f6378de00"
 block_external_search_index: true
 ---
 
@@ -69,7 +69,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Application" data-link-title="Application">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L44">
         Resource <strong>Application</strong>
     </a>
 </h3>
@@ -113,7 +113,7 @@ EDAS application can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Application-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L115"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L115"> <b>constructor</b></a>
 </h4>
 
 
@@ -127,7 +127,7 @@ Create a Application resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Application-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -138,14 +138,14 @@ Get an existing Application resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Application-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Application-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L65">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L65">method <b>isInstance</b></a>
 </h4>
 
 
@@ -156,7 +156,7 @@ Returns true if the given object is an instance of Application.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Application-applicationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L75">property <b>applicationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L75">property <b>applicationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Name of your EDAS application. Only letters '-' '_' and numbers are allowed. The length cannot exceed 36 characters.
 
 <h4 class="pdoc-member-header" id="Application-buildPackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L79">property <b>buildPackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L79">property <b>buildPackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>buildPackId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ Name of your EDAS application. Only letters '-' '_' and numbers are allowed. The
 The package ID of Enterprise Distributed Application Service (EDAS) Container, which can be retrieved by calling container version list interface ListBuildPack or the "Pack ID" column in container version list. When creating High-speed Service Framework (HSF) application, this parameter is required.
 
 <h4 class="pdoc-member-header" id="Application-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L83">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L83">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,7 +180,7 @@ The package ID of Enterprise Distributed Application Service (EDAS) Container, w
 The ID of the cluster that you want to create the application. The default cluster will be used if you do not specify this parameter.
 
 <h4 class="pdoc-member-header" id="Application-descriotion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L87">property <b>descriotion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L87">property <b>descriotion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>descriotion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ The ID of the cluster that you want to create the application. The default clust
 The description of the application that you want to create.
 
 <h4 class="pdoc-member-header" id="Application-ecuInfos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L91">property <b>ecuInfos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L91">property <b>ecuInfos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ecuInfos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ The description of the application that you want to create.
 The ID of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
 
 <h4 class="pdoc-member-header" id="Application-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L95">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L95">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -204,7 +204,7 @@ The ID of the Elastic Compute Unit (ECU) where you want to deploy the applicatio
 The ID of the instance group where the application is going to be deployed. Set this parameter to all if you want to deploy the application to all groups.
 
 <h4 class="pdoc-member-header" id="Application-healthCheckUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L99">property <b>healthCheckUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L99">property <b>healthCheckUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -212,7 +212,7 @@ The ID of the instance group where the application is going to be deployed. Set 
 The URL for health checking of the application.
 
 <h4 class="pdoc-member-header" id="Application-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -221,7 +221,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Application-logicalRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L103">property <b>logicalRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L103">property <b>logicalRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logicalRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the namespace where you want to create the application. You can call the ListUserDefineRegion operation to query the namespace ID.
 
 <h4 class="pdoc-member-header" id="Application-packageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L107">property <b>packageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L107">property <b>packageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ The ID of the namespace where you want to create the application. You can call t
 The type of the package for the deployment of the application that you want to create. The valid values are: WAR and JAR. We strongly recommend you to set this parameter when creating the application.
 
 <h4 class="pdoc-member-header" id="Application-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L111">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L111">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packageVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ The type of the package for the deployment of the application that you want to c
 The version of the application that you want to deploy. It must be unique for every application. The length cannot exceed 64 characters. We recommended you to use a timestamp.
 
 <h4 class="pdoc-member-header" id="Application-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -254,7 +254,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Application-warUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L115">property <b>warUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L115">property <b>warUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>warUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -262,7 +262,7 @@ deployments.
 The address to store the uploaded web application (WAR) package for application deployment. This parameter is required when the deployType parameter is set as url.
 
 <h3 class="pdoc-module-header" id="ApplicationDeployment" data-link-title="ApplicationDeployment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L28">
         Resource <strong>ApplicationDeployment</strong>
     </a>
 </h3>
@@ -290,7 +290,7 @@ const _default = new alicloud.edas.ApplicationDeployment("default", {
 ```
 
 <h4 class="pdoc-member-header" id="ApplicationDeployment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -304,7 +304,7 @@ Create a ApplicationDeployment resource with the given unique name, arguments, a
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApplicationDeployment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -315,14 +315,14 @@ Get an existing ApplicationDeployment resource's state with the given name, ID, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApplicationDeployment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationDeployment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -333,7 +333,7 @@ Returns true if the given object is an instance of ApplicationDeployment.  This 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApplicationDeployment-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L59">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L59">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -341,7 +341,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the application that you want to deploy.
 
 <h4 class="pdoc-member-header" id="ApplicationDeployment-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L63">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L63">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -349,7 +349,7 @@ The ID of the application that you want to deploy.
 The ID of the instance group where the application is going to be deployed. Set this parameter to all if you want to deploy the application to all groups.
 
 <h4 class="pdoc-member-header" id="ApplicationDeployment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -358,7 +358,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApplicationDeployment-lastPackageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L67">property <b>lastPackageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L67">property <b>lastPackageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lastPackageVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -366,7 +366,7 @@ deployments and may be missing (undefined) during planning phases.
 Last package version deployed.
 
 <h4 class="pdoc-member-header" id="ApplicationDeployment-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L71">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L71">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packageVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ Last package version deployed.
 The version of the application that you want to deploy. It must be unique for every application. The length cannot exceed 64 characters. We recommended you to use a timestamp.
 
 <h4 class="pdoc-member-header" id="ApplicationDeployment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -383,7 +383,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ApplicationDeployment-warUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L75">property <b>warUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L75">property <b>warUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>warUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ deployments.
 The address to store the uploaded web application (WAR) package for application deployment. This parameter is required when the deployType parameter is set as url.
 
 <h3 class="pdoc-module-header" id="ApplicationScale" data-link-title="ApplicationScale">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L28">
         Resource <strong>ApplicationScale</strong>
     </a>
 </h3>
@@ -419,7 +419,7 @@ const _default = new alicloud.edas.ApplicationScale("default", {
 ```
 
 <h4 class="pdoc-member-header" id="ApplicationScale-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L75"> <b>constructor</b></a>
 </h4>
 
 
@@ -433,7 +433,7 @@ Create a ApplicationScale resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ApplicationScale-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -444,14 +444,14 @@ Get an existing ApplicationScale resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ApplicationScale-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ApplicationScale-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -462,7 +462,7 @@ Returns true if the given object is an instance of ApplicationScale.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ApplicationScale-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L59">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L59">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -470,7 +470,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the application that you want to deploy.
 
 <h4 class="pdoc-member-header" id="ApplicationScale-deployGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L63">property <b>deployGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L63">property <b>deployGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deployGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -478,7 +478,7 @@ The ID of the application that you want to deploy.
 The ID of the instance group to which you want to add ECS instances to scale out the application.
 
 <h4 class="pdoc-member-header" id="ApplicationScale-eccInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L67">property <b>eccInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L67">property <b>eccInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eccInfo: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -486,7 +486,7 @@ The ID of the instance group to which you want to add ECS instances to scale out
 The ecc information of the resource supplied above. The value is formulated as `<ecc1,ecc2>`.
 
 <h4 class="pdoc-member-header" id="ApplicationScale-ecuInfos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L71">property <b>ecuInfos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L71">property <b>ecuInfos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ecuInfos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -494,7 +494,7 @@ The ecc information of the resource supplied above. The value is formulated as `
 The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
 
 <h4 class="pdoc-member-header" id="ApplicationScale-forceStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L75">property <b>forceStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L75">property <b>forceStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ The IDs of the Elastic Compute Unit (ECU) where you want to deploy the applicati
 This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.
 
 <h4 class="pdoc-member-header" id="ApplicationScale-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -511,7 +511,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ApplicationScale-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -520,7 +520,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Cluster" data-link-title="Cluster">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L37">
         Resource <strong>Cluster</strong>
     </a>
 </h3>
@@ -557,7 +557,7 @@ EDAS cluster can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Cluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L84"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -571,7 +571,7 @@ Create a Cluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Cluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -582,14 +582,14 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Cluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Cluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -600,7 +600,7 @@ Returns true if the given object is an instance of Cluster.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L68">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L68">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +608,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The name of the cluster that you want to create.
 
 <h4 class="pdoc-member-header" id="Cluster-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L72">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L72">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -616,7 +616,7 @@ The name of the cluster that you want to create.
 The type of the cluster that you want to create. Valid values only: 2: ECS cluster.
 
 <h4 class="pdoc-member-header" id="Cluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -625,7 +625,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Cluster-logicalRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L76">property <b>logicalRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L76">property <b>logicalRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logicalRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -633,7 +633,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the namespace where you want to create the application. You can call the ListUserDefineRegion operation to query the namespace ID.
 
 <h4 class="pdoc-member-header" id="Cluster-networkMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L80">property <b>networkMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L80">property <b>networkMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -641,7 +641,7 @@ The ID of the namespace where you want to create the application. You can call t
 The network type of the cluster that you want to create. Valid values: 1: classic network. 2: VPC.
 
 <h4 class="pdoc-member-header" id="Cluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -650,7 +650,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Cluster-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L84">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L84">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -658,7 +658,7 @@ deployments.
 The ID of the Virtual Private Cloud (VPC) for the cluster.
 
 <h3 class="pdoc-module-header" id="DeployGroup" data-link-title="DeployGroup">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L34">
         Resource <strong>DeployGroup</strong>
     </a>
 </h3>
@@ -692,7 +692,7 @@ EDAS deploy group can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="DeployGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -706,7 +706,7 @@ Create a DeployGroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="DeployGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -717,14 +717,14 @@ Get an existing DeployGroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="DeployGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="DeployGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -735,7 +735,7 @@ Returns true if the given object is an instance of DeployGroup.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="DeployGroup-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L65">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L65">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -743,7 +743,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the application that you want to deploy.
 
 <h4 class="pdoc-member-header" id="DeployGroup-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L69">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L69">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -751,7 +751,7 @@ The ID of the application that you want to deploy.
 The name of the instance group that you want to create.
 
 <h4 class="pdoc-member-header" id="DeployGroup-groupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L73">property <b>groupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L73">property <b>groupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -759,7 +759,7 @@ The name of the instance group that you want to create.
 The type of the instance group that you want to create. Valid values: 0: Default group. 1: Phased release is disabled for traffic management. 2: Phased release is enabled for traffic management.
 
 <h4 class="pdoc-member-header" id="DeployGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -768,7 +768,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="DeployGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -777,7 +777,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="InstanceClusterAttachment" data-link-title="InstanceClusterAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L26">
         Resource <strong>InstanceClusterAttachment</strong>
     </a>
 </h3>
@@ -803,7 +803,7 @@ const _default = new alicloud.edas.InstanceClusterAttachment("default", {
 ```
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L73"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L73"> <b>constructor</b></a>
 </h4>
 
 
@@ -817,7 +817,7 @@ Create a InstanceClusterAttachment resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L36">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L36">method <b>get</b></a>
 </h4>
 
 
@@ -828,14 +828,14 @@ Get an existing InstanceClusterAttachment resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L26">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L26">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L47">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L47">method <b>isInstance</b></a>
 </h4>
 
 
@@ -846,7 +846,7 @@ Returns true if the given object is an instance of InstanceClusterAttachment.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachment-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L57">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L57">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -854,7 +854,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the cluster that you want to create the application.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachment-clusterMemberIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L61">property <b>clusterMemberIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L61">property <b>clusterMemberIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterMemberIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -862,7 +862,7 @@ The ID of the cluster that you want to create the application.
 The cluster members map of the resource supplied above. The key is instanceId and the value is cluster_member_id.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachment-ecuMap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L65">property <b>ecuMap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L65">property <b>ecuMap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ecuMap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -870,7 +870,7 @@ The cluster members map of the resource supplied above. The key is instanceId an
 The ecu map of the resource supplied above. The key is instanceId and the value is ecu_id.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L26">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L26">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -879,7 +879,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachment-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L69">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L69">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -887,7 +887,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of instance. Type: list.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachment-statusMap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L73">property <b>statusMap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L73">property <b>statusMap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statusMap: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>}&gt;;</code></pre>
@@ -895,7 +895,7 @@ The ID of instance. Type: list.
 The status map of the resource supplied above. The key is instanceId and the values are 1(running) 0(converting) -1(failed) and -2(offline).
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L26">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L26">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -904,7 +904,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="K8sApplication" data-link-title="K8sApplication">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L65">
         Resource <strong>K8sApplication</strong>
     </a>
 </h3>
@@ -969,7 +969,7 @@ EDAS k8s application can be imported as below, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="K8sApplication-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L216"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L216"> <b>constructor</b></a>
 </h4>
 
 
@@ -983,7 +983,7 @@ Create a K8sApplication resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="K8sApplication-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L75">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L75">method <b>get</b></a>
 </h4>
 
 
@@ -994,14 +994,14 @@ Get an existing K8sApplication resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="K8sApplication-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L65">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L65">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="K8sApplication-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L86">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L86">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1012,7 +1012,7 @@ Returns true if the given object is an instance of K8sApplication.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="K8sApplication-applicationDescriotion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L96">property <b>applicationDescriotion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L96">property <b>applicationDescriotion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationDescriotion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1020,7 +1020,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The description of the application
 
 <h4 class="pdoc-member-header" id="K8sApplication-applicationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L100">property <b>applicationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L100">property <b>applicationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applicationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1028,7 +1028,7 @@ The description of the application
 The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
 
 <h4 class="pdoc-member-header" id="K8sApplication-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L104">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L104">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1036,7 +1036,7 @@ The name of the application you want to create. Must start with character,suppor
 The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
 
 <h4 class="pdoc-member-header" id="K8sApplication-command">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L108">property <b>command</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L108">property <b>command</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>command: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1044,7 +1044,7 @@ The ID of the alicloud container service kubernetes cluster that you want to imp
 The set command, if set, will replace the startup command in the mirror when the mirror is started.
 
 <h4 class="pdoc-member-header" id="K8sApplication-commandArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L112">property <b>commandArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L112">property <b>commandArgs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>commandArgs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1052,7 +1052,7 @@ The set command, if set, will replace the startup command in the mirror when the
 Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
 
 <h4 class="pdoc-member-header" id="K8sApplication-edasContainerVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L116">property <b>edasContainerVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L116">property <b>edasContainerVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>edasContainerVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1060,7 +1060,7 @@ Used in combination with the command, the parameter of the command is a JsonArra
 EDAS-Container version that the deployed package depends on. Image does not support this parameter.
 
 <h4 class="pdoc-member-header" id="K8sApplication-envs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L120">property <b>envs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L120">property <b>envs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>envs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1068,7 +1068,7 @@ EDAS-Container version that the deployed package depends on. Image does not supp
 Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
 
 <h4 class="pdoc-member-header" id="K8sApplication-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L65">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L65">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1077,7 +1077,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="K8sApplication-imageUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L124">property <b>imageUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L124">property <b>imageUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1085,7 +1085,7 @@ deployments and may be missing (undefined) during planning phases.
 Mirror address. When the packageType is set to 'Image', this parameter item is required.
 
 <h4 class="pdoc-member-header" id="K8sApplication-internetSlbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L128">property <b>internetSlbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L128">property <b>internetSlbId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internetSlbId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1093,7 +1093,7 @@ Mirror address. When the packageType is set to 'Image', this parameter item is r
 Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
 
 <h4 class="pdoc-member-header" id="K8sApplication-internetSlbPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L132">property <b>internetSlbPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L132">property <b>internetSlbPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internetSlbPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1101,7 +1101,7 @@ Public network SLB ID. If not configured, EDAS will automatically purchase a new
 The public network SLB front-end port, range 1~65535.
 
 <h4 class="pdoc-member-header" id="K8sApplication-internetSlbProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L136">property <b>internetSlbProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L136">property <b>internetSlbProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internetSlbProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1109,7 +1109,7 @@ The public network SLB front-end port, range 1~65535.
 The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
 
 <h4 class="pdoc-member-header" id="K8sApplication-internetTargetPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L140">property <b>internetTargetPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L140">property <b>internetTargetPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internetTargetPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1117,7 +1117,7 @@ The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
 The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
 
 <h4 class="pdoc-member-header" id="K8sApplication-jdk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L144">property <b>jdk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L144">property <b>jdk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>jdk: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1125,7 +1125,7 @@ The private SLB back-end port, is also the service port of the application, rang
 The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
 
 <h4 class="pdoc-member-header" id="K8sApplication-limitMCpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L148">property <b>limitMCpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L148">property <b>limitMCpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>limitMCpu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1133,7 +1133,7 @@ The JDK version that the deployed package depends on. The optional parameter val
 The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
 
 <h4 class="pdoc-member-header" id="K8sApplication-limitMem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L152">property <b>limitMem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L152">property <b>limitMem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>limitMem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1141,7 +1141,7 @@ The CPU quota of the application instance during application operation. Unit: Nu
 The memory limit of the application instance during application operation, unit: M.
 
 <h4 class="pdoc-member-header" id="K8sApplication-liveness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L156">property <b>liveness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L156">property <b>liveness</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>liveness: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1149,7 +1149,7 @@ The memory limit of the application instance during application operation, unit:
 Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
 
 <h4 class="pdoc-member-header" id="K8sApplication-localVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L160">property <b>localVolume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L160">property <b>localVolume</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>localVolume: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1157,7 +1157,7 @@ Container survival status monitoring, format such as: `{"failureThreshold": 3,"i
 The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
 
 <h4 class="pdoc-member-header" id="K8sApplication-logicalRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L164">property <b>logicalRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L164">property <b>logicalRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>logicalRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1165,7 +1165,7 @@ The configuration of the host file mounted to the container. For example: `[{"ty
 The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
 
 <h4 class="pdoc-member-header" id="K8sApplication-mountDescs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L168">property <b>mountDescs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L168">property <b>mountDescs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mountDescs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1173,7 +1173,7 @@ The ID corresponding to the EDAS namespace, the non-default namespace must be fi
 Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
 
 <h4 class="pdoc-member-header" id="K8sApplication-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L172">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L172">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespace: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1181,7 +1181,7 @@ Mount configuration description, as a serialized JSON. For example: `[{"nasPath"
 The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
 
 <h4 class="pdoc-member-header" id="K8sApplication-nasId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L176">property <b>nasId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L176">property <b>nasId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nasId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1189,7 +1189,7 @@ The namespace of the K8s cluster, it will determine which K8s namespace your app
 The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
 
 <h4 class="pdoc-member-header" id="K8sApplication-packageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L180">property <b>packageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L180">property <b>packageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1197,7 +1197,7 @@ The ID of the mounted NAS must be in the same region as the cluster. It must hav
 Application package type. Optional parameter values include: FatJar, WAR and Image.
 
 <h4 class="pdoc-member-header" id="K8sApplication-packageUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L184">property <b>packageUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L184">property <b>packageUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packageUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1205,7 +1205,7 @@ Application package type. Optional parameter values include: FatJar, WAR and Ima
 The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
 
 <h4 class="pdoc-member-header" id="K8sApplication-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L188">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L188">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>packageVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1213,7 +1213,7 @@ The url of the package to deploy.Applications deployed through FatJar or WAR pac
 The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
 
 <h4 class="pdoc-member-header" id="K8sApplication-postStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L192">property <b>postStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L192">property <b>postStart</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postStart: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1221,7 +1221,7 @@ The version number of the deployment package. WAR and FatJar types are required.
 Execute script after startup
 
 <h4 class="pdoc-member-header" id="K8sApplication-preStop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L196">property <b>preStop</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L196">property <b>preStop</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preStop: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ Execute script after startup
 Execute script before stopping
 
 <h4 class="pdoc-member-header" id="K8sApplication-readiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L200">property <b>readiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L200">property <b>readiness</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>readiness: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1237,7 +1237,7 @@ Execute script before stopping
 Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
 
 <h4 class="pdoc-member-header" id="K8sApplication-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L204">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L204">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1245,7 +1245,7 @@ Container service status check. If the check fails, the traffic passing through 
 Number of application instances.
 
 <h4 class="pdoc-member-header" id="K8sApplication-requestsMCpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L208">property <b>requestsMCpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L208">property <b>requestsMCpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestsMCpu: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1253,7 +1253,7 @@ Number of application instances.
 When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
 
 <h4 class="pdoc-member-header" id="K8sApplication-requestsMem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L212">property <b>requestsMem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L212">property <b>requestsMem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>requestsMem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1261,7 +1261,7 @@ When the application is created, the CPU quota of the application instance, unit
 When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
 
 <h4 class="pdoc-member-header" id="K8sApplication-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L65">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L65">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1270,7 +1270,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="K8sApplication-webContainer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L216">property <b>webContainer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L216">property <b>webContainer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>webContainer: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1278,7 +1278,7 @@ deployments.
 The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
 
 <h3 class="pdoc-module-header" id="K8sCluster" data-link-title="K8sCluster">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L33">
         Resource <strong>K8sCluster</strong>
     </a>
 </h3>
@@ -1311,7 +1311,7 @@ EDAS cluster can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="K8sCluster-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -1325,7 +1325,7 @@ Create a K8sCluster resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="K8sCluster-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -1336,14 +1336,14 @@ Get an existing K8sCluster resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="K8sCluster-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="K8sCluster-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1354,7 +1354,7 @@ Returns true if the given object is an instance of K8sCluster.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="K8sCluster-clusterImportStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L68">property <b>clusterImportStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L68">property <b>clusterImportStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterImportStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1366,7 +1366,7 @@ The import status of cluster:
 `4`: deleted.
 
 <h4 class="pdoc-member-header" id="K8sCluster-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L72">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L72">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1374,7 +1374,7 @@ The import status of cluster:
 The name of the cluster that you want to create.
 
 <h4 class="pdoc-member-header" id="K8sCluster-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L76">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L76">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1382,7 +1382,7 @@ The name of the cluster that you want to create.
 The type of the cluster that you want to create. Valid values only: 5: K8s cluster.
 
 <h4 class="pdoc-member-header" id="K8sCluster-csClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L80">property <b>csClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L80">property <b>csClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>csClusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1390,7 +1390,7 @@ The type of the cluster that you want to create. Valid values only: 5: K8s clust
 The ID of the alicloud container service kubernetes cluster that you want to import.
 
 <h4 class="pdoc-member-header" id="K8sCluster-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1399,7 +1399,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="K8sCluster-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L84">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L84">property <b>namespaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namespaceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1407,7 +1407,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the namespace where you want to import. You can call the [ListUserDefineRegion](https://www.alibabacloud.com/help/en/doc-detail/149377.htm?spm=a2c63.p38356.879954.34.331054faK2yNvC#doc-api-Edas-ListUserDefineRegion) operation to query the namespace ID.
 
 <h4 class="pdoc-member-header" id="K8sCluster-networkMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L88">property <b>networkMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L88">property <b>networkMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>networkMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1415,7 +1415,7 @@ The ID of the namespace where you want to import. You can call the [ListUserDefi
 The network type of the cluster that you want to create. Valid values: 1: classic network. 2: VPC.
 
 <h4 class="pdoc-member-header" id="K8sCluster-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1424,7 +1424,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="K8sCluster-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L92">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L92">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1432,7 +1432,7 @@ deployments.
 The ID of the Virtual Private Cloud (VPC) for the cluster.
 
 <h3 class="pdoc-module-header" id="SlbAttachment" data-link-title="SlbAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L30">
         Resource <strong>SlbAttachment</strong>
     </a>
 </h3>
@@ -1462,7 +1462,7 @@ const _default = new alicloud.edas.SlbAttachment("default", {
 ```
 
 <h4 class="pdoc-member-header" id="SlbAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -1476,7 +1476,7 @@ Create a SlbAttachment resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L40">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L40">method <b>get</b></a>
 </h4>
 
 
@@ -1487,14 +1487,14 @@ Get an existing SlbAttachment resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L30">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L30">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SlbAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L51">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L51">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1505,7 +1505,7 @@ Returns true if the given object is an instance of SlbAttachment.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L61">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L61">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1513,7 +1513,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the applicaton to which you want to bind an SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L30">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L30">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1522,7 +1522,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-listenerPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L65">property <b>listenerPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L65">property <b>listenerPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listenerPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1530,7 +1530,7 @@ deployments and may be missing (undefined) during planning phases.
 The listening port for the bound SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-slbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L69">property <b>slbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L69">property <b>slbId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1538,7 +1538,7 @@ The listening port for the bound SLB instance.
 The ID of the SLB instance that is going to be bound.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-slbIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L73">property <b>slbIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L73">property <b>slbIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1546,7 +1546,7 @@ The ID of the SLB instance that is going to be bound.
 The IP address that is allocated to the bound SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-slbStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L77">property <b>slbStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L77">property <b>slbStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>slbStatus: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1554,7 +1554,7 @@ The IP address that is allocated to the bound SLB instance.
 Running Status of SLB instance. Inactive：The instance is stopped, and listener will not monitor and foward traffic. Active：The instance is running. After the instance is created, the default state is active. Locked：The instance is locked, the instance has been owed or locked by Alibaba Cloud. Expired: The instance has expired.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L81">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L81">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1562,7 +1562,7 @@ Running Status of SLB instance. Inactive：The instance is stopped, and listener
 The type of the bound SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L30">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L30">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1571,7 +1571,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-vserverGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L85">property <b>vserverGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L85">property <b>vserverGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vserverGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1579,7 +1579,7 @@ deployments.
 The ID of the virtual server (VServer) group associated with the intranet SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachment-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L89">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L89">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1589,7 +1589,7 @@ VPC related vswitch ID.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getApplications" data-link-title="getApplications">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L26">
         Function <strong>getApplications</strong>
     </a>
 </h3>
@@ -1616,7 +1616,7 @@ export const firstApplicationName = applications.then(applications => applicatio
 ```
 
 <h3 class="pdoc-module-header" id="getClusters" data-link-title="getClusters">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L27">
         Function <strong>getClusters</strong>
     </a>
 </h3>
@@ -1644,7 +1644,7 @@ export const firstClusterName = data.alicloud_alikafka_consumer_groups.clusters.
 ```
 
 <h3 class="pdoc-module-header" id="getDeployGroups" data-link-title="getDeployGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L27">
         Function <strong>getDeployGroups</strong>
     </a>
 </h3>
@@ -1672,7 +1672,7 @@ export const firstGroupName = groups.then(groups => groups.groups[0].groupName);
 ```
 
 <h3 class="pdoc-module-header" id="getService" data-link-title="getService">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getService.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getService.ts#L26">
         Function <strong>getService</strong>
     </a>
 </h3>
@@ -1701,7 +1701,7 @@ const open = pulumi.output(alicloud.edas.getService({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ApplicationArgs" data-link-title="ApplicationArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L227">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L227">
         interface <strong>ApplicationArgs</strong>
     </a>
 </h3>
@@ -1711,7 +1711,7 @@ const open = pulumi.output(alicloud.edas.getService({
 The set of arguments for constructing a Application resource.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-applicationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L231">property <b>applicationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L231">property <b>applicationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1719,7 +1719,7 @@ The set of arguments for constructing a Application resource.
 Name of your EDAS application. Only letters '-' '_' and numbers are allowed. The length cannot exceed 36 characters.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-buildPackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L235">property <b>buildPackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L235">property <b>buildPackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>buildPackId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1727,7 +1727,7 @@ Name of your EDAS application. Only letters '-' '_' and numbers are allowed. The
 The package ID of Enterprise Distributed Application Service (EDAS) Container, which can be retrieved by calling container version list interface ListBuildPack or the "Pack ID" column in container version list. When creating High-speed Service Framework (HSF) application, this parameter is required.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L239">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L239">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1735,7 +1735,7 @@ The package ID of Enterprise Distributed Application Service (EDAS) Container, w
 The ID of the cluster that you want to create the application. The default cluster will be used if you do not specify this parameter.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-descriotion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L243">property <b>descriotion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L243">property <b>descriotion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriotion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1743,7 +1743,7 @@ The ID of the cluster that you want to create the application. The default clust
 The description of the application that you want to create.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-ecuInfos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L247">property <b>ecuInfos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L247">property <b>ecuInfos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ecuInfos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1751,7 +1751,7 @@ The description of the application that you want to create.
 The ID of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L251">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L251">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1759,7 +1759,7 @@ The ID of the Elastic Compute Unit (ECU) where you want to deploy the applicatio
 The ID of the instance group where the application is going to be deployed. Set this parameter to all if you want to deploy the application to all groups.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-healthCheckUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L255">property <b>healthCheckUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L255">property <b>healthCheckUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1767,7 +1767,7 @@ The ID of the instance group where the application is going to be deployed. Set 
 The URL for health checking of the application.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-logicalRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L259">property <b>logicalRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L259">property <b>logicalRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicalRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1775,7 +1775,7 @@ The URL for health checking of the application.
 The ID of the namespace where you want to create the application. You can call the ListUserDefineRegion operation to query the namespace ID.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-packageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L263">property <b>packageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L263">property <b>packageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1783,7 +1783,7 @@ The ID of the namespace where you want to create the application. You can call t
 The type of the package for the deployment of the application that you want to create. The valid values are: WAR and JAR. We strongly recommend you to set this parameter when creating the application.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L267">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L267">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1791,7 +1791,7 @@ The type of the package for the deployment of the application that you want to c
 The version of the application that you want to deploy. It must be unique for every application. The length cannot exceed 64 characters. We recommended you to use a timestamp.
 
 <h4 class="pdoc-member-header" id="ApplicationArgs-warUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L271">property <b>warUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L271">property <b>warUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>warUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1799,7 +1799,7 @@ The version of the application that you want to deploy. It must be unique for ev
 The address to store the uploaded web application (WAR) package for application deployment. This parameter is required when the deployType parameter is set as url.
 
 <h3 class="pdoc-module-header" id="ApplicationDeploymentArgs" data-link-title="ApplicationDeploymentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L151">
         interface <strong>ApplicationDeploymentArgs</strong>
     </a>
 </h3>
@@ -1809,7 +1809,7 @@ The address to store the uploaded web application (WAR) package for application 
 The set of arguments for constructing a ApplicationDeployment resource.
 
 <h4 class="pdoc-member-header" id="ApplicationDeploymentArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L155">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L155">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1817,7 +1817,7 @@ The set of arguments for constructing a ApplicationDeployment resource.
 The ID of the application that you want to deploy.
 
 <h4 class="pdoc-member-header" id="ApplicationDeploymentArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L159">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L159">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1825,7 +1825,7 @@ The ID of the application that you want to deploy.
 The ID of the instance group where the application is going to be deployed. Set this parameter to all if you want to deploy the application to all groups.
 
 <h4 class="pdoc-member-header" id="ApplicationDeploymentArgs-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L163">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L163">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1833,7 +1833,7 @@ The ID of the instance group where the application is going to be deployed. Set 
 The version of the application that you want to deploy. It must be unique for every application. The length cannot exceed 64 characters. We recommended you to use a timestamp.
 
 <h4 class="pdoc-member-header" id="ApplicationDeploymentArgs-warUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L167">property <b>warUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L167">property <b>warUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>warUrl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1841,7 +1841,7 @@ The version of the application that you want to deploy. It must be unique for ev
 The address to store the uploaded web application (WAR) package for application deployment. This parameter is required when the deployType parameter is set as url.
 
 <h3 class="pdoc-module-header" id="ApplicationDeploymentState" data-link-title="ApplicationDeploymentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L125">
         interface <strong>ApplicationDeploymentState</strong>
     </a>
 </h3>
@@ -1851,7 +1851,7 @@ The address to store the uploaded web application (WAR) package for application 
 Input properties used for looking up and filtering ApplicationDeployment resources.
 
 <h4 class="pdoc-member-header" id="ApplicationDeploymentState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L129">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L129">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1859,7 +1859,7 @@ Input properties used for looking up and filtering ApplicationDeployment resourc
 The ID of the application that you want to deploy.
 
 <h4 class="pdoc-member-header" id="ApplicationDeploymentState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L133">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L133">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1867,7 +1867,7 @@ The ID of the application that you want to deploy.
 The ID of the instance group where the application is going to be deployed. Set this parameter to all if you want to deploy the application to all groups.
 
 <h4 class="pdoc-member-header" id="ApplicationDeploymentState-lastPackageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L137">property <b>lastPackageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L137">property <b>lastPackageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lastPackageVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1875,7 +1875,7 @@ The ID of the instance group where the application is going to be deployed. Set 
 Last package version deployed.
 
 <h4 class="pdoc-member-header" id="ApplicationDeploymentState-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L141">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L141">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1883,7 +1883,7 @@ Last package version deployed.
 The version of the application that you want to deploy. It must be unique for every application. The length cannot exceed 64 characters. We recommended you to use a timestamp.
 
 <h4 class="pdoc-member-header" id="ApplicationDeploymentState-warUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationDeployment.ts#L145">property <b>warUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationDeployment.ts#L145">property <b>warUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>warUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1891,7 +1891,7 @@ The version of the application that you want to deploy. It must be unique for ev
 The address to store the uploaded web application (WAR) package for application deployment. This parameter is required when the deployType parameter is set as url.
 
 <h3 class="pdoc-module-header" id="ApplicationScaleArgs" data-link-title="ApplicationScaleArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L151">
         interface <strong>ApplicationScaleArgs</strong>
     </a>
 </h3>
@@ -1901,7 +1901,7 @@ The address to store the uploaded web application (WAR) package for application 
 The set of arguments for constructing a ApplicationScale resource.
 
 <h4 class="pdoc-member-header" id="ApplicationScaleArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L155">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L155">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1909,7 +1909,7 @@ The set of arguments for constructing a ApplicationScale resource.
 The ID of the application that you want to deploy.
 
 <h4 class="pdoc-member-header" id="ApplicationScaleArgs-deployGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L159">property <b>deployGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L159">property <b>deployGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deployGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1917,7 +1917,7 @@ The ID of the application that you want to deploy.
 The ID of the instance group to which you want to add ECS instances to scale out the application.
 
 <h4 class="pdoc-member-header" id="ApplicationScaleArgs-ecuInfos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L163">property <b>ecuInfos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L163">property <b>ecuInfos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ecuInfos: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1925,7 +1925,7 @@ The ID of the instance group to which you want to add ECS instances to scale out
 The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
 
 <h4 class="pdoc-member-header" id="ApplicationScaleArgs-forceStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L167">property <b>forceStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L167">property <b>forceStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1933,7 +1933,7 @@ The IDs of the Elastic Compute Unit (ECU) where you want to deploy the applicati
 This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.
 
 <h3 class="pdoc-module-header" id="ApplicationScaleState" data-link-title="ApplicationScaleState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L125">
         interface <strong>ApplicationScaleState</strong>
     </a>
 </h3>
@@ -1943,7 +1943,7 @@ This parameter specifies whether to forcibly remove an ECS instance where the ap
 Input properties used for looking up and filtering ApplicationScale resources.
 
 <h4 class="pdoc-member-header" id="ApplicationScaleState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L129">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L129">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1951,7 +1951,7 @@ Input properties used for looking up and filtering ApplicationScale resources.
 The ID of the application that you want to deploy.
 
 <h4 class="pdoc-member-header" id="ApplicationScaleState-deployGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L133">property <b>deployGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L133">property <b>deployGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deployGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1959,7 +1959,7 @@ The ID of the application that you want to deploy.
 The ID of the instance group to which you want to add ECS instances to scale out the application.
 
 <h4 class="pdoc-member-header" id="ApplicationScaleState-eccInfo">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L137">property <b>eccInfo</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L137">property <b>eccInfo</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eccInfo?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1967,7 +1967,7 @@ The ID of the instance group to which you want to add ECS instances to scale out
 The ecc information of the resource supplied above. The value is formulated as `<ecc1,ecc2>`.
 
 <h4 class="pdoc-member-header" id="ApplicationScaleState-ecuInfos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L141">property <b>ecuInfos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L141">property <b>ecuInfos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ecuInfos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1975,7 +1975,7 @@ The ecc information of the resource supplied above. The value is formulated as `
 The IDs of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
 
 <h4 class="pdoc-member-header" id="ApplicationScaleState-forceStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/applicationScale.ts#L145">property <b>forceStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/applicationScale.ts#L145">property <b>forceStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1983,7 +1983,7 @@ The IDs of the Elastic Compute Unit (ECU) where you want to deploy the applicati
 This parameter specifies whether to forcibly remove an ECS instance where the application is deployed. It is set as true only after the ECS instance expires. In normal cases, this parameter do not need to be specified.
 
 <h3 class="pdoc-module-header" id="ApplicationState" data-link-title="ApplicationState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L177">
         interface <strong>ApplicationState</strong>
     </a>
 </h3>
@@ -1993,7 +1993,7 @@ This parameter specifies whether to forcibly remove an ECS instance where the ap
 Input properties used for looking up and filtering Application resources.
 
 <h4 class="pdoc-member-header" id="ApplicationState-applicationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L181">property <b>applicationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L181">property <b>applicationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2001,7 +2001,7 @@ Input properties used for looking up and filtering Application resources.
 Name of your EDAS application. Only letters '-' '_' and numbers are allowed. The length cannot exceed 36 characters.
 
 <h4 class="pdoc-member-header" id="ApplicationState-buildPackId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L185">property <b>buildPackId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L185">property <b>buildPackId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>buildPackId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2009,7 +2009,7 @@ Name of your EDAS application. Only letters '-' '_' and numbers are allowed. The
 The package ID of Enterprise Distributed Application Service (EDAS) Container, which can be retrieved by calling container version list interface ListBuildPack or the "Pack ID" column in container version list. When creating High-speed Service Framework (HSF) application, this parameter is required.
 
 <h4 class="pdoc-member-header" id="ApplicationState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L189">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L189">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2017,7 +2017,7 @@ The package ID of Enterprise Distributed Application Service (EDAS) Container, w
 The ID of the cluster that you want to create the application. The default cluster will be used if you do not specify this parameter.
 
 <h4 class="pdoc-member-header" id="ApplicationState-descriotion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L193">property <b>descriotion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L193">property <b>descriotion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>descriotion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2025,7 +2025,7 @@ The ID of the cluster that you want to create the application. The default clust
 The description of the application that you want to create.
 
 <h4 class="pdoc-member-header" id="ApplicationState-ecuInfos">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L197">property <b>ecuInfos</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L197">property <b>ecuInfos</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ecuInfos?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2033,7 +2033,7 @@ The description of the application that you want to create.
 The ID of the Elastic Compute Unit (ECU) where you want to deploy the application. Type: List.
 
 <h4 class="pdoc-member-header" id="ApplicationState-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L201">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L201">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2041,7 +2041,7 @@ The ID of the Elastic Compute Unit (ECU) where you want to deploy the applicatio
 The ID of the instance group where the application is going to be deployed. Set this parameter to all if you want to deploy the application to all groups.
 
 <h4 class="pdoc-member-header" id="ApplicationState-healthCheckUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L205">property <b>healthCheckUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L205">property <b>healthCheckUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2049,7 +2049,7 @@ The ID of the instance group where the application is going to be deployed. Set 
 The URL for health checking of the application.
 
 <h4 class="pdoc-member-header" id="ApplicationState-logicalRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L209">property <b>logicalRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L209">property <b>logicalRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicalRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2057,7 +2057,7 @@ The URL for health checking of the application.
 The ID of the namespace where you want to create the application. You can call the ListUserDefineRegion operation to query the namespace ID.
 
 <h4 class="pdoc-member-header" id="ApplicationState-packageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L213">property <b>packageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L213">property <b>packageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2065,7 +2065,7 @@ The ID of the namespace where you want to create the application. You can call t
 The type of the package for the deployment of the application that you want to create. The valid values are: WAR and JAR. We strongly recommend you to set this parameter when creating the application.
 
 <h4 class="pdoc-member-header" id="ApplicationState-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L217">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L217">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2073,7 +2073,7 @@ The type of the package for the deployment of the application that you want to c
 The version of the application that you want to deploy. It must be unique for every application. The length cannot exceed 64 characters. We recommended you to use a timestamp.
 
 <h4 class="pdoc-member-header" id="ApplicationState-warUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/application.ts#L221">property <b>warUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/application.ts#L221">property <b>warUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>warUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2081,7 +2081,7 @@ The version of the application that you want to deploy. It must be unique for ev
 The address to store the uploaded web application (WAR) package for application deployment. This parameter is required when the deployType parameter is set as url.
 
 <h3 class="pdoc-module-header" id="ClusterArgs" data-link-title="ClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L160">
         interface <strong>ClusterArgs</strong>
     </a>
 </h3>
@@ -2091,7 +2091,7 @@ The address to store the uploaded web application (WAR) package for application 
 The set of arguments for constructing a Cluster resource.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L164">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L164">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2099,7 +2099,7 @@ The set of arguments for constructing a Cluster resource.
 The name of the cluster that you want to create.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L168">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L168">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2107,7 +2107,7 @@ The name of the cluster that you want to create.
 The type of the cluster that you want to create. Valid values only: 2: ECS cluster.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-logicalRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L172">property <b>logicalRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L172">property <b>logicalRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicalRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2115,7 +2115,7 @@ The type of the cluster that you want to create. Valid values only: 2: ECS clust
 The ID of the namespace where you want to create the application. You can call the ListUserDefineRegion operation to query the namespace ID.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-networkMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L176">property <b>networkMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L176">property <b>networkMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2123,7 +2123,7 @@ The ID of the namespace where you want to create the application. You can call t
 The network type of the cluster that you want to create. Valid values: 1: classic network. 2: VPC.
 
 <h4 class="pdoc-member-header" id="ClusterArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L180">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L180">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2131,7 +2131,7 @@ The network type of the cluster that you want to create. Valid values: 1: classi
 The ID of the Virtual Private Cloud (VPC) for the cluster.
 
 <h3 class="pdoc-module-header" id="ClusterState" data-link-title="ClusterState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L134">
         interface <strong>ClusterState</strong>
     </a>
 </h3>
@@ -2141,7 +2141,7 @@ The ID of the Virtual Private Cloud (VPC) for the cluster.
 Input properties used for looking up and filtering Cluster resources.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L138">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L138">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2149,7 +2149,7 @@ Input properties used for looking up and filtering Cluster resources.
 The name of the cluster that you want to create.
 
 <h4 class="pdoc-member-header" id="ClusterState-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L142">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L142">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2157,7 +2157,7 @@ The name of the cluster that you want to create.
 The type of the cluster that you want to create. Valid values only: 2: ECS cluster.
 
 <h4 class="pdoc-member-header" id="ClusterState-logicalRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L146">property <b>logicalRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L146">property <b>logicalRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicalRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2165,7 +2165,7 @@ The type of the cluster that you want to create. Valid values only: 2: ECS clust
 The ID of the namespace where you want to create the application. You can call the ListUserDefineRegion operation to query the namespace ID.
 
 <h4 class="pdoc-member-header" id="ClusterState-networkMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L150">property <b>networkMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L150">property <b>networkMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2173,7 +2173,7 @@ The ID of the namespace where you want to create the application. You can call t
 The network type of the cluster that you want to create. Valid values: 1: classic network. 2: VPC.
 
 <h4 class="pdoc-member-header" id="ClusterState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/cluster.ts#L154">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/cluster.ts#L154">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2181,7 +2181,7 @@ The network type of the cluster that you want to create. Valid values: 1: classi
 The ID of the Virtual Private Cloud (VPC) for the cluster.
 
 <h3 class="pdoc-module-header" id="DeployGroupArgs" data-link-title="DeployGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L134">
         interface <strong>DeployGroupArgs</strong>
     </a>
 </h3>
@@ -2191,7 +2191,7 @@ The ID of the Virtual Private Cloud (VPC) for the cluster.
 The set of arguments for constructing a DeployGroup resource.
 
 <h4 class="pdoc-member-header" id="DeployGroupArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L138">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L138">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2199,7 +2199,7 @@ The set of arguments for constructing a DeployGroup resource.
 The ID of the application that you want to deploy.
 
 <h4 class="pdoc-member-header" id="DeployGroupArgs-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L142">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L142">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2207,7 +2207,7 @@ The ID of the application that you want to deploy.
 The name of the instance group that you want to create.
 
 <h3 class="pdoc-module-header" id="DeployGroupState" data-link-title="DeployGroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L116">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L116">
         interface <strong>DeployGroupState</strong>
     </a>
 </h3>
@@ -2217,7 +2217,7 @@ The name of the instance group that you want to create.
 Input properties used for looking up and filtering DeployGroup resources.
 
 <h4 class="pdoc-member-header" id="DeployGroupState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L120">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L120">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2225,7 +2225,7 @@ Input properties used for looking up and filtering DeployGroup resources.
 The ID of the application that you want to deploy.
 
 <h4 class="pdoc-member-header" id="DeployGroupState-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L124">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L124">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2233,7 +2233,7 @@ The ID of the application that you want to deploy.
 The name of the instance group that you want to create.
 
 <h4 class="pdoc-member-header" id="DeployGroupState-groupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/deployGroup.ts#L128">property <b>groupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/deployGroup.ts#L128">property <b>groupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2241,7 +2241,7 @@ The name of the instance group that you want to create.
 The type of the instance group that you want to create. Valid values: 0: Default group. 1: Phased release is disabled for traffic management. 2: Phased release is enabled for traffic management.
 
 <h3 class="pdoc-module-header" id="GetApplicationsArgs" data-link-title="GetApplicationsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L45">
         interface <strong>GetApplicationsArgs</strong>
     </a>
 </h3>
@@ -2251,7 +2251,7 @@ The type of the instance group that you want to create. Valid values: 0: Default
 A collection of arguments for invoking getApplications.
 
 <h4 class="pdoc-member-header" id="GetApplicationsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L49">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L49">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2259,7 +2259,7 @@ A collection of arguments for invoking getApplications.
 An ids string to filter results by the application id.
 
 <h4 class="pdoc-member-header" id="GetApplicationsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L53">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L53">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2267,12 +2267,12 @@ An ids string to filter results by the application id.
 A regex string to filter results by the application name.
 
 <h4 class="pdoc-member-header" id="GetApplicationsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L54">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L54">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetApplicationsResult" data-link-title="GetApplicationsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L60">
         interface <strong>GetApplicationsResult</strong>
     </a>
 </h3>
@@ -2282,7 +2282,7 @@ A regex string to filter results by the application name.
 A collection of values returned by getApplications.
 
 <h4 class="pdoc-member-header" id="GetApplicationsResult-applications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L64">property <b>applications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L64">property <b>applications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applications: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetApplicationsApplication'>GetApplicationsApplication</a>[];</code></pre>
@@ -2290,7 +2290,7 @@ A collection of values returned by getApplications.
 A list of applications.
 
 <h4 class="pdoc-member-header" id="GetApplicationsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L68">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L68">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2298,7 +2298,7 @@ A list of applications.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetApplicationsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L72">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L72">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2306,12 +2306,12 @@ The provider-assigned unique ID for this managed resource.
 A list of application IDs.
 
 <h4 class="pdoc-member-header" id="GetApplicationsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L73">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L73">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetApplicationsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L77">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L77">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2319,12 +2319,12 @@ A list of application IDs.
 A list of applications names.
 
 <h4 class="pdoc-member-header" id="GetApplicationsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getApplications.ts#L78">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getApplications.ts#L78">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetClustersArgs" data-link-title="GetClustersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L46">
         interface <strong>GetClustersArgs</strong>
     </a>
 </h3>
@@ -2334,7 +2334,7 @@ A list of applications names.
 A collection of arguments for invoking getClusters.
 
 <h4 class="pdoc-member-header" id="GetClustersArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L50">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L50">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2342,7 +2342,7 @@ A collection of arguments for invoking getClusters.
 An ids string to filter results by the cluster id.
 
 <h4 class="pdoc-member-header" id="GetClustersArgs-logicalRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L54">property <b>logicalRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L54">property <b>logicalRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicalRegionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2350,7 +2350,7 @@ An ids string to filter results by the cluster id.
 ID of the namespace in EDAS.
 
 <h4 class="pdoc-member-header" id="GetClustersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L58">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L58">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2358,12 +2358,12 @@ ID of the namespace in EDAS.
 A regex string to filter results by the cluster name.
 
 <h4 class="pdoc-member-header" id="GetClustersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L59">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L59">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetClustersResult" data-link-title="GetClustersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L65">
         interface <strong>GetClustersResult</strong>
     </a>
 </h3>
@@ -2373,7 +2373,7 @@ A regex string to filter results by the cluster name.
 A collection of values returned by getClusters.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-clusters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L69">property <b>clusters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L69">property <b>clusters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusters: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetClustersCluster'>GetClustersCluster</a>[];</code></pre>
@@ -2381,7 +2381,7 @@ A collection of values returned by getClusters.
 A list of clusters.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L73">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L73">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2389,7 +2389,7 @@ A list of clusters.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L77">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L77">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2397,17 +2397,17 @@ The provider-assigned unique ID for this managed resource.
 A list of cluster IDs.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-logicalRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L78">property <b>logicalRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L78">property <b>logicalRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicalRegionId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L79">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L79">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetClustersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L83">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L83">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2415,12 +2415,12 @@ A list of cluster IDs.
 A list of cluster names.
 
 <h4 class="pdoc-member-header" id="GetClustersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getClusters.ts#L84">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getClusters.ts#L84">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDeployGroupsArgs" data-link-title="GetDeployGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L45">
         interface <strong>GetDeployGroupsArgs</strong>
     </a>
 </h3>
@@ -2430,7 +2430,7 @@ A list of cluster names.
 A collection of arguments for invoking getDeployGroups.
 
 <h4 class="pdoc-member-header" id="GetDeployGroupsArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L49">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L49">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2438,7 +2438,7 @@ A collection of arguments for invoking getDeployGroups.
 ID of the EDAS application.
 
 <h4 class="pdoc-member-header" id="GetDeployGroupsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L53">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L53">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2446,12 +2446,12 @@ ID of the EDAS application.
 A regex string to filter results by the deploy group name.
 
 <h4 class="pdoc-member-header" id="GetDeployGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L54">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L54">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetDeployGroupsResult" data-link-title="GetDeployGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L60">
         interface <strong>GetDeployGroupsResult</strong>
     </a>
 </h3>
@@ -2461,7 +2461,7 @@ A regex string to filter results by the deploy group name.
 A collection of values returned by getDeployGroups.
 
 <h4 class="pdoc-member-header" id="GetDeployGroupsResult-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L64">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L64">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2469,7 +2469,7 @@ A collection of values returned by getDeployGroups.
 The ID of the application that you want to deploy.
 
 <h4 class="pdoc-member-header" id="GetDeployGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L68">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L68">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDeployGroupsGroup'>GetDeployGroupsGroup</a>[];</code></pre>
@@ -2477,7 +2477,7 @@ The ID of the application that you want to deploy.
 A list of consumer group ids.
 
 <h4 class="pdoc-member-header" id="GetDeployGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2485,12 +2485,12 @@ A list of consumer group ids.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDeployGroupsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L73">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L73">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDeployGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L77">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L77">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2498,12 +2498,12 @@ The provider-assigned unique ID for this managed resource.
 A list of deploy group names.
 
 <h4 class="pdoc-member-header" id="GetDeployGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getDeployGroups.ts#L78">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getDeployGroups.ts#L78">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetServiceArgs" data-link-title="GetServiceArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getService.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getService.ts#L43">
         interface <strong>GetServiceArgs</strong>
     </a>
 </h3>
@@ -2513,7 +2513,7 @@ A list of deploy group names.
 A collection of arguments for invoking getService.
 
 <h4 class="pdoc-member-header" id="GetServiceArgs-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getService.ts#L47">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getService.ts#L47">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2521,7 +2521,7 @@ A collection of arguments for invoking getService.
 Setting the value to `On` to enable the service. If has been enabled, return the result. Valid values: "On" or "Off".
 
 <h3 class="pdoc-module-header" id="GetServiceResult" data-link-title="GetServiceResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getService.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getService.ts#L53">
         interface <strong>GetServiceResult</strong>
     </a>
 </h3>
@@ -2531,12 +2531,12 @@ Setting the value to `On` to enable the service. If has been enabled, return the
 A collection of values returned by getService.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getService.ts#L54">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getService.ts#L54">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetServiceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getService.ts#L58">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getService.ts#L58">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2544,7 +2544,7 @@ A collection of values returned by getService.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServiceResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/getService.ts#L62">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/getService.ts#L62">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2552,7 +2552,7 @@ The provider-assigned unique ID for this managed resource.
 The current service enable status.
 
 <h3 class="pdoc-module-header" id="InstanceClusterAttachmentArgs" data-link-title="InstanceClusterAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L146">
         interface <strong>InstanceClusterAttachmentArgs</strong>
     </a>
 </h3>
@@ -2562,7 +2562,7 @@ The current service enable status.
 The set of arguments for constructing a InstanceClusterAttachment resource.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachmentArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L150">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L150">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2570,7 +2570,7 @@ The set of arguments for constructing a InstanceClusterAttachment resource.
 The ID of the cluster that you want to create the application.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachmentArgs-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L154">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L154">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2578,7 +2578,7 @@ The ID of the cluster that you want to create the application.
 The ID of instance. Type: list.
 
 <h3 class="pdoc-module-header" id="InstanceClusterAttachmentState" data-link-title="InstanceClusterAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L120">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L120">
         interface <strong>InstanceClusterAttachmentState</strong>
     </a>
 </h3>
@@ -2588,7 +2588,7 @@ The ID of instance. Type: list.
 Input properties used for looking up and filtering InstanceClusterAttachment resources.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachmentState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L124">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L124">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2596,7 +2596,7 @@ Input properties used for looking up and filtering InstanceClusterAttachment res
 The ID of the cluster that you want to create the application.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachmentState-clusterMemberIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L128">property <b>clusterMemberIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L128">property <b>clusterMemberIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterMemberIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2604,7 +2604,7 @@ The ID of the cluster that you want to create the application.
 The cluster members map of the resource supplied above. The key is instanceId and the value is cluster_member_id.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachmentState-ecuMap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L132">property <b>ecuMap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L132">property <b>ecuMap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ecuMap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2612,7 +2612,7 @@ The cluster members map of the resource supplied above. The key is instanceId an
 The ecu map of the resource supplied above. The key is instanceId and the value is ecu_id.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachmentState-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L136">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L136">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2620,7 +2620,7 @@ The ecu map of the resource supplied above. The key is instanceId and the value 
 The ID of instance. Type: list.
 
 <h4 class="pdoc-member-header" id="InstanceClusterAttachmentState-statusMap">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/instanceClusterAttachment.ts#L140">property <b>statusMap</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/instanceClusterAttachment.ts#L140">property <b>statusMap</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statusMap?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;}&gt;;</code></pre>
@@ -2628,7 +2628,7 @@ The ID of instance. Type: list.
 The status map of the resource supplied above. The key is instanceId and the values are 1(running) 0(converting) -1(failed) and -2(offline).
 
 <h3 class="pdoc-module-header" id="K8sApplicationArgs" data-link-title="K8sApplicationArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L445">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L445">
         interface <strong>K8sApplicationArgs</strong>
     </a>
 </h3>
@@ -2638,7 +2638,7 @@ The status map of the resource supplied above. The key is instanceId and the val
 The set of arguments for constructing a K8sApplication resource.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-applicationDescriotion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L449">property <b>applicationDescriotion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L449">property <b>applicationDescriotion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationDescriotion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2646,7 +2646,7 @@ The set of arguments for constructing a K8sApplication resource.
 The description of the application
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-applicationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L453">property <b>applicationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L453">property <b>applicationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2654,7 +2654,7 @@ The description of the application
 The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L457">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L457">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2662,7 +2662,7 @@ The name of the application you want to create. Must start with character,suppor
 The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-command">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L461">property <b>command</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L461">property <b>command</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>command?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2670,7 +2670,7 @@ The ID of the alicloud container service kubernetes cluster that you want to imp
 The set command, if set, will replace the startup command in the mirror when the mirror is started.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-commandArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L465">property <b>commandArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L465">property <b>commandArgs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commandArgs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2678,7 +2678,7 @@ The set command, if set, will replace the startup command in the mirror when the
 Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-edasContainerVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L469">property <b>edasContainerVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L469">property <b>edasContainerVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>edasContainerVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2686,7 +2686,7 @@ Used in combination with the command, the parameter of the command is a JsonArra
 EDAS-Container version that the deployed package depends on. Image does not support this parameter.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-envs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L473">property <b>envs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L473">property <b>envs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>envs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2694,7 +2694,7 @@ EDAS-Container version that the deployed package depends on. Image does not supp
 Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-imageUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L477">property <b>imageUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L477">property <b>imageUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2702,7 +2702,7 @@ Deployment environment variables, the format must conform to the JSON object arr
 Mirror address. When the packageType is set to 'Image', this parameter item is required.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-internetSlbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L481">property <b>internetSlbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L481">property <b>internetSlbId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetSlbId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2710,7 +2710,7 @@ Mirror address. When the packageType is set to 'Image', this parameter item is r
 Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-internetSlbPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L485">property <b>internetSlbPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L485">property <b>internetSlbPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetSlbPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2718,7 +2718,7 @@ Public network SLB ID. If not configured, EDAS will automatically purchase a new
 The public network SLB front-end port, range 1~65535.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-internetSlbProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L489">property <b>internetSlbProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L489">property <b>internetSlbProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetSlbProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2726,7 +2726,7 @@ The public network SLB front-end port, range 1~65535.
 The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-internetTargetPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L493">property <b>internetTargetPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L493">property <b>internetTargetPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetTargetPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2734,7 +2734,7 @@ The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
 The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-jdk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L497">property <b>jdk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L497">property <b>jdk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jdk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2742,7 +2742,7 @@ The private SLB back-end port, is also the service port of the application, rang
 The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-limitMCpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L501">property <b>limitMCpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L501">property <b>limitMCpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limitMCpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2750,7 +2750,7 @@ The JDK version that the deployed package depends on. The optional parameter val
 The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-limitMem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L505">property <b>limitMem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L505">property <b>limitMem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limitMem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2758,7 +2758,7 @@ The CPU quota of the application instance during application operation. Unit: Nu
 The memory limit of the application instance during application operation, unit: M.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-liveness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L509">property <b>liveness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L509">property <b>liveness</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>liveness?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2766,7 +2766,7 @@ The memory limit of the application instance during application operation, unit:
 Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-localVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L513">property <b>localVolume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L513">property <b>localVolume</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localVolume?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2774,7 +2774,7 @@ Container survival status monitoring, format such as: `{"failureThreshold": 3,"i
 The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-logicalRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L517">property <b>logicalRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L517">property <b>logicalRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicalRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2782,7 +2782,7 @@ The configuration of the host file mounted to the container. For example: `[{"ty
 The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-mountDescs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L521">property <b>mountDescs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L521">property <b>mountDescs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountDescs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2790,7 +2790,7 @@ The ID corresponding to the EDAS namespace, the non-default namespace must be fi
 Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L525">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L525">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2798,7 +2798,7 @@ Mount configuration description, as a serialized JSON. For example: `[{"nasPath"
 The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-nasId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L529">property <b>nasId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L529">property <b>nasId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nasId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2806,7 +2806,7 @@ The namespace of the K8s cluster, it will determine which K8s namespace your app
 The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-packageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L533">property <b>packageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L533">property <b>packageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2814,7 +2814,7 @@ The ID of the mounted NAS must be in the same region as the cluster. It must hav
 Application package type. Optional parameter values include: FatJar, WAR and Image.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-packageUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L537">property <b>packageUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L537">property <b>packageUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2822,7 +2822,7 @@ Application package type. Optional parameter values include: FatJar, WAR and Ima
 The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L541">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L541">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2830,7 +2830,7 @@ The url of the package to deploy.Applications deployed through FatJar or WAR pac
 The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-postStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L545">property <b>postStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L545">property <b>postStart</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postStart?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2838,7 +2838,7 @@ The version number of the deployment package. WAR and FatJar types are required.
 Execute script after startup
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-preStop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L549">property <b>preStop</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L549">property <b>preStop</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preStop?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2846,7 +2846,7 @@ Execute script after startup
 Execute script before stopping
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-readiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L553">property <b>readiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L553">property <b>readiness</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readiness?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2854,7 +2854,7 @@ Execute script before stopping
 Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L557">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L557">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2862,7 +2862,7 @@ Container service status check. If the check fails, the traffic passing through 
 Number of application instances.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-requestsMCpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L561">property <b>requestsMCpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L561">property <b>requestsMCpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestsMCpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2870,7 +2870,7 @@ Number of application instances.
 When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-requestsMem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L565">property <b>requestsMem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L565">property <b>requestsMem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestsMem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2878,7 +2878,7 @@ When the application is created, the CPU quota of the application instance, unit
 When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
 
 <h4 class="pdoc-member-header" id="K8sApplicationArgs-webContainer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L569">property <b>webContainer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L569">property <b>webContainer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webContainer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2886,7 +2886,7 @@ When the application is created, the memory limit of the application instance, u
 The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
 
 <h3 class="pdoc-module-header" id="K8sApplicationState" data-link-title="K8sApplicationState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L315">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L315">
         interface <strong>K8sApplicationState</strong>
     </a>
 </h3>
@@ -2896,7 +2896,7 @@ The Tomcat version that the deployment package depends on. Applicable to Spring 
 Input properties used for looking up and filtering K8sApplication resources.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-applicationDescriotion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L319">property <b>applicationDescriotion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L319">property <b>applicationDescriotion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationDescriotion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2904,7 +2904,7 @@ Input properties used for looking up and filtering K8sApplication resources.
 The description of the application
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-applicationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L323">property <b>applicationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L323">property <b>applicationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applicationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2912,7 +2912,7 @@ The description of the application
 The name of the application you want to create. Must start with character,supports numbers, letters and dashes (-), supports up to 36 characters
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-clusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L327">property <b>clusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L327">property <b>clusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2920,7 +2920,7 @@ The name of the application you want to create. Must start with character,suppor
 The ID of the alicloud container service kubernetes cluster that you want to import to. You can call the ListCluster operation to query.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-command">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L331">property <b>command</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L331">property <b>command</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>command?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2928,7 +2928,7 @@ The ID of the alicloud container service kubernetes cluster that you want to imp
 The set command, if set, will replace the startup command in the mirror when the mirror is started.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-commandArgs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L335">property <b>commandArgs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L335">property <b>commandArgs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>commandArgs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2936,7 +2936,7 @@ The set command, if set, will replace the startup command in the mirror when the
 Used in combination with the command, the parameter of the command is a JsonArray string in the format: `[{"argument":"-c"},{"argument":"test"}]`. Among them, -c and test are two parameters that need to be set.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-edasContainerVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L339">property <b>edasContainerVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L339">property <b>edasContainerVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>edasContainerVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2944,7 +2944,7 @@ Used in combination with the command, the parameter of the command is a JsonArra
 EDAS-Container version that the deployed package depends on. Image does not support this parameter.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-envs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L343">property <b>envs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L343">property <b>envs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>envs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2952,7 +2952,7 @@ EDAS-Container version that the deployed package depends on. Image does not supp
 Deployment environment variables, the format must conform to the JSON object array, such as: `{"name":"x","value":"y"},{"name":"x2","value":"y2"}`, If you want to cancel the configuration, you need to set an empty JSON array "" to indicate no configuration.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-imageUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L347">property <b>imageUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L347">property <b>imageUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2960,7 +2960,7 @@ Deployment environment variables, the format must conform to the JSON object arr
 Mirror address. When the packageType is set to 'Image', this parameter item is required.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-internetSlbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L351">property <b>internetSlbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L351">property <b>internetSlbId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetSlbId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2968,7 +2968,7 @@ Mirror address. When the packageType is set to 'Image', this parameter item is r
 Public network SLB ID. If not configured, EDAS will automatically purchase a new SLB for the user.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-internetSlbPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L355">property <b>internetSlbPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L355">property <b>internetSlbPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetSlbPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2976,7 +2976,7 @@ Public network SLB ID. If not configured, EDAS will automatically purchase a new
 The public network SLB front-end port, range 1~65535.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-internetSlbProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L359">property <b>internetSlbProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L359">property <b>internetSlbProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetSlbProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2984,7 +2984,7 @@ The public network SLB front-end port, range 1~65535.
 The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-internetTargetPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L363">property <b>internetTargetPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L363">property <b>internetTargetPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetTargetPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2992,7 +2992,7 @@ The public network SLB protocol supports TCP, HTTP and HTTPS protocols.
 The private SLB back-end port, is also the service port of the application, ranging from 1 to 65535.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-jdk">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L367">property <b>jdk</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L367">property <b>jdk</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>jdk?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3000,7 +3000,7 @@ The private SLB back-end port, is also the service port of the application, rang
 The JDK version that the deployed package depends on. The optional parameter values are Open JDK 7 and Open JDK 8. Image does not support this parameter.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-limitMCpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L371">property <b>limitMCpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L371">property <b>limitMCpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limitMCpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3008,7 +3008,7 @@ The JDK version that the deployed package depends on. The optional parameter val
 The CPU quota of the application instance during application operation. Unit: Number of millcores, set to 0 means unlimited, similar to request_cpu.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-limitMem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L375">property <b>limitMem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L375">property <b>limitMem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>limitMem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3016,7 +3016,7 @@ The CPU quota of the application instance during application operation. Unit: Nu
 The memory limit of the application instance during application operation, unit: M.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-liveness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L379">property <b>liveness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L379">property <b>liveness</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>liveness?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3024,7 +3024,7 @@ The memory limit of the application instance during application operation, unit:
 Container survival status monitoring, format such as: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1,"tcpSocket":{"host":"", "port":8080} }`.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-localVolume">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L383">property <b>localVolume</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L383">property <b>localVolume</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>localVolume?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3032,7 +3032,7 @@ Container survival status monitoring, format such as: `{"failureThreshold": 3,"i
 The configuration of the host file mounted to the container. For example: `[{"type":"","nodePath":"/localfiles","mountPath":"/app/files"},{"type":"Directory","nodePath":"/mnt", "mountPath":"/app/storage"}]`. Among them, nodePath is the host path; mountPath is the path in the container; type is the mount type.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-logicalRegionId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L387">property <b>logicalRegionId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L387">property <b>logicalRegionId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>logicalRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3040,7 +3040,7 @@ The configuration of the host file mounted to the container. For example: `[{"ty
 The ID corresponding to the EDAS namespace, the non-default namespace must be filled in.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-mountDescs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L391">property <b>mountDescs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L391">property <b>mountDescs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mountDescs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3048,7 +3048,7 @@ The ID corresponding to the EDAS namespace, the non-default namespace must be fi
 Mount configuration description, as a serialized JSON. For example: `[{"nasPath": "/k8s","mountPath": "/mnt"},{"nasPath": "/files","mountPath": "/app/files"}]`. Among them, nasPath refers to the file storage path; mountPath refers to the path mounted in the container.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-namespace">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L395">property <b>namespace</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L395">property <b>namespace</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespace?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3056,7 +3056,7 @@ Mount configuration description, as a serialized JSON. For example: `[{"nasPath"
 The namespace of the K8s cluster, it will determine which K8s namespace your application is deployed in. The default is 'default'.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-nasId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L399">property <b>nasId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L399">property <b>nasId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nasId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3064,7 +3064,7 @@ The namespace of the K8s cluster, it will determine which K8s namespace your app
 The ID of the mounted NAS must be in the same region as the cluster. It must have an available mount point creation quota, or its mount point must be on a switch in the VPC. If it is not filled in and the mountDescs field exists, a NAS will be automatically purchased and mounted on the switch in the VPC by default.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-packageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L403">property <b>packageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L403">property <b>packageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3072,7 +3072,7 @@ The ID of the mounted NAS must be in the same region as the cluster. It must hav
 Application package type. Optional parameter values include: FatJar, WAR and Image.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-packageUrl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L407">property <b>packageUrl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L407">property <b>packageUrl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageUrl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3080,7 +3080,7 @@ Application package type. Optional parameter values include: FatJar, WAR and Ima
 The url of the package to deploy.Applications deployed through FatJar or WAR packages need to configure it.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-packageVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L411">property <b>packageVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L411">property <b>packageVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packageVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3088,7 +3088,7 @@ The url of the package to deploy.Applications deployed through FatJar or WAR pac
 The version number of the deployment package. WAR and FatJar types are required. Please customize its meaning.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-postStart">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L415">property <b>postStart</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L415">property <b>postStart</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postStart?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3096,7 +3096,7 @@ The version number of the deployment package. WAR and FatJar types are required.
 Execute script after startup
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-preStop">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L419">property <b>preStop</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L419">property <b>preStop</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preStop?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3104,7 +3104,7 @@ Execute script after startup
 Execute script before stopping
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-readiness">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L423">property <b>readiness</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L423">property <b>readiness</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>readiness?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3112,7 +3112,7 @@ Execute script before stopping
 Container service status check. If the check fails, the traffic passing through K8s Service will not be transferred to the container. The format is: `{"failureThreshold": 3,"initialDelaySeconds": 5,"successThreshold": 1,"timeoutSeconds": 1, "httpGet": {"path": "/consumer","port": 8080,"scheme": "HTTP","httpHeaders": [{"name": "test","value": "testvalue"} ]}}`.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-replicas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L427">property <b>replicas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L427">property <b>replicas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3120,7 +3120,7 @@ Container service status check. If the check fails, the traffic passing through 
 Number of application instances.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-requestsMCpu">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L431">property <b>requestsMCpu</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L431">property <b>requestsMCpu</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestsMCpu?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3128,7 +3128,7 @@ Number of application instances.
 When the application is created, the CPU quota of the application instance, unit: number of millcores, similar to request_cpu
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-requestsMem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L435">property <b>requestsMem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L435">property <b>requestsMem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>requestsMem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3136,7 +3136,7 @@ When the application is created, the CPU quota of the application instance, unit
 When the application is created, the memory limit of the application instance, unit: M. When set to 0, it means unlimited.
 
 <h4 class="pdoc-member-header" id="K8sApplicationState-webContainer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sApplication.ts#L439">property <b>webContainer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sApplication.ts#L439">property <b>webContainer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>webContainer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3144,7 +3144,7 @@ When the application is created, the memory limit of the application instance, u
 The Tomcat version that the deployment package depends on. Applicable to Spring Cloud and Dubbo applications deployed through WAR packages. Image does not support this parameter.
 
 <h3 class="pdoc-module-header" id="K8sClusterArgs" data-link-title="K8sClusterArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L178">
         interface <strong>K8sClusterArgs</strong>
     </a>
 </h3>
@@ -3154,7 +3154,7 @@ The Tomcat version that the deployment package depends on. Applicable to Spring 
 The set of arguments for constructing a K8sCluster resource.
 
 <h4 class="pdoc-member-header" id="K8sClusterArgs-csClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L182">property <b>csClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L182">property <b>csClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>csClusterId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3162,7 +3162,7 @@ The set of arguments for constructing a K8sCluster resource.
 The ID of the alicloud container service kubernetes cluster that you want to import.
 
 <h4 class="pdoc-member-header" id="K8sClusterArgs-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L186">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L186">property <b>namespaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3170,7 +3170,7 @@ The ID of the alicloud container service kubernetes cluster that you want to imp
 The ID of the namespace where you want to import. You can call the [ListUserDefineRegion](https://www.alibabacloud.com/help/en/doc-detail/149377.htm?spm=a2c63.p38356.879954.34.331054faK2yNvC#doc-api-Edas-ListUserDefineRegion) operation to query the namespace ID.
 
 <h3 class="pdoc-module-header" id="K8sClusterState" data-link-title="K8sClusterState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L140">
         interface <strong>K8sClusterState</strong>
     </a>
 </h3>
@@ -3180,7 +3180,7 @@ The ID of the namespace where you want to import. You can call the [ListUserDefi
 Input properties used for looking up and filtering K8sCluster resources.
 
 <h4 class="pdoc-member-header" id="K8sClusterState-clusterImportStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L148">property <b>clusterImportStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L148">property <b>clusterImportStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterImportStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3192,7 +3192,7 @@ The import status of cluster:
 `4`: deleted.
 
 <h4 class="pdoc-member-header" id="K8sClusterState-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L152">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L152">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3200,7 +3200,7 @@ The import status of cluster:
 The name of the cluster that you want to create.
 
 <h4 class="pdoc-member-header" id="K8sClusterState-clusterType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L156">property <b>clusterType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L156">property <b>clusterType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3208,7 +3208,7 @@ The name of the cluster that you want to create.
 The type of the cluster that you want to create. Valid values only: 5: K8s cluster.
 
 <h4 class="pdoc-member-header" id="K8sClusterState-csClusterId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L160">property <b>csClusterId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L160">property <b>csClusterId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>csClusterId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3216,7 +3216,7 @@ The type of the cluster that you want to create. Valid values only: 5: K8s clust
 The ID of the alicloud container service kubernetes cluster that you want to import.
 
 <h4 class="pdoc-member-header" id="K8sClusterState-namespaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L164">property <b>namespaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L164">property <b>namespaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namespaceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3224,7 +3224,7 @@ The ID of the alicloud container service kubernetes cluster that you want to imp
 The ID of the namespace where you want to import. You can call the [ListUserDefineRegion](https://www.alibabacloud.com/help/en/doc-detail/149377.htm?spm=a2c63.p38356.879954.34.331054faK2yNvC#doc-api-Edas-ListUserDefineRegion) operation to query the namespace ID.
 
 <h4 class="pdoc-member-header" id="K8sClusterState-networkMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L168">property <b>networkMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L168">property <b>networkMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3232,7 +3232,7 @@ The ID of the namespace where you want to import. You can call the [ListUserDefi
 The network type of the cluster that you want to create. Valid values: 1: classic network. 2: VPC.
 
 <h4 class="pdoc-member-header" id="K8sClusterState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/k8sCluster.ts#L172">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/k8sCluster.ts#L172">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3240,7 +3240,7 @@ The network type of the cluster that you want to create. Valid values: 1: classi
 The ID of the Virtual Private Cloud (VPC) for the cluster.
 
 <h3 class="pdoc-module-header" id="SlbAttachmentArgs" data-link-title="SlbAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L186">
         interface <strong>SlbAttachmentArgs</strong>
     </a>
 </h3>
@@ -3250,7 +3250,7 @@ The ID of the Virtual Private Cloud (VPC) for the cluster.
 The set of arguments for constructing a SlbAttachment resource.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L190">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L190">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3258,7 +3258,7 @@ The set of arguments for constructing a SlbAttachment resource.
 The ID of the applicaton to which you want to bind an SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentArgs-listenerPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L194">property <b>listenerPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L194">property <b>listenerPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listenerPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3266,7 +3266,7 @@ The ID of the applicaton to which you want to bind an SLB instance.
 The listening port for the bound SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentArgs-slbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L198">property <b>slbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L198">property <b>slbId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3274,7 +3274,7 @@ The listening port for the bound SLB instance.
 The ID of the SLB instance that is going to be bound.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentArgs-slbIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L202">property <b>slbIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L202">property <b>slbIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3282,7 +3282,7 @@ The ID of the SLB instance that is going to be bound.
 The IP address that is allocated to the bound SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L206">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L206">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3290,7 +3290,7 @@ The IP address that is allocated to the bound SLB instance.
 The type of the bound SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentArgs-vserverGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L210">property <b>vserverGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L210">property <b>vserverGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vserverGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3298,7 +3298,7 @@ The type of the bound SLB instance.
 The ID of the virtual server (VServer) group associated with the intranet SLB instance.
 
 <h3 class="pdoc-module-header" id="SlbAttachmentState" data-link-title="SlbAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L148">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L148">
         interface <strong>SlbAttachmentState</strong>
     </a>
 </h3>
@@ -3308,7 +3308,7 @@ The ID of the virtual server (VServer) group associated with the intranet SLB in
 Input properties used for looking up and filtering SlbAttachment resources.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L152">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L152">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3316,7 +3316,7 @@ Input properties used for looking up and filtering SlbAttachment resources.
 The ID of the applicaton to which you want to bind an SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentState-listenerPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L156">property <b>listenerPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L156">property <b>listenerPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listenerPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3324,7 +3324,7 @@ The ID of the applicaton to which you want to bind an SLB instance.
 The listening port for the bound SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentState-slbId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L160">property <b>slbId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L160">property <b>slbId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3332,7 +3332,7 @@ The listening port for the bound SLB instance.
 The ID of the SLB instance that is going to be bound.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentState-slbIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L164">property <b>slbIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L164">property <b>slbIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3340,7 +3340,7 @@ The ID of the SLB instance that is going to be bound.
 The IP address that is allocated to the bound SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentState-slbStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L168">property <b>slbStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L168">property <b>slbStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>slbStatus?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3348,7 +3348,7 @@ The IP address that is allocated to the bound SLB instance.
 Running Status of SLB instance. Inactive：The instance is stopped, and listener will not monitor and foward traffic. Active：The instance is running. After the instance is created, the default state is active. Locked：The instance is locked, the instance has been owed or locked by Alibaba Cloud. Expired: The instance has expired.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L172">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L172">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3356,7 +3356,7 @@ Running Status of SLB instance. Inactive：The instance is stopped, and listener
 The type of the bound SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentState-vserverGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L176">property <b>vserverGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L176">property <b>vserverGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vserverGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3364,7 +3364,7 @@ The type of the bound SLB instance.
 The ID of the virtual server (VServer) group associated with the intranet SLB instance.
 
 <h4 class="pdoc-member-header" id="SlbAttachmentState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/edas/slbAttachment.ts#L180">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/edas/slbAttachment.ts#L180">property <b>vswitchId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
