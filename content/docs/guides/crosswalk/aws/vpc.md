@@ -475,6 +475,8 @@ For additional details about configuring security group rules, See the
 [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) documentation.
 
 ## How to use your VPC, Security Group, and EC2 instance
+This example shows how to deploy an EC2 instance using a VPC and Security Group provisioned with the Crosswalk AWS component:
+
 
 ```typescript
 import * as awsx from "@pulumi/awsx";
@@ -508,7 +510,9 @@ const server = new aws.ec2.Instance("webserver-www", {
 });
 ```
 
-This example launches an ec2 instance in the vpc and security group that was created above.
+If we run `pulumi up`, the `aws.ec2.Instance` will be provisioned using the _first_ public subnet from the `awsx.ec2.Vpc` component and the security group provisioned with the `awsx.ec2.SecurityGroup` component:
+
+
 
 ```bash
 $ pulumi up
