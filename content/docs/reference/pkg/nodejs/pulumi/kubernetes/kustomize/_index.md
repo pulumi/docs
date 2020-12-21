@@ -3,7 +3,7 @@ title: "Module kustomize"
 title_tag: "Module kustomize | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "kustomize"
 meta_desc: "Explore members of the kustomize module in the @pulumi/kubernetes package."
-git_sha: "657aed0b110280d348eff68abb66faea6c1388a0"
+git_sha: "ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="Directory" data-link-title="Directory">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/kustomize/kustomize.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/kustomize/kustomize.ts#L79">
         class <strong>Directory</strong>
     </a>
 </h3>
@@ -91,7 +91,7 @@ const helloWorld = new k8s.kustomize.Directory("helloWorldRemote", {
 ```
 
 <h4 class="pdoc-member-header" id="Directory-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/kustomize/kustomize.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/kustomize/kustomize.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -105,7 +105,7 @@ Create an instance of the specified kustomize directory.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Directory-getCustomResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/yaml/yaml.ts#L2313">method <b>getCustomResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L2382">method <b>getCustomResource</b></a>
 </h4>
 
 
@@ -121,7 +121,7 @@ For example:
 <pre class="highlight"><code><span class='kd'>public </span>getCustomResource&lt;T&gt;(groupVersionKind: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;T&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Directory-getData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/kustomize/kustomize.ts#L79">method <b>getData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/kustomize/kustomize.ts#L79">method <b>getData</b></a>
 </h4>
 
 
@@ -132,14 +132,14 @@ Retrieves the data produces by [initialize].  The data is immediately available 
 derived class's constructor after the `super(...)` call to `ComponentResource`.
 
 <h4 class="pdoc-member-header" id="Directory-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/kustomize/kustomize.ts#L79">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/kustomize/kustomize.ts#L79">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Directory-getResource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/yaml/yaml.ts#L41">method <b>getResource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L42">method <b>getResource</b></a>
 </h4>
 
 
@@ -209,10 +209,10 @@ For example:
 <pre class="highlight"><code><span class='kd'>public </span>getResource(groupVersionKind: <span class='s2'>"apiextensions.k8s.io/v1/CustomResourceDefinitionList"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/apiextensions/v1/#CustomResourceDefinitionList'>CustomResourceDefinitionList</a>&gt;</code></pre>
 
 
-<pre class="highlight"><code>+ 374 additional overloads</code></pre>
+<pre class="highlight"><code>+ 386 additional overloads</code></pre>
 
 <h4 class="pdoc-member-header" id="Directory-getResourceProperty">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/yaml/yaml.ts#L445">method <b>getResourceProperty</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L458">method <b>getResourceProperty</b></a>
 </h4>
 
 
@@ -282,10 +282,10 @@ For example:
 <pre class="highlight"><code><span class='kd'>public </span>getResourceProperty(groupVersionKind: <span class='s2'>"admissionregistration.k8s.io/v1/ValidatingWebhookConfiguration"</span>, namespace: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, property: <span class='s2'>"kind"</span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"ValidatingWebhookConfiguration"</span>&gt;</code></pre>
 
 
-<pre class="highlight"><code>+ 1836 additional overloads</code></pre>
+<pre class="highlight"><code>+ 1892 additional overloads</code></pre>
 
 <h4 class="pdoc-member-header" id="Directory-initialize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/kustomize/kustomize.ts#L79">method <b>initialize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/kustomize/kustomize.ts#L79">method <b>initialize</b></a>
 </h4>
 
 
@@ -297,7 +297,7 @@ automatically when constructed.  The data will be available immediately for subc
 constructors to use.  To access the data use `.getData`.
 
 <h4 class="pdoc-member-header" id="Directory-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/kustomize/kustomize.ts#L79">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/kustomize/kustomize.ts#L79">method <b>isInstance</b></a>
 </h4>
 
 
@@ -308,7 +308,7 @@ Returns true if the given object is an instance of CustomResource.  This is desi
 multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Directory-registerOutputs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/kustomize/kustomize.ts#L79">method <b>registerOutputs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/kustomize/kustomize.ts#L79">method <b>registerOutputs</b></a>
 </h4>
 
 
@@ -322,13 +322,18 @@ ComponentResources can call this at the end of their constructor to indicate tha
 done creating child resources.  This is not strictly necessary as this will automatically be
 called after the `initialize` method completes.
 
+<h4 class="pdoc-member-header" id="Directory-ready">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L28">property <b>ready</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ready: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Directory-resources">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/yaml/yaml.ts#L27">property <b>resources</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/yaml/yaml.ts#L27">property <b>resources</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resources: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Directory-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/657aed0b110280d348eff68abb66faea6c1388a0/sdk/nodejs/kustomize/kustomize.ts#L79">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/kustomize/kustomize.ts#L79">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
