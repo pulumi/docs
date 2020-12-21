@@ -1,8 +1,8 @@
 
 ---
 title: "Integration"
-title_tag: "Resource Integration | Module aws | Package SignalFx"
-meta_desc: "Explore the Integration resource of the aws module, including examples, input properties, output properties, lookup functions, and supporting types. SignalFx AWS CloudWatch integrations. For help with this integration see [Monitoring Amazon Web Services](https://docs.signalfx.com/en/latest/integrations/amazon-web-services.html#monitor-amazon-web-services)."
+title_tag: "signalfx.aws.Integration"
+meta_desc: "Documentation for the signalfx.aws.Integration resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -18,6 +18,7 @@ SignalFx AWS CloudWatch integrations. For help with this integration see [Monito
 ## Service Names
 
 > **NOTE** You can use the data source "signalfx.aws.getServices" to specify all services.
+
 
 {{% examples %}}
 ## Example Usage
@@ -90,7 +91,7 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/iam"
-	"github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws"
+	"github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -224,7 +225,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#Integration">Integration</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#Integration">Integration</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -232,11 +233,11 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws?tab=doc#Integration">NewIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Integration.html">Integration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.IntegrationArgs.html">IntegrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Integration.html">Integration</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.IntegrationArgs.html">IntegrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -247,7 +248,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -306,7 +307,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -316,7 +317,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -326,7 +327,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws?tab=doc#IntegrationArgs">IntegrationArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -336,7 +337,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -355,7 +356,7 @@ const awsMyteam = new signalfx.aws.Integration("awsMyteam", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -396,7 +397,6 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -404,192 +404,174 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="integrationid_csharp">
 <a href="#integrationid_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customcloudwatchnamespaces_csharp">
 <a href="#customcloudwatchnamespaces_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cloudwatch<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customnamespacesyncrules_csharp">
 <a href="#customnamespacesyncrules_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableawsusage_csharp">
 <a href="#enableawsusage_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Aws<wbr>Usage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablechecklargevolume_csharp">
 <a href="#enablechecklargevolume_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Check<wbr>Large<wbr>Volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="externalid_csharp">
 <a href="#externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="importcloudwatch_csharp">
 <a href="#importcloudwatch_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Cloud<wbr>Watch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namedtoken_csharp">
 <a href="#namedtoken_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named token to use for ingest
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespacesyncrules_csharp">
 <a href="#namespacesyncrules_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pollrate_csharp">
 <a href="#pollrate_csharp" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regions_csharp">
 <a href="#regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolearn_csharp">
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_csharp">
 <a href="#services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usegetmetricdatamethod_csharp">
 <a href="#usegetmetricdatamethod_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -598,192 +580,174 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="integrationid_go">
 <a href="#integrationid_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customcloudwatchnamespaces_go">
 <a href="#customcloudwatchnamespaces_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cloudwatch<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customnamespacesyncrules_go">
 <a href="#customnamespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">[]Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableawsusage_go">
 <a href="#enableawsusage_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Aws<wbr>Usage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablechecklargevolume_go">
 <a href="#enablechecklargevolume_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Check<wbr>Large<wbr>Volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="externalid_go">
 <a href="#externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="importcloudwatch_go">
 <a href="#importcloudwatch_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Cloud<wbr>Watch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namedtoken_go">
 <a href="#namedtoken_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named token to use for ingest
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespacesyncrules_go">
 <a href="#namespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">[]Integration<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pollrate_go">
 <a href="#pollrate_go" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regions_go">
 <a href="#regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolearn_go">
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_go">
 <a href="#services_go" style="color: inherit; text-decoration: inherit;">Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usegetmetricdatamethod_go">
 <a href="#usegetmetricdatamethod_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -792,192 +756,174 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="integrationid_nodejs">
 <a href="#integrationid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customcloudwatchnamespaces_nodejs">
 <a href="#customcloudwatchnamespaces_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Cloudwatch<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="customnamespacesyncrules_nodejs">
 <a href="#customnamespacesyncrules_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableawsusage_nodejs">
 <a href="#enableawsusage_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Aws<wbr>Usage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enablechecklargevolume_nodejs">
 <a href="#enablechecklargevolume_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Check<wbr>Large<wbr>Volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="externalid_nodejs">
 <a href="#externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="importcloudwatch_nodejs">
 <a href="#importcloudwatch_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Cloud<wbr>Watch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namedtoken_nodejs">
 <a href="#namedtoken_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named token to use for ingest
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespacesyncrules_nodejs">
 <a href="#namespacesyncrules_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">Integration<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pollrate_nodejs">
 <a href="#pollrate_nodejs" style="color: inherit; text-decoration: inherit;">poll<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regions_nodejs">
 <a href="#regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rolearn_nodejs">
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_nodejs">
 <a href="#services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usegetmetricdatamethod_nodejs">
 <a href="#usegetmetricdatamethod_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -986,201 +932,179 @@ The Integration resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="integration_id_python">
 <a href="#integration_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_cloudwatch_namespaces_python">
 <a href="#custom_cloudwatch_namespaces_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cloudwatch_<wbr>namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="custom_namespace_sync_rules_python">
 <a href="#custom_namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>namespace_<wbr>sync_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Sequence[Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_aws_usage_python">
 <a href="#enable_aws_usage_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>aws_<wbr>usage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_check_large_volume_python">
 <a href="#enable_check_large_volume_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>check_<wbr>large_<wbr>volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="external_id_python">
 <a href="#external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="import_cloud_watch_python">
 <a href="#import_cloud_watch_python" style="color: inherit; text-decoration: inherit;">import_<wbr>cloud_<wbr>watch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="named_token_python">
 <a href="#named_token_python" style="color: inherit; text-decoration: inherit;">named_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A named token to use for ingest
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_sync_rules_python">
 <a href="#namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>sync_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">Sequence[Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="poll_rate_python">
 <a href="#poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regions_python">
 <a href="#regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_arn_python">
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="services_python">
 <a href="#services_python" style="color: inherit; text-decoration: inherit;">services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_get_metric_data_method_python">
 <a href="#use_get_metric_data_method_python" style="color: inherit; text-decoration: inherit;">use_<wbr>get_<wbr>metric_<wbr>data_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Integration resource produces the following output properties:
-
 
 
 
@@ -1191,15 +1115,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1208,15 +1130,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1225,15 +1145,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1242,18 +1160,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1263,7 +1176,7 @@ Get an existing Integration resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#Integration">Integration</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#Integration">Integration</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1272,11 +1185,11 @@ Get an existing Integration resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws?tab=doc#IntegrationState">IntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Integration.html">Integration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.IntegrationState.html">IntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Integration.html">Integration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.IntegrationState.html">IntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1378,7 +1291,6 @@ Get an existing Integration resource's state with the given name, ID, and option
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1386,192 +1298,174 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_customcloudwatchnamespaces_csharp">
 <a href="#state_customcloudwatchnamespaces_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cloudwatch<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customnamespacesyncrules_csharp">
 <a href="#state_customnamespacesyncrules_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableawsusage_csharp">
 <a href="#state_enableawsusage_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Aws<wbr>Usage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablechecklargevolume_csharp">
 <a href="#state_enablechecklargevolume_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Check<wbr>Large<wbr>Volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_externalid_csharp">
 <a href="#state_externalid_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_importcloudwatch_csharp">
 <a href="#state_importcloudwatch_csharp" style="color: inherit; text-decoration: inherit;">Import<wbr>Cloud<wbr>Watch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationid_csharp">
 <a href="#state_integrationid_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_csharp">
 <a href="#state_key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_namedtoken_csharp">
 <a href="#state_namedtoken_csharp" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named token to use for ingest
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_namespacesyncrules_csharp">
 <a href="#state_namespacesyncrules_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pollrate_csharp">
 <a href="#state_pollrate_csharp" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regions_csharp">
 <a href="#state_regions_csharp" style="color: inherit; text-decoration: inherit;">Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_csharp">
 <a href="#state_rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_services_csharp">
 <a href="#state_services_csharp" style="color: inherit; text-decoration: inherit;">Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_csharp">
 <a href="#state_token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usegetmetricdatamethod_csharp">
 <a href="#state_usegetmetricdatamethod_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1580,192 +1474,174 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_customcloudwatchnamespaces_go">
 <a href="#state_customcloudwatchnamespaces_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Cloudwatch<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customnamespacesyncrules_go">
 <a href="#state_customnamespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">[]Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableawsusage_go">
 <a href="#state_enableawsusage_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Aws<wbr>Usage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablechecklargevolume_go">
 <a href="#state_enablechecklargevolume_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Check<wbr>Large<wbr>Volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_externalid_go">
 <a href="#state_externalid_go" style="color: inherit; text-decoration: inherit;">External<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_importcloudwatch_go">
 <a href="#state_importcloudwatch_go" style="color: inherit; text-decoration: inherit;">Import<wbr>Cloud<wbr>Watch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationid_go">
 <a href="#state_integrationid_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_go">
 <a href="#state_key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_namedtoken_go">
 <a href="#state_namedtoken_go" style="color: inherit; text-decoration: inherit;">Named<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named token to use for ingest
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_namespacesyncrules_go">
 <a href="#state_namespacesyncrules_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">[]Integration<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pollrate_go">
 <a href="#state_pollrate_go" style="color: inherit; text-decoration: inherit;">Poll<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regions_go">
 <a href="#state_regions_go" style="color: inherit; text-decoration: inherit;">Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_go">
 <a href="#state_rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_services_go">
 <a href="#state_services_go" style="color: inherit; text-decoration: inherit;">Services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_go">
 <a href="#state_token_go" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usegetmetricdatamethod_go">
 <a href="#state_usegetmetricdatamethod_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1774,192 +1650,174 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_customcloudwatchnamespaces_nodejs">
 <a href="#state_customcloudwatchnamespaces_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Cloudwatch<wbr>Namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_customnamespacesyncrules_nodejs">
 <a href="#state_customnamespacesyncrules_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enableawsusage_nodejs">
 <a href="#state_enableawsusage_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Aws<wbr>Usage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enablechecklargevolume_nodejs">
 <a href="#state_enablechecklargevolume_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Check<wbr>Large<wbr>Volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_externalid_nodejs">
 <a href="#state_externalid_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_importcloudwatch_nodejs">
 <a href="#state_importcloudwatch_nodejs" style="color: inherit; text-decoration: inherit;">import<wbr>Cloud<wbr>Watch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationid_nodejs">
 <a href="#state_integrationid_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_nodejs">
 <a href="#state_key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_namedtoken_nodejs">
 <a href="#state_namedtoken_nodejs" style="color: inherit; text-decoration: inherit;">named<wbr>Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named token to use for ingest
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_namespacesyncrules_nodejs">
 <a href="#state_namespacesyncrules_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Sync<wbr>Rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">Integration<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_pollrate_nodejs">
 <a href="#state_pollrate_nodejs" style="color: inherit; text-decoration: inherit;">poll<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regions_nodejs">
 <a href="#state_regions_nodejs" style="color: inherit; text-decoration: inherit;">regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rolearn_nodejs">
 <a href="#state_rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_services_nodejs">
 <a href="#state_services_nodejs" style="color: inherit; text-decoration: inherit;">services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_nodejs">
 <a href="#state_token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usegetmetricdatamethod_nodejs">
 <a href="#state_usegetmetricdatamethod_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1968,195 +1826,174 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_custom_cloudwatch_namespaces_python">
 <a href="#state_custom_cloudwatch_namespaces_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>cloudwatch_<wbr>namespaces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_custom_namespace_sync_rules_python">
 <a href="#state_custom_namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>namespace_<wbr>sync_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Sequence[Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enable_aws_usage_python">
 <a href="#state_enable_aws_usage_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>aws_<wbr>usage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enable_check_large_volume_python">
 <a href="#state_enable_check_large_volume_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>check_<wbr>large_<wbr>volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx checks for large amounts of data for this AWS integration. If `true`, SignalFx monitors the amount of data coming in from the integration.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_external_id_python">
 <a href="#state_external_id_python" style="color: inherit; text-decoration: inherit;">external_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_import_cloud_watch_python">
 <a href="#state_import_cloud_watch_python" style="color: inherit; text-decoration: inherit;">import_<wbr>cloud_<wbr>watch</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_integration_id_python">
 <a href="#state_integration_id_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_python">
 <a href="#state_key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_named_token_python">
 <a href="#state_named_token_python" style="color: inherit; text-decoration: inherit;">named_<wbr>token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A named token to use for ingest
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_namespace_sync_rules_python">
 <a href="#state_namespace_sync_rules_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>sync_<wbr>rules</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#integrationnamespacesyncrule">Sequence[Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_poll_rate_python">
 <a href="#state_poll_rate_python" style="color: inherit; text-decoration: inherit;">poll_<wbr>rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). Value between `60` and `300`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regions_python">
 <a href="#state_regions_python" style="color: inherit; text-decoration: inherit;">regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_arn_python">
 <a href="#state_role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_services_python">
 <a href="#state_services_python" style="color: inherit; text-decoration: inherit;">services</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_python">
 <a href="#state_token_python" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_use_get_metric_data_method_python">
 <a href="#state_use_get_metric_data_method_python" style="color: inherit; text-decoration: inherit;">use_<wbr>get_<wbr>metric_<wbr>data_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2166,19 +2003,19 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="integrationcustomnamespacesyncrule">Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationCustomNamespaceSyncRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationCustomNamespaceSyncRule">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationCustomNamespaceSyncRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationCustomNamespaceSyncRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws?tab=doc#IntegrationCustomNamespaceSyncRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws?tab=doc#IntegrationCustomNamespaceSyncRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Inputs.IntegrationCustomNamespaceSyncRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Outputs.IntegrationCustomNamespaceSyncRule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2188,49 +2025,44 @@ The following state arguments are supported:
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultaction_csharp">
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filteraction_csharp">
 <a href="#filteraction_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersource_csharp">
 <a href="#filtersource_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2239,49 +2071,44 @@ The following state arguments are supported:
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultaction_go">
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filteraction_go">
 <a href="#filteraction_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersource_go">
 <a href="#filtersource_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2290,49 +2117,44 @@ The following state arguments are supported:
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultaction_nodejs">
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filteraction_nodejs">
 <a href="#filteraction_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersource_nodejs">
 <a href="#filtersource_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2341,52 +2163,44 @@ The following state arguments are supported:
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_action_python">
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_action_python">
 <a href="#filter_action_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_source_python">
 <a href="#filter_source_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="integrationnamespacesyncrule">Integration<wbr>Namespace<wbr>Sync<wbr>Rule</h4>
 {{% choosable language nodejs %}}
@@ -2394,13 +2208,12 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationNamespaceSyncRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/aws?tab=doc#IntegrationNamespaceSyncRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws?tab=doc#IntegrationNamespaceSyncRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/aws?tab=doc#IntegrationNamespaceSyncRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Inputs.IntegrationNamespaceSyncRuleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Aws.Outputs.IntegrationNamespaceSyncRule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2410,49 +2223,44 @@ The following state arguments are supported:
             title="Required">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultaction_csharp">
 <a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filteraction_csharp">
 <a href="#filteraction_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersource_csharp">
 <a href="#filtersource_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2461,49 +2269,44 @@ The following state arguments are supported:
             title="Required">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultaction_go">
 <a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filteraction_go">
 <a href="#filteraction_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersource_go">
 <a href="#filtersource_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2512,49 +2315,44 @@ The following state arguments are supported:
             title="Required">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="defaultaction_nodejs">
 <a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filteraction_nodejs">
 <a href="#filteraction_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filtersource_nodejs">
 <a href="#filtersource_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2563,55 +2361,44 @@ The following state arguments are supported:
             title="Required">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="default_action_python">
 <a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_action_python">
 <a href="#filter_action_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>action</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_source_python">
 <a href="#filter_source_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>source</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

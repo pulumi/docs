@@ -23,7 +23,7 @@ Explore the resources and functions of the opsgenie module in the SignalFx packa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
 	<dt>Version</dt>
-	<dd>3.1.1</dd>
+	<dd>4.0.0</dd>
 </dl>
 
 
@@ -34,7 +34,7 @@ Explore the resources and functions of the opsgenie module in the SignalFx packa
     <dd><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Opsgenie.html" title="Pulumi.SignalFx.Opsgenie">Pulumi.SignalFx.Opsgenie</a></dd>
 
     <dt>Go</dt>
-    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/opsgenie?tab=doc#" title="signalfx/opsgenie">signalfx/opsgenie</a></dd>
+    <dd><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/opsgenie?tab=doc#" title="signalfx/opsgenie">signalfx/opsgenie</a></dd>
 
     <dt>Node.js</dt>
     <dd><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/opsgenie/#" title="@pulumi/signalfx/opsgenie">@pulumi/signalfx/opsgenie</a></dd>

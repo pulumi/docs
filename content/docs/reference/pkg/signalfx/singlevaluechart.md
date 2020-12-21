@@ -14,6 +14,7 @@ This chart type displays a single number in a large font, representing the curre
 
 If the time period is in the past, the number represents the value of the metric near the end of the time period.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -55,7 +56,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx"
+	"github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -129,19 +130,19 @@ data("cpu.total.idle", filter=myfilters).publish()
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#SingleValueChart">SingleValueChart</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#SingleValueChartArgs">SingleValueChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#SingleValueChart">SingleValueChart</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#SingleValueChartArgs">SingleValueChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.SingleValueChart">SingleValueChart</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">color_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">color_scales</span><span class="p">:</span> <span class="nx">Optional[Sequence[SingleValueChartColorScaleArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_timestamp_hidden</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_precision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secondary_visualization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">show_spark_line</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">viz_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[SingleValueChartVizOptionArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_signalfx/#pulumi_signalfx.SingleValueChart">SingleValueChart</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">color_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">color_scales</span><span class="p">:</span> <span class="nx">Optional[Sequence[SingleValueChartColorScaleArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_timestamp_hidden</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_precision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secondary_visualization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">show_spark_line</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">viz_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[SingleValueChartVizOptionArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#SingleValueChart">NewSingleValueChart</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#SingleValueChartArgs">SingleValueChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#SingleValueChart">SingleValueChart</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#SingleValueChart">NewSingleValueChart</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#SingleValueChartArgs">SingleValueChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#SingleValueChart">SingleValueChart</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.SingleValueChart.html">SingleValueChart</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.SingleValueChartArgs.html">SingleValueChartArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.SingleValueChart.html">SingleValueChart</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.SingleValueChartArgs.html">SingleValueChartArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -152,7 +153,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -211,7 +212,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -221,7 +222,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -231,7 +232,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#SingleValueChartArgs">SingleValueChartArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#SingleValueChartArgs">SingleValueChartArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -241,7 +242,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -260,7 +261,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -301,7 +302,6 @@ The SingleValueChart resource accepts the following [input]({{< relref "/docs/in
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -309,148 +309,144 @@ The SingleValueChart resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="programtext_csharp">
 <a href="#programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorby_csharp">
 <a href="#colorby_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"`, `"Scale"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorscales_csharp">
 <a href="#colorscales_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartcolorscale">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="istimestamphidden_csharp">
 <a href="#istimestamphidden_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Timestamp<wbr>Hidden</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to hide the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdelay_csharp">
 <a href="#maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxprecision_csharp">
 <a href="#maxprecision_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum precision to for value displayed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="refreshinterval_csharp">
 <a href="#refreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryvisualization_csharp">
 <a href="#secondaryvisualization_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Visualization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of secondary visualization. Can be `None`, `Radial`, `Linear`, or `Sparkline`. If unset, the SignalFx default is used (`None`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showsparkline_csharp">
 <a href="#showsparkline_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Spark<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show a trend line below the current value. `false` by default.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (e.g. Australia/Sydney)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unitprefix_csharp">
 <a href="#unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary"`. `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vizoptions_csharp">
 <a href="#vizoptions_csharp" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartvizoption">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -459,148 +455,144 @@ The SingleValueChart resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="programtext_go">
 <a href="#programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorby_go">
 <a href="#colorby_go" style="color: inherit; text-decoration: inherit;">Color<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"`, `"Scale"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorscales_go">
 <a href="#colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartcolorscale">[]Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="istimestamphidden_go">
 <a href="#istimestamphidden_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Timestamp<wbr>Hidden</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to hide the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdelay_go">
 <a href="#maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxprecision_go">
 <a href="#maxprecision_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum precision to for value displayed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="refreshinterval_go">
 <a href="#refreshinterval_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryvisualization_go">
 <a href="#secondaryvisualization_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Visualization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of secondary visualization. Can be `None`, `Radial`, `Linear`, or `Sparkline`. If unset, the SignalFx default is used (`None`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showsparkline_go">
 <a href="#showsparkline_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Spark<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show a trend line below the current value. `false` by default.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (e.g. Australia/Sydney)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unitprefix_go">
 <a href="#unitprefix_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary"`. `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vizoptions_go">
 <a href="#vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartvizoption">[]Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -609,148 +601,144 @@ The SingleValueChart resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="programtext_nodejs">
 <a href="#programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorby_nodejs">
 <a href="#colorby_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"`, `"Scale"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorscales_nodejs">
 <a href="#colorscales_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartcolorscale">Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale[]</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="istimestamphidden_nodejs">
 <a href="#istimestamphidden_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Timestamp<wbr>Hidden</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to hide the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdelay_nodejs">
 <a href="#maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxprecision_nodejs">
 <a href="#maxprecision_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum precision to for value displayed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="refreshinterval_nodejs">
 <a href="#refreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondaryvisualization_nodejs">
 <a href="#secondaryvisualization_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Visualization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of secondary visualization. Can be `None`, `Radial`, `Linear`, or `Sparkline`. If unset, the SignalFx default is used (`None`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="showsparkline_nodejs">
 <a href="#showsparkline_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Spark<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to show a trend line below the current value. `false` by default.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (e.g. Australia/Sydney)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unitprefix_nodejs">
 <a href="#unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary"`. `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="vizoptions_nodejs">
 <a href="#vizoptions_nodejs" style="color: inherit; text-decoration: inherit;">viz<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartvizoption">Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -759,157 +747,149 @@ The SingleValueChart resource accepts the following [input]({{< relref "/docs/in
             title="Required">
         <span id="program_text_python">
 <a href="#program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="color_by_python">
 <a href="#color_by_python" style="color: inherit; text-decoration: inherit;">color_<wbr>by</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"`, `"Scale"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="color_scales_python">
 <a href="#color_scales_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartcolorscale">Sequence[Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="is_timestamp_hidden_python">
 <a href="#is_timestamp_hidden_python" style="color: inherit; text-decoration: inherit;">is_<wbr>timestamp_<wbr>hidden</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to hide the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_delay_python">
 <a href="#max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_precision_python">
 <a href="#max_precision_python" style="color: inherit; text-decoration: inherit;">max_<wbr>precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum precision to for value displayed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="refresh_interval_python">
 <a href="#refresh_interval_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="secondary_visualization_python">
 <a href="#secondary_visualization_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>visualization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of secondary visualization. Can be `None`, `Radial`, `Linear`, or `Sparkline`. If unset, the SignalFx default is used (`None`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="show_spark_line_python">
 <a href="#show_spark_line_python" style="color: inherit; text-decoration: inherit;">show_<wbr>spark_<wbr>line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show a trend line below the current value. `false` by default.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_python">
+<a href="#timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (e.g. Australia/Sydney)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unit_prefix_python">
 <a href="#unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary"`. `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="viz_options_python">
 <a href="#viz_options_python" style="color: inherit; text-decoration: inherit;">viz_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartvizoption">Sequence[Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the SingleValueChart resource produces the following output properties:
-
 
 
 
@@ -920,26 +900,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -948,26 +925,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -976,26 +950,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1004,29 +975,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1036,20 +1001,20 @@ Get an existing SingleValueChart resource's state with the given name, ID, and o
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#SingleValueChartState">SingleValueChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#SingleValueChart">SingleValueChart</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#SingleValueChartState">SingleValueChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#SingleValueChart">SingleValueChart</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">color_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">color_scales</span><span class="p">:</span> <span class="nx">Optional[Sequence[SingleValueChartColorScaleArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_timestamp_hidden</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_precision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secondary_visualization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">show_spark_line</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">viz_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[SingleValueChartVizOptionArgs]]</span> = None<span class="p">) -&gt;</span> SingleValueChart</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">color_by</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">color_scales</span><span class="p">:</span> <span class="nx">Optional[Sequence[SingleValueChartColorScaleArgs]]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_timestamp_hidden</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">max_delay</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_precision</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">program_text</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">refresh_interval</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">secondary_visualization</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">show_spark_line</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">timezone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">unit_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">viz_options</span><span class="p">:</span> <span class="nx">Optional[Sequence[SingleValueChartVizOptionArgs]]</span> = None<span class="p">) -&gt;</span> SingleValueChart</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSingleValueChart<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#SingleValueChartState">SingleValueChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#SingleValueChart">SingleValueChart</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSingleValueChart<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#SingleValueChartState">SingleValueChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#SingleValueChart">SingleValueChart</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.SingleValueChart.html">SingleValueChart</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..SingleValueChartState.html">SingleValueChartState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.SingleValueChart.html">SingleValueChart</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..SingleValueChartState.html">SingleValueChartState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1151,7 +1116,6 @@ Get an existing SingleValueChart resource's state with the given name, ID, and o
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1159,159 +1123,154 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_colorby_csharp">
 <a href="#state_colorby_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"`, `"Scale"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_colorscales_csharp">
 <a href="#state_colorscales_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartcolorscale">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_istimestamphidden_csharp">
 <a href="#state_istimestamphidden_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Timestamp<wbr>Hidden</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to hide the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_csharp">
 <a href="#state_maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxprecision_csharp">
 <a href="#state_maxprecision_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum precision to for value displayed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_programtext_csharp">
 <a href="#state_programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_refreshinterval_csharp">
 <a href="#state_refreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondaryvisualization_csharp">
 <a href="#state_secondaryvisualization_csharp" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Visualization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of secondary visualization. Can be `None`, `Radial`, `Linear`, or `Sparkline`. If unset, the SignalFx default is used (`None`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_showsparkline_csharp">
 <a href="#state_showsparkline_csharp" style="color: inherit; text-decoration: inherit;">Show<wbr>Spark<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show a trend line below the current value. `false` by default.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_timezone_csharp">
+<a href="#state_timezone_csharp" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (e.g. Australia/Sydney)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_csharp">
 <a href="#state_unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary"`. `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vizoptions_csharp">
 <a href="#state_vizoptions_csharp" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartvizoption">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1320,159 +1279,154 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_colorby_go">
 <a href="#state_colorby_go" style="color: inherit; text-decoration: inherit;">Color<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"`, `"Scale"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_colorscales_go">
 <a href="#state_colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartcolorscale">[]Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_istimestamphidden_go">
 <a href="#state_istimestamphidden_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Timestamp<wbr>Hidden</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to hide the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_go">
 <a href="#state_maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxprecision_go">
 <a href="#state_maxprecision_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum precision to for value displayed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_programtext_go">
 <a href="#state_programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_refreshinterval_go">
 <a href="#state_refreshinterval_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondaryvisualization_go">
 <a href="#state_secondaryvisualization_go" style="color: inherit; text-decoration: inherit;">Secondary<wbr>Visualization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of secondary visualization. Can be `None`, `Radial`, `Linear`, or `Sparkline`. If unset, the SignalFx default is used (`None`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_showsparkline_go">
 <a href="#state_showsparkline_go" style="color: inherit; text-decoration: inherit;">Show<wbr>Spark<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show a trend line below the current value. `false` by default.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_timezone_go">
+<a href="#state_timezone_go" style="color: inherit; text-decoration: inherit;">Timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (e.g. Australia/Sydney)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_go">
 <a href="#state_unitprefix_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary"`. `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vizoptions_go">
 <a href="#state_vizoptions_go" style="color: inherit; text-decoration: inherit;">Viz<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartvizoption">[]Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1481,159 +1435,154 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_colorby_nodejs">
 <a href="#state_colorby_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"`, `"Scale"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_colorscales_nodejs">
 <a href="#state_colorscales_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartcolorscale">Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale[]</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_istimestamphidden_nodejs">
 <a href="#state_istimestamphidden_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Timestamp<wbr>Hidden</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to hide the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_nodejs">
 <a href="#state_maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxprecision_nodejs">
 <a href="#state_maxprecision_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum precision to for value displayed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_programtext_nodejs">
 <a href="#state_programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_refreshinterval_nodejs">
 <a href="#state_refreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondaryvisualization_nodejs">
 <a href="#state_secondaryvisualization_nodejs" style="color: inherit; text-decoration: inherit;">secondary<wbr>Visualization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of secondary visualization. Can be `None`, `Radial`, `Linear`, or `Sparkline`. If unset, the SignalFx default is used (`None`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_showsparkline_nodejs">
 <a href="#state_showsparkline_nodejs" style="color: inherit; text-decoration: inherit;">show<wbr>Spark<wbr>Line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to show a trend line below the current value. `false` by default.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_timezone_nodejs">
+<a href="#state_timezone_nodejs" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (e.g. Australia/Sydney)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_nodejs">
 <a href="#state_unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary"`. `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_vizoptions_nodejs">
 <a href="#state_vizoptions_nodejs" style="color: inherit; text-decoration: inherit;">viz<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartvizoption">Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1642,162 +1591,154 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_color_by_python">
 <a href="#state_color_by_python" style="color: inherit; text-decoration: inherit;">color_<wbr>by</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Dimension"`, `"Scale"` or `"Metric"`. `"Dimension"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_color_scales_python">
 <a href="#state_color_scales_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartcolorscale">Sequence[Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Single color range including both the color to display for that range and the borders of the range. Example: `[{ gt = 60, color = "blue" }, { lte = 60, color = "yellow" }]`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_is_timestamp_hidden_python">
 <a href="#state_is_timestamp_hidden_python" style="color: inherit; text-decoration: inherit;">is_<wbr>timestamp_<wbr>hidden</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to hide the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_max_delay_python">
 <a href="#state_max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_max_precision_python">
 <a href="#state_max_precision_python" style="color: inherit; text-decoration: inherit;">max_<wbr>precision</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum precision to for value displayed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_program_text_python">
 <a href="#state_program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info [in the SignalFx docs](https://developers.signalfx.com/signalflow_analytics/signalflow_overview.html#_signalflow_programming_language).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_refresh_interval_python">
 <a href="#state_refresh_interval_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_secondary_visualization_python">
 <a href="#state_secondary_visualization_python" style="color: inherit; text-decoration: inherit;">secondary_<wbr>visualization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of secondary visualization. Can be `None`, `Radial`, `Linear`, or `Sparkline`. If unset, the SignalFx default is used (`None`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_show_spark_line_python">
 <a href="#state_show_spark_line_python" style="color: inherit; text-decoration: inherit;">show_<wbr>spark_<wbr>line</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show a trend line below the current value. `false` by default.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_timezone_python">
+<a href="#state_timezone_python" style="color: inherit; text-decoration: inherit;">timezone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The property value is a string that denotes the geographic region associated with the time zone, (e.g. Australia/Sydney)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_unit_prefix_python">
 <a href="#state_unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary"`. `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_viz_options_python">
 <a href="#state_viz_options_python" style="color: inherit; text-decoration: inherit;">viz_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#singlevaluechartvizoption">Sequence[Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Plot-level customization options, associated with a publish statement.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1807,19 +1748,19 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="singlevaluechartcolorscale">Single<wbr>Value<wbr>Chart<wbr>Color<wbr>Scale</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#SingleValueChartColorScale">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#SingleValueChartColorScale">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#SingleValueChartColorScaleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#SingleValueChartColorScaleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#SingleValueChartColorScaleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#SingleValueChartColorScaleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.SingleValueChartColorScaleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.SingleValueChartColorScale.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1829,60 +1770,54 @@ The following state arguments are supported:
             title="Required">
         <span id="color_csharp">
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color to use. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gt_csharp">
 <a href="#gt_csharp" style="color: inherit; text-decoration: inherit;">Gt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gte_csharp">
 <a href="#gte_csharp" style="color: inherit; text-decoration: inherit;">Gte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lt_csharp">
 <a href="#lt_csharp" style="color: inherit; text-decoration: inherit;">Lt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inculsive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lte_csharp">
 <a href="#lte_csharp" style="color: inherit; text-decoration: inherit;">Lte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1891,60 +1826,54 @@ The following state arguments are supported:
             title="Required">
         <span id="color_go">
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color to use. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gt_go">
 <a href="#gt_go" style="color: inherit; text-decoration: inherit;">Gt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gte_go">
 <a href="#gte_go" style="color: inherit; text-decoration: inherit;">Gte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lt_go">
 <a href="#lt_go" style="color: inherit; text-decoration: inherit;">Lt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inculsive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lte_go">
 <a href="#lte_go" style="color: inherit; text-decoration: inherit;">Lte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1953,60 +1882,54 @@ The following state arguments are supported:
             title="Required">
         <span id="color_nodejs">
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color to use. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gt_nodejs">
 <a href="#gt_nodejs" style="color: inherit; text-decoration: inherit;">gt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gte_nodejs">
 <a href="#gte_nodejs" style="color: inherit; text-decoration: inherit;">gte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lt_nodejs">
 <a href="#lt_nodejs" style="color: inherit; text-decoration: inherit;">lt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inculsive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lte_nodejs">
 <a href="#lte_nodejs" style="color: inherit; text-decoration: inherit;">lte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2015,63 +1938,54 @@ The following state arguments are supported:
             title="Required">
         <span id="color_python">
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The color to use. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gt_python">
 <a href="#gt_python" style="color: inherit; text-decoration: inherit;">gt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gte_python">
 <a href="#gte_python" style="color: inherit; text-decoration: inherit;">gte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lt_python">
 <a href="#lt_python" style="color: inherit; text-decoration: inherit;">lt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inculsive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lte_python">
 <a href="#lte_python" style="color: inherit; text-decoration: inherit;">lte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="singlevaluechartvizoption">Single<wbr>Value<wbr>Chart<wbr>Viz<wbr>Option</h4>
 {{% choosable language nodejs %}}
@@ -2079,13 +1993,12 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#SingleValueChartVizOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#SingleValueChartVizOptionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#SingleValueChartVizOptionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#SingleValueChartVizOptionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.SingleValueChartVizOptionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.SingleValueChartVizOption.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2095,70 +2008,63 @@ The following state arguments are supported:
             title="Required">
         <span id="label_csharp">
 <a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the plot (metric time series data) you want to customize.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="color_csharp">
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color to use. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valueprefix_csharp">
 <a href="#valueprefix_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valuesuffix_csharp">
 <a href="#valuesuffix_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valueunit_csharp">
 <a href="#valueunit_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unit to attach to this plot. Units support automatic scaling (eg thousands of bytes will be displayed as kilobytes). Values values are `Bit, Kilobit, Megabit, Gigabit, Terabit, Petabit, Exabit, Zettabit, Yottabit, Byte, Kibibyte, Mebibyte, Gigibyte, Tebibyte, Pebibyte, Exbibyte, Zebibyte, Yobibyte, Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week`.
 * `value_prefix`, `value_suffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2167,70 +2073,63 @@ The following state arguments are supported:
             title="Required">
         <span id="label_go">
 <a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the plot (metric time series data) you want to customize.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="color_go">
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color to use. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valueprefix_go">
 <a href="#valueprefix_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valuesuffix_go">
 <a href="#valuesuffix_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valueunit_go">
 <a href="#valueunit_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unit to attach to this plot. Units support automatic scaling (eg thousands of bytes will be displayed as kilobytes). Values values are `Bit, Kilobit, Megabit, Gigabit, Terabit, Petabit, Exabit, Zettabit, Yottabit, Byte, Kibibyte, Mebibyte, Gigibyte, Tebibyte, Pebibyte, Exbibyte, Zebibyte, Yobibyte, Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week`.
 * `value_prefix`, `value_suffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2239,70 +2138,63 @@ The following state arguments are supported:
             title="Required">
         <span id="label_nodejs">
 <a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the plot (metric time series data) you want to customize.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="color_nodejs">
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color to use. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valueprefix_nodejs">
 <a href="#valueprefix_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valuesuffix_nodejs">
 <a href="#valuesuffix_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="valueunit_nodejs">
 <a href="#valueunit_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unit to attach to this plot. Units support automatic scaling (eg thousands of bytes will be displayed as kilobytes). Values values are `Bit, Kilobit, Megabit, Gigabit, Terabit, Petabit, Exabit, Zettabit, Yottabit, Byte, Kibibyte, Mebibyte, Gigibyte, Tebibyte, Pebibyte, Exbibyte, Zebibyte, Yobibyte, Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week`.
 * `value_prefix`, `value_suffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2311,76 +2203,63 @@ The following state arguments are supported:
             title="Required">
         <span id="label_python">
 <a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Label used in the publish statement that displays the plot (metric time series data) you want to customize.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="color_python">
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The color to use. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies an alternate value for the Plot Name column of the Data Table associated with the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_prefix_python">
 <a href="#value_prefix_python" style="color: inherit; text-decoration: inherit;">value_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_suffix_python">
 <a href="#value_suffix_python" style="color: inherit; text-decoration: inherit;">value_<wbr>suffix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="value_unit_python">
 <a href="#value_unit_python" style="color: inherit; text-decoration: inherit;">value_<wbr>unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A unit to attach to this plot. Units support automatic scaling (eg thousands of bytes will be displayed as kilobytes). Values values are `Bit, Kilobit, Megabit, Gigabit, Terabit, Petabit, Exabit, Zettabit, Yottabit, Byte, Kibibyte, Mebibyte, Gigibyte, Tebibyte, Pebibyte, Exbibyte, Zebibyte, Yobibyte, Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week`.
 * `value_prefix`, `value_suffix` - (Optional) Arbitrary prefix/suffix to display with the value of this plot.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
