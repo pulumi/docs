@@ -3,7 +3,7 @@ title: "Module sag"
 title_tag: "Module sag | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "sag"
 meta_desc: "Explore members of the sag module in the @pulumi/alicloud package."
-git_sha: "fcdd66dccf963899382dd7b59249d3ec24e3632c"
+git_sha: "34bfe92dd27a93a08be385d80a27b12f6378de00"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAcls" data-link-title="getAcls">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L30">
         Function <strong>getAcls</strong>
     </a>
 </h3>
@@ -64,7 +64,7 @@ const defaultAcl = new alicloud.rocketmq.Acl("default", {});
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetAclsArgs" data-link-title="GetAclsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L49">
         interface <strong>GetAclsArgs</strong>
     </a>
 </h3>
@@ -74,7 +74,7 @@ const defaultAcl = new alicloud.rocketmq.Acl("default", {});
 A collection of arguments for invoking getAcls.
 
 <h4 class="pdoc-member-header" id="GetAclsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L53">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L53">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -82,7 +82,7 @@ A collection of arguments for invoking getAcls.
 A list of Sag Acl IDs.
 
 <h4 class="pdoc-member-header" id="GetAclsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L57">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L57">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -90,12 +90,12 @@ A list of Sag Acl IDs.
 A regex string to filter Sag Acl instances by name.
 
 <h4 class="pdoc-member-header" id="GetAclsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L58">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L58">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAclsResult" data-link-title="GetAclsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L64">
         interface <strong>GetAclsResult</strong>
     </a>
 </h3>
@@ -105,7 +105,7 @@ A regex string to filter Sag Acl instances by name.
 A collection of values returned by getAcls.
 
 <h4 class="pdoc-member-header" id="GetAclsResult-acls">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L68">property <b>acls</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L68">property <b>acls</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acls: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAclsAcl'>GetAclsAcl</a>[];</code></pre>
@@ -113,7 +113,7 @@ A collection of values returned by getAcls.
 A list of Sag Acls. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetAclsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -121,7 +121,7 @@ A list of Sag Acls. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAclsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L76">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L76">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -129,12 +129,12 @@ The provider-assigned unique ID for this managed resource.
 A list of Sag Acl IDs.
 
 <h4 class="pdoc-member-header" id="GetAclsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L77">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L77">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAclsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L81">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L81">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -142,7 +142,7 @@ A list of Sag Acl IDs.
 A list of Sag Acls names.
 
 <h4 class="pdoc-member-header" id="GetAclsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/sag/getAcls.ts#L82">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/sag/getAcls.ts#L82">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

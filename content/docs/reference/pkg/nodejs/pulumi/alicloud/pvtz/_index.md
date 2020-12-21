@@ -3,7 +3,7 @@ title: "Module pvtz"
 title_tag: "Module pvtz | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "pvtz"
 meta_desc: "Explore members of the pvtz module in the @pulumi/alicloud package."
-git_sha: "fcdd66dccf963899382dd7b59249d3ec24e3632c"
+git_sha: "34bfe92dd27a93a08be385d80a27b12f6378de00"
 block_external_search_index: true
 ---
 
@@ -45,7 +45,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Zone" data-link-title="Zone">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L16">
         Resource <strong>Zone</strong>
     </a>
 </h3>
@@ -61,7 +61,7 @@ Private Zone can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Zone-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L84"> <b>constructor</b></a>
 </h4>
 
 
@@ -75,7 +75,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Zone-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -86,14 +86,14 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Zone-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Zone-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -103,13 +103,8 @@ properties used to qualify the lookup.
 Returns true if the given object is an instance of Zone.  This is designed to work even
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
-<h4 class="pdoc-member-header" id="Zone-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L44">property <b>creationTime</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'>public </span>creationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Zone-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -118,12 +113,15 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Zone-isPtr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L45">property <b>isPtr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L47">property <b>isPtr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isPtr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether the Private Zone is ptr.
+
 <h4 class="pdoc-member-header" id="Zone-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L49">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L51">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lang: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -131,15 +129,19 @@ deployments and may be missing (undefined) during planning phases.
 The language. Valid values: "zh", "en", "jp".
 
 <h4 class="pdoc-member-header" id="Zone-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L53">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L57">property <b>name</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The name of the Private Zone.
 
 <h4 class="pdoc-member-header" id="Zone-proxyPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L59">property <b>proxyPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L64">property <b>proxyPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>proxyPattern: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -147,9 +149,10 @@ The name of the Private Zone.
 The recursive DNS proxy. Valid values:
 - ZONE: indicates that the recursive DNS proxy is disabled.
 - RECORD: indicates that the recursive DNS proxy is enabled.
+Default to "ZONE".
 
 <h4 class="pdoc-member-header" id="Zone-recordCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L63">property <b>recordCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L68">property <b>recordCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recordCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -157,7 +160,7 @@ The recursive DNS proxy. Valid values:
 The count of the Private Zone Record.
 
 <h4 class="pdoc-member-header" id="Zone-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L67">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L72">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -165,20 +168,15 @@ The count of the Private Zone Record.
 The remark of the Private Zone.
 
 <h4 class="pdoc-member-header" id="Zone-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L71">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L76">property <b>resourceGroupId</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'>public </span>resourceGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The Id of resource group which the Private Zone belongs.
 
-<h4 class="pdoc-member-header" id="Zone-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L72">property <b>updateTime</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'>public </span>updateTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Zone-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -187,15 +185,23 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Zone-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L76">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L80">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userClientIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 The IP address of the client.
 
+<h4 class="pdoc-member-header" id="Zone-zoneName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L84">property <b>zoneName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>zoneName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The zoneName of the Private Zone.
+
 <h3 class="pdoc-module-header" id="ZoneAttachment" data-link-title="ZoneAttachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L17">
         Resource <strong>ZoneAttachment</strong>
     </a>
 </h3>
@@ -211,7 +217,7 @@ Private Zone attachment can be imported using the id(same with `zone_id`), e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ZoneAttachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -225,7 +231,7 @@ Create a ZoneAttachment resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ZoneAttachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -236,14 +242,14 @@ Get an existing ZoneAttachment resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ZoneAttachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ZoneAttachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -254,7 +260,7 @@ Returns true if the given object is an instance of ZoneAttachment.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ZoneAttachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -263,7 +269,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ZoneAttachment-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L48">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L48">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lang: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -271,7 +277,7 @@ deployments and may be missing (undefined) during planning phases.
 The language of code.
 
 <h4 class="pdoc-member-header" id="ZoneAttachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -280,7 +286,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ZoneAttachment-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L52">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L52">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userClientIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -288,7 +294,7 @@ deployments.
 The user custom IP address.
 
 <h4 class="pdoc-member-header" id="ZoneAttachment-vpcIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L56">property <b>vpcIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L56">property <b>vpcIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -296,7 +302,7 @@ The user custom IP address.
 The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 
 <h4 class="pdoc-member-header" id="ZoneAttachment-vpcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L60">property <b>vpcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L60">property <b>vpcs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcs: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ZoneAttachmentVpc'>ZoneAttachmentVpc</a>[]&gt;;</code></pre>
@@ -304,7 +310,7 @@ The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 The List of the VPC:
 
 <h4 class="pdoc-member-header" id="ZoneAttachment-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L64">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L64">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -312,7 +318,7 @@ The List of the VPC:
 The name of the Private Zone Record.
 
 <h3 class="pdoc-module-header" id="ZoneRecord" data-link-title="ZoneRecord">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L16">
         Resource <strong>ZoneRecord</strong>
     </a>
 </h3>
@@ -328,7 +334,7 @@ Private Zone Record can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ZoneRecord-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L75"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -342,7 +348,7 @@ Create a ZoneRecord resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ZoneRecord-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -353,14 +359,14 @@ Get an existing ZoneRecord resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ZoneRecord-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ZoneRecord-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -371,7 +377,7 @@ Returns true if the given object is an instance of ZoneRecord.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ZoneRecord-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -379,16 +385,24 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 id is the provider-assigned unique ID for this managed resource.  It is set during
 deployments and may be missing (undefined) during planning phases.
 
+<h4 class="pdoc-member-header" id="ZoneRecord-lang">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L47">property <b>lang</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>lang: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+User language.
+
 <h4 class="pdoc-member-header" id="ZoneRecord-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L47">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L51">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>priority: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-The priority of the Private Zone Record. At present, only can "MX" record support it. Valid values: [1-50]. Default to 1.
+The priority of the Private Zone Record. At present, only can "MX" record support it. Valid values: [1-99]. Default to 1.
 
 <h4 class="pdoc-member-header" id="ZoneRecord-recordId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L51">property <b>recordId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L55">property <b>recordId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recordId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -396,7 +410,7 @@ The priority of the Private Zone Record. At present, only can "MX" record suppor
 The Private Zone Record ID.
 
 <h4 class="pdoc-member-header" id="ZoneRecord-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L55">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L59">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>remark: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -404,31 +418,53 @@ The Private Zone Record ID.
 The remark of the Private Zone Record.
 
 <h4 class="pdoc-member-header" id="ZoneRecord-resourceRecord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L59">property <b>resourceRecord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L65">property <b>resourceRecord</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;resource_record&#39; has been deprecated from version 1.109.0. Use &#39;rr&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'>public </span>resourceRecord: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The resource record of the Private Zone Record.
 
+<h4 class="pdoc-member-header" id="ZoneRecord-rr">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L69">property <b>rr</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>rr: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The rr of the Private Zone Record.
+
+<h4 class="pdoc-member-header" id="ZoneRecord-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L75">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Resolve record status. Value:
+- ENABLE: enable resolution.
+- DISABLE: pause parsing.
+
 <h4 class="pdoc-member-header" id="ZoneRecord-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L63">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L79">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ttl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
-The ttl of the Private Zone Record.
+The ttl of the Private Zone Record. Default to `60`.
 
 <h4 class="pdoc-member-header" id="ZoneRecord-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L67">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L83">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The type of the Private Zone Record. Valid values: A, CNAME, TXT, MX, PTR.
+The type of the Private Zone Record. Valid values: A, CNAME, TXT, MX, PTR, SRV.
 
 <h4 class="pdoc-member-header" id="ZoneRecord-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -436,8 +472,13 @@ The type of the Private Zone Record. Valid values: A, CNAME, TXT, MX, PTR.
 urn is the stable logical URN used to distinctly address a resource, both before and after
 deployments.
 
+<h4 class="pdoc-member-header" id="ZoneRecord-userClientIp">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L84">property <b>userClientIp</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>userClientIp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneRecord-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L71">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L88">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -445,7 +486,7 @@ deployments.
 The value of the Private Zone Record.
 
 <h4 class="pdoc-member-header" id="ZoneRecord-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L75">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L92">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -455,7 +496,7 @@ The name of the Private Zone Record.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getZoneRecords" data-link-title="getZoneRecords">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L25">
         Function <strong>getZoneRecords</strong>
     </a>
 </h3>
@@ -481,7 +522,7 @@ export const firstRecordId = recordsDs.records[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getZones" data-link-title="getZones">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L24">
         Function <strong>getZones</strong>
     </a>
 </h3>
@@ -508,7 +549,7 @@ export const firstZoneId = pvtzZonesDs.zones[0].id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetZoneRecordsArgs" data-link-title="GetZoneRecordsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L49">
         interface <strong>GetZoneRecordsArgs</strong>
     </a>
 </h3>
@@ -518,7 +559,7 @@ export const firstZoneId = pvtzZonesDs.zones[0].id;
 A collection of arguments for invoking getZoneRecords.
 
 <h4 class="pdoc-member-header" id="GetZoneRecordsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L48">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L53">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -526,20 +567,64 @@ A collection of arguments for invoking getZoneRecords.
 A list of Private Zone Record IDs.
 
 <h4 class="pdoc-member-header" id="GetZoneRecordsArgs-keyword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L52">property <b>keyword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L57">property <b>keyword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 Keyword for record rr and value.
 
+<h4 class="pdoc-member-header" id="GetZoneRecordsArgs-lang">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L61">property <b>lang</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+User language.
+
 <h4 class="pdoc-member-header" id="GetZoneRecordsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L53">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L62">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetZoneRecordsArgs-searchMode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L68">property <b>searchMode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>searchMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Search mode. Value:
+- LIKE: fuzzy search.
+- EXACT: precise search. It is not filled in by default.
+
+<h4 class="pdoc-member-header" id="GetZoneRecordsArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L74">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Resolve record status. Value:
+- ENABLE: enable resolution.
+- DISABLE: pause parsing.
+
+<h4 class="pdoc-member-header" id="GetZoneRecordsArgs-tag">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L78">property <b>tag</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+It is not filled in by default, and queries the current zone resolution records. Fill in "ecs" to query the host name record list under the VPC associated with the current zone.
+
+<h4 class="pdoc-member-header" id="GetZoneRecordsArgs-userClientIp">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L82">property <b>userClientIp</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>userClientIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+User ip.
+
 <h4 class="pdoc-member-header" id="GetZoneRecordsArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L57">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L86">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -547,7 +632,7 @@ Keyword for record rr and value.
 ID of the Private Zone.
 
 <h3 class="pdoc-module-header" id="GetZoneRecordsResult" data-link-title="GetZoneRecordsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L92">
         interface <strong>GetZoneRecordsResult</strong>
     </a>
 </h3>
@@ -557,7 +642,7 @@ ID of the Private Zone.
 A collection of values returned by getZoneRecords.
 
 <h4 class="pdoc-member-header" id="GetZoneRecordsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L96">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -565,7 +650,7 @@ A collection of values returned by getZoneRecords.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetZoneRecordsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L71">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L100">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -573,30 +658,58 @@ The provider-assigned unique ID for this managed resource.
 A list of Private Zone Record IDs.
 
 <h4 class="pdoc-member-header" id="GetZoneRecordsResult-keyword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L72">property <b>keyword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L101">property <b>keyword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetZoneRecordsResult-lang">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L102">property <b>lang</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZoneRecordsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L73">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L103">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZoneRecordsResult-records">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L77">property <b>records</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L107">property <b>records</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>records: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetZoneRecordsRecord'>GetZoneRecordsRecord</a>[];</code></pre>
 
 A list of zone records. Each element contains the following attributes:
 
+<h4 class="pdoc-member-header" id="GetZoneRecordsResult-searchMode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L108">property <b>searchMode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>searchMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetZoneRecordsResult-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L112">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Status of the Private Zone Record.
+
+<h4 class="pdoc-member-header" id="GetZoneRecordsResult-tag">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L113">property <b>tag</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>tag?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetZoneRecordsResult-userClientIp">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L114">property <b>userClientIp</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>userClientIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZoneRecordsResult-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZoneRecords.ts#L78">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZoneRecords.ts#L115">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetZonesArgs" data-link-title="GetZonesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L50">
         interface <strong>GetZonesArgs</strong>
     </a>
 </h3>
@@ -605,8 +718,16 @@ A list of zone records. Each element contains the following attributes:
 
 A collection of arguments for invoking getZones.
 
+<h4 class="pdoc-member-header" id="GetZonesArgs-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L54">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
+
+-(Optional, Available 1.107.0+) Default to `false`. Set it to true can output more details.
+
 <h4 class="pdoc-member-header" id="GetZonesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L47">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L58">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -614,20 +735,67 @@ A collection of arguments for invoking getZones.
 A list of zone IDs.
 
 <h4 class="pdoc-member-header" id="GetZonesArgs-keyword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L51">property <b>keyword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L62">property <b>keyword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 
 keyword for zone name.
 
+<h4 class="pdoc-member-header" id="GetZonesArgs-lang">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L66">property <b>lang</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+User language.
+
+<h4 class="pdoc-member-header" id="GetZonesArgs-nameRegex">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L67">property <b>nameRegex</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L52">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L68">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetZonesArgs-queryRegionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L72">property <b>queryRegionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>queryRegionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+query_region_id for zone regionId.
+
+<h4 class="pdoc-member-header" id="GetZonesArgs-queryVpcId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L76">property <b>queryVpcId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>queryVpcId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+query_vpc_id for zone vpcId.
+
+<h4 class="pdoc-member-header" id="GetZonesArgs-resourceGroupId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L80">property <b>resourceGroupId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+resource_group_id for zone resourceGroupId.
+
+<h4 class="pdoc-member-header" id="GetZonesArgs-searchMode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L86">property <b>searchMode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>searchMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+Search mode. Value:
+- LIKE: fuzzy search.
+- EXACT: precise search. It is not filled in by default.
+
 <h3 class="pdoc-module-header" id="GetZonesResult" data-link-title="GetZonesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L92">
         interface <strong>GetZonesResult</strong>
     </a>
 </h3>
@@ -636,8 +804,13 @@ keyword for zone name.
 
 A collection of values returned by getZones.
 
+<h4 class="pdoc-member-header" id="GetZonesResult-enableDetails">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L93">property <b>enableDetails</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L62">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L97">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -645,7 +818,7 @@ A collection of values returned by getZones.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L66">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L101">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -653,12 +826,22 @@ The provider-assigned unique ID for this managed resource.
 A list of zone IDs.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-keyword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L67">property <b>keyword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L102">property <b>keyword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyword?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetZonesResult-lang">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L103">property <b>lang</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>lang?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetZonesResult-nameRegex">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L104">property <b>nameRegex</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L71">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L108">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -666,12 +849,35 @@ A list of zone IDs.
 A list of zone names.
 
 <h4 class="pdoc-member-header" id="GetZonesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L72">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L109">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetZonesResult-queryRegionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L110">property <b>queryRegionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>queryRegionId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetZonesResult-queryVpcId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L111">property <b>queryVpcId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>queryVpcId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetZonesResult-resourceGroupId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L115">property <b>resourceGroupId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The Id of resource group which the Private Zone belongs.
+
+<h4 class="pdoc-member-header" id="GetZonesResult-searchMode">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L116">property <b>searchMode</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>searchMode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetZonesResult-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/getZones.ts#L76">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/getZones.ts#L120">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetZonesZone'>GetZonesZone</a>[];</code></pre>
@@ -679,7 +885,7 @@ A list of zone names.
 A list of zones. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="ZoneArgs" data-link-title="ZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L166">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L180">
         interface <strong>ZoneArgs</strong>
     </a>
 </h3>
@@ -689,7 +895,7 @@ A list of zones. Each element contains the following attributes:
 The set of arguments for constructing a Zone resource.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L170">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L184">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -697,15 +903,19 @@ The set of arguments for constructing a Zone resource.
 The language. Valid values: "zh", "en", "jp".
 
 <h4 class="pdoc-member-header" id="ZoneArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L174">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L190">property <b>name</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The name of the Private Zone.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-proxyPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L180">property <b>proxyPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L197">property <b>proxyPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -713,9 +923,10 @@ The name of the Private Zone.
 The recursive DNS proxy. Valid values:
 - ZONE: indicates that the recursive DNS proxy is disabled.
 - RECORD: indicates that the recursive DNS proxy is enabled.
+Default to "ZONE".
 
 <h4 class="pdoc-member-header" id="ZoneArgs-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L184">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L201">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -723,7 +934,7 @@ The recursive DNS proxy. Valid values:
 The remark of the Private Zone.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L188">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L205">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -731,15 +942,23 @@ The remark of the Private Zone.
 The Id of resource group which the Private Zone belongs.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L192">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L209">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The IP address of the client.
 
+<h4 class="pdoc-member-header" id="ZoneArgs-zoneName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L213">property <b>zoneName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The zoneName of the Private Zone.
+
 <h3 class="pdoc-module-header" id="ZoneAttachmentArgs" data-link-title="ZoneAttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L134">
         interface <strong>ZoneAttachmentArgs</strong>
     </a>
 </h3>
@@ -749,7 +968,7 @@ The IP address of the client.
 The set of arguments for constructing a ZoneAttachment resource.
 
 <h4 class="pdoc-member-header" id="ZoneAttachmentArgs-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L138">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L138">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -757,7 +976,7 @@ The set of arguments for constructing a ZoneAttachment resource.
 The language of code.
 
 <h4 class="pdoc-member-header" id="ZoneAttachmentArgs-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L142">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L142">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -765,7 +984,7 @@ The language of code.
 The user custom IP address.
 
 <h4 class="pdoc-member-header" id="ZoneAttachmentArgs-vpcIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L146">property <b>vpcIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L146">property <b>vpcIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -773,7 +992,7 @@ The user custom IP address.
 The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 
 <h4 class="pdoc-member-header" id="ZoneAttachmentArgs-vpcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L150">property <b>vpcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L150">property <b>vpcs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ZoneAttachmentVpc'>ZoneAttachmentVpc</a>&gt;[]&gt;;</code></pre>
@@ -781,7 +1000,7 @@ The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 The List of the VPC:
 
 <h4 class="pdoc-member-header" id="ZoneAttachmentArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L154">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L154">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -789,7 +1008,7 @@ The List of the VPC:
 The name of the Private Zone Record.
 
 <h3 class="pdoc-module-header" id="ZoneAttachmentState" data-link-title="ZoneAttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L108">
         interface <strong>ZoneAttachmentState</strong>
     </a>
 </h3>
@@ -799,7 +1018,7 @@ The name of the Private Zone Record.
 Input properties used for looking up and filtering ZoneAttachment resources.
 
 <h4 class="pdoc-member-header" id="ZoneAttachmentState-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L112">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L112">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -807,7 +1026,7 @@ Input properties used for looking up and filtering ZoneAttachment resources.
 The language of code.
 
 <h4 class="pdoc-member-header" id="ZoneAttachmentState-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L116">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L116">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -815,7 +1034,7 @@ The language of code.
 The user custom IP address.
 
 <h4 class="pdoc-member-header" id="ZoneAttachmentState-vpcIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L120">property <b>vpcIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L120">property <b>vpcIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -823,7 +1042,7 @@ The user custom IP address.
 The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 
 <h4 class="pdoc-member-header" id="ZoneAttachmentState-vpcs">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L124">property <b>vpcs</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L124">property <b>vpcs</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcs?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ZoneAttachmentVpc'>ZoneAttachmentVpc</a>&gt;[]&gt;;</code></pre>
@@ -831,7 +1050,7 @@ The id List of the VPC with the same region, for example:["vpc-1","vpc-2"].
 The List of the VPC:
 
 <h4 class="pdoc-member-header" id="ZoneAttachmentState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneAttachment.ts#L128">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneAttachment.ts#L128">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -839,7 +1058,7 @@ The List of the VPC:
 The name of the Private Zone Record.
 
 <h3 class="pdoc-module-header" id="ZoneRecordArgs" data-link-title="ZoneRecordArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L211">
         interface <strong>ZoneRecordArgs</strong>
     </a>
 </h3>
@@ -848,16 +1067,24 @@ The name of the Private Zone Record.
 
 The set of arguments for constructing a ZoneRecord resource.
 
+<h4 class="pdoc-member-header" id="ZoneRecordArgs-lang">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L215">property <b>lang</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+User language.
+
 <h4 class="pdoc-member-header" id="ZoneRecordArgs-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L176">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L219">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-The priority of the Private Zone Record. At present, only can "MX" record support it. Valid values: [1-50]. Default to 1.
+The priority of the Private Zone Record. At present, only can "MX" record support it. Valid values: [1-99]. Default to 1.
 
 <h4 class="pdoc-member-header" id="ZoneRecordArgs-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L180">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L223">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -865,31 +1092,58 @@ The priority of the Private Zone Record. At present, only can "MX" record suppor
 The remark of the Private Zone Record.
 
 <h4 class="pdoc-member-header" id="ZoneRecordArgs-resourceRecord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L184">property <b>resourceRecord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L229">property <b>resourceRecord</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>resourceRecord: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;resource_record&#39; has been deprecated from version 1.109.0. Use &#39;rr&#39; instead.
+</div>
+<pre class="highlight"><code><span class='kd'></span>resourceRecord?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The resource record of the Private Zone Record.
 
+<h4 class="pdoc-member-header" id="ZoneRecordArgs-rr">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L233">property <b>rr</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>rr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The rr of the Private Zone Record.
+
+<h4 class="pdoc-member-header" id="ZoneRecordArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L239">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Resolve record status. Value:
+- ENABLE: enable resolution.
+- DISABLE: pause parsing.
+
 <h4 class="pdoc-member-header" id="ZoneRecordArgs-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L188">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L243">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-The ttl of the Private Zone Record.
+The ttl of the Private Zone Record. Default to `60`.
 
 <h4 class="pdoc-member-header" id="ZoneRecordArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L192">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L247">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The type of the Private Zone Record. Valid values: A, CNAME, TXT, MX, PTR.
+The type of the Private Zone Record. Valid values: A, CNAME, TXT, MX, PTR, SRV.
 
+<h4 class="pdoc-member-header" id="ZoneRecordArgs-userClientIp">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L248">property <b>userClientIp</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>userClientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneRecordArgs-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L196">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L252">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -897,7 +1151,7 @@ The type of the Private Zone Record. Valid values: A, CNAME, TXT, MX, PTR.
 The value of the Private Zone Record.
 
 <h4 class="pdoc-member-header" id="ZoneRecordArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L200">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L256">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -905,7 +1159,7 @@ The value of the Private Zone Record.
 The name of the Private Zone Record.
 
 <h3 class="pdoc-module-header" id="ZoneRecordState" data-link-title="ZoneRecordState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L134">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L156">
         interface <strong>ZoneRecordState</strong>
     </a>
 </h3>
@@ -914,16 +1168,24 @@ The name of the Private Zone Record.
 
 Input properties used for looking up and filtering ZoneRecord resources.
 
+<h4 class="pdoc-member-header" id="ZoneRecordState-lang">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L160">property <b>lang</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+User language.
+
 <h4 class="pdoc-member-header" id="ZoneRecordState-priority">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L138">property <b>priority</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L164">property <b>priority</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>priority?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-The priority of the Private Zone Record. At present, only can "MX" record support it. Valid values: [1-50]. Default to 1.
+The priority of the Private Zone Record. At present, only can "MX" record support it. Valid values: [1-99]. Default to 1.
 
 <h4 class="pdoc-member-header" id="ZoneRecordState-recordId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L142">property <b>recordId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L168">property <b>recordId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -931,7 +1193,7 @@ The priority of the Private Zone Record. At present, only can "MX" record suppor
 The Private Zone Record ID.
 
 <h4 class="pdoc-member-header" id="ZoneRecordState-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L146">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L172">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -939,31 +1201,58 @@ The Private Zone Record ID.
 The remark of the Private Zone Record.
 
 <h4 class="pdoc-member-header" id="ZoneRecordState-resourceRecord">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L150">property <b>resourceRecord</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L178">property <b>resourceRecord</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;resource_record&#39; has been deprecated from version 1.109.0. Use &#39;rr&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'></span>resourceRecord?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The resource record of the Private Zone Record.
 
+<h4 class="pdoc-member-header" id="ZoneRecordState-rr">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L182">property <b>rr</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>rr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The rr of the Private Zone Record.
+
+<h4 class="pdoc-member-header" id="ZoneRecordState-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L188">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+Resolve record status. Value:
+- ENABLE: enable resolution.
+- DISABLE: pause parsing.
+
 <h4 class="pdoc-member-header" id="ZoneRecordState-ttl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L154">property <b>ttl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L192">property <b>ttl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ttl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 
-The ttl of the Private Zone Record.
+The ttl of the Private Zone Record. Default to `60`.
 
 <h4 class="pdoc-member-header" id="ZoneRecordState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L158">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L196">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The type of the Private Zone Record. Valid values: A, CNAME, TXT, MX, PTR.
+The type of the Private Zone Record. Valid values: A, CNAME, TXT, MX, PTR, SRV.
 
+<h4 class="pdoc-member-header" id="ZoneRecordState-userClientIp">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L197">property <b>userClientIp</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>userClientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneRecordState-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L162">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L201">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -971,7 +1260,7 @@ The type of the Private Zone Record. Valid values: A, CNAME, TXT, MX, PTR.
 The value of the Private Zone Record.
 
 <h4 class="pdoc-member-header" id="ZoneRecordState-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zoneRecord.ts#L166">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zoneRecord.ts#L205">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -979,7 +1268,7 @@ The value of the Private Zone Record.
 The name of the Private Zone Record.
 
 <h3 class="pdoc-module-header" id="ZoneState" data-link-title="ZoneState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L127">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L133">
         interface <strong>ZoneState</strong>
     </a>
 </h3>
@@ -988,18 +1277,16 @@ The name of the Private Zone Record.
 
 Input properties used for looking up and filtering Zone resources.
 
-<h4 class="pdoc-member-header" id="ZoneState-creationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L128">property <b>creationTime</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>creationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneState-isPtr">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L129">property <b>isPtr</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L137">property <b>isPtr</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isPtr?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
+
+Whether the Private Zone is ptr.
+
 <h4 class="pdoc-member-header" id="ZoneState-lang">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L133">property <b>lang</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L141">property <b>lang</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lang?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1007,15 +1294,19 @@ Input properties used for looking up and filtering Zone resources.
 The language. Valid values: "zh", "en", "jp".
 
 <h4 class="pdoc-member-header" id="ZoneState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L137">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L147">property <b>name</b></a>
 </h4>
 
+<div class="note note-deprecated">
+<i class="fas fa-exclamation-triangle pr-2"></i><strong>DEPRECATED</strong>
+Field &#39;name&#39; has been deprecated from version 1.107.0. Use &#39;zone_name&#39; instead.
+</div>
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The name of the Private Zone.
 
 <h4 class="pdoc-member-header" id="ZoneState-proxyPattern">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L143">property <b>proxyPattern</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L154">property <b>proxyPattern</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyPattern?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1023,9 +1314,10 @@ The name of the Private Zone.
 The recursive DNS proxy. Valid values:
 - ZONE: indicates that the recursive DNS proxy is disabled.
 - RECORD: indicates that the recursive DNS proxy is enabled.
+Default to "ZONE".
 
 <h4 class="pdoc-member-header" id="ZoneState-recordCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L147">property <b>recordCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L158">property <b>recordCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recordCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1033,7 +1325,7 @@ The recursive DNS proxy. Valid values:
 The count of the Private Zone Record.
 
 <h4 class="pdoc-member-header" id="ZoneState-remark">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L151">property <b>remark</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L162">property <b>remark</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>remark?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1041,23 +1333,26 @@ The count of the Private Zone Record.
 The remark of the Private Zone.
 
 <h4 class="pdoc-member-header" id="ZoneState-resourceGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L155">property <b>resourceGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L166">property <b>resourceGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The Id of resource group which the Private Zone belongs.
 
-<h4 class="pdoc-member-header" id="ZoneState-updateTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L156">property <b>updateTime</b></a>
-</h4>
-
-<pre class="highlight"><code><span class='kd'></span>updateTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ZoneState-userClientIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/fcdd66dccf963899382dd7b59249d3ec24e3632c/sdk/nodejs/pvtz/zone.ts#L160">property <b>userClientIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L170">property <b>userClientIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userClientIp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The IP address of the client.
+
+<h4 class="pdoc-member-header" id="ZoneState-zoneName">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/34bfe92dd27a93a08be385d80a27b12f6378de00/sdk/nodejs/pvtz/zone.ts#L174">property <b>zoneName</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>zoneName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The zoneName of the Private Zone.
 
