@@ -148,7 +148,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the User within Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -188,7 +188,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the User within Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -228,7 +228,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the User within Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -268,7 +268,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the Object ID of the Application within Azure Active Directory.
+    <dd>{{% md %}}Specifies the Object ID of the User within Azure Active Directory.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -315,6 +315,50 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="city_csharp">
+<a href="#city_csharp" style="color: inherit; text-decoration: inherit;">City</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The city in which the user is located.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="companyname_csharp">
+<a href="#companyname_csharp" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="country_csharp">
+<a href="#country_csharp" style="color: inherit; text-decoration: inherit;">Country</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The country/region in which the user is located; for example, “US” or “UK”.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="department_csharp">
+<a href="#department_csharp" style="color: inherit; text-decoration: inherit;">Department</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name for the department in which the user works.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span> 
@@ -322,6 +366,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="givenname_csharp">
+<a href="#givenname_csharp" style="color: inherit; text-decoration: inherit;">Given<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The given name (first name) of the user.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -343,7 +398,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="jobtitle_csharp">
+<a href="#jobtitle_csharp" style="color: inherit; text-decoration: inherit;">Job<wbr>Title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user’s job title.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -370,6 +436,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="mobile_csharp">
+<a href="#mobile_csharp" style="color: inherit; text-decoration: inherit;">Mobile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="objectid_csharp">
 <a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
 </span> 
@@ -386,7 +463,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The on premise sam account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -397,7 +474,62 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The on premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="physicaldeliveryofficename_csharp">
+<a href="#physicaldeliveryofficename_csharp" style="color: inherit; text-decoration: inherit;">Physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="postalcode_csharp">
+<a href="#postalcode_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state or province in the user's address.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="streetaddress_csharp">
+<a href="#streetaddress_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The street address of the user's place of business.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="surname_csharp">
+<a href="#surname_csharp" style="color: inherit; text-decoration: inherit;">Surname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user's surname (family name or last name).
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -442,6 +574,50 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="city_go">
+<a href="#city_go" style="color: inherit; text-decoration: inherit;">City</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The city in which the user is located.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="companyname_go">
+<a href="#companyname_go" style="color: inherit; text-decoration: inherit;">Company<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="country_go">
+<a href="#country_go" style="color: inherit; text-decoration: inherit;">Country</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The country/region in which the user is located; for example, “US” or “UK”.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="department_go">
+<a href="#department_go" style="color: inherit; text-decoration: inherit;">Department</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name for the department in which the user works.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
 </span> 
@@ -449,6 +625,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="givenname_go">
+<a href="#givenname_go" style="color: inherit; text-decoration: inherit;">Given<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The given name (first name) of the user.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -470,7 +657,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="jobtitle_go">
+<a href="#jobtitle_go" style="color: inherit; text-decoration: inherit;">Job<wbr>Title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user’s job title.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -497,6 +695,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="mobile_go">
+<a href="#mobile_go" style="color: inherit; text-decoration: inherit;">Mobile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="objectid_go">
 <a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
 </span> 
@@ -513,7 +722,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The on premise sam account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -524,7 +733,62 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The on premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="physicaldeliveryofficename_go">
+<a href="#physicaldeliveryofficename_go" style="color: inherit; text-decoration: inherit;">Physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="postalcode_go">
+<a href="#postalcode_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state or province in the user's address.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="streetaddress_go">
+<a href="#streetaddress_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The street address of the user's place of business.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="surname_go">
+<a href="#surname_go" style="color: inherit; text-decoration: inherit;">Surname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user's surname (family name or last name).
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -569,6 +833,50 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="city_nodejs">
+<a href="#city_nodejs" style="color: inherit; text-decoration: inherit;">city</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The city in which the user is located.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="companyname_nodejs">
+<a href="#companyname_nodejs" style="color: inherit; text-decoration: inherit;">company<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="country_nodejs">
+<a href="#country_nodejs" style="color: inherit; text-decoration: inherit;">country</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The country/region in which the user is located; for example, “US” or “UK”.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="department_nodejs">
+<a href="#department_nodejs" style="color: inherit; text-decoration: inherit;">department</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name for the department in which the user works.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
 </span> 
@@ -576,6 +884,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="givenname_nodejs">
+<a href="#givenname_nodejs" style="color: inherit; text-decoration: inherit;">given<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The given name (first name) of the user.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -597,7 +916,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="jobtitle_nodejs">
+<a href="#jobtitle_nodejs" style="color: inherit; text-decoration: inherit;">job<wbr>Title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user’s job title.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -624,6 +954,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="mobile_nodejs">
+<a href="#mobile_nodejs" style="color: inherit; text-decoration: inherit;">mobile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="objectid_nodejs">
 <a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
 </span> 
@@ -640,7 +981,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The on premise sam account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -651,7 +992,62 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The on premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="physicaldeliveryofficename_nodejs">
+<a href="#physicaldeliveryofficename_nodejs" style="color: inherit; text-decoration: inherit;">physical<wbr>Delivery<wbr>Office<wbr>Name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="postalcode_nodejs">
+<a href="#postalcode_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state or province in the user's address.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="streetaddress_nodejs">
+<a href="#streetaddress_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The street address of the user's place of business.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="surname_nodejs">
+<a href="#surname_nodejs" style="color: inherit; text-decoration: inherit;">surname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user's surname (family name or last name).
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -696,6 +1092,50 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="city_python">
+<a href="#city_python" style="color: inherit; text-decoration: inherit;">city</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The city in which the user is located.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="company_name_python">
+<a href="#company_name_python" style="color: inherit; text-decoration: inherit;">company_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The company name which the user is associated. This property can be useful for describing the company that an external user comes from.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="country_python">
+<a href="#country_python" style="color: inherit; text-decoration: inherit;">country</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The country/region in which the user is located; for example, “US” or “UK”.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="department_python">
+<a href="#department_python" style="color: inherit; text-decoration: inherit;">department</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name for the department in which the user works.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
 </span> 
@@ -703,6 +1143,17 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Display Name of the Azure AD User.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="given_name_python">
+<a href="#given_name_python" style="color: inherit; text-decoration: inherit;">given_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The given name (first name) of the user.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -724,7 +1175,18 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value used to associate an on-premises Active Directory user account with their Azure AD user object.
+    <dd>{{% md %}}The value used to associate an on-premise Active Directory user account with their Azure AD user object.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="job_title_python">
+<a href="#job_title_python" style="color: inherit; text-decoration: inherit;">job_<wbr>title</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The user’s job title.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -751,6 +1213,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="mobile_python">
+<a href="#mobile_python" style="color: inherit; text-decoration: inherit;">mobile</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The primary cellular telephone number for the user.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span id="object_id_python">
 <a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
 </span> 
@@ -767,7 +1240,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The on premise sam account name of the Azure AD User.
+    <dd>{{% md %}}The on-premise SAM account name of the Azure AD User.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -778,7 +1251,62 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The on premise user principal name of the Azure AD User.
+    <dd>{{% md %}}The on-premise user principal name of the Azure AD User.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="physical_delivery_office_name_python">
+<a href="#physical_delivery_office_name_python" style="color: inherit; text-decoration: inherit;">physical_<wbr>delivery_<wbr>office_<wbr>name</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The office location in the user's place of business.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="postal_code_python">
+<a href="#postal_code_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>code</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The postal code for the user's postal address. The postal code is specific to the user's country/region. In the United States of America, this attribute contains the ZIP code.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The state or province in the user's address.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="street_address_python">
+<a href="#street_address_python" style="color: inherit; text-decoration: inherit;">street_<wbr>address</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The street address of the user's place of business.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span id="surname_python">
+<a href="#surname_python" style="color: inherit; text-decoration: inherit;">surname</a>
+</span> 
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The user's surname (family name or last name).
 {{% /md %}}</dd>
 
     <dt class="property-"
