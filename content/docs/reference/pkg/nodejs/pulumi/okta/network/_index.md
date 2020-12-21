@@ -3,7 +3,7 @@ title: "Module network"
 title_tag: "Module network | Package @pulumi/okta | Node.js SDK"
 linktitle: "network"
 meta_desc: "Explore members of the network module in the @pulumi/okta package."
-git_sha: "df38f7a628913e798f4a290274f0158737c3e299"
+git_sha: "dffe59e187e00d2956a416069cb6896bfefb5d6a"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Zone" data-link-title="Zone">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L39">
         Resource <strong>Zone</strong>
     </a>
 </h3>
@@ -69,7 +69,7 @@ Okta Network Zone can be imported via the Okta ID.
 ```
 
 <h4 class="pdoc-member-header" id="Zone-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -83,7 +83,7 @@ Create a Zone resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Zone-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -94,14 +94,14 @@ Get an existing Zone resource's state with the given name, ID, and optional extr
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Zone-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Zone-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -112,7 +112,7 @@ Returns true if the given object is an instance of Zone.  This is designed to wo
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Zone-dynamicLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L70">property <b>dynamicLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L70">property <b>dynamicLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dynamicLocations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -120,7 +120,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-regionCode.
 
 <h4 class="pdoc-member-header" id="Zone-gateways">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L74">property <b>gateways</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L74">property <b>gateways</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gateways: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-region
 Array of values in CIDR/range form.
 
 <h4 class="pdoc-member-header" id="Zone-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -137,7 +137,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Zone-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L78">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L78">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the Network Zone Resource.
 
 <h4 class="pdoc-member-header" id="Zone-proxies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L82">property <b>proxies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L82">property <b>proxies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>proxies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ Name of the Network Zone Resource.
 Array of values in CIDR/range form.
 
 <h4 class="pdoc-member-header" id="Zone-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L86">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L86">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ Array of values in CIDR/range form.
 Type of the Network Zone - can either be IP or DYNAMIC only.
 
 <h4 class="pdoc-member-header" id="Zone-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -173,7 +173,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ZoneArgs" data-link-title="ZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L156">
         interface <strong>ZoneArgs</strong>
     </a>
 </h3>
@@ -183,7 +183,7 @@ deployments.
 The set of arguments for constructing a Zone resource.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-dynamicLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L160">property <b>dynamicLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L160">property <b>dynamicLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -191,7 +191,7 @@ The set of arguments for constructing a Zone resource.
 Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-regionCode.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-gateways">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L164">property <b>gateways</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L164">property <b>gateways</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gateways?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -199,7 +199,7 @@ Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-region
 Array of values in CIDR/range form.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -207,7 +207,7 @@ Array of values in CIDR/range form.
 Name of the Network Zone Resource.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-proxies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L172">property <b>proxies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L172">property <b>proxies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -215,7 +215,7 @@ Name of the Network Zone Resource.
 Array of values in CIDR/range form.
 
 <h4 class="pdoc-member-header" id="ZoneArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L176">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L176">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -223,7 +223,7 @@ Array of values in CIDR/range form.
 Type of the Network Zone - can either be IP or DYNAMIC only.
 
 <h3 class="pdoc-module-header" id="ZoneState" data-link-title="ZoneState">
-    <a href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L130">
+    <a href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L130">
         interface <strong>ZoneState</strong>
     </a>
 </h3>
@@ -233,7 +233,7 @@ Type of the Network Zone - can either be IP or DYNAMIC only.
 Input properties used for looking up and filtering Zone resources.
 
 <h4 class="pdoc-member-header" id="ZoneState-dynamicLocations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L134">property <b>dynamicLocations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L134">property <b>dynamicLocations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dynamicLocations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -241,7 +241,7 @@ Input properties used for looking up and filtering Zone resources.
 Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-regionCode.
 
 <h4 class="pdoc-member-header" id="ZoneState-gateways">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L138">property <b>gateways</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L138">property <b>gateways</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gateways?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -249,7 +249,7 @@ Array of locations ISO-3166-1(2). Format code: countryCode OR countryCode-region
 Array of values in CIDR/range form.
 
 <h4 class="pdoc-member-header" id="ZoneState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L142">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L142">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ Array of values in CIDR/range form.
 Name of the Network Zone Resource.
 
 <h4 class="pdoc-member-header" id="ZoneState-proxies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L146">property <b>proxies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L146">property <b>proxies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -265,7 +265,7 @@ Name of the Network Zone Resource.
 Array of values in CIDR/range form.
 
 <h4 class="pdoc-member-header" id="ZoneState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/df38f7a628913e798f4a290274f0158737c3e299/sdk/nodejs/network/zone.ts#L150">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-okta/blob/dffe59e187e00d2956a416069cb6896bfefb5d6a/sdk/nodejs/network/zone.ts#L150">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
