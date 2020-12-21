@@ -13,6 +13,7 @@ meta_desc: "Explore the CloudIntegrationGcpBilling resource of the Wavefront pac
 Provides a Wavefront Cloud Integration for GCP Billing. This allows GCP Billing cloud integrations to be created,
 updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1253,6 +1254,8 @@ The account must be at least granted Monitoring Viewer permissions. This key mus
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

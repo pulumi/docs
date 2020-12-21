@@ -13,6 +13,7 @@ meta_desc: "Explore the CloudIntegrationCloudWatch resource of the Wavefront pac
 Provides a Wavefront Cloud Integration for CloudTrail. This allows CloudTrail cloud integrations to be created,
 updated, and delete
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1640,6 +1641,8 @@ Multiple entries are OR'ed
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

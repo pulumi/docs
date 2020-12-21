@@ -13,6 +13,7 @@ meta_desc: "Explore the CloudIntegrationAzureActivityLog resource of the Wavefro
 Provides a Wavefront Cloud Integration for Azure Activity Logs. This allows azure activity log cloud integrations to be created,
 updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1336,6 +1337,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

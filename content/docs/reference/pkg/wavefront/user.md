@@ -12,6 +12,7 @@ meta_desc: "Explore the User resource of the Wavefront package, including exampl
 
 Provides a Wavefront User Resource. This allows users to be created, updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -885,6 +886,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

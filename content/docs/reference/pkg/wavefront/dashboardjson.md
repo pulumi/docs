@@ -12,6 +12,7 @@ meta_desc: "Explore the DashboardJson resource of the Wavefront package, includi
 
 Provides a Wavefront Dashboard JSON resource.  This allows dashboards to be created, updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -916,6 +917,8 @@ for instructions on how to get to your API documentation for more details.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

@@ -13,6 +13,7 @@ meta_desc: "Explore the CloudIntegrationEc2 resource of the Wavefront package, i
 Provides a Wavefront Cloud Integration for EC2. This allows EC2 cloud integrations to be created,
 updated, and delete
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1236,6 +1237,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

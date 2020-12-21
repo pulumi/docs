@@ -12,6 +12,7 @@ meta_desc: "Explore the UserGroup resource of the Wavefront package, including e
 
 Provides a Wavefront User Group Resource. This allows user groups to be created, updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -701,6 +702,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

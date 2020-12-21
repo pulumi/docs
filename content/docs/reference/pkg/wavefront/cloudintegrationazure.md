@@ -13,6 +13,7 @@ meta_desc: "Explore the CloudIntegrationAzure resource of the Wavefront package,
 Provides a Wavefront Cloud Integration for Azure. This allows azure cloud integrations to be created,
 updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1503,6 +1504,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 

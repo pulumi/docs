@@ -12,6 +12,7 @@ meta_desc: "Explore the ExternalLink resource of the Wavefront package, includin
 
 Provides a Wavefront External Link Resource. This allows external links to be created, updated, and deleted.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -1146,6 +1147,8 @@ The following state arguments are supported:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
