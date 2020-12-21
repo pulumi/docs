@@ -326,11 +326,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the CloudAMQP instance.</p></li>
-<li><p><strong>no_default_alarms</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true to discard creating default alarms when the instance is created.</p></li>
+<li><p><strong>no_default_alarms</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true to discard creating default alarms when the instance is created. Can be left out, will then use default value = false.</p></li>
 <li><p><strong>nodes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subscription plan. See available plans</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region to host the instance in. See Instance regions</p></li>
-<li><p><strong>rmq_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Rabbit MQ version. Default set to current loaded default value in CloudAMQP API.</p></li>
+<li><p><strong>rmq_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Rabbit MQ version. Can be left out, will then be set to default value used by CloudAMQP API. <strong>Note: There is not yet any support in the provider to change the RMQ version. Once it’s set in the initial creation, it will remain.</strong></p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – One or more tags for the CloudAMQP instance, makes it possible to categories multiple instances in console view. Default there is no tags assigned.</p></li>
 <li><p><strong>vpc_subnet</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Creates a dedicated VPC subnet, shouldn’t overlap with other VPC subnet, default subnet used 10.56.72.0/24. <strong>NOTE: extra fee will be charged when using VPC, see `CloudAMQP &lt;https://cloudamqp.com&gt;`_ for more information.</strong></p></li>
 </ul>
@@ -352,12 +352,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>dedicated</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is the instance hosted on a dedicated server</p></li>
 <li><p><strong>host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The host name for the CloudAMQP instance.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of the CloudAMQP instance.</p></li>
-<li><p><strong>no_default_alarms</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true to discard creating default alarms when the instance is created.</p></li>
+<li><p><strong>no_default_alarms</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Set to true to discard creating default alarms when the instance is created. Can be left out, will then use default value = false.</p></li>
 <li><p><strong>nodes</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Number of nodes, 1 to 3, in the CloudAMQP instance, default set to 1. The plan chosen must support the number of nodes.</p></li>
 <li><p><strong>plan</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The subscription plan. See available plans</p></li>
 <li><p><strong>ready</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Flag describing if the resource is ready</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region to host the instance in. See Instance regions</p></li>
-<li><p><strong>rmq_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Rabbit MQ version. Default set to current loaded default value in CloudAMQP API.</p></li>
+<li><p><strong>rmq_version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Rabbit MQ version. Can be left out, will then be set to default value used by CloudAMQP API. <strong>Note: There is not yet any support in the provider to change the RMQ version. Once it’s set in the initial creation, it will remain.</strong></p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – One or more tags for the CloudAMQP instance, makes it possible to categories multiple instances in console view. Default there is no tags assigned.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) AMQP server endpoint. <code class="docutils literal notranslate"><span class="pre">amqps://{username}:{password}&#64;{hostname}/{vhost}</span></code></p></li>
 <li><p><strong>vhost</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Computed) The virtual host used by Rabbit MQ.</p></li>
@@ -394,7 +394,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_cloudamqp.Instance.no_default_alarms">
 <em class="property">property </em><code class="sig-name descname">no_default_alarms</code><a class="headerlink" href="#pulumi_cloudamqp.Instance.no_default_alarms" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set to true to discard creating default alarms when the instance is created.</p>
+<dd><p>Set to true to discard creating default alarms when the instance is created. Can be left out, will then use default value = false.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -424,7 +424,7 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_cloudamqp.Instance.rmq_version">
 <em class="property">property </em><code class="sig-name descname">rmq_version</code><a class="headerlink" href="#pulumi_cloudamqp.Instance.rmq_version" title="Permalink to this definition">¶</a></dt>
-<dd><p>The Rabbit MQ version. Default set to current loaded default value in CloudAMQP API.</p>
+<dd><p>The Rabbit MQ version. Can be left out, will then be set to default value used by CloudAMQP API. <strong>Note: There is not yet any support in the provider to change the RMQ version. Once it’s set in the initial creation, it will remain.</strong></p>
 </dd></dl>
 
 <dl class="py method">
@@ -1552,6 +1552,138 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_cloudamqp.VpcPeering.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.VpcPeering.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_cloudamqp.Webhook">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_cloudamqp.</code><code class="sig-name descname">Webhook</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">concurrency</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queue</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retry_interval</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webhook_uri</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.Webhook" title="Permalink to this definition">¶</a></dt>
+<dd><p>This resource allows you to enable or disable webhooks for a specific vhost and queue.</p>
+<p>Only available for dedicated subscription plans.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_cloudamqp</span> <span class="k">as</span> <span class="nn">cloudamqp</span>
+
+<span class="n">webhook_queue</span> <span class="o">=</span> <span class="n">cloudamqp</span><span class="o">.</span><span class="n">Webhook</span><span class="p">(</span><span class="s2">&quot;webhookQueue&quot;</span><span class="p">,</span>
+    <span class="n">instance_id</span><span class="o">=</span><span class="n">cloudamqp_instance</span><span class="p">[</span><span class="s2">&quot;instance&quot;</span><span class="p">][</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">vhost</span><span class="o">=</span><span class="s2">&quot;myvhost&quot;</span><span class="p">,</span>
+    <span class="n">queue</span><span class="o">=</span><span class="s2">&quot;webhook-queue&quot;</span><span class="p">,</span>
+    <span class="n">webhook_uri</span><span class="o">=</span><span class="s2">&quot;https://example.com/webhook?key=secret&quot;</span><span class="p">,</span>
+    <span class="n">retry_interval</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+    <span class="n">concurrency</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This resource depends on CloudAMQP instance identifier, <code class="docutils literal notranslate"><span class="pre">cloudamqp_instance.instance.id</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cloudamqp_webhook</span></code> can be imported using the resource identifier together with CloudAMQP instance identifier. The identifiers are CSV separated, see example below.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import cloudamqp:index/webhook:Webhook webhook_queue &lt;webhook_id&gt;,&lt;instance_id&gt;<span class="sb">`</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>concurrency</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Max simultaneous requests to the endpoint.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The CloudAMQP instance ID.</p></li>
+<li><p><strong>queue</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A (durable) queue on your RabbitMQ instance.</p></li>
+<li><p><strong>retry_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – How often we retry if your endpoint fails (in seconds).</p></li>
+<li><p><strong>vhost</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vhost the queue resides in.</p></li>
+<li><p><strong>webhook_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A POST request will be made for each message in the queue to this endpoint.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_cloudamqp.Webhook.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">concurrency</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">instance_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">queue</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">retry_interval</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vhost</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">webhook_uri</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_cloudamqp.webhook.Webhook<a class="headerlink" href="#pulumi_cloudamqp.Webhook.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Webhook resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>concurrency</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Max simultaneous requests to the endpoint.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The CloudAMQP instance ID.</p></li>
+<li><p><strong>queue</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A (durable) queue on your RabbitMQ instance.</p></li>
+<li><p><strong>retry_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – How often we retry if your endpoint fails (in seconds).</p></li>
+<li><p><strong>vhost</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vhost the queue resides in.</p></li>
+<li><p><strong>webhook_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A POST request will be made for each message in the queue to this endpoint.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudamqp.Webhook.concurrency">
+<em class="property">property </em><code class="sig-name descname">concurrency</code><a class="headerlink" href="#pulumi_cloudamqp.Webhook.concurrency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Max simultaneous requests to the endpoint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudamqp.Webhook.instance_id">
+<em class="property">property </em><code class="sig-name descname">instance_id</code><a class="headerlink" href="#pulumi_cloudamqp.Webhook.instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CloudAMQP instance ID.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudamqp.Webhook.queue">
+<em class="property">property </em><code class="sig-name descname">queue</code><a class="headerlink" href="#pulumi_cloudamqp.Webhook.queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>A (durable) queue on your RabbitMQ instance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudamqp.Webhook.retry_interval">
+<em class="property">property </em><code class="sig-name descname">retry_interval</code><a class="headerlink" href="#pulumi_cloudamqp.Webhook.retry_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>How often we retry if your endpoint fails (in seconds).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudamqp.Webhook.vhost">
+<em class="property">property </em><code class="sig-name descname">vhost</code><a class="headerlink" href="#pulumi_cloudamqp.Webhook.vhost" title="Permalink to this definition">¶</a></dt>
+<dd><p>The vhost the queue resides in.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudamqp.Webhook.webhook_uri">
+<em class="property">property </em><code class="sig-name descname">webhook_uri</code><a class="headerlink" href="#pulumi_cloudamqp.Webhook.webhook_uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>A POST request will be made for each message in the queue to this endpoint.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudamqp.Webhook.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.Webhook.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_cloudamqp.Webhook.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_cloudamqp.Webhook.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
