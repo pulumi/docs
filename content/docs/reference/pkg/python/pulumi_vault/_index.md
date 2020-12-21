@@ -18,7 +18,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_vault"></span><dl class="py class">
 <dt id="pulumi_vault.Audit">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.</code><code class="sig-name descname">Audit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.Audit" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.</code><code class="sig-name descname">Audit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.Audit" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
 
@@ -33,6 +33,7 @@ anything, please consult the source <a class="reference external" href="https://
 <span class="kn">import</span> <span class="nn">pulumi_vault</span> <span class="k">as</span> <span class="nn">vault</span>
 
 <span class="n">test</span> <span class="o">=</span> <span class="n">vault</span><span class="o">.</span><span class="n">Audit</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="n">local</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">options</span><span class="o">=</span><span class="p">{</span>
         <span class="s2">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1:8000&quot;</span><span class="p">,</span>
         <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;application x socket&quot;</span><span class="p">,</span>
@@ -52,6 +53,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-friendly description of the audit device.</p></li>
+<li><p><strong>local</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the audit device is a local only. Local audit devices are not replicated nor (if a secondary) removed by replication.</p></li>
 <li><p><strong>pulumi.Input</strong><strong>[</strong><strong>str</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>options</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Configuration options to pass to the audit device itself.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to mount the audit device. This defaults to the type.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of the audit device, such as ‘file’.</p></li>
@@ -60,7 +62,7 @@ anything, please consult the source <a class="reference external" href="https://
 </dl>
 <dl class="py method">
 <dt id="pulumi_vault.Audit.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_vault.audit.Audit<a class="headerlink" href="#pulumi_vault.Audit.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">options</span><span class="p">:</span> <span class="n">Union[Mapping[str, Union[str, Awaitable[str], Output[T]]], Awaitable[Mapping[str, Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_vault.audit.Audit<a class="headerlink" href="#pulumi_vault.Audit.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Audit resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -70,6 +72,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-friendly description of the audit device.</p></li>
+<li><p><strong>local</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Specifies if the audit device is a local only. Local audit devices are not replicated nor (if a secondary) removed by replication.</p></li>
 <li><p><strong>pulumi.Input</strong><strong>[</strong><strong>str</strong><strong>]</strong><strong>]</strong><strong>] </strong><strong>options</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Configuration options to pass to the audit device itself.</p></li>
 <li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to mount the audit device. This defaults to the type.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of the audit device, such as ‘file’.</p></li>
@@ -82,6 +85,12 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_vault.Audit.description">
 <em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_vault.Audit.description" title="Permalink to this definition">¶</a></dt>
 <dd><p>Human-friendly description of the audit device.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.Audit.local">
+<em class="property">property </em><code class="sig-name descname">local</code><a class="headerlink" href="#pulumi_vault.Audit.local" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the audit device is a local only. Local audit devices are not replicated nor (if a secondary) removed by replication.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -297,6 +306,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="py class">
 <dt id="pulumi_vault.AwaitableGetAuthBackendResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.</code><code class="sig-name descname">AwaitableGetAuthBackendResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">accessor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_lease_ttl_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">listing_visibility</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_lease_ttl_seconds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">path</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.AwaitableGetAuthBackendResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_vault.AwaitableGetNomadAccessTokenResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.</code><code class="sig-name descname">AwaitableGetNomadAccessTokenResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">accessor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.AwaitableGetNomadAccessTokenResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -832,6 +846,31 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_vault.GetNomadAccessTokenResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.</code><code class="sig-name descname">GetNomadAccessTokenResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">accessor_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secret_id</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.GetNomadAccessTokenResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getNomadAccessToken.</p>
+<dl class="py method">
+<dt id="pulumi_vault.GetNomadAccessTokenResult.accessor_id">
+<em class="property">property </em><code class="sig-name descname">accessor_id</code><a class="headerlink" href="#pulumi_vault.GetNomadAccessTokenResult.accessor_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The public identifier for a specific token. It can be used 
+to look up information about a token or to revoke a token.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.GetNomadAccessTokenResult.id">
+<em class="property">property </em><code class="sig-name descname">id</code><a class="headerlink" href="#pulumi_vault.GetNomadAccessTokenResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.GetNomadAccessTokenResult.secret_id">
+<em class="property">property </em><code class="sig-name descname">secret_id</code><a class="headerlink" href="#pulumi_vault.GetNomadAccessTokenResult.secret_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The token to be used when making requests to Nomad and should be kept private.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_vault.GetPolicyDocumentResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.</code><code class="sig-name descname">GetPolicyDocumentResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hcl</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rules</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.GetPolicyDocumentResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPolicyDocument.</p>
@@ -1235,6 +1274,339 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="py method">
 <dt id="pulumi_vault.Namespace.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.Namespace.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_vault.NomadSecretBackend">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.</code><code class="sig-name descname">NomadSecretBackend</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_cert</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_lease_ttl_seconds</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_lease_ttl_seconds</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_token_name_length</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.NomadSecretBackend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nomad secret backend can be imported using the <code class="docutils literal notranslate"><span class="pre">backend</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import vault:index/nomadSecretBackend:NomadSecretBackend nomad nomad
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the address of the Nomad instance, provided
+as “protocol://host:port” like “http://127.0.0.1:4646”.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique path this backend should be mounted at. Must
+not begin or end with a <code class="docutils literal notranslate"><span class="pre">/</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">nomad</span></code>.</p></li>
+<li><p><strong>ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CA certificate to use when verifying the Nomad server certificate, must be
+x509 PEM encoded.</p></li>
+<li><p><strong>client_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Client certificate to provide to the Nomad server, must be x509 PEM encoded.</p></li>
+<li><p><strong>client_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Client certificate key to provide to the Nomad server, must be x509 PEM encoded.</p></li>
+<li><p><strong>default_lease_ttl_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Default lease duration for secrets in seconds.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-friendly description of the mount for the Active Directory backend.</p></li>
+<li><p><strong>local</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Mark the secrets engine as local-only. Local engines are not replicated or removed by
+replication.Tolerance duration to use when checking the last rotation time.</p></li>
+<li><p><strong>max_lease_ttl_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Maximum possible lease duration for secrets in seconds.</p></li>
+<li><p><strong>max_token_name_length</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the maximum length to use for the name of the Nomad token
+generated with Generate Credential. If omitted, 0 is used and ignored, defaulting to the max value allowed
+by the Nomad version.</p></li>
+<li><p><strong>max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Maximum possible lease duration for secrets in seconds.</p></li>
+<li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Nomad Management token to use.</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the ttl of the lease for the generated token.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">address</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ca_cert</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_cert</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">client_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default_lease_ttl_seconds</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">local</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_lease_ttl_seconds</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_token_name_length</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">max_ttl</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">token</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ttl</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_vault.nomad_secret_backend.NomadSecretBackend<a class="headerlink" href="#pulumi_vault.NomadSecretBackend.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing NomadSecretBackend resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the address of the Nomad instance, provided
+as “protocol://host:port” like “http://127.0.0.1:4646”.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique path this backend should be mounted at. Must
+not begin or end with a <code class="docutils literal notranslate"><span class="pre">/</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">nomad</span></code>.</p></li>
+<li><p><strong>ca_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – CA certificate to use when verifying the Nomad server certificate, must be
+x509 PEM encoded.</p></li>
+<li><p><strong>client_cert</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Client certificate to provide to the Nomad server, must be x509 PEM encoded.</p></li>
+<li><p><strong>client_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Client certificate key to provide to the Nomad server, must be x509 PEM encoded.</p></li>
+<li><p><strong>default_lease_ttl_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Default lease duration for secrets in seconds.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Human-friendly description of the mount for the Active Directory backend.</p></li>
+<li><p><strong>local</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Mark the secrets engine as local-only. Local engines are not replicated or removed by
+replication.Tolerance duration to use when checking the last rotation time.</p></li>
+<li><p><strong>max_lease_ttl_seconds</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Maximum possible lease duration for secrets in seconds.</p></li>
+<li><p><strong>max_token_name_length</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the maximum length to use for the name of the Nomad token
+generated with Generate Credential. If omitted, 0 is used and ignored, defaulting to the max value allowed
+by the Nomad version.</p></li>
+<li><p><strong>max_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Maximum possible lease duration for secrets in seconds.</p></li>
+<li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the Nomad Management token to use.</p></li>
+<li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Specifies the ttl of the lease for the generated token.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.address">
+<em class="property">property </em><code class="sig-name descname">address</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the address of the Nomad instance, provided
+as “protocol://host:port” like “http://127.0.0.1:4646”.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.backend">
+<em class="property">property </em><code class="sig-name descname">backend</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.backend" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique path this backend should be mounted at. Must
+not begin or end with a <code class="docutils literal notranslate"><span class="pre">/</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">nomad</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.ca_cert">
+<em class="property">property </em><code class="sig-name descname">ca_cert</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.ca_cert" title="Permalink to this definition">¶</a></dt>
+<dd><p>CA certificate to use when verifying the Nomad server certificate, must be
+x509 PEM encoded.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.client_cert">
+<em class="property">property </em><code class="sig-name descname">client_cert</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.client_cert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Client certificate to provide to the Nomad server, must be x509 PEM encoded.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.client_key">
+<em class="property">property </em><code class="sig-name descname">client_key</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.client_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Client certificate key to provide to the Nomad server, must be x509 PEM encoded.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.default_lease_ttl_seconds">
+<em class="property">property </em><code class="sig-name descname">default_lease_ttl_seconds</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.default_lease_ttl_seconds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default lease duration for secrets in seconds.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Human-friendly description of the mount for the Active Directory backend.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.local">
+<em class="property">property </em><code class="sig-name descname">local</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.local" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark the secrets engine as local-only. Local engines are not replicated or removed by
+replication.Tolerance duration to use when checking the last rotation time.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.max_lease_ttl_seconds">
+<em class="property">property </em><code class="sig-name descname">max_lease_ttl_seconds</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.max_lease_ttl_seconds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum possible lease duration for secrets in seconds.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.max_token_name_length">
+<em class="property">property </em><code class="sig-name descname">max_token_name_length</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.max_token_name_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the maximum length to use for the name of the Nomad token
+generated with Generate Credential. If omitted, 0 is used and ignored, defaulting to the max value allowed
+by the Nomad version.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.max_ttl">
+<em class="property">property </em><code class="sig-name descname">max_ttl</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.max_ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum possible lease duration for secrets in seconds.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.token">
+<em class="property">property </em><code class="sig-name descname">token</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the Nomad Management token to use.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.ttl">
+<em class="property">property </em><code class="sig-name descname">ttl</code><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.ttl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the ttl of the lease for the generated token.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretBackend.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.NomadSecretBackend.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="pulumi_vault.NomadSecretRole">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.</code><code class="sig-name descname">NomadSecretRole</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">global_</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.NomadSecretRole" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nomad secret role can be imported using the <code class="docutils literal notranslate"><span class="pre">backend</span></code>, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import vault:index/nomadSecretRole:NomadSecretRole bob nomad/role/bob
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource*name</strong> (<em>str</em>) – <p>The name of the resource.</p>
+</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique path this backend should be mounted at. Must
+not begin or end with a <code class="docutils literal notranslate"><span class="pre">/</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">nomad</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>:param pulumi.Input[bool] global*<span class="classifier">Specifies if the generated token should be global. Defaults to </span></dt><dd><p>false.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of policies attached to the generated token. This setting is only used 
+when <code class="docutils literal notranslate"><span class="pre">type</span></code> is ‘client’.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to identify this role within the backend.
+Must be unique within the backend.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of token to create when using this role. Valid 
+settings are ‘client’ and ‘management’. Defaults to ‘client’.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretRole.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">backend</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">global_</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">policies</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_vault.nomad_secret_role.NomadSecretRole<a class="headerlink" href="#pulumi_vault.NomadSecretRole.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing NomadSecretRole resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource*name</strong> (<em>str</em>) – <p>The unique name of the resulting resource.</p>
+</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>backend</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique path this backend should be mounted at. Must
+not begin or end with a <code class="docutils literal notranslate"><span class="pre">/</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">nomad</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>:param pulumi.Input[bool] global*<span class="classifier">Specifies if the generated token should be global. Defaults to </span></dt><dd><p>false.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>policies</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – List of policies attached to the generated token. This setting is only used 
+when <code class="docutils literal notranslate"><span class="pre">type</span></code> is ‘client’.</p></li>
+<li><p><strong>role</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to identify this role within the backend.
+Must be unique within the backend.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of token to create when using this role. Valid 
+settings are ‘client’ and ‘management’. Defaults to ‘client’.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretRole.backend">
+<em class="property">property </em><code class="sig-name descname">backend</code><a class="headerlink" href="#pulumi_vault.NomadSecretRole.backend" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique path this backend should be mounted at. Must
+not begin or end with a <code class="docutils literal notranslate"><span class="pre">/</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">nomad</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretRole.global_">
+<em class="property">property </em><code class="sig-name descname">global_</code><a class="headerlink" href="#pulumi_vault.NomadSecretRole.global_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies if the generated token should be global. Defaults to 
+false.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretRole.policies">
+<em class="property">property </em><code class="sig-name descname">policies</code><a class="headerlink" href="#pulumi_vault.NomadSecretRole.policies" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of policies attached to the generated token. This setting is only used 
+when <code class="docutils literal notranslate"><span class="pre">type</span></code> is ‘client’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretRole.role">
+<em class="property">property </em><code class="sig-name descname">role</code><a class="headerlink" href="#pulumi_vault.NomadSecretRole.role" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name to identify this role within the backend.
+Must be unique within the backend.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretRole.type">
+<em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_vault.NomadSecretRole.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the type of token to create when using this role. Valid 
+settings are ‘client’ and ‘management’. Defaults to ‘client’.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretRole.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.NomadSecretRole.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_vault.NomadSecretRole.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.NomadSecretRole.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -1875,6 +2247,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – The auth backend mount point.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="pulumi_vault.get_nomad_access_token">
+<code class="sig-prename descclassname">pulumi_vault.</code><code class="sig-name descname">get_nomad_access_token</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">backend</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">role</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.invoke.InvokeOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_vault.get_nomad_access_token.AwaitableGetNomadAccessTokenResult<a class="headerlink" href="#pulumi_vault.get_nomad_access_token" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>backend</strong> (<em>str</em>) – The path to the Nomad secret backend to
+read credentials from, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
+<li><p><strong>role</strong> (<em>str</em>) – The name of the Nomad secret backend role to generate
+a token for, with no leading or trailing <code class="docutils literal notranslate"><span class="pre">/</span></code>s.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

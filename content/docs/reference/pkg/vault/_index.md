@@ -46,6 +46,8 @@ A Pulumi package for creating and managing vault cloud resources.
     <li><a href="mfaduo" title="MfaDuo"><span class="symbol resource"></span>MfaDuo</a></li>
     <li><a href="mount" title="Mount"><span class="symbol resource"></span>Mount</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
+    <li><a href="nomadsecretbackend" title="NomadSecretBackend"><span class="symbol resource"></span>NomadSecretBackend</a></li>
+    <li><a href="nomadsecretrole" title="NomadSecretRole"><span class="symbol resource"></span>NomadSecretRole</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="quotaratelimit" title="QuotaRateLimit"><span class="symbol resource"></span>QuotaRateLimit</a></li>
@@ -56,6 +58,7 @@ A Pulumi package for creating and managing vault cloud resources.
 <h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getauthbackend" title="GetAuthBackend"><span class="symbol function"></span>GetAuthBackend</a></li>
+    <li><a href="getnomadaccesstoken" title="GetNomadAccessToken"><span class="symbol function"></span>GetNomadAccessToken</a></li>
     <li><a href="getpolicydocument" title="GetPolicyDocument"><span class="symbol function"></span>GetPolicyDocument</a></li>
 </ul>
 
@@ -66,9 +69,9 @@ A Pulumi package for creating and managing vault cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>3.1.0</dd>
+	<dd>3.2.0</dd>
 </dl>
 
 

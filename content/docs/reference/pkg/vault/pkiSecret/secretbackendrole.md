@@ -1,8 +1,8 @@
 
 ---
 title: "SecretBackendRole"
-title_tag: "Resource SecretBackendRole | Module pkiSecret | Package Vault"
-meta_desc: "Explore the SecretBackendRole resource of the pkiSecret module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a role on an PKI Secret Backend for Vault."
+title_tag: "vault.pkiSecret.SecretBackendRole"
+meta_desc: "Documentation for the vault.pkiSecret.SecretBackendRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -117,7 +117,7 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendRole">SecretBackendRole</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendRoleArgs">SecretBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendRole">SecretBackendRole</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendRoleArgs">SecretBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -125,11 +125,11 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkisecret?tab=doc#SecretBackendRole">NewSecretBackendRole</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkisecret?tab=doc#SecretBackendRoleArgs">SecretBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkisecret?tab=doc#SecretBackendRole">SecretBackendRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkisecret?tab=doc#SecretBackendRole">NewSecretBackendRole</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkisecret?tab=doc#SecretBackendRoleArgs">SecretBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkisecret?tab=doc#SecretBackendRole">SecretBackendRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.PkiSecret.SecretBackendRole.html">SecretBackendRole</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.PkiSecret.SecretBackendRoleArgs.html">SecretBackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.PkiSecret.SecretBackendRole.html">SecretBackendRole</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.PkiSecret.SecretBackendRoleArgs.html">SecretBackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -140,7 +140,7 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -209,7 +209,7 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -248,7 +248,7 @@ const role = new vault.pkiSecret.SecretBackendRole("role", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -289,7 +289,6 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -297,412 +296,374 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowanyname_csharp">
 <a href="#allowanyname_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Any<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowbaredomains_csharp">
 <a href="#allowbaredomains_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Bare<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowglobdomains_csharp">
 <a href="#allowglobdomains_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Glob<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowipsans_csharp">
 <a href="#allowipsans_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Ip<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowlocalhost_csharp">
 <a href="#allowlocalhost_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Localhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsubdomains_csharp">
 <a href="#allowsubdomains_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Subdomains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_csharp">
 <a href="#alloweddomains_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedothersans_csharp">
 <a href="#allowedothersans_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Other<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedurisans_csharp">
 <a href="#allowedurisans_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Uri<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicconstraintsvalidfornonca_csharp">
 <a href="#basicconstraintsvalidfornonca_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Constraints<wbr>Valid<wbr>For<wbr>Non<wbr>Ca</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientflag_csharp">
 <a href="#clientflag_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codesigningflag_csharp">
 <a href="#codesigningflag_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="countries_csharp">
 <a href="#countries_csharp" style="color: inherit; text-decoration: inherit;">Countries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="emailprotectionflag_csharp">
 <a href="#emailprotectionflag_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Protection<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcehostnames_csharp">
 <a href="#enforcehostnames_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Hostnames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extkeyusages_csharp">
 <a href="#extkeyusages_csharp" style="color: inherit; text-decoration: inherit;">Ext<wbr>Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="generatelease_csharp">
 <a href="#generatelease_csharp" style="color: inherit; text-decoration: inherit;">Generate<wbr>Lease</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keybits_csharp">
 <a href="#keybits_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Bits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytype_csharp">
 <a href="#keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyusages_csharp">
 <a href="#keyusages_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localities_csharp">
 <a href="#localities_csharp" style="color: inherit; text-decoration: inherit;">Localities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nostore_csharp">
 <a href="#nostore_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notbeforeduration_csharp">
 <a href="#notbeforeduration_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="organizationunit_csharp">
 <a href="#organizationunit_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="organizations_csharp">
 <a href="#organizations_csharp" style="color: inherit; text-decoration: inherit;">Organizations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyidentifiers_csharp">
 <a href="#policyidentifiers_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Identifiers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="postalcodes_csharp">
 <a href="#postalcodes_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provinces_csharp">
 <a href="#provinces_csharp" style="color: inherit; text-decoration: inherit;">Provinces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requirecn_csharp">
 <a href="#requirecn_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Cn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serverflag_csharp">
 <a href="#serverflag_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="streetaddresses_csharp">
 <a href="#streetaddresses_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usecsrcommonname_csharp">
 <a href="#usecsrcommonname_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Common<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usecsrsans_csharp">
 <a href="#usecsrsans_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -711,412 +672,374 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowanyname_go">
 <a href="#allowanyname_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Any<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowbaredomains_go">
 <a href="#allowbaredomains_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Bare<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowglobdomains_go">
 <a href="#allowglobdomains_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Glob<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowipsans_go">
 <a href="#allowipsans_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Ip<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowlocalhost_go">
 <a href="#allowlocalhost_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Localhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsubdomains_go">
 <a href="#allowsubdomains_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Subdomains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_go">
 <a href="#alloweddomains_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedothersans_go">
 <a href="#allowedothersans_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Other<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedurisans_go">
 <a href="#allowedurisans_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Uri<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicconstraintsvalidfornonca_go">
 <a href="#basicconstraintsvalidfornonca_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Constraints<wbr>Valid<wbr>For<wbr>Non<wbr>Ca</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientflag_go">
 <a href="#clientflag_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codesigningflag_go">
 <a href="#codesigningflag_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="countries_go">
 <a href="#countries_go" style="color: inherit; text-decoration: inherit;">Countries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="emailprotectionflag_go">
 <a href="#emailprotectionflag_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Protection<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcehostnames_go">
 <a href="#enforcehostnames_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Hostnames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extkeyusages_go">
 <a href="#extkeyusages_go" style="color: inherit; text-decoration: inherit;">Ext<wbr>Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="generatelease_go">
 <a href="#generatelease_go" style="color: inherit; text-decoration: inherit;">Generate<wbr>Lease</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keybits_go">
 <a href="#keybits_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Bits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytype_go">
 <a href="#keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyusages_go">
 <a href="#keyusages_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localities_go">
 <a href="#localities_go" style="color: inherit; text-decoration: inherit;">Localities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nostore_go">
 <a href="#nostore_go" style="color: inherit; text-decoration: inherit;">No<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notbeforeduration_go">
 <a href="#notbeforeduration_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="organizationunit_go">
 <a href="#organizationunit_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="organizations_go">
 <a href="#organizations_go" style="color: inherit; text-decoration: inherit;">Organizations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyidentifiers_go">
 <a href="#policyidentifiers_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Identifiers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="postalcodes_go">
 <a href="#postalcodes_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provinces_go">
 <a href="#provinces_go" style="color: inherit; text-decoration: inherit;">Provinces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requirecn_go">
 <a href="#requirecn_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Cn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serverflag_go">
 <a href="#serverflag_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="streetaddresses_go">
 <a href="#streetaddresses_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usecsrcommonname_go">
 <a href="#usecsrcommonname_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Common<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usecsrsans_go">
 <a href="#usecsrsans_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1125,412 +1048,374 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowanyname_nodejs">
 <a href="#allowanyname_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Any<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowbaredomains_nodejs">
 <a href="#allowbaredomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Bare<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowglobdomains_nodejs">
 <a href="#allowglobdomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Glob<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowipsans_nodejs">
 <a href="#allowipsans_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Ip<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowlocalhost_nodejs">
 <a href="#allowlocalhost_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Localhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowsubdomains_nodejs">
 <a href="#allowsubdomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Subdomains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="alloweddomains_nodejs">
 <a href="#alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedothersans_nodejs">
 <a href="#allowedothersans_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Other<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowedurisans_nodejs">
 <a href="#allowedurisans_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Uri<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basicconstraintsvalidfornonca_nodejs">
 <a href="#basicconstraintsvalidfornonca_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Constraints<wbr>Valid<wbr>For<wbr>Non<wbr>Ca</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientflag_nodejs">
 <a href="#clientflag_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="codesigningflag_nodejs">
 <a href="#codesigningflag_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="countries_nodejs">
 <a href="#countries_nodejs" style="color: inherit; text-decoration: inherit;">countries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="emailprotectionflag_nodejs">
 <a href="#emailprotectionflag_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Protection<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcehostnames_nodejs">
 <a href="#enforcehostnames_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Hostnames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="extkeyusages_nodejs">
 <a href="#extkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">ext<wbr>Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="generatelease_nodejs">
 <a href="#generatelease_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Lease</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keybits_nodejs">
 <a href="#keybits_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Bits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keytype_nodejs">
 <a href="#keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="keyusages_nodejs">
 <a href="#keyusages_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localities_nodejs">
 <a href="#localities_nodejs" style="color: inherit; text-decoration: inherit;">localities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nostore_nodejs">
 <a href="#nostore_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notbeforeduration_nodejs">
 <a href="#notbeforeduration_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="organizationunit_nodejs">
 <a href="#organizationunit_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="organizations_nodejs">
 <a href="#organizations_nodejs" style="color: inherit; text-decoration: inherit;">organizations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policyidentifiers_nodejs">
 <a href="#policyidentifiers_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Identifiers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="postalcodes_nodejs">
 <a href="#postalcodes_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provinces_nodejs">
 <a href="#provinces_nodejs" style="color: inherit; text-decoration: inherit;">provinces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="requirecn_nodejs">
 <a href="#requirecn_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Cn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="serverflag_nodejs">
 <a href="#serverflag_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="streetaddresses_nodejs">
 <a href="#streetaddresses_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usecsrcommonname_nodejs">
 <a href="#usecsrcommonname_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Csr<wbr>Common<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usecsrsans_nodejs">
 <a href="#usecsrsans_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Csr<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1539,421 +1424,379 @@ The SecretBackendRole resource accepts the following [input]({{< relref "/docs/i
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_any_name_python">
 <a href="#allow_any_name_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>any_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_bare_domains_python">
 <a href="#allow_bare_domains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>bare_<wbr>domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_glob_domains_python">
 <a href="#allow_glob_domains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>glob_<wbr>domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_ip_sans_python">
 <a href="#allow_ip_sans_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>ip_<wbr>sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_localhost_python">
 <a href="#allow_localhost_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>localhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_subdomains_python">
 <a href="#allow_subdomains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>subdomains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_domains_python">
 <a href="#allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_other_sans_python">
 <a href="#allowed_other_sans_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>other_<wbr>sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowed_uri_sans_python">
 <a href="#allowed_uri_sans_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>uri_<wbr>sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="basic_constraints_valid_for_non_ca_python">
 <a href="#basic_constraints_valid_for_non_ca_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>constraints_<wbr>valid_<wbr>for_<wbr>non_<wbr>ca</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="client_flag_python">
 <a href="#client_flag_python" style="color: inherit; text-decoration: inherit;">client_<wbr>flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="code_signing_flag_python">
 <a href="#code_signing_flag_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing_<wbr>flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="countries_python">
 <a href="#countries_python" style="color: inherit; text-decoration: inherit;">countries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="email_protection_flag_python">
 <a href="#email_protection_flag_python" style="color: inherit; text-decoration: inherit;">email_<wbr>protection_<wbr>flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforce_hostnames_python">
 <a href="#enforce_hostnames_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>hostnames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ext_key_usages_python">
 <a href="#ext_key_usages_python" style="color: inherit; text-decoration: inherit;">ext_<wbr>key_<wbr>usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="generate_lease_python">
 <a href="#generate_lease_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>lease</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_bits_python">
 <a href="#key_bits_python" style="color: inherit; text-decoration: inherit;">key_<wbr>bits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_type_python">
 <a href="#key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="key_usages_python">
 <a href="#key_usages_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localities_python">
 <a href="#localities_python" style="color: inherit; text-decoration: inherit;">localities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="no_store_python">
 <a href="#no_store_python" style="color: inherit; text-decoration: inherit;">no_<wbr>store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="not_before_duration_python">
 <a href="#not_before_duration_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="organization_unit_python">
 <a href="#organization_unit_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="organizations_python">
 <a href="#organizations_python" style="color: inherit; text-decoration: inherit;">organizations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="policy_identifiers_python">
 <a href="#policy_identifiers_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>identifiers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="postal_codes_python">
 <a href="#postal_codes_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="provinces_python">
 <a href="#provinces_python" style="color: inherit; text-decoration: inherit;">provinces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="require_cn_python">
 <a href="#require_cn_python" style="color: inherit; text-decoration: inherit;">require_<wbr>cn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="server_flag_python">
 <a href="#server_flag_python" style="color: inherit; text-decoration: inherit;">server_<wbr>flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="street_addresses_python">
 <a href="#street_addresses_python" style="color: inherit; text-decoration: inherit;">street_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_csr_common_name_python">
 <a href="#use_csr_common_name_python" style="color: inherit; text-decoration: inherit;">use_<wbr>csr_<wbr>common_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_csr_sans_python">
 <a href="#use_csr_sans_python" style="color: inherit; text-decoration: inherit;">use_<wbr>csr_<wbr>sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the SecretBackendRole resource produces the following output properties:
-
 
 
 
@@ -1964,15 +1807,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1981,15 +1822,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1998,15 +1837,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2015,18 +1852,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2036,7 +1868,7 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendRoleState">SecretBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendRole">SecretBackendRole</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendRoleState">SecretBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendRole">SecretBackendRole</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2045,11 +1877,11 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkisecret?tab=doc#SecretBackendRoleState">SecretBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkisecret?tab=doc#SecretBackendRole">SecretBackendRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkisecret?tab=doc#SecretBackendRoleState">SecretBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/pkisecret?tab=doc#SecretBackendRole">SecretBackendRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.PkiSecret.SecretBackendRole.html">SecretBackendRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.PkiSecret.SecretBackendRoleState.html">SecretBackendRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.PkiSecret.SecretBackendRole.html">SecretBackendRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.PkiSecret.SecretBackendRoleState.html">SecretBackendRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2151,7 +1983,6 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2159,412 +1990,374 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_allowanyname_csharp">
 <a href="#state_allowanyname_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Any<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowbaredomains_csharp">
 <a href="#state_allowbaredomains_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Bare<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowglobdomains_csharp">
 <a href="#state_allowglobdomains_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Glob<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowipsans_csharp">
 <a href="#state_allowipsans_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Ip<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowlocalhost_csharp">
 <a href="#state_allowlocalhost_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Localhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowsubdomains_csharp">
 <a href="#state_allowsubdomains_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Subdomains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_alloweddomains_csharp">
 <a href="#state_alloweddomains_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedothersans_csharp">
 <a href="#state_allowedothersans_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Other<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedurisans_csharp">
 <a href="#state_allowedurisans_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Uri<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basicconstraintsvalidfornonca_csharp">
 <a href="#state_basicconstraintsvalidfornonca_csharp" style="color: inherit; text-decoration: inherit;">Basic<wbr>Constraints<wbr>Valid<wbr>For<wbr>Non<wbr>Ca</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clientflag_csharp">
 <a href="#state_clientflag_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_codesigningflag_csharp">
 <a href="#state_codesigningflag_csharp" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_countries_csharp">
 <a href="#state_countries_csharp" style="color: inherit; text-decoration: inherit;">Countries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_emailprotectionflag_csharp">
 <a href="#state_emailprotectionflag_csharp" style="color: inherit; text-decoration: inherit;">Email<wbr>Protection<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enforcehostnames_csharp">
 <a href="#state_enforcehostnames_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Hostnames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extkeyusages_csharp">
 <a href="#state_extkeyusages_csharp" style="color: inherit; text-decoration: inherit;">Ext<wbr>Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_generatelease_csharp">
 <a href="#state_generatelease_csharp" style="color: inherit; text-decoration: inherit;">Generate<wbr>Lease</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keybits_csharp">
 <a href="#state_keybits_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Bits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keytype_csharp">
 <a href="#state_keytype_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keyusages_csharp">
 <a href="#state_keyusages_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_localities_csharp">
 <a href="#state_localities_csharp" style="color: inherit; text-decoration: inherit;">Localities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nostore_csharp">
 <a href="#state_nostore_csharp" style="color: inherit; text-decoration: inherit;">No<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notbeforeduration_csharp">
 <a href="#state_notbeforeduration_csharp" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_organizationunit_csharp">
 <a href="#state_organizationunit_csharp" style="color: inherit; text-decoration: inherit;">Organization<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_organizations_csharp">
 <a href="#state_organizations_csharp" style="color: inherit; text-decoration: inherit;">Organizations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyidentifiers_csharp">
 <a href="#state_policyidentifiers_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Identifiers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_postalcodes_csharp">
 <a href="#state_postalcodes_csharp" style="color: inherit; text-decoration: inherit;">Postal<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_provinces_csharp">
 <a href="#state_provinces_csharp" style="color: inherit; text-decoration: inherit;">Provinces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requirecn_csharp">
 <a href="#state_requirecn_csharp" style="color: inherit; text-decoration: inherit;">Require<wbr>Cn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serverflag_csharp">
 <a href="#state_serverflag_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_streetaddresses_csharp">
 <a href="#state_streetaddresses_csharp" style="color: inherit; text-decoration: inherit;">Street<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usecsrcommonname_csharp">
 <a href="#state_usecsrcommonname_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Common<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usecsrsans_csharp">
 <a href="#state_usecsrsans_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2573,412 +2366,374 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_allowanyname_go">
 <a href="#state_allowanyname_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Any<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowbaredomains_go">
 <a href="#state_allowbaredomains_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Bare<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowglobdomains_go">
 <a href="#state_allowglobdomains_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Glob<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowipsans_go">
 <a href="#state_allowipsans_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Ip<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowlocalhost_go">
 <a href="#state_allowlocalhost_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Localhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowsubdomains_go">
 <a href="#state_allowsubdomains_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Subdomains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_alloweddomains_go">
 <a href="#state_alloweddomains_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedothersans_go">
 <a href="#state_allowedothersans_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Other<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedurisans_go">
 <a href="#state_allowedurisans_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Uri<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basicconstraintsvalidfornonca_go">
 <a href="#state_basicconstraintsvalidfornonca_go" style="color: inherit; text-decoration: inherit;">Basic<wbr>Constraints<wbr>Valid<wbr>For<wbr>Non<wbr>Ca</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clientflag_go">
 <a href="#state_clientflag_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_codesigningflag_go">
 <a href="#state_codesigningflag_go" style="color: inherit; text-decoration: inherit;">Code<wbr>Signing<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_countries_go">
 <a href="#state_countries_go" style="color: inherit; text-decoration: inherit;">Countries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_emailprotectionflag_go">
 <a href="#state_emailprotectionflag_go" style="color: inherit; text-decoration: inherit;">Email<wbr>Protection<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enforcehostnames_go">
 <a href="#state_enforcehostnames_go" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Hostnames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extkeyusages_go">
 <a href="#state_extkeyusages_go" style="color: inherit; text-decoration: inherit;">Ext<wbr>Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_generatelease_go">
 <a href="#state_generatelease_go" style="color: inherit; text-decoration: inherit;">Generate<wbr>Lease</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keybits_go">
 <a href="#state_keybits_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Bits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keytype_go">
 <a href="#state_keytype_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keyusages_go">
 <a href="#state_keyusages_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_localities_go">
 <a href="#state_localities_go" style="color: inherit; text-decoration: inherit;">Localities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nostore_go">
 <a href="#state_nostore_go" style="color: inherit; text-decoration: inherit;">No<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notbeforeduration_go">
 <a href="#state_notbeforeduration_go" style="color: inherit; text-decoration: inherit;">Not<wbr>Before<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_organizationunit_go">
 <a href="#state_organizationunit_go" style="color: inherit; text-decoration: inherit;">Organization<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_organizations_go">
 <a href="#state_organizations_go" style="color: inherit; text-decoration: inherit;">Organizations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyidentifiers_go">
 <a href="#state_policyidentifiers_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Identifiers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_postalcodes_go">
 <a href="#state_postalcodes_go" style="color: inherit; text-decoration: inherit;">Postal<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_provinces_go">
 <a href="#state_provinces_go" style="color: inherit; text-decoration: inherit;">Provinces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requirecn_go">
 <a href="#state_requirecn_go" style="color: inherit; text-decoration: inherit;">Require<wbr>Cn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serverflag_go">
 <a href="#state_serverflag_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_streetaddresses_go">
 <a href="#state_streetaddresses_go" style="color: inherit; text-decoration: inherit;">Street<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usecsrcommonname_go">
 <a href="#state_usecsrcommonname_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Common<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usecsrsans_go">
 <a href="#state_usecsrsans_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Csr<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2987,412 +2742,374 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_allowanyname_nodejs">
 <a href="#state_allowanyname_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Any<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowbaredomains_nodejs">
 <a href="#state_allowbaredomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Bare<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowglobdomains_nodejs">
 <a href="#state_allowglobdomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Glob<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowipsans_nodejs">
 <a href="#state_allowipsans_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Ip<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowlocalhost_nodejs">
 <a href="#state_allowlocalhost_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Localhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowsubdomains_nodejs">
 <a href="#state_allowsubdomains_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Subdomains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_alloweddomains_nodejs">
 <a href="#state_alloweddomains_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedothersans_nodejs">
 <a href="#state_allowedothersans_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Other<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowedurisans_nodejs">
 <a href="#state_allowedurisans_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Uri<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basicconstraintsvalidfornonca_nodejs">
 <a href="#state_basicconstraintsvalidfornonca_nodejs" style="color: inherit; text-decoration: inherit;">basic<wbr>Constraints<wbr>Valid<wbr>For<wbr>Non<wbr>Ca</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_clientflag_nodejs">
 <a href="#state_clientflag_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_codesigningflag_nodejs">
 <a href="#state_codesigningflag_nodejs" style="color: inherit; text-decoration: inherit;">code<wbr>Signing<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_countries_nodejs">
 <a href="#state_countries_nodejs" style="color: inherit; text-decoration: inherit;">countries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_emailprotectionflag_nodejs">
 <a href="#state_emailprotectionflag_nodejs" style="color: inherit; text-decoration: inherit;">email<wbr>Protection<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enforcehostnames_nodejs">
 <a href="#state_enforcehostnames_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Hostnames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_extkeyusages_nodejs">
 <a href="#state_extkeyusages_nodejs" style="color: inherit; text-decoration: inherit;">ext<wbr>Key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_generatelease_nodejs">
 <a href="#state_generatelease_nodejs" style="color: inherit; text-decoration: inherit;">generate<wbr>Lease</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keybits_nodejs">
 <a href="#state_keybits_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Bits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keytype_nodejs">
 <a href="#state_keytype_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_keyusages_nodejs">
 <a href="#state_keyusages_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_localities_nodejs">
 <a href="#state_localities_nodejs" style="color: inherit; text-decoration: inherit;">localities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_nostore_nodejs">
 <a href="#state_nostore_nodejs" style="color: inherit; text-decoration: inherit;">no<wbr>Store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notbeforeduration_nodejs">
 <a href="#state_notbeforeduration_nodejs" style="color: inherit; text-decoration: inherit;">not<wbr>Before<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_organizationunit_nodejs">
 <a href="#state_organizationunit_nodejs" style="color: inherit; text-decoration: inherit;">organization<wbr>Unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_organizations_nodejs">
 <a href="#state_organizations_nodejs" style="color: inherit; text-decoration: inherit;">organizations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policyidentifiers_nodejs">
 <a href="#state_policyidentifiers_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Identifiers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_postalcodes_nodejs">
 <a href="#state_postalcodes_nodejs" style="color: inherit; text-decoration: inherit;">postal<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_provinces_nodejs">
 <a href="#state_provinces_nodejs" style="color: inherit; text-decoration: inherit;">provinces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_requirecn_nodejs">
 <a href="#state_requirecn_nodejs" style="color: inherit; text-decoration: inherit;">require<wbr>Cn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serverflag_nodejs">
 <a href="#state_serverflag_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_streetaddresses_nodejs">
 <a href="#state_streetaddresses_nodejs" style="color: inherit; text-decoration: inherit;">street<wbr>Addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usecsrcommonname_nodejs">
 <a href="#state_usecsrcommonname_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Csr<wbr>Common<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usecsrsans_nodejs">
 <a href="#state_usecsrsans_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Csr<wbr>Sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3401,417 +3118,374 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_allow_any_name_python">
 <a href="#state_allow_any_name_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>any_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow any name
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_bare_domains_python">
 <a href="#state_allow_bare_domains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>bare_<wbr>domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching the actual domain
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_glob_domains_python">
 <a href="#state_allow_glob_domains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>glob_<wbr>domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow names containing glob patterns.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_ip_sans_python">
 <a href="#state_allow_ip_sans_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>ip_<wbr>sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow IP SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_localhost_python">
 <a href="#state_allow_localhost_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>localhost</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates for localhost
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allow_subdomains_python">
 <a href="#state_allow_subdomains_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>subdomains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow certificates matching subdomains
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowed_domains_python">
 <a href="#state_allowed_domains_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>domains</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of allowed domains for certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowed_other_sans_python">
 <a href="#state_allowed_other_sans_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>other_<wbr>sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Defines allowed custom SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_allowed_uri_sans_python">
 <a href="#state_allowed_uri_sans_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>uri_<wbr>sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Defines allowed URI SANs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_basic_constraints_valid_for_non_ca_python">
 <a href="#state_basic_constraints_valid_for_non_ca_python" style="color: inherit; text-decoration: inherit;">basic_<wbr>constraints_<wbr>valid_<wbr>for_<wbr>non_<wbr>ca</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to mark basic constraints valid when issuing non-CA certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_client_flag_python">
 <a href="#state_client_flag_python" style="color: inherit; text-decoration: inherit;">client_<wbr>flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for client use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_code_signing_flag_python">
 <a href="#state_code_signing_flag_python" style="color: inherit; text-decoration: inherit;">code_<wbr>signing_<wbr>flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for code signing use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_countries_python">
 <a href="#state_countries_python" style="color: inherit; text-decoration: inherit;">countries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The country of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_email_protection_flag_python">
 <a href="#state_email_protection_flag_python" style="color: inherit; text-decoration: inherit;">email_<wbr>protection_<wbr>flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for email protection use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enforce_hostnames_python">
 <a href="#state_enforce_hostnames_python" style="color: inherit; text-decoration: inherit;">enforce_<wbr>hostnames</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to allow only valid host names
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ext_key_usages_python">
 <a href="#state_ext_key_usages_python" style="color: inherit; text-decoration: inherit;">ext_<wbr>key_<wbr>usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed extended key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_generate_lease_python">
 <a href="#state_generate_lease_python" style="color: inherit; text-decoration: inherit;">generate_<wbr>lease</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to generate leases with certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_bits_python">
 <a href="#state_key_bits_python" style="color: inherit; text-decoration: inherit;">key_<wbr>bits</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bits of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_type_python">
 <a href="#state_key_type_python" style="color: inherit; text-decoration: inherit;">key_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of generated keys
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_usages_python">
 <a href="#state_key_usages_python" style="color: inherit; text-decoration: inherit;">key_<wbr>usages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify the allowed key usage constraint on issued certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_localities_python">
 <a href="#state_localities_python" style="color: inherit; text-decoration: inherit;">localities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The locality of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The maximum TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name to identify this role within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_no_store_python">
 <a href="#state_no_store_python" style="color: inherit; text-decoration: inherit;">no_<wbr>store</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to not store certificates in the storage backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_not_before_duration_python">
 <a href="#state_not_before_duration_python" style="color: inherit; text-decoration: inherit;">not_<wbr>before_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the duration by which to backdate the NotBefore property.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_organization_unit_python">
 <a href="#state_organization_unit_python" style="color: inherit; text-decoration: inherit;">organization_<wbr>unit</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The organization unit of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_organizations_python">
 <a href="#state_organizations_python" style="color: inherit; text-decoration: inherit;">organizations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The organization of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_policy_identifiers_python">
 <a href="#state_policy_identifiers_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>identifiers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Specify the list of allowed policies IODs
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_postal_codes_python">
 <a href="#state_postal_codes_python" style="color: inherit; text-decoration: inherit;">postal_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The postal code of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_provinces_python">
 <a href="#state_provinces_python" style="color: inherit; text-decoration: inherit;">provinces</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The province of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_require_cn_python">
 <a href="#state_require_cn_python" style="color: inherit; text-decoration: inherit;">require_<wbr>cn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to force CN usage
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_server_flag_python">
 <a href="#state_server_flag_python" style="color: inherit; text-decoration: inherit;">server_<wbr>flag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to specify certificates for server use
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_street_addresses_python">
 <a href="#state_street_addresses_python" style="color: inherit; text-decoration: inherit;">street_<wbr>addresses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The street address of generated certificates
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TTL
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_use_csr_common_name_python">
 <a href="#state_use_csr_common_name_python" style="color: inherit; text-decoration: inherit;">use_<wbr>csr_<wbr>common_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the CN in the CSR
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_use_csr_sans_python">
 <a href="#state_use_csr_sans_python" style="color: inherit; text-decoration: inherit;">use_<wbr>csr_<wbr>sans</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag to use the SANs in the CSR
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 
@@ -3836,6 +3510,6 @@ PKI secret backend roles can be imported using the `path`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 </dl>
 

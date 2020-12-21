@@ -3,7 +3,7 @@ title: "Module database"
 title_tag: "Module database | Package @pulumi/vault | Node.js SDK"
 linktitle: "database"
 meta_desc: "Explore members of the database module in the @pulumi/vault package."
-git_sha: "f4b3208824090a37bb9fc329f6449af5cfb6f228"
+git_sha: "207e7b59fd6b174087a0dc12a33dfcad3ee0712e"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="SecretBackendConnection" data-link-title="SecretBackendConnection">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L17">
         Resource <strong>SecretBackendConnection</strong>
     </a>
 </h3>
@@ -52,7 +52,7 @@ Database secret backend connections can be imported using the `backend`, `/confi
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -66,7 +66,7 @@ Create a SecretBackendConnection resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -77,14 +77,14 @@ Get an existing SecretBackendConnection resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -95,7 +95,7 @@ Returns true if the given object is an instance of SecretBackendConnection.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-allowedRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L49">property <b>allowedRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L49">property <b>allowedRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowedRoles: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -104,7 +104,7 @@ A list of roles that are allowed to use this
 connection.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L53">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L53">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -112,7 +112,7 @@ connection.
 The unique name of the Vault mount to configure.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-cassandra">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L57">property <b>cassandra</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L57">property <b>cassandra</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cassandra: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionCassandra'>SecretBackendConnectionCassandra</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -120,7 +120,7 @@ The unique name of the Vault mount to configure.
 A nested block containing configuration options for Cassandra connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L61">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L61">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ A nested block containing configuration options for Cassandra connections.
 A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-elasticsearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L65">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L65">property <b>elasticsearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>elasticsearch: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionElasticsearch'>SecretBackendConnectionElasticsearch</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -136,7 +136,7 @@ A map of sensitive data to pass to the endpoint. Useful for templated connection
 A nested block containing configuration options for Elasticsearch connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-hana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L69">property <b>hana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L69">property <b>hana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hana: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionHana'>SecretBackendConnectionHana</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ A nested block containing configuration options for Elasticsearch connections.
 A nested block containing configuration options for SAP HanaDB connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -153,7 +153,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-mongodb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L73">property <b>mongodb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L73">property <b>mongodb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mongodb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMongodb'>SecretBackendConnectionMongodb</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ deployments and may be missing (undefined) during planning phases.
 A nested block containing configuration options for MongoDB connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-mongodbatlas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L77">property <b>mongodbatlas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L77">property <b>mongodbatlas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mongodbatlas: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMongodbatlas'>SecretBackendConnectionMongodbatlas</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ A nested block containing configuration options for MongoDB connections.
 Connection parameters for the mongodbatlas-database-plugin plugin.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-mssql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L81">property <b>mssql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L81">property <b>mssql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mssql: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMssql'>SecretBackendConnectionMssql</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ Connection parameters for the mongodbatlas-database-plugin plugin.
 A nested block containing configuration options for MSSQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-mysql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L85">property <b>mysql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L85">property <b>mysql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mysql: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMysql'>SecretBackendConnectionMysql</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ A nested block containing configuration options for MSSQL connections.
 A nested block containing configuration options for MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-mysqlAurora">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L89">property <b>mysqlAurora</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L89">property <b>mysqlAurora</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mysqlAurora: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMysqlAurora'>SecretBackendConnectionMysqlAurora</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ A nested block containing configuration options for MySQL connections.
 A nested block containing configuration options for Aurora MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-mysqlLegacy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L93">property <b>mysqlLegacy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L93">property <b>mysqlLegacy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mysqlLegacy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMysqlLegacy'>SecretBackendConnectionMysqlLegacy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -201,7 +201,7 @@ A nested block containing configuration options for Aurora MySQL connections.
 A nested block containing configuration options for legacy MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-mysqlRds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L97">property <b>mysqlRds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L97">property <b>mysqlRds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mysqlRds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionMysqlRds'>SecretBackendConnectionMysqlRds</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ A nested block containing configuration options for legacy MySQL connections.
 A nested block containing configuration options for RDS MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L101">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L101">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ A nested block containing configuration options for RDS MySQL connections.
 A unique name to give the database connection.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-oracle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L105">property <b>oracle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L105">property <b>oracle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>oracle: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionOracle'>SecretBackendConnectionOracle</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ A unique name to give the database connection.
 A nested block containing configuration options for Oracle connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-postgresql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L109">property <b>postgresql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L109">property <b>postgresql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>postgresql: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendConnectionPostgresql'>SecretBackendConnectionPostgresql</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ A nested block containing configuration options for Oracle connections.
 A nested block containing configuration options for PostgreSQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-rootRotationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L113">property <b>rootRotationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L113">property <b>rootRotationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rootRotationStatements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -241,7 +241,7 @@ A nested block containing configuration options for PostgreSQL connections.
 A list of database statements to be executed to rotate the root user's credentials.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -250,7 +250,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnection-verifyConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L118">property <b>verifyConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L118">property <b>verifyConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>verifyConnection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -259,7 +259,7 @@ Whether the connection should be verified on
 initial configuration or not.
 
 <h3 class="pdoc-module-header" id="SecretBackendRole" data-link-title="SecretBackendRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L16">
         Resource <strong>SecretBackendRole</strong>
     </a>
 </h3>
@@ -275,7 +275,7 @@ Database secret backend roles can be imported using the `backend`, `/roles/`, an
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L86"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L86"> <b>constructor</b></a>
 </h4>
 
 
@@ -289,7 +289,7 @@ Create a SecretBackendRole resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -300,14 +300,14 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -318,7 +318,7 @@ Returns true if the given object is an instance of SecretBackendRole.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L47">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L47">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -326,7 +326,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The unique name of the Vault mount to configure.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-creationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L52">property <b>creationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L52">property <b>creationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creationStatements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -335,7 +335,7 @@ The database statements to execute when
 creating a user.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-dbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L57">property <b>dbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L57">property <b>dbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -344,7 +344,7 @@ The unique name of the database connection to use for
 the role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-defaultTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L62">property <b>defaultTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L62">property <b>defaultTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -353,7 +353,7 @@ The default number of seconds for leases for this
 role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -362,7 +362,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L67">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L67">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxTtl: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -371,7 +371,7 @@ The maximum number of seconds for leases for this
 role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -379,7 +379,7 @@ role.
 A unique name to give the role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-renewStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L76">property <b>renewStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L76">property <b>renewStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>renewStatements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -388,7 +388,7 @@ The database statements to execute when
 renewing a user.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-revocationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L81">property <b>revocationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L81">property <b>revocationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>revocationStatements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -397,7 +397,7 @@ The database statements to execute when
 revoking a user.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-rollbackStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L86">property <b>rollbackStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L86">property <b>rollbackStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rollbackStatements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -406,7 +406,7 @@ The database statements to execute when
 rolling back creation due to an error.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -415,7 +415,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretBackendStaticRole" data-link-title="SecretBackendStaticRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L46">
         Resource <strong>SecretBackendStaticRole</strong>
     </a>
 </h3>
@@ -461,7 +461,7 @@ Database secret backend static roles can be imported using the `backend`, `/stat
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L97"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L97"> <b>constructor</b></a>
 </h4>
 
 
@@ -475,7 +475,7 @@ Create a SecretBackendStaticRole resource with the given unique name, arguments,
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L56">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L56">method <b>get</b></a>
 </h4>
 
 
@@ -486,14 +486,14 @@ Get an existing SecretBackendStaticRole resource's state with the given name, ID
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L46">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L46">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L67">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L67">method <b>isInstance</b></a>
 </h4>
 
 
@@ -504,7 +504,7 @@ Returns true if the given object is an instance of SecretBackendStaticRole.  Thi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L77">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L77">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -512,7 +512,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The unique name of the Vault mount to configure.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-dbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L81">property <b>dbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L81">property <b>dbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -520,7 +520,7 @@ The unique name of the Vault mount to configure.
 The unique name of the database connection to use for the static role.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L46">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L46">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -529,7 +529,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L85">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L85">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -537,7 +537,7 @@ deployments and may be missing (undefined) during planning phases.
 A unique name to give the static role.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-rotationPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L89">property <b>rotationPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L89">property <b>rotationPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rotationPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -545,7 +545,7 @@ A unique name to give the static role.
 The amount of time Vault should wait before rotating the password, in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-rotationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L93">property <b>rotationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L93">property <b>rotationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rotationStatements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -553,7 +553,7 @@ The amount of time Vault should wait before rotating the password, in seconds.
 Database statements to execute to rotate the password for the configured database user.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L46">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L46">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -562,7 +562,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRole-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L97">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L97">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -573,7 +573,7 @@ The database username that this static role corresponds to.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="SecretBackendConnectionArgs" data-link-title="SecretBackendConnectionArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L268">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L268">
         interface <strong>SecretBackendConnectionArgs</strong>
     </a>
 </h3>
@@ -583,7 +583,7 @@ The database username that this static role corresponds to.
 The set of arguments for constructing a SecretBackendConnection resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-allowedRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L273">property <b>allowedRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L273">property <b>allowedRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -592,7 +592,7 @@ A list of roles that are allowed to use this
 connection.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L277">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L277">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -600,7 +600,7 @@ connection.
 The unique name of the Vault mount to configure.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-cassandra">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L281">property <b>cassandra</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L281">property <b>cassandra</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cassandra?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionCassandra'>SecretBackendConnectionCassandra</a>&gt;;</code></pre>
@@ -608,7 +608,7 @@ The unique name of the Vault mount to configure.
 A nested block containing configuration options for Cassandra connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L285">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L285">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -616,7 +616,7 @@ A nested block containing configuration options for Cassandra connections.
 A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-elasticsearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L289">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L289">property <b>elasticsearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionElasticsearch'>SecretBackendConnectionElasticsearch</a>&gt;;</code></pre>
@@ -624,7 +624,7 @@ A map of sensitive data to pass to the endpoint. Useful for templated connection
 A nested block containing configuration options for Elasticsearch connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-hana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L293">property <b>hana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L293">property <b>hana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hana?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionHana'>SecretBackendConnectionHana</a>&gt;;</code></pre>
@@ -632,7 +632,7 @@ A nested block containing configuration options for Elasticsearch connections.
 A nested block containing configuration options for SAP HanaDB connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-mongodb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L297">property <b>mongodb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L297">property <b>mongodb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongodb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMongodb'>SecretBackendConnectionMongodb</a>&gt;;</code></pre>
@@ -640,7 +640,7 @@ A nested block containing configuration options for SAP HanaDB connections.
 A nested block containing configuration options for MongoDB connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-mongodbatlas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L301">property <b>mongodbatlas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L301">property <b>mongodbatlas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongodbatlas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMongodbatlas'>SecretBackendConnectionMongodbatlas</a>&gt;;</code></pre>
@@ -648,7 +648,7 @@ A nested block containing configuration options for MongoDB connections.
 Connection parameters for the mongodbatlas-database-plugin plugin.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-mssql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L305">property <b>mssql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L305">property <b>mssql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mssql?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMssql'>SecretBackendConnectionMssql</a>&gt;;</code></pre>
@@ -656,7 +656,7 @@ Connection parameters for the mongodbatlas-database-plugin plugin.
 A nested block containing configuration options for MSSQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-mysql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L309">property <b>mysql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L309">property <b>mysql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysql?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysql'>SecretBackendConnectionMysql</a>&gt;;</code></pre>
@@ -664,7 +664,7 @@ A nested block containing configuration options for MSSQL connections.
 A nested block containing configuration options for MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-mysqlAurora">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L313">property <b>mysqlAurora</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L313">property <b>mysqlAurora</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysqlAurora?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysqlAurora'>SecretBackendConnectionMysqlAurora</a>&gt;;</code></pre>
@@ -672,7 +672,7 @@ A nested block containing configuration options for MySQL connections.
 A nested block containing configuration options for Aurora MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-mysqlLegacy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L317">property <b>mysqlLegacy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L317">property <b>mysqlLegacy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysqlLegacy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysqlLegacy'>SecretBackendConnectionMysqlLegacy</a>&gt;;</code></pre>
@@ -680,7 +680,7 @@ A nested block containing configuration options for Aurora MySQL connections.
 A nested block containing configuration options for legacy MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-mysqlRds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L321">property <b>mysqlRds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L321">property <b>mysqlRds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysqlRds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysqlRds'>SecretBackendConnectionMysqlRds</a>&gt;;</code></pre>
@@ -688,7 +688,7 @@ A nested block containing configuration options for legacy MySQL connections.
 A nested block containing configuration options for RDS MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L325">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L325">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -696,7 +696,7 @@ A nested block containing configuration options for RDS MySQL connections.
 A unique name to give the database connection.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-oracle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L329">property <b>oracle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L329">property <b>oracle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oracle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionOracle'>SecretBackendConnectionOracle</a>&gt;;</code></pre>
@@ -704,7 +704,7 @@ A unique name to give the database connection.
 A nested block containing configuration options for Oracle connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-postgresql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L333">property <b>postgresql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L333">property <b>postgresql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postgresql?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionPostgresql'>SecretBackendConnectionPostgresql</a>&gt;;</code></pre>
@@ -712,7 +712,7 @@ A nested block containing configuration options for Oracle connections.
 A nested block containing configuration options for PostgreSQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-rootRotationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L337">property <b>rootRotationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L337">property <b>rootRotationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootRotationStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -720,7 +720,7 @@ A nested block containing configuration options for PostgreSQL connections.
 A list of database statements to be executed to rotate the root user's credentials.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionArgs-verifyConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L342">property <b>verifyConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L342">property <b>verifyConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verifyConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -729,7 +729,7 @@ Whether the connection should be verified on
 initial configuration or not.
 
 <h3 class="pdoc-module-header" id="SecretBackendConnectionState" data-link-title="SecretBackendConnectionState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L188">
         interface <strong>SecretBackendConnectionState</strong>
     </a>
 </h3>
@@ -739,7 +739,7 @@ initial configuration or not.
 Input properties used for looking up and filtering SecretBackendConnection resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-allowedRoles">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L193">property <b>allowedRoles</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L193">property <b>allowedRoles</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedRoles?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -748,7 +748,7 @@ A list of roles that are allowed to use this
 connection.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L197">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L197">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -756,7 +756,7 @@ connection.
 The unique name of the Vault mount to configure.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-cassandra">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L201">property <b>cassandra</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L201">property <b>cassandra</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cassandra?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionCassandra'>SecretBackendConnectionCassandra</a>&gt;;</code></pre>
@@ -764,7 +764,7 @@ The unique name of the Vault mount to configure.
 A nested block containing configuration options for Cassandra connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L205">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L205">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -772,7 +772,7 @@ A nested block containing configuration options for Cassandra connections.
 A map of sensitive data to pass to the endpoint. Useful for templated connection strings.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-elasticsearch">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L209">property <b>elasticsearch</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L209">property <b>elasticsearch</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearch?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionElasticsearch'>SecretBackendConnectionElasticsearch</a>&gt;;</code></pre>
@@ -780,7 +780,7 @@ A map of sensitive data to pass to the endpoint. Useful for templated connection
 A nested block containing configuration options for Elasticsearch connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-hana">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L213">property <b>hana</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L213">property <b>hana</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hana?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionHana'>SecretBackendConnectionHana</a>&gt;;</code></pre>
@@ -788,7 +788,7 @@ A nested block containing configuration options for Elasticsearch connections.
 A nested block containing configuration options for SAP HanaDB connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-mongodb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L217">property <b>mongodb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L217">property <b>mongodb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongodb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMongodb'>SecretBackendConnectionMongodb</a>&gt;;</code></pre>
@@ -796,7 +796,7 @@ A nested block containing configuration options for SAP HanaDB connections.
 A nested block containing configuration options for MongoDB connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-mongodbatlas">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L221">property <b>mongodbatlas</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L221">property <b>mongodbatlas</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongodbatlas?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMongodbatlas'>SecretBackendConnectionMongodbatlas</a>&gt;;</code></pre>
@@ -804,7 +804,7 @@ A nested block containing configuration options for MongoDB connections.
 Connection parameters for the mongodbatlas-database-plugin plugin.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-mssql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L225">property <b>mssql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L225">property <b>mssql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mssql?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMssql'>SecretBackendConnectionMssql</a>&gt;;</code></pre>
@@ -812,7 +812,7 @@ Connection parameters for the mongodbatlas-database-plugin plugin.
 A nested block containing configuration options for MSSQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-mysql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L229">property <b>mysql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L229">property <b>mysql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysql?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysql'>SecretBackendConnectionMysql</a>&gt;;</code></pre>
@@ -820,7 +820,7 @@ A nested block containing configuration options for MSSQL connections.
 A nested block containing configuration options for MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-mysqlAurora">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L233">property <b>mysqlAurora</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L233">property <b>mysqlAurora</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysqlAurora?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysqlAurora'>SecretBackendConnectionMysqlAurora</a>&gt;;</code></pre>
@@ -828,7 +828,7 @@ A nested block containing configuration options for MySQL connections.
 A nested block containing configuration options for Aurora MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-mysqlLegacy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L237">property <b>mysqlLegacy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L237">property <b>mysqlLegacy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysqlLegacy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysqlLegacy'>SecretBackendConnectionMysqlLegacy</a>&gt;;</code></pre>
@@ -836,7 +836,7 @@ A nested block containing configuration options for Aurora MySQL connections.
 A nested block containing configuration options for legacy MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-mysqlRds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L241">property <b>mysqlRds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L241">property <b>mysqlRds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mysqlRds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionMysqlRds'>SecretBackendConnectionMysqlRds</a>&gt;;</code></pre>
@@ -844,7 +844,7 @@ A nested block containing configuration options for legacy MySQL connections.
 A nested block containing configuration options for RDS MySQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L245">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L245">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -852,7 +852,7 @@ A nested block containing configuration options for RDS MySQL connections.
 A unique name to give the database connection.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-oracle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L249">property <b>oracle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L249">property <b>oracle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oracle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionOracle'>SecretBackendConnectionOracle</a>&gt;;</code></pre>
@@ -860,7 +860,7 @@ A unique name to give the database connection.
 A nested block containing configuration options for Oracle connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-postgresql">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L253">property <b>postgresql</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L253">property <b>postgresql</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>postgresql?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendConnectionPostgresql'>SecretBackendConnectionPostgresql</a>&gt;;</code></pre>
@@ -868,7 +868,7 @@ A nested block containing configuration options for Oracle connections.
 A nested block containing configuration options for PostgreSQL connections.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-rootRotationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L257">property <b>rootRotationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L257">property <b>rootRotationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootRotationStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -876,7 +876,7 @@ A nested block containing configuration options for PostgreSQL connections.
 A list of database statements to be executed to rotate the root user's credentials.
 
 <h4 class="pdoc-member-header" id="SecretBackendConnectionState-verifyConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendConnection.ts#L262">property <b>verifyConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendConnection.ts#L262">property <b>verifyConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verifyConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -885,7 +885,7 @@ Whether the connection should be verified on
 initial configuration or not.
 
 <h3 class="pdoc-module-header" id="SecretBackendRoleArgs" data-link-title="SecretBackendRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L193">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L193">
         interface <strong>SecretBackendRoleArgs</strong>
     </a>
 </h3>
@@ -895,7 +895,7 @@ initial configuration or not.
 The set of arguments for constructing a SecretBackendRole resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L197">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L197">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -903,7 +903,7 @@ The set of arguments for constructing a SecretBackendRole resource.
 The unique name of the Vault mount to configure.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-creationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L202">property <b>creationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L202">property <b>creationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationStatements: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -912,7 +912,7 @@ The database statements to execute when
 creating a user.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-dbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L207">property <b>dbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L207">property <b>dbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -921,7 +921,7 @@ The unique name of the database connection to use for
 the role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-defaultTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L212">property <b>defaultTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L212">property <b>defaultTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -930,7 +930,7 @@ The default number of seconds for leases for this
 role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L217">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L217">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -939,7 +939,7 @@ The maximum number of seconds for leases for this
 role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L221">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L221">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -947,7 +947,7 @@ role.
 A unique name to give the role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-renewStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L226">property <b>renewStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L226">property <b>renewStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -956,7 +956,7 @@ The database statements to execute when
 renewing a user.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-revocationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L231">property <b>revocationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L231">property <b>revocationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revocationStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -965,7 +965,7 @@ The database statements to execute when
 revoking a user.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-rollbackStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L236">property <b>rollbackStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L236">property <b>rollbackStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rollbackStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -974,7 +974,7 @@ The database statements to execute when
 rolling back creation due to an error.
 
 <h3 class="pdoc-module-header" id="SecretBackendRoleState" data-link-title="SecretBackendRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L144">
         interface <strong>SecretBackendRoleState</strong>
     </a>
 </h3>
@@ -984,7 +984,7 @@ rolling back creation due to an error.
 Input properties used for looking up and filtering SecretBackendRole resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L148">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L148">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -992,7 +992,7 @@ Input properties used for looking up and filtering SecretBackendRole resources.
 The unique name of the Vault mount to configure.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-creationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L153">property <b>creationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L153">property <b>creationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1001,7 +1001,7 @@ The database statements to execute when
 creating a user.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-dbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L158">property <b>dbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L158">property <b>dbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1010,7 +1010,7 @@ The unique name of the database connection to use for
 the role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-defaultTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L163">property <b>defaultTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L163">property <b>defaultTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1019,7 +1019,7 @@ The default number of seconds for leases for this
 role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-maxTtl">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L168">property <b>maxTtl</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L168">property <b>maxTtl</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxTtl?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1028,7 +1028,7 @@ The maximum number of seconds for leases for this
 role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L172">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1036,7 +1036,7 @@ role.
 A unique name to give the role.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-renewStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L177">property <b>renewStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L177">property <b>renewStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>renewStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1045,7 +1045,7 @@ The database statements to execute when
 renewing a user.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-revocationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L182">property <b>revocationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L182">property <b>revocationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>revocationStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1054,7 +1054,7 @@ The database statements to execute when
 revoking a user.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-rollbackStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendRole.ts#L187">property <b>rollbackStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendRole.ts#L187">property <b>rollbackStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rollbackStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1063,7 +1063,7 @@ The database statements to execute when
 rolling back creation due to an error.
 
 <h3 class="pdoc-module-header" id="SecretBackendStaticRoleArgs" data-link-title="SecretBackendStaticRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L182">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L182">
         interface <strong>SecretBackendStaticRoleArgs</strong>
     </a>
 </h3>
@@ -1073,7 +1073,7 @@ rolling back creation due to an error.
 The set of arguments for constructing a SecretBackendStaticRole resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L186">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L186">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ The set of arguments for constructing a SecretBackendStaticRole resource.
 The unique name of the Vault mount to configure.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleArgs-dbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L190">property <b>dbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L190">property <b>dbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1089,7 +1089,7 @@ The unique name of the Vault mount to configure.
 The unique name of the database connection to use for the static role.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L194">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L194">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ The unique name of the database connection to use for the static role.
 A unique name to give the static role.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleArgs-rotationPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L198">property <b>rotationPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L198">property <b>rotationPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rotationPeriod: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1105,7 +1105,7 @@ A unique name to give the static role.
 The amount of time Vault should wait before rotating the password, in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleArgs-rotationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L202">property <b>rotationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L202">property <b>rotationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rotationStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1113,7 +1113,7 @@ The amount of time Vault should wait before rotating the password, in seconds.
 Database statements to execute to rotate the password for the configured database user.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L206">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L206">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1121,7 +1121,7 @@ Database statements to execute to rotate the password for the configured databas
 The database username that this static role corresponds to.
 
 <h3 class="pdoc-module-header" id="SecretBackendStaticRoleState" data-link-title="SecretBackendStaticRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L152">
         interface <strong>SecretBackendStaticRoleState</strong>
     </a>
 </h3>
@@ -1131,7 +1131,7 @@ The database username that this static role corresponds to.
 Input properties used for looking up and filtering SecretBackendStaticRole resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L156">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L156">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1139,7 +1139,7 @@ Input properties used for looking up and filtering SecretBackendStaticRole resou
 The unique name of the Vault mount to configure.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleState-dbName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L160">property <b>dbName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L160">property <b>dbName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ The unique name of the Vault mount to configure.
 The unique name of the database connection to use for the static role.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L164">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L164">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1155,7 +1155,7 @@ The unique name of the database connection to use for the static role.
 A unique name to give the static role.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleState-rotationPeriod">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L168">property <b>rotationPeriod</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L168">property <b>rotationPeriod</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rotationPeriod?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1163,7 +1163,7 @@ A unique name to give the static role.
 The amount of time Vault should wait before rotating the password, in seconds.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleState-rotationStatements">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L172">property <b>rotationStatements</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L172">property <b>rotationStatements</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rotationStatements?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1171,7 +1171,7 @@ The amount of time Vault should wait before rotating the password, in seconds.
 Database statements to execute to rotate the password for the configured database user.
 
 <h4 class="pdoc-member-header" id="SecretBackendStaticRoleState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/database/secretBackendStaticRole.ts#L176">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/database/secretBackendStaticRole.ts#L176">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
