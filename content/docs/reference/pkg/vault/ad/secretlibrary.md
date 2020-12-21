@@ -1,8 +1,8 @@
 
 ---
 title: "SecretLibrary"
-title_tag: "Resource SecretLibrary | Module ad | Package Vault"
-meta_desc: "Explore the SecretLibrary resource of the ad module, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vault.ad.SecretLibrary"
+meta_desc: "Documentation for the vault.ad.SecretLibrary resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -18,7 +18,7 @@ meta_desc: "Explore the SecretLibrary resource of the ad module, including examp
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ad/#SecretLibrary">SecretLibrary</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ad/#SecretLibraryArgs">SecretLibraryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ad/#SecretLibrary">SecretLibrary</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ad/#SecretLibraryArgs">SecretLibraryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,11 +26,11 @@ meta_desc: "Explore the SecretLibrary resource of the ad module, including examp
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#SecretLibrary">NewSecretLibrary</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#SecretLibraryArgs">SecretLibraryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#SecretLibrary">SecretLibrary</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#SecretLibrary">NewSecretLibrary</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#SecretLibraryArgs">SecretLibraryArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#SecretLibrary">SecretLibrary</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AD.SecretLibrary.html">SecretLibrary</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AD.SecretLibraryArgs.html">SecretLibraryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AD.SecretLibrary.html">SecretLibrary</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AD.SecretLibraryArgs.html">SecretLibraryArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ meta_desc: "Explore the SecretLibrary resource of the ad module, including examp
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -110,7 +110,7 @@ meta_desc: "Explore the SecretLibrary resource of the ad module, including examp
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +149,7 @@ meta_desc: "Explore the SecretLibrary resource of the ad module, including examp
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -190,7 +190,6 @@ The SecretLibrary resource accepts the following [input]({{< relref "/docs/intro
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -198,72 +197,65 @@ The SecretLibrary resource accepts the following [input]({{< relref "/docs/intro
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccountnames_csharp">
 <a href="#serviceaccountnames_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablecheckinenforcement_csharp">
 <a href="#disablecheckinenforcement_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Check<wbr>In<wbr>Enforcement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -272,72 +264,65 @@ in Active Directory.
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccountnames_go">
 <a href="#serviceaccountnames_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablecheckinenforcement_go">
 <a href="#disablecheckinenforcement_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Check<wbr>In<wbr>Enforcement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -346,72 +331,65 @@ in Active Directory.
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="serviceaccountnames_nodejs">
 <a href="#serviceaccountnames_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablecheckinenforcement_nodejs">
 <a href="#disablecheckinenforcement_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Check<wbr>In<wbr>Enforcement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -420,81 +398,70 @@ in Active Directory.
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_account_names_python">
 <a href="#service_account_names_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disable_check_in_enforcement_python">
 <a href="#disable_check_in_enforcement_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>check_<wbr>in_<wbr>enforcement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the SecretLibrary resource produces the following output properties:
-
 
 
 
@@ -505,15 +472,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -522,15 +487,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -539,15 +502,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -556,18 +517,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -577,7 +533,7 @@ Get an existing SecretLibrary resource's state with the given name, ID, and opti
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ad/#SecretLibraryState">SecretLibraryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ad/#SecretLibrary">SecretLibrary</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ad/#SecretLibraryState">SecretLibraryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ad/#SecretLibrary">SecretLibrary</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -586,11 +542,11 @@ Get an existing SecretLibrary resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretLibrary<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#SecretLibraryState">SecretLibraryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#SecretLibrary">SecretLibrary</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretLibrary<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#SecretLibraryState">SecretLibraryState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#SecretLibrary">SecretLibrary</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AD.SecretLibrary.html">SecretLibrary</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AD.SecretLibraryState.html">SecretLibraryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AD.SecretLibrary.html">SecretLibrary</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AD.SecretLibraryState.html">SecretLibraryState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -692,7 +648,6 @@ Get an existing SecretLibrary resource's state with the given name, ID, and opti
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -700,72 +655,65 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disablecheckinenforcement_csharp">
 <a href="#state_disablecheckinenforcement_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Check<wbr>In<wbr>Enforcement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountnames_csharp">
 <a href="#state_serviceaccountnames_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -774,72 +722,65 @@ in Active Directory.
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disablecheckinenforcement_go">
 <a href="#state_disablecheckinenforcement_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Check<wbr>In<wbr>Enforcement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountnames_go">
 <a href="#state_serviceaccountnames_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Account<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -848,72 +789,65 @@ in Active Directory.
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disablecheckinenforcement_nodejs">
 <a href="#state_disablecheckinenforcement_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Check<wbr>In<wbr>Enforcement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccountnames_nodejs">
 <a href="#state_serviceaccountnames_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Account<wbr>Names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -922,77 +856,65 @@ in Active Directory.
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The mount path for the AD backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disable_check_in_enforcement_python">
 <a href="#state_disable_check_in_enforcement_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>check_<wbr>in_<wbr>enforcement</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Disable enforcing that service accounts must be checked in by the entity or client token that checked them out.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of time, in seconds, a check-out last with renewal before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the set of service accounts.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_account_names_python">
 <a href="#state_service_account_names_python" style="color: inherit; text-decoration: inherit;">service_<wbr>account_<wbr>names</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The names of all the service accounts that can be checked out from this set. These service accounts must already exist
 in Active Directory.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of time, in seconds, a single check-out lasts before Vault automatically checks it back in.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 
@@ -1007,6 +929,6 @@ in Active Directory.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 </dl>
 

@@ -121,7 +121,6 @@ const example = pulumi.output(vault.getAuthBackend({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -129,16 +128,14 @@ The following arguments are supported:
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth backend mount point.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -147,16 +144,14 @@ The following arguments are supported:
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth backend mount point.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -165,16 +160,14 @@ The following arguments are supported:
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth backend mount point.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -183,19 +176,14 @@ The following arguments are supported:
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The auth backend mount point.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -206,7 +194,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -214,103 +201,93 @@ The following output properties are available:
             title="">
         <span id="accessor_csharp">
 <a href="#accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultleasettlseconds_csharp">
 <a href="#defaultleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default lease duration in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the auth method.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="listingvisibility_csharp">
 <a href="#listingvisibility_csharp" style="color: inherit; text-decoration: inherit;">Listing<wbr>Visibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="local_csharp">
 <a href="#local_csharp" style="color: inherit; text-decoration: inherit;">Local</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="maxleasettlseconds_csharp">
 <a href="#maxleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lease duration in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the auth method type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -319,103 +296,93 @@ The following output properties are available:
             title="">
         <span id="accessor_go">
 <a href="#accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultleasettlseconds_go">
 <a href="#defaultleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default lease duration in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the auth method.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="listingvisibility_go">
 <a href="#listingvisibility_go" style="color: inherit; text-decoration: inherit;">Listing<wbr>Visibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="local_go">
 <a href="#local_go" style="color: inherit; text-decoration: inherit;">Local</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="maxleasettlseconds_go">
 <a href="#maxleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lease duration in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the auth method type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -424,103 +391,93 @@ The following output properties are available:
             title="">
         <span id="accessor_nodejs">
 <a href="#accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="defaultleasettlseconds_nodejs">
 <a href="#defaultleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default lease duration in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the auth method.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="listingvisibility_nodejs">
 <a href="#listingvisibility_nodejs" style="color: inherit; text-decoration: inherit;">listing<wbr>Visibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="local_nodejs">
 <a href="#local_nodejs" style="color: inherit; text-decoration: inherit;">local</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="maxleasettlseconds_nodejs">
 <a href="#maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum lease duration in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the auth method type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -529,106 +486,93 @@ The following output properties are available:
             title="">
         <span id="accessor_python">
 <a href="#accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="default_lease_ttl_seconds_python">
 <a href="#default_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">default_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default lease duration in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the auth method.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="listing_visibility_python">
 <a href="#listing_visibility_python" style="color: inherit; text-decoration: inherit;">listing_<wbr>visibility</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Speficies whether to show this mount in the UI-specific listing endpoint.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="local_python">
 <a href="#local_python" style="color: inherit; text-decoration: inherit;">local</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="max_lease_ttl_seconds_python">
 <a href="#max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lease duration in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the auth method type.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -641,6 +585,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 </dl>
 

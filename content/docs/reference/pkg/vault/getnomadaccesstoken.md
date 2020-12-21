@@ -1,8 +1,8 @@
 
 ---
-title: "GetAccessCredentials"
-title_tag: "Function GetAccessCredentials | Module ad | Package Vault"
-meta_desc: "Explore the GetAccessCredentials function of the ad module, including examples, input properties, output properties, and supporting types. "
+title: "GetNomadAccessToken"
+title_tag: "Function GetNomadAccessToken | Package Vault"
+meta_desc: "Explore the GetNomadAccessToken function of the Vault package, including examples, input properties, output properties, and supporting types. "
 ---
 
 
@@ -13,30 +13,30 @@ meta_desc: "Explore the GetAccessCredentials function of the ad module, includin
 
 
 
-## Using GetAccessCredentials {#using}
+## Using GetNomadAccessToken {#using}
 
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getAccessCredentials<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ad/#GetAccessCredentialsArgs">GetAccessCredentialsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ad/#GetAccessCredentialsResult">GetAccessCredentialsResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getNomadAccessToken<span class="p">(</span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#GetNomadAccessTokenArgs">GetNomadAccessTokenArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#GetNomadAccessTokenResult">GetNomadAccessTokenResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_access_credentials(</span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetAccessCredentialsResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_nomad_access_token(</span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetNomadAccessTokenResult</code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessCredentials<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#GetAccessCredentialsArgs">GetAccessCredentialsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ad?tab=doc#GetAccessCredentialsResult">GetAccessCredentialsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNomadAccessToken<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#GetNomadAccessTokenArgs">GetNomadAccessTokenArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#GetNomadAccessTokenResult">GetNomadAccessTokenResult</a></span>, error)</span></code></pre></div>
 
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccessCredentials </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Ad.GetAccessCredentialsResult.html">GetAccessCredentialsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AD.GetAccessCredentialsArgs.html">GetAccessCredentialsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNomadAccessToken </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.GetNomadAccessTokenResult.html">GetNomadAccessTokenResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.GetNomadAccessTokenArgs.html">GetNomadAccessTokenArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -56,7 +56,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the AD secret backend to
+    <dd>{{% md %}}The path to the Nomad secret backend to
 read credentials from, with no leading or trailing `/`s.
 {{% /md %}}</dd>
     <dt class="property-required"
@@ -67,8 +67,8 @@ read credentials from, with no leading or trailing `/`s.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the AD secret backend role to read
-credentials from, with no leading or trailing `/`s.
+    <dd>{{% md %}}The name of the Nomad secret backend role to generate
+a token for, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -84,7 +84,7 @@ credentials from, with no leading or trailing `/`s.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the AD secret backend to
+    <dd>{{% md %}}The path to the Nomad secret backend to
 read credentials from, with no leading or trailing `/`s.
 {{% /md %}}</dd>
     <dt class="property-required"
@@ -95,8 +95,8 @@ read credentials from, with no leading or trailing `/`s.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the AD secret backend role to read
-credentials from, with no leading or trailing `/`s.
+    <dd>{{% md %}}The name of the Nomad secret backend role to generate
+a token for, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -112,7 +112,7 @@ credentials from, with no leading or trailing `/`s.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The path to the AD secret backend to
+    <dd>{{% md %}}The path to the Nomad secret backend to
 read credentials from, with no leading or trailing `/`s.
 {{% /md %}}</dd>
     <dt class="property-required"
@@ -123,8 +123,8 @@ read credentials from, with no leading or trailing `/`s.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the AD secret backend role to read
-credentials from, with no leading or trailing `/`s.
+    <dd>{{% md %}}The name of the Nomad secret backend role to generate
+a token for, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -140,7 +140,7 @@ credentials from, with no leading or trailing `/`s.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The path to the AD secret backend to
+    <dd>{{% md %}}The path to the Nomad secret backend to
 read credentials from, with no leading or trailing `/`s.
 {{% /md %}}</dd>
     <dt class="property-required"
@@ -151,8 +151,8 @@ read credentials from, with no leading or trailing `/`s.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the AD secret backend role to read
-credentials from, with no leading or trailing `/`s.
+    <dd>{{% md %}}The name of the Nomad secret backend role to generate
+a token for, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -160,7 +160,7 @@ credentials from, with no leading or trailing `/`s.
 
 
 
-## GetAccessCredentials Result {#result}
+## GetNomadAccessToken Result {#result}
 
 The following output properties are available:
 
@@ -171,6 +171,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="accessorid_csharp">
+<a href="#accessorid_csharp" style="color: inherit; text-decoration: inherit;">Accessor<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public identifier for a specific token. It can be used 
+to look up information about a token or to revoke a token.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
 </span>
@@ -178,16 +189,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="currentpassword_csharp">
-<a href="#currentpassword_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The current set password on the Active Directory service account.
-{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -200,16 +201,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="lastpassword_csharp">
-<a href="#lastpassword_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The current set password on the Active Directory service account, provided because AD is eventually consistent.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
@@ -219,13 +210,13 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="username_csharp">
-<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">Username</a>
+        <span id="secretid_csharp">
+<a href="#secretid_csharp" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Active Directory service account username.
+    <dd>{{% md %}}The token to be used when making requests to Nomad and should be kept private.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -235,6 +226,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="accessorid_go">
+<a href="#accessorid_go" style="color: inherit; text-decoration: inherit;">Accessor<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public identifier for a specific token. It can be used 
+to look up information about a token or to revoke a token.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
 </span>
@@ -242,16 +244,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="currentpassword_go">
-<a href="#currentpassword_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The current set password on the Active Directory service account.
-{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -264,16 +256,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="lastpassword_go">
-<a href="#lastpassword_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The current set password on the Active Directory service account, provided because AD is eventually consistent.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
 </span>
@@ -283,13 +265,13 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="username_go">
-<a href="#username_go" style="color: inherit; text-decoration: inherit;">Username</a>
+        <span id="secretid_go">
+<a href="#secretid_go" style="color: inherit; text-decoration: inherit;">Secret<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Active Directory service account username.
+    <dd>{{% md %}}The token to be used when making requests to Nomad and should be kept private.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -299,6 +281,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="accessorid_nodejs">
+<a href="#accessorid_nodejs" style="color: inherit; text-decoration: inherit;">accessor<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public identifier for a specific token. It can be used 
+to look up information about a token or to revoke a token.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
@@ -306,16 +299,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="currentpassword_nodejs">
-<a href="#currentpassword_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The current set password on the Active Directory service account.
-{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -328,16 +311,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="lastpassword_nodejs">
-<a href="#lastpassword_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The current set password on the Active Directory service account, provided because AD is eventually consistent.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
@@ -347,13 +320,13 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="username_nodejs">
-<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">username</a>
+        <span id="secretid_nodejs">
+<a href="#secretid_nodejs" style="color: inherit; text-decoration: inherit;">secret<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Active Directory service account username.
+    <dd>{{% md %}}The token to be used when making requests to Nomad and should be kept private.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -363,6 +336,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="accessor_id_python">
+<a href="#accessor_id_python" style="color: inherit; text-decoration: inherit;">accessor_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The public identifier for a specific token. It can be used 
+to look up information about a token or to revoke a token.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
 </span>
@@ -370,16 +354,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="current_password_python">
-<a href="#current_password_python" style="color: inherit; text-decoration: inherit;">current_<wbr>password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The current set password on the Active Directory service account.
-{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -392,16 +366,6 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="last_password_python">
-<a href="#last_password_python" style="color: inherit; text-decoration: inherit;">last_<wbr>password</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The current set password on the Active Directory service account, provided because AD is eventually consistent.
-{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
 </span>
@@ -411,13 +375,13 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="username_python">
-<a href="#username_python" style="color: inherit; text-decoration: inherit;">username</a>
+        <span id="secret_id_python">
+<a href="#secret_id_python" style="color: inherit; text-decoration: inherit;">secret_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Active Directory service account username.
+    <dd>{{% md %}}The token to be used when making requests to Nomad and should be kept private.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

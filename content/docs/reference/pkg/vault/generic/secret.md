@@ -1,8 +1,8 @@
 
 ---
 title: "Secret"
-title_tag: "Resource Secret | Module generic | Package Vault"
-meta_desc: "Explore the Secret resource of the generic module, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vault.generic.Secret"
+meta_desc: "Documentation for the vault.generic.Secret resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -26,7 +26,7 @@ Generic secrets can be imported using the `path`, e.g.
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/generic/#Secret">Secret</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/generic/#SecretArgs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/generic/#Secret">Secret</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/generic/#SecretArgs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -34,11 +34,11 @@ Generic secrets can be imported using the `path`, e.g.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/generic?tab=doc#Secret">NewSecret</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/generic?tab=doc#SecretArgs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/generic?tab=doc#Secret">Secret</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/generic?tab=doc#Secret">NewSecret</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/generic?tab=doc#SecretArgs">SecretArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/generic?tab=doc#Secret">Secret</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Generic.Secret.html">Secret</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Generic.SecretArgs.html">SecretArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Generic.Secret.html">Secret</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Generic.SecretArgs.html">SecretArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -49,7 +49,7 @@ Generic secrets can be imported using the `path`, e.g.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -118,7 +118,7 @@ Generic secrets can be imported using the `path`, e.g.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -157,7 +157,7 @@ Generic secrets can be imported using the `path`, e.g.
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -198,7 +198,6 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -206,21 +205,20 @@ The Secret resource accepts the following [input]({{< relref "/docs/intro/concep
             title="Required">
         <span id="datajson_csharp">
 <a href="#datajson_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full logical path at which to write the given data.
 To write data into the "generic" secret backend mounted in Vault by default,
@@ -228,23 +226,20 @@ this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableread_csharp">
 <a href="#disableread_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -253,21 +248,20 @@ break drift detection. Defaults to false.
             title="Required">
         <span id="datajson_go">
 <a href="#datajson_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full logical path at which to write the given data.
 To write data into the "generic" secret backend mounted in Vault by default,
@@ -275,23 +269,20 @@ this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableread_go">
 <a href="#disableread_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -300,21 +291,20 @@ break drift detection. Defaults to false.
             title="Required">
         <span id="datajson_nodejs">
 <a href="#datajson_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Json</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full logical path at which to write the given data.
 To write data into the "generic" secret backend mounted in Vault by default,
@@ -322,23 +312,20 @@ this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disableread_nodejs">
 <a href="#disableread_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -347,21 +334,20 @@ break drift detection. Defaults to false.
             title="Required">
         <span id="data_json_python">
 <a href="#data_json_python" style="color: inherit; text-decoration: inherit;">data_<wbr>json</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full logical path at which to write the given data.
 To write data into the "generic" secret backend mounted in Vault by default,
@@ -369,32 +355,25 @@ this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disable_read_python">
 <a href="#disable_read_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Secret resource produces the following output properties:
-
 
 
 
@@ -405,7 +384,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="data_csharp">
 <a href="#data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -414,20 +393,17 @@ Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -436,7 +412,7 @@ serialized as JSON.
             title="">
         <span id="data_go">
 <a href="#data_go" style="color: inherit; text-decoration: inherit;">Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -445,20 +421,17 @@ Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -467,7 +440,7 @@ serialized as JSON.
             title="">
         <span id="data_nodejs">
 <a href="#data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -476,20 +449,17 @@ Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -498,7 +468,7 @@ serialized as JSON.
             title="">
         <span id="data_python">
 <a href="#data_python" style="color: inherit; text-decoration: inherit;">data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
@@ -507,23 +477,17 @@ Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -533,7 +497,7 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/generic/#SecretState">SecretState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/generic/#Secret">Secret</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/generic/#SecretState">SecretState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/generic/#Secret">Secret</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -542,11 +506,11 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecret<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/generic?tab=doc#SecretState">SecretState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/generic?tab=doc#Secret">Secret</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecret<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/generic?tab=doc#SecretState">SecretState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/generic?tab=doc#Secret">Secret</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Generic.Secret.html">Secret</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Generic.SecretState.html">SecretState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Generic.Secret.html">Secret</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Generic.SecretState.html">SecretState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -648,7 +612,6 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -656,7 +619,7 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_data_csharp">
 <a href="#state_data_csharp" style="color: inherit; text-decoration: inherit;">Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
@@ -665,39 +628,36 @@ Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datajson_csharp">
 <a href="#state_datajson_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disableread_csharp">
 <a href="#state_disableread_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_csharp">
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full logical path at which to write the given data.
 To write data into the "generic" secret backend mounted in Vault by default,
@@ -705,10 +665,8 @@ this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -717,7 +675,7 @@ endpoints support the `PUT` and `DELETE` methods.
             title="Optional">
         <span id="state_data_go">
 <a href="#state_data_go" style="color: inherit; text-decoration: inherit;">Data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
@@ -726,39 +684,36 @@ Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datajson_go">
 <a href="#state_datajson_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Json</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disableread_go">
 <a href="#state_disableread_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full logical path at which to write the given data.
 To write data into the "generic" secret backend mounted in Vault by default,
@@ -766,10 +721,8 @@ this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -778,7 +731,7 @@ endpoints support the `PUT` and `DELETE` methods.
             title="Optional">
         <span id="state_data_nodejs">
 <a href="#state_data_nodejs" style="color: inherit; text-decoration: inherit;">data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
@@ -787,39 +740,36 @@ Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_datajson_nodejs">
 <a href="#state_datajson_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Json</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disableread_nodejs">
 <a href="#state_disableread_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full logical path at which to write the given data.
 To write data into the "generic" secret backend mounted in Vault by default,
@@ -827,10 +777,8 @@ this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -839,7 +787,7 @@ endpoints support the `PUT` and `DELETE` methods.
             title="Optional">
         <span id="state_data_python">
 <a href="#state_data_python" style="color: inherit; text-decoration: inherit;">data</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
@@ -848,39 +796,36 @@ Vault and whose values are the corresponding values. This map can only
 represent string data, so any non-string values returned from Vault are
 serialized as JSON.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_data_json_python">
 <a href="#state_data_json_python" style="color: inherit; text-decoration: inherit;">data_<wbr>json</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}String containing a JSON-encoded object that will be
 written as the secret data at the given path.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disable_read_python">
 <a href="#state_disable_read_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>read</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True/false. Set this to true if your vault
 authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_python">
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full logical path at which to write the given data.
 To write data into the "generic" secret backend mounted in Vault by default,
@@ -888,15 +833,8 @@ this should be prefixed with `secret/`. Writing to other backends with this
 resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 
@@ -911,6 +849,6 @@ endpoints support the `PUT` and `DELETE` methods.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 </dl>
 

@@ -1,8 +1,8 @@
 
 ---
 title: "AuthBackendRole"
-title_tag: "Resource AuthBackendRole | Module azure | Package Vault"
-meta_desc: "Explore the AuthBackendRole resource of the azure module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an Azure auth backend role in a Vault server. Roles constrain the"
+title_tag: "vault.azure.AuthBackendRole"
+meta_desc: "Documentation for the vault.azure.AuthBackendRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -163,7 +163,7 @@ const example = new vault.azure.AuthBackendRole("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#AuthBackendRole">AuthBackendRole</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#AuthBackendRoleArgs">AuthBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#AuthBackendRole">AuthBackendRole</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#AuthBackendRoleArgs">AuthBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -171,11 +171,11 @@ const example = new vault.azure.AuthBackendRole("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#AuthBackendRole">NewAuthBackendRole</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#AuthBackendRoleArgs">AuthBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#AuthBackendRole">AuthBackendRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#AuthBackendRole">NewAuthBackendRole</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#AuthBackendRoleArgs">AuthBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#AuthBackendRole">AuthBackendRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.AuthBackendRole.html">AuthBackendRole</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.AuthBackendRoleArgs.html">AuthBackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.AuthBackendRole.html">AuthBackendRole</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.AuthBackendRoleArgs.html">AuthBackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -186,7 +186,7 @@ const example = new vault.azure.AuthBackendRole("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -255,7 +255,7 @@ const example = new vault.azure.AuthBackendRole("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -294,7 +294,7 @@ const example = new vault.azure.AuthBackendRole("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -335,7 +335,6 @@ The AuthBackendRole resource accepts the following [input]({{< relref "/docs/int
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -343,249 +342,230 @@ The AuthBackendRole resource accepts the following [input]({{< relref "/docs/int
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundgroupids_csharp">
 <a href="#boundgroupids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the groups
 that can perform the login operation that they should be using the group
 ID specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundlocations_csharp">
 <a href="#boundlocations_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual machines
 that can perform the login operation that the location in their identity
 document must match the one specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundresourcegroups_csharp">
 <a href="#boundresourcegroups_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Resource<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundscalesets_csharp">
 <a href="#boundscalesets_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Scale<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machines that can perform the login operation that they must match the scale set
 specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundserviceprincipalids_csharp">
 <a href="#boundserviceprincipalids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Service<wbr>Principal<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the
 service principals that can perform the login operation that they should be possess
 the ids specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundsubscriptionids_csharp">
 <a href="#boundsubscriptionids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subscription<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the subscriptions
 that can perform the login operation to ones which  matches the value specified by this
 field.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_csharp">
 <a href="#tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_csharp">
 <a href="#tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_csharp">
 <a href="#tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_csharp">
 <a href="#tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_csharp">
 <a href="#tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_csharp">
 <a href="#tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_csharp">
 <a href="#tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenttl_csharp">
 <a href="#tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -593,22 +573,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -617,249 +594,230 @@ using this role, provided as a number of seconds.
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundgroupids_go">
 <a href="#boundgroupids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the groups
 that can perform the login operation that they should be using the group
 ID specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundlocations_go">
 <a href="#boundlocations_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual machines
 that can perform the login operation that the location in their identity
 document must match the one specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundresourcegroups_go">
 <a href="#boundresourcegroups_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Resource<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundscalesets_go">
 <a href="#boundscalesets_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Scale<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machines that can perform the login operation that they must match the scale set
 specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundserviceprincipalids_go">
 <a href="#boundserviceprincipalids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Service<wbr>Principal<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the
 service principals that can perform the login operation that they should be possess
 the ids specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundsubscriptionids_go">
 <a href="#boundsubscriptionids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subscription<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the subscriptions
 that can perform the login operation to ones which  matches the value specified by this
 field.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_go">
 <a href="#tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_go">
 <a href="#tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_go">
 <a href="#tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_go">
 <a href="#tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_go">
 <a href="#tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_go">
 <a href="#tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_go">
 <a href="#tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenttl_go">
 <a href="#tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -867,22 +825,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -891,249 +846,230 @@ using this role, provided as a number of seconds.
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundgroupids_nodejs">
 <a href="#boundgroupids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the groups
 that can perform the login operation that they should be using the group
 ID specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundlocations_nodejs">
 <a href="#boundlocations_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual machines
 that can perform the login operation that the location in their identity
 document must match the one specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundresourcegroups_nodejs">
 <a href="#boundresourcegroups_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Resource<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundscalesets_nodejs">
 <a href="#boundscalesets_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Scale<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machines that can perform the login operation that they must match the scale set
 specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundserviceprincipalids_nodejs">
 <a href="#boundserviceprincipalids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Service<wbr>Principal<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the
 service principals that can perform the login operation that they should be possess
 the ids specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundsubscriptionids_nodejs">
 <a href="#boundsubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Subscription<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the subscriptions
 that can perform the login operation to ones which  matches the value specified by this
 field.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_nodejs">
 <a href="#tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_nodejs">
 <a href="#tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_nodejs">
 <a href="#tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_nodejs">
 <a href="#tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_nodejs">
 <a href="#tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_nodejs">
 <a href="#tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_nodejs">
 <a href="#tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenttl_nodejs">
 <a href="#tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -1141,22 +1077,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1165,249 +1098,230 @@ using this role, provided as a number of seconds.
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_group_ids_python">
 <a href="#bound_group_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>group_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the groups
 that can perform the login operation that they should be using the group
 ID specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_locations_python">
 <a href="#bound_locations_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual machines
 that can perform the login operation that the location in their identity
 document must match the one specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_resource_groups_python">
 <a href="#bound_resource_groups_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>resource_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_scale_sets_python">
 <a href="#bound_scale_sets_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>scale_<wbr>sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machines that can perform the login operation that they must match the scale set
 specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_service_principal_ids_python">
 <a href="#bound_service_principal_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>service_<wbr>principal_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the
 service principals that can perform the login operation that they should be possess
 the ids specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_subscription_ids_python">
 <a href="#bound_subscription_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>subscription_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the subscriptions
 that can perform the login operation to ones which  matches the value specified by this
 field.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_bound_cidrs_python">
 <a href="#token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_explicit_max_ttl_python">
 <a href="#token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_max_ttl_python">
 <a href="#token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_no_default_policy_python">
 <a href="#token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_num_uses_python">
 <a href="#token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_period_python">
 <a href="#token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_policies_python">
 <a href="#token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_ttl_python">
 <a href="#token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -1415,31 +1329,24 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the AuthBackendRole resource produces the following output properties:
-
 
 
 
@@ -1450,15 +1357,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1467,15 +1372,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1484,15 +1387,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1501,18 +1402,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1522,7 +1418,7 @@ Get an existing AuthBackendRole resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#AuthBackendRoleState">AuthBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#AuthBackendRole">AuthBackendRole</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#AuthBackendRoleState">AuthBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#AuthBackendRole">AuthBackendRole</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1531,11 +1427,11 @@ Get an existing AuthBackendRole resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#AuthBackendRoleState">AuthBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#AuthBackendRole">AuthBackendRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#AuthBackendRoleState">AuthBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#AuthBackendRole">AuthBackendRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.AuthBackendRole.html">AuthBackendRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.AuthBackendRoleState.html">AuthBackendRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.AuthBackendRole.html">AuthBackendRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.AuthBackendRoleState.html">AuthBackendRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1637,7 +1533,6 @@ Get an existing AuthBackendRole resource's state with the given name, ID, and op
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1645,249 +1540,230 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundgroupids_csharp">
 <a href="#state_boundgroupids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the groups
 that can perform the login operation that they should be using the group
 ID specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundlocations_csharp">
 <a href="#state_boundlocations_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual machines
 that can perform the login operation that the location in their identity
 document must match the one specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundresourcegroups_csharp">
 <a href="#state_boundresourcegroups_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Resource<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundscalesets_csharp">
 <a href="#state_boundscalesets_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Scale<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machines that can perform the login operation that they must match the scale set
 specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundserviceprincipalids_csharp">
 <a href="#state_boundserviceprincipalids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Service<wbr>Principal<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the
 service principals that can perform the login operation that they should be possess
 the ids specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundsubscriptionids_csharp">
 <a href="#state_boundsubscriptionids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subscription<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the subscriptions
 that can perform the login operation to ones which  matches the value specified by this
 field.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_csharp">
 <a href="#state_tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_csharp">
 <a href="#state_tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_csharp">
 <a href="#state_tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_csharp">
 <a href="#state_tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_csharp">
 <a href="#state_tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_csharp">
 <a href="#state_tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_csharp">
 <a href="#state_tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_csharp">
 <a href="#state_tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_csharp">
 <a href="#state_tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -1895,22 +1771,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1919,249 +1792,230 @@ using this role, provided as a number of seconds.
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundgroupids_go">
 <a href="#state_boundgroupids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the groups
 that can perform the login operation that they should be using the group
 ID specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundlocations_go">
 <a href="#state_boundlocations_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual machines
 that can perform the login operation that the location in their identity
 document must match the one specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundresourcegroups_go">
 <a href="#state_boundresourcegroups_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Resource<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundscalesets_go">
 <a href="#state_boundscalesets_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Scale<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machines that can perform the login operation that they must match the scale set
 specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundserviceprincipalids_go">
 <a href="#state_boundserviceprincipalids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Service<wbr>Principal<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the
 service principals that can perform the login operation that they should be possess
 the ids specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundsubscriptionids_go">
 <a href="#state_boundsubscriptionids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subscription<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the subscriptions
 that can perform the login operation to ones which  matches the value specified by this
 field.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_go">
 <a href="#state_tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_go">
 <a href="#state_tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_go">
 <a href="#state_tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_go">
 <a href="#state_tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_go">
 <a href="#state_tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_go">
 <a href="#state_tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_go">
 <a href="#state_tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_go">
 <a href="#state_tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_go">
 <a href="#state_tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -2169,22 +2023,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2193,249 +2044,230 @@ using this role, provided as a number of seconds.
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundgroupids_nodejs">
 <a href="#state_boundgroupids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Group<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the groups
 that can perform the login operation that they should be using the group
 ID specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundlocations_nodejs">
 <a href="#state_boundlocations_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual machines
 that can perform the login operation that the location in their identity
 document must match the one specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundresourcegroups_nodejs">
 <a href="#state_boundresourcegroups_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Resource<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundscalesets_nodejs">
 <a href="#state_boundscalesets_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Scale<wbr>Sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machines that can perform the login operation that they must match the scale set
 specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundserviceprincipalids_nodejs">
 <a href="#state_boundserviceprincipalids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Service<wbr>Principal<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the
 service principals that can perform the login operation that they should be possess
 the ids specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundsubscriptionids_nodejs">
 <a href="#state_boundsubscriptionids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Subscription<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the subscriptions
 that can perform the login operation to ones which  matches the value specified by this
 field.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_nodejs">
 <a href="#state_tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_nodejs">
 <a href="#state_tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_nodejs">
 <a href="#state_tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_nodejs">
 <a href="#state_tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_nodejs">
 <a href="#state_tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_nodejs">
 <a href="#state_tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_nodejs">
 <a href="#state_tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_nodejs">
 <a href="#state_tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_nodejs">
 <a href="#state_tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -2443,22 +2275,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2467,249 +2296,230 @@ using this role, provided as a number of seconds.
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_group_ids_python">
 <a href="#state_bound_group_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>group_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the groups
 that can perform the login operation that they should be using the group
 ID specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_locations_python">
 <a href="#state_bound_locations_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>locations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual machines
 that can perform the login operation that the location in their identity
 document must match the one specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_resource_groups_python">
 <a href="#state_bound_resource_groups_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>resource_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machiness that can perform the login operation that they be associated with
 the resource group that matches the value specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_scale_sets_python">
 <a href="#state_bound_scale_sets_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>scale_<wbr>sets</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the virtual
 machines that can perform the login operation that they must match the scale set
 specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_service_principal_ids_python">
 <a href="#state_bound_service_principal_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>service_<wbr>principal_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the
 service principals that can perform the login operation that they should be possess
 the ids specified by this field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_subscription_ids_python">
 <a href="#state_bound_subscription_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>subscription_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the subscriptions
 that can perform the login operation to ones which  matches the value specified by this
 field.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_bound_cidrs_python">
 <a href="#state_token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_explicit_max_ttl_python">
 <a href="#state_token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_max_ttl_python">
 <a href="#state_token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_no_default_policy_python">
 <a href="#state_token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_num_uses_python">
 <a href="#state_token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_period_python">
 <a href="#state_token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_policies_python">
 <a href="#state_token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_ttl_python">
 <a href="#state_token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_type_python">
 <a href="#state_token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -2717,27 +2527,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 
@@ -2762,6 +2564,6 @@ Azure auth backend roles can be imported using `auth/`, the `backend` path, `/ro
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 </dl>
 

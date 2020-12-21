@@ -3,7 +3,7 @@ title: "Module transit"
 title_tag: "Module transit | Package @pulumi/vault | Node.js SDK"
 linktitle: "transit"
 meta_desc: "Explore members of the transit module in the @pulumi/vault package."
-git_sha: "f4b3208824090a37bb9fc329f6449af5cfb6f228"
+git_sha: "207e7b59fd6b174087a0dc12a33dfcad3ee0712e"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="SecretBackendKey" data-link-title="SecretBackendKey">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L36">
         Resource <strong>SecretBackendKey</strong>
     </a>
 </h3>
@@ -78,7 +78,7 @@ Transit secret backend keys can be imported using the `path`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L135"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L135"> <b>constructor</b></a>
 </h4>
 
 
@@ -92,7 +92,7 @@ Create a SecretBackendKey resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L46">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L46">method <b>get</b></a>
 </h4>
 
 
@@ -103,14 +103,14 @@ Get an existing SecretBackendKey resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L36">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L36">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L57">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L57">method <b>isInstance</b></a>
 </h4>
 
 
@@ -121,7 +121,7 @@ Returns true if the given object is an instance of SecretBackendKey.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-allowPlaintextBackup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L68">property <b>allowPlaintextBackup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L68">property <b>allowPlaintextBackup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowPlaintextBackup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -130,7 +130,7 @@ Enables taking backup of entire keyring in the plaintext format. Once set, this 
 * Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L72">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L72">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -138,7 +138,7 @@ Enables taking backup of entire keyring in the plaintext format. Once set, this 
 The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-convergentEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L76">property <b>convergentEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L76">property <b>convergentEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>convergentEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ The path the transit secret backend is mounted at, with no leading or trailing `
 Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-deletionAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L80">property <b>deletionAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L80">property <b>deletionAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deletionAllowed: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ Whether or not to support convergent encryption, where the same plaintext create
 Specifies if the key is allowed to be deleted.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-derived">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L84">property <b>derived</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L84">property <b>derived</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>derived: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ Specifies if the key is allowed to be deleted.
 Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-exportable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L88">property <b>exportable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L88">property <b>exportable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>exportable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ Specifies if key derivation is to be used. If enabled, all encrypt/decrypt reque
 Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L36">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L36">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -179,7 +179,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-keys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L94">property <b>keys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L94">property <b>keys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keys: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}[]&gt;;</code></pre>
@@ -189,7 +189,7 @@ List of key versions in the keyring. This attribute is zero-indexed and will con
 * for key types `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`, each key version will be a map of the following:
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-latestVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L98">property <b>latestVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L98">property <b>latestVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>latestVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -197,7 +197,7 @@ List of key versions in the keyring. This attribute is zero-indexed and will con
 Latest key version available. This value is 1-indexed, so if `latestVersion` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-minAvailableVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L102">property <b>minAvailableVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L102">property <b>minAvailableVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minAvailableVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -205,7 +205,7 @@ Latest key version available. This value is 1-indexed, so if `latestVersion` is 
 Minimum key version available for use. If keys have been archived by increasing `minDecryptionVersion`, this attribute will reflect that change.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-minDecryptionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L106">property <b>minDecryptionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L106">property <b>minDecryptionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minDecryptionVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -213,7 +213,7 @@ Minimum key version available for use. If keys have been archived by increasing 
 Minimum key version to use for decryption.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-minEncryptionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L110">property <b>minEncryptionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L110">property <b>minEncryptionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minEncryptionVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ Minimum key version to use for decryption.
 Minimum key version to use for encryption
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L114">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ Minimum key version to use for encryption
 The name to identify this key within the backend. Must be unique within the backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-supportsDecryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L118">property <b>supportsDecryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L118">property <b>supportsDecryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>supportsDecryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ The name to identify this key within the backend. Must be unique within the back
 Whether or not the key supports decryption, based on key type.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-supportsDerivation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L122">property <b>supportsDerivation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L122">property <b>supportsDerivation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>supportsDerivation: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ Whether or not the key supports decryption, based on key type.
 Whether or not the key supports derivation, based on key type.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-supportsEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L126">property <b>supportsEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L126">property <b>supportsEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>supportsEncryption: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ Whether or not the key supports derivation, based on key type.
 Whether or not the key supports encryption, based on key type.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-supportsSigning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L130">property <b>supportsSigning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L130">property <b>supportsSigning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>supportsSigning: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ Whether or not the key supports encryption, based on key type.
 Whether or not the key supports signing, based on key type.
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L135">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L135">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -270,7 +270,7 @@ Specifies the type of key to create. The currently-supported types are: `aes128-
 * Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
 
 <h4 class="pdoc-member-header" id="SecretBackendKey-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L36">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L36">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -279,7 +279,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="SecretCacheConfig" data-link-title="SecretCacheConfig">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L29">
         Resource <strong>SecretCacheConfig</strong>
     </a>
 </h3>
@@ -308,7 +308,7 @@ const cfg = new vault.transit.SecretCacheConfig("cfg", {
 ```
 
 <h4 class="pdoc-member-header" id="SecretCacheConfig-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L64"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L64"> <b>constructor</b></a>
 </h4>
 
 
@@ -322,7 +322,7 @@ Create a SecretCacheConfig resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretCacheConfig-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L39">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L39">method <b>get</b></a>
 </h4>
 
 
@@ -333,14 +333,14 @@ Get an existing SecretCacheConfig resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretCacheConfig-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L29">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L29">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretCacheConfig-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L50">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L50">method <b>isInstance</b></a>
 </h4>
 
 
@@ -351,7 +351,7 @@ Returns true if the given object is an instance of SecretCacheConfig.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretCacheConfig-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L60">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L60">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretCacheConfig-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L29">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L29">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -368,7 +368,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretCacheConfig-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L64">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L64">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -376,7 +376,7 @@ deployments and may be missing (undefined) during planning phases.
 The number of cache entries. 0 means unlimited.
 
 <h4 class="pdoc-member-header" id="SecretCacheConfig-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L29">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L29">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -387,7 +387,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getDecrypt" data-link-title="getDecrypt">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L24">
         Function <strong>getDecrypt</strong>
     </a>
 </h3>
@@ -412,7 +412,7 @@ const test = pulumi.output(vault.transit.getDecrypt({
 ```
 
 <h3 class="pdoc-module-header" id="getEncrypt" data-link-title="getEncrypt">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L32">
         Function <strong>getEncrypt</strong>
     </a>
 </h3>
@@ -447,7 +447,7 @@ const testEncrypt = pulumi.all([testMount.path, testSecretBackendKey.name]).appl
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetDecryptArgs" data-link-title="GetDecryptArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L43">
         interface <strong>GetDecryptArgs</strong>
     </a>
 </h3>
@@ -457,7 +457,7 @@ const testEncrypt = pulumi.all([testMount.path, testSecretBackendKey.name]).appl
 A collection of arguments for invoking getDecrypt.
 
 <h4 class="pdoc-member-header" id="GetDecryptArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L47">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L47">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -465,7 +465,7 @@ A collection of arguments for invoking getDecrypt.
 The path the transit secret backend is mounted at, with no leading or trailing `/`.
 
 <h4 class="pdoc-member-header" id="GetDecryptArgs-ciphertext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L51">property <b>ciphertext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L51">property <b>ciphertext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciphertext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -473,7 +473,7 @@ The path the transit secret backend is mounted at, with no leading or trailing `
 Ciphertext to be decoded.
 
 <h4 class="pdoc-member-header" id="GetDecryptArgs-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L55">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L55">property <b>context</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>context?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -481,7 +481,7 @@ Ciphertext to be decoded.
 Context for key derivation. This is required if key derivation is enabled for this key.
 
 <h4 class="pdoc-member-header" id="GetDecryptArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L59">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L59">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -489,7 +489,7 @@ Context for key derivation. This is required if key derivation is enabled for th
 Specifies the name of the transit key to decrypt against.
 
 <h3 class="pdoc-module-header" id="GetDecryptResult" data-link-title="GetDecryptResult">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L65">
         interface <strong>GetDecryptResult</strong>
     </a>
 </h3>
@@ -499,22 +499,22 @@ Specifies the name of the transit key to decrypt against.
 A collection of values returned by getDecrypt.
 
 <h4 class="pdoc-member-header" id="GetDecryptResult-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L66">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L66">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDecryptResult-ciphertext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L67">property <b>ciphertext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L67">property <b>ciphertext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciphertext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDecryptResult-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L68">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L68">property <b>context</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>context?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDecryptResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -522,12 +522,12 @@ A collection of values returned by getDecrypt.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetDecryptResult-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L73">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L73">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetDecryptResult-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getDecrypt.ts#L77">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getDecrypt.ts#L77">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -535,7 +535,7 @@ The provider-assigned unique ID for this managed resource.
 Decrypted plaintext returned from Vault
 
 <h3 class="pdoc-module-header" id="GetEncryptArgs" data-link-title="GetEncryptArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L52">
         interface <strong>GetEncryptArgs</strong>
     </a>
 </h3>
@@ -545,7 +545,7 @@ Decrypted plaintext returned from Vault
 A collection of arguments for invoking getEncrypt.
 
 <h4 class="pdoc-member-header" id="GetEncryptArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L56">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L56">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -553,7 +553,7 @@ A collection of arguments for invoking getEncrypt.
 The path the transit secret backend is mounted at, with no leading or trailing `/`.
 
 <h4 class="pdoc-member-header" id="GetEncryptArgs-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L60">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L60">property <b>context</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>context?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -561,7 +561,7 @@ The path the transit secret backend is mounted at, with no leading or trailing `
 Context for key derivation. This is required if key derivation is enabled for this key.
 
 <h4 class="pdoc-member-header" id="GetEncryptArgs-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L64">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L64">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -569,7 +569,7 @@ Context for key derivation. This is required if key derivation is enabled for th
 Specifies the name of the transit key to encrypt against.
 
 <h4 class="pdoc-member-header" id="GetEncryptArgs-keyVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L68">property <b>keyVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L68">property <b>keyVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -577,7 +577,7 @@ Specifies the name of the transit key to encrypt against.
 The version of the key to use for encryption. If not set, uses the latest version. Must be greater than or equal to the key's `minEncryptionVersion`, if set.
 
 <h4 class="pdoc-member-header" id="GetEncryptArgs-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L72">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L72">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -585,7 +585,7 @@ The version of the key to use for encryption. If not set, uses the latest versio
 Plaintext to be encoded.
 
 <h3 class="pdoc-module-header" id="GetEncryptResult" data-link-title="GetEncryptResult">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L78">
         interface <strong>GetEncryptResult</strong>
     </a>
 </h3>
@@ -595,12 +595,12 @@ Plaintext to be encoded.
 A collection of values returned by getEncrypt.
 
 <h4 class="pdoc-member-header" id="GetEncryptResult-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L79">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L79">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEncryptResult-ciphertext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L83">property <b>ciphertext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L83">property <b>ciphertext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ciphertext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -608,12 +608,12 @@ A collection of values returned by getEncrypt.
 Encrypted ciphertext returned from Vault
 
 <h4 class="pdoc-member-header" id="GetEncryptResult-context">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L84">property <b>context</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L84">property <b>context</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>context?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEncryptResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L88">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L88">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -621,22 +621,22 @@ Encrypted ciphertext returned from Vault
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetEncryptResult-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L89">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L89">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEncryptResult-keyVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L90">property <b>keyVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L90">property <b>keyVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyVersion?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEncryptResult-plaintext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/getEncrypt.ts#L91">property <b>plaintext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/getEncrypt.ts#L91">property <b>plaintext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>plaintext: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="SecretBackendKeyArgs" data-link-title="SecretBackendKeyArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L281">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L281">
         interface <strong>SecretBackendKeyArgs</strong>
     </a>
 </h3>
@@ -646,7 +646,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a SecretBackendKey resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyArgs-allowPlaintextBackup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L286">property <b>allowPlaintextBackup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L286">property <b>allowPlaintextBackup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowPlaintextBackup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -655,7 +655,7 @@ Enables taking backup of entire keyring in the plaintext format. Once set, this 
 * Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L290">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L290">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -663,7 +663,7 @@ Enables taking backup of entire keyring in the plaintext format. Once set, this 
 The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyArgs-convergentEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L294">property <b>convergentEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L294">property <b>convergentEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>convergentEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -671,7 +671,7 @@ The path the transit secret backend is mounted at, with no leading or trailing `
 Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyArgs-deletionAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L298">property <b>deletionAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L298">property <b>deletionAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -679,7 +679,7 @@ Whether or not to support convergent encryption, where the same plaintext create
 Specifies if the key is allowed to be deleted.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyArgs-derived">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L302">property <b>derived</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L302">property <b>derived</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>derived?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -687,7 +687,7 @@ Specifies if the key is allowed to be deleted.
 Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyArgs-exportable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L306">property <b>exportable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L306">property <b>exportable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exportable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -695,7 +695,7 @@ Specifies if key derivation is to be used. If enabled, all encrypt/decrypt reque
 Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyArgs-minDecryptionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L310">property <b>minDecryptionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L310">property <b>minDecryptionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minDecryptionVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -703,7 +703,7 @@ Enables keys to be exportable. This allows for all valid private keys in the key
 Minimum key version to use for decryption.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyArgs-minEncryptionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L314">property <b>minEncryptionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L314">property <b>minEncryptionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minEncryptionVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -711,7 +711,7 @@ Minimum key version to use for decryption.
 Minimum key version to use for encryption
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L318">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L318">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -719,7 +719,7 @@ Minimum key version to use for encryption
 The name to identify this key within the backend. Must be unique within the backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L323">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L323">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -728,7 +728,7 @@ Specifies the type of key to create. The currently-supported types are: `aes128-
 * Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
 
 <h3 class="pdoc-module-header" id="SecretBackendKeyState" data-link-title="SecretBackendKeyState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L203">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L203">
         interface <strong>SecretBackendKeyState</strong>
     </a>
 </h3>
@@ -738,7 +738,7 @@ Specifies the type of key to create. The currently-supported types are: `aes128-
 Input properties used for looking up and filtering SecretBackendKey resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-allowPlaintextBackup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L208">property <b>allowPlaintextBackup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L208">property <b>allowPlaintextBackup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowPlaintextBackup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -747,7 +747,7 @@ Enables taking backup of entire keyring in the plaintext format. Once set, this 
 * Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api-docs/secret/transit#backup-key)
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L212">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L212">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -755,7 +755,7 @@ Enables taking backup of entire keyring in the plaintext format. Once set, this 
 The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-convergentEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L216">property <b>convergentEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L216">property <b>convergentEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>convergentEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -763,7 +763,7 @@ The path the transit secret backend is mounted at, with no leading or trailing `
 Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-deletionAllowed">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L220">property <b>deletionAllowed</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L220">property <b>deletionAllowed</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deletionAllowed?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -771,7 +771,7 @@ Whether or not to support convergent encryption, where the same plaintext create
 Specifies if the key is allowed to be deleted.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-derived">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L224">property <b>derived</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L224">property <b>derived</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>derived?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -779,7 +779,7 @@ Specifies if the key is allowed to be deleted.
 Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-exportable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L228">property <b>exportable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L228">property <b>exportable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>exportable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -787,7 +787,7 @@ Specifies if key derivation is to be used. If enabled, all encrypt/decrypt reque
 Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-keys">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L234">property <b>keys</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L234">property <b>keys</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keys?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;[]&gt;;</code></pre>
@@ -797,7 +797,7 @@ List of key versions in the keyring. This attribute is zero-indexed and will con
 * for key types `ed25519`, `ecdsa-p256`, `ecdsa-p384`, `ecdsa-p521`, `rsa-2048`, `rsa-3072` and `rsa-4096`, each key version will be a map of the following:
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-latestVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L238">property <b>latestVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L238">property <b>latestVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>latestVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -805,7 +805,7 @@ List of key versions in the keyring. This attribute is zero-indexed and will con
 Latest key version available. This value is 1-indexed, so if `latestVersion` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-minAvailableVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L242">property <b>minAvailableVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L242">property <b>minAvailableVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minAvailableVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -813,7 +813,7 @@ Latest key version available. This value is 1-indexed, so if `latestVersion` is 
 Minimum key version available for use. If keys have been archived by increasing `minDecryptionVersion`, this attribute will reflect that change.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-minDecryptionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L246">property <b>minDecryptionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L246">property <b>minDecryptionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minDecryptionVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -821,7 +821,7 @@ Minimum key version available for use. If keys have been archived by increasing 
 Minimum key version to use for decryption.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-minEncryptionVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L250">property <b>minEncryptionVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L250">property <b>minEncryptionVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minEncryptionVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -829,7 +829,7 @@ Minimum key version to use for decryption.
 Minimum key version to use for encryption
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L254">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L254">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -837,7 +837,7 @@ Minimum key version to use for encryption
 The name to identify this key within the backend. Must be unique within the backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-supportsDecryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L258">property <b>supportsDecryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L258">property <b>supportsDecryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportsDecryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -845,7 +845,7 @@ The name to identify this key within the backend. Must be unique within the back
 Whether or not the key supports decryption, based on key type.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-supportsDerivation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L262">property <b>supportsDerivation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L262">property <b>supportsDerivation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportsDerivation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -853,7 +853,7 @@ Whether or not the key supports decryption, based on key type.
 Whether or not the key supports derivation, based on key type.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-supportsEncryption">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L266">property <b>supportsEncryption</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L266">property <b>supportsEncryption</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportsEncryption?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -861,7 +861,7 @@ Whether or not the key supports derivation, based on key type.
 Whether or not the key supports encryption, based on key type.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-supportsSigning">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L270">property <b>supportsSigning</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L270">property <b>supportsSigning</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>supportsSigning?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -869,7 +869,7 @@ Whether or not the key supports encryption, based on key type.
 Whether or not the key supports signing, based on key type.
 
 <h4 class="pdoc-member-header" id="SecretBackendKeyState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretBackendKey.ts#L275">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretBackendKey.ts#L275">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -878,7 +878,7 @@ Specifies the type of key to create. The currently-supported types are: `aes128-
 * Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit#key-types)
 
 <h3 class="pdoc-module-header" id="SecretCacheConfigArgs" data-link-title="SecretCacheConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L119">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L119">
         interface <strong>SecretCacheConfigArgs</strong>
     </a>
 </h3>
@@ -888,7 +888,7 @@ Specifies the type of key to create. The currently-supported types are: `aes128-
 The set of arguments for constructing a SecretCacheConfig resource.
 
 <h4 class="pdoc-member-header" id="SecretCacheConfigArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L123">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L123">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -896,7 +896,7 @@ The set of arguments for constructing a SecretCacheConfig resource.
 The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretCacheConfigArgs-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L127">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L127">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -904,7 +904,7 @@ The path the transit secret backend is mounted at, with no leading or trailing `
 The number of cache entries. 0 means unlimited.
 
 <h3 class="pdoc-module-header" id="SecretCacheConfigState" data-link-title="SecretCacheConfigState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L105">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L105">
         interface <strong>SecretCacheConfigState</strong>
     </a>
 </h3>
@@ -914,7 +914,7 @@ The number of cache entries. 0 means unlimited.
 Input properties used for looking up and filtering SecretCacheConfig resources.
 
 <h4 class="pdoc-member-header" id="SecretCacheConfigState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L109">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L109">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -922,7 +922,7 @@ Input properties used for looking up and filtering SecretCacheConfig resources.
 The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretCacheConfigState-size">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/f4b3208824090a37bb9fc329f6449af5cfb6f228/sdk/nodejs/transit/secretCacheConfig.ts#L113">property <b>size</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/transit/secretCacheConfig.ts#L113">property <b>size</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>size?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

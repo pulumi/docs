@@ -23,7 +23,7 @@ construction to achieve fine-grained programmatic control over provider settings
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -31,11 +31,11 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#Provider">NewProvider</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Provider.html">Provider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Pulumi.VaultArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Provider.html">Provider</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Pulumi.VaultArgs.html">ProviderArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -46,7 +46,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -115,7 +115,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -154,7 +154,7 @@ construction to achieve fine-grained programmatic control over provider settings
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -195,7 +195,6 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -203,148 +202,134 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="addaddresstoenv_csharp">
 <a href="#addaddresstoenv_csharp" style="color: inherit; text-decoration: inherit;">Add<wbr>Address<wbr>To<wbr>Env</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If true, adds the value of the `address` argument to the Terraform process environment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="address_csharp">
 <a href="#address_csharp" style="color: inherit; text-decoration: inherit;">Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the root of the target Vault server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authlogins_csharp">
 <a href="#authlogins_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Logins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerauthlogin">List&lt;Provider<wbr>Auth<wbr>Login<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Login to vault with an existing auth method using auth/<mount>/login
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertdir_csharp">
 <a href="#cacertdir_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Dir</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to directory containing CA certificate files to validate the server's certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertfile_csharp">
 <a href="#cacertfile_csharp" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a CA certificate file to validate the server's certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientauths_csharp">
 <a href="#clientauths_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Auths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerclientauth">List&lt;Provider<wbr>Client<wbr>Auth<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Client authentication credentials.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_csharp">
 <a href="#headers_csharp" style="color: inherit; text-decoration: inherit;">Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerheader">List&lt;Provider<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The headers to send with each Vault request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_csharp">
 <a href="#maxleasettlseconds_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum TTL for secret leases requested by this provider
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxretries_csharp">
 <a href="#maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of retries when a 5xx error code is encountered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to use. Available only for Vault Enterprise
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skiptlsverify_csharp">
 <a href="#skiptlsverify_csharp" style="color: inherit; text-decoration: inherit;">Skip<wbr>Tls<wbr>Verify</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to true only if the target Vault server is an insecure development instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_csharp">
 <a href="#token_csharp" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token to use to authenticate to Vault.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenname_csharp">
 <a href="#tokenname_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token name to use for creating the Vault child token.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -353,148 +338,134 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="addaddresstoenv_go">
 <a href="#addaddresstoenv_go" style="color: inherit; text-decoration: inherit;">Add<wbr>Address<wbr>To<wbr>Env</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If true, adds the value of the `address` argument to the Terraform process environment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="address_go">
 <a href="#address_go" style="color: inherit; text-decoration: inherit;">Address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the root of the target Vault server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authlogins_go">
 <a href="#authlogins_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Logins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerauthlogin">[]Provider<wbr>Auth<wbr>Login</a></span>
     </dt>
     <dd>{{% md %}}Login to vault with an existing auth method using auth/<mount>/login
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertdir_go">
 <a href="#cacertdir_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>Dir</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to directory containing CA certificate files to validate the server's certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertfile_go">
 <a href="#cacertfile_go" style="color: inherit; text-decoration: inherit;">Ca<wbr>Cert<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a CA certificate file to validate the server's certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientauths_go">
 <a href="#clientauths_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Auths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerclientauth">[]Provider<wbr>Client<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Client authentication credentials.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_go">
 <a href="#headers_go" style="color: inherit; text-decoration: inherit;">Headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerheader">[]Provider<wbr>Header</a></span>
     </dt>
     <dd>{{% md %}}The headers to send with each Vault request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_go">
 <a href="#maxleasettlseconds_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum TTL for secret leases requested by this provider
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxretries_go">
 <a href="#maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of retries when a 5xx error code is encountered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to use. Available only for Vault Enterprise
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skiptlsverify_go">
 <a href="#skiptlsverify_go" style="color: inherit; text-decoration: inherit;">Skip<wbr>Tls<wbr>Verify</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to true only if the target Vault server is an insecure development instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_go">
 <a href="#token_go" style="color: inherit; text-decoration: inherit;">Token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token to use to authenticate to Vault.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenname_go">
 <a href="#tokenname_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token name to use for creating the Vault child token.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -503,148 +474,134 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="addaddresstoenv_nodejs">
 <a href="#addaddresstoenv_nodejs" style="color: inherit; text-decoration: inherit;">add<wbr>Address<wbr>To<wbr>Env</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If true, adds the value of the `address` argument to the Terraform process environment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="address_nodejs">
 <a href="#address_nodejs" style="color: inherit; text-decoration: inherit;">address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL of the root of the target Vault server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authlogins_nodejs">
 <a href="#authlogins_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Logins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerauthlogin">Provider<wbr>Auth<wbr>Login[]</a></span>
     </dt>
     <dd>{{% md %}}Login to vault with an existing auth method using auth/<mount>/login
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertdir_nodejs">
 <a href="#cacertdir_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>Dir</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to directory containing CA certificate files to validate the server's certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cacertfile_nodejs">
 <a href="#cacertfile_nodejs" style="color: inherit; text-decoration: inherit;">ca<wbr>Cert<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to a CA certificate file to validate the server's certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="clientauths_nodejs">
 <a href="#clientauths_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Auths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerclientauth">Provider<wbr>Client<wbr>Auth[]</a></span>
     </dt>
     <dd>{{% md %}}Client authentication credentials.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_nodejs">
 <a href="#headers_nodejs" style="color: inherit; text-decoration: inherit;">headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerheader">Provider<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}The headers to send with each Vault request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxleasettlseconds_nodejs">
 <a href="#maxleasettlseconds_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Lease<wbr>Ttl<wbr>Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum TTL for secret leases requested by this provider
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxretries_nodejs">
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of retries when a 5xx error code is encountered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to use. Available only for Vault Enterprise
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skiptlsverify_nodejs">
 <a href="#skiptlsverify_nodejs" style="color: inherit; text-decoration: inherit;">skip<wbr>Tls<wbr>Verify</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this to true only if the target Vault server is an insecure development instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_nodejs">
 <a href="#token_nodejs" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token to use to authenticate to Vault.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenname_nodejs">
 <a href="#tokenname_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Token name to use for creating the Vault child token.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -653,157 +610,139 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
             title="Optional">
         <span id="add_address_to_env_python">
 <a href="#add_address_to_env_python" style="color: inherit; text-decoration: inherit;">add_<wbr>address_<wbr>to_<wbr>env</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If true, adds the value of the `address` argument to the Terraform process environment.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="address_python">
 <a href="#address_python" style="color: inherit; text-decoration: inherit;">address</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URL of the root of the target Vault server.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auth_logins_python">
 <a href="#auth_logins_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>logins</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerauthlogin">Sequence[Provider<wbr>Auth<wbr>Login<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Login to vault with an existing auth method using auth/<mount>/login
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_cert_dir_python">
 <a href="#ca_cert_dir_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>dir</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to directory containing CA certificate files to validate the server's certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ca_cert_file_python">
 <a href="#ca_cert_file_python" style="color: inherit; text-decoration: inherit;">ca_<wbr>cert_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to a CA certificate file to validate the server's certificate.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="client_auths_python">
 <a href="#client_auths_python" style="color: inherit; text-decoration: inherit;">client_<wbr>auths</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerclientauth">Sequence[Provider<wbr>Client<wbr>Auth<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Client authentication credentials.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="headers_python">
 <a href="#headers_python" style="color: inherit; text-decoration: inherit;">headers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#providerheader">Sequence[Provider<wbr>Header<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The headers to send with each Vault request.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_lease_ttl_seconds_python">
 <a href="#max_lease_ttl_seconds_python" style="color: inherit; text-decoration: inherit;">max_<wbr>lease_<wbr>ttl_<wbr>seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum TTL for secret leases requested by this provider
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_retries_python">
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of retries when a 5xx error code is encountered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to use. Available only for Vault Enterprise
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="skip_tls_verify_python">
 <a href="#skip_tls_verify_python" style="color: inherit; text-decoration: inherit;">skip_<wbr>tls_<wbr>verify</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to true only if the target Vault server is an insecure development instance.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_python">
 <a href="#token_python" style="color: inherit; text-decoration: inherit;">token</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token to use to authenticate to Vault.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_name_python">
 <a href="#token_name_python" style="color: inherit; text-decoration: inherit;">token_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Token name to use for creating the Vault child token.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the Provider resource produces the following output properties:
-
 
 
 
@@ -814,15 +753,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -831,15 +768,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -848,15 +783,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -865,18 +798,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -887,6 +815,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
 <h4 id="providerauthlogin">Provider<wbr>Auth<wbr>Login</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#ProviderAuthLogin">input</a>   API doc for this type.
@@ -895,11 +824,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#ProviderAuthLoginArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Inputs.ProviderAuthLoginArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -909,35 +837,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_csharp">
 <a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_csharp">
 <a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -946,35 +870,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_go">
 <a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_go">
 <a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -983,35 +903,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_nodejs">
 <a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_nodejs">
 <a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1020,38 +936,31 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_python">
 <a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="parameters_python">
 <a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="providerclientauth">Provider<wbr>Client<wbr>Auth</h4>
 {{% choosable language nodejs %}}
@@ -1061,11 +970,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#ProviderClientAuthArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Inputs.ProviderClientAuthArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1075,25 +983,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="certfile_csharp">
 <a href="#certfile_csharp" style="color: inherit; text-decoration: inherit;">Cert<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyfile_csharp">
 <a href="#keyfile_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1102,25 +1007,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="certfile_go">
 <a href="#certfile_go" style="color: inherit; text-decoration: inherit;">Cert<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyfile_go">
 <a href="#keyfile_go" style="color: inherit; text-decoration: inherit;">Key<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1129,25 +1031,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="certfile_nodejs">
 <a href="#certfile_nodejs" style="color: inherit; text-decoration: inherit;">cert<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="keyfile_nodejs">
 <a href="#keyfile_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1156,28 +1055,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="cert_file_python">
 <a href="#cert_file_python" style="color: inherit; text-decoration: inherit;">cert_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_file_python">
 <a href="#key_file_python" style="color: inherit; text-decoration: inherit;">key_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="providerheader">Provider<wbr>Header</h4>
 {{% choosable language nodejs %}}
@@ -1187,11 +1080,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/?tab=doc#ProviderHeaderArgs">input</a>   API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Inputs.ProviderHeaderArgs.html">input</a>   API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1201,25 +1093,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1228,25 +1117,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_go">
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1255,25 +1141,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1282,33 +1165,22 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="value_python">
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
@@ -1318,6 +1190,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 </dl>
 

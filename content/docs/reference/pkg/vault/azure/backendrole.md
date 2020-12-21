@@ -1,8 +1,8 @@
 
 ---
 title: "BackendRole"
-title_tag: "Resource BackendRole | Module azure | Package Vault"
-meta_desc: "Explore the BackendRole resource of the azure module, including examples, input properties, output properties, lookup functions, and supporting types. "
+title_tag: "vault.azure.BackendRole"
+meta_desc: "Documentation for the vault.azure.BackendRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -18,19 +18,19 @@ meta_desc: "Explore the BackendRole resource of the azure module, including exam
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#BackendRole">BackendRole</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#BackendRoleArgs">BackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#BackendRole">BackendRole</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#BackendRoleArgs">BackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/azure/#pulumi_vault.azure.BackendRole">BackendRole</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendRoleAzureRoleArgs]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/azure/#pulumi_vault.azure.BackendRole">BackendRole</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendRoleAzureGroupArgs]]</span> = None<span class="p">, </span><span class="nx">azure_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendRoleAzureRoleArgs]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRole">NewBackendRole</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRoleArgs">BackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRole">BackendRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRole">NewBackendRole</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRoleArgs">BackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRole">BackendRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.BackendRole.html">BackendRole</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.BackendRoleArgs.html">BackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.BackendRole.html">BackendRole</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.BackendRoleArgs.html">BackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -41,7 +41,7 @@ meta_desc: "Explore the BackendRole resource of the azure module, including exam
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -110,7 +110,7 @@ meta_desc: "Explore the BackendRole resource of the azure module, including exam
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -149,7 +149,7 @@ meta_desc: "Explore the BackendRole resource of the azure module, including exam
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -190,7 +190,6 @@ The BackendRole resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -198,85 +197,87 @@ The BackendRole resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure role
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationobjectid_csharp">
 <a href="#applicationobjectid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, `azure_roles` will be ignored.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azuregroups_csharp">
+<a href="#azuregroups_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendroleazuregroup">List&lt;Backend<wbr>Role<wbr>Azure<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Azure groups to be assigned to the generated service principal.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azureroles_csharp">
 <a href="#azureroles_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">List&lt;Backend<wbr>Role<wbr>Azure<wbr>Role<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Azure roles to be assigned to the generated service principal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the mounted Azure auth backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum TTL for service principals generated using this role. Accepts time
 suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine max TTL time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine default TTL time.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -285,85 +286,87 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure role
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationobjectid_go">
 <a href="#applicationobjectid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, `azure_roles` will be ignored.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azuregroups_go">
+<a href="#azuregroups_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendroleazuregroup">[]Backend<wbr>Role<wbr>Azure<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}List of Azure groups to be assigned to the generated service principal.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azureroles_go">
 <a href="#azureroles_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">[]Backend<wbr>Role<wbr>Azure<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}List of Azure roles to be assigned to the generated service principal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the mounted Azure auth backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum TTL for service principals generated using this role. Accepts time
 suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine max TTL time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine default TTL time.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -372,85 +375,87 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure role
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="applicationobjectid_nodejs">
 <a href="#applicationobjectid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, `azure_roles` will be ignored.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azuregroups_nodejs">
+<a href="#azuregroups_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendroleazuregroup">Backend<wbr>Role<wbr>Azure<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Azure groups to be assigned to the generated service principal.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azureroles_nodejs">
 <a href="#azureroles_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">Backend<wbr>Role<wbr>Azure<wbr>Role[]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure roles to be assigned to the generated service principal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the mounted Azure auth backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum TTL for service principals generated using this role. Accepts time
 suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine max TTL time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine default TTL time.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -459,94 +464,92 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure role
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="application_object_id_python">
 <a href="#application_object_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>object_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, `azure_roles` will be ignored.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="azure_groups_python">
+<a href="#azure_groups_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendroleazuregroup">Sequence[Backend<wbr>Role<wbr>Azure<wbr>Group<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Azure groups to be assigned to the generated service principal.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azure_roles_python">
 <a href="#azure_roles_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">Sequence[Backend<wbr>Role<wbr>Azure<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure roles to be assigned to the generated service principal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the mounted Azure auth backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum TTL for service principals generated using this role. Accepts time
 suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine max TTL time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine default TTL time.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the BackendRole resource produces the following output properties:
-
 
 
 
@@ -557,15 +560,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -574,15 +575,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -591,15 +590,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -608,18 +605,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -629,20 +621,20 @@ Get an existing BackendRole resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#BackendRoleState">BackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#BackendRole">BackendRole</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#BackendRoleState">BackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/azure/#BackendRole">BackendRole</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendRoleAzureRoleArgs]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> BackendRole</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">application_object_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">azure_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendRoleAzureGroupArgs]]</span> = None<span class="p">, </span><span class="nx">azure_roles</span><span class="p">:</span> <span class="nx">Optional[Sequence[BackendRoleAzureRoleArgs]]</span> = None<span class="p">, </span><span class="nx">backend</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ttl</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> BackendRole</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRoleState">BackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRole">BackendRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRoleState">BackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRole">BackendRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.BackendRole.html">BackendRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.BackendRoleState.html">BackendRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.BackendRole.html">BackendRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.BackendRoleState.html">BackendRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -744,7 +736,6 @@ Get an existing BackendRole resource's state with the given name, ID, and option
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -752,85 +743,87 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_applicationobjectid_csharp">
 <a href="#state_applicationobjectid_csharp" style="color: inherit; text-decoration: inherit;">Application<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, `azure_roles` will be ignored.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azuregroups_csharp">
+<a href="#state_azuregroups_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendroleazuregroup">List&lt;Backend<wbr>Role<wbr>Azure<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Azure groups to be assigned to the generated service principal.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_azureroles_csharp">
 <a href="#state_azureroles_csharp" style="color: inherit; text-decoration: inherit;">Azure<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">List&lt;Backend<wbr>Role<wbr>Azure<wbr>Role<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of Azure roles to be assigned to the generated service principal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the mounted Azure auth backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum TTL for service principals generated using this role. Accepts time
 suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine max TTL time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure role
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine default TTL time.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -839,85 +832,87 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
             title="Optional">
         <span id="state_applicationobjectid_go">
 <a href="#state_applicationobjectid_go" style="color: inherit; text-decoration: inherit;">Application<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, `azure_roles` will be ignored.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azuregroups_go">
+<a href="#state_azuregroups_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendroleazuregroup">[]Backend<wbr>Role<wbr>Azure<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}List of Azure groups to be assigned to the generated service principal.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_azureroles_go">
 <a href="#state_azureroles_go" style="color: inherit; text-decoration: inherit;">Azure<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">[]Backend<wbr>Role<wbr>Azure<wbr>Role</a></span>
     </dt>
     <dd>{{% md %}}List of Azure roles to be assigned to the generated service principal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the mounted Azure auth backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum TTL for service principals generated using this role. Accepts time
 suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine max TTL time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure role
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine default TTL time.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -926,85 +921,87 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
             title="Optional">
         <span id="state_applicationobjectid_nodejs">
 <a href="#state_applicationobjectid_nodejs" style="color: inherit; text-decoration: inherit;">application<wbr>Object<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, `azure_roles` will be ignored.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azuregroups_nodejs">
+<a href="#state_azuregroups_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendroleazuregroup">Backend<wbr>Role<wbr>Azure<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Azure groups to be assigned to the generated service principal.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_azureroles_nodejs">
 <a href="#state_azureroles_nodejs" style="color: inherit; text-decoration: inherit;">azure<wbr>Roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">Backend<wbr>Role<wbr>Azure<wbr>Role[]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure roles to be assigned to the generated service principal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to the mounted Azure auth backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum TTL for service principals generated using this role. Accepts time
 suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine max TTL time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Azure role
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine default TTL time.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1013,88 +1010,87 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
             title="Optional">
         <span id="state_application_object_id_python">
 <a href="#state_application_object_id_python" style="color: inherit; text-decoration: inherit;">application_<wbr>object_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Application Object ID for an existing service principal that will
 be used instead of creating dynamic service principals. If present, `azure_roles` will be ignored.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_azure_groups_python">
+<a href="#state_azure_groups_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>groups</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#backendroleazuregroup">Sequence[Backend<wbr>Role<wbr>Azure<wbr>Group<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Azure groups to be assigned to the generated service principal.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_azure_roles_python">
 <a href="#state_azure_roles_python" style="color: inherit; text-decoration: inherit;">azure_<wbr>roles</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#backendroleazurerole">Sequence[Backend<wbr>Role<wbr>Azure<wbr>Role<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of Azure roles to be assigned to the generated service principal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to the mounted Azure auth backend
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Human-friendly description of the mount for the backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the maximum TTL for service principals generated using this role. Accepts time
 suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine max TTL time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Azure role
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the default TTL for service principals generated using this role.
 Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults to the system/engine default TTL time.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1104,6 +1100,117 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 ## Supporting Types
 
 
+
+<h4 id="backendroleazuregroup">Backend<wbr>Role<wbr>Azure<wbr>Group</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#BackendRoleAzureGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#BackendRoleAzureGroup">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRoleAzureGroupArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRoleAzureGroupOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.Inputs.BackendRoleAzureGroupArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.Outputs.BackendRoleAzureGroup.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="groupname_csharp">
+<a href="#groupname_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="objectid_csharp">
+<a href="#objectid_csharp" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="groupname_go">
+<a href="#groupname_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="objectid_go">
+<a href="#objectid_go" style="color: inherit; text-decoration: inherit;">Object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="groupname_nodejs">
+<a href="#groupname_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="objectid_nodejs">
+<a href="#objectid_nodejs" style="color: inherit; text-decoration: inherit;">object<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="group_name_python">
+<a href="#group_name_python" style="color: inherit; text-decoration: inherit;">group_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="object_id_python">
+<a href="#object_id_python" style="color: inherit; text-decoration: inherit;">object_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="backendroleazurerole">Backend<wbr>Role<wbr>Azure<wbr>Role</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/input/#BackendRoleAzureRole">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vault/types/output/#BackendRoleAzureRole">output</a> API doc for this type.
@@ -1112,11 +1219,10 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRoleAzureRoleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/azure?tab=doc#BackendRoleAzureRoleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.Inputs.BackendRoleAzureRoleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Azure.Outputs.BackendRoleAzureRole.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1126,35 +1232,31 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
             title="Required">
         <span id="rolename_csharp">
 <a href="#rolename_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scope_csharp">
 <a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleid_csharp">
 <a href="#roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1163,35 +1265,31 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
             title="Required">
         <span id="rolename_go">
 <a href="#rolename_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scope_go">
 <a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleid_go">
 <a href="#roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1200,35 +1298,31 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
             title="Required">
         <span id="rolename_nodejs">
 <a href="#rolename_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scope_nodejs">
 <a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roleid_nodejs">
 <a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1237,43 +1331,31 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
             title="Required">
         <span id="role_name_python">
 <a href="#role_name_python" style="color: inherit; text-decoration: inherit;">role_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="scope_python">
 <a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_id_python">
 <a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
@@ -1283,6 +1365,6 @@ Accepts time suffixed strings ("1h") or an integer number of seconds. Defaults t
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 </dl>
 

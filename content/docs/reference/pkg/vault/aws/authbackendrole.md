@@ -1,8 +1,8 @@
 
 ---
 title: "AuthBackendRole"
-title_tag: "Resource AuthBackendRole | Module aws | Package Vault"
-meta_desc: "Explore the AuthBackendRole resource of the aws module, including examples, input properties, output properties, lookup functions, and supporting types. Manages an AWS auth backend role in a Vault server. Roles constrain the"
+title_tag: "vault.aws.AuthBackendRole"
+meta_desc: "Documentation for the vault.aws.AuthBackendRole resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -209,7 +209,7 @@ const example = new vault.aws.AuthBackendRole("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendRole">AuthBackendRole</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendRoleArgs">AuthBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendRole">AuthBackendRole</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendRoleArgs">AuthBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -217,11 +217,11 @@ const example = new vault.aws.AuthBackendRole("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendRole">NewAuthBackendRole</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendRoleArgs">AuthBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendRole">AuthBackendRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendRole">NewAuthBackendRole</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendRoleArgs">AuthBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendRole">AuthBackendRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendRole.html">AuthBackendRole</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendRoleArgs.html">AuthBackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendRole.html">AuthBackendRole</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendRoleArgs.html">AuthBackendRoleArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -232,7 +232,7 @@ const example = new vault.aws.AuthBackendRole("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -301,7 +301,7 @@ const example = new vault.aws.AuthBackendRole("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -340,7 +340,7 @@ const example = new vault.aws.AuthBackendRole("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -381,7 +381,6 @@ The AuthBackendRole resource accepts the following [input]({{< relref "/docs/int
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -389,94 +388,87 @@ The AuthBackendRole resource accepts the following [input]({{< relref "/docs/int
             title="Required">
         <span id="role_csharp">
 <a href="#role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowinstancemigration_csharp">
 <a href="#allowinstancemigration_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Instance<wbr>Migration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authtype_csharp">
 <a href="#authtype_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundaccountids_csharp">
 <a href="#boundaccountids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Account<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
 account ID specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundamiids_csharp">
 <a href="#boundamiids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Ami<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
 specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundec2instanceids_csharp">
 <a href="#boundec2instanceids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Ec2Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundiaminstanceprofilearns_csharp">
 <a href="#boundiaminstanceprofilearns_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -485,41 +477,38 @@ the value specified by this field. The value is prefix-matched as though it
 were a glob ending in `*`. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundiamprincipalarns_csharp">
 <a href="#boundiamprincipalarns_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Principal<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
 supported at the end of the ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundiamrolearns_csharp">
 <a href="#boundiamrolearns_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Role<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
 role ARN specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundregions_csharp">
 <a href="#boundregions_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -527,14 +516,13 @@ document must match the one specified by this field. `auth_type` must be set
 to `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundsubnetids_csharp">
 <a href="#boundsubnetids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subnet<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -542,14 +530,13 @@ the subnet ID that matches the value specified by this field. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundvpcids_csharp">
 <a href="#boundvpcids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Vpc<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -557,93 +544,86 @@ that matches the value specified by this field. `auth_type` must be set to
 `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallowreauthentication_csharp">
 <a href="#disallowreauthentication_csharp" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Reauthentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
 `auth_type` is set to `ec2`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inferredawsregion_csharp">
 <a href="#inferredawsregion_csharp" style="color: inherit; text-decoration: inherit;">Inferred<wbr>Aws<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
 `inferred_entity_type` is set. This only applies when `auth_type` is set to
 `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inferredentitytype_csharp">
 <a href="#inferredentitytype_csharp" style="color: inherit; text-decoration: inherit;">Inferred<wbr>Entity<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
 infer that the role comes from an EC2 instance in an IAM instance profile.
 This only applies when `auth_type` is set to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="maxttl_csharp">
 <a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_csharp">
 <a href="#period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_csharp">
 <a href="#policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolveawsuniqueids_csharp">
 <a href="#resolveawsuniqueids_csharp" style="color: inherit; text-decoration: inherit;">Resolve<wbr>Aws<wbr>Unique<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -657,130 +637,120 @@ roles won't get access to roles in Vault that were permissioned to the prior
 principals of the same name. Defaults to `true`.
 Once set to `true`, this cannot be changed to `false` without recreating the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roletag_csharp">
 <a href="#roletag_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_csharp">
 <a href="#tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_csharp">
 <a href="#tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_csharp">
 <a href="#tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_csharp">
 <a href="#tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_csharp">
 <a href="#tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_csharp">
 <a href="#tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_csharp">
 <a href="#tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenttl_csharp">
 <a href="#tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -788,22 +758,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -812,94 +779,87 @@ using this role, provided as a number of seconds.
             title="Required">
         <span id="role_go">
 <a href="#role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowinstancemigration_go">
 <a href="#allowinstancemigration_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Instance<wbr>Migration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authtype_go">
 <a href="#authtype_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundaccountids_go">
 <a href="#boundaccountids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Account<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
 account ID specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundamiids_go">
 <a href="#boundamiids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Ami<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
 specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundec2instanceids_go">
 <a href="#boundec2instanceids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Ec2Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundiaminstanceprofilearns_go">
 <a href="#boundiaminstanceprofilearns_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -908,41 +868,38 @@ the value specified by this field. The value is prefix-matched as though it
 were a glob ending in `*`. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundiamprincipalarns_go">
 <a href="#boundiamprincipalarns_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Principal<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
 supported at the end of the ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundiamrolearns_go">
 <a href="#boundiamrolearns_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Role<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
 role ARN specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundregions_go">
 <a href="#boundregions_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -950,14 +907,13 @@ document must match the one specified by this field. `auth_type` must be set
 to `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundsubnetids_go">
 <a href="#boundsubnetids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subnet<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -965,14 +921,13 @@ the subnet ID that matches the value specified by this field. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundvpcids_go">
 <a href="#boundvpcids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Vpc<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -980,93 +935,86 @@ that matches the value specified by this field. `auth_type` must be set to
 `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallowreauthentication_go">
 <a href="#disallowreauthentication_go" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Reauthentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
 `auth_type` is set to `ec2`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inferredawsregion_go">
 <a href="#inferredawsregion_go" style="color: inherit; text-decoration: inherit;">Inferred<wbr>Aws<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
 `inferred_entity_type` is set. This only applies when `auth_type` is set to
 `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inferredentitytype_go">
 <a href="#inferredentitytype_go" style="color: inherit; text-decoration: inherit;">Inferred<wbr>Entity<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
 infer that the role comes from an EC2 instance in an IAM instance profile.
 This only applies when `auth_type` is set to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="maxttl_go">
 <a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_go">
 <a href="#period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_go">
 <a href="#policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolveawsuniqueids_go">
 <a href="#resolveawsuniqueids_go" style="color: inherit; text-decoration: inherit;">Resolve<wbr>Aws<wbr>Unique<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -1080,130 +1028,120 @@ roles won't get access to roles in Vault that were permissioned to the prior
 principals of the same name. Defaults to `true`.
 Once set to `true`, this cannot be changed to `false` without recreating the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roletag_go">
 <a href="#roletag_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_go">
 <a href="#tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_go">
 <a href="#tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_go">
 <a href="#tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_go">
 <a href="#tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_go">
 <a href="#tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_go">
 <a href="#tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_go">
 <a href="#tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenttl_go">
 <a href="#tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -1211,22 +1149,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1235,94 +1170,87 @@ using this role, provided as a number of seconds.
             title="Required">
         <span id="role_nodejs">
 <a href="#role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allowinstancemigration_nodejs">
 <a href="#allowinstancemigration_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Instance<wbr>Migration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="authtype_nodejs">
 <a href="#authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundaccountids_nodejs">
 <a href="#boundaccountids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Account<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
 account ID specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundamiids_nodejs">
 <a href="#boundamiids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Ami<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
 specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundec2instanceids_nodejs">
 <a href="#boundec2instanceids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Ec2Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundiaminstanceprofilearns_nodejs">
 <a href="#boundiaminstanceprofilearns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -1331,41 +1259,38 @@ the value specified by this field. The value is prefix-matched as though it
 were a glob ending in `*`. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundiamprincipalarns_nodejs">
 <a href="#boundiamprincipalarns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Principal<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
 supported at the end of the ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundiamrolearns_nodejs">
 <a href="#boundiamrolearns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Role<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
 role ARN specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundregions_nodejs">
 <a href="#boundregions_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -1373,14 +1298,13 @@ document must match the one specified by this field. `auth_type` must be set
 to `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundsubnetids_nodejs">
 <a href="#boundsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Subnet<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -1388,14 +1312,13 @@ the subnet ID that matches the value specified by this field. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="boundvpcids_nodejs">
 <a href="#boundvpcids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Vpc<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -1403,93 +1326,86 @@ that matches the value specified by this field. `auth_type` must be set to
 `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallowreauthentication_nodejs">
 <a href="#disallowreauthentication_nodejs" style="color: inherit; text-decoration: inherit;">disallow<wbr>Reauthentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
 `auth_type` is set to `ec2`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inferredawsregion_nodejs">
 <a href="#inferredawsregion_nodejs" style="color: inherit; text-decoration: inherit;">inferred<wbr>Aws<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
 `inferred_entity_type` is set. This only applies when `auth_type` is set to
 `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inferredentitytype_nodejs">
 <a href="#inferredentitytype_nodejs" style="color: inherit; text-decoration: inherit;">inferred<wbr>Entity<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
 infer that the role comes from an EC2 instance in an IAM instance profile.
 This only applies when `auth_type` is set to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="maxttl_nodejs">
 <a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_nodejs">
 <a href="#period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_nodejs">
 <a href="#policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolveawsuniqueids_nodejs">
 <a href="#resolveawsuniqueids_nodejs" style="color: inherit; text-decoration: inherit;">resolve<wbr>Aws<wbr>Unique<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -1503,130 +1419,120 @@ roles won't get access to roles in Vault that were permissioned to the prior
 principals of the same name. Defaults to `true`.
 Once set to `true`, this cannot be changed to `false` without recreating the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="roletag_nodejs">
 <a href="#roletag_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_nodejs">
 <a href="#tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_nodejs">
 <a href="#tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_nodejs">
 <a href="#tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_nodejs">
 <a href="#tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_nodejs">
 <a href="#tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_nodejs">
 <a href="#tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_nodejs">
 <a href="#tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenttl_nodejs">
 <a href="#tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -1634,22 +1540,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1658,94 +1561,87 @@ using this role, provided as a number of seconds.
             title="Required">
         <span id="role_python">
 <a href="#role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="allow_instance_migration_python">
 <a href="#allow_instance_migration_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>instance_<wbr>migration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="auth_type_python">
 <a href="#auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_account_ids_python">
 <a href="#bound_account_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>account_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
 account ID specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_ami_ids_python">
 <a href="#bound_ami_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>ami_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
 specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_ec2_instance_ids_python">
 <a href="#bound_ec2_instance_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>ec2_<wbr>instance_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_iam_instance_profile_arns_python">
 <a href="#bound_iam_instance_profile_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>instance_<wbr>profile_<wbr>arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -1754,41 +1650,38 @@ the value specified by this field. The value is prefix-matched as though it
 were a glob ending in `*`. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_iam_principal_arns_python">
 <a href="#bound_iam_principal_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>principal_<wbr>arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
 supported at the end of the ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_iam_role_arns_python">
 <a href="#bound_iam_role_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>role_<wbr>arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
 role ARN specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_regions_python">
 <a href="#bound_regions_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -1796,14 +1689,13 @@ document must match the one specified by this field. `auth_type` must be set
 to `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_subnet_ids_python">
 <a href="#bound_subnet_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>subnet_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -1811,14 +1703,13 @@ the subnet ID that matches the value specified by this field. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bound_vpc_ids_python">
 <a href="#bound_vpc_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>vpc_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -1826,93 +1717,86 @@ that matches the value specified by this field. `auth_type` must be set to
 `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disallow_reauthentication_python">
 <a href="#disallow_reauthentication_python" style="color: inherit; text-decoration: inherit;">disallow_<wbr>reauthentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
 `auth_type` is set to `ec2`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inferred_aws_region_python">
 <a href="#inferred_aws_region_python" style="color: inherit; text-decoration: inherit;">inferred_<wbr>aws_<wbr>region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
 `inferred_entity_type` is set. This only applies when `auth_type` is set to
 `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inferred_entity_type_python">
 <a href="#inferred_entity_type_python" style="color: inherit; text-decoration: inherit;">inferred_<wbr>entity_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
 infer that the role comes from an EC2 instance in an IAM instance profile.
 This only applies when `auth_type` is set to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="max_ttl_python">
 <a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="period_python">
 <a href="#period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="policies_python">
 <a href="#policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="resolve_aws_unique_ids_python">
 <a href="#resolve_aws_unique_ids_python" style="color: inherit; text-decoration: inherit;">resolve_<wbr>aws_<wbr>unique_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -1926,130 +1810,120 @@ roles won't get access to roles in Vault that were permissioned to the prior
 principals of the same name. Defaults to `true`.
 Once set to `true`, this cannot be changed to `false` without recreating the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="role_tag_python">
 <a href="#role_tag_python" style="color: inherit; text-decoration: inherit;">role_<wbr>tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_bound_cidrs_python">
 <a href="#token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_explicit_max_ttl_python">
 <a href="#token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_max_ttl_python">
 <a href="#token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_no_default_policy_python">
 <a href="#token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_num_uses_python">
 <a href="#token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_period_python">
 <a href="#token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_policies_python">
 <a href="#token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_ttl_python">
 <a href="#token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -2057,31 +1931,24 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the AuthBackendRole resource produces the following output properties:
-
 
 
 
@@ -2092,15 +1959,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2109,15 +1974,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2126,15 +1989,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2143,18 +2004,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2164,7 +2020,7 @@ Get an existing AuthBackendRole resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendRoleState">AuthBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendRole">AuthBackendRole</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendRoleState">AuthBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendRole">AuthBackendRole</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -2173,11 +2029,11 @@ Get an existing AuthBackendRole resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendRoleState">AuthBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendRole">AuthBackendRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendRole<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendRoleState">AuthBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/aws?tab=doc#AuthBackendRole">AuthBackendRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendRole.html">AuthBackendRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendRoleState.html">AuthBackendRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendRole.html">AuthBackendRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Aws.AuthBackendRoleState.html">AuthBackendRoleState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2279,7 +2135,6 @@ Get an existing AuthBackendRole resource's state with the given name, ID, and op
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2287,83 +2142,77 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_allowinstancemigration_csharp">
 <a href="#state_allowinstancemigration_csharp" style="color: inherit; text-decoration: inherit;">Allow<wbr>Instance<wbr>Migration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authtype_csharp">
 <a href="#state_authtype_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_csharp">
 <a href="#state_backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundaccountids_csharp">
 <a href="#state_boundaccountids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Account<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
 account ID specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundamiids_csharp">
 <a href="#state_boundamiids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Ami<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
 specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundec2instanceids_csharp">
 <a href="#state_boundec2instanceids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Ec2Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundiaminstanceprofilearns_csharp">
 <a href="#state_boundiaminstanceprofilearns_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -2372,41 +2221,38 @@ the value specified by this field. The value is prefix-matched as though it
 were a glob ending in `*`. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundiamprincipalarns_csharp">
 <a href="#state_boundiamprincipalarns_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Principal<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
 supported at the end of the ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundiamrolearns_csharp">
 <a href="#state_boundiamrolearns_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Role<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
 role ARN specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundregions_csharp">
 <a href="#state_boundregions_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -2414,14 +2260,13 @@ document must match the one specified by this field. `auth_type` must be set
 to `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundsubnetids_csharp">
 <a href="#state_boundsubnetids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subnet<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -2429,14 +2274,13 @@ the subnet ID that matches the value specified by this field. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundvpcids_csharp">
 <a href="#state_boundvpcids_csharp" style="color: inherit; text-decoration: inherit;">Bound<wbr>Vpc<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -2444,93 +2288,86 @@ that matches the value specified by this field. `auth_type` must be set to
 `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disallowreauthentication_csharp">
 <a href="#state_disallowreauthentication_csharp" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Reauthentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
 `auth_type` is set to `ec2`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inferredawsregion_csharp">
 <a href="#state_inferredawsregion_csharp" style="color: inherit; text-decoration: inherit;">Inferred<wbr>Aws<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
 `inferred_entity_type` is set. This only applies when `auth_type` is set to
 `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inferredentitytype_csharp">
 <a href="#state_inferredentitytype_csharp" style="color: inherit; text-decoration: inherit;">Inferred<wbr>Entity<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
 infer that the role comes from an EC2 instance in an IAM instance profile.
 This only applies when `auth_type` is set to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_maxttl_csharp">
 <a href="#state_maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_csharp">
 <a href="#state_period_csharp" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_csharp">
 <a href="#state_policies_csharp" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resolveawsuniqueids_csharp">
 <a href="#state_resolveawsuniqueids_csharp" style="color: inherit; text-decoration: inherit;">Resolve<wbr>Aws<wbr>Unique<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -2544,141 +2381,130 @@ roles won't get access to roles in Vault that were permissioned to the prior
 principals of the same name. Defaults to `true`.
 Once set to `true`, this cannot be changed to `false` without recreating the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_csharp">
 <a href="#state_role_csharp" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_roletag_csharp">
 <a href="#state_roletag_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_csharp">
 <a href="#state_tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_csharp">
 <a href="#state_tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_csharp">
 <a href="#state_tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_csharp">
 <a href="#state_tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_csharp">
 <a href="#state_tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_csharp">
 <a href="#state_tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_csharp">
 <a href="#state_tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_csharp">
 <a href="#state_tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_csharp">
 <a href="#state_tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -2686,22 +2512,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_csharp">
 <a href="#state_ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2710,83 +2533,77 @@ using this role, provided as a number of seconds.
             title="Optional">
         <span id="state_allowinstancemigration_go">
 <a href="#state_allowinstancemigration_go" style="color: inherit; text-decoration: inherit;">Allow<wbr>Instance<wbr>Migration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authtype_go">
 <a href="#state_authtype_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_go">
 <a href="#state_backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundaccountids_go">
 <a href="#state_boundaccountids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Account<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
 account ID specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundamiids_go">
 <a href="#state_boundamiids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Ami<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
 specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundec2instanceids_go">
 <a href="#state_boundec2instanceids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Ec2Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundiaminstanceprofilearns_go">
 <a href="#state_boundiaminstanceprofilearns_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -2795,41 +2612,38 @@ the value specified by this field. The value is prefix-matched as though it
 were a glob ending in `*`. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundiamprincipalarns_go">
 <a href="#state_boundiamprincipalarns_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Principal<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
 supported at the end of the ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundiamrolearns_go">
 <a href="#state_boundiamrolearns_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Iam<wbr>Role<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
 role ARN specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundregions_go">
 <a href="#state_boundregions_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -2837,14 +2651,13 @@ document must match the one specified by this field. `auth_type` must be set
 to `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundsubnetids_go">
 <a href="#state_boundsubnetids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Subnet<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -2852,14 +2665,13 @@ the subnet ID that matches the value specified by this field. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundvpcids_go">
 <a href="#state_boundvpcids_go" style="color: inherit; text-decoration: inherit;">Bound<wbr>Vpc<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -2867,93 +2679,86 @@ that matches the value specified by this field. `auth_type` must be set to
 `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disallowreauthentication_go">
 <a href="#state_disallowreauthentication_go" style="color: inherit; text-decoration: inherit;">Disallow<wbr>Reauthentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
 `auth_type` is set to `ec2`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inferredawsregion_go">
 <a href="#state_inferredawsregion_go" style="color: inherit; text-decoration: inherit;">Inferred<wbr>Aws<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
 `inferred_entity_type` is set. This only applies when `auth_type` is set to
 `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inferredentitytype_go">
 <a href="#state_inferredentitytype_go" style="color: inherit; text-decoration: inherit;">Inferred<wbr>Entity<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
 infer that the role comes from an EC2 instance in an IAM instance profile.
 This only applies when `auth_type` is set to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_maxttl_go">
 <a href="#state_maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_go">
 <a href="#state_period_go" style="color: inherit; text-decoration: inherit;">Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_go">
 <a href="#state_policies_go" style="color: inherit; text-decoration: inherit;">Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resolveawsuniqueids_go">
 <a href="#state_resolveawsuniqueids_go" style="color: inherit; text-decoration: inherit;">Resolve<wbr>Aws<wbr>Unique<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -2967,141 +2772,130 @@ roles won't get access to roles in Vault that were permissioned to the prior
 principals of the same name. Defaults to `true`.
 Once set to `true`, this cannot be changed to `false` without recreating the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_go">
 <a href="#state_role_go" style="color: inherit; text-decoration: inherit;">Role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_roletag_go">
 <a href="#state_roletag_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_go">
 <a href="#state_tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_go">
 <a href="#state_tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_go">
 <a href="#state_tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_go">
 <a href="#state_tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_go">
 <a href="#state_tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_go">
 <a href="#state_tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_go">
 <a href="#state_tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_go">
 <a href="#state_tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_go">
 <a href="#state_tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -3109,22 +2903,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_go">
 <a href="#state_ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3133,83 +2924,77 @@ using this role, provided as a number of seconds.
             title="Optional">
         <span id="state_allowinstancemigration_nodejs">
 <a href="#state_allowinstancemigration_nodejs" style="color: inherit; text-decoration: inherit;">allow<wbr>Instance<wbr>Migration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_authtype_nodejs">
 <a href="#state_authtype_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_nodejs">
 <a href="#state_backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundaccountids_nodejs">
 <a href="#state_boundaccountids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Account<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
 account ID specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundamiids_nodejs">
 <a href="#state_boundamiids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Ami<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
 specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundec2instanceids_nodejs">
 <a href="#state_boundec2instanceids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Ec2Instance<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundiaminstanceprofilearns_nodejs">
 <a href="#state_boundiaminstanceprofilearns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -3218,41 +3003,38 @@ the value specified by this field. The value is prefix-matched as though it
 were a glob ending in `*`. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundiamprincipalarns_nodejs">
 <a href="#state_boundiamprincipalarns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Principal<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
 supported at the end of the ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundiamrolearns_nodejs">
 <a href="#state_boundiamrolearns_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Iam<wbr>Role<wbr>Arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
 role ARN specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundregions_nodejs">
 <a href="#state_boundregions_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -3260,14 +3042,13 @@ document must match the one specified by this field. `auth_type` must be set
 to `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundsubnetids_nodejs">
 <a href="#state_boundsubnetids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Subnet<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -3275,14 +3056,13 @@ the subnet ID that matches the value specified by this field. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_boundvpcids_nodejs">
 <a href="#state_boundvpcids_nodejs" style="color: inherit; text-decoration: inherit;">bound<wbr>Vpc<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -3290,93 +3070,86 @@ that matches the value specified by this field. `auth_type` must be set to
 `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disallowreauthentication_nodejs">
 <a href="#state_disallowreauthentication_nodejs" style="color: inherit; text-decoration: inherit;">disallow<wbr>Reauthentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
 `auth_type` is set to `ec2`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inferredawsregion_nodejs">
 <a href="#state_inferredawsregion_nodejs" style="color: inherit; text-decoration: inherit;">inferred<wbr>Aws<wbr>Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
 `inferred_entity_type` is set. This only applies when `auth_type` is set to
 `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inferredentitytype_nodejs">
 <a href="#state_inferredentitytype_nodejs" style="color: inherit; text-decoration: inherit;">inferred<wbr>Entity<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
 infer that the role comes from an EC2 instance in an IAM instance profile.
 This only applies when `auth_type` is set to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_maxttl_nodejs">
 <a href="#state_maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_nodejs">
 <a href="#state_period_nodejs" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_nodejs">
 <a href="#state_policies_nodejs" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resolveawsuniqueids_nodejs">
 <a href="#state_resolveawsuniqueids_nodejs" style="color: inherit; text-decoration: inherit;">resolve<wbr>Aws<wbr>Unique<wbr>Ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -3390,141 +3163,130 @@ roles won't get access to roles in Vault that were permissioned to the prior
 principals of the same name. Defaults to `true`.
 Once set to `true`, this cannot be changed to `false` without recreating the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_nodejs">
 <a href="#state_role_nodejs" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_roletag_nodejs">
 <a href="#state_roletag_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_nodejs">
 <a href="#state_tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_nodejs">
 <a href="#state_tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_nodejs">
 <a href="#state_tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_nodejs">
 <a href="#state_tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_nodejs">
 <a href="#state_tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_nodejs">
 <a href="#state_tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_nodejs">
 <a href="#state_tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_nodejs">
 <a href="#state_tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_nodejs">
 <a href="#state_tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -3532,22 +3294,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_nodejs">
 <a href="#state_ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3556,83 +3315,77 @@ using this role, provided as a number of seconds.
             title="Optional">
         <span id="state_allow_instance_migration_python">
 <a href="#state_allow_instance_migration_python" style="color: inherit; text-decoration: inherit;">allow_<wbr>instance_<wbr>migration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, allows migration of
 the underlying instance where the client resides.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_auth_type_python">
 <a href="#state_auth_type_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The auth type permitted for this role. Valid choices
 are `ec2` and `iam`. Defaults to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_python">
 <a href="#state_backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name of the auth backend to configure.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_account_ids_python">
 <a href="#state_bound_account_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>account_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they should be using the
 account ID specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_ami_ids_python">
 <a href="#state_bound_ami_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>ami_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they should be using the AMI ID
 specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_ec2_instance_ids_python">
 <a href="#state_bound_ec2_instance_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>ec2_<wbr>instance_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only EC2 instances that match this instance ID will be permitted to log in.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_iam_instance_profile_arns_python">
 <a href="#state_bound_iam_instance_profile_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>instance_<wbr>profile_<wbr>arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on
 the EC2 instances that can perform the login operation that they must be
@@ -3641,41 +3394,38 @@ the value specified by this field. The value is prefix-matched as though it
 were a glob ending in `*`. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_iam_principal_arns_python">
 <a href="#state_bound_iam_principal_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>principal_<wbr>arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines the IAM principal that
 must be authenticated when `auth_type` is set to `iam`. Wildcards are
 supported at the end of the ARN.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_iam_role_arns_python">
 <a href="#state_bound_iam_role_arns_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>iam_<wbr>role_<wbr>arns</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they must match the IAM
 role ARN specified by this field. `auth_type` must be set to `ec2` or
 `inferred_entity_type` must be set to `ec2_instance` to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_regions_python">
 <a href="#state_bound_regions_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>regions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that the region in their identity
@@ -3683,14 +3433,13 @@ document must match the one specified by this field. `auth_type` must be set
 to `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_subnet_ids_python">
 <a href="#state_bound_subnet_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>subnet_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2
 instances that can perform the login operation that they be associated with
@@ -3698,14 +3447,13 @@ the subnet ID that matches the value specified by this field. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bound_vpc_ids_python">
 <a href="#state_bound_vpc_ids_python" style="color: inherit; text-decoration: inherit;">bound_<wbr>vpc_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}If set, defines a constraint on the EC2 instances
 that can perform the login operation that they be associated with the VPC ID
@@ -3713,93 +3461,86 @@ that matches the value specified by this field. `auth_type` must be set to
 `ec2` or `inferred_entity_type` must be set to `ec2_instance` to use this
 constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disallow_reauthentication_python">
 <a href="#state_disallow_reauthentication_python" style="color: inherit; text-decoration: inherit;">disallow_<wbr>reauthentication</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}IF set to `true`, only allows a
 single token to be granted per instance ID. This can only be set when
 `auth_type` is set to `ec2`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inferred_aws_region_python">
 <a href="#state_inferred_aws_region_python" style="color: inherit; text-decoration: inherit;">inferred_<wbr>aws_<wbr>region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}When `inferred_entity_type` is set, this
 is the region to search for the inferred entities. Required if
 `inferred_entity_type` is set. This only applies when `auth_type` is set to
 `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inferred_entity_type_python">
 <a href="#state_inferred_entity_type_python" style="color: inherit; text-decoration: inherit;">inferred_<wbr>entity_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set, instructs Vault to turn on
 inferencing. The only valid value is `ec2_instance`, which instructs Vault to
 infer that the role comes from an EC2 instance in an IAM instance profile.
 This only applies when `auth_type` is set to `iam`.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_max_ttl_python">
 <a href="#state_max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum allowed lifetime of tokens
 issued using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_max_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_period_python">
 <a href="#state_period_python" style="color: inherit; text-decoration: inherit;">period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_period` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_policies_python">
 <a href="#state_policies_python" style="color: inherit; text-decoration: inherit;">policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of strings
 specifying the policies to be set on tokens issued using this role.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_policies` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_resolve_aws_unique_ids_python">
 <a href="#state_resolve_aws_unique_ids_python" style="color: inherit; text-decoration: inherit;">resolve_<wbr>aws_<wbr>unique_<wbr>ids</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Only valid when
 `auth_type` is `iam`. If set to `true`, the `bound_iam_principal_arns` are
@@ -3813,141 +3554,130 @@ roles won't get access to roles in Vault that were permissioned to the prior
 principals of the same name. Defaults to `true`.
 Once set to `true`, this cannot be changed to `false` without recreating the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_python">
 <a href="#state_role_python" style="color: inherit; text-decoration: inherit;">role</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the role.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_role_tag_python">
 <a href="#state_role_tag_python" style="color: inherit; text-decoration: inherit;">role_<wbr>tag</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If set, enable role tags for this role. The value set
 for this field should be the key of the tag on the EC2 instance. `auth_type`
 must be set to `ec2` or `inferred_entity_type` must be set to `ec2_instance`
 to use this constraint.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_bound_cidrs_python">
 <a href="#state_token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_explicit_max_ttl_python">
 <a href="#state_token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_max_ttl_python">
 <a href="#state_token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_no_default_policy_python">
 <a href="#state_token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_num_uses_python">
 <a href="#state_token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_period_python">
 <a href="#state_token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_policies_python">
 <a href="#state_token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_ttl_python">
 <a href="#state_token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_type_python">
 <a href="#state_token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -3955,27 +3685,19 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_ttl_python">
 <a href="#state_ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL period of tokens issued
 using this role, provided as a number of seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `token_ttl` instead if you are running Vault &gt;= 1.2{{% /md %}}</p></dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 
@@ -4000,6 +3722,6 @@ AWS auth backend roles can be imported using `auth/`, the `backend` path, `/role
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 </dl>
 

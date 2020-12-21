@@ -1,8 +1,8 @@
 
 ---
 title: "AuthBackend"
-title_tag: "Resource AuthBackend | Module ldap | Package Vault"
-meta_desc: "Explore the AuthBackend resource of the ldap module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a resource for managing an [LDAP auth backend within Vault](https://www.vaultproject.io/docs/auth/ldap.html)."
+title_tag: "vault.ldap.AuthBackend"
+meta_desc: "Documentation for the vault.ldap.AuthBackend resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -121,7 +121,7 @@ const ldap = new vault.ldap.AuthBackend("ldap", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ldap/#AuthBackend">AuthBackend</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ldap/#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ldap/#AuthBackend">AuthBackend</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ldap/#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -129,11 +129,11 @@ const ldap = new vault.ldap.AuthBackend("ldap", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ldap?tab=doc#AuthBackend">NewAuthBackend</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ldap?tab=doc#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ldap?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ldap?tab=doc#AuthBackend">NewAuthBackend</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ldap?tab=doc#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ldap?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Ldap.AuthBackend.html">AuthBackend</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Ldap.AuthBackendArgs.html">AuthBackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Ldap.AuthBackend.html">AuthBackend</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Ldap.AuthBackendArgs.html">AuthBackendArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -144,7 +144,7 @@ const ldap = new vault.ldap.AuthBackend("ldap", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -213,7 +213,7 @@ const ldap = new vault.ldap.AuthBackend("ldap", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -252,7 +252,7 @@ const ldap = new vault.ldap.AuthBackend("ldap", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -293,7 +293,6 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -301,274 +300,251 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="binddn_csharp">
 <a href="#binddn_csharp" style="color: inherit; text-decoration: inherit;">Binddn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bindpass_csharp">
 <a href="#bindpass_csharp" style="color: inherit; text-decoration: inherit;">Bindpass</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificate_csharp">
 <a href="#certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denynullbind_csharp">
 <a href="#denynullbind_csharp" style="color: inherit; text-decoration: inherit;">Deny<wbr>Null<wbr>Bind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="discoverdn_csharp">
 <a href="#discoverdn_csharp" style="color: inherit; text-decoration: inherit;">Discoverdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupattr_csharp">
 <a href="#groupattr_csharp" style="color: inherit; text-decoration: inherit;">Groupattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupdn_csharp">
 <a href="#groupdn_csharp" style="color: inherit; text-decoration: inherit;">Groupdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupfilter_csharp">
 <a href="#groupfilter_csharp" style="color: inherit; text-decoration: inherit;">Groupfilter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecuretls_csharp">
 <a href="#insecuretls_csharp" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttls_csharp">
 <a href="#starttls_csharp" style="color: inherit; text-decoration: inherit;">Starttls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsmaxversion_csharp">
 <a href="#tlsmaxversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Max<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsminversion_csharp">
 <a href="#tlsminversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_csharp">
 <a href="#tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_csharp">
 <a href="#tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_csharp">
 <a href="#tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_csharp">
 <a href="#tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_csharp">
 <a href="#tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_csharp">
 <a href="#tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_csharp">
 <a href="#tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenttl_csharp">
 <a href="#tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokentype_csharp">
 <a href="#tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -576,54 +552,48 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upndomain_csharp">
 <a href="#upndomain_csharp" style="color: inherit; text-decoration: inherit;">Upndomain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usetokengroups_csharp">
 <a href="#usetokengroups_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Token<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userattr_csharp">
 <a href="#userattr_csharp" style="color: inherit; text-decoration: inherit;">Userattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdn_csharp">
 <a href="#userdn_csharp" style="color: inherit; text-decoration: inherit;">Userdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -632,274 +602,251 @@ requests a different type at generation time.
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="binddn_go">
 <a href="#binddn_go" style="color: inherit; text-decoration: inherit;">Binddn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bindpass_go">
 <a href="#bindpass_go" style="color: inherit; text-decoration: inherit;">Bindpass</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificate_go">
 <a href="#certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denynullbind_go">
 <a href="#denynullbind_go" style="color: inherit; text-decoration: inherit;">Deny<wbr>Null<wbr>Bind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="discoverdn_go">
 <a href="#discoverdn_go" style="color: inherit; text-decoration: inherit;">Discoverdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupattr_go">
 <a href="#groupattr_go" style="color: inherit; text-decoration: inherit;">Groupattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupdn_go">
 <a href="#groupdn_go" style="color: inherit; text-decoration: inherit;">Groupdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupfilter_go">
 <a href="#groupfilter_go" style="color: inherit; text-decoration: inherit;">Groupfilter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecuretls_go">
 <a href="#insecuretls_go" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttls_go">
 <a href="#starttls_go" style="color: inherit; text-decoration: inherit;">Starttls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsmaxversion_go">
 <a href="#tlsmaxversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Max<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsminversion_go">
 <a href="#tlsminversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_go">
 <a href="#tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_go">
 <a href="#tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_go">
 <a href="#tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_go">
 <a href="#tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_go">
 <a href="#tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_go">
 <a href="#tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_go">
 <a href="#tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenttl_go">
 <a href="#tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokentype_go">
 <a href="#tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -907,54 +854,48 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upndomain_go">
 <a href="#upndomain_go" style="color: inherit; text-decoration: inherit;">Upndomain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usetokengroups_go">
 <a href="#usetokengroups_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Token<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userattr_go">
 <a href="#userattr_go" style="color: inherit; text-decoration: inherit;">Userattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdn_go">
 <a href="#userdn_go" style="color: inherit; text-decoration: inherit;">Userdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -963,274 +904,251 @@ requests a different type at generation time.
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="binddn_nodejs">
 <a href="#binddn_nodejs" style="color: inherit; text-decoration: inherit;">binddn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bindpass_nodejs">
 <a href="#bindpass_nodejs" style="color: inherit; text-decoration: inherit;">bindpass</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificate_nodejs">
 <a href="#certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denynullbind_nodejs">
 <a href="#denynullbind_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Null<wbr>Bind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="discoverdn_nodejs">
 <a href="#discoverdn_nodejs" style="color: inherit; text-decoration: inherit;">discoverdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupattr_nodejs">
 <a href="#groupattr_nodejs" style="color: inherit; text-decoration: inherit;">groupattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupdn_nodejs">
 <a href="#groupdn_nodejs" style="color: inherit; text-decoration: inherit;">groupdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupfilter_nodejs">
 <a href="#groupfilter_nodejs" style="color: inherit; text-decoration: inherit;">groupfilter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecuretls_nodejs">
 <a href="#insecuretls_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttls_nodejs">
 <a href="#starttls_nodejs" style="color: inherit; text-decoration: inherit;">starttls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsmaxversion_nodejs">
 <a href="#tlsmaxversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Max<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tlsminversion_nodejs">
 <a href="#tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenboundcidrs_nodejs">
 <a href="#tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenexplicitmaxttl_nodejs">
 <a href="#tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenmaxttl_nodejs">
 <a href="#tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennodefaultpolicy_nodejs">
 <a href="#tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokennumuses_nodejs">
 <a href="#tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenperiod_nodejs">
 <a href="#tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenpolicies_nodejs">
 <a href="#tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokenttl_nodejs">
 <a href="#tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tokentype_nodejs">
 <a href="#tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -1238,54 +1156,48 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upndomain_nodejs">
 <a href="#upndomain_nodejs" style="color: inherit; text-decoration: inherit;">upndomain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="usetokengroups_nodejs">
 <a href="#usetokengroups_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Token<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userattr_nodejs">
 <a href="#userattr_nodejs" style="color: inherit; text-decoration: inherit;">userattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdn_nodejs">
 <a href="#userdn_nodejs" style="color: inherit; text-decoration: inherit;">userdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1294,274 +1206,251 @@ requests a different type at generation time.
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="binddn_python">
 <a href="#binddn_python" style="color: inherit; text-decoration: inherit;">binddn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bindpass_python">
 <a href="#bindpass_python" style="color: inherit; text-decoration: inherit;">bindpass</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="certificate_python">
 <a href="#certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="deny_null_bind_python">
 <a href="#deny_null_bind_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>null_<wbr>bind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="discoverdn_python">
 <a href="#discoverdn_python" style="color: inherit; text-decoration: inherit;">discoverdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupattr_python">
 <a href="#groupattr_python" style="color: inherit; text-decoration: inherit;">groupattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupdn_python">
 <a href="#groupdn_python" style="color: inherit; text-decoration: inherit;">groupdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupfilter_python">
 <a href="#groupfilter_python" style="color: inherit; text-decoration: inherit;">groupfilter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="insecure_tls_python">
 <a href="#insecure_tls_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttls_python">
 <a href="#starttls_python" style="color: inherit; text-decoration: inherit;">starttls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tls_max_version_python">
 <a href="#tls_max_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>max_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tls_min_version_python">
 <a href="#tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_bound_cidrs_python">
 <a href="#token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_explicit_max_ttl_python">
 <a href="#token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_max_ttl_python">
 <a href="#token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_no_default_policy_python">
 <a href="#token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_num_uses_python">
 <a href="#token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_period_python">
 <a href="#token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_policies_python">
 <a href="#token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_ttl_python">
 <a href="#token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="token_type_python">
 <a href="#token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -1569,63 +1458,53 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="upndomain_python">
 <a href="#upndomain_python" style="color: inherit; text-decoration: inherit;">upndomain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="use_token_groups_python">
 <a href="#use_token_groups_python" style="color: inherit; text-decoration: inherit;">use_<wbr>token_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userattr_python">
 <a href="#userattr_python" style="color: inherit; text-decoration: inherit;">userattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userdn_python">
 <a href="#userdn_python" style="color: inherit; text-decoration: inherit;">userdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the AuthBackend resource produces the following output properties:
-
 
 
 
@@ -1636,26 +1515,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="accessor_csharp">
 <a href="#accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth mount.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1664,26 +1540,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="accessor_go">
 <a href="#accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth mount.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1692,26 +1565,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="accessor_nodejs">
 <a href="#accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth mount.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1720,29 +1590,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="accessor_python">
 <a href="#accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth mount.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1752,7 +1616,7 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ldap/#AuthBackendState">AuthBackendState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ldap/#AuthBackend">AuthBackend</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ldap/#AuthBackendState">AuthBackendState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/ldap/#AuthBackend">AuthBackend</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1761,11 +1625,11 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ldap?tab=doc#AuthBackendState">AuthBackendState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ldap?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ldap?tab=doc#AuthBackendState">AuthBackendState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v3/go/vault/ldap?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Ldap.AuthBackend.html">AuthBackend</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Ldap.AuthBackendState.html">AuthBackendState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Ldap.AuthBackend.html">AuthBackend</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.Ldap.AuthBackendState.html">AuthBackendState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1867,7 +1731,6 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1875,274 +1738,251 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_accessor_csharp">
 <a href="#state_accessor_csharp" style="color: inherit; text-decoration: inherit;">Accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth mount.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_binddn_csharp">
 <a href="#state_binddn_csharp" style="color: inherit; text-decoration: inherit;">Binddn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bindpass_csharp">
 <a href="#state_bindpass_csharp" style="color: inherit; text-decoration: inherit;">Bindpass</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_certificate_csharp">
 <a href="#state_certificate_csharp" style="color: inherit; text-decoration: inherit;">Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_denynullbind_csharp">
 <a href="#state_denynullbind_csharp" style="color: inherit; text-decoration: inherit;">Deny<wbr>Null<wbr>Bind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_discoverdn_csharp">
 <a href="#state_discoverdn_csharp" style="color: inherit; text-decoration: inherit;">Discoverdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupattr_csharp">
 <a href="#state_groupattr_csharp" style="color: inherit; text-decoration: inherit;">Groupattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupdn_csharp">
 <a href="#state_groupdn_csharp" style="color: inherit; text-decoration: inherit;">Groupdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupfilter_csharp">
 <a href="#state_groupfilter_csharp" style="color: inherit; text-decoration: inherit;">Groupfilter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_insecuretls_csharp">
 <a href="#state_insecuretls_csharp" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_csharp">
 <a href="#state_path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_starttls_csharp">
 <a href="#state_starttls_csharp" style="color: inherit; text-decoration: inherit;">Starttls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlsmaxversion_csharp">
 <a href="#state_tlsmaxversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Max<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlsminversion_csharp">
 <a href="#state_tlsminversion_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_csharp">
 <a href="#state_tokenboundcidrs_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_csharp">
 <a href="#state_tokenexplicitmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_csharp">
 <a href="#state_tokenmaxttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_csharp">
 <a href="#state_tokennodefaultpolicy_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_csharp">
 <a href="#state_tokennumuses_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_csharp">
 <a href="#state_tokenperiod_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_csharp">
 <a href="#state_tokenpolicies_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_csharp">
 <a href="#state_tokenttl_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_csharp">
 <a href="#state_tokentype_csharp" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -2150,65 +1990,58 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_upndomain_csharp">
 <a href="#state_upndomain_csharp" style="color: inherit; text-decoration: inherit;">Upndomain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usetokengroups_csharp">
 <a href="#state_usetokengroups_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>Token<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userattr_csharp">
 <a href="#state_userattr_csharp" style="color: inherit; text-decoration: inherit;">Userattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdn_csharp">
 <a href="#state_userdn_csharp" style="color: inherit; text-decoration: inherit;">Userdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2217,274 +2050,251 @@ requests a different type at generation time.
             title="Optional">
         <span id="state_accessor_go">
 <a href="#state_accessor_go" style="color: inherit; text-decoration: inherit;">Accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth mount.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_binddn_go">
 <a href="#state_binddn_go" style="color: inherit; text-decoration: inherit;">Binddn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bindpass_go">
 <a href="#state_bindpass_go" style="color: inherit; text-decoration: inherit;">Bindpass</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_certificate_go">
 <a href="#state_certificate_go" style="color: inherit; text-decoration: inherit;">Certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_denynullbind_go">
 <a href="#state_denynullbind_go" style="color: inherit; text-decoration: inherit;">Deny<wbr>Null<wbr>Bind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_discoverdn_go">
 <a href="#state_discoverdn_go" style="color: inherit; text-decoration: inherit;">Discoverdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupattr_go">
 <a href="#state_groupattr_go" style="color: inherit; text-decoration: inherit;">Groupattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupdn_go">
 <a href="#state_groupdn_go" style="color: inherit; text-decoration: inherit;">Groupdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupfilter_go">
 <a href="#state_groupfilter_go" style="color: inherit; text-decoration: inherit;">Groupfilter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_insecuretls_go">
 <a href="#state_insecuretls_go" style="color: inherit; text-decoration: inherit;">Insecure<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_go">
 <a href="#state_path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_starttls_go">
 <a href="#state_starttls_go" style="color: inherit; text-decoration: inherit;">Starttls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlsmaxversion_go">
 <a href="#state_tlsmaxversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Max<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlsminversion_go">
 <a href="#state_tlsminversion_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_go">
 <a href="#state_tokenboundcidrs_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_go">
 <a href="#state_tokenexplicitmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_go">
 <a href="#state_tokenmaxttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_go">
 <a href="#state_tokennodefaultpolicy_go" style="color: inherit; text-decoration: inherit;">Token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_go">
 <a href="#state_tokennumuses_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_go">
 <a href="#state_tokenperiod_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_go">
 <a href="#state_tokenpolicies_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_go">
 <a href="#state_tokenttl_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_go">
 <a href="#state_tokentype_go" style="color: inherit; text-decoration: inherit;">Token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -2492,65 +2302,58 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_upndomain_go">
 <a href="#state_upndomain_go" style="color: inherit; text-decoration: inherit;">Upndomain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usetokengroups_go">
 <a href="#state_usetokengroups_go" style="color: inherit; text-decoration: inherit;">Use<wbr>Token<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userattr_go">
 <a href="#state_userattr_go" style="color: inherit; text-decoration: inherit;">Userattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdn_go">
 <a href="#state_userdn_go" style="color: inherit; text-decoration: inherit;">Userdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2559,274 +2362,251 @@ requests a different type at generation time.
             title="Optional">
         <span id="state_accessor_nodejs">
 <a href="#state_accessor_nodejs" style="color: inherit; text-decoration: inherit;">accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth mount.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_binddn_nodejs">
 <a href="#state_binddn_nodejs" style="color: inherit; text-decoration: inherit;">binddn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bindpass_nodejs">
 <a href="#state_bindpass_nodejs" style="color: inherit; text-decoration: inherit;">bindpass</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_certificate_nodejs">
 <a href="#state_certificate_nodejs" style="color: inherit; text-decoration: inherit;">certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_denynullbind_nodejs">
 <a href="#state_denynullbind_nodejs" style="color: inherit; text-decoration: inherit;">deny<wbr>Null<wbr>Bind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_discoverdn_nodejs">
 <a href="#state_discoverdn_nodejs" style="color: inherit; text-decoration: inherit;">discoverdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupattr_nodejs">
 <a href="#state_groupattr_nodejs" style="color: inherit; text-decoration: inherit;">groupattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupdn_nodejs">
 <a href="#state_groupdn_nodejs" style="color: inherit; text-decoration: inherit;">groupdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupfilter_nodejs">
 <a href="#state_groupfilter_nodejs" style="color: inherit; text-decoration: inherit;">groupfilter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_insecuretls_nodejs">
 <a href="#state_insecuretls_nodejs" style="color: inherit; text-decoration: inherit;">insecure<wbr>Tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_nodejs">
 <a href="#state_path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_starttls_nodejs">
 <a href="#state_starttls_nodejs" style="color: inherit; text-decoration: inherit;">starttls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlsmaxversion_nodejs">
 <a href="#state_tlsmaxversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Max<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tlsminversion_nodejs">
 <a href="#state_tlsminversion_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Min<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenboundcidrs_nodejs">
 <a href="#state_tokenboundcidrs_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Bound<wbr>Cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenexplicitmaxttl_nodejs">
 <a href="#state_tokenexplicitmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Explicit<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenmaxttl_nodejs">
 <a href="#state_tokenmaxttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Max<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennodefaultpolicy_nodejs">
 <a href="#state_tokennodefaultpolicy_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>No<wbr>Default<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokennumuses_nodejs">
 <a href="#state_tokennumuses_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Num<wbr>Uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenperiod_nodejs">
 <a href="#state_tokenperiod_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenpolicies_nodejs">
 <a href="#state_tokenpolicies_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokenttl_nodejs">
 <a href="#state_tokenttl_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tokentype_nodejs">
 <a href="#state_tokentype_nodejs" style="color: inherit; text-decoration: inherit;">token<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -2834,65 +2614,58 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_upndomain_nodejs">
 <a href="#state_upndomain_nodejs" style="color: inherit; text-decoration: inherit;">upndomain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_usetokengroups_nodejs">
 <a href="#state_usetokengroups_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>Token<wbr>Groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userattr_nodejs">
 <a href="#state_userattr_nodejs" style="color: inherit; text-decoration: inherit;">userattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdn_nodejs">
 <a href="#state_userdn_nodejs" style="color: inherit; text-decoration: inherit;">userdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2901,274 +2674,251 @@ requests a different type at generation time.
             title="Optional">
         <span id="state_accessor_python">
 <a href="#state_accessor_python" style="color: inherit; text-decoration: inherit;">accessor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The accessor for this auth mount.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_binddn_python">
 <a href="#state_binddn_python" style="color: inherit; text-decoration: inherit;">binddn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}DN of object to bind when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_bindpass_python">
 <a href="#state_bindpass_python" style="color: inherit; text-decoration: inherit;">bindpass</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password to use with `binddn` when performing user search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_certificate_python">
 <a href="#state_certificate_python" style="color: inherit; text-decoration: inherit;">certificate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trusted CA to validate TLS certificate
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_deny_null_bind_python">
 <a href="#state_deny_null_bind_python" style="color: inherit; text-decoration: inherit;">deny_<wbr>null_<wbr>bind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description for the LDAP auth backend mount
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_discoverdn_python">
 <a href="#state_discoverdn_python" style="color: inherit; text-decoration: inherit;">discoverdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupattr_python">
 <a href="#state_groupattr_python" style="color: inherit; text-decoration: inherit;">groupattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}LDAP attribute to follow on objects returned by groupfilter
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupdn_python">
 <a href="#state_groupdn_python" style="color: inherit; text-decoration: inherit;">groupdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform group search
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupfilter_python">
 <a href="#state_groupfilter_python" style="color: inherit; text-decoration: inherit;">groupfilter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Go template used to construct group membership query
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_insecure_tls_python">
 <a href="#state_insecure_tls_python" style="color: inherit; text-decoration: inherit;">insecure_<wbr>tls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control whether or TLS certificates must be validated
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_path_python">
 <a href="#state_path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to mount the LDAP auth backend under
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_starttls_python">
 <a href="#state_starttls_python" style="color: inherit; text-decoration: inherit;">starttls</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Control use of TLS when conecting to LDAP
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tls_max_version_python">
 <a href="#state_tls_max_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>max_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_tls_min_version_python">
 <a href="#state_tls_min_version_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>min_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Minimum acceptable version of TLS
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_bound_cidrs_python">
 <a href="#state_token_bound_cidrs_python" style="color: inherit; text-decoration: inherit;">token_<wbr>bound_<wbr>cidrs</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of CIDR blocks; if set, specifies blocks of IP
 addresses which can authenticate successfully, and ties the resulting token to these blocks
 as well.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_explicit_max_ttl_python">
 <a href="#state_token_explicit_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>explicit_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, will encode an
 [explicit max TTL](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls)
 onto the token in number of seconds. This is a hard cap even if `token_ttl` and
 `token_max_ttl` would otherwise allow a renewal.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_max_ttl_python">
 <a href="#state_token_max_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>max_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_no_default_policy_python">
 <a href="#state_token_no_default_policy_python" style="color: inherit; text-decoration: inherit;">token_<wbr>no_<wbr>default_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, the default policy will not be set on
 generated tokens; otherwise it will be added to the policies set in token_policies.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_num_uses_python">
 <a href="#state_token_num_uses_python" style="color: inherit; text-decoration: inherit;">token_<wbr>num_<wbr>uses</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The
 [period](https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls),
 if any, in number of seconds to set on the token.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_period_python">
 <a href="#state_token_period_python" style="color: inherit; text-decoration: inherit;">token_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set, indicates that the
 token generated using this role should never expire. The token should be renewed within the
 duration specified by this value. At each renewal, the token's TTL will be set to the
 value of this field. Specified in seconds.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_policies_python">
 <a href="#state_token_policies_python" style="color: inherit; text-decoration: inherit;">token_<wbr>policies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of policies to encode onto generated tokens. Depending
 on the auth method, this list may be supplemented by user/group/other values.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_ttl_python">
 <a href="#state_token_ttl_python" style="color: inherit; text-decoration: inherit;">token_<wbr>ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_token_type_python">
 <a href="#state_token_type_python" style="color: inherit; text-decoration: inherit;">token_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of token that should be generated. Can be `service`,
 `batch`, or `default` to use the mount's tuned default (which unless changed will be
@@ -3176,70 +2926,58 @@ Its current value will be referenced at renewal time.
 `default-service` and `default-batch` which specify the type to return unless the client
 requests a different type at generation time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_upndomain_python">
 <a href="#state_upndomain_python" style="color: inherit; text-decoration: inherit;">upndomain</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The userPrincipalDomain used to construct UPN string
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the LDAP server
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_use_token_groups_python">
 <a href="#state_use_token_groups_python" style="color: inherit; text-decoration: inherit;">use_<wbr>token_<wbr>groups</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Use the Active Directory tokenGroups constructed attribute of the user to find the group memberships
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userattr_python">
 <a href="#state_userattr_python" style="color: inherit; text-decoration: inherit;">userattr</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Attribute on user object matching username passed in
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdn_python">
 <a href="#state_userdn_python" style="color: inherit; text-decoration: inherit;">userdn</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Base DN under which to perform user search
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
 
 
 
@@ -3264,6 +3002,6 @@ LDAP authentication backends can be imported using the `path`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 </dl>
 

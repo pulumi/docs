@@ -128,7 +128,6 @@ const test = pulumi.output(vault.transit.getDecrypt({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -136,49 +135,44 @@ The following arguments are supported:
             title="Required">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ciphertext_csharp">
 <a href="#ciphertext_csharp" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Ciphertext to be decoded.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the transit key to decrypt against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="context_csharp">
 <a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Context for key derivation. This is required if key derivation is enabled for this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -187,49 +181,44 @@ The following arguments are supported:
             title="Required">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ciphertext_go">
 <a href="#ciphertext_go" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Ciphertext to be decoded.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the transit key to decrypt against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="context_go">
 <a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Context for key derivation. This is required if key derivation is enabled for this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -238,49 +227,44 @@ The following arguments are supported:
             title="Required">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ciphertext_nodejs">
 <a href="#ciphertext_nodejs" style="color: inherit; text-decoration: inherit;">ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Ciphertext to be decoded.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the transit key to decrypt against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="context_nodejs">
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Context for key derivation. This is required if key derivation is enabled for this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -289,52 +273,44 @@ The following arguments are supported:
             title="Required">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="ciphertext_python">
 <a href="#ciphertext_python" style="color: inherit; text-decoration: inherit;">ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Ciphertext to be decoded.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the transit key to decrypt against.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="context_python">
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Context for key derivation. This is required if key derivation is enabled for this key.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -345,7 +321,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -353,67 +328,60 @@ The following output properties are available:
             title="">
         <span id="backend_csharp">
 <a href="#backend_csharp" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ciphertext_csharp">
 <a href="#ciphertext_csharp" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_csharp">
 <a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plaintext_csharp">
 <a href="#plaintext_csharp" style="color: inherit; text-decoration: inherit;">Plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Decrypted plaintext returned from Vault
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="context_csharp">
 <a href="#context_csharp" style="color: inherit; text-decoration: inherit;">Context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -422,67 +390,60 @@ The following output properties are available:
             title="">
         <span id="backend_go">
 <a href="#backend_go" style="color: inherit; text-decoration: inherit;">Backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ciphertext_go">
 <a href="#ciphertext_go" style="color: inherit; text-decoration: inherit;">Ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_go">
 <a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plaintext_go">
 <a href="#plaintext_go" style="color: inherit; text-decoration: inherit;">Plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Decrypted plaintext returned from Vault
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="context_go">
 <a href="#context_go" style="color: inherit; text-decoration: inherit;">Context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -491,67 +452,60 @@ The following output properties are available:
             title="">
         <span id="backend_nodejs">
 <a href="#backend_nodejs" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ciphertext_nodejs">
 <a href="#ciphertext_nodejs" style="color: inherit; text-decoration: inherit;">ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_nodejs">
 <a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plaintext_nodejs">
 <a href="#plaintext_nodejs" style="color: inherit; text-decoration: inherit;">plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Decrypted plaintext returned from Vault
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="context_nodejs">
 <a href="#context_nodejs" style="color: inherit; text-decoration: inherit;">context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -560,70 +514,60 @@ The following output properties are available:
             title="">
         <span id="backend_python">
 <a href="#backend_python" style="color: inherit; text-decoration: inherit;">backend</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="ciphertext_python">
 <a href="#ciphertext_python" style="color: inherit; text-decoration: inherit;">ciphertext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="key_python">
 <a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plaintext_python">
 <a href="#plaintext_python" style="color: inherit; text-decoration: inherit;">plaintext</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Decrypted plaintext returned from Vault
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="context_python">
 <a href="#context_python" style="color: inherit; text-decoration: inherit;">context</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -636,6 +580,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 </dl>
 
