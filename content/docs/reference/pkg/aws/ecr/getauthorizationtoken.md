@@ -122,7 +122,7 @@ The following arguments are supported:
 <a href="#registryid_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS account ID of the ECR Repository. If not specified the default account is assumed.
 {{% /md %}}</dd>
@@ -138,7 +138,7 @@ The following arguments are supported:
 <a href="#registryid_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS account ID of the ECR Repository. If not specified the default account is assumed.
 {{% /md %}}</dd>
@@ -154,7 +154,7 @@ The following arguments are supported:
 <a href="#registryid_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS account ID of the ECR Repository. If not specified the default account is assumed.
 {{% /md %}}</dd>
@@ -170,7 +170,7 @@ The following arguments are supported:
 <a href="#registry_id_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS account ID of the ECR Repository. If not specified the default account is assumed.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ The following output properties are available:
 <a href="#authorizationtoken_csharp" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Temporary IAM authentication credentials to access the ECR repository encoded in base64 in the form of `user_name:password`.
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ The following output properties are available:
 <a href="#expiresat_csharp" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time in UTC RFC3339 format when the authorization token expires.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -225,7 +225,7 @@ The following output properties are available:
 <a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password decoded from the authorization token.
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ The following output properties are available:
 <a href="#proxyendpoint_csharp" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry URL to use in the docker login command.
 {{% /md %}}</dd>
@@ -245,7 +245,7 @@ The following output properties are available:
 <a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name decoded from the authorization token.
 {{% /md %}}</dd>
@@ -255,7 +255,7 @@ The following output properties are available:
 <a href="#registryid_csharp" style="color: inherit; text-decoration: inherit;">Registry<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -270,7 +270,7 @@ The following output properties are available:
 <a href="#authorizationtoken_go" style="color: inherit; text-decoration: inherit;">Authorization<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Temporary IAM authentication credentials to access the ECR repository encoded in base64 in the form of `user_name:password`.
 {{% /md %}}</dd>
@@ -280,7 +280,7 @@ The following output properties are available:
 <a href="#expiresat_go" style="color: inherit; text-decoration: inherit;">Expires<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time in UTC RFC3339 format when the authorization token expires.
 {{% /md %}}</dd>
@@ -290,7 +290,7 @@ The following output properties are available:
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -300,7 +300,7 @@ The following output properties are available:
 <a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password decoded from the authorization token.
 {{% /md %}}</dd>
@@ -310,7 +310,7 @@ The following output properties are available:
 <a href="#proxyendpoint_go" style="color: inherit; text-decoration: inherit;">Proxy<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry URL to use in the docker login command.
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ The following output properties are available:
 <a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name decoded from the authorization token.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ The following output properties are available:
 <a href="#registryid_go" style="color: inherit; text-decoration: inherit;">Registry<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -345,7 +345,7 @@ The following output properties are available:
 <a href="#authorizationtoken_nodejs" style="color: inherit; text-decoration: inherit;">authorization<wbr>Token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Temporary IAM authentication credentials to access the ECR repository encoded in base64 in the form of `user_name:password`.
 {{% /md %}}</dd>
@@ -355,7 +355,7 @@ The following output properties are available:
 <a href="#expiresat_nodejs" style="color: inherit; text-decoration: inherit;">expires<wbr>At</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time in UTC RFC3339 format when the authorization token expires.
 {{% /md %}}</dd>
@@ -365,7 +365,7 @@ The following output properties are available:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -375,7 +375,7 @@ The following output properties are available:
 <a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password decoded from the authorization token.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ The following output properties are available:
 <a href="#proxyendpoint_nodejs" style="color: inherit; text-decoration: inherit;">proxy<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The registry URL to use in the docker login command.
 {{% /md %}}</dd>
@@ -395,7 +395,7 @@ The following output properties are available:
 <a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name decoded from the authorization token.
 {{% /md %}}</dd>
@@ -405,7 +405,7 @@ The following output properties are available:
 <a href="#registryid_nodejs" style="color: inherit; text-decoration: inherit;">registry<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -420,7 +420,7 @@ The following output properties are available:
 <a href="#authorization_token_python" style="color: inherit; text-decoration: inherit;">authorization_<wbr>token</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Temporary IAM authentication credentials to access the ECR repository encoded in base64 in the form of `user_name:password`.
 {{% /md %}}</dd>
@@ -430,7 +430,7 @@ The following output properties are available:
 <a href="#expires_at_python" style="color: inherit; text-decoration: inherit;">expires_<wbr>at</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time in UTC RFC3339 format when the authorization token expires.
 {{% /md %}}</dd>
@@ -440,7 +440,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -450,7 +450,7 @@ The following output properties are available:
 <a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Password decoded from the authorization token.
 {{% /md %}}</dd>
@@ -460,7 +460,7 @@ The following output properties are available:
 <a href="#proxy_endpoint_python" style="color: inherit; text-decoration: inherit;">proxy_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The registry URL to use in the docker login command.
 {{% /md %}}</dd>
@@ -470,7 +470,7 @@ The following output properties are available:
 <a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User name decoded from the authorization token.
 {{% /md %}}</dd>
@@ -480,7 +480,7 @@ The following output properties are available:
 <a href="#registry_id_python" style="color: inherit; text-decoration: inherit;">registry_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>

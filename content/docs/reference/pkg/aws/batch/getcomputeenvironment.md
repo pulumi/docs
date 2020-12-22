@@ -132,7 +132,7 @@ The following arguments are supported:
 <a href="#computeenvironmentname_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Environment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Batch Compute Environment
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ The following arguments are supported:
 <a href="#computeenvironmentname_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Environment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Batch Compute Environment
 {{% /md %}}</dd>
@@ -184,7 +184,7 @@ The following arguments are supported:
 <a href="#computeenvironmentname_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Environment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Batch Compute Environment
 {{% /md %}}</dd>
@@ -210,7 +210,7 @@ The following arguments are supported:
 <a href="#compute_environment_name_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>environment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Batch Compute Environment
 {{% /md %}}</dd>
@@ -245,7 +245,7 @@ The following output properties are available:
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the compute environment.
 {{% /md %}}</dd>
@@ -255,7 +255,7 @@ The following output properties are available:
 <a href="#computeenvironmentname_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Environment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -264,7 +264,7 @@ The following output properties are available:
 <a href="#ecsclusterarn_csharp" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Cluster<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ The following output properties are available:
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -284,7 +284,7 @@ The following output properties are available:
 <a href="#servicerole_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -294,7 +294,7 @@ The following output properties are available:
 <a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the compute environment (for example, `ENABLED` or `DISABLED`). If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues.
 {{% /md %}}</dd>
@@ -304,7 +304,7 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, `CREATING` or `VALID`).
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#statusreason_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -334,7 +334,7 @@ The following output properties are available:
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the compute environment (for example, `MANAGED` or `UNMANAGED`).
 {{% /md %}}</dd>
@@ -350,7 +350,7 @@ The following output properties are available:
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the compute environment.
 {{% /md %}}</dd>
@@ -360,7 +360,7 @@ The following output properties are available:
 <a href="#computeenvironmentname_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Environment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -369,7 +369,7 @@ The following output properties are available:
 <a href="#ecsclusterarn_go" style="color: inherit; text-decoration: inherit;">Ecs<wbr>Cluster<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ The following output properties are available:
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#servicerole_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -399,7 +399,7 @@ The following output properties are available:
 <a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the compute environment (for example, `ENABLED` or `DISABLED`). If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues.
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ The following output properties are available:
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, `CREATING` or `VALID`).
 {{% /md %}}</dd>
@@ -419,7 +419,7 @@ The following output properties are available:
 <a href="#statusreason_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -439,7 +439,7 @@ The following output properties are available:
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the compute environment (for example, `MANAGED` or `UNMANAGED`).
 {{% /md %}}</dd>
@@ -455,7 +455,7 @@ The following output properties are available:
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the compute environment.
 {{% /md %}}</dd>
@@ -465,7 +465,7 @@ The following output properties are available:
 <a href="#computeenvironmentname_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Environment<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -474,7 +474,7 @@ The following output properties are available:
 <a href="#ecsclusterarn_nodejs" style="color: inherit; text-decoration: inherit;">ecs<wbr>Cluster<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -484,7 +484,7 @@ The following output properties are available:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -494,7 +494,7 @@ The following output properties are available:
 <a href="#servicerole_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -504,7 +504,7 @@ The following output properties are available:
 <a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the compute environment (for example, `ENABLED` or `DISABLED`). If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues.
 {{% /md %}}</dd>
@@ -514,7 +514,7 @@ The following output properties are available:
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, `CREATING` or `VALID`).
 {{% /md %}}</dd>
@@ -524,7 +524,7 @@ The following output properties are available:
 <a href="#statusreason_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -544,7 +544,7 @@ The following output properties are available:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the compute environment (for example, `MANAGED` or `UNMANAGED`).
 {{% /md %}}</dd>
@@ -560,7 +560,7 @@ The following output properties are available:
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the compute environment.
 {{% /md %}}</dd>
@@ -570,7 +570,7 @@ The following output properties are available:
 <a href="#compute_environment_name_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>environment_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -579,7 +579,7 @@ The following output properties are available:
 <a href="#ecs_cluster_arn_python" style="color: inherit; text-decoration: inherit;">ecs_<wbr>cluster_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the underlying Amazon ECS cluster used by the compute environment.
 {{% /md %}}</dd>
@@ -589,7 +589,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -599,7 +599,7 @@ The following output properties are available:
 <a href="#service_role_python" style="color: inherit; text-decoration: inherit;">service_<wbr>role</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role that allows AWS Batch to make calls to other AWS services on your behalf.
 {{% /md %}}</dd>
@@ -609,7 +609,7 @@ The following output properties are available:
 <a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the compute environment (for example, `ENABLED` or `DISABLED`). If the state is `ENABLED`, then the compute environment accepts jobs from a queue and can scale out automatically based on queues.
 {{% /md %}}</dd>
@@ -619,7 +619,7 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The current status of the compute environment (for example, `CREATING` or `VALID`).
 {{% /md %}}</dd>
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#status_reason_python" style="color: inherit; text-decoration: inherit;">status_<wbr>reason</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short, human-readable string to provide additional details about the current status of the compute environment.
 {{% /md %}}</dd>
@@ -649,7 +649,7 @@ The following output properties are available:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the compute environment (for example, `MANAGED` or `UNMANAGED`).
 {{% /md %}}</dd>

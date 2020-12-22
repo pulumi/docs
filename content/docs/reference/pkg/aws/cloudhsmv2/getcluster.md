@@ -131,7 +131,7 @@ The following arguments are supported:
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of Cloud HSM v2 cluster.
 {{% /md %}}</dd>
@@ -141,7 +141,7 @@ The following arguments are supported:
 <a href="#clusterstate_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the cluster to be found.
 {{% /md %}}</dd>
@@ -157,7 +157,7 @@ The following arguments are supported:
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of Cloud HSM v2 cluster.
 {{% /md %}}</dd>
@@ -167,7 +167,7 @@ The following arguments are supported:
 <a href="#clusterstate_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the cluster to be found.
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ The following arguments are supported:
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of Cloud HSM v2 cluster.
 {{% /md %}}</dd>
@@ -193,7 +193,7 @@ The following arguments are supported:
 <a href="#clusterstate_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the cluster to be found.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ The following arguments are supported:
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of Cloud HSM v2 cluster.
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ The following arguments are supported:
 <a href="#cluster_state_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the cluster to be found.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -269,7 +269,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clusterstate_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -278,7 +278,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#securitygroupid_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group associated with the CloudHSM cluster.
 {{% /md %}}</dd>
@@ -298,7 +298,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The IDs of subnets in which cluster operates.
 {{% /md %}}</dd>
@@ -308,7 +308,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that the CloudHSM cluster resides in.
 {{% /md %}}</dd>
@@ -340,7 +340,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clusterid_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -349,7 +349,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clusterstate_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -358,7 +358,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#securitygroupid_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group associated with the CloudHSM cluster.
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The IDs of subnets in which cluster operates.
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that the CloudHSM cluster resides in.
 {{% /md %}}</dd>
@@ -420,7 +420,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clusterid_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -429,7 +429,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clusterstate_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>State</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -438,7 +438,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -448,7 +448,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#securitygroupid_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group associated with the CloudHSM cluster.
 {{% /md %}}</dd>
@@ -458,7 +458,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The IDs of subnets in which cluster operates.
 {{% /md %}}</dd>
@@ -468,7 +468,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that the CloudHSM cluster resides in.
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#cluster_id_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -509,7 +509,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#cluster_state_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>state</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -518,7 +518,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -528,7 +528,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#security_group_id_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the security group associated with the CloudHSM cluster.
 {{% /md %}}</dd>
@@ -538,7 +538,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The IDs of subnets in which cluster operates.
 {{% /md %}}</dd>
@@ -548,7 +548,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the VPC that the CloudHSM cluster resides in.
 {{% /md %}}</dd>
@@ -584,7 +584,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#awshardwarecertificate_csharp" style="color: inherit; text-decoration: inherit;">Aws<wbr>Hardware<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -593,7 +593,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clustercertificate_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -602,7 +602,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clustercsr_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -611,7 +611,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#hsmcertificate_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -620,7 +620,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#manufacturerhardwarecertificate_csharp" style="color: inherit; text-decoration: inherit;">Manufacturer<wbr>Hardware<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -635,7 +635,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#awshardwarecertificate_go" style="color: inherit; text-decoration: inherit;">Aws<wbr>Hardware<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -644,7 +644,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clustercertificate_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -653,7 +653,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clustercsr_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -662,7 +662,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#hsmcertificate_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -671,7 +671,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#manufacturerhardwarecertificate_go" style="color: inherit; text-decoration: inherit;">Manufacturer<wbr>Hardware<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -686,7 +686,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#awshardwarecertificate_nodejs" style="color: inherit; text-decoration: inherit;">aws<wbr>Hardware<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -695,7 +695,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clustercertificate_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -704,7 +704,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#clustercsr_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -713,7 +713,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#hsmcertificate_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -722,7 +722,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#manufacturerhardwarecertificate_nodejs" style="color: inherit; text-decoration: inherit;">manufacturer<wbr>Hardware<wbr>Certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -737,7 +737,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#aws_hardware_certificate_python" style="color: inherit; text-decoration: inherit;">aws_<wbr>hardware_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -746,7 +746,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#cluster_certificate_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -755,7 +755,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#cluster_csr_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>csr</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -764,7 +764,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#hsm_certificate_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -773,7 +773,7 @@ The number of available cluster certificates may vary depending on state of the 
 <a href="#manufacturer_hardware_certificate_python" style="color: inherit; text-decoration: inherit;">manufacturer_<wbr>hardware_<wbr>certificate</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>

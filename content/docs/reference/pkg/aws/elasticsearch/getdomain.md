@@ -131,7 +131,7 @@ The following arguments are supported:
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
@@ -157,7 +157,7 @@ The following arguments are supported:
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ The following arguments are supported:
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ The following arguments are supported:
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the domain.
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ The following output properties are available:
 <a href="#accesspolicies_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ The following output properties are available:
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
@@ -304,7 +304,7 @@ The following output properties are available:
 <a href="#created_csharp" style="color: inherit; text-decoration: inherit;">Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ The following output properties are available:
 <a href="#deleted_csharp" style="color: inherit; text-decoration: inherit;">Deleted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
@@ -324,7 +324,7 @@ The following output properties are available:
 <a href="#domainid_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
@@ -334,7 +334,7 @@ The following output properties are available:
 <a href="#domainname_csharp" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -353,7 +353,7 @@ The following output properties are available:
 <a href="#elasticsearchversion_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
@@ -373,7 +373,7 @@ The following output properties are available:
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
@@ -383,7 +383,7 @@ The following output properties are available:
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -393,7 +393,7 @@ The following output properties are available:
 <a href="#kibanaendpoint_csharp" style="color: inherit; text-decoration: inherit;">Kibana<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
@@ -423,7 +423,7 @@ The following output properties are available:
 <a href="#processing_csharp" style="color: inherit; text-decoration: inherit;">Processing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
@@ -469,7 +469,7 @@ The following output properties are available:
 <a href="#accesspolicies_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
@@ -529,7 +529,7 @@ The following output properties are available:
 <a href="#created_go" style="color: inherit; text-decoration: inherit;">Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
@@ -539,7 +539,7 @@ The following output properties are available:
 <a href="#deleted_go" style="color: inherit; text-decoration: inherit;">Deleted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
@@ -549,7 +549,7 @@ The following output properties are available:
 <a href="#domainid_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
@@ -559,7 +559,7 @@ The following output properties are available:
 <a href="#domainname_go" style="color: inherit; text-decoration: inherit;">Domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -578,7 +578,7 @@ The following output properties are available:
 <a href="#elasticsearchversion_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
@@ -598,7 +598,7 @@ The following output properties are available:
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
@@ -608,7 +608,7 @@ The following output properties are available:
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -618,7 +618,7 @@ The following output properties are available:
 <a href="#kibanaendpoint_go" style="color: inherit; text-decoration: inherit;">Kibana<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
@@ -648,7 +648,7 @@ The following output properties are available:
 <a href="#processing_go" style="color: inherit; text-decoration: inherit;">Processing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
@@ -694,7 +694,7 @@ The following output properties are available:
 <a href="#accesspolicies_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
@@ -724,7 +724,7 @@ The following output properties are available:
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
@@ -754,7 +754,7 @@ The following output properties are available:
 <a href="#created_nodejs" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
@@ -764,7 +764,7 @@ The following output properties are available:
 <a href="#deleted_nodejs" style="color: inherit; text-decoration: inherit;">deleted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
@@ -774,7 +774,7 @@ The following output properties are available:
 <a href="#domainid_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
@@ -784,7 +784,7 @@ The following output properties are available:
 <a href="#domainname_nodejs" style="color: inherit; text-decoration: inherit;">domain<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -803,7 +803,7 @@ The following output properties are available:
 <a href="#elasticsearchversion_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
@@ -823,7 +823,7 @@ The following output properties are available:
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -843,7 +843,7 @@ The following output properties are available:
 <a href="#kibanaendpoint_nodejs" style="color: inherit; text-decoration: inherit;">kibana<wbr>Endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
@@ -873,7 +873,7 @@ The following output properties are available:
 <a href="#processing_nodejs" style="color: inherit; text-decoration: inherit;">processing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#access_policies_python" style="color: inherit; text-decoration: inherit;">access_<wbr>policies</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The policy document attached to the domain.
 {{% /md %}}</dd>
@@ -949,7 +949,7 @@ The following output properties are available:
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the domain.
 {{% /md %}}</dd>
@@ -979,7 +979,7 @@ The following output properties are available:
 <a href="#created_python" style="color: inherit; text-decoration: inherit;">created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the creation of the domain.
 {{% /md %}}</dd>
@@ -989,7 +989,7 @@ The following output properties are available:
 <a href="#deleted_python" style="color: inherit; text-decoration: inherit;">deleted</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of the deletion of the domain.
 {{% /md %}}</dd>
@@ -999,7 +999,7 @@ The following output properties are available:
 <a href="#domain_id_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique identifier for the domain.
 {{% /md %}}</dd>
@@ -1009,7 +1009,7 @@ The following output properties are available:
 <a href="#domain_name_python" style="color: inherit; text-decoration: inherit;">domain_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -1028,7 +1028,7 @@ The following output properties are available:
 <a href="#elasticsearch_version_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ElasticSearch version for the domain.
 {{% /md %}}</dd>
@@ -1048,7 +1048,7 @@ The following output properties are available:
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
@@ -1058,7 +1058,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1068,7 +1068,7 @@ The following output properties are available:
 <a href="#kibana_endpoint_python" style="color: inherit; text-decoration: inherit;">kibana_<wbr>endpoint</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to access the Kibana application.
 {{% /md %}}</dd>
@@ -1098,7 +1098,7 @@ The following output properties are available:
 <a href="#processing_python" style="color: inherit; text-decoration: inherit;">processing</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Status of a configuration change in the domain.
 * `snapshot_options` – Domain snapshot related options.
@@ -1164,7 +1164,7 @@ The following output properties are available:
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1174,7 +1174,7 @@ The following output properties are available:
 <a href="#internaluserdatabaseenabled_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>User<wbr>Database<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the internal user database is enabled.
 {{% /md %}}</dd>
@@ -1190,7 +1190,7 @@ The following output properties are available:
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1200,7 +1200,7 @@ The following output properties are available:
 <a href="#internaluserdatabaseenabled_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>User<wbr>Database<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the internal user database is enabled.
 {{% /md %}}</dd>
@@ -1216,7 +1216,7 @@ The following output properties are available:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1226,7 +1226,7 @@ The following output properties are available:
 <a href="#internaluserdatabaseenabled_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>User<wbr>Database<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the internal user database is enabled.
 {{% /md %}}</dd>
@@ -1242,7 +1242,7 @@ The following output properties are available:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1252,7 +1252,7 @@ The following output properties are available:
 <a href="#internal_user_database_enabled_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>user_<wbr>database_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the internal user database is enabled.
 {{% /md %}}</dd>
@@ -1282,7 +1282,7 @@ The following output properties are available:
 <a href="#dedicatedmastercount_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1292,7 +1292,7 @@ The following output properties are available:
 <a href="#dedicatedmasterenabled_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
@@ -1302,7 +1302,7 @@ The following output properties are available:
 <a href="#dedicatedmastertype_csharp" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1312,7 +1312,7 @@ The following output properties are available:
 <a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
@@ -1322,7 +1322,7 @@ The following output properties are available:
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
@@ -1332,7 +1332,7 @@ The following output properties are available:
 <a href="#warmcount_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of warm nodes in the cluster.
 {{% /md %}}</dd>
@@ -1342,7 +1342,7 @@ The following output properties are available:
 <a href="#warmtype_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
 {{% /md %}}</dd>
@@ -1362,7 +1362,7 @@ The following output properties are available:
 <a href="#zoneawarenessenabled_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Awareness<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
@@ -1372,7 +1372,7 @@ The following output properties are available:
 <a href="#warmenabled_csharp" style="color: inherit; text-decoration: inherit;">Warm<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
@@ -1388,7 +1388,7 @@ The following output properties are available:
 <a href="#dedicatedmastercount_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1398,7 +1398,7 @@ The following output properties are available:
 <a href="#dedicatedmasterenabled_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
@@ -1408,7 +1408,7 @@ The following output properties are available:
 <a href="#dedicatedmastertype_go" style="color: inherit; text-decoration: inherit;">Dedicated<wbr>Master<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1418,7 +1418,7 @@ The following output properties are available:
 <a href="#instancecount_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
@@ -1428,7 +1428,7 @@ The following output properties are available:
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
@@ -1438,7 +1438,7 @@ The following output properties are available:
 <a href="#warmcount_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of warm nodes in the cluster.
 {{% /md %}}</dd>
@@ -1448,7 +1448,7 @@ The following output properties are available:
 <a href="#warmtype_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
 {{% /md %}}</dd>
@@ -1468,7 +1468,7 @@ The following output properties are available:
 <a href="#zoneawarenessenabled_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Awareness<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
@@ -1478,7 +1478,7 @@ The following output properties are available:
 <a href="#warmenabled_go" style="color: inherit; text-decoration: inherit;">Warm<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
@@ -1494,7 +1494,7 @@ The following output properties are available:
 <a href="#dedicatedmastercount_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1504,7 +1504,7 @@ The following output properties are available:
 <a href="#dedicatedmasterenabled_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
@@ -1514,7 +1514,7 @@ The following output properties are available:
 <a href="#dedicatedmastertype_nodejs" style="color: inherit; text-decoration: inherit;">dedicated<wbr>Master<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1524,7 +1524,7 @@ The following output properties are available:
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
@@ -1534,7 +1534,7 @@ The following output properties are available:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
@@ -1544,7 +1544,7 @@ The following output properties are available:
 <a href="#warmcount_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of warm nodes in the cluster.
 {{% /md %}}</dd>
@@ -1554,7 +1554,7 @@ The following output properties are available:
 <a href="#warmtype_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
 {{% /md %}}</dd>
@@ -1574,7 +1574,7 @@ The following output properties are available:
 <a href="#zoneawarenessenabled_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Awareness<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
@@ -1584,7 +1584,7 @@ The following output properties are available:
 <a href="#warmenabled_nodejs" style="color: inherit; text-decoration: inherit;">warm<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
@@ -1600,7 +1600,7 @@ The following output properties are available:
 <a href="#dedicated_master_count_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1610,7 +1610,7 @@ The following output properties are available:
 <a href="#dedicated_master_enabled_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether dedicated master nodes are enabled for the cluster.
 {{% /md %}}</dd>
@@ -1620,7 +1620,7 @@ The following output properties are available:
 <a href="#dedicated_master_type_python" style="color: inherit; text-decoration: inherit;">dedicated_<wbr>master_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance type of the dedicated master nodes in the cluster.
 {{% /md %}}</dd>
@@ -1630,7 +1630,7 @@ The following output properties are available:
 <a href="#instance_count_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of instances in the cluster.
 {{% /md %}}</dd>
@@ -1640,7 +1640,7 @@ The following output properties are available:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Instance type of data nodes in the cluster.
 {{% /md %}}</dd>
@@ -1650,7 +1650,7 @@ The following output properties are available:
 <a href="#warm_count_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of warm nodes in the cluster.
 {{% /md %}}</dd>
@@ -1660,7 +1660,7 @@ The following output properties are available:
 <a href="#warm_type_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance type for the Elasticsearch cluster's warm nodes.
 {{% /md %}}</dd>
@@ -1680,7 +1680,7 @@ The following output properties are available:
 <a href="#zone_awareness_enabled_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>awareness_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether zone awareness is enabled.
 {{% /md %}}</dd>
@@ -1690,7 +1690,7 @@ The following output properties are available:
 <a href="#warm_enabled_python" style="color: inherit; text-decoration: inherit;">warm_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates warm storage is enabled.
 {{% /md %}}</dd>
@@ -1720,7 +1720,7 @@ The following output properties are available:
 <a href="#availabilityzonecount_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
@@ -1736,7 +1736,7 @@ The following output properties are available:
 <a href="#availabilityzonecount_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zone<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
@@ -1752,7 +1752,7 @@ The following output properties are available:
 <a href="#availabilityzonecount_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zone<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
@@ -1768,7 +1768,7 @@ The following output properties are available:
 <a href="#availability_zone_count_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zone_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of availability zones used.
 {{% /md %}}</dd>
@@ -1798,7 +1798,7 @@ The following output properties are available:
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1808,7 +1808,7 @@ The following output properties are available:
 <a href="#identitypoolid_csharp" style="color: inherit; text-decoration: inherit;">Identity<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
@@ -1818,7 +1818,7 @@ The following output properties are available:
 <a href="#rolearn_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
@@ -1828,7 +1828,7 @@ The following output properties are available:
 <a href="#userpoolid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
@@ -1844,7 +1844,7 @@ The following output properties are available:
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1854,7 +1854,7 @@ The following output properties are available:
 <a href="#identitypoolid_go" style="color: inherit; text-decoration: inherit;">Identity<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
@@ -1864,7 +1864,7 @@ The following output properties are available:
 <a href="#rolearn_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
@@ -1874,7 +1874,7 @@ The following output properties are available:
 <a href="#userpoolid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
@@ -1890,7 +1890,7 @@ The following output properties are available:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1900,7 +1900,7 @@ The following output properties are available:
 <a href="#identitypoolid_nodejs" style="color: inherit; text-decoration: inherit;">identity<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
@@ -1910,7 +1910,7 @@ The following output properties are available:
 <a href="#rolearn_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
@@ -1920,7 +1920,7 @@ The following output properties are available:
 <a href="#userpoolid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Pool<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
@@ -1936,7 +1936,7 @@ The following output properties are available:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -1946,7 +1946,7 @@ The following output properties are available:
 <a href="#identity_pool_id_python" style="color: inherit; text-decoration: inherit;">identity_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cognito Identity pool used by the domain.
 {{% /md %}}</dd>
@@ -1956,7 +1956,7 @@ The following output properties are available:
 <a href="#role_arn_python" style="color: inherit; text-decoration: inherit;">role_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM Role with the AmazonESCognitoAccess policy attached.
 {{% /md %}}</dd>
@@ -1966,7 +1966,7 @@ The following output properties are available:
 <a href="#user_pool_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>pool_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cognito User pool used by the domain.
 {{% /md %}}</dd>
@@ -1996,7 +1996,7 @@ The following output properties are available:
 <a href="#ebsenabled_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
@@ -2006,7 +2006,7 @@ The following output properties are available:
 <a href="#iops_csharp" style="color: inherit; text-decoration: inherit;">Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -2016,7 +2016,7 @@ The following output properties are available:
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
@@ -2026,7 +2026,7 @@ The following output properties are available:
 <a href="#volumetype_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -2042,7 +2042,7 @@ The following output properties are available:
 <a href="#ebsenabled_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
@@ -2052,7 +2052,7 @@ The following output properties are available:
 <a href="#iops_go" style="color: inherit; text-decoration: inherit;">Iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -2062,7 +2062,7 @@ The following output properties are available:
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
@@ -2072,7 +2072,7 @@ The following output properties are available:
 <a href="#volumetype_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -2088,7 +2088,7 @@ The following output properties are available:
 <a href="#ebsenabled_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
@@ -2098,7 +2098,7 @@ The following output properties are available:
 <a href="#iops_nodejs" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -2108,7 +2108,7 @@ The following output properties are available:
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
@@ -2118,7 +2118,7 @@ The following output properties are available:
 <a href="#volumetype_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -2134,7 +2134,7 @@ The following output properties are available:
 <a href="#ebs_enabled_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether EBS volumes are attached to data nodes in the domain.
 {{% /md %}}</dd>
@@ -2144,7 +2144,7 @@ The following output properties are available:
 <a href="#iops_python" style="color: inherit; text-decoration: inherit;">iops</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The baseline input/output (I/O) performance of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -2154,7 +2154,7 @@ The following output properties are available:
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
@@ -2164,7 +2164,7 @@ The following output properties are available:
 <a href="#volume_type_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
@@ -2194,7 +2194,7 @@ The following output properties are available:
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2204,7 +2204,7 @@ The following output properties are available:
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
@@ -2220,7 +2220,7 @@ The following output properties are available:
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2230,7 +2230,7 @@ The following output properties are available:
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
@@ -2246,7 +2246,7 @@ The following output properties are available:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2256,7 +2256,7 @@ The following output properties are available:
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
@@ -2272,7 +2272,7 @@ The following output properties are available:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2282,7 +2282,7 @@ The following output properties are available:
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The KMS key id used to encrypt data at rest.
 {{% /md %}}</dd>
@@ -2312,7 +2312,7 @@ The following output properties are available:
 <a href="#cloudwatchloggrouparn_csharp" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
@@ -2322,7 +2322,7 @@ The following output properties are available:
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2332,7 +2332,7 @@ The following output properties are available:
 <a href="#logtype_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
@@ -2348,7 +2348,7 @@ The following output properties are available:
 <a href="#cloudwatchloggrouparn_go" style="color: inherit; text-decoration: inherit;">Cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
@@ -2358,7 +2358,7 @@ The following output properties are available:
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2368,7 +2368,7 @@ The following output properties are available:
 <a href="#logtype_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
@@ -2384,7 +2384,7 @@ The following output properties are available:
 <a href="#cloudwatchloggrouparn_nodejs" style="color: inherit; text-decoration: inherit;">cloudwatch<wbr>Log<wbr>Group<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
@@ -2394,7 +2394,7 @@ The following output properties are available:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2404,7 +2404,7 @@ The following output properties are available:
 <a href="#logtype_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
@@ -2420,7 +2420,7 @@ The following output properties are available:
 <a href="#cloudwatch_log_group_arn_python" style="color: inherit; text-decoration: inherit;">cloudwatch_<wbr>log_<wbr>group_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The CloudWatch Log Group where the logs are published.
 {{% /md %}}</dd>
@@ -2430,7 +2430,7 @@ The following output properties are available:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2440,7 +2440,7 @@ The following output properties are available:
 <a href="#log_type_python" style="color: inherit; text-decoration: inherit;">log_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of Elasticsearch log being published.
 {{% /md %}}</dd>
@@ -2470,7 +2470,7 @@ The following output properties are available:
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2486,7 +2486,7 @@ The following output properties are available:
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2502,7 +2502,7 @@ The following output properties are available:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2518,7 +2518,7 @@ The following output properties are available:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether node to node encryption is enabled.
 {{% /md %}}</dd>
@@ -2548,7 +2548,7 @@ The following output properties are available:
 <a href="#automatedsnapshotstarthour_csharp" style="color: inherit; text-decoration: inherit;">Automated<wbr>Snapshot<wbr>Start<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hour during which the service takes an automated daily snapshot of the indices in the domain.
 {{% /md %}}</dd>
@@ -2564,7 +2564,7 @@ The following output properties are available:
 <a href="#automatedsnapshotstarthour_go" style="color: inherit; text-decoration: inherit;">Automated<wbr>Snapshot<wbr>Start<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hour during which the service takes an automated daily snapshot of the indices in the domain.
 {{% /md %}}</dd>
@@ -2580,7 +2580,7 @@ The following output properties are available:
 <a href="#automatedsnapshotstarthour_nodejs" style="color: inherit; text-decoration: inherit;">automated<wbr>Snapshot<wbr>Start<wbr>Hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hour during which the service takes an automated daily snapshot of the indices in the domain.
 {{% /md %}}</dd>
@@ -2596,7 +2596,7 @@ The following output properties are available:
 <a href="#automated_snapshot_start_hour_python" style="color: inherit; text-decoration: inherit;">automated_<wbr>snapshot_<wbr>start_<wbr>hour</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hour during which the service takes an automated daily snapshot of the indices in the domain.
 {{% /md %}}</dd>
@@ -2626,7 +2626,7 @@ The following output properties are available:
 <a href="#availabilityzones_csharp" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
@@ -2636,7 +2636,7 @@ The following output properties are available:
 <a href="#securitygroupids_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
@@ -2646,7 +2646,7 @@ The following output properties are available:
 <a href="#subnetids_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
@@ -2656,7 +2656,7 @@ The following output properties are available:
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>
@@ -2672,7 +2672,7 @@ The following output properties are available:
 <a href="#availabilityzones_go" style="color: inherit; text-decoration: inherit;">Availability<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
@@ -2682,7 +2682,7 @@ The following output properties are available:
 <a href="#securitygroupids_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
@@ -2692,7 +2692,7 @@ The following output properties are available:
 <a href="#subnetids_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
@@ -2702,7 +2702,7 @@ The following output properties are available:
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>
@@ -2718,7 +2718,7 @@ The following output properties are available:
 <a href="#availabilityzones_nodejs" style="color: inherit; text-decoration: inherit;">availability<wbr>Zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
@@ -2728,7 +2728,7 @@ The following output properties are available:
 <a href="#securitygroupids_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Group<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
@@ -2738,7 +2738,7 @@ The following output properties are available:
 <a href="#subnetids_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
@@ -2748,7 +2748,7 @@ The following output properties are available:
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>
@@ -2764,7 +2764,7 @@ The following output properties are available:
 <a href="#availability_zones_python" style="color: inherit; text-decoration: inherit;">availability_<wbr>zones</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The availability zones used by the domain.
 {{% /md %}}</dd>
@@ -2774,7 +2774,7 @@ The following output properties are available:
 <a href="#security_group_ids_python" style="color: inherit; text-decoration: inherit;">security_<wbr>group_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The security groups used by the domain.
 {{% /md %}}</dd>
@@ -2784,7 +2784,7 @@ The following output properties are available:
 <a href="#subnet_ids_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The subnets used by the domain.
 {{% /md %}}</dd>
@@ -2794,7 +2794,7 @@ The following output properties are available:
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The VPC used by the domain.
 {{% /md %}}</dd>

@@ -177,7 +177,7 @@ The following arguments are supported:
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hosted Zone name of the desired Hosted Zone.
 {{% /md %}}</dd>
@@ -187,7 +187,7 @@ The following arguments are supported:
 <a href="#privatezone_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used with `name` field to get a private Hosted Zone.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ The following arguments are supported:
 <a href="#resourcerecordsetcount_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Record<wbr>Set<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Record Set in the Hosted Zone.
 {{% /md %}}</dd>
@@ -217,7 +217,7 @@ The following arguments are supported:
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `name` field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).
 {{% /md %}}</dd>
@@ -227,7 +227,7 @@ The following arguments are supported:
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hosted Zone id of the desired Hosted Zone.
 {{% /md %}}</dd>
@@ -243,7 +243,7 @@ The following arguments are supported:
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hosted Zone name of the desired Hosted Zone.
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ The following arguments are supported:
 <a href="#privatezone_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used with `name` field to get a private Hosted Zone.
 {{% /md %}}</dd>
@@ -263,7 +263,7 @@ The following arguments are supported:
 <a href="#resourcerecordsetcount_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Record<wbr>Set<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Record Set in the Hosted Zone.
 {{% /md %}}</dd>
@@ -283,7 +283,7 @@ The following arguments are supported:
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `name` field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ The following arguments are supported:
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hosted Zone id of the desired Hosted Zone.
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ The following arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hosted Zone name of the desired Hosted Zone.
 {{% /md %}}</dd>
@@ -319,7 +319,7 @@ The following arguments are supported:
 <a href="#privatezone_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Used with `name` field to get a private Hosted Zone.
 {{% /md %}}</dd>
@@ -329,7 +329,7 @@ The following arguments are supported:
 <a href="#resourcerecordsetcount_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Record<wbr>Set<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of Record Set in the Hosted Zone.
 {{% /md %}}</dd>
@@ -349,7 +349,7 @@ The following arguments are supported:
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `name` field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).
 {{% /md %}}</dd>
@@ -359,7 +359,7 @@ The following arguments are supported:
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hosted Zone id of the desired Hosted Zone.
 {{% /md %}}</dd>
@@ -375,7 +375,7 @@ The following arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hosted Zone name of the desired Hosted Zone.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ The following arguments are supported:
 <a href="#private_zone_python" style="color: inherit; text-decoration: inherit;">private_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Used with `name` field to get a private Hosted Zone.
 {{% /md %}}</dd>
@@ -395,7 +395,7 @@ The following arguments are supported:
 <a href="#resource_record_set_count_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>record_<wbr>set_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Record Set in the Hosted Zone.
 {{% /md %}}</dd>
@@ -415,7 +415,7 @@ The following arguments are supported:
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Used with `name` field to get a private Hosted Zone associated with the vpc_id (in this case, private_zone is not mandatory).
 {{% /md %}}</dd>
@@ -425,7 +425,7 @@ The following arguments are supported:
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Hosted Zone id of the desired Hosted Zone.
 {{% /md %}}</dd>
@@ -450,7 +450,7 @@ The following output properties are available:
 <a href="#callerreference_csharp" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caller Reference of the Hosted Zone.
 {{% /md %}}</dd>
@@ -460,7 +460,7 @@ The following output properties are available:
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comment field of the Hosted Zone.
 {{% /md %}}</dd>
@@ -470,7 +470,7 @@ The following output properties are available:
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -480,7 +480,7 @@ The following output properties are available:
 <a href="#linkedservicedescription_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g. `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
 {{% /md %}}</dd>
@@ -490,7 +490,7 @@ The following output properties are available:
 <a href="#linkedserviceprincipal_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`).
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ The following output properties are available:
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -509,7 +509,7 @@ The following output properties are available:
 <a href="#nameservers_csharp" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of DNS name servers for the Hosted Zone.
 {{% /md %}}</dd>
@@ -519,7 +519,7 @@ The following output properties are available:
 <a href="#resourcerecordsetcount_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Record<wbr>Set<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Record Set in the Hosted Zone.
 {{% /md %}}</dd>
@@ -538,7 +538,7 @@ The following output properties are available:
 <a href="#vpcid_csharp" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -547,7 +547,7 @@ The following output properties are available:
 <a href="#zoneid_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -556,7 +556,7 @@ The following output properties are available:
 <a href="#privatezone_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -571,7 +571,7 @@ The following output properties are available:
 <a href="#callerreference_go" style="color: inherit; text-decoration: inherit;">Caller<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caller Reference of the Hosted Zone.
 {{% /md %}}</dd>
@@ -581,7 +581,7 @@ The following output properties are available:
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comment field of the Hosted Zone.
 {{% /md %}}</dd>
@@ -591,7 +591,7 @@ The following output properties are available:
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -601,7 +601,7 @@ The following output properties are available:
 <a href="#linkedservicedescription_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g. `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
 {{% /md %}}</dd>
@@ -611,7 +611,7 @@ The following output properties are available:
 <a href="#linkedserviceprincipal_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`).
 {{% /md %}}</dd>
@@ -621,7 +621,7 @@ The following output properties are available:
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -630,7 +630,7 @@ The following output properties are available:
 <a href="#nameservers_go" style="color: inherit; text-decoration: inherit;">Name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The list of DNS name servers for the Hosted Zone.
 {{% /md %}}</dd>
@@ -640,7 +640,7 @@ The following output properties are available:
 <a href="#resourcerecordsetcount_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Record<wbr>Set<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Record Set in the Hosted Zone.
 {{% /md %}}</dd>
@@ -659,7 +659,7 @@ The following output properties are available:
 <a href="#vpcid_go" style="color: inherit; text-decoration: inherit;">Vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -668,7 +668,7 @@ The following output properties are available:
 <a href="#zoneid_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -677,7 +677,7 @@ The following output properties are available:
 <a href="#privatezone_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -692,7 +692,7 @@ The following output properties are available:
 <a href="#callerreference_nodejs" style="color: inherit; text-decoration: inherit;">caller<wbr>Reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Caller Reference of the Hosted Zone.
 {{% /md %}}</dd>
@@ -702,7 +702,7 @@ The following output properties are available:
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comment field of the Hosted Zone.
 {{% /md %}}</dd>
@@ -712,7 +712,7 @@ The following output properties are available:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -722,7 +722,7 @@ The following output properties are available:
 <a href="#linkedservicedescription_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g. `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
 {{% /md %}}</dd>
@@ -732,7 +732,7 @@ The following output properties are available:
 <a href="#linkedserviceprincipal_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service<wbr>Principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`).
 {{% /md %}}</dd>
@@ -742,7 +742,7 @@ The following output properties are available:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -751,7 +751,7 @@ The following output properties are available:
 <a href="#nameservers_nodejs" style="color: inherit; text-decoration: inherit;">name<wbr>Servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of DNS name servers for the Hosted Zone.
 {{% /md %}}</dd>
@@ -761,7 +761,7 @@ The following output properties are available:
 <a href="#resourcerecordsetcount_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Record<wbr>Set<wbr>Count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of Record Set in the Hosted Zone.
 {{% /md %}}</dd>
@@ -780,7 +780,7 @@ The following output properties are available:
 <a href="#vpcid_nodejs" style="color: inherit; text-decoration: inherit;">vpc<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -789,7 +789,7 @@ The following output properties are available:
 <a href="#zoneid_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -798,7 +798,7 @@ The following output properties are available:
 <a href="#privatezone_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -813,7 +813,7 @@ The following output properties are available:
 <a href="#caller_reference_python" style="color: inherit; text-decoration: inherit;">caller_<wbr>reference</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Caller Reference of the Hosted Zone.
 {{% /md %}}</dd>
@@ -823,7 +823,7 @@ The following output properties are available:
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The comment field of the Hosted Zone.
 {{% /md %}}</dd>
@@ -833,7 +833,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -843,7 +843,7 @@ The following output properties are available:
 <a href="#linked_service_description_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description provided by the service that created the Hosted Zone (e.g. `arn:aws:servicediscovery:us-east-1:1234567890:namespace/ns-xxxxxxxxxxxxxxxx`).
 {{% /md %}}</dd>
@@ -853,7 +853,7 @@ The following output properties are available:
 <a href="#linked_service_principal_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service_<wbr>principal</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service that created the Hosted Zone (e.g. `servicediscovery.amazonaws.com`).
 {{% /md %}}</dd>
@@ -863,7 +863,7 @@ The following output properties are available:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -872,7 +872,7 @@ The following output properties are available:
 <a href="#name_servers_python" style="color: inherit; text-decoration: inherit;">name_<wbr>servers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of DNS name servers for the Hosted Zone.
 {{% /md %}}</dd>
@@ -882,7 +882,7 @@ The following output properties are available:
 <a href="#resource_record_set_count_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>record_<wbr>set_<wbr>count</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of Record Set in the Hosted Zone.
 {{% /md %}}</dd>
@@ -901,7 +901,7 @@ The following output properties are available:
 <a href="#vpc_id_python" style="color: inherit; text-decoration: inherit;">vpc_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -910,7 +910,7 @@ The following output properties are available:
 <a href="#zone_id_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -919,7 +919,7 @@ The following output properties are available:
 <a href="#private_zone_python" style="color: inherit; text-decoration: inherit;">private_<wbr>zone</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>

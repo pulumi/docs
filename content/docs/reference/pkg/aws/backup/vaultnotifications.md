@@ -2,7 +2,7 @@
 ---
 title: "VaultNotifications"
 title_tag: "aws.backup.VaultNotifications"
-meta_desc: "Explore the VaultNotifications resource of the backup module, including examples, input properties, output properties, lookup functions, and supporting types. Provides an AWS Backup vault notifications resource."
+meta_desc: "Documentation for the aws.backup.VaultNotifications resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -201,7 +201,7 @@ const testVaultNotifications = new aws.backup.VaultNotifications("testVaultNotif
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#VaultNotifications">VaultNotifications</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#VaultNotificationsArgs">VaultNotificationsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#VaultNotifications">VaultNotifications</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#VaultNotificationsArgs">VaultNotificationsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -209,11 +209,11 @@ const testVaultNotifications = new aws.backup.VaultNotifications("testVaultNotif
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#VaultNotifications">NewVaultNotifications</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#VaultNotificationsArgs">VaultNotificationsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#VaultNotifications">VaultNotifications</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#VaultNotifications">NewVaultNotifications</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#VaultNotificationsArgs">VaultNotificationsArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#VaultNotifications">VaultNotifications</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.VaultNotifications.html">VaultNotifications</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.VaultNotificationsArgs.html">VaultNotificationsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.VaultNotifications.html">VaultNotifications</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.VaultNotificationsArgs.html">VaultNotificationsArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -224,7 +224,7 @@ const testVaultNotifications = new aws.backup.VaultNotifications("testVaultNotif
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -293,7 +293,7 @@ const testVaultNotifications = new aws.backup.VaultNotifications("testVaultNotif
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -332,7 +332,7 @@ const testVaultNotifications = new aws.backup.VaultNotifications("testVaultNotif
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -382,7 +382,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#backupvaultevents_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
 {{% /md %}}</dd>
@@ -392,7 +392,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#backupvaultname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
 {{% /md %}}</dd>
@@ -402,7 +402,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#snstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Sns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
 {{% /md %}}</dd>
@@ -418,7 +418,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#backupvaultevents_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
 {{% /md %}}</dd>
@@ -428,7 +428,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#backupvaultname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
 {{% /md %}}</dd>
@@ -438,7 +438,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#snstopicarn_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
 {{% /md %}}</dd>
@@ -454,7 +454,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#backupvaultevents_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
 {{% /md %}}</dd>
@@ -464,7 +464,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#backupvaultname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
 {{% /md %}}</dd>
@@ -474,7 +474,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#snstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
 {{% /md %}}</dd>
@@ -490,7 +490,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#backup_vault_events_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#backup_vault_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
 {{% /md %}}</dd>
@@ -510,7 +510,7 @@ The VaultNotifications resource accepts the following [input]({{< relref "/docs/
 <a href="#sns_topic_arn_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
 {{% /md %}}</dd>
@@ -533,7 +533,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupvaultarn_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
 {{% /md %}}</dd>
@@ -543,7 +543,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -558,7 +558,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupvaultarn_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
 {{% /md %}}</dd>
@@ -568,7 +568,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -583,7 +583,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backupvaultarn_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
 {{% /md %}}</dd>
@@ -593,7 +593,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -608,7 +608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#backup_vault_arn_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
 {{% /md %}}</dd>
@@ -618,7 +618,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 </dl>
@@ -632,7 +632,7 @@ Get an existing VaultNotifications resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#VaultNotificationsState">VaultNotificationsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#VaultNotifications">VaultNotifications</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#VaultNotificationsState">VaultNotificationsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/backup/#VaultNotifications">VaultNotifications</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -641,11 +641,11 @@ Get an existing VaultNotifications resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVaultNotifications<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#VaultNotificationsState">VaultNotificationsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#VaultNotifications">VaultNotifications</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetVaultNotifications<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#VaultNotificationsState">VaultNotificationsState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/backup?tab=doc#VaultNotifications">VaultNotifications</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.VaultNotifications.html">VaultNotifications</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.VaultNotificationsState.html">VaultNotificationsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.VaultNotifications.html">VaultNotifications</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Backup.VaultNotificationsState.html">VaultNotificationsState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -756,7 +756,7 @@ The following state arguments are supported:
 <a href="#state_backupvaultarn_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
 {{% /md %}}</dd>
@@ -766,7 +766,7 @@ The following state arguments are supported:
 <a href="#state_backupvaultevents_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
 {{% /md %}}</dd>
@@ -776,7 +776,7 @@ The following state arguments are supported:
 <a href="#state_backupvaultname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
 {{% /md %}}</dd>
@@ -786,7 +786,7 @@ The following state arguments are supported:
 <a href="#state_snstopicarn_csharp" style="color: inherit; text-decoration: inherit;">Sns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ The following state arguments are supported:
 <a href="#state_backupvaultarn_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
 {{% /md %}}</dd>
@@ -812,7 +812,7 @@ The following state arguments are supported:
 <a href="#state_backupvaultevents_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
 {{% /md %}}</dd>
@@ -822,7 +822,7 @@ The following state arguments are supported:
 <a href="#state_backupvaultname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
 {{% /md %}}</dd>
@@ -832,7 +832,7 @@ The following state arguments are supported:
 <a href="#state_snstopicarn_go" style="color: inherit; text-decoration: inherit;">Sns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
 {{% /md %}}</dd>
@@ -848,7 +848,7 @@ The following state arguments are supported:
 <a href="#state_backupvaultarn_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
 {{% /md %}}</dd>
@@ -858,7 +858,7 @@ The following state arguments are supported:
 <a href="#state_backupvaultevents_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
 {{% /md %}}</dd>
@@ -868,7 +868,7 @@ The following state arguments are supported:
 <a href="#state_backupvaultname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Vault<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
 {{% /md %}}</dd>
@@ -878,7 +878,7 @@ The following state arguments are supported:
 <a href="#state_snstopicarn_nodejs" style="color: inherit; text-decoration: inherit;">sns<wbr>Topic<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
 {{% /md %}}</dd>
@@ -894,7 +894,7 @@ The following state arguments are supported:
 <a href="#state_backup_vault_arn_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the vault.
 {{% /md %}}</dd>
@@ -904,7 +904,7 @@ The following state arguments are supported:
 <a href="#state_backup_vault_events_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>events</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An array of events that indicate the status of jobs to back up resources to the backup vault.
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ The following state arguments are supported:
 <a href="#state_backup_vault_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>vault_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the backup vault to add notifications for.
 {{% /md %}}</dd>
@@ -924,7 +924,7 @@ The following state arguments are supported:
 <a href="#state_sns_topic_arn_python" style="color: inherit; text-decoration: inherit;">sns_<wbr>topic_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that specifies the topic for a backup vault’s events
 {{% /md %}}</dd>

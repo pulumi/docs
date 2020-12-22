@@ -2,7 +2,7 @@
 ---
 title: "Partition"
 title_tag: "aws.glue.Partition"
-meta_desc: "Explore the Partition resource of the glue module, including examples, input properties, output properties, lookup functions, and supporting types. Provides a Glue Partition Resource."
+meta_desc: "Documentation for the aws.glue.Partition resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -52,7 +52,7 @@ const example = new aws.glue.Partition("example", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Partition">Partition</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#PartitionArgs">PartitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Partition">Partition</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#PartitionArgs">PartitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -60,11 +60,11 @@ const example = new aws.glue.Partition("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Partition">NewPartition</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#PartitionArgs">PartitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Partition">Partition</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Partition">NewPartition</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#PartitionArgs">PartitionArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Partition">Partition</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Partition.html">Partition</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.PartitionArgs.html">PartitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Partition.html">Partition</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.PartitionArgs.html">PartitionArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -75,7 +75,7 @@ const example = new aws.glue.Partition("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -144,7 +144,7 @@ const example = new aws.glue.Partition("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -183,7 +183,7 @@ const example = new aws.glue.Partition("example", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -233,7 +233,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd>
@@ -243,7 +243,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#partitionvalues_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The values that define the partition.
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -262,7 +262,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
@@ -298,7 +298,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd>
@@ -308,7 +308,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#partitionvalues_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The values that define the partition.
 {{% /md %}}</dd>
@@ -318,7 +318,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -327,7 +327,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
@@ -363,7 +363,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd>
@@ -373,7 +373,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#partitionvalues_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The values that define the partition.
 {{% /md %}}</dd>
@@ -383,7 +383,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -392,7 +392,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
@@ -428,7 +428,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd>
@@ -438,7 +438,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#partition_values_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The values that define the partition.
 {{% /md %}}</dd>
@@ -448,7 +448,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
@@ -457,7 +457,7 @@ The Partition resource accepts the following [input]({{< relref "/docs/intro/con
 <a href="#catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the partition was created.
 {{% /md %}}</dd>
@@ -510,7 +510,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -519,7 +519,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastaccessedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Accessed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which the partition was accessed.
 {{% /md %}}</dd>
@@ -529,7 +529,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastanalyzedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Analyzed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which column statistics were computed for this partition.
 {{% /md %}}</dd>
@@ -545,7 +545,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the partition was created.
 {{% /md %}}</dd>
@@ -555,7 +555,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -564,7 +564,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastaccessedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Accessed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which the partition was accessed.
 {{% /md %}}</dd>
@@ -574,7 +574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastanalyzedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Analyzed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which column statistics were computed for this partition.
 {{% /md %}}</dd>
@@ -590,7 +590,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the partition was created.
 {{% /md %}}</dd>
@@ -600,7 +600,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -609,7 +609,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastaccessedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Accessed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which the partition was accessed.
 {{% /md %}}</dd>
@@ -619,7 +619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#lastanalyzedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Analyzed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which column statistics were computed for this partition.
 {{% /md %}}</dd>
@@ -635,7 +635,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the partition was created.
 {{% /md %}}</dd>
@@ -645,7 +645,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -654,7 +654,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_accessed_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>accessed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time at which the partition was accessed.
 {{% /md %}}</dd>
@@ -664,7 +664,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#last_analyzed_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>analyzed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time at which column statistics were computed for this partition.
 {{% /md %}}</dd>
@@ -679,7 +679,7 @@ Get an existing Partition resource's state with the given name, ID, and optional
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#PartitionState">PartitionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Partition">Partition</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#PartitionState">PartitionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Partition">Partition</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -688,11 +688,11 @@ Get an existing Partition resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPartition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#PartitionState">PartitionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Partition">Partition</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPartition<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#PartitionState">PartitionState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/glue?tab=doc#Partition">Partition</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Partition.html">Partition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.PartitionState.html">PartitionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.Partition.html">Partition</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Glue.PartitionState.html">PartitionState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -803,7 +803,7 @@ The following state arguments are supported:
 <a href="#state_catalogid_csharp" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
@@ -813,7 +813,7 @@ The following state arguments are supported:
 <a href="#state_creationtime_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the partition was created.
 {{% /md %}}</dd>
@@ -823,7 +823,7 @@ The following state arguments are supported:
 <a href="#state_databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd>
@@ -833,7 +833,7 @@ The following state arguments are supported:
 <a href="#state_lastaccessedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Accessed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which the partition was accessed.
 {{% /md %}}</dd>
@@ -843,7 +843,7 @@ The following state arguments are supported:
 <a href="#state_lastanalyzedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Analyzed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which column statistics were computed for this partition.
 {{% /md %}}</dd>
@@ -863,7 +863,7 @@ The following state arguments are supported:
 <a href="#state_partitionvalues_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The values that define the partition.
 {{% /md %}}</dd>
@@ -883,7 +883,7 @@ The following state arguments are supported:
 <a href="#state_tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -898,7 +898,7 @@ The following state arguments are supported:
 <a href="#state_catalogid_go" style="color: inherit; text-decoration: inherit;">Catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
@@ -908,7 +908,7 @@ The following state arguments are supported:
 <a href="#state_creationtime_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the partition was created.
 {{% /md %}}</dd>
@@ -918,7 +918,7 @@ The following state arguments are supported:
 <a href="#state_databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd>
@@ -928,7 +928,7 @@ The following state arguments are supported:
 <a href="#state_lastaccessedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Accessed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which the partition was accessed.
 {{% /md %}}</dd>
@@ -938,7 +938,7 @@ The following state arguments are supported:
 <a href="#state_lastanalyzedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Analyzed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which column statistics were computed for this partition.
 {{% /md %}}</dd>
@@ -958,7 +958,7 @@ The following state arguments are supported:
 <a href="#state_partitionvalues_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The values that define the partition.
 {{% /md %}}</dd>
@@ -978,7 +978,7 @@ The following state arguments are supported:
 <a href="#state_tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -993,7 +993,7 @@ The following state arguments are supported:
 <a href="#state_catalogid_nodejs" style="color: inherit; text-decoration: inherit;">catalog<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
@@ -1003,7 +1003,7 @@ The following state arguments are supported:
 <a href="#state_creationtime_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time at which the partition was created.
 {{% /md %}}</dd>
@@ -1013,7 +1013,7 @@ The following state arguments are supported:
 <a href="#state_databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd>
@@ -1023,7 +1023,7 @@ The following state arguments are supported:
 <a href="#state_lastaccessedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Accessed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which the partition was accessed.
 {{% /md %}}</dd>
@@ -1033,7 +1033,7 @@ The following state arguments are supported:
 <a href="#state_lastanalyzedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Analyzed<wbr>Time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last time at which column statistics were computed for this partition.
 {{% /md %}}</dd>
@@ -1053,7 +1053,7 @@ The following state arguments are supported:
 <a href="#state_partitionvalues_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The values that define the partition.
 {{% /md %}}</dd>
@@ -1073,7 +1073,7 @@ The following state arguments are supported:
 <a href="#state_tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1088,7 +1088,7 @@ The following state arguments are supported:
 <a href="#state_catalog_id_python" style="color: inherit; text-decoration: inherit;">catalog_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
@@ -1098,7 +1098,7 @@ The following state arguments are supported:
 <a href="#state_creation_time_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time at which the partition was created.
 {{% /md %}}</dd>
@@ -1108,7 +1108,7 @@ The following state arguments are supported:
 <a href="#state_database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd>
@@ -1118,7 +1118,7 @@ The following state arguments are supported:
 <a href="#state_last_accessed_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>accessed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time at which the partition was accessed.
 {{% /md %}}</dd>
@@ -1128,7 +1128,7 @@ The following state arguments are supported:
 <a href="#state_last_analyzed_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>analyzed_<wbr>time</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The last time at which column statistics were computed for this partition.
 {{% /md %}}</dd>
@@ -1148,7 +1148,7 @@ The following state arguments are supported:
 <a href="#state_partition_values_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The values that define the partition.
 {{% /md %}}</dd>
@@ -1168,7 +1168,7 @@ The following state arguments are supported:
 <a href="#state_table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -1206,7 +1206,7 @@ The following state arguments are supported:
 <a href="#bucketcolumns_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
 {{% /md %}}</dd>
@@ -1226,7 +1226,7 @@ The following state arguments are supported:
 <a href="#compressed_csharp" style="color: inherit; text-decoration: inherit;">Compressed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the data in the table is compressed, or False if not.
 {{% /md %}}</dd>
@@ -1236,7 +1236,7 @@ The following state arguments are supported:
 <a href="#inputformat_csharp" style="color: inherit; text-decoration: inherit;">Input<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -1246,7 +1246,7 @@ The following state arguments are supported:
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
 {{% /md %}}</dd>
@@ -1256,7 +1256,7 @@ The following state arguments are supported:
 <a href="#numberofbuckets_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be specified if the table contains any dimension columns.
 {{% /md %}}</dd>
@@ -1266,7 +1266,7 @@ The following state arguments are supported:
 <a href="#outputformat_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -1316,7 +1316,7 @@ The following state arguments are supported:
 <a href="#storedassubdirectories_csharp" style="color: inherit; text-decoration: inherit;">Stored<wbr>As<wbr>Sub<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the table data is stored in subdirectories, or False if not.
 {{% /md %}}</dd>
@@ -1332,7 +1332,7 @@ The following state arguments are supported:
 <a href="#bucketcolumns_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
 {{% /md %}}</dd>
@@ -1352,7 +1352,7 @@ The following state arguments are supported:
 <a href="#compressed_go" style="color: inherit; text-decoration: inherit;">Compressed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the data in the table is compressed, or False if not.
 {{% /md %}}</dd>
@@ -1362,7 +1362,7 @@ The following state arguments are supported:
 <a href="#inputformat_go" style="color: inherit; text-decoration: inherit;">Input<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -1372,7 +1372,7 @@ The following state arguments are supported:
 <a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
 {{% /md %}}</dd>
@@ -1382,7 +1382,7 @@ The following state arguments are supported:
 <a href="#numberofbuckets_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be specified if the table contains any dimension columns.
 {{% /md %}}</dd>
@@ -1392,7 +1392,7 @@ The following state arguments are supported:
 <a href="#outputformat_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -1442,7 +1442,7 @@ The following state arguments are supported:
 <a href="#storedassubdirectories_go" style="color: inherit; text-decoration: inherit;">Stored<wbr>As<wbr>Sub<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the table data is stored in subdirectories, or False if not.
 {{% /md %}}</dd>
@@ -1458,7 +1458,7 @@ The following state arguments are supported:
 <a href="#bucketcolumns_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
 {{% /md %}}</dd>
@@ -1478,7 +1478,7 @@ The following state arguments are supported:
 <a href="#compressed_nodejs" style="color: inherit; text-decoration: inherit;">compressed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the data in the table is compressed, or False if not.
 {{% /md %}}</dd>
@@ -1488,7 +1488,7 @@ The following state arguments are supported:
 <a href="#inputformat_nodejs" style="color: inherit; text-decoration: inherit;">input<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -1498,7 +1498,7 @@ The following state arguments are supported:
 <a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
 {{% /md %}}</dd>
@@ -1508,7 +1508,7 @@ The following state arguments are supported:
 <a href="#numberofbuckets_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be specified if the table contains any dimension columns.
 {{% /md %}}</dd>
@@ -1518,7 +1518,7 @@ The following state arguments are supported:
 <a href="#outputformat_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -1568,7 +1568,7 @@ The following state arguments are supported:
 <a href="#storedassubdirectories_nodejs" style="color: inherit; text-decoration: inherit;">stored<wbr>As<wbr>Sub<wbr>Directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the table data is stored in subdirectories, or False if not.
 {{% /md %}}</dd>
@@ -1584,7 +1584,7 @@ The following state arguments are supported:
 <a href="#bucket_columns_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>columns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
 {{% /md %}}</dd>
@@ -1604,7 +1604,7 @@ The following state arguments are supported:
 <a href="#compressed_python" style="color: inherit; text-decoration: inherit;">compressed</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the data in the table is compressed, or False if not.
 {{% /md %}}</dd>
@@ -1614,7 +1614,7 @@ The following state arguments are supported:
 <a href="#input_format_python" style="color: inherit; text-decoration: inherit;">input_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -1624,7 +1624,7 @@ The following state arguments are supported:
 <a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
 {{% /md %}}</dd>
@@ -1634,7 +1634,7 @@ The following state arguments are supported:
 <a href="#number_of_buckets_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>buckets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be specified if the table contains any dimension columns.
 {{% /md %}}</dd>
@@ -1644,7 +1644,7 @@ The following state arguments are supported:
 <a href="#output_format_python" style="color: inherit; text-decoration: inherit;">output_<wbr>format</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -1694,7 +1694,7 @@ The following state arguments are supported:
 <a href="#stored_as_sub_directories_python" style="color: inherit; text-decoration: inherit;">stored_<wbr>as_<wbr>sub_<wbr>directories</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the table data is stored in subdirectories, or False if not.
 {{% /md %}}</dd>
@@ -1724,7 +1724,7 @@ The following state arguments are supported:
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -1734,7 +1734,7 @@ The following state arguments are supported:
 <a href="#comment_csharp" style="color: inherit; text-decoration: inherit;">Comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free-form text comment.
 {{% /md %}}</dd>
@@ -1744,7 +1744,7 @@ The following state arguments are supported:
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd>
@@ -1760,7 +1760,7 @@ The following state arguments are supported:
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -1770,7 +1770,7 @@ The following state arguments are supported:
 <a href="#comment_go" style="color: inherit; text-decoration: inherit;">Comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free-form text comment.
 {{% /md %}}</dd>
@@ -1780,7 +1780,7 @@ The following state arguments are supported:
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd>
@@ -1796,7 +1796,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -1806,7 +1806,7 @@ The following state arguments are supported:
 <a href="#comment_nodejs" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Free-form text comment.
 {{% /md %}}</dd>
@@ -1816,7 +1816,7 @@ The following state arguments are supported:
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd>
@@ -1832,7 +1832,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -1842,7 +1842,7 @@ The following state arguments are supported:
 <a href="#comment_python" style="color: inherit; text-decoration: inherit;">comment</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Free-form text comment.
 {{% /md %}}</dd>
@@ -1852,7 +1852,7 @@ The following state arguments are supported:
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd>
@@ -1882,7 +1882,7 @@ The following state arguments are supported:
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -1902,7 +1902,7 @@ The following state arguments are supported:
 <a href="#serializationlibrary_csharp" style="color: inherit; text-decoration: inherit;">Serialization<wbr>Library</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
 {{% /md %}}</dd>
@@ -1918,7 +1918,7 @@ The following state arguments are supported:
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -1938,7 +1938,7 @@ The following state arguments are supported:
 <a href="#serializationlibrary_go" style="color: inherit; text-decoration: inherit;">Serialization<wbr>Library</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
 {{% /md %}}</dd>
@@ -1954,7 +1954,7 @@ The following state arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -1974,7 +1974,7 @@ The following state arguments are supported:
 <a href="#serializationlibrary_nodejs" style="color: inherit; text-decoration: inherit;">serialization<wbr>Library</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
 {{% /md %}}</dd>
@@ -1990,7 +1990,7 @@ The following state arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -2010,7 +2010,7 @@ The following state arguments are supported:
 <a href="#serialization_library_python" style="color: inherit; text-decoration: inherit;">serialization_<wbr>library</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
 {{% /md %}}</dd>
@@ -2040,7 +2040,7 @@ The following state arguments are supported:
 <a href="#skewedcolumnnames_csharp" style="color: inherit; text-decoration: inherit;">Skewed<wbr>Column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of names of columns that contain skewed values.
 {{% /md %}}</dd>
@@ -2060,7 +2060,7 @@ The following state arguments are supported:
 <a href="#skewedcolumnvalues_csharp" style="color: inherit; text-decoration: inherit;">Skewed<wbr>Column<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of skewed values to the columns that contain them.
 {{% /md %}}</dd>
@@ -2076,7 +2076,7 @@ The following state arguments are supported:
 <a href="#skewedcolumnnames_go" style="color: inherit; text-decoration: inherit;">Skewed<wbr>Column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of names of columns that contain skewed values.
 {{% /md %}}</dd>
@@ -2096,7 +2096,7 @@ The following state arguments are supported:
 <a href="#skewedcolumnvalues_go" style="color: inherit; text-decoration: inherit;">Skewed<wbr>Column<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A map of skewed values to the columns that contain them.
 {{% /md %}}</dd>
@@ -2112,7 +2112,7 @@ The following state arguments are supported:
 <a href="#skewedcolumnnames_nodejs" style="color: inherit; text-decoration: inherit;">skewed<wbr>Column<wbr>Names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of names of columns that contain skewed values.
 {{% /md %}}</dd>
@@ -2132,7 +2132,7 @@ The following state arguments are supported:
 <a href="#skewedcolumnvalues_nodejs" style="color: inherit; text-decoration: inherit;">skewed<wbr>Column<wbr>Values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A map of skewed values to the columns that contain them.
 {{% /md %}}</dd>
@@ -2148,7 +2148,7 @@ The following state arguments are supported:
 <a href="#skewed_column_names_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>column_<wbr>names</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of names of columns that contain skewed values.
 {{% /md %}}</dd>
@@ -2168,7 +2168,7 @@ The following state arguments are supported:
 <a href="#skewed_column_values_python" style="color: inherit; text-decoration: inherit;">skewed_<wbr>column_<wbr>values</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A map of skewed values to the columns that contain them.
 {{% /md %}}</dd>
@@ -2198,7 +2198,7 @@ The following state arguments are supported:
 <a href="#column_csharp" style="color: inherit; text-decoration: inherit;">Column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column.
 {{% /md %}}</dd>
@@ -2208,7 +2208,7 @@ The following state arguments are supported:
 <a href="#sortorder_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
 {{% /md %}}</dd>
@@ -2224,7 +2224,7 @@ The following state arguments are supported:
 <a href="#column_go" style="color: inherit; text-decoration: inherit;">Column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column.
 {{% /md %}}</dd>
@@ -2234,7 +2234,7 @@ The following state arguments are supported:
 <a href="#sortorder_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
 {{% /md %}}</dd>
@@ -2250,7 +2250,7 @@ The following state arguments are supported:
 <a href="#column_nodejs" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the column.
 {{% /md %}}</dd>
@@ -2260,7 +2260,7 @@ The following state arguments are supported:
 <a href="#sortorder_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>Order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
 {{% /md %}}</dd>
@@ -2276,7 +2276,7 @@ The following state arguments are supported:
 <a href="#column_python" style="color: inherit; text-decoration: inherit;">column</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the column.
 {{% /md %}}</dd>
@@ -2286,7 +2286,7 @@ The following state arguments are supported:
 <a href="#sort_order_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>order</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Indicates that the column is sorted in ascending order (== 1), or in descending order (==0).
 {{% /md %}}</dd>

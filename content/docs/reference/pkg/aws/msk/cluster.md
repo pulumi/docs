@@ -2,7 +2,7 @@
 ---
 title: "Cluster"
 title_tag: "aws.msk.Cluster"
-meta_desc: "Explore the Cluster resource of the msk module, including examples, input properties, output properties, lookup functions, and supporting types. Manages AWS Managed Streaming for Kafka cluster"
+meta_desc: "Documentation for the aws.msk.Cluster resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -545,7 +545,7 @@ export const bootstrapBrokersTls = example.bootstrapBrokersTls;
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/msk/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/msk/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/msk/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/msk/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -553,11 +553,11 @@ export const bootstrapBrokersTls = example.bootstrapBrokersTls;
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/msk?tab=doc#Cluster">NewCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/msk?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/msk?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/msk?tab=doc#Cluster">NewCluster</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/msk?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/msk?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.ClusterArgs.html">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.ClusterArgs.html">ClusterArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -568,7 +568,7 @@ export const bootstrapBrokersTls = example.bootstrapBrokersTls;
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -637,7 +637,7 @@ export const bootstrapBrokersTls = example.bootstrapBrokersTls;
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -676,7 +676,7 @@ export const bootstrapBrokersTls = example.bootstrapBrokersTls;
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -736,7 +736,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkaversion_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd>
@@ -746,7 +746,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#numberofbrokernodes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Broker<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd>
@@ -766,7 +766,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
@@ -796,7 +796,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enhancedmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enhanced<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd>
@@ -852,7 +852,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkaversion_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd>
@@ -862,7 +862,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#numberofbrokernodes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Broker<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd>
@@ -882,7 +882,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
@@ -912,7 +912,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enhancedmonitoring_go" style="color: inherit; text-decoration: inherit;">Enhanced<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafkaversion_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd>
@@ -978,7 +978,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#numberofbrokernodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Broker<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd>
@@ -998,7 +998,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
@@ -1028,7 +1028,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enhancedmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd>
@@ -1084,7 +1084,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#kafka_version_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd>
@@ -1094,7 +1094,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#number_of_broker_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>broker_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd>
@@ -1114,7 +1114,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
@@ -1144,7 +1144,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#enhanced_monitoring_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd>
@@ -1197,7 +1197,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -1207,7 +1207,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrapbrokers_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `PLAINTEXT` or `TLS_PLAINTEXT`.
 {{% /md %}}</dd>
@@ -1217,7 +1217,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrapbrokerssaslscram_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers<wbr>Sasl<wbr>Scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity using SASL/SCRAM to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication` is set to `sasl`.
 {{% /md %}}</dd>
@@ -1227,7 +1227,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrapbrokerstls_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS`.
 {{% /md %}}</dd>
@@ -1237,7 +1237,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentversion_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
@@ -1248,7 +1248,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1257,7 +1257,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zookeeperconnectstring_csharp" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Connect<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.
 {{% /md %}}</dd>
@@ -1273,7 +1273,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -1283,7 +1283,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrapbrokers_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `PLAINTEXT` or `TLS_PLAINTEXT`.
 {{% /md %}}</dd>
@@ -1293,7 +1293,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrapbrokerssaslscram_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers<wbr>Sasl<wbr>Scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity using SASL/SCRAM to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication` is set to `sasl`.
 {{% /md %}}</dd>
@@ -1303,7 +1303,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrapbrokerstls_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS`.
 {{% /md %}}</dd>
@@ -1313,7 +1313,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentversion_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
@@ -1324,7 +1324,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1333,7 +1333,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zookeeperconnectstring_go" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Connect<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.
 {{% /md %}}</dd>
@@ -1349,7 +1349,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -1359,7 +1359,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrapbrokers_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `PLAINTEXT` or `TLS_PLAINTEXT`.
 {{% /md %}}</dd>
@@ -1369,7 +1369,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrapbrokerssaslscram_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Brokers<wbr>Sasl<wbr>Scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity using SASL/SCRAM to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication` is set to `sasl`.
 {{% /md %}}</dd>
@@ -1379,7 +1379,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrapbrokerstls_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Brokers<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS`.
 {{% /md %}}</dd>
@@ -1389,7 +1389,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#currentversion_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
@@ -1400,7 +1400,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1409,7 +1409,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zookeeperconnectstring_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Connect<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.
 {{% /md %}}</dd>
@@ -1425,7 +1425,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -1435,7 +1435,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrap_brokers_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `PLAINTEXT` or `TLS_PLAINTEXT`.
 {{% /md %}}</dd>
@@ -1445,7 +1445,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrap_brokers_sasl_scram_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>brokers_<wbr>sasl_<wbr>scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity using SASL/SCRAM to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication` is set to `sasl`.
 {{% /md %}}</dd>
@@ -1455,7 +1455,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#bootstrap_brokers_tls_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>brokers_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS`.
 {{% /md %}}</dd>
@@ -1465,7 +1465,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#current_version_python" style="color: inherit; text-decoration: inherit;">current_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
@@ -1476,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
@@ -1485,7 +1485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#zookeeper_connect_string_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>connect_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.
 {{% /md %}}</dd>
@@ -1500,7 +1500,7 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/msk/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/msk/#Cluster">Cluster</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/msk/#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/msk/#Cluster">Cluster</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1509,11 +1509,11 @@ Get an existing Cluster resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/msk?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/msk?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetCluster<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/msk?tab=doc#ClusterState">ClusterState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/msk?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.Cluster.html">Cluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Msk.ClusterState.html">ClusterState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1624,7 +1624,7 @@ The following state arguments are supported:
 <a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -1634,7 +1634,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokers_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `PLAINTEXT` or `TLS_PLAINTEXT`.
 {{% /md %}}</dd>
@@ -1644,7 +1644,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokerssaslscram_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers<wbr>Sasl<wbr>Scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity using SASL/SCRAM to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication` is set to `sasl`.
 {{% /md %}}</dd>
@@ -1654,7 +1654,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokerstls_csharp" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS`.
 {{% /md %}}</dd>
@@ -1684,7 +1684,7 @@ The following state arguments are supported:
 <a href="#state_clustername_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
@@ -1704,7 +1704,7 @@ The following state arguments are supported:
 <a href="#state_currentversion_csharp" style="color: inherit; text-decoration: inherit;">Current<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
@@ -1725,7 +1725,7 @@ The following state arguments are supported:
 <a href="#state_enhancedmonitoring_csharp" style="color: inherit; text-decoration: inherit;">Enhanced<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd>
@@ -1735,7 +1735,7 @@ The following state arguments are supported:
 <a href="#state_kafkaversion_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd>
@@ -1755,7 +1755,7 @@ The following state arguments are supported:
 <a href="#state_numberofbrokernodes_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Broker<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd>
@@ -1785,7 +1785,7 @@ The following state arguments are supported:
 <a href="#state_zookeeperconnectstring_csharp" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Connect<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.
 {{% /md %}}</dd>
@@ -1801,7 +1801,7 @@ The following state arguments are supported:
 <a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -1811,7 +1811,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokers_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `PLAINTEXT` or `TLS_PLAINTEXT`.
 {{% /md %}}</dd>
@@ -1821,7 +1821,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokerssaslscram_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers<wbr>Sasl<wbr>Scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity using SASL/SCRAM to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication` is set to `sasl`.
 {{% /md %}}</dd>
@@ -1831,7 +1831,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokerstls_go" style="color: inherit; text-decoration: inherit;">Bootstrap<wbr>Brokers<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS`.
 {{% /md %}}</dd>
@@ -1861,7 +1861,7 @@ The following state arguments are supported:
 <a href="#state_clustername_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
@@ -1881,7 +1881,7 @@ The following state arguments are supported:
 <a href="#state_currentversion_go" style="color: inherit; text-decoration: inherit;">Current<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
@@ -1902,7 +1902,7 @@ The following state arguments are supported:
 <a href="#state_enhancedmonitoring_go" style="color: inherit; text-decoration: inherit;">Enhanced<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd>
@@ -1912,7 +1912,7 @@ The following state arguments are supported:
 <a href="#state_kafkaversion_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd>
@@ -1932,7 +1932,7 @@ The following state arguments are supported:
 <a href="#state_numberofbrokernodes_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Broker<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd>
@@ -1962,7 +1962,7 @@ The following state arguments are supported:
 <a href="#state_zookeeperconnectstring_go" style="color: inherit; text-decoration: inherit;">Zookeeper<wbr>Connect<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.
 {{% /md %}}</dd>
@@ -1978,7 +1978,7 @@ The following state arguments are supported:
 <a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -1988,7 +1988,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokers_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `PLAINTEXT` or `TLS_PLAINTEXT`.
 {{% /md %}}</dd>
@@ -1998,7 +1998,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokerssaslscram_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Brokers<wbr>Sasl<wbr>Scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity using SASL/SCRAM to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication` is set to `sasl`.
 {{% /md %}}</dd>
@@ -2008,7 +2008,7 @@ The following state arguments are supported:
 <a href="#state_bootstrapbrokerstls_nodejs" style="color: inherit; text-decoration: inherit;">bootstrap<wbr>Brokers<wbr>Tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS`.
 {{% /md %}}</dd>
@@ -2038,7 +2038,7 @@ The following state arguments are supported:
 <a href="#state_clustername_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
@@ -2058,7 +2058,7 @@ The following state arguments are supported:
 <a href="#state_currentversion_nodejs" style="color: inherit; text-decoration: inherit;">current<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
@@ -2079,7 +2079,7 @@ The following state arguments are supported:
 <a href="#state_enhancedmonitoring_nodejs" style="color: inherit; text-decoration: inherit;">enhanced<wbr>Monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd>
@@ -2089,7 +2089,7 @@ The following state arguments are supported:
 <a href="#state_kafkaversion_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd>
@@ -2109,7 +2109,7 @@ The following state arguments are supported:
 <a href="#state_numberofbrokernodes_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Broker<wbr>Nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd>
@@ -2139,7 +2139,7 @@ The following state arguments are supported:
 <a href="#state_zookeeperconnectstring_nodejs" style="color: inherit; text-decoration: inherit;">zookeeper<wbr>Connect<wbr>String</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.
 {{% /md %}}</dd>
@@ -2155,7 +2155,7 @@ The following state arguments are supported:
 <a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -2165,7 +2165,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_brokers_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>brokers</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs of kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `PLAINTEXT` or `TLS_PLAINTEXT`.
 {{% /md %}}</dd>
@@ -2175,7 +2175,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_brokers_sasl_scram_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>brokers_<wbr>sasl_<wbr>scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity using SASL/SCRAM to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS` and `client_authentication` is set to `sasl`.
 {{% /md %}}</dd>
@@ -2185,7 +2185,7 @@ The following state arguments are supported:
 <a href="#state_bootstrap_brokers_tls_python" style="color: inherit; text-decoration: inherit;">bootstrap_<wbr>brokers_<wbr>tls</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more DNS names (or IPs) and TLS port pairs kafka brokers suitable to boostrap connectivity to the kafka cluster. Only contains value if `client_broker` encryption in transit is set to `TLS_PLAINTEXT` or `TLS`.
 {{% /md %}}</dd>
@@ -2215,7 +2215,7 @@ The following state arguments are supported:
 <a href="#state_cluster_name_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the MSK cluster.
 {{% /md %}}</dd>
@@ -2235,7 +2235,7 @@ The following state arguments are supported:
 <a href="#state_current_version_python" style="color: inherit; text-decoration: inherit;">current_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Current version of the MSK Cluster used for updates, e.g. `K13V1IB3VIYZZH`
 * `encryption_info.0.encryption_at_rest_kms_key_arn` - The ARN of the KMS key used for encryption at rest of the broker data volumes.
@@ -2256,7 +2256,7 @@ The following state arguments are supported:
 <a href="#state_enhanced_monitoring_python" style="color: inherit; text-decoration: inherit;">enhanced_<wbr>monitoring</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the desired enhanced MSK CloudWatch monitoring level.  See [Monitoring Amazon MSK with Amazon CloudWatch](https://docs.aws.amazon.com/msk/latest/developerguide/monitoring.html)
 {{% /md %}}</dd>
@@ -2266,7 +2266,7 @@ The following state arguments are supported:
 <a href="#state_kafka_version_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the desired Kafka software version.
 {{% /md %}}</dd>
@@ -2286,7 +2286,7 @@ The following state arguments are supported:
 <a href="#state_number_of_broker_nodes_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>broker_<wbr>nodes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired total number of broker nodes in the kafka cluster.  It must be a multiple of the number of specified client subnets.
 {{% /md %}}</dd>
@@ -2316,7 +2316,7 @@ The following state arguments are supported:
 <a href="#state_zookeeper_connect_string_python" style="color: inherit; text-decoration: inherit;">zookeeper_<wbr>connect_<wbr>string</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of one or more hostname:port pairs to use to connect to the Apache Zookeeper cluster.
 {{% /md %}}</dd>
@@ -2355,7 +2355,7 @@ The following state arguments are supported:
 <a href="#clientsubnets_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)).
 {{% /md %}}</dd>
@@ -2365,7 +2365,7 @@ The following state arguments are supported:
 <a href="#ebsvolumesize_csharp" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GiB of the EBS volume for the data drive on each broker node.
 {{% /md %}}</dd>
@@ -2375,7 +2375,7 @@ The following state arguments are supported:
 <a href="#instancetype_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. ([Pricing info](https://aws.amazon.com/msk/pricing/))
 {{% /md %}}</dd>
@@ -2385,7 +2385,7 @@ The following state arguments are supported:
 <a href="#securitygroups_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.
 {{% /md %}}</dd>
@@ -2395,7 +2395,7 @@ The following state arguments are supported:
 <a href="#azdistribution_csharp" style="color: inherit; text-decoration: inherit;">Az<wbr>Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The distribution of broker nodes across availability zones ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution)). Currently the only valid value is `DEFAULT`.
 {{% /md %}}</dd>
@@ -2411,7 +2411,7 @@ The following state arguments are supported:
 <a href="#clientsubnets_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)).
 {{% /md %}}</dd>
@@ -2421,7 +2421,7 @@ The following state arguments are supported:
 <a href="#ebsvolumesize_go" style="color: inherit; text-decoration: inherit;">Ebs<wbr>Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GiB of the EBS volume for the data drive on each broker node.
 {{% /md %}}</dd>
@@ -2431,7 +2431,7 @@ The following state arguments are supported:
 <a href="#instancetype_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. ([Pricing info](https://aws.amazon.com/msk/pricing/))
 {{% /md %}}</dd>
@@ -2441,7 +2441,7 @@ The following state arguments are supported:
 <a href="#securitygroups_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.
 {{% /md %}}</dd>
@@ -2451,7 +2451,7 @@ The following state arguments are supported:
 <a href="#azdistribution_go" style="color: inherit; text-decoration: inherit;">Az<wbr>Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The distribution of broker nodes across availability zones ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution)). Currently the only valid value is `DEFAULT`.
 {{% /md %}}</dd>
@@ -2467,7 +2467,7 @@ The following state arguments are supported:
 <a href="#clientsubnets_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)).
 {{% /md %}}</dd>
@@ -2477,7 +2477,7 @@ The following state arguments are supported:
 <a href="#ebsvolumesize_nodejs" style="color: inherit; text-decoration: inherit;">ebs<wbr>Volume<wbr>Size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size in GiB of the EBS volume for the data drive on each broker node.
 {{% /md %}}</dd>
@@ -2487,7 +2487,7 @@ The following state arguments are supported:
 <a href="#instancetype_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. ([Pricing info](https://aws.amazon.com/msk/pricing/))
 {{% /md %}}</dd>
@@ -2497,7 +2497,7 @@ The following state arguments are supported:
 <a href="#securitygroups_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.
 {{% /md %}}</dd>
@@ -2507,7 +2507,7 @@ The following state arguments are supported:
 <a href="#azdistribution_nodejs" style="color: inherit; text-decoration: inherit;">az<wbr>Distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The distribution of broker nodes across availability zones ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution)). Currently the only valid value is `DEFAULT`.
 {{% /md %}}</dd>
@@ -2523,7 +2523,7 @@ The following state arguments are supported:
 <a href="#client_subnets_python" style="color: inherit; text-decoration: inherit;">client_<wbr>subnets</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of subnets to connect to in client VPC ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-prop-brokernodegroupinfo-clientsubnets)).
 {{% /md %}}</dd>
@@ -2533,7 +2533,7 @@ The following state arguments are supported:
 <a href="#ebs_volume_size_python" style="color: inherit; text-decoration: inherit;">ebs_<wbr>volume_<wbr>size</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size in GiB of the EBS volume for the data drive on each broker node.
 {{% /md %}}</dd>
@@ -2543,7 +2543,7 @@ The following state arguments are supported:
 <a href="#instance_type_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specify the instance type to use for the kafka brokers. e.g. kafka.m5.large. ([Pricing info](https://aws.amazon.com/msk/pricing/))
 {{% /md %}}</dd>
@@ -2553,7 +2553,7 @@ The following state arguments are supported:
 <a href="#security_groups_python" style="color: inherit; text-decoration: inherit;">security_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of the security groups to associate with the elastic network interfaces to control who can communicate with the cluster.
 {{% /md %}}</dd>
@@ -2563,7 +2563,7 @@ The following state arguments are supported:
 <a href="#az_distribution_python" style="color: inherit; text-decoration: inherit;">az_<wbr>distribution</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The distribution of broker nodes across availability zones ([documentation](https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#clusters-model-brokerazdistribution)). Currently the only valid value is `DEFAULT`.
 {{% /md %}}</dd>
@@ -2711,7 +2711,7 @@ The following state arguments are supported:
 <a href="#scram_csharp" style="color: inherit; text-decoration: inherit;">Scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2727,7 +2727,7 @@ The following state arguments are supported:
 <a href="#scram_go" style="color: inherit; text-decoration: inherit;">Scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2743,7 +2743,7 @@ The following state arguments are supported:
 <a href="#scram_nodejs" style="color: inherit; text-decoration: inherit;">scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2759,7 +2759,7 @@ The following state arguments are supported:
 <a href="#scram_python" style="color: inherit; text-decoration: inherit;">scram</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables SCRAM client authentication via AWS Secrets Manager. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2789,7 +2789,7 @@ The following state arguments are supported:
 <a href="#certificateauthorityarns_csharp" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of ACM Certificate Authority Amazon Resource Names (ARNs).
 {{% /md %}}</dd>
@@ -2805,7 +2805,7 @@ The following state arguments are supported:
 <a href="#certificateauthorityarns_go" style="color: inherit; text-decoration: inherit;">Certificate<wbr>Authority<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of ACM Certificate Authority Amazon Resource Names (ARNs).
 {{% /md %}}</dd>
@@ -2821,7 +2821,7 @@ The following state arguments are supported:
 <a href="#certificateauthorityarns_nodejs" style="color: inherit; text-decoration: inherit;">certificate<wbr>Authority<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of ACM Certificate Authority Amazon Resource Names (ARNs).
 {{% /md %}}</dd>
@@ -2837,7 +2837,7 @@ The following state arguments are supported:
 <a href="#certificate_authority_arns_python" style="color: inherit; text-decoration: inherit;">certificate_<wbr>authority_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of ACM Certificate Authority Amazon Resource Names (ARNs).
 {{% /md %}}</dd>
@@ -2867,7 +2867,7 @@ The following state arguments are supported:
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -2877,7 +2877,7 @@ The following state arguments are supported:
 <a href="#revision_csharp" style="color: inherit; text-decoration: inherit;">Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Revision of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -2893,7 +2893,7 @@ The following state arguments are supported:
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -2903,7 +2903,7 @@ The following state arguments are supported:
 <a href="#revision_go" style="color: inherit; text-decoration: inherit;">Revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Revision of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -2919,7 +2919,7 @@ The following state arguments are supported:
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -2929,7 +2929,7 @@ The following state arguments are supported:
 <a href="#revision_nodejs" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Revision of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -2945,7 +2945,7 @@ The following state arguments are supported:
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -2955,7 +2955,7 @@ The following state arguments are supported:
 <a href="#revision_python" style="color: inherit; text-decoration: inherit;">revision</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Revision of the MSK Configuration to use in the cluster.
 {{% /md %}}</dd>
@@ -2985,7 +2985,7 @@ The following state arguments are supported:
 <a href="#encryptionatrestkmskeyarn_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>At<wbr>Rest<wbr>Kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS ('aws/msk' managed service) key will be used for encrypting the data at rest.
 {{% /md %}}</dd>
@@ -3011,7 +3011,7 @@ The following state arguments are supported:
 <a href="#encryptionatrestkmskeyarn_go" style="color: inherit; text-decoration: inherit;">Encryption<wbr>At<wbr>Rest<wbr>Kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS ('aws/msk' managed service) key will be used for encrypting the data at rest.
 {{% /md %}}</dd>
@@ -3037,7 +3037,7 @@ The following state arguments are supported:
 <a href="#encryptionatrestkmskeyarn_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>At<wbr>Rest<wbr>Kms<wbr>Key<wbr>Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS ('aws/msk' managed service) key will be used for encrypting the data at rest.
 {{% /md %}}</dd>
@@ -3063,7 +3063,7 @@ The following state arguments are supported:
 <a href="#encryption_at_rest_kms_key_arn_python" style="color: inherit; text-decoration: inherit;">encryption_<wbr>at_<wbr>rest_<wbr>kms_<wbr>key_<wbr>arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}You may specify a KMS key short ID or ARN (it will always output an ARN) to use for encrypting your data at rest.  If no key is specified, an AWS managed KMS ('aws/msk' managed service) key will be used for encrypting the data at rest.
 {{% /md %}}</dd>
@@ -3103,7 +3103,7 @@ The following state arguments are supported:
 <a href="#clientbroker_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
 {{% /md %}}</dd>
@@ -3113,7 +3113,7 @@ The following state arguments are supported:
 <a href="#incluster_csharp" style="color: inherit; text-decoration: inherit;">In<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether data communication among broker nodes is encrypted. Default value: `true`.
 {{% /md %}}</dd>
@@ -3129,7 +3129,7 @@ The following state arguments are supported:
 <a href="#clientbroker_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
 {{% /md %}}</dd>
@@ -3139,7 +3139,7 @@ The following state arguments are supported:
 <a href="#incluster_go" style="color: inherit; text-decoration: inherit;">In<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether data communication among broker nodes is encrypted. Default value: `true`.
 {{% /md %}}</dd>
@@ -3155,7 +3155,7 @@ The following state arguments are supported:
 <a href="#clientbroker_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
 {{% /md %}}</dd>
@@ -3165,7 +3165,7 @@ The following state arguments are supported:
 <a href="#incluster_nodejs" style="color: inherit; text-decoration: inherit;">in<wbr>Cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether data communication among broker nodes is encrypted. Default value: `true`.
 {{% /md %}}</dd>
@@ -3181,7 +3181,7 @@ The following state arguments are supported:
 <a href="#client_broker_python" style="color: inherit; text-decoration: inherit;">client_<wbr>broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Encryption setting for data in transit between clients and brokers. Valid values: `TLS`, `TLS_PLAINTEXT`, and `PLAINTEXT`. Default value is `TLS`.
 {{% /md %}}</dd>
@@ -3191,7 +3191,7 @@ The following state arguments are supported:
 <a href="#in_cluster_python" style="color: inherit; text-decoration: inherit;">in_<wbr>cluster</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether data communication among broker nodes is encrypted. Default value: `true`.
 {{% /md %}}</dd>
@@ -3445,7 +3445,7 @@ The following state arguments are supported:
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3455,7 +3455,7 @@ The following state arguments are supported:
 <a href="#loggroup_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloudwatch Log Group to deliver logs to.
 {{% /md %}}</dd>
@@ -3471,7 +3471,7 @@ The following state arguments are supported:
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3481,7 +3481,7 @@ The following state arguments are supported:
 <a href="#loggroup_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloudwatch Log Group to deliver logs to.
 {{% /md %}}</dd>
@@ -3497,7 +3497,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3507,7 +3507,7 @@ The following state arguments are supported:
 <a href="#loggroup_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloudwatch Log Group to deliver logs to.
 {{% /md %}}</dd>
@@ -3523,7 +3523,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3533,7 +3533,7 @@ The following state arguments are supported:
 <a href="#log_group_python" style="color: inherit; text-decoration: inherit;">log_<wbr>group</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloudwatch Log Group to deliver logs to.
 {{% /md %}}</dd>
@@ -3563,7 +3563,7 @@ The following state arguments are supported:
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3573,7 +3573,7 @@ The following state arguments are supported:
 <a href="#deliverystream_csharp" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Data Firehose delivery stream to deliver logs to.
 {{% /md %}}</dd>
@@ -3589,7 +3589,7 @@ The following state arguments are supported:
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3599,7 +3599,7 @@ The following state arguments are supported:
 <a href="#deliverystream_go" style="color: inherit; text-decoration: inherit;">Delivery<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Data Firehose delivery stream to deliver logs to.
 {{% /md %}}</dd>
@@ -3615,7 +3615,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3625,7 +3625,7 @@ The following state arguments are supported:
 <a href="#deliverystream_nodejs" style="color: inherit; text-decoration: inherit;">delivery<wbr>Stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Data Firehose delivery stream to deliver logs to.
 {{% /md %}}</dd>
@@ -3641,7 +3641,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3651,7 +3651,7 @@ The following state arguments are supported:
 <a href="#delivery_stream_python" style="color: inherit; text-decoration: inherit;">delivery_<wbr>stream</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Kinesis Data Firehose delivery stream to deliver logs to.
 {{% /md %}}</dd>
@@ -3681,7 +3681,7 @@ The following state arguments are supported:
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3691,7 +3691,7 @@ The following state arguments are supported:
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket to deliver logs to.
 {{% /md %}}</dd>
@@ -3701,7 +3701,7 @@ The following state arguments are supported:
 <a href="#prefix_csharp" style="color: inherit; text-decoration: inherit;">Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix to append to the folder name.
 {{% /md %}}</dd>
@@ -3717,7 +3717,7 @@ The following state arguments are supported:
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3727,7 +3727,7 @@ The following state arguments are supported:
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket to deliver logs to.
 {{% /md %}}</dd>
@@ -3737,7 +3737,7 @@ The following state arguments are supported:
 <a href="#prefix_go" style="color: inherit; text-decoration: inherit;">Prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix to append to the folder name.
 {{% /md %}}</dd>
@@ -3753,7 +3753,7 @@ The following state arguments are supported:
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3763,7 +3763,7 @@ The following state arguments are supported:
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket to deliver logs to.
 {{% /md %}}</dd>
@@ -3773,7 +3773,7 @@ The following state arguments are supported:
 <a href="#prefix_nodejs" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix to append to the folder name.
 {{% /md %}}</dd>
@@ -3789,7 +3789,7 @@ The following state arguments are supported:
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable streaming broker logs to Cloudwatch Logs.
 {{% /md %}}</dd>
@@ -3799,7 +3799,7 @@ The following state arguments are supported:
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the S3 bucket to deliver logs to.
 {{% /md %}}</dd>
@@ -3809,7 +3809,7 @@ The following state arguments are supported:
 <a href="#prefix_python" style="color: inherit; text-decoration: inherit;">prefix</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Prefix to append to the folder name.
 {{% /md %}}</dd>
@@ -4035,7 +4035,7 @@ The following state arguments are supported:
 <a href="#enabledinbroker_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>In<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd>
@@ -4051,7 +4051,7 @@ The following state arguments are supported:
 <a href="#enabledinbroker_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>In<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd>
@@ -4067,7 +4067,7 @@ The following state arguments are supported:
 <a href="#enabledinbroker_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>In<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd>
@@ -4083,7 +4083,7 @@ The following state arguments are supported:
 <a href="#enabled_in_broker_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>in_<wbr>broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd>
@@ -4113,7 +4113,7 @@ The following state arguments are supported:
 <a href="#enabledinbroker_csharp" style="color: inherit; text-decoration: inherit;">Enabled<wbr>In<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd>
@@ -4129,7 +4129,7 @@ The following state arguments are supported:
 <a href="#enabledinbroker_go" style="color: inherit; text-decoration: inherit;">Enabled<wbr>In<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd>
@@ -4145,7 +4145,7 @@ The following state arguments are supported:
 <a href="#enabledinbroker_nodejs" style="color: inherit; text-decoration: inherit;">enabled<wbr>In<wbr>Broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd>
@@ -4161,7 +4161,7 @@ The following state arguments are supported:
 <a href="#enabled_in_broker_python" style="color: inherit; text-decoration: inherit;">enabled_<wbr>in_<wbr>broker</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether you want to enable or disable the JMX Exporter.
 {{% /md %}}</dd>

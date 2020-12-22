@@ -136,7 +136,7 @@ The following arguments are supported:
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is case sensitive.
 {{% /md %}}</dd>
@@ -146,7 +146,7 @@ The following arguments are supported:
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
 {{% /md %}}</dd>
@@ -162,7 +162,7 @@ The following arguments are supported:
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is case sensitive.
 {{% /md %}}</dd>
@@ -172,7 +172,7 @@ The following arguments are supported:
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ The following arguments are supported:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is case sensitive.
 {{% /md %}}</dd>
@@ -198,7 +198,7 @@ The following arguments are supported:
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ The following arguments are supported:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is case sensitive.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ The following arguments are supported:
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
 {{% /md %}}</dd>
@@ -249,7 +249,7 @@ The following output properties are available:
 <a href="#checksum_csharp" style="color: inherit; text-decoration: inherit;">Checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the slot type that was created. The checksum is
 not included as an argument because the resource will add it automatically when updating the slot type.
@@ -260,7 +260,7 @@ not included as an argument because the resource will add it automatically when 
 <a href="#createddate_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the slot type version was created.
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ not included as an argument because the resource will add it automatically when 
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the slot type.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#lastupdateddate_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this slot type was updated.
 {{% /md %}}</dd>
@@ -312,7 +312,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
 {{% /md %}}</dd>
@@ -322,7 +322,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#valueselectionstrategy_csharp" style="color: inherit; text-decoration: inherit;">Value<wbr>Selection<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
@@ -335,7 +335,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
 {{% /md %}}</dd>
@@ -351,7 +351,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#checksum_go" style="color: inherit; text-decoration: inherit;">Checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the slot type that was created. The checksum is
 not included as an argument because the resource will add it automatically when updating the slot type.
@@ -362,7 +362,7 @@ not included as an argument because the resource will add it automatically when 
 <a href="#createddate_go" style="color: inherit; text-decoration: inherit;">Created<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the slot type version was created.
 {{% /md %}}</dd>
@@ -372,7 +372,7 @@ not included as an argument because the resource will add it automatically when 
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the slot type.
 {{% /md %}}</dd>
@@ -394,7 +394,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -404,7 +404,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#lastupdateddate_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this slot type was updated.
 {{% /md %}}</dd>
@@ -414,7 +414,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
 {{% /md %}}</dd>
@@ -424,7 +424,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#valueselectionstrategy_go" style="color: inherit; text-decoration: inherit;">Value<wbr>Selection<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
@@ -437,7 +437,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
 {{% /md %}}</dd>
@@ -453,7 +453,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#checksum_nodejs" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the slot type that was created. The checksum is
 not included as an argument because the resource will add it automatically when updating the slot type.
@@ -464,7 +464,7 @@ not included as an argument because the resource will add it automatically when 
 <a href="#createddate_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the slot type version was created.
 {{% /md %}}</dd>
@@ -474,7 +474,7 @@ not included as an argument because the resource will add it automatically when 
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the slot type.
 {{% /md %}}</dd>
@@ -496,7 +496,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -506,7 +506,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#lastupdateddate_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this slot type was updated.
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
 {{% /md %}}</dd>
@@ -526,7 +526,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#valueselectionstrategy_nodejs" style="color: inherit; text-decoration: inherit;">value<wbr>Selection<wbr>Strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
@@ -539,7 +539,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
 {{% /md %}}</dd>
@@ -555,7 +555,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#checksum_python" style="color: inherit; text-decoration: inherit;">checksum</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Checksum identifying the version of the slot type that was created. The checksum is
 not included as an argument because the resource will add it automatically when updating the slot type.
@@ -566,7 +566,7 @@ not included as an argument because the resource will add it automatically when 
 <a href="#created_date_python" style="color: inherit; text-decoration: inherit;">created_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date when the slot type version was created.
 {{% /md %}}</dd>
@@ -576,7 +576,7 @@ not included as an argument because the resource will add it automatically when 
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the slot type.
 {{% /md %}}</dd>
@@ -598,7 +598,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -608,7 +608,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#last_updated_date_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>date</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date when the $LATEST version of this slot type was updated.
 {{% /md %}}</dd>
@@ -618,7 +618,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the slot type. The name is not case sensitive.
 {{% /md %}}</dd>
@@ -628,7 +628,7 @@ train the machine learning model about the values that it resolves for a slot.
 <a href="#value_selection_strategy_python" style="color: inherit; text-decoration: inherit;">value_<wbr>selection_<wbr>strategy</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Determines the slot resolution strategy that Amazon Lex
 uses to return slot type values. `ORIGINAL_VALUE` returns the value entered by the user if the user
@@ -641,7 +641,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of the slot type.
 {{% /md %}}</dd>
@@ -677,7 +677,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#synonyms_csharp" style="color: inherit; text-decoration: inherit;">Synonyms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -686,7 +686,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -701,7 +701,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#synonyms_go" style="color: inherit; text-decoration: inherit;">Synonyms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -710,7 +710,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -725,7 +725,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#synonyms_nodejs" style="color: inherit; text-decoration: inherit;">synonyms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -734,7 +734,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
@@ -749,7 +749,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#synonyms_python" style="color: inherit; text-decoration: inherit;">synonyms</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
@@ -758,7 +758,7 @@ if there is a resolution list for the slot, otherwise null is returned.
 <a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 </dl>

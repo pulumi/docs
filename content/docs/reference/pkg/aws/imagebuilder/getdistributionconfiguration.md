@@ -131,7 +131,7 @@ The following arguments are supported:
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the distribution configuration.
 {{% /md %}}</dd>
@@ -157,7 +157,7 @@ The following arguments are supported:
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the distribution configuration.
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ The following arguments are supported:
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the distribution configuration.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ The following arguments are supported:
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the distribution configuration.
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ The following output properties are available:
 <a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -253,7 +253,7 @@ The following output properties are available:
 <a href="#datecreated_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the distribution configuration was created.
 {{% /md %}}</dd>
@@ -263,7 +263,7 @@ The following output properties are available:
 <a href="#dateupdated_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the distribution configuration was updated.
 {{% /md %}}</dd>
@@ -273,7 +273,7 @@ The following output properties are available:
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to apply to distributed AMI.
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ The following output properties are available:
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -303,7 +303,7 @@ The following output properties are available:
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the distribution configuration.
 {{% /md %}}</dd>
@@ -329,7 +329,7 @@ The following output properties are available:
 <a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -338,7 +338,7 @@ The following output properties are available:
 <a href="#datecreated_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the distribution configuration was created.
 {{% /md %}}</dd>
@@ -348,7 +348,7 @@ The following output properties are available:
 <a href="#dateupdated_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the distribution configuration was updated.
 {{% /md %}}</dd>
@@ -358,7 +358,7 @@ The following output properties are available:
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to apply to distributed AMI.
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ The following output properties are available:
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ The following output properties are available:
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the distribution configuration.
 {{% /md %}}</dd>
@@ -414,7 +414,7 @@ The following output properties are available:
 <a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -423,7 +423,7 @@ The following output properties are available:
 <a href="#datecreated_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the distribution configuration was created.
 {{% /md %}}</dd>
@@ -433,7 +433,7 @@ The following output properties are available:
 <a href="#dateupdated_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date the distribution configuration was updated.
 {{% /md %}}</dd>
@@ -443,7 +443,7 @@ The following output properties are available:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to apply to distributed AMI.
 {{% /md %}}</dd>
@@ -463,7 +463,7 @@ The following output properties are available:
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -473,7 +473,7 @@ The following output properties are available:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the distribution configuration.
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ The following output properties are available:
 <a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
@@ -508,7 +508,7 @@ The following output properties are available:
 <a href="#date_created_python" style="color: inherit; text-decoration: inherit;">date_<wbr>created</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the distribution configuration was created.
 {{% /md %}}</dd>
@@ -518,7 +518,7 @@ The following output properties are available:
 <a href="#date_updated_python" style="color: inherit; text-decoration: inherit;">date_<wbr>updated</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date the distribution configuration was updated.
 {{% /md %}}</dd>
@@ -528,7 +528,7 @@ The following output properties are available:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description to apply to distributed AMI.
 {{% /md %}}</dd>
@@ -548,7 +548,7 @@ The following output properties are available:
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -558,7 +558,7 @@ The following output properties are available:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the distribution configuration.
 {{% /md %}}</dd>
@@ -614,7 +614,7 @@ The following output properties are available:
 <a href="#licenseconfigurationarns_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Configuration<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
 {{% /md %}}</dd>
@@ -624,7 +624,7 @@ The following output properties are available:
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Region of distribution.
 {{% /md %}}</dd>
@@ -650,7 +650,7 @@ The following output properties are available:
 <a href="#licenseconfigurationarns_go" style="color: inherit; text-decoration: inherit;">License<wbr>Configuration<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
 {{% /md %}}</dd>
@@ -660,7 +660,7 @@ The following output properties are available:
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Region of distribution.
 {{% /md %}}</dd>
@@ -686,7 +686,7 @@ The following output properties are available:
 <a href="#licenseconfigurationarns_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Configuration<wbr>Arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
 {{% /md %}}</dd>
@@ -696,7 +696,7 @@ The following output properties are available:
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AWS Region of distribution.
 {{% /md %}}</dd>
@@ -722,7 +722,7 @@ The following output properties are available:
 <a href="#license_configuration_arns_python" style="color: inherit; text-decoration: inherit;">license_<wbr>configuration_<wbr>arns</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of Amazon Resource Names (ARNs) of License Manager License Configurations.
 {{% /md %}}</dd>
@@ -732,7 +732,7 @@ The following output properties are available:
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}AWS Region of distribution.
 {{% /md %}}</dd>
@@ -772,7 +772,7 @@ The following output properties are available:
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to apply to distributed AMI.
 {{% /md %}}</dd>
@@ -782,7 +782,7 @@ The following output properties are available:
 <a href="#kmskeyid_csharp" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ The following output properties are available:
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the distribution configuration.
 {{% /md %}}</dd>
@@ -812,7 +812,7 @@ The following output properties are available:
 <a href="#targetaccountids_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Account<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of target AWS Account identifiers.
 {{% /md %}}</dd>
@@ -838,7 +838,7 @@ The following output properties are available:
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to apply to distributed AMI.
 {{% /md %}}</dd>
@@ -848,7 +848,7 @@ The following output properties are available:
 <a href="#kmskeyid_go" style="color: inherit; text-decoration: inherit;">Kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
 {{% /md %}}</dd>
@@ -868,7 +868,7 @@ The following output properties are available:
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the distribution configuration.
 {{% /md %}}</dd>
@@ -878,7 +878,7 @@ The following output properties are available:
 <a href="#targetaccountids_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Account<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of target AWS Account identifiers.
 {{% /md %}}</dd>
@@ -904,7 +904,7 @@ The following output properties are available:
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description to apply to distributed AMI.
 {{% /md %}}</dd>
@@ -914,7 +914,7 @@ The following output properties are available:
 <a href="#kmskeyid_nodejs" style="color: inherit; text-decoration: inherit;">kms<wbr>Key<wbr>Id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
 {{% /md %}}</dd>
@@ -934,7 +934,7 @@ The following output properties are available:
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the distribution configuration.
 {{% /md %}}</dd>
@@ -944,7 +944,7 @@ The following output properties are available:
 <a href="#targetaccountids_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Account<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of target AWS Account identifiers.
 {{% /md %}}</dd>
@@ -970,7 +970,7 @@ The following output properties are available:
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description to apply to distributed AMI.
 {{% /md %}}</dd>
@@ -980,7 +980,7 @@ The following output properties are available:
 <a href="#kms_key_id_python" style="color: inherit; text-decoration: inherit;">kms_<wbr>key_<wbr>id</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Key to encrypt AMI.
 {{% /md %}}</dd>
@@ -1000,7 +1000,7 @@ The following output properties are available:
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the distribution configuration.
 {{% /md %}}</dd>
@@ -1010,7 +1010,7 @@ The following output properties are available:
 <a href="#target_account_ids_python" style="color: inherit; text-decoration: inherit;">target_<wbr>account_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of target AWS Account identifiers.
 {{% /md %}}</dd>
@@ -1040,7 +1040,7 @@ The following output properties are available:
 <a href="#usergroups_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of EC2 launch permission user groups.
 {{% /md %}}</dd>
@@ -1050,7 +1050,7 @@ The following output properties are available:
 <a href="#userids_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of AWS Account identifiers.
 {{% /md %}}</dd>
@@ -1066,7 +1066,7 @@ The following output properties are available:
 <a href="#usergroups_go" style="color: inherit; text-decoration: inherit;">User<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of EC2 launch permission user groups.
 {{% /md %}}</dd>
@@ -1076,7 +1076,7 @@ The following output properties are available:
 <a href="#userids_go" style="color: inherit; text-decoration: inherit;">User<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Set of AWS Account identifiers.
 {{% /md %}}</dd>
@@ -1092,7 +1092,7 @@ The following output properties are available:
 <a href="#usergroups_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of EC2 launch permission user groups.
 {{% /md %}}</dd>
@@ -1102,7 +1102,7 @@ The following output properties are available:
 <a href="#userids_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of AWS Account identifiers.
 {{% /md %}}</dd>
@@ -1118,7 +1118,7 @@ The following output properties are available:
 <a href="#user_groups_python" style="color: inherit; text-decoration: inherit;">user_<wbr>groups</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of EC2 launch permission user groups.
 {{% /md %}}</dd>
@@ -1128,7 +1128,7 @@ The following output properties are available:
 <a href="#user_ids_python" style="color: inherit; text-decoration: inherit;">user_<wbr>ids</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Set of AWS Account identifiers.
 {{% /md %}}</dd>
