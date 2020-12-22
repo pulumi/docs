@@ -70,6 +70,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="maps/" title="maps"><span class="symbol module"></span>maps</a></li>
     <li><a href="mariadb/" title="mariadb"><span class="symbol module"></span>mariadb</a></li>
     <li><a href="marketplace/" title="marketplace"><span class="symbol module"></span>marketplace</a></li>
+    <li><a href="media/" title="media"><span class="symbol module"></span>media</a></li>
     <li><a href="mediaservices/" title="mediaservices"><span class="symbol module"></span>mediaservices</a></li>
     <li><a href="mixedreality/" title="mixedreality"><span class="symbol module"></span>mixedreality</a></li>
     <li><a href="monitoring/" title="monitoring"><span class="symbol module"></span>monitoring</a></li>
@@ -98,6 +99,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
     <li><a href="signalr/" title="signalr"><span class="symbol module"></span>signalr</a></li>
     <li><a href="siterecovery/" title="siterecovery"><span class="symbol module"></span>siterecovery</a></li>
     <li><a href="sql/" title="sql"><span class="symbol module"></span>sql</a></li>
+    <li><a href="stack/" title="stack"><span class="symbol module"></span>stack</a></li>
     <li><a href="storage/" title="storage"><span class="symbol module"></span>storage</a></li>
     <li><a href="streamanalytics/" title="streamanalytics"><span class="symbol module"></span>streamanalytics</a></li>
     <li><a href="synapse/" title="synapse"><span class="symbol module"></span>synapse</a></li>
@@ -119,7 +121,7 @@ A Pulumi package for creating and managing Microsoft Azure cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.33.2</dd>
+	<dd>3.40.0</dd>
 </dl>
 
 
