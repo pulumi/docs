@@ -12,7 +12,7 @@ meta_desc: "Documentation for the aws.autoscaling.Group resource with examples, 
 
 ## Import
 
-AutoScaling Groups can be imported using the `name`, e.g.
+Auto Scaling Groups can be imported using the `name`, e.g.
 
 ```sh
  $ pulumi import aws:autoscaling/group:Group web web-asg
@@ -30,7 +30,7 @@ AutoScaling Groups can be imported using the `name`, e.g.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/autoscaling/#pulumi_aws.autoscaling.Group">Group</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">capacity_rebalance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_lifecycle_hooks</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupInitialLifecycleHookArgs]]</span> = None<span class="p">, </span><span class="nx">launch_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[GroupLaunchTemplateArgs]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">max_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metrics_granularity</span><span class="p">:</span> <span class="nx">Optional[Union[str, MetricsGranularity]]</span> = None<span class="p">, </span><span class="nx">min_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mixed_instances_policy</span><span class="p">:</span> <span class="nx">Optional[GroupMixedInstancesPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protect_from_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_linked_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended_processes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">tags_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, str]]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vpc_zone_identifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/autoscaling/#pulumi_aws.autoscaling.Group">Group</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">capacity_rebalance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_lifecycle_hooks</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupInitialLifecycleHookArgs]]</span> = None<span class="p">, </span><span class="nx">instance_refresh</span><span class="p">:</span> <span class="nx">Optional[GroupInstanceRefreshArgs]</span> = None<span class="p">, </span><span class="nx">launch_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[GroupLaunchTemplateArgs]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">max_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metrics_granularity</span><span class="p">:</span> <span class="nx">Optional[Union[str, MetricsGranularity]]</span> = None<span class="p">, </span><span class="nx">min_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mixed_instances_policy</span><span class="p">:</span> <span class="nx">Optional[GroupMixedInstancesPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protect_from_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_linked_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended_processes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">tags_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, str]]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vpc_zone_identifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -209,7 +209,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the auto scale group.
+    <dd>{{% md %}}The maximum size of the Auto Scaling Group.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -219,7 +219,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the auto scale group.
+    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -282,8 +282,8 @@ Capacity below.)
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allows deleting the autoscaling group without waiting
-for all instances in the pool to terminate.  You can force an autoscaling group to delete
+    <dd>{{% md %}}Allows deleting the Auto Scaling Group without waiting
+for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
@@ -318,11 +318,23 @@ behavior and potentially leaves resources dangling.
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
-to attach to the autoscaling group **before** instances are launched. The
+to attach to the Auto Scaling Group **before** instances are launched. The
 syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
-a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancerefresh_csharp">
+<a href="#instancerefresh_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Refresh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, start an
+[Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
+when this Auto Scaling Group is updated. Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -383,11 +395,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this causes this provider to wait for
-this number of instances from this autoscaling group to show up healthy in the
-ELB only on creation. Updates will not wait on ELB instance number changes.
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mixedinstancespolicy_csharp">
@@ -406,7 +414,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -438,7 +446,7 @@ prefix. Conflicts with `name`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for termination
+Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -459,8 +467,8 @@ during scale in events.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
-Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
+    <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -500,7 +508,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+    <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -534,12 +542,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this will cause this provider to wait
-for exactly this number of healthy instances from this autoscaling group in
-all attached load balancers on both create and update operations. (Takes
-precedence over `min_elb_capacity` behavior.)
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -554,7 +557,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the auto scale group.
+    <dd>{{% md %}}The maximum size of the Auto Scaling Group.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -564,7 +567,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the auto scale group.
+    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -627,8 +630,8 @@ Capacity below.)
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allows deleting the autoscaling group without waiting
-for all instances in the pool to terminate.  You can force an autoscaling group to delete
+    <dd>{{% md %}}Allows deleting the Auto Scaling Group without waiting
+for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
@@ -663,11 +666,23 @@ behavior and potentially leaves resources dangling.
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
-to attach to the autoscaling group **before** instances are launched. The
+to attach to the Auto Scaling Group **before** instances are launched. The
 syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
-a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancerefresh_go">
+<a href="#instancerefresh_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Refresh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, start an
+[Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
+when this Auto Scaling Group is updated. Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -728,11 +743,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this causes this provider to wait for
-this number of instances from this autoscaling group to show up healthy in the
-ELB only on creation. Updates will not wait on ELB instance number changes.
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mixedinstancespolicy_go">
@@ -751,7 +762,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -783,7 +794,7 @@ prefix. Conflicts with `name`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for termination
+Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -804,8 +815,8 @@ during scale in events.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
-Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
+    <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -845,7 +856,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+    <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -879,12 +890,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this will cause this provider to wait
-for exactly this number of healthy instances from this autoscaling group in
-all attached load balancers on both create and update operations. (Takes
-precedence over `min_elb_capacity` behavior.)
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -899,7 +905,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the auto scale group.
+    <dd>{{% md %}}The maximum size of the Auto Scaling Group.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -909,7 +915,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the auto scale group.
+    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -972,8 +978,8 @@ Capacity below.)
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allows deleting the autoscaling group without waiting
-for all instances in the pool to terminate.  You can force an autoscaling group to delete
+    <dd>{{% md %}}Allows deleting the Auto Scaling Group without waiting
+for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
@@ -1008,11 +1014,23 @@ behavior and potentially leaves resources dangling.
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
-to attach to the autoscaling group **before** instances are launched. The
+to attach to the Auto Scaling Group **before** instances are launched. The
 syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
-a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancerefresh_nodejs">
+<a href="#instancerefresh_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Refresh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, start an
+[Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
+when this Auto Scaling Group is updated. Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1073,11 +1091,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Setting this causes this provider to wait for
-this number of instances from this autoscaling group to show up healthy in the
-ELB only on creation. Updates will not wait on ELB instance number changes.
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mixedinstancespolicy_nodejs">
@@ -1096,7 +1110,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1128,7 +1142,7 @@ prefix. Conflicts with `name`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for termination
+Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1149,8 +1163,8 @@ during scale in events.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
-Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
+    <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1190,7 +1204,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+    <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1224,12 +1238,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Setting this will cause this provider to wait
-for exactly this number of healthy instances from this autoscaling group in
-all attached load balancers on both create and update operations. (Takes
-precedence over `min_elb_capacity` behavior.)
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1244,7 +1253,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the auto scale group.
+    <dd>{{% md %}}The maximum size of the Auto Scaling Group.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1254,7 +1263,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the auto scale group.
+    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1317,8 +1326,8 @@ Capacity below.)
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allows deleting the autoscaling group without waiting
-for all instances in the pool to terminate.  You can force an autoscaling group to delete
+    <dd>{{% md %}}Allows deleting the Auto Scaling Group without waiting
+for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
@@ -1353,11 +1362,23 @@ behavior and potentially leaves resources dangling.
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
-to attach to the autoscaling group **before** instances are launched. The
+to attach to the Auto Scaling Group **before** instances are launched. The
 syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
-a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_refresh_python">
+<a href="#instance_refresh_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>refresh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, start an
+[Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
+when this Auto Scaling Group is updated. Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1418,11 +1439,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this causes this provider to wait for
-this number of instances from this autoscaling group to show up healthy in the
-ELB only on creation. Updates will not wait on ELB instance number changes.
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mixed_instances_policy_python">
@@ -1441,7 +1458,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1473,7 +1490,7 @@ prefix. Conflicts with `name`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for termination
+Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1494,8 +1511,8 @@ during scale in events.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
-Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
+    <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1535,7 +1552,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+    <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1569,12 +1586,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this will cause this provider to wait
-for exactly this number of healthy instances from this autoscaling group in
-all attached load balancers on both create and update operations. (Takes
-precedence over `min_elb_capacity` behavior.)
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1596,7 +1608,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for this AutoScaling Group
+    <dd>{{% md %}}The ARN for this Auto Scaling Group
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1621,7 +1633,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for this AutoScaling Group
+    <dd>{{% md %}}The ARN for this Auto Scaling Group
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1646,7 +1658,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for this AutoScaling Group
+    <dd>{{% md %}}The ARN for this Auto Scaling Group
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1671,7 +1683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN for this AutoScaling Group
+    <dd>{{% md %}}The ARN for this Auto Scaling Group
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1698,7 +1710,7 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">capacity_rebalance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_lifecycle_hooks</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupInitialLifecycleHookArgs]]</span> = None<span class="p">, </span><span class="nx">launch_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[GroupLaunchTemplateArgs]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">max_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metrics_granularity</span><span class="p">:</span> <span class="nx">Optional[Union[str, MetricsGranularity]]</span> = None<span class="p">, </span><span class="nx">min_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mixed_instances_policy</span><span class="p">:</span> <span class="nx">Optional[GroupMixedInstancesPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protect_from_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_linked_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended_processes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">tags_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, str]]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vpc_zone_identifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">capacity_rebalance</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">default_cooldown</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">desired_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">enabled_metrics</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">force_delete</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">health_check_grace_period</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">health_check_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">initial_lifecycle_hooks</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupInitialLifecycleHookArgs]]</span> = None<span class="p">, </span><span class="nx">instance_refresh</span><span class="p">:</span> <span class="nx">Optional[GroupInstanceRefreshArgs]</span> = None<span class="p">, </span><span class="nx">launch_configuration</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">launch_template</span><span class="p">:</span> <span class="nx">Optional[GroupLaunchTemplateArgs]</span> = None<span class="p">, </span><span class="nx">load_balancers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">max_instance_lifetime</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">max_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">metrics_granularity</span><span class="p">:</span> <span class="nx">Optional[Union[str, MetricsGranularity]]</span> = None<span class="p">, </span><span class="nx">min_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">mixed_instances_policy</span><span class="p">:</span> <span class="nx">Optional[GroupMixedInstancesPolicyArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protect_from_scale_in</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">service_linked_role_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">suspended_processes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Sequence[GroupTagArgs]]</span> = None<span class="p">, </span><span class="nx">tags_collection</span><span class="p">:</span> <span class="nx">Optional[Sequence[Mapping[str, str]]]</span> = None<span class="p">, </span><span class="nx">target_group_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">termination_policies</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">vpc_zone_identifiers</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">wait_for_capacity_timeout</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">wait_for_elb_capacity</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> Group</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1819,7 +1831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for this AutoScaling Group
+    <dd>{{% md %}}The ARN for this Auto Scaling Group
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1881,8 +1893,8 @@ Capacity below.)
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allows deleting the autoscaling group without waiting
-for all instances in the pool to terminate.  You can force an autoscaling group to delete
+    <dd>{{% md %}}Allows deleting the Auto Scaling Group without waiting
+for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
@@ -1917,11 +1929,23 @@ behavior and potentially leaves resources dangling.
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
-to attach to the autoscaling group **before** instances are launched. The
+to attach to the Auto Scaling Group **before** instances are launched. The
 syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
-a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_instancerefresh_csharp">
+<a href="#state_instancerefresh_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Refresh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, start an
+[Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
+when this Auto Scaling Group is updated. Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1972,7 +1996,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the auto scale group.
+    <dd>{{% md %}}The maximum size of the Auto Scaling Group.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1992,11 +2016,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this causes this provider to wait for
-this number of instances from this autoscaling group to show up healthy in the
-ELB only on creation. Updates will not wait on ELB instance number changes.
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_minsize_csharp">
@@ -2005,7 +2025,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the auto scale group.
+    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2026,7 +2046,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2058,7 +2078,7 @@ prefix. Conflicts with `name`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for termination
+Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2079,8 +2099,8 @@ during scale in events.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
-Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
+    <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2120,7 +2140,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+    <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2154,12 +2174,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this will cause this provider to wait
-for exactly this number of healthy instances from this autoscaling group in
-all attached load balancers on both create and update operations. (Takes
-precedence over `min_elb_capacity` behavior.)
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2174,7 +2189,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for this AutoScaling Group
+    <dd>{{% md %}}The ARN for this Auto Scaling Group
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2236,8 +2251,8 @@ Capacity below.)
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allows deleting the autoscaling group without waiting
-for all instances in the pool to terminate.  You can force an autoscaling group to delete
+    <dd>{{% md %}}Allows deleting the Auto Scaling Group without waiting
+for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
@@ -2272,11 +2287,23 @@ behavior and potentially leaves resources dangling.
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
-to attach to the autoscaling group **before** instances are launched. The
+to attach to the Auto Scaling Group **before** instances are launched. The
 syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
-a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_instancerefresh_go">
+<a href="#state_instancerefresh_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Refresh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, start an
+[Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
+when this Auto Scaling Group is updated. Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2327,7 +2354,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the auto scale group.
+    <dd>{{% md %}}The maximum size of the Auto Scaling Group.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2347,11 +2374,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this causes this provider to wait for
-this number of instances from this autoscaling group to show up healthy in the
-ELB only on creation. Updates will not wait on ELB instance number changes.
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_minsize_go">
@@ -2360,7 +2383,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the auto scale group.
+    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2381,7 +2404,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2413,7 +2436,7 @@ prefix. Conflicts with `name`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for termination
+Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2434,8 +2457,8 @@ during scale in events.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
-Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
+    <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2475,7 +2498,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+    <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2509,12 +2532,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this will cause this provider to wait
-for exactly this number of healthy instances from this autoscaling group in
-all attached load balancers on both create and update operations. (Takes
-precedence over `min_elb_capacity` behavior.)
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2529,7 +2547,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ARN for this AutoScaling Group
+    <dd>{{% md %}}The ARN for this Auto Scaling Group
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2591,8 +2609,8 @@ Capacity below.)
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Allows deleting the autoscaling group without waiting
-for all instances in the pool to terminate.  You can force an autoscaling group to delete
+    <dd>{{% md %}}Allows deleting the Auto Scaling Group without waiting
+for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
@@ -2627,11 +2645,23 @@ behavior and potentially leaves resources dangling.
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
-to attach to the autoscaling group **before** instances are launched. The
+to attach to the Auto Scaling Group **before** instances are launched. The
 syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
-a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_instancerefresh_nodejs">
+<a href="#state_instancerefresh_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Refresh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, start an
+[Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
+when this Auto Scaling Group is updated. Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2682,7 +2712,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the auto scale group.
+    <dd>{{% md %}}The maximum size of the Auto Scaling Group.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2702,11 +2732,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Setting this causes this provider to wait for
-this number of instances from this autoscaling group to show up healthy in the
-ELB only on creation. Updates will not wait on ELB instance number changes.
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_minsize_nodejs">
@@ -2715,7 +2741,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the auto scale group.
+    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2736,7 +2762,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2768,7 +2794,7 @@ prefix. Conflicts with `name`.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for termination
+Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -2789,8 +2815,8 @@ during scale in events.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
-Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
+    <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2830,7 +2856,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+    <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2864,12 +2890,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Setting this will cause this provider to wait
-for exactly this number of healthy instances from this autoscaling group in
-all attached load balancers on both create and update operations. (Takes
-precedence over `min_elb_capacity` behavior.)
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2884,7 +2905,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ARN for this AutoScaling Group
+    <dd>{{% md %}}The ARN for this Auto Scaling Group
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2946,8 +2967,8 @@ Capacity below.)
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Allows deleting the autoscaling group without waiting
-for all instances in the pool to terminate.  You can force an autoscaling group to delete
+    <dd>{{% md %}}Allows deleting the Auto Scaling Group without waiting
+for all instances in the pool to terminate.  You can force an Auto Scaling Group to delete
 even if it's in the process of scaling a resource. Normally, this provider
 drains all the instances before deleting the group.  This bypasses that
 behavior and potentially leaves resources dangling.
@@ -2982,11 +3003,23 @@ behavior and potentially leaves resources dangling.
     </dt>
     <dd>{{% md %}}One or more
 [Lifecycle Hooks](http://docs.aws.amazon.com/autoscaling/latest/userguide/lifecycle-hooks.html)
-to attach to the autoscaling group **before** instances are launched. The
+to attach to the Auto Scaling Group **before** instances are launched. The
 syntax is exactly the same as the separate
 `aws.autoscaling.LifecycleHook`
 resource, without the `autoscaling_group_name` attribute. Please note that this will only work when creating
-a new autoscaling group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+a new Auto Scaling Group. For all other use-cases, please use `aws.autoscaling.LifecycleHook` resource.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_instance_refresh_python">
+<a href="#state_instance_refresh_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>refresh</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefresh">Group<wbr>Instance<wbr>Refresh<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}If this block is configured, start an
+[Instance Refresh](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-refresh.html)
+when this Auto Scaling Group is updated. Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3037,7 +3070,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The maximum size of the auto scale group.
+    <dd>{{% md %}}The maximum size of the Auto Scaling Group.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3057,11 +3090,7 @@ group names. Only valid for classic load balancers. For ALBs, use `target_group_
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this causes this provider to wait for
-this number of instances from this autoscaling group to show up healthy in the
-ELB only on creation. Updates will not wait on ELB instance number changes.
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_min_size_python">
@@ -3070,7 +3099,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The minimum size of the auto scale group.
+    <dd>{{% md %}}The minimum size of the Auto Scaling Group.
 (See also Waiting for Capacity below.)
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3091,7 +3120,7 @@ ELB only on creation. Updates will not wait on ELB instance number changes.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3123,7 +3152,7 @@ prefix. Conflicts with `name`.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allows setting instance protection. The
-autoscaling group will not select instances with this setting for termination
+Auto Scaling Group will not select instances with this setting for termination
 during scale in events.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -3144,8 +3173,8 @@ during scale in events.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of processes to suspend for the AutoScaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
-Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your autoscaling group from functioning properly.
+    <dd>{{% md %}}A list of processes to suspend for the Auto Scaling Group. The allowed values are `Launch`, `Terminate`, `HealthCheck`, `ReplaceUnhealthy`, `AZRebalance`, `AlarmNotification`, `ScheduledActions`, `AddToLoadBalancer`.
+Note that if you suspend either the `Launch` or `Terminate` process types, it can prevent your Auto Scaling Group from functioning properly.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3185,7 +3214,7 @@ Note that if you suspend either the `Launch` or `Terminate` process types, it ca
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of policies to decide how the instances in the auto scale group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
+    <dd>{{% md %}}A list of policies to decide how the instances in the Auto Scaling Group should be terminated. The allowed values are `OldestInstance`, `NewestInstance`, `OldestLaunchConfiguration`, `ClosestToNextInstanceHour`, `OldestLaunchTemplate`, `AllocationStrategy`, `Default`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3219,12 +3248,7 @@ this provider to skip all Capacity Waiting behavior.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Setting this will cause this provider to wait
-for exactly this number of healthy instances from this autoscaling group in
-all attached load balancers on both create and update operations. (Takes
-precedence over `min_elb_capacity` behavior.)
-(See also Waiting for Capacity below.)
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3271,7 +3295,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3341,7 +3365,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3411,7 +3435,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3481,7 +3505,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3531,6 +3555,278 @@ precedence over `min_elb_capacity` behavior.)
 </dl>
 {{% /choosable %}}
 
+<h4 id="groupinstancerefresh">Group<wbr>Instance<wbr>Refresh</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupInstanceRefresh">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupInstanceRefresh">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupInstanceRefreshArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupInstanceRefreshOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupInstanceRefreshArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupInstanceRefresh.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="strategy_csharp">
+<a href="#strategy_csharp" style="color: inherit; text-decoration: inherit;">Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The strategy to use for instance refresh. The only allowed value is `Rolling`. See [StartInstanceRefresh Action](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StartInstanceRefresh.html#API_StartInstanceRefresh_RequestParameters) for more information.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferences_csharp">
+<a href="#preferences_csharp" style="color: inherit; text-decoration: inherit;">Preferences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Override default parameters for Instance Refresh.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="triggers_csharp">
+<a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Set of additional property names that will trigger an Instance Refresh. A refresh will always be triggered by a change in any of `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="strategy_go">
+<a href="#strategy_go" style="color: inherit; text-decoration: inherit;">Strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The strategy to use for instance refresh. The only allowed value is `Rolling`. See [StartInstanceRefresh Action](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StartInstanceRefresh.html#API_StartInstanceRefresh_RequestParameters) for more information.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferences_go">
+<a href="#preferences_go" style="color: inherit; text-decoration: inherit;">Preferences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences</a></span>
+    </dt>
+    <dd>{{% md %}}Override default parameters for Instance Refresh.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="triggers_go">
+<a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Set of additional property names that will trigger an Instance Refresh. A refresh will always be triggered by a change in any of `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="strategy_nodejs">
+<a href="#strategy_nodejs" style="color: inherit; text-decoration: inherit;">strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The strategy to use for instance refresh. The only allowed value is `Rolling`. See [StartInstanceRefresh Action](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StartInstanceRefresh.html#API_StartInstanceRefresh_RequestParameters) for more information.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferences_nodejs">
+<a href="#preferences_nodejs" style="color: inherit; text-decoration: inherit;">preferences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences</a></span>
+    </dt>
+    <dd>{{% md %}}Override default parameters for Instance Refresh.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="triggers_nodejs">
+<a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Set of additional property names that will trigger an Instance Refresh. A refresh will always be triggered by a change in any of `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="strategy_python">
+<a href="#strategy_python" style="color: inherit; text-decoration: inherit;">strategy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The strategy to use for instance refresh. The only allowed value is `Rolling`. See [StartInstanceRefresh Action](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_StartInstanceRefresh.html#API_StartInstanceRefresh_RequestParameters) for more information.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="preferences_python">
+<a href="#preferences_python" style="color: inherit; text-decoration: inherit;">preferences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Override default parameters for Instance Refresh.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="triggers_python">
+<a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Set of additional property names that will trigger an Instance Refresh. A refresh will always be triggered by a change in any of `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="groupinstancerefreshpreferences">Group<wbr>Instance<wbr>Refresh<wbr>Preferences</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupInstanceRefreshPreferences">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupInstanceRefreshPreferences">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupInstanceRefreshPreferencesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GroupInstanceRefreshPreferencesOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Inputs.GroupInstanceRefreshPreferencesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GroupInstanceRefreshPreferences.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancewarmup_csharp">
+<a href="#instancewarmup_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Warmup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minhealthypercentage_csharp">
+<a href="#minhealthypercentage_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Healthy<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to `90`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancewarmup_go">
+<a href="#instancewarmup_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Warmup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minhealthypercentage_go">
+<a href="#minhealthypercentage_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Healthy<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to `90`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instancewarmup_nodejs">
+<a href="#instancewarmup_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Warmup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minhealthypercentage_nodejs">
+<a href="#minhealthypercentage_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Healthy<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to `90`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_warmup_python">
+<a href="#instance_warmup_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>warmup</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_healthy_percentage_python">
+<a href="#min_healthy_percentage_python" style="color: inherit; text-decoration: inherit;">min_<wbr>healthy_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of capacity in the Auto Scaling group that must remain healthy during an instance refresh to allow the operation to continue, as a percentage of the desired capacity of the Auto Scaling group. Defaults to `90`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="grouplaunchtemplate">Group<wbr>Launch<wbr>Template</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GroupLaunchTemplate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GroupLaunchTemplate">output</a> API doc for this type.
@@ -3566,7 +3862,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3602,7 +3898,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3638,7 +3934,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3674,7 +3970,7 @@ precedence over `min_elb_capacity` behavior.)
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the auto scaling group. By default generated by this provider.
+    <dd>{{% md %}}The name of the Auto Scaling Group. By default generated by this provider.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

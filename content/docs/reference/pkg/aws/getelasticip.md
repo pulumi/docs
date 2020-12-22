@@ -566,6 +566,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="carrierip_csharp">
+<a href="#carrierip_csharp" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="customerownedip_csharp">
 <a href="#customerownedip_csharp" style="color: inherit; text-decoration: inherit;">Customer<wbr>Owned<wbr>Ip</a>
 </span>
@@ -718,6 +728,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="carrierip_go">
+<a href="#carrierip_go" style="color: inherit; text-decoration: inherit;">Carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -876,6 +896,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="carrierip_nodejs">
+<a href="#carrierip_nodejs" style="color: inherit; text-decoration: inherit;">carrier<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="customerownedip_nodejs">
 <a href="#customerownedip_nodejs" style="color: inherit; text-decoration: inherit;">customer<wbr>Owned<wbr>Ip</a>
 </span>
@@ -1028,6 +1058,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID representing the association of the address with an instance in a VPC.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="carrier_ip_python">
+<a href="#carrier_ip_python" style="color: inherit; text-decoration: inherit;">carrier_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The carrier IP address.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

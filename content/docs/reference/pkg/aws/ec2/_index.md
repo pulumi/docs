@@ -17,6 +17,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="amilaunchpermission" title="AmiLaunchPermission"><span class="symbol resource"></span>AmiLaunchPermission</a></li>
     <li><a href="availabilityzonegroup" title="AvailabilityZoneGroup"><span class="symbol resource"></span>AvailabilityZoneGroup</a></li>
     <li><a href="capacityreservation" title="CapacityReservation"><span class="symbol resource"></span>CapacityReservation</a></li>
+    <li><a href="carriergateway" title="CarrierGateway"><span class="symbol resource"></span>CarrierGateway</a></li>
     <li><a href="customergateway" title="CustomerGateway"><span class="symbol resource"></span>CustomerGateway</a></li>
     <li><a href="dedicatedhost" title="DedicatedHost"><span class="symbol resource"></span>DedicatedHost</a></li>
     <li><a href="defaultnetworkacl" title="DefaultNetworkAcl"><span class="symbol resource"></span>DefaultNetworkAcl</a></li>
@@ -38,6 +39,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="localgatewayroute" title="LocalGatewayRoute"><span class="symbol resource"></span>LocalGatewayRoute</a></li>
     <li><a href="localgatewayroutetablevpcassociation" title="LocalGatewayRouteTableVpcAssociation"><span class="symbol resource"></span>LocalGatewayRouteTableVpcAssociation</a></li>
     <li><a href="mainroutetableassociation" title="MainRouteTableAssociation"><span class="symbol resource"></span>MainRouteTableAssociation</a></li>
+    <li><a href="managedprefixlist" title="ManagedPrefixList"><span class="symbol resource"></span>ManagedPrefixList</a></li>
     <li><a href="natgateway" title="NatGateway"><span class="symbol resource"></span>NatGateway</a></li>
     <li><a href="networkacl" title="NetworkAcl"><span class="symbol resource"></span>NetworkAcl</a></li>
     <li><a href="networkaclrule" title="NetworkAclRule"><span class="symbol resource"></span>NetworkAclRule</a></li>
@@ -104,6 +106,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
     <li><a href="getlocalgatewayvirtualinterfacegroup" title="GetLocalGatewayVirtualInterfaceGroup"><span class="symbol function"></span>GetLocalGatewayVirtualInterfaceGroup</a></li>
     <li><a href="getlocalgatewayvirtualinterfacegroups" title="GetLocalGatewayVirtualInterfaceGroups"><span class="symbol function"></span>GetLocalGatewayVirtualInterfaceGroups</a></li>
     <li><a href="getlocalgateways" title="GetLocalGateways"><span class="symbol function"></span>GetLocalGateways</a></li>
+    <li><a href="getmanagedprefixlist" title="GetManagedPrefixList"><span class="symbol function"></span>GetManagedPrefixList</a></li>
     <li><a href="getnatgateway" title="GetNatGateway"><span class="symbol function"></span>GetNatGateway</a></li>
     <li><a href="getnetworkacls" title="GetNetworkAcls"><span class="symbol function"></span>GetNetworkAcls</a></li>
     <li><a href="getnetworkinterface" title="GetNetworkInterface"><span class="symbol function"></span>GetNetworkInterface</a></li>
@@ -135,7 +138,7 @@ Explore the resources and functions of the ec2 module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.21.0</dd>
+	<dd>3.22.0</dd>
 </dl>
 
 

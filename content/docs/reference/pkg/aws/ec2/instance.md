@@ -193,7 +193,7 @@ const web = new aws.ec2.Instance("web", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">, </span><span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[InstanceMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[InstanceRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.Instance">Instance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[InstanceEnclaveOptionsArgs]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">, </span><span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[InstanceMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[InstanceRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -471,6 +471,16 @@ Note that if this is not set on an instance type that is optimized by default th
 this will show as disabled but if the instance type is optimized by default then
 there is no need to set this and there is no effect to disabling it.
 See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enclaveoptions_csharp">
+<a href="#enclaveoptions_csharp" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -846,6 +856,16 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enclaveoptions_go">
+<a href="#enclaveoptions_go" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ephemeralblockdevices_go">
 <a href="#ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
 </span>
@@ -1218,6 +1238,16 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enclaveoptions_nodejs">
+<a href="#enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ephemeralblockdevices_nodejs">
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
@@ -1587,6 +1617,16 @@ Note that if this is not set on an instance type that is optimized by default th
 this will show as disabled but if the instance type is optimized by default then
 there is no need to set this and there is no effect to disabling it.
 See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enclave_options_python">
+<a href="#enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2277,7 +2317,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">, </span><span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[InstanceMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[InstanceRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">ami</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_core_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">cpu_threads_per_core</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">credit_specification</span><span class="p">:</span> <span class="nx">Optional[InstanceCreditSpecificationArgs]</span> = None<span class="p">, </span><span class="nx">disable_api_termination</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enclave_options</span><span class="p">:</span> <span class="nx">Optional[InstanceEnclaveOptionsArgs]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">get_password_data</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">hibernation</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">host_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_initiated_shutdown_behavior</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, InstanceType]]</span> = None<span class="p">, </span><span class="nx">ipv6_address_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[InstanceMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">network_interfaces</span><span class="p">:</span> <span class="nx">Optional[Sequence[InstanceNetworkInterfaceArgs]]</span> = None<span class="p">, </span><span class="nx">outpost_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">password_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">primary_network_interface_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_dns</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[InstanceRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">secondary_private_ips</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">source_dest_check</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">subnet_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tenancy</span><span class="p">:</span> <span class="nx">Optional[Union[str, Tenancy]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vpc_security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2497,6 +2537,16 @@ Note that if this is not set on an instance type that is optimized by default th
 this will show as disabled but if the instance type is optimized by default then
 there is no need to set this and there is no effect to disabling it.
 See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enclaveoptions_csharp">
+<a href="#state_enclaveoptions_csharp" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2959,6 +3009,16 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enclaveoptions_go">
+<a href="#state_enclaveoptions_go" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ephemeralblockdevices_go">
 <a href="#state_ephemeralblockdevices_go" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
 </span>
@@ -3418,6 +3478,16 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_enclaveoptions_nodejs">
+<a href="#state_enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_ephemeralblockdevices_nodejs">
 <a href="#state_ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
@@ -3874,6 +3944,16 @@ Note that if this is not set on an instance type that is optimized by default th
 this will show as disabled but if the instance type is optimized by default then
 there is no need to set this and there is no effect to disabling it.
 See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enclave_options_python">
+<a href="#state_enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4370,7 +4450,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-This must be set with a `volume_type` of `"io1/io2"`.
+Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4391,6 +4471,16 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="throughput_csharp">
+<a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4419,8 +4509,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`
-or `"io2"`. (Default: `"gp2"`).
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4471,7 +4560,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-This must be set with a `volume_type` of `"io1/io2"`.
+Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4492,6 +4581,16 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="throughput_go">
+<a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4520,8 +4619,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`
-or `"io2"`. (Default: `"gp2"`).
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4572,7 +4670,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-This must be set with a `volume_type` of `"io1/io2"`.
+Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4593,6 +4691,16 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="throughput_nodejs">
+<a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4621,8 +4729,7 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`
-or `"io2"`. (Default: `"gp2"`).
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4673,7 +4780,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-This must be set with a `volume_type` of `"io1/io2"`.
+Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4694,6 +4801,16 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="throughput_python">
+<a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4722,8 +4839,85 @@ This must be set with a `volume_type` of `"io1/io2"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`
-or `"io2"`. (Default: `"gp2"`).
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="instanceenclaveoptions">Instance<wbr>Enclave<wbr>Options</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEnclaveOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEnclaveOptions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#InstanceEnclaveOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#InstanceEnclaveOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.InstanceEnclaveOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.InstanceEnclaveOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. (Default: `"false"`).
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. (Default: `"false"`).
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. (Default: `"false"`).
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. (Default: `"false"`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5267,9 +5461,7 @@ on instance termination (Default: `true`).
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-This is only valid for `volume_type` of `"io1/io2"`, and must be specified if
-using that type
+[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5280,6 +5472,16 @@ using that type
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="throughput_csharp">
+<a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5308,7 +5510,7 @@ using that type
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5356,9 +5558,7 @@ on instance termination (Default: `true`).
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-This is only valid for `volume_type` of `"io1/io2"`, and must be specified if
-using that type
+[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5369,6 +5569,16 @@ using that type
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="throughput_go">
+<a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5397,7 +5607,7 @@ using that type
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5445,9 +5655,7 @@ on instance termination (Default: `true`).
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-This is only valid for `volume_type` of `"io1/io2"`, and must be specified if
-using that type
+[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5458,6 +5666,16 @@ using that type
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="throughput_nodejs">
+<a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5486,7 +5704,7 @@ using that type
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5534,9 +5752,7 @@ on instance termination (Default: `true`).
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-This is only valid for `volume_type` of `"io1/io2"`, and must be specified if
-using that type
+[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5547,6 +5763,16 @@ using that type
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="throughput_python">
+<a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5575,7 +5801,7 @@ using that type
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

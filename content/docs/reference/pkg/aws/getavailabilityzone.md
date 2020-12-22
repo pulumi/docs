@@ -331,6 +331,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the AZ name that appears after the region name, uniquely identifying the AZ within its region.
+For Availability Zones this is usually a single letter, for example `a` for the `us-west-2a` zone.
+For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz-1` for the `us-west-2-wl1-sfo-wlz-1` zone.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -351,6 +353,26 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this always has the value of `opt-in-not-required`. For Local Zones, this is the opt in status. The possible values are `opted-in` and `not-opted-in`.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="parentzoneid_csharp">
+<a href="#parentzoneid_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="parentzonename_csharp">
+<a href="#parentzonename_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Zone<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -380,6 +402,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="zonetype_csharp">
+<a href="#zonetype_csharp" style="color: inherit; text-decoration: inherit;">Zone<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of zone. Values are `availability-zone`, `local-zone`, and `wavelength-zone`.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="allavailabilityzones_csharp">
@@ -442,6 +474,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the AZ name that appears after the region name, uniquely identifying the AZ within its region.
+For Availability Zones this is usually a single letter, for example `a` for the `us-west-2a` zone.
+For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz-1` for the `us-west-2-wl1-sfo-wlz-1` zone.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -462,6 +496,26 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this always has the value of `opt-in-not-required`. For Local Zones, this is the opt in status. The possible values are `opted-in` and `not-opted-in`.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="parentzoneid_go">
+<a href="#parentzoneid_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="parentzonename_go">
+<a href="#parentzonename_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Zone<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -491,6 +545,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="zonetype_go">
+<a href="#zonetype_go" style="color: inherit; text-decoration: inherit;">Zone<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of zone. Values are `availability-zone`, `local-zone`, and `wavelength-zone`.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="allavailabilityzones_go">
@@ -553,6 +617,8 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The part of the AZ name that appears after the region name, uniquely identifying the AZ within its region.
+For Availability Zones this is usually a single letter, for example `a` for the `us-west-2a` zone.
+For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz-1` for the `us-west-2-wl1-sfo-wlz-1` zone.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -573,6 +639,26 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this always has the value of `opt-in-not-required`. For Local Zones, this is the opt in status. The possible values are `opted-in` and `not-opted-in`.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="parentzoneid_nodejs">
+<a href="#parentzoneid_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Zone<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="parentzonename_nodejs">
+<a href="#parentzonename_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Zone<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -602,6 +688,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="zonetype_nodejs">
+<a href="#zonetype_nodejs" style="color: inherit; text-decoration: inherit;">zone<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of zone. Values are `availability-zone`, `local-zone`, and `wavelength-zone`.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="allavailabilityzones_nodejs">
@@ -664,6 +760,8 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The part of the AZ name that appears after the region name, uniquely identifying the AZ within its region.
+For Availability Zones this is usually a single letter, for example `a` for the `us-west-2a` zone.
+For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz-1` for the `us-west-2-wl1-sfo-wlz-1` zone.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -684,6 +782,26 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}For Availability Zones, this always has the value of `opt-in-not-required`. For Local Zones, this is the opt in status. The possible values are `opted-in` and `not-opted-in`.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="parent_zone_id_python">
+<a href="#parent_zone_id_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>zone_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="parent_zone_name_python">
+<a href="#parent_zone_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>zone_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -713,6 +831,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="zone_type_python">
+<a href="#zone_type_python" style="color: inherit; text-decoration: inherit;">zone_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of zone. Values are `availability-zone`, `local-zone`, and `wavelength-zone`.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="all_availability_zones_python">

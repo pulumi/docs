@@ -24,8 +24,9 @@ a conflict of rule settings and will overwrite rules.
 > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.
 ## Usage with prefix list IDs
 
-Prefix list IDs are managed by AWS internally. Prefix list IDs
-are associated with a prefix list name, or service name, that is linked to a specific region.
+Prefix Lists are either managed by AWS internally, or created by the customer using a
+Prefix List resource. Prefix Lists provided by
+AWS are associated with a prefix list name, or service name, that is linked to a specific region.
 Prefix list IDs are exported on VPC Endpoints, so you can use this format:
 
 ```typescript
@@ -122,6 +123,8 @@ func main() {
 	})
 }
 ```
+
+You can also find a specific Prefix List using the `aws.getPrefixList` data source.
 
 {{% examples %}}
 ## Example Usage
@@ -1635,7 +1638,7 @@ Default `false`
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1734,7 +1737,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1833,7 +1836,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1932,7 +1935,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2045,7 +2048,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2144,7 +2147,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2243,7 +2246,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2342,7 +2345,7 @@ a source to this egress rule.
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of prefix list IDs (for allowing access to VPC endpoints)
+    <dd>{{% md %}}List of Prefix List IDs.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

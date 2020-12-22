@@ -465,7 +465,7 @@ The ReplicationGroup resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
+    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -752,7 +752,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
+    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1039,7 +1039,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
+    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1326,7 +1326,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
+    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1913,7 +1913,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
+    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2230,7 +2230,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
+    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2547,7 +2547,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
+    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2864,7 +2864,7 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. Defaults to `true`.
+    <dd>{{% md %}}Specifies whether a minor engine upgrades will be applied automatically to the underlying Cache Cluster instances during the maintenance window. This parameter is currently not supported by the AWS API. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

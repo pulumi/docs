@@ -42,6 +42,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="codecommit/" title="codecommit"><span class="symbol module"></span>codecommit</a></li>
     <li><a href="codedeploy/" title="codedeploy"><span class="symbol module"></span>codedeploy</a></li>
     <li><a href="codepipeline/" title="codepipeline"><span class="symbol module"></span>codepipeline</a></li>
+    <li><a href="codestarconnections/" title="codestarconnections"><span class="symbol module"></span>codestarconnections</a></li>
     <li><a href="codestarnotifications/" title="codestarnotifications"><span class="symbol module"></span>codestarnotifications</a></li>
     <li><a href="cognito/" title="cognito"><span class="symbol module"></span>cognito</a></li>
     <li><a href="cur/" title="cur"><span class="symbol module"></span>cur</a></li>
@@ -85,6 +86,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="kinesis/" title="kinesis"><span class="symbol module"></span>kinesis</a></li>
     <li><a href="kinesisanalyticsv2/" title="kinesisanalyticsv2"><span class="symbol module"></span>kinesisanalyticsv2</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
+    <li><a href="lakeformation/" title="lakeformation"><span class="symbol module"></span>lakeformation</a></li>
     <li><a href="lambda/" title="lambda"><span class="symbol module"></span>lambda</a></li>
     <li><a href="lb/" title="lb"><span class="symbol module"></span>lb</a></li>
     <li><a href="lex/" title="lex"><span class="symbol module"></span>lex</a></li>
@@ -116,6 +118,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
     <li><a href="sagemaker/" title="sagemaker"><span class="symbol module"></span>sagemaker</a></li>
     <li><a href="secretsmanager/" title="secretsmanager"><span class="symbol module"></span>secretsmanager</a></li>
     <li><a href="securityhub/" title="securityhub"><span class="symbol module"></span>securityhub</a></li>
+    <li><a href="serverlessrepository/" title="serverlessrepository"><span class="symbol module"></span>serverlessrepository</a></li>
     <li><a href="servicecatalog/" title="servicecatalog"><span class="symbol module"></span>servicecatalog</a></li>
     <li><a href="servicediscovery/" title="servicediscovery"><span class="symbol module"></span>servicediscovery</a></li>
     <li><a href="servicequotas/" title="servicequotas"><span class="symbol module"></span>servicequotas</a></li>
@@ -171,7 +174,7 @@ A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resou
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.21.0</dd>
+	<dd>3.22.0</dd>
 </dl>
 
 

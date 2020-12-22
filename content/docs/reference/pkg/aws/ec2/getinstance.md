@@ -546,6 +546,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enclaveoptions_csharp">
+<a href="#enclaveoptions_csharp" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceenclaveoption">List&lt;Get<wbr>Instance<wbr>Enclave<wbr>Option&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The enclave options of the Instance.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="ephemeralblockdevices_csharp">
 <a href="#ephemeralblockdevices_csharp" style="color: inherit; text-decoration: inherit;">Ephemeral<wbr>Block<wbr>Devices</a>
 </span>
@@ -949,6 +959,16 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Instance is EBS optimized or not (Boolean).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="enclaveoptions_go">
+<a href="#enclaveoptions_go" style="color: inherit; text-decoration: inherit;">Enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceenclaveoption">[]Get<wbr>Instance<wbr>Enclave<wbr>Option</a></span>
+    </dt>
+    <dd>{{% md %}}The enclave options of the Instance.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1358,6 +1378,16 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="enclaveoptions_nodejs">
+<a href="#enclaveoptions_nodejs" style="color: inherit; text-decoration: inherit;">enclave<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceenclaveoption">Get<wbr>Instance<wbr>Enclave<wbr>Option[]</a></span>
+    </dt>
+    <dd>{{% md %}}The enclave options of the Instance.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="ephemeralblockdevices_nodejs">
 <a href="#ephemeralblockdevices_nodejs" style="color: inherit; text-decoration: inherit;">ephemeral<wbr>Block<wbr>Devices</a>
 </span>
@@ -1761,6 +1791,16 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the Instance is EBS optimized or not (Boolean).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="enclave_options_python">
+<a href="#enclave_options_python" style="color: inherit; text-decoration: inherit;">enclave_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstanceenclaveoption">Sequence[Get<wbr>Instance<wbr>Enclave<wbr>Option]</a></span>
+    </dt>
+    <dd>{{% md %}}The enclave options of the Instance.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -2244,6 +2284,16 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="throughput_csharp">
+<a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput of the volume, in MiB/s.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
 </span>
@@ -2335,6 +2385,16 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the snapshot.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="throughput_go">
+<a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput of the volume, in MiB/s.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2432,6 +2492,16 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="throughput_nodejs">
+<a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The throughput of the volume, in MiB/s.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
@@ -2526,6 +2596,16 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="throughput_python">
+<a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput of the volume, in MiB/s.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="volume_id_python">
 <a href="#volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
@@ -2552,6 +2632,84 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of the volume.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getinstanceenclaveoption">Get<wbr>Instance<wbr>Enclave<wbr>Option</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceEnclaveOption">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#GetInstanceEnclaveOption">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.GetInstanceEnclaveOption.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether Nitro Enclaves are enabled.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3050,6 +3208,16 @@ is only available if you've enabled DNS hostnames for your VPC.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="throughput_csharp">
+<a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput of the volume, in MiB/s.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="volumeid_csharp">
 <a href="#volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
 </span>
@@ -3132,6 +3300,16 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="throughput_go">
+<a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput of the volume, in MiB/s.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumeid_go">
@@ -3218,6 +3396,16 @@ is only available if you've enabled DNS hostnames for your VPC.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="throughput_nodejs">
+<a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The throughput of the volume, in MiB/s.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="volumeid_nodejs">
 <a href="#volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
@@ -3300,6 +3488,16 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="throughput_python">
+<a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput of the volume, in MiB/s.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volume_id_python">

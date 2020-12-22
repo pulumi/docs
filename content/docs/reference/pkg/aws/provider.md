@@ -1703,6 +1703,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="connect_csharp">
+<a href="#connect_csharp" style="color: inherit; text-decoration: inherit;">Connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="cur_csharp">
 <a href="#cur_csharp" style="color: inherit; text-decoration: inherit;">Cur</a>
 </span>
@@ -3043,6 +3052,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="configservice_go">
 <a href="#configservice_go" style="color: inherit; text-decoration: inherit;">Configservice</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connect_go">
+<a href="#connect_go" style="color: inherit; text-decoration: inherit;">Connect</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -4397,6 +4415,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="connect_nodejs">
+<a href="#connect_nodejs" style="color: inherit; text-decoration: inherit;">connect</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="cur_nodejs">
 <a href="#cur_nodejs" style="color: inherit; text-decoration: inherit;">cur</a>
 </span>
@@ -5737,6 +5764,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="configservice_python">
 <a href="#configservice_python" style="color: inherit; text-decoration: inherit;">configservice</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="connect_python">
+<a href="#connect_python" style="color: inherit; text-decoration: inherit;">connect</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

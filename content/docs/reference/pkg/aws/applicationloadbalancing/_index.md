@@ -35,7 +35,7 @@ Explore the resources and functions of the applicationloadbalancing module in th
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.21.0</dd>
+	<dd>3.22.0</dd>
 </dl>
 
 

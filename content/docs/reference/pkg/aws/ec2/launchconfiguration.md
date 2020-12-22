@@ -571,7 +571,7 @@ const asConf = new aws.ec2.LaunchConfiguration("asConf", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.LaunchConfiguration">LaunchConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchConfigurationEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchConfigurationEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[LaunchConfigurationRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_classic_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_classic_link_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/ec2/#pulumi_aws.ec2.LaunchConfiguration">LaunchConfiguration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchConfigurationEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchConfigurationEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[LaunchConfigurationMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[LaunchConfigurationRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_classic_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_classic_link_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -837,6 +837,16 @@ with launched instances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="metadataoptions_csharp">
+<a href="#metadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1038,6 +1048,16 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadataoptions_go">
+<a href="#metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1245,6 +1265,16 @@ with launched instances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="metadataoptions_nodejs">
+<a href="#metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1446,6 +1476,16 @@ with launched instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metadata_options_python">
+<a href="#metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1675,7 +1715,7 @@ Get an existing LaunchConfiguration resource's state with the given name, ID, an
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchConfigurationEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchConfigurationEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[LaunchConfigurationRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_classic_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_classic_link_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> LaunchConfiguration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">associate_public_ip_address</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ebs_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchConfigurationEbsBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">ebs_optimized</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enable_monitoring</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">ephemeral_block_devices</span><span class="p">:</span> <span class="nx">Optional[Sequence[LaunchConfigurationEphemeralBlockDeviceArgs]]</span> = None<span class="p">, </span><span class="nx">iam_instance_profile</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">image_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata_options</span><span class="p">:</span> <span class="nx">Optional[LaunchConfigurationMetadataOptionsArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">placement_tenancy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">root_block_device</span><span class="p">:</span> <span class="nx">Optional[LaunchConfigurationRootBlockDeviceArgs]</span> = None<span class="p">, </span><span class="nx">security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">spot_price</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_data_base64</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_classic_link_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vpc_classic_link_security_groups</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">) -&gt;</span> LaunchConfiguration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1893,6 +1933,16 @@ with launched instances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_metadataoptions_csharp">
+<a href="#state_metadataoptions_csharp" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -2104,6 +2154,16 @@ with launched instances.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_metadataoptions_go">
+<a href="#state_metadataoptions_go" style="color: inherit; text-decoration: inherit;">Metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2321,6 +2381,16 @@ with launched instances.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_metadataoptions_nodejs">
+<a href="#state_metadataoptions_nodejs" style="color: inherit; text-decoration: inherit;">metadata<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -2532,6 +2602,16 @@ with launched instances.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The key name that should be used for the instance.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_metadata_options_python">
+<a href="#state_metadata_options_python" style="color: inherit; text-decoration: inherit;">metadata_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The metadata options for the instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3083,6 +3163,164 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="launchconfigurationmetadataoptions">Launch<wbr>Configuration<wbr>Metadata<wbr>Options</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchConfigurationMetadataOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchConfigurationMetadataOptions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfigurationMetadataOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2?tab=doc#LaunchConfigurationMetadataOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Inputs.LaunchConfigurationMetadataOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Ec2.Outputs.LaunchConfigurationMetadataOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpendpoint_csharp">
+<a href="#httpendpoint_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_csharp">
+<a href="#httpputresponsehoplimit_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httptokens_csharp">
+<a href="#httptokens_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If session tokens are required: `optional`, `required`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpendpoint_go">
+<a href="#httpendpoint_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_go">
+<a href="#httpputresponsehoplimit_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httptokens_go">
+<a href="#httptokens_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If session tokens are required: `optional`, `required`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpendpoint_nodejs">
+<a href="#httpendpoint_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpputresponsehoplimit_nodejs">
+<a href="#httpputresponsehoplimit_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httptokens_nodejs">
+<a href="#httptokens_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If session tokens are required: `optional`, `required`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_endpoint_python">
+<a href="#http_endpoint_python" style="color: inherit; text-decoration: inherit;">http_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The state of the metadata service: `enabled`, `disabled`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_put_response_hop_limit_python">
+<a href="#http_put_response_hop_limit_python" style="color: inherit; text-decoration: inherit;">http_<wbr>put_<wbr>response_<wbr>hop_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_tokens_python">
+<a href="#http_tokens_python" style="color: inherit; text-decoration: inherit;">http_<wbr>tokens</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If session tokens are required: `optional`, `required`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

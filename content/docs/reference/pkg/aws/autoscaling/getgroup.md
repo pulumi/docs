@@ -279,6 +279,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="launchtemplates_csharp">
+<a href="#launchtemplates_csharp" style="color: inherit; text-decoration: inherit;">Launch<wbr>Templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getgrouplaunchtemplate">List&lt;Get<wbr>Group<wbr>Launch<wbr>Template&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="loadbalancers_csharp">
 <a href="#loadbalancers_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancers</a>
 </span>
@@ -471,6 +480,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The name of the associated launch configuration.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="launchtemplates_go">
+<a href="#launchtemplates_go" style="color: inherit; text-decoration: inherit;">Launch<wbr>Templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getgrouplaunchtemplate">[]Get<wbr>Group<wbr>Launch<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="loadbalancers_go">
@@ -667,6 +685,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="launchtemplates_nodejs">
+<a href="#launchtemplates_nodejs" style="color: inherit; text-decoration: inherit;">launch<wbr>Templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getgrouplaunchtemplate">Get<wbr>Group<wbr>Launch<wbr>Template[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="loadbalancers_nodejs">
 <a href="#loadbalancers_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancers</a>
 </span>
@@ -861,6 +888,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="launch_templates_python">
+<a href="#launch_templates_python" style="color: inherit; text-decoration: inherit;">launch_<wbr>templates</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getgrouplaunchtemplate">Sequence[Get<wbr>Group<wbr>Launch<wbr>Template]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="load_balancers_python">
 <a href="#load_balancers_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancers</a>
 </span>
@@ -968,6 +1004,166 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}VPC ID for the group.
 {{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+
+
+
+## Supporting Types
+
+
+<h4 id="getgrouplaunchtemplate">Get<wbr>Group<wbr>Launch<wbr>Template</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetGroupLaunchTemplate">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/autoscaling?tab=doc#GetGroupLaunchTemplate">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AutoScaling.Outputs.GetGroupLaunchTemplate.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Auto Scaling Group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the exact name of the desired autoscaling group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Auto Scaling Group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the exact name of the desired autoscaling group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the Auto Scaling Group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specify the exact name of the desired autoscaling group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the Auto Scaling Group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify the exact name of the desired autoscaling group.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
