@@ -1,8 +1,8 @@
 
 ---
 title: "RegionBackendService"
-title_tag: "Resource RegionBackendService | Module compute | Package GCP"
-meta_desc: "Explore the RegionBackendService resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A Region Backend Service defines a regionally-scoped group of virtual"
+title_tag: "gcp.compute.RegionBackendService"
+meta_desc: "Documentation for the gcp.compute.RegionBackendService resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -136,6 +136,163 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
     healthChecks: [defaultHealthCheck.id],
     connectionDrainingTimeoutSec: 10,
     sessionAffinity: "CLIENT_IP",
+});
+```
+
+{{% /example %}}
+
+### Region Backend Service Cache
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var defaultRegionHealthCheck = new Gcp.Compute.RegionHealthCheck("defaultRegionHealthCheck", new Gcp.Compute.RegionHealthCheckArgs
+        {
+            Region = "us-central1",
+            HttpHealthCheck = new Gcp.Compute.Inputs.RegionHealthCheckHttpHealthCheckArgs
+            {
+                Port = 80,
+            },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
+        });
+        var defaultRegionBackendService = new Gcp.Compute.RegionBackendService("defaultRegionBackendService", new Gcp.Compute.RegionBackendServiceArgs
+        {
+            Region = "us-central1",
+            HealthChecks = 
+            {
+                defaultRegionHealthCheck.Id,
+            },
+            EnableCdn = true,
+            CdnPolicy = new Gcp.Compute.Inputs.RegionBackendServiceCdnPolicyArgs
+            {
+                CacheMode = "CACHE_ALL_STATIC",
+                DefaultTtl = 3600,
+                ClientTtl = 7200,
+                MaxTtl = 10800,
+                NegativeCaching = true,
+                SignedUrlCacheMaxAgeSec = 7200,
+            },
+            LoadBalancingScheme = "EXTERNAL",
+            Protocol = "HTTP",
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		defaultRegionHealthCheck, err := compute.NewRegionHealthCheck(ctx, "defaultRegionHealthCheck", &compute.RegionHealthCheckArgs{
+			Region: pulumi.String("us-central1"),
+			HttpHealthCheck: &compute.RegionHealthCheckHttpHealthCheckArgs{
+				Port: pulumi.Int(80),
+			},
+		}, pulumi.Provider(google_beta))
+		if err != nil {
+			return err
+		}
+		_, err = compute.NewRegionBackendService(ctx, "defaultRegionBackendService", &compute.RegionBackendServiceArgs{
+			Region: pulumi.String("us-central1"),
+			HealthChecks: pulumi.String(pulumi.String{
+				defaultRegionHealthCheck.ID(),
+			}),
+			EnableCdn: pulumi.Bool(true),
+			CdnPolicy: &compute.RegionBackendServiceCdnPolicyArgs{
+				CacheMode:               pulumi.String("CACHE_ALL_STATIC"),
+				DefaultTtl:              pulumi.Int(3600),
+				ClientTtl:               pulumi.Int(7200),
+				MaxTtl:                  pulumi.Int(10800),
+				NegativeCaching:         pulumi.Bool(true),
+				SignedUrlCacheMaxAgeSec: pulumi.Int(7200),
+			},
+			LoadBalancingScheme: pulumi.String("EXTERNAL"),
+			Protocol:            pulumi.String("HTTP"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+default_region_health_check = gcp.compute.RegionHealthCheck("defaultRegionHealthCheck",
+    region="us-central1",
+    http_health_check=gcp.compute.RegionHealthCheckHttpHealthCheckArgs(
+        port=80,
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
+default_region_backend_service = gcp.compute.RegionBackendService("defaultRegionBackendService",
+    region="us-central1",
+    health_checks=[default_region_health_check.id],
+    enable_cdn=True,
+    cdn_policy=gcp.compute.RegionBackendServiceCdnPolicyArgs(
+        cache_mode="CACHE_ALL_STATIC",
+        default_ttl=3600,
+        client_ttl=7200,
+        max_ttl=10800,
+        negative_caching=True,
+        signed_url_cache_max_age_sec=7200,
+    ),
+    load_balancing_scheme="EXTERNAL",
+    protocol="HTTP")
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultRegionHealthCheck = new gcp.compute.RegionHealthCheck("defaultRegionHealthCheck", {
+    region: "us-central1",
+    httpHealthCheck: {
+        port: 80,
+    },
+}, {
+    provider: google_beta,
+});
+const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaultRegionBackendService", {
+    region: "us-central1",
+    healthChecks: [defaultRegionHealthCheck.id],
+    enableCdn: true,
+    cdnPolicy: {
+        cacheMode: "CACHE_ALL_STATIC",
+        defaultTtl: 3600,
+        clientTtl: 7200,
+        maxTtl: 10800,
+        negativeCaching: true,
+        signedUrlCacheMaxAgeSec: 7200,
+    },
+    loadBalancingScheme: "EXTERNAL",
+    protocol: "HTTP",
 });
 ```
 
@@ -897,19 +1054,19 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionBackendService">RegionBackendService</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionBackendServiceArgs">RegionBackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionBackendService">RegionBackendService</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionBackendServiceArgs">RegionBackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionBackendService">RegionBackendService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionBackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/compute/#pulumi_gcp.compute.RegionBackendService">RegionBackendService</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionBackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendService">NewRegionBackendService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceArgs">RegionBackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendService">RegionBackendService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendService">NewRegionBackendService</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceArgs">RegionBackendServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendService">RegionBackendService</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendService.html">RegionBackendService</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendServiceArgs.html">RegionBackendServiceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendService.html">RegionBackendService</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendServiceArgs.html">RegionBackendServiceArgs</a></span><span class="p">? </span><span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -920,7 +1077,7 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -989,7 +1146,7 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1028,7 +1185,7 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -1069,7 +1226,6 @@ The RegionBackendService resource accepts the following [input]({{< relref "/doc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1077,9 +1233,9 @@ The RegionBackendService resource accepts the following [input]({{< relref "/doc
             title="Optional">
         <span id="affinitycookiettlsec_csharp">
 <a href="#affinitycookiettlsec_csharp" style="color: inherit; text-decoration: inherit;">Affinity<wbr>Cookie<wbr>Ttl<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -1087,24 +1243,33 @@ only until the end of the browser session (or equivalent). The
 maximum allowed value for TTL is one day.
 When the load balancing scheme is INTERNAL, this field is not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backends_csharp">
 <a href="#backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">List&lt;Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cdnpolicy_csharp">
+<a href="#cdnpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="circuitbreakers_csharp">
 <a href="#circuitbreakers_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Breakers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
@@ -1113,24 +1278,22 @@ is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
 and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectiondrainingtimeoutsec_csharp">
 <a href="#connectiondrainingtimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Draining<wbr>Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consistenthash_csharp">
 <a href="#consistenthash_csharp" style="color: inherit; text-decoration: inherit;">Consistent<wbr>Hash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
@@ -1142,38 +1305,45 @@ destination service. This field specifies parameters that control consistent
 hashing.
 This field only applies when all of the following are true -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablecdn_csharp">
+<a href="#enablecdn_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, enable Cloud CDN for this RegionBackendService.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="failoverpolicy_csharp">
 <a href="#failoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for failovers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecks_csharp">
 <a href="#healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
@@ -1181,14 +1351,13 @@ check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancingscheme_csharp">
 <a href="#loadbalancingscheme_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
@@ -1196,14 +1365,13 @@ balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localitylbpolicy_csharp">
 <a href="#localitylbpolicy_csharp" style="color: inherit; text-decoration: inherit;">Locality<wbr>Lb<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -1229,12 +1397,11 @@ This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logconfig_csharp">
 <a href="#logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -1242,35 +1409,32 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 If logging is enabled, logs will be exported to Stackdriver.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_csharp">
 <a href="#network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which this backend service belongs.
 This field can only be specified when the load balancing scheme is set to INTERNAL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outlierdetection_csharp">
 <a href="#outlierdetection_csharp" style="color: inherit; text-decoration: inherit;">Outlier<wbr>Detection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
@@ -1279,14 +1443,13 @@ This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portname_csharp">
 <a href="#portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named port on a backend instance group representing the port for
 communication to the backend VMs in that group. Required when the
@@ -1296,73 +1459,66 @@ backend instance group. This parameter has no meaning if the backends are NEGs. 
 default of "http" if not given.
 Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, `UDP`, and `GRPC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created backend service should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_csharp">
 <a href="#sessionaffinity_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
 Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_csharp">
 <a href="#timeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1371,9 +1527,9 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
             title="Optional">
         <span id="affinitycookiettlsec_go">
 <a href="#affinitycookiettlsec_go" style="color: inherit; text-decoration: inherit;">Affinity<wbr>Cookie<wbr>Ttl<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -1381,24 +1537,33 @@ only until the end of the browser session (or equivalent). The
 maximum allowed value for TTL is one day.
 When the load balancing scheme is INTERNAL, this field is not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backends_go">
 <a href="#backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">[]Region<wbr>Backend<wbr>Service<wbr>Backend</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cdnpolicy_go">
+<a href="#cdnpolicy_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="circuitbreakers_go">
 <a href="#circuitbreakers_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Breakers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
@@ -1407,24 +1572,22 @@ is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
 and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectiondrainingtimeoutsec_go">
 <a href="#connectiondrainingtimeoutsec_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Draining<wbr>Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consistenthash_go">
 <a href="#consistenthash_go" style="color: inherit; text-decoration: inherit;">Consistent<wbr>Hash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
@@ -1436,38 +1599,45 @@ destination service. This field specifies parameters that control consistent
 hashing.
 This field only applies when all of the following are true -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablecdn_go">
+<a href="#enablecdn_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, enable Cloud CDN for this RegionBackendService.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="failoverpolicy_go">
 <a href="#failoverpolicy_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy for failovers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecks_go">
 <a href="#healthchecks_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
@@ -1475,14 +1645,13 @@ check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancingscheme_go">
 <a href="#loadbalancingscheme_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
@@ -1490,14 +1659,13 @@ balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localitylbpolicy_go">
 <a href="#localitylbpolicy_go" style="color: inherit; text-decoration: inherit;">Locality<wbr>Lb<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -1523,12 +1691,11 @@ This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logconfig_go">
 <a href="#logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
@@ -1536,35 +1703,32 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 If logging is enabled, logs will be exported to Stackdriver.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_go">
 <a href="#network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which this backend service belongs.
 This field can only be specified when the load balancing scheme is set to INTERNAL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outlierdetection_go">
 <a href="#outlierdetection_go" style="color: inherit; text-decoration: inherit;">Outlier<wbr>Detection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
     </dt>
@@ -1573,14 +1737,13 @@ This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portname_go">
 <a href="#portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named port on a backend instance group representing the port for
 communication to the backend VMs in that group. Required when the
@@ -1590,73 +1753,66 @@ backend instance group. This parameter has no meaning if the backends are NEGs. 
 default of "http" if not given.
 Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
 <a href="#protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, `UDP`, and `GRPC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
 <a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created backend service should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_go">
 <a href="#sessionaffinity_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
 Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_go">
 <a href="#timeoutsec_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1665,9 +1821,9 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
             title="Optional">
         <span id="affinitycookiettlsec_nodejs">
 <a href="#affinitycookiettlsec_nodejs" style="color: inherit; text-decoration: inherit;">affinity<wbr>Cookie<wbr>Ttl<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -1675,24 +1831,33 @@ only until the end of the browser session (or equivalent). The
 maximum allowed value for TTL is one day.
 When the load balancing scheme is INTERNAL, this field is not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backends_nodejs">
 <a href="#backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">Region<wbr>Backend<wbr>Service<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cdnpolicy_nodejs">
+<a href="#cdnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="circuitbreakers_nodejs">
 <a href="#circuitbreakers_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Breakers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
@@ -1701,24 +1866,22 @@ is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
 and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connectiondrainingtimeoutsec_nodejs">
 <a href="#connectiondrainingtimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining<wbr>Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consistenthash_nodejs">
 <a href="#consistenthash_nodejs" style="color: inherit; text-decoration: inherit;">consistent<wbr>Hash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
@@ -1730,38 +1893,45 @@ destination service. This field specifies parameters that control consistent
 hashing.
 This field only applies when all of the following are true -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablecdn_nodejs">
+<a href="#enablecdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, enable Cloud CDN for this RegionBackendService.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="failoverpolicy_nodejs">
 <a href="#failoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy for failovers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecks_nodejs">
 <a href="#healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
@@ -1769,14 +1939,13 @@ check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancingscheme_nodejs">
 <a href="#loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
@@ -1784,14 +1953,13 @@ balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localitylbpolicy_nodejs">
 <a href="#localitylbpolicy_nodejs" style="color: inherit; text-decoration: inherit;">locality<wbr>Lb<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -1817,12 +1985,11 @@ This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logconfig_nodejs">
 <a href="#logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
@@ -1830,35 +1997,32 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 If logging is enabled, logs will be exported to Stackdriver.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_nodejs">
 <a href="#network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which this backend service belongs.
 This field can only be specified when the load balancing scheme is set to INTERNAL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outlierdetection_nodejs">
 <a href="#outlierdetection_nodejs" style="color: inherit; text-decoration: inherit;">outlier<wbr>Detection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
     </dt>
@@ -1867,14 +2031,13 @@ This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="portname_nodejs">
 <a href="#portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named port on a backend instance group representing the port for
 communication to the backend VMs in that group. Required when the
@@ -1884,73 +2047,66 @@ backend instance group. This parameter has no meaning if the backends are NEGs. 
 default of "http" if not given.
 Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, `UDP`, and `GRPC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created backend service should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sessionaffinity_nodejs">
 <a href="#sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
 Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeoutsec_nodejs">
 <a href="#timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1959,9 +2115,9 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
             title="Optional">
         <span id="affinity_cookie_ttl_sec_python">
 <a href="#affinity_cookie_ttl_sec_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>cookie_<wbr>ttl_<wbr>sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -1969,24 +2125,33 @@ only until the end of the browser session (or equivalent). The
 maximum allowed value for TTL is one day.
 When the load balancing scheme is INTERNAL, this field is not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="backends_python">
 <a href="#backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">Sequence[Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cdn_policy_python">
+<a href="#cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="circuit_breakers_python">
 <a href="#circuit_breakers_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>breakers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
@@ -1995,24 +2160,22 @@ is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
 and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="connection_draining_timeout_sec_python">
 <a href="#connection_draining_timeout_sec_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining_<wbr>timeout_<wbr>sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consistent_hash_python">
 <a href="#consistent_hash_python" style="color: inherit; text-decoration: inherit;">consistent_<wbr>hash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
@@ -2024,38 +2187,45 @@ destination service. This field specifies parameters that control consistent
 hashing.
 This field only applies when all of the following are true -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_cdn_python">
+<a href="#enable_cdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, enable Cloud CDN for this RegionBackendService.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="failover_policy_python">
 <a href="#failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for failovers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="health_checks_python">
 <a href="#health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
@@ -2063,14 +2233,13 @@ check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="load_balancing_scheme_python">
 <a href="#load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
@@ -2078,14 +2247,13 @@ balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="locality_lb_policy_python">
 <a href="#locality_lb_policy_python" style="color: inherit; text-decoration: inherit;">locality_<wbr>lb_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -2111,12 +2279,11 @@ This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="log_config_python">
 <a href="#log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -2124,35 +2291,32 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 If logging is enabled, logs will be exported to Stackdriver.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="network_python">
 <a href="#network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which this backend service belongs.
 This field can only be specified when the load balancing scheme is set to INTERNAL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outlier_detection_python">
 <a href="#outlier_detection_python" style="color: inherit; text-decoration: inherit;">outlier_<wbr>detection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
@@ -2161,14 +2325,13 @@ This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="port_name_python">
 <a href="#port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A named port on a backend instance group representing the port for
 communication to the backend VMs in that group. Required when the
@@ -2178,82 +2341,71 @@ backend instance group. This parameter has no meaning if the backends are NEGs. 
 default of "http" if not given.
 Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
 <a href="#protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, `UDP`, and `GRPC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
 <a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Region in which the created backend service should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="session_affinity_python">
 <a href="#session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
 Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timeout_sec_python">
 <a href="#timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the RegionBackendService resource produces the following output properties:
-
 
 
 
@@ -2264,48 +2416,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationtimestamp_csharp">
 <a href="#creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fingerprint_csharp">
 <a href="#fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_csharp">
 <a href="#selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2314,48 +2461,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationtimestamp_go">
 <a href="#creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fingerprint_go">
 <a href="#fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_go">
 <a href="#selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2364,48 +2506,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationtimestamp_nodejs">
 <a href="#creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fingerprint_nodejs">
 <a href="#fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="selflink_nodejs">
 <a href="#selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2414,51 +2551,43 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creation_timestamp_python">
 <a href="#creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="fingerprint_python">
 <a href="#fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="self_link_python">
 <a href="#self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -2468,20 +2597,20 @@ Get an existing RegionBackendService resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionBackendServiceState">RegionBackendServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionBackendService">RegionBackendService</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionBackendServiceState">RegionBackendServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionBackendService">RegionBackendService</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionBackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> RegionBackendService</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">affinity_cookie_ttl_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">backends</span><span class="p">:</span> <span class="nx">Optional[Sequence[RegionBackendServiceBackendArgs]]</span> = None<span class="p">, </span><span class="nx">cdn_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCdnPolicyArgs]</span> = None<span class="p">, </span><span class="nx">circuit_breakers</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceCircuitBreakersArgs]</span> = None<span class="p">, </span><span class="nx">connection_draining_timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">consistent_hash</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceConsistentHashArgs]</span> = None<span class="p">, </span><span class="nx">creation_timestamp</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">enable_cdn</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">failover_policy</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceFailoverPolicyArgs]</span> = None<span class="p">, </span><span class="nx">fingerprint</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">health_checks</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">load_balancing_scheme</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">locality_lb_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_config</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceLogConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">outlier_detection</span><span class="p">:</span> <span class="nx">Optional[RegionBackendServiceOutlierDetectionArgs]</span> = None<span class="p">, </span><span class="nx">port_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_affinity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">timeout_sec</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">) -&gt;</span> RegionBackendService</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceState">RegionBackendServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendService">RegionBackendService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionBackendService<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceState">RegionBackendServiceState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendService">RegionBackendService</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendService.html">RegionBackendService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendServiceState.html">RegionBackendServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendService.html">RegionBackendService</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.RegionBackendServiceState.html">RegionBackendServiceState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -2583,7 +2712,6 @@ Get an existing RegionBackendService resource's state with the given name, ID, a
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -2591,9 +2719,9 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_affinitycookiettlsec_csharp">
 <a href="#state_affinitycookiettlsec_csharp" style="color: inherit; text-decoration: inherit;">Affinity<wbr>Cookie<wbr>Ttl<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -2601,24 +2729,33 @@ only until the end of the browser session (or equivalent). The
 maximum allowed value for TTL is one day.
 When the load balancing scheme is INTERNAL, this field is not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backends_csharp">
 <a href="#state_backends_csharp" style="color: inherit; text-decoration: inherit;">Backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">List&lt;Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cdnpolicy_csharp">
+<a href="#state_cdnpolicy_csharp" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_circuitbreakers_csharp">
 <a href="#state_circuitbreakers_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Breakers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
@@ -2627,24 +2764,22 @@ is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
 and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectiondrainingtimeoutsec_csharp">
 <a href="#state_connectiondrainingtimeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Connection<wbr>Draining<wbr>Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_consistenthash_csharp">
 <a href="#state_consistenthash_csharp" style="color: inherit; text-decoration: inherit;">Consistent<wbr>Hash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
@@ -2656,60 +2791,65 @@ destination service. This field specifies parameters that control consistent
 hashing.
 This field only applies when all of the following are true -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_csharp">
 <a href="#state_creationtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablecdn_csharp">
+<a href="#state_enablecdn_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, enable Cloud CDN for this RegionBackendService.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_failoverpolicy_csharp">
 <a href="#state_failoverpolicy_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for failovers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_csharp">
 <a href="#state_fingerprint_csharp" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecks_csharp">
 <a href="#state_healthchecks_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
@@ -2717,14 +2857,13 @@ check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingscheme_csharp">
 <a href="#state_loadbalancingscheme_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
@@ -2732,14 +2871,13 @@ balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_localitylbpolicy_csharp">
 <a href="#state_localitylbpolicy_csharp" style="color: inherit; text-decoration: inherit;">Locality<wbr>Lb<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -2765,12 +2903,11 @@ This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_csharp">
 <a href="#state_logconfig_csharp" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -2778,35 +2915,32 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 If logging is enabled, logs will be exported to Stackdriver.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_csharp">
 <a href="#state_network_csharp" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which this backend service belongs.
 This field can only be specified when the load balancing scheme is set to INTERNAL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_outlierdetection_csharp">
 <a href="#state_outlierdetection_csharp" style="color: inherit; text-decoration: inherit;">Outlier<wbr>Detection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
@@ -2815,14 +2949,13 @@ This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portname_csharp">
 <a href="#state_portname_csharp" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named port on a backend instance group representing the port for
 communication to the backend VMs in that group. Required when the
@@ -2832,84 +2965,76 @@ backend instance group. This parameter has no meaning if the backends are NEGs. 
 default of "http" if not given.
 Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_csharp">
 <a href="#state_protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, `UDP`, and `GRPC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_csharp">
 <a href="#state_region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created backend service should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_csharp">
 <a href="#state_selflink_csharp" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinity_csharp">
 <a href="#state_sessionaffinity_csharp" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
 Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeoutsec_csharp">
 <a href="#state_timeoutsec_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2918,9 +3043,9 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
             title="Optional">
         <span id="state_affinitycookiettlsec_go">
 <a href="#state_affinitycookiettlsec_go" style="color: inherit; text-decoration: inherit;">Affinity<wbr>Cookie<wbr>Ttl<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -2928,24 +3053,33 @@ only until the end of the browser session (or equivalent). The
 maximum allowed value for TTL is one day.
 When the load balancing scheme is INTERNAL, this field is not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backends_go">
 <a href="#state_backends_go" style="color: inherit; text-decoration: inherit;">Backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">[]Region<wbr>Backend<wbr>Service<wbr>Backend</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cdnpolicy_go">
+<a href="#state_cdnpolicy_go" style="color: inherit; text-decoration: inherit;">Cdn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_circuitbreakers_go">
 <a href="#state_circuitbreakers_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Breakers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
@@ -2954,24 +3088,22 @@ is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
 and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectiondrainingtimeoutsec_go">
 <a href="#state_connectiondrainingtimeoutsec_go" style="color: inherit; text-decoration: inherit;">Connection<wbr>Draining<wbr>Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_consistenthash_go">
 <a href="#state_consistenthash_go" style="color: inherit; text-decoration: inherit;">Consistent<wbr>Hash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
@@ -2983,60 +3115,65 @@ destination service. This field specifies parameters that control consistent
 hashing.
 This field only applies when all of the following are true -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_go">
 <a href="#state_creationtimestamp_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablecdn_go">
+<a href="#state_enablecdn_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Cdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, enable Cloud CDN for this RegionBackendService.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_failoverpolicy_go">
 <a href="#state_failoverpolicy_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy for failovers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_go">
 <a href="#state_fingerprint_go" style="color: inherit; text-decoration: inherit;">Fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecks_go">
 <a href="#state_healthchecks_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Checks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
@@ -3044,14 +3181,13 @@ check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingscheme_go">
 <a href="#state_loadbalancingscheme_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancing<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
@@ -3059,14 +3195,13 @@ balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_localitylbpolicy_go">
 <a href="#state_localitylbpolicy_go" style="color: inherit; text-decoration: inherit;">Locality<wbr>Lb<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -3092,12 +3227,11 @@ This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_go">
 <a href="#state_logconfig_go" style="color: inherit; text-decoration: inherit;">Log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
@@ -3105,35 +3239,32 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 If logging is enabled, logs will be exported to Stackdriver.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_go">
 <a href="#state_network_go" style="color: inherit; text-decoration: inherit;">Network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which this backend service belongs.
 This field can only be specified when the load balancing scheme is set to INTERNAL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_outlierdetection_go">
 <a href="#state_outlierdetection_go" style="color: inherit; text-decoration: inherit;">Outlier<wbr>Detection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
     </dt>
@@ -3142,14 +3273,13 @@ This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portname_go">
 <a href="#state_portname_go" style="color: inherit; text-decoration: inherit;">Port<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named port on a backend instance group representing the port for
 communication to the backend VMs in that group. Required when the
@@ -3159,84 +3289,76 @@ backend instance group. This parameter has no meaning if the backends are NEGs. 
 default of "http" if not given.
 Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_go">
 <a href="#state_protocol_go" style="color: inherit; text-decoration: inherit;">Protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, `UDP`, and `GRPC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_go">
 <a href="#state_region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created backend service should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_go">
 <a href="#state_selflink_go" style="color: inherit; text-decoration: inherit;">Self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinity_go">
 <a href="#state_sessionaffinity_go" style="color: inherit; text-decoration: inherit;">Session<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
 Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeoutsec_go">
 <a href="#state_timeoutsec_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3245,9 +3367,9 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
             title="Optional">
         <span id="state_affinitycookiettlsec_nodejs">
 <a href="#state_affinitycookiettlsec_nodejs" style="color: inherit; text-decoration: inherit;">affinity<wbr>Cookie<wbr>Ttl<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -3255,24 +3377,33 @@ only until the end of the browser session (or equivalent). The
 maximum allowed value for TTL is one day.
 When the load balancing scheme is INTERNAL, this field is not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backends_nodejs">
 <a href="#state_backends_nodejs" style="color: inherit; text-decoration: inherit;">backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">Region<wbr>Backend<wbr>Service<wbr>Backend[]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cdnpolicy_nodejs">
+<a href="#state_cdnpolicy_nodejs" style="color: inherit; text-decoration: inherit;">cdn<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_circuitbreakers_nodejs">
 <a href="#state_circuitbreakers_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Breakers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers</a></span>
     </dt>
@@ -3281,24 +3412,22 @@ is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
 and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connectiondrainingtimeoutsec_nodejs">
 <a href="#state_connectiondrainingtimeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">connection<wbr>Draining<wbr>Timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_consistenthash_nodejs">
 <a href="#state_consistenthash_nodejs" style="color: inherit; text-decoration: inherit;">consistent<wbr>Hash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash</a></span>
     </dt>
@@ -3310,60 +3439,65 @@ destination service. This field specifies parameters that control consistent
 hashing.
 This field only applies when all of the following are true -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationtimestamp_nodejs">
 <a href="#state_creationtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enablecdn_nodejs">
+<a href="#state_enablecdn_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Cdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, enable Cloud CDN for this RegionBackendService.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_failoverpolicy_nodejs">
 <a href="#state_failoverpolicy_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}Policy for failovers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_nodejs">
 <a href="#state_fingerprint_nodejs" style="color: inherit; text-decoration: inherit;">fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecks_nodejs">
 <a href="#state_healthchecks_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Checks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
@@ -3371,14 +3505,13 @@ check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancingscheme_nodejs">
 <a href="#state_loadbalancingscheme_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancing<wbr>Scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
@@ -3386,14 +3519,13 @@ balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_localitylbpolicy_nodejs">
 <a href="#state_localitylbpolicy_nodejs" style="color: inherit; text-decoration: inherit;">locality<wbr>Lb<wbr>Policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -3419,12 +3551,11 @@ This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logconfig_nodejs">
 <a href="#state_logconfig_nodejs" style="color: inherit; text-decoration: inherit;">log<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</a></span>
     </dt>
@@ -3432,35 +3563,32 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 If logging is enabled, logs will be exported to Stackdriver.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_nodejs">
 <a href="#state_network_nodejs" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which this backend service belongs.
 This field can only be specified when the load balancing scheme is set to INTERNAL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_outlierdetection_nodejs">
 <a href="#state_outlierdetection_nodejs" style="color: inherit; text-decoration: inherit;">outlier<wbr>Detection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection</a></span>
     </dt>
@@ -3469,14 +3597,13 @@ This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_portname_nodejs">
 <a href="#state_portname_nodejs" style="color: inherit; text-decoration: inherit;">port<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A named port on a backend instance group representing the port for
 communication to the backend VMs in that group. Required when the
@@ -3486,84 +3613,76 @@ backend instance group. This parameter has no meaning if the backends are NEGs. 
 default of "http" if not given.
 Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_nodejs">
 <a href="#state_protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, `UDP`, and `GRPC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_nodejs">
 <a href="#state_region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Region in which the created backend service should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_selflink_nodejs">
 <a href="#state_selflink_nodejs" style="color: inherit; text-decoration: inherit;">self<wbr>Link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sessionaffinity_nodejs">
 <a href="#state_sessionaffinity_nodejs" style="color: inherit; text-decoration: inherit;">session<wbr>Affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
 Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeoutsec_nodejs">
 <a href="#state_timeoutsec_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3572,9 +3691,9 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
             title="Optional">
         <span id="state_affinity_cookie_ttl_sec_python">
 <a href="#state_affinity_cookie_ttl_sec_python" style="color: inherit; text-decoration: inherit;">affinity_<wbr>cookie_<wbr>ttl_<wbr>sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of cookies in seconds if session_affinity is
 GENERATED_COOKIE. If set to 0, the cookie is non-persistent and lasts
@@ -3582,24 +3701,33 @@ only until the end of the browser session (or equivalent). The
 maximum allowed value for TTL is one day.
 When the load balancing scheme is INTERNAL, this field is not used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_backends_python">
 <a href="#state_backends_python" style="color: inherit; text-decoration: inherit;">backends</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicebackend">Sequence[Region<wbr>Backend<wbr>Service<wbr>Backend<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The set of backends that serve this RegionBackendService.
 Structure is documented below.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_cdn_policy_python">
+<a href="#state_cdn_policy_python" style="color: inherit; text-decoration: inherit;">cdn_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Cloud CDN configuration for this BackendService.
+Structure is documented below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_circuit_breakers_python">
 <a href="#state_circuit_breakers_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>breakers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Args</a></span>
     </dt>
@@ -3608,24 +3736,22 @@ is applicable only when the `load_balancing_scheme` is set to INTERNAL_MANAGED
 and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_connection_draining_timeout_sec_python">
 <a href="#state_connection_draining_timeout_sec_python" style="color: inherit; text-decoration: inherit;">connection_<wbr>draining_<wbr>timeout_<wbr>sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Time for which instance will be drained (not accept new
 connections, but still work to finish started).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_consistent_hash_python">
 <a href="#state_consistent_hash_python" style="color: inherit; text-decoration: inherit;">consistent_<wbr>hash</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Args</a></span>
     </dt>
@@ -3637,60 +3763,65 @@ destination service. This field specifies parameters that control consistent
 hashing.
 This field only applies when all of the following are true -
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creation_timestamp_python">
 <a href="#state_creation_timestamp_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_enable_cdn_python">
+<a href="#state_enable_cdn_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>cdn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, enable Cloud CDN for this RegionBackendService.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_failover_policy_python">
 <a href="#state_failover_policy_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Policy for failovers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_fingerprint_python">
 <a href="#state_fingerprint_python" style="color: inherit; text-decoration: inherit;">fingerprint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_health_checks_python">
 <a href="#state_health_checks_python" style="color: inherit; text-decoration: inherit;">health_<wbr>checks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The set of URLs to HealthCheck resources for health checking
 this RegionBackendService. Currently at most one health
@@ -3698,14 +3829,13 @@ check can be specified.
 A health check must be specified unless the backend service uses an internet
 or serverless NEG as a backend.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_load_balancing_scheme_python">
 <a href="#state_load_balancing_scheme_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancing_<wbr>scheme</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates what kind of load balancing this regional backend service
 will be used for. A backend service created for one type of load
@@ -3713,14 +3843,13 @@ balancing cannot be used with the other(s).
 Default value is `INTERNAL`.
 Possible values are `EXTERNAL`, `INTERNAL`, and `INTERNAL_MANAGED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_locality_lb_policy_python">
 <a href="#state_locality_lb_policy_python" style="color: inherit; text-decoration: inherit;">locality_<wbr>lb_<wbr>policy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The load balancing algorithm used within the scope of the locality.
 The possible values are -
@@ -3746,12 +3875,11 @@ This field is applicable only when the `load_balancing_scheme` is set to
 INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIGINAL_DESTINATION`, and `MAGLEV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_log_config_python">
 <a href="#state_log_config_python" style="color: inherit; text-decoration: inherit;">log_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
@@ -3759,35 +3887,32 @@ Possible values are `ROUND_ROBIN`, `LEAST_REQUEST`, `RING_HASH`, `RANDOM`, `ORIG
 If logging is enabled, logs will be exported to Stackdriver.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_network_python">
 <a href="#state_network_python" style="color: inherit; text-decoration: inherit;">network</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the network to which this backend service belongs.
 This field can only be specified when the load balancing scheme is set to INTERNAL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_outlier_detection_python">
 <a href="#state_outlier_detection_python" style="color: inherit; text-decoration: inherit;">outlier_<wbr>detection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Args</a></span>
     </dt>
@@ -3796,14 +3921,13 @@ This field is applicable only when the `load_balancing_scheme` is set
 to INTERNAL_MANAGED and the `protocol` is set to HTTP, HTTPS, or HTTP2.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_port_name_python">
 <a href="#state_port_name_python" style="color: inherit; text-decoration: inherit;">port_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A named port on a backend instance group representing the port for
 communication to the backend VMs in that group. Required when the
@@ -3813,81 +3937,74 @@ backend instance group. This parameter has no meaning if the backends are NEGs. 
 default of "http" if not given.
 Must be omitted when the loadBalancingScheme is INTERNAL (Internal TCP/UDP Load Balancing).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_protocol_python">
 <a href="#state_protocol_python" style="color: inherit; text-decoration: inherit;">protocol</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol this RegionBackendService uses to communicate with backends.
 The default is HTTP. **NOTE**: HTTP2 is only valid for beta HTTP/2 load balancer
 types and may result in errors if used with the GA API.
 Possible values are `HTTP`, `HTTPS`, `HTTP2`, `SSL`, `TCP`, `UDP`, and `GRPC`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_region_python">
 <a href="#state_region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Region in which the created backend service should reside.
 If it is not provided, the provider region is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_self_link_python">
 <a href="#state_self_link_python" style="color: inherit; text-decoration: inherit;">self_<wbr>link</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_session_affinity_python">
 <a href="#state_session_affinity_python" style="color: inherit; text-decoration: inherit;">session_<wbr>affinity</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Type of session affinity to use. The default is NONE. Session affinity is
 not applicable if the protocol is UDP.
 Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_timeout_sec_python">
 <a href="#state_timeout_sec_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>sec</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many seconds to wait for the backend before considering it a
 failed request. Default is 30 seconds. Valid range is [1, 86400].
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -3896,11 +4013,8 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="regionbackendservicebackend">Region<wbr>Backend<wbr>Service<wbr>Backend</h4>
@@ -3911,11 +4025,10 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceBackendArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceBackendOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceBackendArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceBackend.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3925,9 +4038,9 @@ failed request. Default is 30 seconds. Valid range is [1, 86400].
             title="Required">
         <span id="group_csharp">
 <a href="#group_csharp" style="color: inherit; text-decoration: inherit;">Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URL of an Instance Group or Network Endpoint
 Group resource. In case of instance group this defines the list
@@ -3946,27 +4059,25 @@ Note that you must specify an Instance Group or Network Endpoint
 Group resource using the fully-qualified URL, rather than a
 partial URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="balancingmode_csharp">
 <a href="#balancingmode_csharp" style="color: inherit; text-decoration: inherit;">Balancing<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the balancing mode for this backend.
 Default value is `CONNECTION`.
 Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacityscaler_csharp">
 <a href="#capacityscaler_csharp" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Scaler</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}A multiplier applied to the group's maximum servicing capacity
 (based on UTILIZATION, RATE or CONNECTION).
@@ -3977,50 +4088,46 @@ capacity_scaler for all backends must be non-zero.
 A setting of 0 means the group is completely drained, offering
 0% of its available Capacity. Valid range is [0.0,1.0].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failover_csharp">
 <a href="#failover_csharp" style="color: inherit; text-decoration: inherit;">Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field designates whether this is a failover backend. More
 than one failover backend can be configured for a given RegionBackendService.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnections_csharp">
 <a href="#maxconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnectionsperendpoint_csharp">
 <a href="#maxconnectionsperendpoint_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections<wbr>Per<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single backend
 network endpoint can handle. Cannot be set
@@ -4030,14 +4137,13 @@ used in either CONNECTION or UTILIZATION balancing modes. For
 CONNECTION mode, either maxConnections or
 maxConnectionsPerEndpoint must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnectionsperinstance_csharp">
 <a href="#maxconnectionsperinstance_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections<wbr>Per<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single
 backend instance can handle. Cannot be set for INTERNAL backend
@@ -4047,14 +4153,13 @@ Can be used in either CONNECTION or UTILIZATION balancing modes.
 For CONNECTION mode, either maxConnections or
 maxConnectionsPerInstance must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrate_csharp">
 <a href="#maxrate_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) of the group. Cannot be set
 for INTERNAL backend services.
@@ -4063,14 +4168,13 @@ but required if RATE mode. Either maxRate or one
 of maxRatePerInstance or maxRatePerEndpoint, as appropriate for
 group type, must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrateperendpoint_csharp">
 <a href="#maxrateperendpoint_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Rate<wbr>Per<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend network
 endpoint can handle. This is used to calculate the capacity of
@@ -4078,14 +4182,13 @@ the group. Can be used in either balancing mode. For RATE mode,
 either maxRate or maxRatePerEndpoint must be set. Cannot be set
 for INTERNAL backend services.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrateperinstance_csharp">
 <a href="#maxrateperinstance_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Rate<wbr>Per<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend
 instance can handle. This is used to calculate the capacity of
@@ -4093,23 +4196,20 @@ the group. Can be used in either balancing mode. For RATE mode,
 either maxRate or maxRatePerInstance must be set. Cannot be set
 for INTERNAL backend services.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxutilization_csharp">
 <a href="#maxutilization_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Used when balancingMode is UTILIZATION. This ratio defines the
 CPU utilization target for the group. Valid range is [0.0, 1.0].
 Cannot be set for INTERNAL backend services.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4118,9 +4218,9 @@ Cannot be set for INTERNAL backend services.
             title="Required">
         <span id="group_go">
 <a href="#group_go" style="color: inherit; text-decoration: inherit;">Group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URL of an Instance Group or Network Endpoint
 Group resource. In case of instance group this defines the list
@@ -4139,27 +4239,25 @@ Note that you must specify an Instance Group or Network Endpoint
 Group resource using the fully-qualified URL, rather than a
 partial URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="balancingmode_go">
 <a href="#balancingmode_go" style="color: inherit; text-decoration: inherit;">Balancing<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the balancing mode for this backend.
 Default value is `CONNECTION`.
 Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacityscaler_go">
 <a href="#capacityscaler_go" style="color: inherit; text-decoration: inherit;">Capacity<wbr>Scaler</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}A multiplier applied to the group's maximum servicing capacity
 (based on UTILIZATION, RATE or CONNECTION).
@@ -4170,50 +4268,46 @@ capacity_scaler for all backends must be non-zero.
 A setting of 0 means the group is completely drained, offering
 0% of its available Capacity. Valid range is [0.0,1.0].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failover_go">
 <a href="#failover_go" style="color: inherit; text-decoration: inherit;">Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field designates whether this is a failover backend. More
 than one failover backend can be configured for a given RegionBackendService.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnections_go">
 <a href="#maxconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnectionsperendpoint_go">
 <a href="#maxconnectionsperendpoint_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections<wbr>Per<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single backend
 network endpoint can handle. Cannot be set
@@ -4223,14 +4317,13 @@ used in either CONNECTION or UTILIZATION balancing modes. For
 CONNECTION mode, either maxConnections or
 maxConnectionsPerEndpoint must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnectionsperinstance_go">
 <a href="#maxconnectionsperinstance_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections<wbr>Per<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single
 backend instance can handle. Cannot be set for INTERNAL backend
@@ -4240,14 +4333,13 @@ Can be used in either CONNECTION or UTILIZATION balancing modes.
 For CONNECTION mode, either maxConnections or
 maxConnectionsPerInstance must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrate_go">
 <a href="#maxrate_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) of the group. Cannot be set
 for INTERNAL backend services.
@@ -4256,14 +4348,13 @@ but required if RATE mode. Either maxRate or one
 of maxRatePerInstance or maxRatePerEndpoint, as appropriate for
 group type, must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrateperendpoint_go">
 <a href="#maxrateperendpoint_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Rate<wbr>Per<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend network
 endpoint can handle. This is used to calculate the capacity of
@@ -4271,14 +4362,13 @@ the group. Can be used in either balancing mode. For RATE mode,
 either maxRate or maxRatePerEndpoint must be set. Cannot be set
 for INTERNAL backend services.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrateperinstance_go">
 <a href="#maxrateperinstance_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Rate<wbr>Per<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend
 instance can handle. This is used to calculate the capacity of
@@ -4286,23 +4376,20 @@ the group. Can be used in either balancing mode. For RATE mode,
 either maxRate or maxRatePerInstance must be set. Cannot be set
 for INTERNAL backend services.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxutilization_go">
 <a href="#maxutilization_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Used when balancingMode is UTILIZATION. This ratio defines the
 CPU utilization target for the group. Valid range is [0.0, 1.0].
 Cannot be set for INTERNAL backend services.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4311,9 +4398,9 @@ Cannot be set for INTERNAL backend services.
             title="Required">
         <span id="group_nodejs">
 <a href="#group_nodejs" style="color: inherit; text-decoration: inherit;">group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URL of an Instance Group or Network Endpoint
 Group resource. In case of instance group this defines the list
@@ -4332,27 +4419,25 @@ Note that you must specify an Instance Group or Network Endpoint
 Group resource using the fully-qualified URL, rather than a
 partial URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="balancingmode_nodejs">
 <a href="#balancingmode_nodejs" style="color: inherit; text-decoration: inherit;">balancing<wbr>Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the balancing mode for this backend.
 Default value is `CONNECTION`.
 Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacityscaler_nodejs">
 <a href="#capacityscaler_nodejs" style="color: inherit; text-decoration: inherit;">capacity<wbr>Scaler</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A multiplier applied to the group's maximum servicing capacity
 (based on UTILIZATION, RATE or CONNECTION).
@@ -4363,50 +4448,46 @@ capacity_scaler for all backends must be non-zero.
 A setting of 0 means the group is completely drained, offering
 0% of its available Capacity. Valid range is [0.0,1.0].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failover_nodejs">
 <a href="#failover_nodejs" style="color: inherit; text-decoration: inherit;">failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This field designates whether this is a failover backend. More
 than one failover backend can be configured for a given RegionBackendService.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnections_nodejs">
 <a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnectionsperendpoint_nodejs">
 <a href="#maxconnectionsperendpoint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single backend
 network endpoint can handle. Cannot be set
@@ -4416,14 +4497,13 @@ used in either CONNECTION or UTILIZATION balancing modes. For
 CONNECTION mode, either maxConnections or
 maxConnectionsPerEndpoint must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnectionsperinstance_nodejs">
 <a href="#maxconnectionsperinstance_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections<wbr>Per<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single
 backend instance can handle. Cannot be set for INTERNAL backend
@@ -4433,14 +4513,13 @@ Can be used in either CONNECTION or UTILIZATION balancing modes.
 For CONNECTION mode, either maxConnections or
 maxConnectionsPerInstance must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrate_nodejs">
 <a href="#maxrate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) of the group. Cannot be set
 for INTERNAL backend services.
@@ -4449,14 +4528,13 @@ but required if RATE mode. Either maxRate or one
 of maxRatePerInstance or maxRatePerEndpoint, as appropriate for
 group type, must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrateperendpoint_nodejs">
 <a href="#maxrateperendpoint_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend network
 endpoint can handle. This is used to calculate the capacity of
@@ -4464,14 +4542,13 @@ the group. Can be used in either balancing mode. For RATE mode,
 either maxRate or maxRatePerEndpoint must be set. Cannot be set
 for INTERNAL backend services.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrateperinstance_nodejs">
 <a href="#maxrateperinstance_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Rate<wbr>Per<wbr>Instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend
 instance can handle. This is used to calculate the capacity of
@@ -4479,23 +4556,20 @@ the group. Can be used in either balancing mode. For RATE mode,
 either maxRate or maxRatePerInstance must be set. Cannot be set
 for INTERNAL backend services.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxutilization_nodejs">
 <a href="#maxutilization_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Used when balancingMode is UTILIZATION. This ratio defines the
 CPU utilization target for the group. Valid range is [0.0, 1.0].
 Cannot be set for INTERNAL backend services.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4504,9 +4578,9 @@ Cannot be set for INTERNAL backend services.
             title="Required">
         <span id="group_python">
 <a href="#group_python" style="color: inherit; text-decoration: inherit;">group</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully-qualified URL of an Instance Group or Network Endpoint
 Group resource. In case of instance group this defines the list
@@ -4525,27 +4599,25 @@ Note that you must specify an Instance Group or Network Endpoint
 Group resource using the fully-qualified URL, rather than a
 partial URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="balancing_mode_python">
 <a href="#balancing_mode_python" style="color: inherit; text-decoration: inherit;">balancing_<wbr>mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the balancing mode for this backend.
 Default value is `CONNECTION`.
 Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_scaler_python">
 <a href="#capacity_scaler_python" style="color: inherit; text-decoration: inherit;">capacity_<wbr>scaler</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A multiplier applied to the group's maximum servicing capacity
 (based on UTILIZATION, RATE or CONNECTION).
@@ -4556,50 +4628,46 @@ capacity_scaler for all backends must be non-zero.
 A setting of 0 means the group is completely drained, offering
 0% of its available Capacity. Valid range is [0.0,1.0].
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
 Provide this property when you create the resource.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failover_python">
 <a href="#failover_python" style="color: inherit; text-decoration: inherit;">failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This field designates whether this is a failover backend. More
 than one failover backend can be configured for a given RegionBackendService.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_connections_python">
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_connections_per_endpoint_python">
 <a href="#max_connections_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single backend
 network endpoint can handle. Cannot be set
@@ -4609,14 +4677,13 @@ used in either CONNECTION or UTILIZATION balancing modes. For
 CONNECTION mode, either maxConnections or
 maxConnectionsPerEndpoint must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_connections_per_instance_python">
 <a href="#max_connections_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections_<wbr>per_<wbr>instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max number of simultaneous connections that a single
 backend instance can handle. Cannot be set for INTERNAL backend
@@ -4626,14 +4693,13 @@ Can be used in either CONNECTION or UTILIZATION balancing modes.
 For CONNECTION mode, either maxConnections or
 maxConnectionsPerInstance must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_rate_python">
 <a href="#max_rate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) of the group. Cannot be set
 for INTERNAL backend services.
@@ -4642,14 +4708,13 @@ but required if RATE mode. Either maxRate or one
 of maxRatePerInstance or maxRatePerEndpoint, as appropriate for
 group type, must be set.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_rate_per_endpoint_python">
 <a href="#max_rate_per_endpoint_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>endpoint</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend network
 endpoint can handle. This is used to calculate the capacity of
@@ -4657,14 +4722,13 @@ the group. Can be used in either balancing mode. For RATE mode,
 either maxRate or maxRatePerEndpoint must be set. Cannot be set
 for INTERNAL backend services.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_rate_per_instance_python">
 <a href="#max_rate_per_instance_python" style="color: inherit; text-decoration: inherit;">max_<wbr>rate_<wbr>per_<wbr>instance</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The max requests per second (RPS) that a single backend
 instance can handle. This is used to calculate the capacity of
@@ -4672,26 +4736,826 @@ the group. Can be used in either balancing mode. For RATE mode,
 either maxRate or maxRatePerInstance must be set. Cannot be set
 for INTERNAL backend services.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_utilization_python">
 <a href="#max_utilization_python" style="color: inherit; text-decoration: inherit;">max_<wbr>utilization</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Used when balancingMode is UTILIZATION. This ratio defines the
 CPU utilization target for the group. Valid range is [0.0, 1.0].
 Cannot be set for INTERNAL backend services.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
+<h4 id="regionbackendservicecdnpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceCdnPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceCdnPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceCdnPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceCdnPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceCdnPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceCdnPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
 
 
+{{% choosable language csharp %}}
+<dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cachekeypolicy_csharp">
+<a href="#cachekeypolicy_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicycachekeypolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cachemode_csharp">
+<a href="#cachemode_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientttl_csharp">
+<a href="#clientttl_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultttl_csharp">
+<a href="#defaultttl_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxttl_csharp">
+<a href="#maxttl_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negativecaching_csharp">
+<a href="#negativecaching_csharp" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negativecachingpolicies_csharp">
+<a href="#negativecachingpolicies_csharp" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">List&lt;Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servewhilestale_csharp">
+<a href="#servewhilestale_csharp" style="color: inherit; text-decoration: inherit;">Serve<wbr>While<wbr>Stale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signedurlcachemaxagesec_csharp">
+<a href="#signedurlcachemaxagesec_csharp" style="color: inherit; text-decoration: inherit;">Signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of seconds the response to a signed URL request
+will be considered fresh, defaults to 1hr (3600s). After this
+time period, the response will be revalidated before
+being served.
+When serving responses to signed URL requests, Cloud CDN will
+internally behave as though all responses from this backend had a
+"Cache-Control: public, max-age=[TTL]" header, regardless of any
+existing Cache-Control header. The actual headers served in
+responses will not be altered.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cachekeypolicy_go">
+<a href="#cachekeypolicy_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Key<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicycachekeypolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cachemode_go">
+<a href="#cachemode_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientttl_go">
+<a href="#clientttl_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultttl_go">
+<a href="#defaultttl_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxttl_go">
+<a href="#maxttl_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negativecaching_go">
+<a href="#negativecaching_go" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negativecachingpolicies_go">
+<a href="#negativecachingpolicies_go" style="color: inherit; text-decoration: inherit;">Negative<wbr>Caching<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">[]Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servewhilestale_go">
+<a href="#servewhilestale_go" style="color: inherit; text-decoration: inherit;">Serve<wbr>While<wbr>Stale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signedurlcachemaxagesec_go">
+<a href="#signedurlcachemaxagesec_go" style="color: inherit; text-decoration: inherit;">Signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of seconds the response to a signed URL request
+will be considered fresh, defaults to 1hr (3600s). After this
+time period, the response will be revalidated before
+being served.
+When serving responses to signed URL requests, Cloud CDN will
+internally behave as though all responses from this backend had a
+"Cache-Control: public, max-age=[TTL]" header, regardless of any
+existing Cache-Control header. The actual headers served in
+responses will not be altered.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cachekeypolicy_nodejs">
+<a href="#cachekeypolicy_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Key<wbr>Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicycachekeypolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cachemode_nodejs">
+<a href="#cachemode_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clientttl_nodejs">
+<a href="#clientttl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultttl_nodejs">
+<a href="#defaultttl_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxttl_nodejs">
+<a href="#maxttl_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negativecaching_nodejs">
+<a href="#negativecaching_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negativecachingpolicies_nodejs">
+<a href="#negativecachingpolicies_nodejs" style="color: inherit; text-decoration: inherit;">negative<wbr>Caching<wbr>Policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servewhilestale_nodejs">
+<a href="#servewhilestale_nodejs" style="color: inherit; text-decoration: inherit;">serve<wbr>While<wbr>Stale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signedurlcachemaxagesec_nodejs">
+<a href="#signedurlcachemaxagesec_nodejs" style="color: inherit; text-decoration: inherit;">signed<wbr>Url<wbr>Cache<wbr>Max<wbr>Age<wbr>Sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of seconds the response to a signed URL request
+will be considered fresh, defaults to 1hr (3600s). After this
+time period, the response will be revalidated before
+being served.
+When serving responses to signed URL requests, Cloud CDN will
+internally behave as though all responses from this backend had a
+"Cache-Control: public, max-age=[TTL]" header, regardless of any
+existing Cache-Control header. The actual headers served in
+responses will not be altered.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cache_key_policy_python">
+<a href="#cache_key_policy_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>key_<wbr>policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicycachekeypolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CacheKeyPolicy for this CdnPolicy.
+Structure is documented below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cache_mode_python">
+<a href="#cache_mode_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="client_ttl_python">
+<a href="#client_ttl_python" style="color: inherit; text-decoration: inherit;">client_<wbr>ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_ttl_python">
+<a href="#default_ttl_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_ttl_python">
+<a href="#max_ttl_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negative_caching_python">
+<a href="#negative_caching_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="negative_caching_policies_python">
+<a href="#negative_caching_policies_python" style="color: inherit; text-decoration: inherit;">negative_<wbr>caching_<wbr>policies</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#regionbackendservicecdnpolicynegativecachingpolicy">Sequence[Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serve_while_stale_python">
+<a href="#serve_while_stale_python" style="color: inherit; text-decoration: inherit;">serve_<wbr>while_<wbr>stale</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="signed_url_cache_max_age_sec_python">
+<a href="#signed_url_cache_max_age_sec_python" style="color: inherit; text-decoration: inherit;">signed_<wbr>url_<wbr>cache_<wbr>max_<wbr>age_<wbr>sec</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum number of seconds the response to a signed URL request
+will be considered fresh, defaults to 1hr (3600s). After this
+time period, the response will be revalidated before
+being served.
+When serving responses to signed URL requests, Cloud CDN will
+internally behave as though all responses from this backend had a
+"Cache-Control: public, max-age=[TTL]" header, regardless of any
+existing Cache-Control header. The actual headers served in
+responses will not be altered.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="regionbackendservicecdnpolicycachekeypolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Cache<wbr>Key<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceCdnPolicyCacheKeyPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceCdnPolicyCacheKeyPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceCdnPolicyCacheKeyPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceCdnPolicyCacheKeyPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceCdnPolicyCacheKeyPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceCdnPolicyCacheKeyPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includehost_csharp">
+<a href="#includehost_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true requests to different hosts will be cached separately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includeprotocol_csharp">
+<a href="#includeprotocol_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, http and https requests will be cached separately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includequerystring_csharp">
+<a href="#includequerystring_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, include query string parameters in the cache key
+according to query_string_whitelist and
+query_string_blacklist. If neither is set, the entire query
+string will be included.
+If false, the query string will be excluded from the cache
+key entirely.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querystringblacklists_csharp">
+<a href="#querystringblacklists_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Blacklists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Names of query string parameters to exclude in cache keys.
+All other parameters will be included. Either specify
+query_string_whitelist or query_string_blacklist, not both.
+'&' and '=' will be percent encoded and not treated as
+delimiters.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querystringwhitelists_csharp">
+<a href="#querystringwhitelists_csharp" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Whitelists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Names of query string parameters to include in cache keys.
+All other parameters will be excluded. Either specify
+query_string_whitelist or query_string_blacklist, not both.
+'&' and '=' will be percent encoded and not treated as
+delimiters.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includehost_go">
+<a href="#includehost_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true requests to different hosts will be cached separately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includeprotocol_go">
+<a href="#includeprotocol_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, http and https requests will be cached separately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includequerystring_go">
+<a href="#includequerystring_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, include query string parameters in the cache key
+according to query_string_whitelist and
+query_string_blacklist. If neither is set, the entire query
+string will be included.
+If false, the query string will be excluded from the cache
+key entirely.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querystringblacklists_go">
+<a href="#querystringblacklists_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Blacklists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Names of query string parameters to exclude in cache keys.
+All other parameters will be included. Either specify
+query_string_whitelist or query_string_blacklist, not both.
+'&' and '=' will be percent encoded and not treated as
+delimiters.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querystringwhitelists_go">
+<a href="#querystringwhitelists_go" style="color: inherit; text-decoration: inherit;">Query<wbr>String<wbr>Whitelists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Names of query string parameters to include in cache keys.
+All other parameters will be excluded. Either specify
+query_string_whitelist or query_string_blacklist, not both.
+'&' and '=' will be percent encoded and not treated as
+delimiters.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includehost_nodejs">
+<a href="#includehost_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true requests to different hosts will be cached separately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includeprotocol_nodejs">
+<a href="#includeprotocol_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, http and https requests will be cached separately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="includequerystring_nodejs">
+<a href="#includequerystring_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Query<wbr>String</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, include query string parameters in the cache key
+according to query_string_whitelist and
+query_string_blacklist. If neither is set, the entire query
+string will be included.
+If false, the query string will be excluded from the cache
+key entirely.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querystringblacklists_nodejs">
+<a href="#querystringblacklists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Blacklists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Names of query string parameters to exclude in cache keys.
+All other parameters will be included. Either specify
+query_string_whitelist or query_string_blacklist, not both.
+'&' and '=' will be percent encoded and not treated as
+delimiters.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="querystringwhitelists_nodejs">
+<a href="#querystringwhitelists_nodejs" style="color: inherit; text-decoration: inherit;">query<wbr>String<wbr>Whitelists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Names of query string parameters to include in cache keys.
+All other parameters will be excluded. Either specify
+query_string_whitelist or query_string_blacklist, not both.
+'&' and '=' will be percent encoded and not treated as
+delimiters.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="include_host_python">
+<a href="#include_host_python" style="color: inherit; text-decoration: inherit;">include_<wbr>host</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true requests to different hosts will be cached separately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="include_protocol_python">
+<a href="#include_protocol_python" style="color: inherit; text-decoration: inherit;">include_<wbr>protocol</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, http and https requests will be cached separately.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="include_query_string_python">
+<a href="#include_query_string_python" style="color: inherit; text-decoration: inherit;">include_<wbr>query_<wbr>string</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, include query string parameters in the cache key
+according to query_string_whitelist and
+query_string_blacklist. If neither is set, the entire query
+string will be included.
+If false, the query string will be excluded from the cache
+key entirely.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="query_string_blacklists_python">
+<a href="#query_string_blacklists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>blacklists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Names of query string parameters to exclude in cache keys.
+All other parameters will be included. Either specify
+query_string_whitelist or query_string_blacklist, not both.
+'&' and '=' will be percent encoded and not treated as
+delimiters.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="query_string_whitelists_python">
+<a href="#query_string_whitelists_python" style="color: inherit; text-decoration: inherit;">query_<wbr>string_<wbr>whitelists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Names of query string parameters to include in cache keys.
+All other parameters will be excluded. Either specify
+query_string_whitelist or query_string_blacklist, not both.
+'&' and '=' will be percent encoded and not treated as
+delimiters.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="regionbackendservicecdnpolicynegativecachingpolicy">Region<wbr>Backend<wbr>Service<wbr>Cdn<wbr>Policy<wbr>Negative<wbr>Caching<wbr>Policy</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionBackendServiceCdnPolicyNegativeCachingPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionBackendServiceCdnPolicyNegativeCachingPolicy">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceCdnPolicyNegativeCachingPolicyOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceCdnPolicyNegativeCachingPolicy.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ttl_csharp">
+<a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ttl_go">
+<a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ttl_nodejs">
+<a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ttl_python">
+<a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="regionbackendservicecircuitbreakers">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers</h4>
 {{% choosable language nodejs %}}
@@ -4701,11 +5565,10 @@ Cannot be set for INTERNAL backend services.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceCircuitBreakersArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceCircuitBreakersOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceCircuitBreakersArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceCircuitBreakers.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4715,78 +5578,71 @@ Cannot be set for INTERNAL backend services.
             title="Optional">
         <span id="connecttimeout_csharp">
 <a href="#connecttimeout_csharp" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnections_csharp">
 <a href="#maxconnections_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxpendingrequests_csharp">
 <a href="#maxpendingrequests_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Pending<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pending requests to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrequests_csharp">
 <a href="#maxrequests_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel requests to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrequestsperconnection_csharp">
 <a href="#maxrequestsperconnection_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests<wbr>Per<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum requests for a single backend connection. This parameter
 is respected by both the HTTP/1.1 and HTTP/2 implementations. If
 not specified, there is no limit. Setting this parameter to 1
 will effectively disable keep alive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxretries_csharp">
 <a href="#maxretries_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel retries to the backend cluster.
 Defaults to 3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4795,78 +5651,71 @@ Defaults to 3.
             title="Optional">
         <span id="connecttimeout_go">
 <a href="#connecttimeout_go" style="color: inherit; text-decoration: inherit;">Connect<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnections_go">
 <a href="#maxconnections_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxpendingrequests_go">
 <a href="#maxpendingrequests_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Pending<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pending requests to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrequests_go">
 <a href="#maxrequests_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel requests to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrequestsperconnection_go">
 <a href="#maxrequestsperconnection_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Requests<wbr>Per<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum requests for a single backend connection. This parameter
 is respected by both the HTTP/1.1 and HTTP/2 implementations. If
 not specified, there is no limit. Setting this parameter to 1
 will effectively disable keep alive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxretries_go">
 <a href="#maxretries_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Retries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel retries to the backend cluster.
 Defaults to 3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4875,78 +5724,71 @@ Defaults to 3.
             title="Optional">
         <span id="connecttimeout_nodejs">
 <a href="#connecttimeout_nodejs" style="color: inherit; text-decoration: inherit;">connect<wbr>Timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxconnections_nodejs">
 <a href="#maxconnections_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxpendingrequests_nodejs">
 <a href="#maxpendingrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Pending<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of pending requests to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrequests_nodejs">
 <a href="#maxrequests_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel requests to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxrequestsperconnection_nodejs">
 <a href="#maxrequestsperconnection_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Requests<wbr>Per<wbr>Connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum requests for a single backend connection. This parameter
 is respected by both the HTTP/1.1 and HTTP/2 implementations. If
 not specified, there is no limit. Setting this parameter to 1
 will effectively disable keep alive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxretries_nodejs">
 <a href="#maxretries_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Retries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel retries to the backend cluster.
 Defaults to 3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4955,81 +5797,71 @@ Defaults to 3.
             title="Optional">
         <span id="connect_timeout_python">
 <a href="#connect_timeout_python" style="color: inherit; text-decoration: inherit;">connect_<wbr>timeout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The timeout for new network connections to hosts.  Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_connections_python">
 <a href="#max_connections_python" style="color: inherit; text-decoration: inherit;">max_<wbr>connections</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_pending_requests_python">
 <a href="#max_pending_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>pending_<wbr>requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of pending requests to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_requests_python">
 <a href="#max_requests_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel requests to the backend cluster.
 Defaults to 1024.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_requests_per_connection_python">
 <a href="#max_requests_per_connection_python" style="color: inherit; text-decoration: inherit;">max_<wbr>requests_<wbr>per_<wbr>connection</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum requests for a single backend connection. This parameter
 is respected by both the HTTP/1.1 and HTTP/2 implementations. If
 not specified, there is no limit. Setting this parameter to 1
 will effectively disable keep alive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_retries_python">
 <a href="#max_retries_python" style="color: inherit; text-decoration: inherit;">max_<wbr>retries</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of parallel retries to the backend cluster.
 Defaults to 3.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="regionbackendservicecircuitbreakersconnecttimeout">Region<wbr>Backend<wbr>Service<wbr>Circuit<wbr>Breakers<wbr>Connect<wbr>Timeout</h4>
 {{% choosable language nodejs %}}
@@ -5039,11 +5871,10 @@ Defaults to 3.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceCircuitBreakersConnectTimeoutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceCircuitBreakersConnectTimeoutOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceCircuitBreakersConnectTimeoutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceCircuitBreakersConnectTimeout.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5053,30 +5884,27 @@ Defaults to 3.
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5085,30 +5913,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5117,30 +5942,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5149,33 +5971,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="regionbackendserviceconsistenthash">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash</h4>
 {{% choosable language nodejs %}}
@@ -5185,11 +6001,10 @@ less than one second are represented with a 0 `seconds` field and a positive
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceConsistentHashArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceConsistentHashOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceConsistentHashArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceConsistentHash.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5199,7 +6014,7 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Optional">
         <span id="httpcookie_csharp">
 <a href="#httpcookie_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Cookie</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args</a></span>
     </dt>
@@ -5209,26 +6024,24 @@ balancer. If the cookie is not present, it will be generated.
 This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpheadername_csharp">
 <a href="#httpheadername_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash based on the value of the specified header field.
 This field is applicable if the sessionAffinity is set to HEADER_FIELD.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimumringsize_csharp">
 <a href="#minimumringsize_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ring<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual nodes to use for the hash ring.
 Larger ring sizes result in more granular load
@@ -5237,10 +6050,8 @@ is larger than the ring size, each host will be assigned a single
 virtual node.
 Defaults to 1024.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5249,7 +6060,7 @@ Defaults to 1024.
             title="Optional">
         <span id="httpcookie_go">
 <a href="#httpcookie_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Cookie</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie</a></span>
     </dt>
@@ -5259,26 +6070,24 @@ balancer. If the cookie is not present, it will be generated.
 This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpheadername_go">
 <a href="#httpheadername_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash based on the value of the specified header field.
 This field is applicable if the sessionAffinity is set to HEADER_FIELD.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimumringsize_go">
 <a href="#minimumringsize_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Ring<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual nodes to use for the hash ring.
 Larger ring sizes result in more granular load
@@ -5287,10 +6096,8 @@ is larger than the ring size, each host will be assigned a single
 virtual node.
 Defaults to 1024.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5299,7 +6106,7 @@ Defaults to 1024.
             title="Optional">
         <span id="httpcookie_nodejs">
 <a href="#httpcookie_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Cookie</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie</a></span>
     </dt>
@@ -5309,26 +6116,24 @@ balancer. If the cookie is not present, it will be generated.
 This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="httpheadername_nodejs">
 <a href="#httpheadername_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Header<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hash based on the value of the specified header field.
 This field is applicable if the sessionAffinity is set to HEADER_FIELD.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimumringsize_nodejs">
 <a href="#minimumringsize_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Ring<wbr>Size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual nodes to use for the hash ring.
 Larger ring sizes result in more granular load
@@ -5337,10 +6142,8 @@ is larger than the ring size, each host will be assigned a single
 virtual node.
 Defaults to 1024.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5349,7 +6152,7 @@ Defaults to 1024.
             title="Optional">
         <span id="http_cookie_python">
 <a href="#http_cookie_python" style="color: inherit; text-decoration: inherit;">http_<wbr>cookie</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Args</a></span>
     </dt>
@@ -5359,26 +6162,24 @@ balancer. If the cookie is not present, it will be generated.
 This field is applicable if the sessionAffinity is set to HTTP_COOKIE.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="http_header_name_python">
 <a href="#http_header_name_python" style="color: inherit; text-decoration: inherit;">http_<wbr>header_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hash based on the value of the specified header field.
 This field is applicable if the sessionAffinity is set to HEADER_FIELD.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_ring_size_python">
 <a href="#minimum_ring_size_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>ring_<wbr>size</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of virtual nodes to use for the hash ring.
 Larger ring sizes result in more granular load
@@ -5387,13 +6188,8 @@ is larger than the ring size, each host will be assigned a single
 virtual node.
 Defaults to 1024.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="regionbackendserviceconsistenthashhttpcookie">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie</h4>
 {{% choosable language nodejs %}}
@@ -5403,11 +6199,10 @@ Defaults to 1024.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceConsistentHashHttpCookieArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceConsistentHashHttpCookieOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceConsistentHashHttpCookieArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceConsistentHashHttpCookie.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5417,39 +6212,33 @@ Defaults to 1024.
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to set for the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_csharp">
 <a href="#ttl_csharp" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.
-Structure is documented below.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5458,39 +6247,33 @@ Structure is documented below.
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to set for the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_go">
 <a href="#ttl_go" style="color: inherit; text-decoration: inherit;">Ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.
-Structure is documented below.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5499,39 +6282,33 @@ Structure is documented below.
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to set for the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_nodejs">
 <a href="#ttl_nodejs" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.
-Structure is documented below.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5540,42 +6317,33 @@ Structure is documented below.
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to set for the cookie.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="ttl_python">
 <a href="#ttl_python" style="color: inherit; text-decoration: inherit;">ttl</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Lifetime of the cookie.
-Structure is documented below.
-{{% /md %}}</dd>
-
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="regionbackendserviceconsistenthashhttpcookiettl">Region<wbr>Backend<wbr>Service<wbr>Consistent<wbr>Hash<wbr>Http<wbr>Cookie<wbr>Ttl</h4>
 {{% choosable language nodejs %}}
@@ -5585,11 +6353,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceConsistentHashHttpCookieTtlArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceConsistentHashHttpCookieTtlOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceConsistentHashHttpCookieTtlArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceConsistentHashHttpCookieTtl.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5599,30 +6366,27 @@ Structure is documented below.
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5631,30 +6395,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5663,30 +6424,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5695,33 +6453,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="regionbackendservicefailoverpolicy">Region<wbr>Backend<wbr>Service<wbr>Failover<wbr>Policy</h4>
 {{% choosable language nodejs %}}
@@ -5731,11 +6483,10 @@ less than one second are represented with a 0 `seconds` field and a positive
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceFailoverPolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceFailoverPolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceFailoverPolicyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceFailoverPolicy.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5745,9 +6496,9 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Optional">
         <span id="disableconnectiondrainonfailover_csharp">
 <a href="#disableconnectiondrainonfailover_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Connection<wbr>Drain<wbr>On<wbr>Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}On failover or failback, this field indicates whether connection drain
 will be honored. Setting this to true has the following effect: connections
@@ -5758,28 +6509,26 @@ of 10 min.
 This can be set to true only if the protocol is TCP.
 The default is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="droptrafficifunhealthy_csharp">
 <a href="#droptrafficifunhealthy_csharp" style="color: inherit; text-decoration: inherit;">Drop<wbr>Traffic<wbr>If<wbr>Unhealthy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This option is used only when no healthy VMs are detected in the primary
 and backup instance groups. When set to true, traffic is dropped. When
 set to false, new connections are sent across all VMs in the primary group.
 The default is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failoverratio_csharp">
 <a href="#failoverratio_csharp" style="color: inherit; text-decoration: inherit;">Failover<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The value of the field must be in [0, 1]. If the ratio of the healthy
 VMs in the primary backend is at or below this number, traffic arriving
@@ -5790,10 +6539,8 @@ backend in the "force" mode, where traffic will be spread to the healthy
 VMs with the best effort, or to all VMs when no VM is healthy.
 This field is only used with l4 load balancing.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5802,9 +6549,9 @@ This field is only used with l4 load balancing.
             title="Optional">
         <span id="disableconnectiondrainonfailover_go">
 <a href="#disableconnectiondrainonfailover_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Connection<wbr>Drain<wbr>On<wbr>Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}On failover or failback, this field indicates whether connection drain
 will be honored. Setting this to true has the following effect: connections
@@ -5815,28 +6562,26 @@ of 10 min.
 This can be set to true only if the protocol is TCP.
 The default is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="droptrafficifunhealthy_go">
 <a href="#droptrafficifunhealthy_go" style="color: inherit; text-decoration: inherit;">Drop<wbr>Traffic<wbr>If<wbr>Unhealthy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This option is used only when no healthy VMs are detected in the primary
 and backup instance groups. When set to true, traffic is dropped. When
 set to false, new connections are sent across all VMs in the primary group.
 The default is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failoverratio_go">
 <a href="#failoverratio_go" style="color: inherit; text-decoration: inherit;">Failover<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The value of the field must be in [0, 1]. If the ratio of the healthy
 VMs in the primary backend is at or below this number, traffic arriving
@@ -5847,10 +6592,8 @@ backend in the "force" mode, where traffic will be spread to the healthy
 VMs with the best effort, or to all VMs when no VM is healthy.
 This field is only used with l4 load balancing.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5859,9 +6602,9 @@ This field is only used with l4 load balancing.
             title="Optional">
         <span id="disableconnectiondrainonfailover_nodejs">
 <a href="#disableconnectiondrainonfailover_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Connection<wbr>Drain<wbr>On<wbr>Failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}On failover or failback, this field indicates whether connection drain
 will be honored. Setting this to true has the following effect: connections
@@ -5872,28 +6615,26 @@ of 10 min.
 This can be set to true only if the protocol is TCP.
 The default is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="droptrafficifunhealthy_nodejs">
 <a href="#droptrafficifunhealthy_nodejs" style="color: inherit; text-decoration: inherit;">drop<wbr>Traffic<wbr>If<wbr>Unhealthy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This option is used only when no healthy VMs are detected in the primary
 and backup instance groups. When set to true, traffic is dropped. When
 set to false, new connections are sent across all VMs in the primary group.
 The default is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failoverratio_nodejs">
 <a href="#failoverratio_nodejs" style="color: inherit; text-decoration: inherit;">failover<wbr>Ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The value of the field must be in [0, 1]. If the ratio of the healthy
 VMs in the primary backend is at or below this number, traffic arriving
@@ -5904,10 +6645,8 @@ backend in the "force" mode, where traffic will be spread to the healthy
 VMs with the best effort, or to all VMs when no VM is healthy.
 This field is only used with l4 load balancing.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5916,9 +6655,9 @@ This field is only used with l4 load balancing.
             title="Optional">
         <span id="disable_connection_drain_on_failover_python">
 <a href="#disable_connection_drain_on_failover_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>connection_<wbr>drain_<wbr>on_<wbr>failover</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}On failover or failback, this field indicates whether connection drain
 will be honored. Setting this to true has the following effect: connections
@@ -5929,28 +6668,26 @@ of 10 min.
 This can be set to true only if the protocol is TCP.
 The default is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="drop_traffic_if_unhealthy_python">
 <a href="#drop_traffic_if_unhealthy_python" style="color: inherit; text-decoration: inherit;">drop_<wbr>traffic_<wbr>if_<wbr>unhealthy</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This option is used only when no healthy VMs are detected in the primary
 and backup instance groups. When set to true, traffic is dropped. When
 set to false, new connections are sent across all VMs in the primary group.
 The default is false.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="failover_ratio_python">
 <a href="#failover_ratio_python" style="color: inherit; text-decoration: inherit;">failover_<wbr>ratio</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The value of the field must be in [0, 1]. If the ratio of the healthy
 VMs in the primary backend is at or below this number, traffic arriving
@@ -5961,13 +6698,8 @@ backend in the "force" mode, where traffic will be spread to the healthy
 VMs with the best effort, or to all VMs when no VM is healthy.
 This field is only used with l4 load balancing.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="regionbackendservicelogconfig">Region<wbr>Backend<wbr>Service<wbr>Log<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -5977,11 +6709,10 @@ This field is only used with l4 load balancing.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceLogConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceLogConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceLogConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5991,30 +6722,27 @@ This field is only used with l4 load balancing.
             title="Optional">
         <span id="enable_csharp">
 <a href="#enable_csharp" style="color: inherit; text-decoration: inherit;">Enable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable logging for the load balancer traffic served by this backend service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="samplerate_csharp">
 <a href="#samplerate_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}This field can only be specified if logging is enabled for this backend service. The value of
 the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
 where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
 The default value is 1.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6023,30 +6751,27 @@ The default value is 1.0.
             title="Optional">
         <span id="enable_go">
 <a href="#enable_go" style="color: inherit; text-decoration: inherit;">Enable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable logging for the load balancer traffic served by this backend service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="samplerate_go">
 <a href="#samplerate_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}This field can only be specified if logging is enabled for this backend service. The value of
 the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
 where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
 The default value is 1.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6055,30 +6780,27 @@ The default value is 1.0.
             title="Optional">
         <span id="enable_nodejs">
 <a href="#enable_nodejs" style="color: inherit; text-decoration: inherit;">enable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable logging for the load balancer traffic served by this backend service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="samplerate_nodejs">
 <a href="#samplerate_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This field can only be specified if logging is enabled for this backend service. The value of
 the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
 where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
 The default value is 1.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6087,33 +6809,27 @@ The default value is 1.0.
             title="Optional">
         <span id="enable_python">
 <a href="#enable_python" style="color: inherit; text-decoration: inherit;">enable</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable logging for the load balancer traffic served by this backend service.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sample_rate_python">
 <a href="#sample_rate_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}This field can only be specified if logging is enabled for this backend service. The value of
 the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
 where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
 The default value is 1.0.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="regionbackendserviceoutlierdetection">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection</h4>
 {{% choosable language nodejs %}}
@@ -6123,11 +6839,10 @@ The default value is 1.0.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceOutlierDetectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceOutlierDetectionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceOutlierDetectionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceOutlierDetection.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6137,7 +6852,7 @@ The default value is 1.0.
             title="Optional">
         <span id="baseejectiontime_csharp">
 <a href="#baseejectiontime_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Ejection<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args</a></span>
     </dt>
@@ -6146,77 +6861,71 @@ time multiplied by the number of times the host has been ejected. Defaults to
 30000ms or 30s.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consecutiveerrors_csharp">
 <a href="#consecutiveerrors_csharp" style="color: inherit; text-decoration: inherit;">Consecutive<wbr>Errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of errors before a host is ejected from the connection pool. When the
 backend host is accessed over HTTP, a 5xx return code qualifies as an error.
 Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consecutivegatewayfailure_csharp">
 <a href="#consecutivegatewayfailure_csharp" style="color: inherit; text-decoration: inherit;">Consecutive<wbr>Gateway<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive gateway failures (502, 503, 504 status or connection
 errors that are mapped to one of those status codes) before a consecutive
 gateway failure ejection occurs. Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcingconsecutiveerrors_csharp">
 <a href="#enforcingconsecutiveerrors_csharp" style="color: inherit; text-decoration: inherit;">Enforcing<wbr>Consecutive<wbr>Errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive 5xx. This setting can be used to disable
 ejection or to ramp it up slowly. Defaults to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcingconsecutivegatewayfailure_csharp">
 <a href="#enforcingconsecutivegatewayfailure_csharp" style="color: inherit; text-decoration: inherit;">Enforcing<wbr>Consecutive<wbr>Gateway<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive gateway failures. This setting can be
 used to disable ejection or to ramp it up slowly. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcingsuccessrate_csharp">
 <a href="#enforcingsuccessrate_csharp" style="color: inherit; text-decoration: inherit;">Enforcing<wbr>Success<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through success rate statistics. This setting can be used to
 disable ejection or to ramp it up slowly. Defaults to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_csharp">
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
     </dt>
@@ -6224,40 +6933,37 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 ejections as well as hosts being returned to service. Defaults to 10 seconds.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxejectionpercent_csharp">
 <a href="#maxejectionpercent_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Ejection<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of hosts in the load balancing pool for the backend service
 that can be ejected. Defaults to 10%.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successrateminimumhosts_csharp">
 <a href="#successrateminimumhosts_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Rate<wbr>Minimum<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hosts in a cluster that must have enough request volume to detect
 success rate outliers. If the number of hosts is less than this setting, outlier
 detection via success rate statistics is not performed for any host in the
 cluster. Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successraterequestvolume_csharp">
 <a href="#successraterequestvolume_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Rate<wbr>Request<wbr>Volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of total requests that must be collected in one interval (as
 defined by the interval duration above) to include this host in success rate
@@ -6265,14 +6971,13 @@ based outlier detection. If the volume is lower than this setting, outlier
 detection via success rate statistics is not performed for that host. Defaults
 to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successratestdevfactor_csharp">
 <a href="#successratestdevfactor_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Rate<wbr>Stdev<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier
 ejection. The ejection threshold is the difference between the mean success
@@ -6281,10 +6986,8 @@ success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided
 by a thousand to get a double. That is, if the desired factor is 1.9, the
 runtime value should be 1900. Defaults to 1900.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6293,7 +6996,7 @@ runtime value should be 1900. Defaults to 1900.
             title="Optional">
         <span id="baseejectiontime_go">
 <a href="#baseejectiontime_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Ejection<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</a></span>
     </dt>
@@ -6302,77 +7005,71 @@ time multiplied by the number of times the host has been ejected. Defaults to
 30000ms or 30s.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consecutiveerrors_go">
 <a href="#consecutiveerrors_go" style="color: inherit; text-decoration: inherit;">Consecutive<wbr>Errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of errors before a host is ejected from the connection pool. When the
 backend host is accessed over HTTP, a 5xx return code qualifies as an error.
 Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consecutivegatewayfailure_go">
 <a href="#consecutivegatewayfailure_go" style="color: inherit; text-decoration: inherit;">Consecutive<wbr>Gateway<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive gateway failures (502, 503, 504 status or connection
 errors that are mapped to one of those status codes) before a consecutive
 gateway failure ejection occurs. Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcingconsecutiveerrors_go">
 <a href="#enforcingconsecutiveerrors_go" style="color: inherit; text-decoration: inherit;">Enforcing<wbr>Consecutive<wbr>Errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive 5xx. This setting can be used to disable
 ejection or to ramp it up slowly. Defaults to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcingconsecutivegatewayfailure_go">
 <a href="#enforcingconsecutivegatewayfailure_go" style="color: inherit; text-decoration: inherit;">Enforcing<wbr>Consecutive<wbr>Gateway<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive gateway failures. This setting can be
 used to disable ejection or to ramp it up slowly. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcingsuccessrate_go">
 <a href="#enforcingsuccessrate_go" style="color: inherit; text-decoration: inherit;">Enforcing<wbr>Success<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through success rate statistics. This setting can be used to
 disable ejection or to ramp it up slowly. Defaults to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_go">
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
@@ -6380,40 +7077,37 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 ejections as well as hosts being returned to service. Defaults to 10 seconds.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxejectionpercent_go">
 <a href="#maxejectionpercent_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Ejection<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of hosts in the load balancing pool for the backend service
 that can be ejected. Defaults to 10%.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successrateminimumhosts_go">
 <a href="#successrateminimumhosts_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Rate<wbr>Minimum<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hosts in a cluster that must have enough request volume to detect
 success rate outliers. If the number of hosts is less than this setting, outlier
 detection via success rate statistics is not performed for any host in the
 cluster. Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successraterequestvolume_go">
 <a href="#successraterequestvolume_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Rate<wbr>Request<wbr>Volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of total requests that must be collected in one interval (as
 defined by the interval duration above) to include this host in success rate
@@ -6421,14 +7115,13 @@ based outlier detection. If the volume is lower than this setting, outlier
 detection via success rate statistics is not performed for that host. Defaults
 to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successratestdevfactor_go">
 <a href="#successratestdevfactor_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Rate<wbr>Stdev<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier
 ejection. The ejection threshold is the difference between the mean success
@@ -6437,10 +7130,8 @@ success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided
 by a thousand to get a double. That is, if the desired factor is 1.9, the
 runtime value should be 1900. Defaults to 1900.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6449,7 +7140,7 @@ runtime value should be 1900. Defaults to 1900.
             title="Optional">
         <span id="baseejectiontime_nodejs">
 <a href="#baseejectiontime_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Ejection<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</a></span>
     </dt>
@@ -6458,77 +7149,71 @@ time multiplied by the number of times the host has been ejected. Defaults to
 30000ms or 30s.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consecutiveerrors_nodejs">
 <a href="#consecutiveerrors_nodejs" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of errors before a host is ejected from the connection pool. When the
 backend host is accessed over HTTP, a 5xx return code qualifies as an error.
 Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consecutivegatewayfailure_nodejs">
 <a href="#consecutivegatewayfailure_nodejs" style="color: inherit; text-decoration: inherit;">consecutive<wbr>Gateway<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive gateway failures (502, 503, 504 status or connection
 errors that are mapped to one of those status codes) before a consecutive
 gateway failure ejection occurs. Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcingconsecutiveerrors_nodejs">
 <a href="#enforcingconsecutiveerrors_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive 5xx. This setting can be used to disable
 ejection or to ramp it up slowly. Defaults to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcingconsecutivegatewayfailure_nodejs">
 <a href="#enforcingconsecutivegatewayfailure_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Consecutive<wbr>Gateway<wbr>Failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive gateway failures. This setting can be
 used to disable ejection or to ramp it up slowly. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcingsuccessrate_nodejs">
 <a href="#enforcingsuccessrate_nodejs" style="color: inherit; text-decoration: inherit;">enforcing<wbr>Success<wbr>Rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through success rate statistics. This setting can be used to
 disable ejection or to ramp it up slowly. Defaults to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_nodejs">
 <a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</a></span>
     </dt>
@@ -6536,40 +7221,37 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 ejections as well as hosts being returned to service. Defaults to 10 seconds.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxejectionpercent_nodejs">
 <a href="#maxejectionpercent_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Ejection<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of hosts in the load balancing pool for the backend service
 that can be ejected. Defaults to 10%.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successrateminimumhosts_nodejs">
 <a href="#successrateminimumhosts_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Minimum<wbr>Hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of hosts in a cluster that must have enough request volume to detect
 success rate outliers. If the number of hosts is less than this setting, outlier
 detection via success rate statistics is not performed for any host in the
 cluster. Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successraterequestvolume_nodejs">
 <a href="#successraterequestvolume_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Request<wbr>Volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum number of total requests that must be collected in one interval (as
 defined by the interval duration above) to include this host in success rate
@@ -6577,14 +7259,13 @@ based outlier detection. If the volume is lower than this setting, outlier
 detection via success rate statistics is not performed for that host. Defaults
 to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="successratestdevfactor_nodejs">
 <a href="#successratestdevfactor_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Rate<wbr>Stdev<wbr>Factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier
 ejection. The ejection threshold is the difference between the mean success
@@ -6593,10 +7274,8 @@ success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided
 by a thousand to get a double. That is, if the desired factor is 1.9, the
 runtime value should be 1900. Defaults to 1900.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6605,7 +7284,7 @@ runtime value should be 1900. Defaults to 1900.
             title="Optional">
         <span id="base_ejection_time_python">
 <a href="#base_ejection_time_python" style="color: inherit; text-decoration: inherit;">base_<wbr>ejection_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time<wbr>Args</a></span>
     </dt>
@@ -6614,77 +7293,71 @@ time multiplied by the number of times the host has been ejected. Defaults to
 30000ms or 30s.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consecutive_errors_python">
 <a href="#consecutive_errors_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of errors before a host is ejected from the connection pool. When the
 backend host is accessed over HTTP, a 5xx return code qualifies as an error.
 Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="consecutive_gateway_failure_python">
 <a href="#consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">consecutive_<wbr>gateway_<wbr>failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive gateway failures (502, 503, 504 status or connection
 errors that are mapped to one of those status codes) before a consecutive
 gateway failure ejection occurs. Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcing_consecutive_errors_python">
 <a href="#enforcing_consecutive_errors_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>errors</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive 5xx. This setting can be used to disable
 ejection or to ramp it up slowly. Defaults to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcing_consecutive_gateway_failure_python">
 <a href="#enforcing_consecutive_gateway_failure_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>consecutive_<wbr>gateway_<wbr>failure</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through consecutive gateway failures. This setting can be
 used to disable ejection or to ramp it up slowly. Defaults to 0.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enforcing_success_rate_python">
 <a href="#enforcing_success_rate_python" style="color: inherit; text-decoration: inherit;">enforcing_<wbr>success_<wbr>rate</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The percentage chance that a host will be actually ejected when an outlier
 status is detected through success rate statistics. This setting can be used to
 disable ejection or to ramp it up slowly. Defaults to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interval_python">
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval<wbr>Args</a></span>
     </dt>
@@ -6692,40 +7365,37 @@ disable ejection or to ramp it up slowly. Defaults to 100.
 ejections as well as hosts being returned to service. Defaults to 10 seconds.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_ejection_percent_python">
 <a href="#max_ejection_percent_python" style="color: inherit; text-decoration: inherit;">max_<wbr>ejection_<wbr>percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum percentage of hosts in the load balancing pool for the backend service
 that can be ejected. Defaults to 10%.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="success_rate_minimum_hosts_python">
 <a href="#success_rate_minimum_hosts_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>minimum_<wbr>hosts</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of hosts in a cluster that must have enough request volume to detect
 success rate outliers. If the number of hosts is less than this setting, outlier
 detection via success rate statistics is not performed for any host in the
 cluster. Defaults to 5.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="success_rate_request_volume_python">
 <a href="#success_rate_request_volume_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>request_<wbr>volume</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum number of total requests that must be collected in one interval (as
 defined by the interval duration above) to include this host in success rate
@@ -6733,14 +7403,13 @@ based outlier detection. If the volume is lower than this setting, outlier
 detection via success rate statistics is not performed for that host. Defaults
 to 100.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="success_rate_stdev_factor_python">
 <a href="#success_rate_stdev_factor_python" style="color: inherit; text-decoration: inherit;">success_<wbr>rate_<wbr>stdev_<wbr>factor</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}This factor is used to determine the ejection threshold for success rate outlier
 ejection. The ejection threshold is the difference between the mean success
@@ -6749,13 +7418,8 @@ success rate: mean - (stdev * success_rate_stdev_factor). This factor is divided
 by a thousand to get a double. That is, if the desired factor is 1.9, the
 runtime value should be 1900. Defaults to 1900.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="regionbackendserviceoutlierdetectionbaseejectiontime">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Base<wbr>Ejection<wbr>Time</h4>
 {{% choosable language nodejs %}}
@@ -6765,11 +7429,10 @@ runtime value should be 1900. Defaults to 1900.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceOutlierDetectionBaseEjectionTimeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceOutlierDetectionBaseEjectionTimeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceOutlierDetectionBaseEjectionTimeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceOutlierDetectionBaseEjectionTime.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6779,30 +7442,27 @@ runtime value should be 1900. Defaults to 1900.
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6811,30 +7471,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6843,30 +7500,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6875,33 +7529,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="regionbackendserviceoutlierdetectioninterval">Region<wbr>Backend<wbr>Service<wbr>Outlier<wbr>Detection<wbr>Interval</h4>
 {{% choosable language nodejs %}}
@@ -6911,11 +7559,10 @@ less than one second are represented with a 0 `seconds` field and a positive
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceOutlierDetectionIntervalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute?tab=doc#RegionBackendServiceOutlierDetectionIntervalOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Inputs.RegionBackendServiceOutlierDetectionIntervalArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Compute.Outputs.RegionBackendServiceOutlierDetectionInterval.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6925,30 +7572,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6957,30 +7601,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6989,30 +7630,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7021,38 +7659,27 @@ less than one second are represented with a 0 `seconds` field and a positive
             title="Required">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time at a resolution of a second. Must be from 0 to 315,576,000,000
 inclusive.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Span of time that's a fraction of a second at nanosecond resolution. Durations
 less than one second are represented with a 0 `seconds` field and a positive
 `nanos` field. Must be from 0 to 999,999,999 inclusive.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

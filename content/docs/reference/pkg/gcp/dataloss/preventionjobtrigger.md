@@ -1,8 +1,8 @@
 
 ---
 title: "PreventionJobTrigger"
-title_tag: "Resource PreventionJobTrigger | Module dataloss | Package GCP"
-meta_desc: "Explore the PreventionJobTrigger resource of the dataloss module, including examples, input properties, output properties, lookup functions, and supporting types. A job trigger configuration."
+title_tag: "gcp.dataloss.PreventionJobTrigger"
+meta_desc: "Documentation for the gcp.dataloss.PreventionJobTrigger resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -227,7 +227,7 @@ const basic = new gcp.dataloss.PreventionJobTrigger("basic", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionJobTrigger">PreventionJobTrigger</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionJobTriggerArgs">PreventionJobTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionJobTrigger">PreventionJobTrigger</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionJobTriggerArgs">PreventionJobTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -235,11 +235,11 @@ const basic = new gcp.dataloss.PreventionJobTrigger("basic", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTrigger">NewPreventionJobTrigger</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerArgs">PreventionJobTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTrigger">PreventionJobTrigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTrigger">NewPreventionJobTrigger</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerArgs">PreventionJobTriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTrigger">PreventionJobTrigger</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionJobTrigger.html">PreventionJobTrigger</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionJobTriggerArgs.html">PreventionJobTriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionJobTrigger.html">PreventionJobTrigger</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionJobTriggerArgs.html">PreventionJobTriggerArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -250,7 +250,7 @@ const basic = new gcp.dataloss.PreventionJobTrigger("basic", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -319,7 +319,7 @@ const basic = new gcp.dataloss.PreventionJobTrigger("basic", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -358,7 +358,7 @@ const basic = new gcp.dataloss.PreventionJobTrigger("basic", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -399,7 +399,6 @@ The PreventionJobTrigger resource accepts the following [input]({{< relref "/doc
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -407,76 +406,69 @@ The PreventionJobTrigger resource accepts the following [input]({{< relref "/doc
             title="Required">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the trigger, either in the format `projects/{{project}}`
 or `projects/{{project}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="triggers_csharp">
 <a href="#triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertrigger">List&lt;Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inspectjob_csharp">
 <a href="#inspectjob_csharp" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Job</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_csharp">
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is currently active.
 Default value is `HEALTHY`.
 Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -485,76 +477,69 @@ Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
             title="Required">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the trigger, either in the format `projects/{{project}}`
 or `projects/{{project}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="triggers_go">
 <a href="#triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertrigger">[]Prevention<wbr>Job<wbr>Trigger<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inspectjob_go">
 <a href="#inspectjob_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Job</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_go">
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is currently active.
 Default value is `HEALTHY`.
 Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -563,76 +548,69 @@ Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
             title="Required">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the trigger, either in the format `projects/{{project}}`
 or `projects/{{project}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="triggers_nodejs">
 <a href="#triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertrigger">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger[]</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inspectjob_nodejs">
 <a href="#inspectjob_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Job</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_nodejs">
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is currently active.
 Default value is `HEALTHY`.
 Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -641,85 +619,74 @@ Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
             title="Required">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parent of the trigger, either in the format `projects/{{project}}`
 or `projects/{{project}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="triggers_python">
 <a href="#triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertrigger">Sequence[Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="inspect_job_python">
 <a href="#inspect_job_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>job</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_python">
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is currently active.
 Default value is `HEALTHY`.
 Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PreventionJobTrigger resource produces the following output properties:
-
 
 
 
@@ -730,37 +697,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastruntime_csharp">
 <a href="#lastruntime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the last time this trigger executed.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -769,37 +732,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastruntime_go">
 <a href="#lastruntime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Run<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the last time this trigger executed.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -808,37 +767,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastruntime_nodejs">
 <a href="#lastruntime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the last time this trigger executed.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -847,40 +802,33 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_run_time_python">
 <a href="#last_run_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of the last time this trigger executed.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -890,7 +838,7 @@ Get an existing PreventionJobTrigger resource's state with the given name, ID, a
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionJobTriggerState">PreventionJobTriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionJobTrigger">PreventionJobTrigger</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionJobTriggerState">PreventionJobTriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionJobTrigger">PreventionJobTrigger</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -899,11 +847,11 @@ Get an existing PreventionJobTrigger resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionJobTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerState">PreventionJobTriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTrigger">PreventionJobTrigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionJobTrigger<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerState">PreventionJobTriggerState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTrigger">PreventionJobTrigger</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionJobTrigger.html">PreventionJobTrigger</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionJobTriggerState.html">PreventionJobTriggerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionJobTrigger.html">PreventionJobTrigger</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionJobTriggerState.html">PreventionJobTriggerState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1005,7 +953,6 @@ Get an existing PreventionJobTrigger resource's state with the given name, ID, a
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1013,98 +960,89 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inspectjob_csharp">
 <a href="#state_inspectjob_csharp" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Job</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastruntime_csharp">
 <a href="#state_lastruntime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Run<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the last time this trigger executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the trigger, either in the format `projects/{{project}}`
 or `projects/{{project}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_csharp">
 <a href="#state_status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is currently active.
 Default value is `HEALTHY`.
 Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_triggers_csharp">
 <a href="#state_triggers_csharp" style="color: inherit; text-decoration: inherit;">Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertrigger">List&lt;Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1113,98 +1051,89 @@ Structure is documented below.
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inspectjob_go">
 <a href="#state_inspectjob_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Job</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastruntime_go">
 <a href="#state_lastruntime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Run<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the last time this trigger executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the trigger, either in the format `projects/{{project}}`
 or `projects/{{project}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_go">
 <a href="#state_status_go" style="color: inherit; text-decoration: inherit;">Status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is currently active.
 Default value is `HEALTHY`.
 Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_triggers_go">
 <a href="#state_triggers_go" style="color: inherit; text-decoration: inherit;">Triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertrigger">[]Prevention<wbr>Job<wbr>Trigger<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1213,98 +1142,89 @@ Structure is documented below.
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inspectjob_nodejs">
 <a href="#state_inspectjob_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Job</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastruntime_nodejs">
 <a href="#state_lastruntime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Run<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp of the last time this trigger executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the trigger, either in the format `projects/{{project}}`
 or `projects/{{project}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_nodejs">
 <a href="#state_status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is currently active.
 Default value is `HEALTHY`.
 Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_triggers_nodejs">
 <a href="#state_triggers_nodejs" style="color: inherit; text-decoration: inherit;">triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertrigger">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger[]</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1313,95 +1233,87 @@ Structure is documented below.
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the job trigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_inspect_job_python">
 <a href="#state_inspect_job_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>job</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Controls what and how to inspect for findings.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_last_run_time_python">
 <a href="#state_last_run_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>run_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp of the last time this trigger executed.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parent of the trigger, either in the format `projects/{{project}}`
 or `projects/{{project}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_status_python">
 <a href="#state_status_python" style="color: inherit; text-decoration: inherit;">status</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Whether the trigger is currently active.
 Default value is `HEALTHY`.
 Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_triggers_python">
 <a href="#state_triggers_python" style="color: inherit; text-decoration: inherit;">triggers</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertrigger">Sequence[Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}What event needs to occur for a new job to be started.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1410,11 +1322,8 @@ Structure is documented below.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="preventionjobtriggerinspectjob">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job</h4>
@@ -1425,11 +1334,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJob.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1439,40 +1347,36 @@ Structure is documented below.
             title="Required">
         <span id="actions_csharp">
 <a href="#actions_csharp" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">List&lt;Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A task to execute on the completion of a job.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="inspecttemplatename_csharp">
 <a href="#inspecttemplatename_csharp" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Template<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to run when this job is triggered.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageconfig_csharp">
 <a href="#storageconfig_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1481,40 +1385,36 @@ Structure is documented below.
             title="Required">
         <span id="actions_go">
 <a href="#actions_go" style="color: inherit; text-decoration: inherit;">Actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">[]Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action</a></span>
     </dt>
     <dd>{{% md %}}A task to execute on the completion of a job.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="inspecttemplatename_go">
 <a href="#inspecttemplatename_go" style="color: inherit; text-decoration: inherit;">Inspect<wbr>Template<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to run when this job is triggered.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageconfig_go">
 <a href="#storageconfig_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1523,40 +1423,36 @@ Structure is documented below.
             title="Required">
         <span id="actions_nodejs">
 <a href="#actions_nodejs" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}A task to execute on the completion of a job.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="inspecttemplatename_nodejs">
 <a href="#inspecttemplatename_nodejs" style="color: inherit; text-decoration: inherit;">inspect<wbr>Template<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the template to run when this job is triggered.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storageconfig_nodejs">
 <a href="#storageconfig_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1565,43 +1461,36 @@ Structure is documented below.
             title="Required">
         <span id="actions_python">
 <a href="#actions_python" style="color: inherit; text-decoration: inherit;">actions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobaction">Sequence[Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A task to execute on the completion of a job.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="inspect_template_name_python">
 <a href="#inspect_template_name_python" style="color: inherit; text-decoration: inherit;">inspect_<wbr>template_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the template to run when this job is triggered.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="storage_config_python">
 <a href="#storage_config_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobaction">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action</h4>
 {{% choosable language nodejs %}}
@@ -1611,11 +1500,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobAction.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1625,17 +1513,15 @@ Structure is documented below.
             title="Required">
         <span id="savefindings_csharp">
 <a href="#savefindings_csharp" style="color: inherit; text-decoration: inherit;">Save<wbr>Findings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1644,17 +1530,15 @@ Structure is documented below.
             title="Required">
         <span id="savefindings_go">
 <a href="#savefindings_go" style="color: inherit; text-decoration: inherit;">Save<wbr>Findings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1663,17 +1547,15 @@ Structure is documented below.
             title="Required">
         <span id="savefindings_nodejs">
 <a href="#savefindings_nodejs" style="color: inherit; text-decoration: inherit;">save<wbr>Findings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1682,20 +1564,15 @@ Structure is documented below.
             title="Required">
         <span id="save_findings_python">
 <a href="#save_findings_python" style="color: inherit; text-decoration: inherit;">save_<wbr>findings</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobactionsavefindings">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings</h4>
 {{% choosable language nodejs %}}
@@ -1705,11 +1582,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionSaveFindingsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobActionSaveFindings.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1719,17 +1595,15 @@ Structure is documented below.
             title="Required">
         <span id="outputconfig_csharp">
 <a href="#outputconfig_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to store output
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1738,17 +1612,15 @@ Structure is documented below.
             title="Required">
         <span id="outputconfig_go">
 <a href="#outputconfig_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to store output
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1757,17 +1629,15 @@ Structure is documented below.
             title="Required">
         <span id="outputconfig_nodejs">
 <a href="#outputconfig_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to store output
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1776,20 +1646,15 @@ Structure is documented below.
             title="Required">
         <span id="output_config_python">
 <a href="#output_config_python" style="color: inherit; text-decoration: inherit;">output_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to store output
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobactionsavefindingsoutputconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -1799,11 +1664,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1813,21 +1677,20 @@ Structure is documented below.
             title="Required">
         <span id="table_csharp">
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on the location of the target BigQuery Table.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputschema_csharp">
 <a href="#outputschema_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Schema</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schema used for writing the findings for Inspect jobs. This field is only used for
 Inspect and must be unspecified for Risk jobs. Columns are derived from the Finding
@@ -1838,10 +1701,8 @@ table with no schema, and no changes will be made to an existing table that has 
 Only for use with external storage.
 Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QUERY_COLUMNS`, and `ALL_COLUMNS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1850,21 +1711,20 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
             title="Required">
         <span id="table_go">
 <a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Information on the location of the target BigQuery Table.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputschema_go">
 <a href="#outputschema_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Schema</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schema used for writing the findings for Inspect jobs. This field is only used for
 Inspect and must be unspecified for Risk jobs. Columns are derived from the Finding
@@ -1875,10 +1735,8 @@ table with no schema, and no changes will be made to an existing table that has 
 Only for use with external storage.
 Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QUERY_COLUMNS`, and `ALL_COLUMNS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1887,21 +1745,20 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
             title="Required">
         <span id="table_nodejs">
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Information on the location of the target BigQuery Table.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="outputschema_nodejs">
 <a href="#outputschema_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Schema</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Schema used for writing the findings for Inspect jobs. This field is only used for
 Inspect and must be unspecified for Risk jobs. Columns are derived from the Finding
@@ -1912,10 +1769,8 @@ table with no schema, and no changes will be made to an existing table that has 
 Only for use with external storage.
 Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QUERY_COLUMNS`, and `ALL_COLUMNS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1924,21 +1779,20 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
             title="Required">
         <span id="table_python">
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on the location of the target BigQuery Table.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="output_schema_python">
 <a href="#output_schema_python" style="color: inherit; text-decoration: inherit;">output_<wbr>schema</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Schema used for writing the findings for Inspect jobs. This field is only used for
 Inspect and must be unspecified for Risk jobs. Columns are derived from the Finding
@@ -1949,13 +1803,8 @@ table with no schema, and no changes will be made to an existing table that has 
 Only for use with external storage.
 Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QUERY_COLUMNS`, and `ALL_COLUMNS`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobactionsavefindingsoutputconfigtable">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Action<wbr>Save<wbr>Findings<wbr>Output<wbr>Config<wbr>Table</h4>
 {{% choosable language nodejs %}}
@@ -1965,11 +1814,10 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTable.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1979,39 +1827,35 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
             title="Required">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tableid_csharp">
 <a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table. If is not set a new one will be generated for you with the following format:
 `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2020,39 +1864,35 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
             title="Required">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tableid_go">
 <a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table. If is not set a new one will be generated for you with the following format:
 `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2061,39 +1901,35 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
             title="Required">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tableid_nodejs">
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table. If is not set a new one will be generated for you with the following format:
 `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2102,42 +1938,35 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
             title="Required">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="table_id_python">
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the table. If is not set a new one will be generated for you with the following format:
 `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobstorageconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -2147,11 +1976,10 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2161,53 +1989,48 @@ Possible values are `BASIC_COLUMNS`, `GCS_COLUMNS`, `DATASTORE_COLUMNS`, `BIG_QU
             title="Optional">
         <span id="bigqueryoptions_csharp">
 <a href="#bigqueryoptions_csharp" style="color: inherit; text-decoration: inherit;">Big<wbr>Query<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options defining BigQuery table and row identifiers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstorageoptions_csharp">
 <a href="#cloudstorageoptions_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options defining a file or a set of files within a Google Cloud Storage bucket.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreoptions_csharp">
 <a href="#datastoreoptions_csharp" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options defining a data set within Google Cloud Datastore.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timespanconfig_csharp">
 <a href="#timespanconfig_csharp" style="color: inherit; text-decoration: inherit;">Timespan<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2216,53 +2039,48 @@ Structure is documented below.
             title="Optional">
         <span id="bigqueryoptions_go">
 <a href="#bigqueryoptions_go" style="color: inherit; text-decoration: inherit;">Big<wbr>Query<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining BigQuery table and row identifiers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstorageoptions_go">
 <a href="#cloudstorageoptions_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining a file or a set of files within a Google Cloud Storage bucket.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreoptions_go">
 <a href="#datastoreoptions_go" style="color: inherit; text-decoration: inherit;">Datastore<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining a data set within Google Cloud Datastore.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timespanconfig_go">
 <a href="#timespanconfig_go" style="color: inherit; text-decoration: inherit;">Timespan<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2271,53 +2089,48 @@ Structure is documented below.
             title="Optional">
         <span id="bigqueryoptions_nodejs">
 <a href="#bigqueryoptions_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Query<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining BigQuery table and row identifiers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstorageoptions_nodejs">
 <a href="#cloudstorageoptions_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining a file or a set of files within a Google Cloud Storage bucket.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastoreoptions_nodejs">
 <a href="#datastoreoptions_nodejs" style="color: inherit; text-decoration: inherit;">datastore<wbr>Options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Options defining a data set within Google Cloud Datastore.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timespanconfig_nodejs">
 <a href="#timespanconfig_nodejs" style="color: inherit; text-decoration: inherit;">timespan<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2326,56 +2139,48 @@ Structure is documented below.
             title="Optional">
         <span id="big_query_options_python">
 <a href="#big_query_options_python" style="color: inherit; text-decoration: inherit;">big_<wbr>query_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options defining BigQuery table and row identifiers.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_storage_options_python">
 <a href="#cloud_storage_options_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options defining a file or a set of files within a Google Cloud Storage bucket.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="datastore_options_python">
 <a href="#datastore_options_python" style="color: inherit; text-decoration: inherit;">datastore_<wbr>options</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options defining a data set within Google Cloud Datastore.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="timespan_config_python">
 <a href="#timespan_config_python" style="color: inherit; text-decoration: inherit;">timespan_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobstorageconfigbigqueryoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options</h4>
 {{% choosable language nodejs %}}
@@ -2385,11 +2190,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2399,17 +2203,15 @@ Structure is documented below.
             title="Required">
         <span id="tablereference_csharp">
 <a href="#tablereference_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2418,17 +2220,15 @@ Structure is documented below.
             title="Required">
         <span id="tablereference_go">
 <a href="#tablereference_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2437,17 +2237,15 @@ Structure is documented below.
             title="Required">
         <span id="tablereference_nodejs">
 <a href="#tablereference_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2456,20 +2254,15 @@ Structure is documented below.
             title="Required">
         <span id="table_reference_python">
 <a href="#table_reference_python" style="color: inherit; text-decoration: inherit;">table_<wbr>reference</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobstorageconfigbigqueryoptionstablereference">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Big<wbr>Query<wbr>Options<wbr>Table<wbr>Reference</h4>
 {{% choosable language nodejs %}}
@@ -2479,11 +2272,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2493,39 +2285,35 @@ Structure is documented below.
             title="Required">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_csharp">
 <a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table. If is not set a new one will be generated for you with the following format:
 `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2534,39 +2322,35 @@ Structure is documented below.
             title="Required">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_go">
 <a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table. If is not set a new one will be generated for you with the following format:
 `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2575,39 +2359,35 @@ Structure is documented below.
             title="Required">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_nodejs">
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the table. If is not set a new one will be generated for you with the following format:
 `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2616,42 +2396,35 @@ Structure is documented below.
             title="Required">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="table_id_python">
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the table. If is not set a new one will be generated for you with the following format:
 `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobstorageconfigcloudstorageoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options</h4>
 {{% choosable language nodejs %}}
@@ -2661,11 +2434,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2675,80 +2447,73 @@ Structure is documented below.
             title="Required">
         <span id="fileset_csharp">
 <a href="#fileset_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="byteslimitperfile_csharp">
 <a href="#byteslimitperfile_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Limit<wbr>Per<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
 then the rest of the bytes are omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="byteslimitperfilepercent_csharp">
 <a href="#byteslimitperfilepercent_csharp" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Limit<wbr>Per<wbr>File<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filetypes_csharp">
 <a href="#filetypes_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of file type groups to include in the scan. If empty, all files are scanned and available data
 format processors are applied. In addition, the binary content of the selected files is always scanned as well.
 Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified.
 Each value may be one of `BINARY_FILE`, `TEXT_FILE`, `IMAGE`, `WORD`, `PDF`, `AVRO`, `CSV`, and `TSV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileslimitpercent_csharp">
 <a href="#fileslimitpercent_csharp" style="color: inherit; text-decoration: inherit;">Files<wbr>Limit<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="samplemethod_csharp">
 <a href="#samplemethod_csharp" style="color: inherit; text-decoration: inherit;">Sample<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to sample bytes if not all bytes are scanned. Meaningful only when used in conjunction with bytesLimitPerFile.
 If not specified, scanning would start from the top.
 Possible values are `TOP` and `RANDOM_START`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2757,80 +2522,73 @@ Possible values are `TOP` and `RANDOM_START`.
             title="Required">
         <span id="fileset_go">
 <a href="#fileset_go" style="color: inherit; text-decoration: inherit;">File<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="byteslimitperfile_go">
 <a href="#byteslimitperfile_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Limit<wbr>Per<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
 then the rest of the bytes are omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="byteslimitperfilepercent_go">
 <a href="#byteslimitperfilepercent_go" style="color: inherit; text-decoration: inherit;">Bytes<wbr>Limit<wbr>Per<wbr>File<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filetypes_go">
 <a href="#filetypes_go" style="color: inherit; text-decoration: inherit;">File<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of file type groups to include in the scan. If empty, all files are scanned and available data
 format processors are applied. In addition, the binary content of the selected files is always scanned as well.
 Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified.
 Each value may be one of `BINARY_FILE`, `TEXT_FILE`, `IMAGE`, `WORD`, `PDF`, `AVRO`, `CSV`, and `TSV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileslimitpercent_go">
 <a href="#fileslimitpercent_go" style="color: inherit; text-decoration: inherit;">Files<wbr>Limit<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="samplemethod_go">
 <a href="#samplemethod_go" style="color: inherit; text-decoration: inherit;">Sample<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to sample bytes if not all bytes are scanned. Meaningful only when used in conjunction with bytesLimitPerFile.
 If not specified, scanning would start from the top.
 Possible values are `TOP` and `RANDOM_START`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2839,80 +2597,73 @@ Possible values are `TOP` and `RANDOM_START`.
             title="Required">
         <span id="fileset_nodejs">
 <a href="#fileset_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="byteslimitperfile_nodejs">
 <a href="#byteslimitperfile_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Limit<wbr>Per<wbr>File</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
 then the rest of the bytes are omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="byteslimitperfilepercent_nodejs">
 <a href="#byteslimitperfilepercent_nodejs" style="color: inherit; text-decoration: inherit;">bytes<wbr>Limit<wbr>Per<wbr>File<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filetypes_nodejs">
 <a href="#filetypes_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>Types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of file type groups to include in the scan. If empty, all files are scanned and available data
 format processors are applied. In addition, the binary content of the selected files is always scanned as well.
 Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified.
 Each value may be one of `BINARY_FILE`, `TEXT_FILE`, `IMAGE`, `WORD`, `PDF`, `AVRO`, `CSV`, and `TSV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="fileslimitpercent_nodejs">
 <a href="#fileslimitpercent_nodejs" style="color: inherit; text-decoration: inherit;">files<wbr>Limit<wbr>Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="samplemethod_nodejs">
 <a href="#samplemethod_nodejs" style="color: inherit; text-decoration: inherit;">sample<wbr>Method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to sample bytes if not all bytes are scanned. Meaningful only when used in conjunction with bytesLimitPerFile.
 If not specified, scanning would start from the top.
 Possible values are `TOP` and `RANDOM_START`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2921,83 +2672,73 @@ Possible values are `TOP` and `RANDOM_START`.
             title="Required">
         <span id="file_set_python">
 <a href="#file_set_python" style="color: inherit; text-decoration: inherit;">file_<wbr>set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bytes_limit_per_file_python">
 <a href="#bytes_limit_per_file_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>limit_<wbr>per_<wbr>file</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max number of bytes to scan from a file. If a scanned file's size is bigger than this value
 then the rest of the bytes are omitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bytes_limit_per_file_percent_python">
 <a href="#bytes_limit_per_file_percent_python" style="color: inherit; text-decoration: inherit;">bytes_<wbr>limit_<wbr>per_<wbr>file_<wbr>percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max percentage of bytes to scan from a file. The rest are omitted. The number of bytes scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="file_types_python">
 <a href="#file_types_python" style="color: inherit; text-decoration: inherit;">file_<wbr>types</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of file type groups to include in the scan. If empty, all files are scanned and available data
 format processors are applied. In addition, the binary content of the selected files is always scanned as well.
 Images are scanned only as binary if the specified region does not support image inspection and no fileTypes were specified.
 Each value may be one of `BINARY_FILE`, `TEXT_FILE`, `IMAGE`, `WORD`, `PDF`, `AVRO`, `CSV`, and `TSV`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="files_limit_percent_python">
 <a href="#files_limit_percent_python" style="color: inherit; text-decoration: inherit;">files_<wbr>limit_<wbr>percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Limits the number of files to scan to this percentage of the input FileSet. Number of files scanned is rounded down.
 Must be between 0 and 100, inclusively. Both 0 and 100 means no limit.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sample_method_python">
 <a href="#sample_method_python" style="color: inherit; text-decoration: inherit;">sample_<wbr>method</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to sample bytes if not all bytes are scanned. Meaningful only when used in conjunction with bytesLimitPerFile.
 If not specified, scanning would start from the top.
 Possible values are `TOP` and `RANDOM_START`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set</h4>
 {{% choosable language nodejs %}}
@@ -3007,11 +2748,10 @@ Possible values are `TOP` and `RANDOM_START`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3021,21 +2761,20 @@ Possible values are `TOP` and `RANDOM_START`.
             title="Optional">
         <span id="regexfileset_csharp">
 <a href="#regexfileset_csharp" style="color: inherit; text-decoration: inherit;">Regex<wbr>File<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage url of the file(s) to scan, in the format `gs://<bucket>/<path>`. Trailing wildcard
 in the path is allowed.
@@ -3043,10 +2782,8 @@ If the url ends in a trailing slash, the bucket or directory represented by the 
 non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is
 equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3055,21 +2792,20 @@ equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to
             title="Optional">
         <span id="regexfileset_go">
 <a href="#regexfileset_go" style="color: inherit; text-decoration: inherit;">Regex<wbr>File<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage url of the file(s) to scan, in the format `gs://<bucket>/<path>`. Trailing wildcard
 in the path is allowed.
@@ -3077,10 +2813,8 @@ If the url ends in a trailing slash, the bucket or directory represented by the 
 non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is
 equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3089,21 +2823,20 @@ equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to
             title="Optional">
         <span id="regexfileset_nodejs">
 <a href="#regexfileset_nodejs" style="color: inherit; text-decoration: inherit;">regex<wbr>File<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage url of the file(s) to scan, in the format `gs://<bucket>/<path>`. Trailing wildcard
 in the path is allowed.
@@ -3111,10 +2844,8 @@ If the url ends in a trailing slash, the bucket or directory represented by the 
 non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is
 equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3123,21 +2854,20 @@ equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to
             title="Optional">
         <span id="regex_file_set_python">
 <a href="#regex_file_set_python" style="color: inherit; text-decoration: inherit;">regex_<wbr>file_<wbr>set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The regex-filtered set of files to scan.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Cloud Storage url of the file(s) to scan, in the format `gs://<bucket>/<path>`. Trailing wildcard
 in the path is allowed.
@@ -3145,13 +2875,8 @@ If the url ends in a trailing slash, the bucket or directory represented by the 
 non-recursively (content in sub-directories will not be scanned). This means that `gs://mybucket/` is
 equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory/*`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobstorageconfigcloudstorageoptionsfilesetregexfileset">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Cloud<wbr>Storage<wbr>Options<wbr>File<wbr>Set<wbr>Regex<wbr>File<wbr>Set</h4>
 {{% choosable language nodejs %}}
@@ -3161,11 +2886,10 @@ equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3175,42 +2899,38 @@ equivalent to `gs://mybucket/*`, and `gs://mybucket/directory/` is equivalent to
             title="Required">
         <span id="bucketname_csharp">
 <a href="#bucketname_csharp" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excluderegexes_csharp">
 <a href="#excluderegexes_csharp" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Regexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to exclude. All files in the bucket that match at
 least one of these regular expressions will be excluded from the scan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includeregexes_csharp">
 <a href="#includeregexes_csharp" style="color: inherit; text-decoration: inherit;">Include<wbr>Regexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to include. All files in the bucket
 that match at least one of these regular expressions will be included in the set of files,
 except for those that also match an item in excludeRegex. Leaving this field empty will
 match all files by default (this is equivalent to including .* in the list)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3219,42 +2939,38 @@ match all files by default (this is equivalent to including .* in the list)
             title="Required">
         <span id="bucketname_go">
 <a href="#bucketname_go" style="color: inherit; text-decoration: inherit;">Bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excluderegexes_go">
 <a href="#excluderegexes_go" style="color: inherit; text-decoration: inherit;">Exclude<wbr>Regexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to exclude. All files in the bucket that match at
 least one of these regular expressions will be excluded from the scan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includeregexes_go">
 <a href="#includeregexes_go" style="color: inherit; text-decoration: inherit;">Include<wbr>Regexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to include. All files in the bucket
 that match at least one of these regular expressions will be included in the set of files,
 except for those that also match an item in excludeRegex. Leaving this field empty will
 match all files by default (this is equivalent to including .* in the list)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3263,42 +2979,38 @@ match all files by default (this is equivalent to including .* in the list)
             title="Required">
         <span id="bucketname_nodejs">
 <a href="#bucketname_nodejs" style="color: inherit; text-decoration: inherit;">bucket<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excluderegexes_nodejs">
 <a href="#excluderegexes_nodejs" style="color: inherit; text-decoration: inherit;">exclude<wbr>Regexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to exclude. All files in the bucket that match at
 least one of these regular expressions will be excluded from the scan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="includeregexes_nodejs">
 <a href="#includeregexes_nodejs" style="color: inherit; text-decoration: inherit;">include<wbr>Regexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to include. All files in the bucket
 that match at least one of these regular expressions will be included in the set of files,
 except for those that also match an item in excludeRegex. Leaving this field empty will
 match all files by default (this is equivalent to including .* in the list)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3307,45 +3019,38 @@ match all files by default (this is equivalent to including .* in the list)
             title="Required">
         <span id="bucket_name_python">
 <a href="#bucket_name_python" style="color: inherit; text-decoration: inherit;">bucket_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of a Cloud Storage bucket.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclude_regexes_python">
 <a href="#exclude_regexes_python" style="color: inherit; text-decoration: inherit;">exclude_<wbr>regexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to exclude. All files in the bucket that match at
 least one of these regular expressions will be excluded from the scan.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="include_regexes_python">
 <a href="#include_regexes_python" style="color: inherit; text-decoration: inherit;">include_<wbr>regexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}A list of regular expressions matching file paths to include. All files in the bucket
 that match at least one of these regular expressions will be included in the set of files,
 except for those that also match an item in excludeRegex. Leaving this field empty will
 match all files by default (this is equivalent to including .* in the list)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobstorageconfigdatastoreoptions">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options</h4>
 {{% choosable language nodejs %}}
@@ -3355,11 +3060,10 @@ match all files by default (this is equivalent to including .* in the list)
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptions.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3369,19 +3073,18 @@ match all files by default (this is equivalent to including .* in the list)
             title="Required">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A representation of a Datastore kind.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="partitionid_csharp">
 <a href="#partitionid_csharp" style="color: inherit; text-decoration: inherit;">Partition<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id<wbr>Args</a></span>
     </dt>
@@ -3389,10 +3092,8 @@ Structure is documented below.
 is always by project and namespace, however the namespace ID may be empty.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3401,19 +3102,18 @@ Structure is documented below.
             title="Required">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}A representation of a Datastore kind.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="partitionid_go">
 <a href="#partitionid_go" style="color: inherit; text-decoration: inherit;">Partition<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id</a></span>
     </dt>
@@ -3421,10 +3121,8 @@ Structure is documented below.
 is always by project and namespace, however the namespace ID may be empty.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3433,19 +3131,18 @@ Structure is documented below.
             title="Required">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}A representation of a Datastore kind.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="partitionid_nodejs">
 <a href="#partitionid_nodejs" style="color: inherit; text-decoration: inherit;">partition<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id</a></span>
     </dt>
@@ -3453,10 +3150,8 @@ Structure is documented below.
 is always by project and namespace, however the namespace ID may be empty.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3465,19 +3160,18 @@ Structure is documented below.
             title="Required">
         <span id="kind_python">
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A representation of a Datastore kind.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="partition_id_python">
 <a href="#partition_id_python" style="color: inherit; text-decoration: inherit;">partition_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id<wbr>Args</a></span>
     </dt>
@@ -3485,13 +3179,8 @@ Structure is documented below.
 is always by project and namespace, however the namespace ID may be empty.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobstorageconfigdatastoreoptionskind">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Kind</h4>
 {{% choosable language nodejs %}}
@@ -3501,11 +3190,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKindArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3515,16 +3203,14 @@ Structure is documented below.
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3533,16 +3219,14 @@ Structure is documented below.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3551,16 +3235,14 @@ Structure is documented below.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3569,19 +3251,14 @@ Structure is documented below.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobstorageconfigdatastoreoptionspartitionid">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Datastore<wbr>Options<wbr>Partition<wbr>Id</h4>
 {{% choosable language nodejs %}}
@@ -3591,11 +3268,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionIdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3605,27 +3281,24 @@ Structure is documented below.
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespaceid_csharp">
 <a href="#namespaceid_csharp" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If not empty, the ID of the namespace to which the entities belong.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3634,27 +3307,24 @@ Structure is documented below.
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespaceid_go">
 <a href="#namespaceid_go" style="color: inherit; text-decoration: inherit;">Namespace<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If not empty, the ID of the namespace to which the entities belong.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3663,27 +3333,24 @@ Structure is documented below.
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespaceid_nodejs">
 <a href="#namespaceid_nodejs" style="color: inherit; text-decoration: inherit;">namespace<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If not empty, the ID of the namespace to which the entities belong.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3692,30 +3359,24 @@ Structure is documented below.
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="namespace_id_python">
 <a href="#namespace_id_python" style="color: inherit; text-decoration: inherit;">namespace_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}If not empty, the ID of the namespace to which the entities belong.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobstorageconfigtimespanconfig">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -3725,11 +3386,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3739,52 +3399,47 @@ Structure is documented below.
             title="Required">
         <span id="timestampfield_csharp">
 <a href="#timestampfield_csharp" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableautopopulationoftimespanconfig_csharp">
 <a href="#enableautopopulationoftimespanconfig_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Population<wbr>Of<wbr>Timespan<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
 scanning files that have not been modified since the last time the JobTrigger executed. This will
 be based on the time of the execution of the last run of the JobTrigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclude files or rows older than this value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3793,52 +3448,47 @@ be based on the time of the execution of the last run of the JobTrigger.
             title="Required">
         <span id="timestampfield_go">
 <a href="#timestampfield_go" style="color: inherit; text-decoration: inherit;">Timestamp<wbr>Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableautopopulationoftimespanconfig_go">
 <a href="#enableautopopulationoftimespanconfig_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Auto<wbr>Population<wbr>Of<wbr>Timespan<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
 scanning files that have not been modified since the last time the JobTrigger executed. This will
 be based on the time of the execution of the last run of the JobTrigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclude files or rows older than this value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3847,52 +3497,47 @@ be based on the time of the execution of the last run of the JobTrigger.
             title="Required">
         <span id="timestampfield_nodejs">
 <a href="#timestampfield_nodejs" style="color: inherit; text-decoration: inherit;">timestamp<wbr>Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enableautopopulationoftimespanconfig_nodejs">
 <a href="#enableautopopulationoftimespanconfig_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Auto<wbr>Population<wbr>Of<wbr>Timespan<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
 scanning files that have not been modified since the last time the JobTrigger executed. This will
 be based on the time of the execution of the last run of the JobTrigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Exclude files or rows older than this value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3901,55 +3546,47 @@ be based on the time of the execution of the last run of the JobTrigger.
             title="Required">
         <span id="timestamp_field_python">
 <a href="#timestamp_field_python" style="color: inherit; text-decoration: inherit;">timestamp_<wbr>field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information on where to inspect
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enable_auto_population_of_timespan_config_python">
 <a href="#enable_auto_population_of_timespan_config_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>auto_<wbr>population_<wbr>of_<wbr>timespan_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When the job is started by a JobTrigger we will automatically figure out a valid startTime to avoid
 scanning files that have not been modified since the last time the JobTrigger executed. This will
 be based on the time of the execution of the last run of the JobTrigger.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Exclude files or rows older than this value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggerinspectjobstorageconfigtimespanconfigtimestampfield">Prevention<wbr>Job<wbr>Trigger<wbr>Inspect<wbr>Job<wbr>Storage<wbr>Config<wbr>Timespan<wbr>Config<wbr>Timestamp<wbr>Field</h4>
 {{% choosable language nodejs %}}
@@ -3959,11 +3596,10 @@ be based on the time of the execution of the last run of the JobTrigger.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3973,16 +3609,14 @@ be based on the time of the execution of the last run of the JobTrigger.
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3991,16 +3625,14 @@ be based on the time of the execution of the last run of the JobTrigger.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4009,16 +3641,14 @@ be based on the time of the execution of the last run of the JobTrigger.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4027,19 +3657,14 @@ be based on the time of the execution of the last run of the JobTrigger.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Datastore kind.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggertrigger">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger</h4>
 {{% choosable language nodejs %}}
@@ -4049,11 +3674,10 @@ be based on the time of the execution of the last run of the JobTrigger.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerTrigger.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4063,17 +3687,15 @@ be based on the time of the execution of the last run of the JobTrigger.
             title="Optional">
         <span id="schedule_csharp">
 <a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4082,17 +3704,15 @@ Structure is documented below.
             title="Optional">
         <span id="schedule_go">
 <a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4101,17 +3721,15 @@ Structure is documented below.
             title="Optional">
         <span id="schedule_nodejs">
 <a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4120,20 +3738,15 @@ Structure is documented below.
             title="Optional">
         <span id="schedule_python">
 <a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule for triggered jobs
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionjobtriggertriggerschedule">Prevention<wbr>Job<wbr>Trigger<wbr>Trigger<wbr>Schedule</h4>
 {{% choosable language nodejs %}}
@@ -4143,11 +3756,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionJobTriggerTriggerScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionJobTriggerTriggerScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionJobTriggerTriggerSchedule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4157,19 +3769,17 @@ Structure is documented below.
             title="Optional">
         <span id="recurrenceperiodduration_csharp">
 <a href="#recurrenceperiodduration_csharp" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Period<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}With this option a job is started a regular periodic basis. For example: every day (86400 seconds).
 A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs.
 This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4178,19 +3788,17 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span id="recurrenceperiodduration_go">
 <a href="#recurrenceperiodduration_go" style="color: inherit; text-decoration: inherit;">Recurrence<wbr>Period<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}With this option a job is started a regular periodic basis. For example: every day (86400 seconds).
 A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs.
 This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4199,19 +3807,17 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span id="recurrenceperiodduration_nodejs">
 <a href="#recurrenceperiodduration_nodejs" style="color: inherit; text-decoration: inherit;">recurrence<wbr>Period<wbr>Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}With this option a job is started a regular periodic basis. For example: every day (86400 seconds).
 A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs.
 This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4220,27 +3826,17 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span id="recurrence_period_duration_python">
 <a href="#recurrence_period_duration_python" style="color: inherit; text-decoration: inherit;">recurrence_<wbr>period_<wbr>duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}With this option a job is started a regular periodic basis. For example: every day (86400 seconds).
 A scheduled start time will be skipped if the previous execution has not ended when its scheduled time occurs.
 This value must be set to a time duration greater than or equal to 1 day and can be no longer than 60 days.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

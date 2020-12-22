@@ -1,8 +1,8 @@
 
 ---
 title: "AlertPolicy"
-title_tag: "Resource AlertPolicy | Module monitoring | Package GCP"
-meta_desc: "Explore the AlertPolicy resource of the monitoring module, including examples, input properties, output properties, lookup functions, and supporting types. A description of the conditions under which some aspect of your system is"
+title_tag: "gcp.monitoring.AlertPolicy"
+meta_desc: "Documentation for the gcp.monitoring.AlertPolicy resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -179,7 +179,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicy">AlertPolicy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicy">AlertPolicy</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -187,11 +187,11 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicy">NewAlertPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicy">NewAlertPolicy</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicy.html">AlertPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicyArgs.html">AlertPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicy.html">AlertPolicy</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicyArgs.html">AlertPolicyArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -202,7 +202,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -271,7 +271,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -310,7 +310,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -351,7 +351,6 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -359,20 +358,19 @@ The AlertPolicy resource accepts the following [input]({{< relref "/docs/intro/c
             title="Required">
         <span id="combiner_csharp">
 <a href="#combiner_csharp" style="color: inherit; text-decoration: inherit;">Combiner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
 Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="conditions_csharp">
 <a href="#conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
@@ -382,14 +380,13 @@ evaluate to true, then an incident is created. A policy can have from
 one to six conditions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -397,12 +394,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="documentation_csharp">
 <a href="#documentation_csharp" style="color: inherit; text-decoration: inherit;">Documentation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
@@ -412,25 +408,23 @@ display name for multiple policies in the same project. The name is
 limited to 512 Unicode characters.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationchannels_csharp">
 <a href="#notificationchannels_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -440,24 +434,22 @@ returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userlabels_csharp">
 <a href="#userlabels_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -467,10 +459,8 @@ to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys
 must begin with a letter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -479,20 +469,19 @@ must begin with a letter.
             title="Required">
         <span id="combiner_go">
 <a href="#combiner_go" style="color: inherit; text-decoration: inherit;">Combiner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
 Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="conditions_go">
 <a href="#conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">[]Alert<wbr>Policy<wbr>Condition</a></span>
     </dt>
@@ -502,14 +491,13 @@ evaluate to true, then an incident is created. A policy can have from
 one to six conditions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -517,12 +505,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="documentation_go">
 <a href="#documentation_go" style="color: inherit; text-decoration: inherit;">Documentation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
@@ -532,25 +519,23 @@ display name for multiple policies in the same project. The name is
 limited to 512 Unicode characters.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationchannels_go">
 <a href="#notificationchannels_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -560,24 +545,22 @@ returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userlabels_go">
 <a href="#userlabels_go" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -587,10 +570,8 @@ to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys
 must begin with a letter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -599,20 +580,19 @@ must begin with a letter.
             title="Required">
         <span id="combiner_nodejs">
 <a href="#combiner_nodejs" style="color: inherit; text-decoration: inherit;">combiner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
 Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="conditions_nodejs">
 <a href="#conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">Alert<wbr>Policy<wbr>Condition[]</a></span>
     </dt>
@@ -622,14 +602,13 @@ evaluate to true, then an incident is created. A policy can have from
 one to six conditions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -637,12 +616,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="documentation_nodejs">
 <a href="#documentation_nodejs" style="color: inherit; text-decoration: inherit;">documentation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
@@ -652,25 +630,23 @@ display name for multiple policies in the same project. The name is
 limited to 512 Unicode characters.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notificationchannels_nodejs">
 <a href="#notificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -680,24 +656,22 @@ returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="userlabels_nodejs">
 <a href="#userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -707,10 +681,8 @@ to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys
 must begin with a letter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -719,20 +691,19 @@ must begin with a letter.
             title="Required">
         <span id="combiner_python">
 <a href="#combiner_python" style="color: inherit; text-decoration: inherit;">combiner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
 Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="conditions_python">
 <a href="#conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Args]</a></span>
     </dt>
@@ -742,14 +713,13 @@ evaluate to true, then an incident is created. A policy can have from
 one to six conditions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -757,12 +727,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="documentation_python">
 <a href="#documentation_python" style="color: inherit; text-decoration: inherit;">documentation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
@@ -772,25 +741,23 @@ display name for multiple policies in the same project. The name is
 limited to 512 Unicode characters.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="notification_channels_python">
 <a href="#notification_channels_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -800,24 +767,22 @@ returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="user_labels_python">
 <a href="#user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -827,19 +792,13 @@ to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys
 must begin with a letter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the AlertPolicy resource produces the following output properties:
-
 
 
 
@@ -850,31 +809,29 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="creationrecords_csharp">
 <a href="#creationrecords_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycreationrecord">List&lt;Alert<wbr>Policy<wbr>Creation<wbr>Record&gt;</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -884,10 +841,8 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -896,31 +851,29 @@ policy.
             title="">
         <span id="creationrecords_go">
 <a href="#creationrecords_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycreationrecord">[]Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -930,10 +883,8 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -942,31 +893,29 @@ policy.
             title="">
         <span id="creationrecords_nodejs">
 <a href="#creationrecords_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -976,10 +925,8 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -988,31 +935,29 @@ policy.
             title="">
         <span id="creation_records_python">
 <a href="#creation_records_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycreationrecord">Sequence[Alert<wbr>Policy<wbr>Creation<wbr>Record]</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -1022,13 +967,8 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1038,7 +978,7 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicy">AlertPolicy</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicy">AlertPolicy</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1047,11 +987,11 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicy.html">AlertPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicyState.html">AlertPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicy.html">AlertPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.AlertPolicyState.html">AlertPolicyState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1153,7 +1093,6 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1161,20 +1100,19 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_combiner_csharp">
 <a href="#state_combiner_csharp" style="color: inherit; text-decoration: inherit;">Combiner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
 Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_conditions_csharp">
 <a href="#state_conditions_csharp" style="color: inherit; text-decoration: inherit;">Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
@@ -1184,26 +1122,24 @@ evaluate to true, then an incident is created. A policy can have from
 one to six conditions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationrecords_csharp">
 <a href="#state_creationrecords_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycreationrecord">List&lt;Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -1211,12 +1147,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_documentation_csharp">
 <a href="#state_documentation_csharp" style="color: inherit; text-decoration: inherit;">Documentation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
@@ -1226,25 +1161,23 @@ display name for multiple policies in the same project. The name is
 limited to 512 Unicode characters.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_csharp">
 <a href="#state_enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -1254,14 +1187,13 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notificationchannels_csharp">
 <a href="#state_notificationchannels_csharp" style="color: inherit; text-decoration: inherit;">Notification<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -1271,24 +1203,22 @@ returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userlabels_csharp">
 <a href="#state_userlabels_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
@@ -1298,10 +1228,8 @@ to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys
 must begin with a letter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1310,20 +1238,19 @@ must begin with a letter.
             title="Optional">
         <span id="state_combiner_go">
 <a href="#state_combiner_go" style="color: inherit; text-decoration: inherit;">Combiner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
 Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_conditions_go">
 <a href="#state_conditions_go" style="color: inherit; text-decoration: inherit;">Conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">[]Alert<wbr>Policy<wbr>Condition</a></span>
     </dt>
@@ -1333,26 +1260,24 @@ evaluate to true, then an incident is created. A policy can have from
 one to six conditions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationrecords_go">
 <a href="#state_creationrecords_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycreationrecord">[]Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -1360,12 +1285,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_documentation_go">
 <a href="#state_documentation_go" style="color: inherit; text-decoration: inherit;">Documentation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
@@ -1375,25 +1299,23 @@ display name for multiple policies in the same project. The name is
 limited to 512 Unicode characters.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_go">
 <a href="#state_enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -1403,14 +1325,13 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notificationchannels_go">
 <a href="#state_notificationchannels_go" style="color: inherit; text-decoration: inherit;">Notification<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -1420,24 +1341,22 @@ returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userlabels_go">
 <a href="#state_userlabels_go" style="color: inherit; text-decoration: inherit;">User<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
@@ -1447,10 +1366,8 @@ to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys
 must begin with a letter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1459,20 +1376,19 @@ must begin with a letter.
             title="Optional">
         <span id="state_combiner_nodejs">
 <a href="#state_combiner_nodejs" style="color: inherit; text-decoration: inherit;">combiner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
 Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_conditions_nodejs">
 <a href="#state_conditions_nodejs" style="color: inherit; text-decoration: inherit;">conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">Alert<wbr>Policy<wbr>Condition[]</a></span>
     </dt>
@@ -1482,26 +1398,24 @@ evaluate to true, then an incident is created. A policy can have from
 one to six conditions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creationrecords_nodejs">
 <a href="#state_creationrecords_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record[]</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -1509,12 +1423,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_documentation_nodejs">
 <a href="#state_documentation_nodejs" style="color: inherit; text-decoration: inherit;">documentation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
@@ -1524,25 +1437,23 @@ display name for multiple policies in the same project. The name is
 limited to 512 Unicode characters.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_nodejs">
 <a href="#state_enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -1552,14 +1463,13 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notificationchannels_nodejs">
 <a href="#state_notificationchannels_nodejs" style="color: inherit; text-decoration: inherit;">notification<wbr>Channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -1569,24 +1479,22 @@ returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_userlabels_nodejs">
 <a href="#state_userlabels_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
@@ -1596,10 +1504,8 @@ to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys
 must begin with a letter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1608,20 +1514,19 @@ must begin with a letter.
             title="Optional">
         <span id="state_combiner_python">
 <a href="#state_combiner_python" style="color: inherit; text-decoration: inherit;">combiner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to
 determine if an incident should be opened.
 Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_conditions_python">
 <a href="#state_conditions_python" style="color: inherit; text-decoration: inherit;">conditions</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycondition">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Args]</a></span>
     </dt>
@@ -1631,26 +1536,24 @@ evaluate to true, then an incident is created. A policy can have from
 one to six conditions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_creation_records_python">
 <a href="#state_creation_records_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>records</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycreationrecord">Sequence[Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -1658,12 +1561,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_documentation_python">
 <a href="#state_documentation_python" style="color: inherit; text-decoration: inherit;">documentation</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
@@ -1673,25 +1575,23 @@ display name for multiple policies in the same project. The name is
 limited to 512 Unicode characters.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_enabled_python">
 <a href="#state_enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -1701,14 +1601,13 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_notification_channels_python">
 <a href="#state_notification_channels_python" style="color: inherit; text-decoration: inherit;">notification_<wbr>channels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be
 sent when incidents are opened or closed or when new violations occur
@@ -1718,24 +1617,22 @@ returned from the notificationChannels.list method. The syntax of the
 entries in this field is
 `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_user_labels_python">
 <a href="#state_user_labels_python" style="color: inherit; text-decoration: inherit;">user_<wbr>labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
@@ -1745,7 +1642,6 @@ to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys
 must begin with a letter.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1754,11 +1650,8 @@ must begin with a letter.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="alertpolicycondition">Alert<wbr>Policy<wbr>Condition</h4>
@@ -1769,11 +1662,10 @@ must begin with a letter.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyCondition.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1783,9 +1675,9 @@ must begin with a letter.
             title="Required">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -1793,12 +1685,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionabsent_csharp">
 <a href="#conditionabsent_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Absent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args</a></span>
     </dt>
@@ -1806,24 +1697,22 @@ policy.
 continues to receive new data points.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionmonitoringquerylanguage_csharp">
 <a href="#conditionmonitoringquerylanguage_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Monitoring<wbr>Query<wbr>Language</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionthreshold_csharp">
 <a href="#conditionthreshold_csharp" style="color: inherit; text-decoration: inherit;">Condition<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args</a></span>
     </dt>
@@ -1831,14 +1720,13 @@ Structure is documented below.
 threshold.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -1848,10 +1736,8 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1860,9 +1746,9 @@ policy.
             title="Required">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -1870,12 +1756,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionabsent_go">
 <a href="#conditionabsent_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Absent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
@@ -1883,24 +1768,22 @@ policy.
 continues to receive new data points.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionmonitoringquerylanguage_go">
 <a href="#conditionmonitoringquerylanguage_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Monitoring<wbr>Query<wbr>Language</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language</a></span>
     </dt>
     <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionthreshold_go">
 <a href="#conditionthreshold_go" style="color: inherit; text-decoration: inherit;">Condition<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
@@ -1908,14 +1791,13 @@ Structure is documented below.
 threshold.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -1925,10 +1807,8 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1937,9 +1817,9 @@ policy.
             title="Required">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -1947,12 +1827,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionabsent_nodejs">
 <a href="#conditionabsent_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Absent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
@@ -1960,24 +1839,22 @@ policy.
 continues to receive new data points.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionmonitoringquerylanguage_nodejs">
 <a href="#conditionmonitoringquerylanguage_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Monitoring<wbr>Query<wbr>Language</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language</a></span>
     </dt>
     <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="conditionthreshold_nodejs">
 <a href="#conditionthreshold_nodejs" style="color: inherit; text-decoration: inherit;">condition<wbr>Threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
@@ -1985,14 +1862,13 @@ Structure is documented below.
 threshold.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -2002,10 +1878,8 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2014,9 +1888,9 @@ policy.
             title="Required">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the
 condition in dashboards, notifications, and
@@ -2024,12 +1898,11 @@ incidents. To avoid confusion, don't use the same
 display name for multiple conditions in the same
 policy.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_absent_python">
 <a href="#condition_absent_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>absent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args</a></span>
     </dt>
@@ -2037,24 +1910,22 @@ policy.
 continues to receive new data points.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_monitoring_query_language_python">
 <a href="#condition_monitoring_query_language_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>monitoring_<wbr>query_<wbr>language</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Monitoring Query Language query that outputs a boolean stream
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="condition_threshold_python">
 <a href="#condition_threshold_python" style="color: inherit; text-decoration: inherit;">condition_<wbr>threshold</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args</a></span>
     </dt>
@@ -2062,14 +1933,13 @@ Structure is documented below.
 threshold.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The unique resource name for this condition.
@@ -2079,13 +1949,8 @@ projects/[PROJECT_ID]/alertPolicies/[POLICY_ID]/conditions/[CONDITION_ID]
 the condition is created as part of a new or updated alerting
 policy.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</h4>
 {{% choosable language nodejs %}}
@@ -2095,11 +1960,10 @@ policy.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionAbsentArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionAbsent.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2109,9 +1973,9 @@ policy.
             title="Required">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -2129,12 +1993,11 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aggregations_csharp">
 <a href="#aggregations_csharp" style="color: inherit; text-decoration: inherit;">Aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args&gt;</a></span>
     </dt>
@@ -2153,14 +2016,13 @@ ListTimeSeries method when debugging this
 field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -2175,12 +2037,11 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_csharp">
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args</a></span>
     </dt>
@@ -2194,10 +2055,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2206,9 +2065,9 @@ Structure is documented below.
             title="Required">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -2226,12 +2085,11 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aggregations_go">
 <a href="#aggregations_go" style="color: inherit; text-decoration: inherit;">Aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">[]Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation</a></span>
     </dt>
@@ -2250,14 +2108,13 @@ ListTimeSeries method when debugging this
 field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -2272,12 +2129,11 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_go">
 <a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</a></span>
     </dt>
@@ -2291,10 +2147,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2303,9 +2157,9 @@ Structure is documented below.
             title="Required">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -2323,12 +2177,11 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aggregations_nodejs">
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation[]</a></span>
     </dt>
@@ -2347,14 +2200,13 @@ ListTimeSeries method when debugging this
 field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -2369,12 +2221,11 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_nodejs">
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</a></span>
     </dt>
@@ -2388,10 +2239,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2400,9 +2249,9 @@ Structure is documented below.
             title="Required">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -2420,12 +2269,11 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aggregations_python">
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
@@ -2444,14 +2292,13 @@ ListTimeSeries method when debugging this
 field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -2466,12 +2313,11 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_python">
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args</a></span>
     </dt>
@@ -2485,13 +2331,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="alertpolicyconditionconditionabsentaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation</h4>
 {{% choosable language nodejs %}}
@@ -2501,11 +2342,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionAbsentAggregationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionAbsentAggregation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2515,9 +2355,9 @@ Structure is documented below.
             title="Optional">
         <span id="alignmentperiod_csharp">
 <a href="#alignmentperiod_csharp" style="color: inherit; text-decoration: inherit;">Alignment<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -2534,14 +2374,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossseriesreducer_csharp">
 <a href="#crossseriesreducer_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Series<wbr>Reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -2562,14 +2401,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_csharp">
 <a href="#groupbyfields_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -2597,14 +2435,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perseriesaligner_csharp">
 <a href="#perseriesaligner_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Series<wbr>Aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -2625,10 +2462,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2637,9 +2472,9 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="alignmentperiod_go">
 <a href="#alignmentperiod_go" style="color: inherit; text-decoration: inherit;">Alignment<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -2656,14 +2491,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossseriesreducer_go">
 <a href="#crossseriesreducer_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Series<wbr>Reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -2684,14 +2518,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_go">
 <a href="#groupbyfields_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -2719,14 +2552,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perseriesaligner_go">
 <a href="#perseriesaligner_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Series<wbr>Aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -2747,10 +2579,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2759,9 +2589,9 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="alignmentperiod_nodejs">
 <a href="#alignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -2778,14 +2608,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossseriesreducer_nodejs">
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -2806,14 +2635,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_nodejs">
 <a href="#groupbyfields_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -2841,14 +2669,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perseriesaligner_nodejs">
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -2869,10 +2696,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2881,9 +2706,9 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="alignment_period_python">
 <a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -2900,14 +2725,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cross_series_reducer_python">
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -2928,14 +2752,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_by_fields_python">
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -2963,14 +2786,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="per_series_aligner_python">
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -2991,13 +2813,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</h4>
 {{% choosable language nodejs %}}
@@ -3007,11 +2824,10 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionAbsentTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionAbsentTrigger.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3021,31 +2837,28 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_csharp">
 <a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3054,31 +2867,28 @@ condition to be triggered.
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_go">
 <a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3087,31 +2897,28 @@ condition to be triggered.
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_nodejs">
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3120,34 +2927,28 @@ condition to be triggered.
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_python">
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="alertpolicyconditionconditionmonitoringquerylanguage">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language</h4>
 {{% choosable language nodejs %}}
@@ -3157,11 +2958,10 @@ condition to be triggered.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionMonitoringQueryLanguageArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionMonitoringQueryLanguageOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionMonitoringQueryLanguageArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionMonitoringQueryLanguage.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3171,9 +2971,9 @@ condition to be triggered.
             title="Required">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -3191,23 +2991,21 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="query_csharp">
 <a href="#query_csharp" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitoring Query Language query that outputs a boolean stream.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_csharp">
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger<wbr>Args</a></span>
     </dt>
@@ -3221,10 +3019,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3233,9 +3029,9 @@ Structure is documented below.
             title="Required">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -3253,23 +3049,21 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="query_go">
 <a href="#query_go" style="color: inherit; text-decoration: inherit;">Query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitoring Query Language query that outputs a boolean stream.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_go">
 <a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger</a></span>
     </dt>
@@ -3283,10 +3077,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3295,9 +3087,9 @@ Structure is documented below.
             title="Required">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -3315,23 +3107,21 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="query_nodejs">
 <a href="#query_nodejs" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Monitoring Query Language query that outputs a boolean stream.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_nodejs">
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger</a></span>
     </dt>
@@ -3345,10 +3135,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3357,9 +3145,9 @@ Structure is documented below.
             title="Required">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -3377,23 +3165,21 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="query_python">
 <a href="#query_python" style="color: inherit; text-decoration: inherit;">query</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Monitoring Query Language query that outputs a boolean stream.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_python">
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger<wbr>Args</a></span>
     </dt>
@@ -3407,13 +3193,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="alertpolicyconditionconditionmonitoringquerylanguagetrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Monitoring<wbr>Query<wbr>Language<wbr>Trigger</h4>
 {{% choosable language nodejs %}}
@@ -3423,11 +3204,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionMonitoringQueryLanguageTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionMonitoringQueryLanguageTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionMonitoringQueryLanguageTrigger.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3437,31 +3217,28 @@ Structure is documented below.
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_csharp">
 <a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3470,31 +3247,28 @@ condition to be triggered.
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_go">
 <a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3503,31 +3277,28 @@ condition to be triggered.
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_nodejs">
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3536,34 +3307,28 @@ condition to be triggered.
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_python">
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</h4>
 {{% choosable language nodejs %}}
@@ -3573,11 +3338,10 @@ condition to be triggered.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThreshold.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3587,9 +3351,9 @@ condition to be triggered.
             title="Required">
         <span id="comparison_csharp">
 <a href="#comparison_csharp" style="color: inherit; text-decoration: inherit;">Comparison</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time
 series (indicated by filter and aggregation)
@@ -3601,14 +3365,13 @@ right-hand side. Only COMPARISON_LT and
 COMPARISON_GT are supported currently.
 Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARISON_LE`, `COMPARISON_EQ`, and `COMPARISON_NE`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -3626,12 +3389,11 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aggregations_csharp">
 <a href="#aggregations_csharp" style="color: inherit; text-decoration: inherit;">Aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args&gt;</a></span>
     </dt>
@@ -3650,12 +3412,11 @@ ListTimeSeries method when debugging this
 field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denominatoraggregations_csharp">
 <a href="#denominatoraggregations_csharp" style="color: inherit; text-decoration: inherit;">Denominator<wbr>Aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args&gt;</a></span>
     </dt>
@@ -3677,14 +3438,13 @@ is advisable to use the ListTimeSeries
 method when debugging this field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denominatorfilter_csharp">
 <a href="#denominatorfilter_csharp" style="color: inherit; text-decoration: inherit;">Denominator<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies a time series that
 should be used as the denominator of a ratio
@@ -3702,14 +3462,13 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_csharp">
 <a href="#filter_csharp" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -3724,24 +3483,22 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thresholdvalue_csharp">
 <a href="#thresholdvalue_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}A value against which to compare the time
 series.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_csharp">
 <a href="#trigger_csharp" style="color: inherit; text-decoration: inherit;">Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args</a></span>
     </dt>
@@ -3755,10 +3512,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3767,9 +3522,9 @@ Structure is documented below.
             title="Required">
         <span id="comparison_go">
 <a href="#comparison_go" style="color: inherit; text-decoration: inherit;">Comparison</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time
 series (indicated by filter and aggregation)
@@ -3781,14 +3536,13 @@ right-hand side. Only COMPARISON_LT and
 COMPARISON_GT are supported currently.
 Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARISON_LE`, `COMPARISON_EQ`, and `COMPARISON_NE`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -3806,12 +3560,11 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aggregations_go">
 <a href="#aggregations_go" style="color: inherit; text-decoration: inherit;">Aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">[]Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation</a></span>
     </dt>
@@ -3830,12 +3583,11 @@ ListTimeSeries method when debugging this
 field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denominatoraggregations_go">
 <a href="#denominatoraggregations_go" style="color: inherit; text-decoration: inherit;">Denominator<wbr>Aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">[]Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation</a></span>
     </dt>
@@ -3857,14 +3609,13 @@ is advisable to use the ListTimeSeries
 method when debugging this field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denominatorfilter_go">
 <a href="#denominatorfilter_go" style="color: inherit; text-decoration: inherit;">Denominator<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies a time series that
 should be used as the denominator of a ratio
@@ -3882,14 +3633,13 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_go">
 <a href="#filter_go" style="color: inherit; text-decoration: inherit;">Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -3904,24 +3654,22 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thresholdvalue_go">
 <a href="#thresholdvalue_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}A value against which to compare the time
 series.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_go">
 <a href="#trigger_go" style="color: inherit; text-decoration: inherit;">Trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</a></span>
     </dt>
@@ -3935,10 +3683,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3947,9 +3693,9 @@ Structure is documented below.
             title="Required">
         <span id="comparison_nodejs">
 <a href="#comparison_nodejs" style="color: inherit; text-decoration: inherit;">comparison</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time
 series (indicated by filter and aggregation)
@@ -3961,14 +3707,13 @@ right-hand side. Only COMPARISON_LT and
 COMPARISON_GT are supported currently.
 Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARISON_LE`, `COMPARISON_EQ`, and `COMPARISON_NE`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -3986,12 +3731,11 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aggregations_nodejs">
 <a href="#aggregations_nodejs" style="color: inherit; text-decoration: inherit;">aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation[]</a></span>
     </dt>
@@ -4010,12 +3754,11 @@ ListTimeSeries method when debugging this
 field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denominatoraggregations_nodejs">
 <a href="#denominatoraggregations_nodejs" style="color: inherit; text-decoration: inherit;">denominator<wbr>Aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation[]</a></span>
     </dt>
@@ -4037,14 +3780,13 @@ is advisable to use the ListTimeSeries
 method when debugging this field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denominatorfilter_nodejs">
 <a href="#denominatorfilter_nodejs" style="color: inherit; text-decoration: inherit;">denominator<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies a time series that
 should be used as the denominator of a ratio
@@ -4062,14 +3804,13 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_nodejs">
 <a href="#filter_nodejs" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -4084,24 +3825,22 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="thresholdvalue_nodejs">
 <a href="#thresholdvalue_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A value against which to compare the time
 series.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_nodejs">
 <a href="#trigger_nodejs" style="color: inherit; text-decoration: inherit;">trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</a></span>
     </dt>
@@ -4115,10 +3854,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4127,9 +3864,9 @@ Structure is documented below.
             title="Required">
         <span id="comparison_python">
 <a href="#comparison_python" style="color: inherit; text-decoration: inherit;">comparison</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The comparison to apply between the time
 series (indicated by filter and aggregation)
@@ -4141,14 +3878,13 @@ right-hand side. Only COMPARISON_LT and
 COMPARISON_GT are supported currently.
 Possible values are `COMPARISON_GT`, `COMPARISON_GE`, `COMPARISON_LT`, `COMPARISON_LE`, `COMPARISON_EQ`, and `COMPARISON_NE`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The amount of time that a time series must
 violate the threshold to be considered
@@ -4166,12 +3902,11 @@ generate spurious alerts, but short enough
 that unhealthy states are detected and
 alerted on quickly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="aggregations_python">
 <a href="#aggregations_python" style="color: inherit; text-decoration: inherit;">aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
@@ -4190,12 +3925,11 @@ ListTimeSeries method when debugging this
 field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denominator_aggregations_python">
 <a href="#denominator_aggregations_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>aggregations</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Sequence[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args]</a></span>
     </dt>
@@ -4217,14 +3951,13 @@ is advisable to use the ListTimeSeries
 method when debugging this field.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="denominator_filter_python">
 <a href="#denominator_filter_python" style="color: inherit; text-decoration: inherit;">denominator_<wbr>filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filter that identifies a time series that
 should be used as the denominator of a ratio
@@ -4242,14 +3975,13 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="filter_python">
 <a href="#filter_python" style="color: inherit; text-decoration: inherit;">filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A filter that identifies which time series
 should be compared with the threshold.The
@@ -4264,24 +3996,22 @@ resource labels, and metric labels. This
 field may not exceed 2048 Unicode characters
 in length.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="threshold_value_python">
 <a href="#threshold_value_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}A value against which to compare the time
 series.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="trigger_python">
 <a href="#trigger_python" style="color: inherit; text-decoration: inherit;">trigger</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args</a></span>
     </dt>
@@ -4295,13 +4025,8 @@ or by the ratio, if denominator_filter and
 denominator_aggregations are specified.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="alertpolicyconditionconditionthresholdaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation</h4>
 {{% choosable language nodejs %}}
@@ -4311,11 +4036,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdAggregationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThresholdAggregation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4325,9 +4049,9 @@ Structure is documented below.
             title="Optional">
         <span id="alignmentperiod_csharp">
 <a href="#alignmentperiod_csharp" style="color: inherit; text-decoration: inherit;">Alignment<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -4344,14 +4068,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossseriesreducer_csharp">
 <a href="#crossseriesreducer_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Series<wbr>Reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -4372,14 +4095,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_csharp">
 <a href="#groupbyfields_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -4407,14 +4129,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perseriesaligner_csharp">
 <a href="#perseriesaligner_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Series<wbr>Aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -4435,10 +4156,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4447,9 +4166,9 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="alignmentperiod_go">
 <a href="#alignmentperiod_go" style="color: inherit; text-decoration: inherit;">Alignment<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -4466,14 +4185,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossseriesreducer_go">
 <a href="#crossseriesreducer_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Series<wbr>Reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -4494,14 +4212,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_go">
 <a href="#groupbyfields_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -4529,14 +4246,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perseriesaligner_go">
 <a href="#perseriesaligner_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Series<wbr>Aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -4557,10 +4273,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4569,9 +4283,9 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="alignmentperiod_nodejs">
 <a href="#alignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -4588,14 +4302,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossseriesreducer_nodejs">
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -4616,14 +4329,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_nodejs">
 <a href="#groupbyfields_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -4651,14 +4363,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perseriesaligner_nodejs">
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -4679,10 +4390,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4691,9 +4400,9 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="alignment_period_python">
 <a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -4710,14 +4419,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cross_series_reducer_python">
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -4738,14 +4446,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_by_fields_python">
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -4773,14 +4480,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="per_series_aligner_python">
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -4801,13 +4507,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="alertpolicyconditionconditionthresholddenominatoraggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation</h4>
 {{% choosable language nodejs %}}
@@ -4817,11 +4518,10 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdDenominatorAggregationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThresholdDenominatorAggregation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4831,9 +4531,9 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="alignmentperiod_csharp">
 <a href="#alignmentperiod_csharp" style="color: inherit; text-decoration: inherit;">Alignment<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -4850,14 +4550,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossseriesreducer_csharp">
 <a href="#crossseriesreducer_csharp" style="color: inherit; text-decoration: inherit;">Cross<wbr>Series<wbr>Reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -4878,14 +4577,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_csharp">
 <a href="#groupbyfields_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -4913,14 +4611,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perseriesaligner_csharp">
 <a href="#perseriesaligner_csharp" style="color: inherit; text-decoration: inherit;">Per<wbr>Series<wbr>Aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -4941,10 +4638,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4953,9 +4648,9 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="alignmentperiod_go">
 <a href="#alignmentperiod_go" style="color: inherit; text-decoration: inherit;">Alignment<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -4972,14 +4667,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossseriesreducer_go">
 <a href="#crossseriesreducer_go" style="color: inherit; text-decoration: inherit;">Cross<wbr>Series<wbr>Reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -5000,14 +4694,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_go">
 <a href="#groupbyfields_go" style="color: inherit; text-decoration: inherit;">Group<wbr>By<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -5035,14 +4728,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perseriesaligner_go">
 <a href="#perseriesaligner_go" style="color: inherit; text-decoration: inherit;">Per<wbr>Series<wbr>Aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -5063,10 +4755,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5075,9 +4765,9 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="alignmentperiod_nodejs">
 <a href="#alignmentperiod_nodejs" style="color: inherit; text-decoration: inherit;">alignment<wbr>Period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -5094,14 +4784,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="crossseriesreducer_nodejs">
 <a href="#crossseriesreducer_nodejs" style="color: inherit; text-decoration: inherit;">cross<wbr>Series<wbr>Reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -5122,14 +4811,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbyfields_nodejs">
 <a href="#groupbyfields_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>By<wbr>Fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -5157,14 +4845,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="perseriesaligner_nodejs">
 <a href="#perseriesaligner_nodejs" style="color: inherit; text-decoration: inherit;">per<wbr>Series<wbr>Aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -5185,10 +4872,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5197,9 +4882,9 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="alignment_period_python">
 <a href="#alignment_period_python" style="color: inherit; text-decoration: inherit;">alignment_<wbr>period</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alignment period for per-time
 series alignment. If present,
@@ -5216,14 +4901,13 @@ does not equal ALIGN_NONE, then
 this field must be defined;
 otherwise an error is returned.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cross_series_reducer_python">
 <a href="#cross_series_reducer_python" style="color: inherit; text-decoration: inherit;">cross_<wbr>series_<wbr>reducer</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to combine
 time series. Not all reducer
@@ -5244,14 +4928,13 @@ specified; otherwise, an error is
 returned.
 Possible values are `REDUCE_NONE`, `REDUCE_MEAN`, `REDUCE_MIN`, `REDUCE_MAX`, `REDUCE_SUM`, `REDUCE_STDDEV`, `REDUCE_COUNT`, `REDUCE_COUNT_TRUE`, `REDUCE_COUNT_FALSE`, `REDUCE_FRACTION_TRUE`, `REDUCE_PERCENTILE_99`, `REDUCE_PERCENTILE_95`, `REDUCE_PERCENTILE_50`, and `REDUCE_PERCENTILE_05`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_by_fields_python">
 <a href="#group_by_fields_python" style="color: inherit; text-decoration: inherit;">group_<wbr>by_<wbr>fields</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The set of fields to preserve when
 crossSeriesReducer is specified.
@@ -5279,14 +4962,13 @@ time series. If crossSeriesReducer
 is not defined, this field is
 ignored.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="per_series_aligner_python">
 <a href="#per_series_aligner_python" style="color: inherit; text-decoration: inherit;">per_<wbr>series_<wbr>aligner</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The approach to be used to align
 individual time series. Not all
@@ -5307,13 +4989,8 @@ specified; otherwise, an error is
 returned.
 Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLATE`, `ALIGN_NEXT_OLDER`, `ALIGN_MIN`, `ALIGN_MAX`, `ALIGN_MEAN`, `ALIGN_COUNT`, `ALIGN_SUM`, `ALIGN_STDDEV`, `ALIGN_COUNT_TRUE`, `ALIGN_COUNT_FALSE`, `ALIGN_FRACTION_TRUE`, `ALIGN_PERCENTILE_99`, `ALIGN_PERCENTILE_95`, `ALIGN_PERCENTILE_50`, `ALIGN_PERCENTILE_05`, and `ALIGN_PERCENT_CHANGE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</h4>
 {{% choosable language nodejs %}}
@@ -5323,11 +5000,10 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyConditionConditionThresholdTriggerArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyConditionConditionThresholdTrigger.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5337,31 +5013,28 @@ Possible values are `ALIGN_NONE`, `ALIGN_DELTA`, `ALIGN_RATE`, `ALIGN_INTERPOLAT
             title="Optional">
         <span id="count_csharp">
 <a href="#count_csharp" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_csharp">
 <a href="#percent_csharp" style="color: inherit; text-decoration: inherit;">Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5370,31 +5043,28 @@ condition to be triggered.
             title="Optional">
         <span id="count_go">
 <a href="#count_go" style="color: inherit; text-decoration: inherit;">Count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_go">
 <a href="#percent_go" style="color: inherit; text-decoration: inherit;">Percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5403,31 +5073,28 @@ condition to be triggered.
             title="Optional">
         <span id="count_nodejs">
 <a href="#count_nodejs" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_nodejs">
 <a href="#percent_nodejs" style="color: inherit; text-decoration: inherit;">percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5436,34 +5103,28 @@ condition to be triggered.
             title="Optional">
         <span id="count_python">
 <a href="#count_python" style="color: inherit; text-decoration: inherit;">count</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The absolute number of time series
 that must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percent_python">
 <a href="#percent_python" style="color: inherit; text-decoration: inherit;">percent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The percentage of time series that
 must fail the predicate for the
 condition to be triggered.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</h4>
 {{% choosable language nodejs %}}
@@ -5473,11 +5134,10 @@ condition to be triggered.
 {{% choosable language go %}}
 > See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyCreationRecordOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyCreationRecord.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5487,25 +5147,22 @@ condition to be triggered.
             title="Optional">
         <span id="mutatetime_csharp">
 <a href="#mutatetime_csharp" style="color: inherit; text-decoration: inherit;">Mutate<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mutatedby_csharp">
 <a href="#mutatedby_csharp" style="color: inherit; text-decoration: inherit;">Mutated<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5514,25 +5171,22 @@ condition to be triggered.
             title="Optional">
         <span id="mutatetime_go">
 <a href="#mutatetime_go" style="color: inherit; text-decoration: inherit;">Mutate<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mutatedby_go">
 <a href="#mutatedby_go" style="color: inherit; text-decoration: inherit;">Mutated<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5541,25 +5195,22 @@ condition to be triggered.
             title="Optional">
         <span id="mutatetime_nodejs">
 <a href="#mutatetime_nodejs" style="color: inherit; text-decoration: inherit;">mutate<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mutatedby_nodejs">
 <a href="#mutatedby_nodejs" style="color: inherit; text-decoration: inherit;">mutated<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5568,28 +5219,22 @@ condition to be triggered.
             title="Optional">
         <span id="mutate_time_python">
 <a href="#mutate_time_python" style="color: inherit; text-decoration: inherit;">mutate_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mutated_by_python">
 <a href="#mutated_by_python" style="color: inherit; text-decoration: inherit;">mutated_<wbr>by</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</h4>
 {{% choosable language nodejs %}}
@@ -5599,11 +5244,10 @@ condition to be triggered.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Inputs.AlertPolicyDocumentationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Monitoring.Outputs.AlertPolicyDocumentation.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5613,31 +5257,28 @@ condition to be triggered.
             title="Optional">
         <span id="content_csharp">
 <a href="#content_csharp" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the documentation, interpreted according to mimeType.
 The content may not exceed 8,192 Unicode characters and may not
 exceed more than 10,240 bytes when encoded in UTF-8 format,
 whichever is smaller.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mimetype_csharp">
 <a href="#mimetype_csharp" style="color: inherit; text-decoration: inherit;">Mime<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the content field. Presently, only the value
 "text/markdown" is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5646,31 +5287,28 @@ whichever is smaller.
             title="Optional">
         <span id="content_go">
 <a href="#content_go" style="color: inherit; text-decoration: inherit;">Content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the documentation, interpreted according to mimeType.
 The content may not exceed 8,192 Unicode characters and may not
 exceed more than 10,240 bytes when encoded in UTF-8 format,
 whichever is smaller.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mimetype_go">
 <a href="#mimetype_go" style="color: inherit; text-decoration: inherit;">Mime<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the content field. Presently, only the value
 "text/markdown" is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5679,31 +5317,28 @@ whichever is smaller.
             title="Optional">
         <span id="content_nodejs">
 <a href="#content_nodejs" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The text of the documentation, interpreted according to mimeType.
 The content may not exceed 8,192 Unicode characters and may not
 exceed more than 10,240 bytes when encoded in UTF-8 format,
 whichever is smaller.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mimetype_nodejs">
 <a href="#mimetype_nodejs" style="color: inherit; text-decoration: inherit;">mime<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The format of the content field. Presently, only the value
 "text/markdown" is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5712,39 +5347,28 @@ whichever is smaller.
             title="Optional">
         <span id="content_python">
 <a href="#content_python" style="color: inherit; text-decoration: inherit;">content</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The text of the documentation, interpreted according to mimeType.
 The content may not exceed 8,192 Unicode characters and may not
 exceed more than 10,240 bytes when encoded in UTF-8 format,
 whichever is smaller.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mime_type_python">
 <a href="#mime_type_python" style="color: inherit; text-decoration: inherit;">mime_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The format of the content field. Presently, only the value
 "text/markdown" is supported.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

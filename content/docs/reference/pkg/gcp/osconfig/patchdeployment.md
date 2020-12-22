@@ -1,8 +1,8 @@
 
 ---
 title: "PatchDeployment"
-title_tag: "Resource PatchDeployment | Module osconfig | Package GCP"
-meta_desc: "Explore the PatchDeployment resource of the osconfig module, including examples, input properties, output properties, lookup functions, and supporting types. Patch deployments are configurations that individual patch jobs use to complete a patch."
+title_tag: "gcp.osconfig.PatchDeployment"
+meta_desc: "Documentation for the gcp.osconfig.PatchDeployment resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -802,7 +802,7 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#PatchDeployment">PatchDeployment</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#PatchDeploymentArgs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#PatchDeployment">PatchDeployment</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#PatchDeploymentArgs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -810,11 +810,11 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeployment">NewPatchDeployment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentArgs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeployment">PatchDeployment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeployment">NewPatchDeployment</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentArgs">PatchDeploymentArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeployment">PatchDeployment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.PatchDeployment.html">PatchDeployment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.PatchDeploymentArgs.html">PatchDeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.PatchDeployment.html">PatchDeployment</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.PatchDeploymentArgs.html">PatchDeploymentArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -825,7 +825,7 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -894,7 +894,7 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -933,7 +933,7 @@ const patch = new gcp.osconfig.PatchDeployment("patch", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -974,7 +974,6 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -982,21 +981,20 @@ The PatchDeployment resource accepts the following [input]({{< relref "/docs/int
             title="Required">
         <span id="instancefilter_csharp">
 <a href="#instancefilter_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="patchdeploymentid_csharp">
 <a href="#patchdeploymentid_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1005,93 +1003,84 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="duration_csharp">
 <a href="#duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onetimeschedule_csharp">
 <a href="#onetimeschedule_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Time<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="patchconfig_csharp">
 <a href="#patchconfig_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurringschedule_csharp">
 <a href="#recurringschedule_csharp" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rollout_csharp">
 <a href="#rollout_csharp" style="color: inherit; text-decoration: inherit;">Rollout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1100,21 +1089,20 @@ Structure is documented below.
             title="Required">
         <span id="instancefilter_go">
 <a href="#instancefilter_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="patchdeploymentid_go">
 <a href="#patchdeploymentid_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1123,93 +1111,84 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="duration_go">
 <a href="#duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onetimeschedule_go">
 <a href="#onetimeschedule_go" style="color: inherit; text-decoration: inherit;">One<wbr>Time<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="patchconfig_go">
 <a href="#patchconfig_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurringschedule_go">
 <a href="#recurringschedule_go" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rollout_go">
 <a href="#rollout_go" style="color: inherit; text-decoration: inherit;">Rollout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1218,21 +1197,20 @@ Structure is documented below.
             title="Required">
         <span id="instancefilter_nodejs">
 <a href="#instancefilter_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="patchdeploymentid_nodejs">
 <a href="#patchdeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1241,93 +1219,84 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="duration_nodejs">
 <a href="#duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="onetimeschedule_nodejs">
 <a href="#onetimeschedule_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Time<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="patchconfig_nodejs">
 <a href="#patchconfig_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurringschedule_nodejs">
 <a href="#recurringschedule_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rollout_nodejs">
 <a href="#rollout_nodejs" style="color: inherit; text-decoration: inherit;">rollout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1336,21 +1305,20 @@ Structure is documented below.
             title="Required">
         <span id="instance_filter_python">
 <a href="#instance_filter_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="patch_deployment_id_python">
 <a href="#patch_deployment_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>deployment_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1359,102 +1327,89 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="duration_python">
 <a href="#duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="one_time_schedule_python">
 <a href="#one_time_schedule_python" style="color: inherit; text-decoration: inherit;">one_<wbr>time_<wbr>schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="patch_config_python">
 <a href="#patch_config_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="recurring_schedule_python">
 <a href="#recurring_schedule_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rollout_python">
 <a href="#rollout_python" style="color: inherit; text-decoration: inherit;">rollout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PatchDeployment resource produces the following output properties:
-
 
 
 
@@ -1465,64 +1420,58 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="createtime_csharp">
 <a href="#createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastexecutetime_csharp">
 <a href="#lastexecutetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_csharp">
 <a href="#updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1531,64 +1480,58 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
             title="">
         <span id="createtime_go">
 <a href="#createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastexecutetime_go">
 <a href="#lastexecutetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_go">
 <a href="#updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1597,64 +1540,58 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
             title="">
         <span id="createtime_nodejs">
 <a href="#createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="lastexecutetime_nodejs">
 <a href="#lastexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="updatetime_nodejs">
 <a href="#updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1663,67 +1600,58 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
             title="">
         <span id="create_time_python">
 <a href="#create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="last_execute_time_python">
 <a href="#last_execute_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>execute_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="update_time_python">
 <a href="#update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1733,7 +1661,7 @@ Get an existing PatchDeployment resource's state with the given name, ID, and op
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#PatchDeploymentState">PatchDeploymentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#PatchDeployment">PatchDeployment</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#PatchDeploymentState">PatchDeploymentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/osconfig/#PatchDeployment">PatchDeployment</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1742,11 +1670,11 @@ Get an existing PatchDeployment resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPatchDeployment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentState">PatchDeploymentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeployment">PatchDeployment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPatchDeployment<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentState">PatchDeploymentState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeployment">PatchDeployment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.PatchDeployment.html">PatchDeployment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.PatchDeploymentState.html">PatchDeploymentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.PatchDeployment.html">PatchDeployment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.PatchDeploymentState.html">PatchDeploymentState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1848,7 +1776,6 @@ Get an existing PatchDeployment resource's state with the given name, ID, and op
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1856,105 +1783,97 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_createtime_csharp">
 <a href="#state_createtime_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_duration_csharp">
 <a href="#state_duration_csharp" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancefilter_csharp">
 <a href="#state_instancefilter_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastexecutetime_csharp">
 <a href="#state_lastexecutetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_onetimeschedule_csharp">
 <a href="#state_onetimeschedule_csharp" style="color: inherit; text-decoration: inherit;">One<wbr>Time<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_patchconfig_csharp">
 <a href="#state_patchconfig_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_patchdeploymentid_csharp">
 <a href="#state_patchdeploymentid_csharp" style="color: inherit; text-decoration: inherit;">Patch<wbr>Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -1963,58 +1882,52 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_recurringschedule_csharp">
 <a href="#state_recurringschedule_csharp" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rollout_csharp">
 <a href="#state_rollout_csharp" style="color: inherit; text-decoration: inherit;">Rollout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_csharp">
 <a href="#state_updatetime_csharp" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2023,105 +1936,97 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
             title="Optional">
         <span id="state_createtime_go">
 <a href="#state_createtime_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_duration_go">
 <a href="#state_duration_go" style="color: inherit; text-decoration: inherit;">Duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancefilter_go">
 <a href="#state_instancefilter_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastexecutetime_go">
 <a href="#state_lastexecutetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_onetimeschedule_go">
 <a href="#state_onetimeschedule_go" style="color: inherit; text-decoration: inherit;">One<wbr>Time<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_patchconfig_go">
 <a href="#state_patchconfig_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_patchdeploymentid_go">
 <a href="#state_patchdeploymentid_go" style="color: inherit; text-decoration: inherit;">Patch<wbr>Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -2130,58 +2035,52 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_recurringschedule_go">
 <a href="#state_recurringschedule_go" style="color: inherit; text-decoration: inherit;">Recurring<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rollout_go">
 <a href="#state_rollout_go" style="color: inherit; text-decoration: inherit;">Rollout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_go">
 <a href="#state_updatetime_go" style="color: inherit; text-decoration: inherit;">Update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2190,105 +2089,97 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
             title="Optional">
         <span id="state_createtime_nodejs">
 <a href="#state_createtime_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_duration_nodejs">
 <a href="#state_duration_nodejs" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancefilter_nodejs">
 <a href="#state_instancefilter_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_lastexecutetime_nodejs">
 <a href="#state_lastexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_onetimeschedule_nodejs">
 <a href="#state_onetimeschedule_nodejs" style="color: inherit; text-decoration: inherit;">one<wbr>Time<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_patchconfig_nodejs">
 <a href="#state_patchconfig_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_patchdeploymentid_nodejs">
 <a href="#state_patchdeploymentid_nodejs" style="color: inherit; text-decoration: inherit;">patch<wbr>Deployment<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -2297,58 +2188,52 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_recurringschedule_nodejs">
 <a href="#state_recurringschedule_nodejs" style="color: inherit; text-decoration: inherit;">recurring<wbr>Schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rollout_nodejs">
 <a href="#state_rollout_nodejs" style="color: inherit; text-decoration: inherit;">rollout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_updatetime_nodejs">
 <a href="#state_updatetime_nodejs" style="color: inherit; text-decoration: inherit;">update<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2357,105 +2242,97 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
             title="Optional">
         <span id="state_create_time_python">
 <a href="#state_create_time_python" style="color: inherit; text-decoration: inherit;">create_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the patch deployment. Length of the description is limited to 1024 characters.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_duration_python">
 <a href="#state_duration_python" style="color: inherit; text-decoration: inherit;">duration</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Duration of the patch. After the duration ends, the patch times out.
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_filter_python">
 <a href="#state_instance_filter_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>filter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VM instances to patch.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_last_execute_time_python">
 <a href="#state_last_execute_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>execute_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
 projects/{project_id}/patchDeployments/{patchDeploymentId}.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_one_time_schedule_python">
 <a href="#state_one_time_schedule_python" style="color: inherit; text-decoration: inherit;">one_<wbr>time_<wbr>schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule a one-time execution.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_patch_config_python">
 <a href="#state_patch_config_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Patch configuration that is applied.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_patch_deployment_id_python">
 <a href="#state_patch_deployment_id_python" style="color: inherit; text-decoration: inherit;">patch_<wbr>deployment_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the patch deployment in the project. When creating a name the following rules apply:
 * Must contain only lowercase letters, numbers, and hyphens.
@@ -2464,55 +2341,50 @@ Structure is documented below.
 * Must end with a number or a letter.
 * Must be unique within the project.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_recurring_schedule_python">
 <a href="#state_recurring_schedule_python" style="color: inherit; text-decoration: inherit;">recurring_<wbr>schedule</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule recurring executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_rollout_python">
 <a href="#state_rollout_python" style="color: inherit; text-decoration: inherit;">rollout</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rollout strategy of the patch job.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_update_time_python">
 <a href="#state_update_time_python" style="color: inherit; text-decoration: inherit;">update_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC "Zulu"
 format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2521,11 +2393,8 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="patchdeploymentinstancefilter">Patch<wbr>Deployment<wbr>Instance<wbr>Filter</h4>
@@ -2536,11 +2405,10 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentInstanceFilterArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentInstanceFilter.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2550,64 +2418,58 @@ format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
             title="Optional">
         <span id="all_csharp">
 <a href="#all_csharp" style="color: inherit; text-decoration: inherit;">All</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouplabels_csharp">
 <a href="#grouplabels_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">List&lt;Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenameprefixes_csharp">
 <a href="#instancenameprefixes_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name<wbr>Prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instances_csharp">
 <a href="#instances_csharp" style="color: inherit; text-decoration: inherit;">Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
 `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
 `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2616,64 +2478,58 @@ VMs when targeting configs, for example prefix="prod-".
             title="Optional">
         <span id="all_go">
 <a href="#all_go" style="color: inherit; text-decoration: inherit;">All</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouplabels_go">
 <a href="#grouplabels_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">[]Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenameprefixes_go">
 <a href="#instancenameprefixes_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Name<wbr>Prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instances_go">
 <a href="#instances_go" style="color: inherit; text-decoration: inherit;">Instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
 `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
 `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2682,64 +2538,58 @@ VMs when targeting configs, for example prefix="prod-".
             title="Optional">
         <span id="all_nodejs">
 <a href="#all_nodejs" style="color: inherit; text-decoration: inherit;">all</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="grouplabels_nodejs">
 <a href="#grouplabels_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instancenameprefixes_nodejs">
 <a href="#instancenameprefixes_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Name<wbr>Prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instances_nodejs">
 <a href="#instances_nodejs" style="color: inherit; text-decoration: inherit;">instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
 `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
 `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2748,67 +2598,58 @@ VMs when targeting configs, for example prefix="prod-".
             title="Optional">
         <span id="all_python">
 <a href="#all_python" style="color: inherit; text-decoration: inherit;">all</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Target all VM instances in the project. If true, no other criteria is permitted.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_labels_python">
 <a href="#group_labels_python" style="color: inherit; text-decoration: inherit;">group_<wbr>labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentinstancefiltergrouplabel">Sequence[Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Targets VM instances matching ANY of these GroupLabels. This allows targeting of disparate groups of VM instances.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instance_name_prefixes_python">
 <a href="#instance_name_prefixes_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>name_<wbr>prefixes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VMs whose name starts with one of these prefixes. Similar to labels, this is another way to group
 VMs when targeting configs, for example prefix="prod-".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="instances_python">
 <a href="#instances_python" style="color: inherit; text-decoration: inherit;">instances</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets any of the VM instances specified. Instances are specified by their URI in the `form zones/{{zone}}/instances/{{instance_name}}`,
 `projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`, or
 `https://www.googleapis.com/compute/v1/projects/{{project_id}}/zones/{{zone}}/instances/{{instance_name}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zones_python">
 <a href="#zones_python" style="color: inherit; text-decoration: inherit;">zones</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Targets VM instances in ANY of these zones. Leave empty to target VM instances in any zone.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentinstancefiltergrouplabel">Patch<wbr>Deployment<wbr>Instance<wbr>Filter<wbr>Group<wbr>Label</h4>
 {{% choosable language nodejs %}}
@@ -2818,11 +2659,10 @@ VMs when targeting configs, for example prefix="prod-".
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterGroupLabelArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentInstanceFilterGroupLabelOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentInstanceFilterGroupLabelArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentInstanceFilterGroupLabel.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2832,16 +2672,14 @@ VMs when targeting configs, for example prefix="prod-".
             title="Required">
         <span id="labels_csharp">
 <a href="#labels_csharp" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2850,16 +2688,14 @@ VMs when targeting configs, for example prefix="prod-".
             title="Required">
         <span id="labels_go">
 <a href="#labels_go" style="color: inherit; text-decoration: inherit;">Labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2868,16 +2704,14 @@ VMs when targeting configs, for example prefix="prod-".
             title="Required">
         <span id="labels_nodejs">
 <a href="#labels_nodejs" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2886,19 +2720,14 @@ VMs when targeting configs, for example prefix="prod-".
             title="Required">
         <span id="labels_python">
 <a href="#labels_python" style="color: inherit; text-decoration: inherit;">labels</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentonetimeschedule">Patch<wbr>Deployment<wbr>One<wbr>Time<wbr>Schedule</h4>
 {{% choosable language nodejs %}}
@@ -2908,11 +2737,10 @@ VMs when targeting configs, for example prefix="prod-".
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentOneTimeScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentOneTimeScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentOneTimeScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentOneTimeSchedule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2922,17 +2750,15 @@ VMs when targeting configs, for example prefix="prod-".
             title="Required">
         <span id="executetime_csharp">
 <a href="#executetime_csharp" style="color: inherit; text-decoration: inherit;">Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2941,17 +2767,15 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
             title="Required">
         <span id="executetime_go">
 <a href="#executetime_go" style="color: inherit; text-decoration: inherit;">Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2960,17 +2784,15 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
             title="Required">
         <span id="executetime_nodejs">
 <a href="#executetime_nodejs" style="color: inherit; text-decoration: inherit;">execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2979,20 +2801,15 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
             title="Required">
         <span id="execute_time_python">
 <a href="#execute_time_python" style="color: inherit; text-decoration: inherit;">execute_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The desired patch job execution time. A timestamp in RFC3339 UTC "Zulu" format,
 accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -3002,11 +2819,10 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3016,101 +2832,92 @@ accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
             title="Optional">
         <span id="apt_csharp">
 <a href="#apt_csharp" style="color: inherit; text-decoration: inherit;">Apt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="goo_csharp">
 <a href="#goo_csharp" style="color: inherit; text-decoration: inherit;">Goo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="poststep_csharp">
 <a href="#poststep_csharp" style="color: inherit; text-decoration: inherit;">Post<wbr>Step</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prestep_csharp">
 <a href="#prestep_csharp" style="color: inherit; text-decoration: inherit;">Pre<wbr>Step</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rebootconfig_csharp">
 <a href="#rebootconfig_csharp" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.
 Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsupdate_csharp">
 <a href="#windowsupdate_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yum_csharp">
 <a href="#yum_csharp" style="color: inherit; text-decoration: inherit;">Yum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zypper_csharp">
 <a href="#zypper_csharp" style="color: inherit; text-decoration: inherit;">Zypper</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3119,101 +2926,92 @@ Structure is documented below.
             title="Optional">
         <span id="apt_go">
 <a href="#apt_go" style="color: inherit; text-decoration: inherit;">Apt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="goo_go">
 <a href="#goo_go" style="color: inherit; text-decoration: inherit;">Goo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="poststep_go">
 <a href="#poststep_go" style="color: inherit; text-decoration: inherit;">Post<wbr>Step</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prestep_go">
 <a href="#prestep_go" style="color: inherit; text-decoration: inherit;">Pre<wbr>Step</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rebootconfig_go">
 <a href="#rebootconfig_go" style="color: inherit; text-decoration: inherit;">Reboot<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.
 Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsupdate_go">
 <a href="#windowsupdate_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yum_go">
 <a href="#yum_go" style="color: inherit; text-decoration: inherit;">Yum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zypper_go">
 <a href="#zypper_go" style="color: inherit; text-decoration: inherit;">Zypper</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3222,101 +3020,92 @@ Structure is documented below.
             title="Optional">
         <span id="apt_nodejs">
 <a href="#apt_nodejs" style="color: inherit; text-decoration: inherit;">apt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="goo_nodejs">
 <a href="#goo_nodejs" style="color: inherit; text-decoration: inherit;">goo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo</a></span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="poststep_nodejs">
 <a href="#poststep_nodejs" style="color: inherit; text-decoration: inherit;">post<wbr>Step</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="prestep_nodejs">
 <a href="#prestep_nodejs" style="color: inherit; text-decoration: inherit;">pre<wbr>Step</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="rebootconfig_nodejs">
 <a href="#rebootconfig_nodejs" style="color: inherit; text-decoration: inherit;">reboot<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.
 Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsupdate_nodejs">
 <a href="#windowsupdate_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yum_nodejs">
 <a href="#yum_nodejs" style="color: inherit; text-decoration: inherit;">yum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zypper_nodejs">
 <a href="#zypper_nodejs" style="color: inherit; text-decoration: inherit;">zypper</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper</a></span>
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3325,104 +3114,92 @@ Structure is documented below.
             title="Optional">
         <span id="apt_python">
 <a href="#apt_python" style="color: inherit; text-decoration: inherit;">apt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Apt update settings. Use this setting to override the default apt patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="goo_python">
 <a href="#goo_python" style="color: inherit; text-decoration: inherit;">goo</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="post_step_python">
 <a href="#post_step_python" style="color: inherit; text-decoration: inherit;">post_<wbr>step</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run after the patch update.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pre_step_python">
 <a href="#pre_step_python" style="color: inherit; text-decoration: inherit;">pre_<wbr>step</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStep to run before the patch update.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="reboot_config_python">
 <a href="#reboot_config_python" style="color: inherit; text-decoration: inherit;">reboot_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Post-patch reboot settings.
 Possible values are `DEFAULT`, `ALWAYS`, and `NEVER`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windows_update_python">
 <a href="#windows_update_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Windows update settings. Use this setting to override the default Windows patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="yum_python">
 <a href="#yum_python" style="color: inherit; text-decoration: inherit;">yum</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yum update settings. Use this setting to override the default yum patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="zypper_python">
 <a href="#zypper_python" style="color: inherit; text-decoration: inherit;">zypper</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}zypper update settings. Use this setting to override the default zypper patch rules.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigapt">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Apt</h4>
 {{% choosable language nodejs %}}
@@ -3432,11 +3209,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigAptArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigAptOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigAptArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigApt.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3446,41 +3222,37 @@ Structure is documented below.
             title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_csharp">
 <a href="#exclusivepackages_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
 Possible values are `DIST` and `UPGRADE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3489,41 +3261,37 @@ Possible values are `DIST` and `UPGRADE`.
             title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_go">
 <a href="#exclusivepackages_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
 Possible values are `DIST` and `UPGRADE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3532,41 +3300,37 @@ Possible values are `DIST` and `UPGRADE`.
             title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_nodejs">
 <a href="#exclusivepackages_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
 Possible values are `DIST` and `UPGRADE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3575,44 +3339,37 @@ Possible values are `DIST` and `UPGRADE`.
             title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusive_packages_python">
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}By changing the type to DIST, the patching is performed using apt-get dist-upgrade instead.
 Possible values are `DIST` and `UPGRADE`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfiggoo">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Goo</h4>
 {{% choosable language nodejs %}}
@@ -3622,11 +3379,10 @@ Possible values are `DIST` and `UPGRADE`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigGooArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigGooOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigGooArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigGoo.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3636,16 +3392,14 @@ Possible values are `DIST` and `UPGRADE`.
             title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3654,16 +3408,14 @@ Possible values are `DIST` and `UPGRADE`.
             title="Required">
         <span id="enabled_go">
 <a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3672,16 +3424,14 @@ Possible values are `DIST` and `UPGRADE`.
             title="Required">
         <span id="enabled_nodejs">
 <a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3690,19 +3440,14 @@ Possible values are `DIST` and `UPGRADE`.
             title="Required">
         <span id="enabled_python">
 <a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}goo update settings. Use this setting to override the default goo patch rules.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigpoststep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step</h4>
 {{% choosable language nodejs %}}
@@ -3712,11 +3457,10 @@ Possible values are `DIST` and `UPGRADE`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPostStep.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3726,29 +3470,26 @@ Possible values are `DIST` and `UPGRADE`.
             title="Optional">
         <span id="linuxexecstepconfig_csharp">
 <a href="#linuxexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_csharp">
 <a href="#windowsexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3757,29 +3498,26 @@ Structure is documented below.
             title="Optional">
         <span id="linuxexecstepconfig_go">
 <a href="#linuxexecstepconfig_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_go">
 <a href="#windowsexecstepconfig_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3788,29 +3526,26 @@ Structure is documented below.
             title="Optional">
         <span id="linuxexecstepconfig_nodejs">
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_nodejs">
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -3819,32 +3554,26 @@ Structure is documented below.
             title="Optional">
         <span id="linux_exec_step_config_python">
 <a href="#linux_exec_step_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>exec_<wbr>step_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windows_exec_step_config_python">
 <a href="#windows_exec_step_config_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>exec_<wbr>step_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigpoststeplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -3854,11 +3583,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -3868,52 +3596,47 @@ Structure is documented below.
             title="Optional">
         <span id="allowedsuccesscodes_csharp">
 <a href="#allowedsuccesscodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_csharp">
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_csharp">
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_csharp">
 <a href="#localpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -3922,52 +3645,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowedsuccesscodes_go">
 <a href="#allowedsuccesscodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_go">
 <a href="#gcsobject_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_go">
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_go">
 <a href="#localpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -3976,52 +3694,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowedsuccesscodes_nodejs">
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_nodejs">
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_nodejs">
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_nodejs">
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4030,55 +3743,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowed_success_codes_python">
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcs_object_python">
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_python">
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="local_path_python">
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigpoststeplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</h4>
 {{% choosable language nodejs %}}
@@ -4088,11 +3793,10 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4102,38 +3806,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_csharp">
 <a href="#generationnumber_csharp" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4142,38 +3842,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_go">
 <a href="#generationnumber_go" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4182,38 +3878,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_nodejs">
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4222,41 +3914,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generation_number_python">
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigpoststepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -4266,11 +3951,10 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4280,52 +3964,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowedsuccesscodes_csharp">
 <a href="#allowedsuccesscodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_csharp">
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_csharp">
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_csharp">
 <a href="#localpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4334,52 +4013,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowedsuccesscodes_go">
 <a href="#allowedsuccesscodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_go">
 <a href="#gcsobject_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_go">
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_go">
 <a href="#localpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4388,52 +4062,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowedsuccesscodes_nodejs">
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_nodejs">
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_nodejs">
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_nodejs">
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4442,55 +4111,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowed_success_codes_python">
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcs_object_python">
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_python">
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="local_path_python">
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigpoststepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Post<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</h4>
 {{% choosable language nodejs %}}
@@ -4500,11 +4161,10 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4514,38 +4174,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_csharp">
 <a href="#generationnumber_csharp" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4554,38 +4210,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_go">
 <a href="#generationnumber_go" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4594,38 +4246,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_nodejs">
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4634,41 +4282,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generation_number_python">
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigprestep">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step</h4>
 {{% choosable language nodejs %}}
@@ -4678,11 +4319,10 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPreStep.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4692,29 +4332,26 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="linuxexecstepconfig_csharp">
 <a href="#linuxexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Linux<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_csharp">
 <a href="#windowsexecstepconfig_csharp" style="color: inherit; text-decoration: inherit;">Windows<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4723,29 +4360,26 @@ Structure is documented below.
             title="Optional">
         <span id="linuxexecstepconfig_go">
 <a href="#linuxexecstepconfig_go" style="color: inherit; text-decoration: inherit;">Linux<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_go">
 <a href="#windowsexecstepconfig_go" style="color: inherit; text-decoration: inherit;">Windows<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4754,29 +4388,26 @@ Structure is documented below.
             title="Optional">
         <span id="linuxexecstepconfig_nodejs">
 <a href="#linuxexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">linux<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windowsexecstepconfig_nodejs">
 <a href="#windowsexecstepconfig_nodejs" style="color: inherit; text-decoration: inherit;">windows<wbr>Exec<wbr>Step<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4785,32 +4416,26 @@ Structure is documented below.
             title="Optional">
         <span id="linux_exec_step_config_python">
 <a href="#linux_exec_step_config_python" style="color: inherit; text-decoration: inherit;">linux_<wbr>exec_<wbr>step_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Linux VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="windows_exec_step_config_python">
 <a href="#windows_exec_step_config_python" style="color: inherit; text-decoration: inherit;">windows_<wbr>exec_<wbr>step_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The ExecStepConfig for all Windows VMs targeted by the PatchJob.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigpresteplinuxexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -4820,11 +4445,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -4834,52 +4458,47 @@ Structure is documented below.
             title="Optional">
         <span id="allowedsuccesscodes_csharp">
 <a href="#allowedsuccesscodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_csharp">
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_csharp">
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_csharp">
 <a href="#localpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -4888,52 +4507,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowedsuccesscodes_go">
 <a href="#allowedsuccesscodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_go">
 <a href="#gcsobject_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_go">
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_go">
 <a href="#localpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -4942,52 +4556,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowedsuccesscodes_nodejs">
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_nodejs">
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_nodejs">
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_nodejs">
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -4996,55 +4605,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowed_success_codes_python">
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcs_object_python">
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_python">
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="local_path_python">
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigpresteplinuxexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Linux<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</h4>
 {{% choosable language nodejs %}}
@@ -5054,11 +4655,10 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObject.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5068,38 +4668,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_csharp">
 <a href="#generationnumber_csharp" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5108,38 +4704,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_go">
 <a href="#generationnumber_go" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5148,38 +4740,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_nodejs">
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5188,41 +4776,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generation_number_python">
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigprestepwindowsexecstepconfig">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -5232,11 +4813,10 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5246,52 +4826,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowedsuccesscodes_csharp">
 <a href="#allowedsuccesscodes_csharp" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_csharp">
 <a href="#gcsobject_csharp" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_csharp">
 <a href="#interpreter_csharp" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_csharp">
 <a href="#localpath_csharp" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5300,52 +4875,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowedsuccesscodes_go">
 <a href="#allowedsuccesscodes_go" style="color: inherit; text-decoration: inherit;">Allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_go">
 <a href="#gcsobject_go" style="color: inherit; text-decoration: inherit;">Gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_go">
 <a href="#interpreter_go" style="color: inherit; text-decoration: inherit;">Interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_go">
 <a href="#localpath_go" style="color: inherit; text-decoration: inherit;">Local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5354,52 +4924,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowedsuccesscodes_nodejs">
 <a href="#allowedsuccesscodes_nodejs" style="color: inherit; text-decoration: inherit;">allowed<wbr>Success<wbr>Codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcsobject_nodejs">
 <a href="#gcsobject_nodejs" style="color: inherit; text-decoration: inherit;">gcs<wbr>Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_nodejs">
 <a href="#interpreter_nodejs" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="localpath_nodejs">
 <a href="#localpath_nodejs" style="color: inherit; text-decoration: inherit;">local<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5408,55 +4973,47 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="allowed_success_codes_python">
 <a href="#allowed_success_codes_python" style="color: inherit; text-decoration: inherit;">allowed_<wbr>success_<wbr>codes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gcs_object_python">
 <a href="#gcs_object_python" style="color: inherit; text-decoration: inherit;">gcs_<wbr>object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Cloud Storage object containing the executable.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="interpreter_python">
 <a href="#interpreter_python" style="color: inherit; text-decoration: inherit;">interpreter</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The script interpreter to use to run the script. If no interpreter is specified the script will
 be executed directly, which will likely only succeed for scripts with shebang lines.
 Possible values are `SHELL` and `POWERSHELL`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="local_path_python">
 <a href="#local_path_python" style="color: inherit; text-decoration: inherit;">local_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}An absolute path to the executable on the VM.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigprestepwindowsexecstepconfiggcsobject">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Pre<wbr>Step<wbr>Windows<wbr>Exec<wbr>Step<wbr>Config<wbr>Gcs<wbr>Object</h4>
 {{% choosable language nodejs %}}
@@ -5466,11 +5023,10 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObjectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5480,38 +5036,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_csharp">
 <a href="#bucket_csharp" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_csharp">
 <a href="#generationnumber_csharp" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_csharp">
 <a href="#object_csharp" style="color: inherit; text-decoration: inherit;">Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5520,38 +5072,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_go">
 <a href="#bucket_go" style="color: inherit; text-decoration: inherit;">Bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_go">
 <a href="#generationnumber_go" style="color: inherit; text-decoration: inherit;">Generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_go">
 <a href="#object_go" style="color: inherit; text-decoration: inherit;">Object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5560,38 +5108,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_nodejs">
 <a href="#bucket_nodejs" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generationnumber_nodejs">
 <a href="#generationnumber_nodejs" style="color: inherit; text-decoration: inherit;">generation<wbr>Number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_nodejs">
 <a href="#object_nodejs" style="color: inherit; text-decoration: inherit;">object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5600,41 +5144,34 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Required">
         <span id="bucket_python">
 <a href="#bucket_python" style="color: inherit; text-decoration: inherit;">bucket</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Bucket of the Cloud Storage object.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="generation_number_python">
 <a href="#generation_number_python" style="color: inherit; text-decoration: inherit;">generation_<wbr>number</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Generation number of the Cloud Storage object. This is used to ensure that the ExecStep specified by this PatchJob does not change.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="object_python">
 <a href="#object_python" style="color: inherit; text-decoration: inherit;">object</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the Cloud Storage object.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigwindowsupdate">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Windows<wbr>Update</h4>
 {{% choosable language nodejs %}}
@@ -5644,11 +5181,10 @@ Possible values are `SHELL` and `POWERSHELL`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigWindowsUpdateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigWindowsUpdateOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigWindowsUpdateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigWindowsUpdate.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5658,40 +5194,36 @@ Possible values are `SHELL` and `POWERSHELL`.
             title="Optional">
         <span id="classifications_csharp">
 <a href="#classifications_csharp" style="color: inherit; text-decoration: inherit;">Classifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.
 Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_csharp">
 <a href="#exclusivepatches_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Patches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5700,40 +5232,36 @@ This field must not be used with other patch configurations.
             title="Optional">
         <span id="classifications_go">
 <a href="#classifications_go" style="color: inherit; text-decoration: inherit;">Classifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.
 Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_go">
 <a href="#exclusivepatches_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Patches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5742,40 +5270,36 @@ This field must not be used with other patch configurations.
             title="Optional">
         <span id="classifications_nodejs">
 <a href="#classifications_nodejs" style="color: inherit; text-decoration: inherit;">classifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.
 Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_nodejs">
 <a href="#exclusivepatches_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Patches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -5784,43 +5308,36 @@ This field must not be used with other patch configurations.
             title="Optional">
         <span id="classifications_python">
 <a href="#classifications_python" style="color: inherit; text-decoration: inherit;">classifications</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Only apply updates of these windows update classifications. If empty, all updates are applied.
 Each value may be one of `CRITICAL`, `SECURITY`, `DEFINITION`, `DRIVER`, `FEATURE_PACK`, `SERVICE_PACK`, `TOOL`, `UPDATE_ROLLUP`, and `UPDATE`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusive_patches_python">
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigyum">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Yum</h4>
 {{% choosable language nodejs %}}
@@ -5830,11 +5347,10 @@ This field must not be used with other patch configurations.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigYumArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigYumOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigYumArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigYum.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -5844,51 +5360,46 @@ This field must not be used with other patch configurations.
             title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_csharp">
 <a href="#exclusivepackages_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimal_csharp">
 <a href="#minimal_csharp" style="color: inherit; text-decoration: inherit;">Minimal</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run yum update-minimal instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="security_csharp">
 <a href="#security_csharp" style="color: inherit; text-decoration: inherit;">Security</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --security flag to yum update. Not supported on all platforms.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -5897,51 +5408,46 @@ any other patch configuration fields.
             title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_go">
 <a href="#exclusivepackages_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimal_go">
 <a href="#minimal_go" style="color: inherit; text-decoration: inherit;">Minimal</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run yum update-minimal instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="security_go">
 <a href="#security_go" style="color: inherit; text-decoration: inherit;">Security</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --security flag to yum update. Not supported on all platforms.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -5950,51 +5456,46 @@ any other patch configuration fields.
             title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepackages_nodejs">
 <a href="#exclusivepackages_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimal_nodejs">
 <a href="#minimal_nodejs" style="color: inherit; text-decoration: inherit;">minimal</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run yum update-minimal instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="security_nodejs">
 <a href="#security_nodejs" style="color: inherit; text-decoration: inherit;">security</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the --security flag to yum update. Not supported on all platforms.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6003,54 +5504,46 @@ any other patch configuration fields.
             title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusive_packages_python">
 <a href="#exclusive_packages_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>packages</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of packages to be updated. These are the only packages that will be updated.
 If these packages are not installed, they will be ignored. This field cannot be specified with
 any other patch configuration fields.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimal_python">
 <a href="#minimal_python" style="color: inherit; text-decoration: inherit;">minimal</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Will cause patch to run yum update-minimal instead.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="security_python">
 <a href="#security_python" style="color: inherit; text-decoration: inherit;">security</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --security flag to yum update. Not supported on all platforms.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentpatchconfigzypper">Patch<wbr>Deployment<wbr>Patch<wbr>Config<wbr>Zypper</h4>
 {{% choosable language nodejs %}}
@@ -6060,11 +5553,10 @@ any other patch configuration fields.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigZypperArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentPatchConfigZypperOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentPatchConfigZypperArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentPatchConfigZypper.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6074,72 +5566,65 @@ any other patch configuration fields.
             title="Optional">
         <span id="categories_csharp">
 <a href="#categories_csharp" style="color: inherit; text-decoration: inherit;">Categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludes_csharp">
 <a href="#excludes_csharp" style="color: inherit; text-decoration: inherit;">Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_csharp">
 <a href="#exclusivepatches_csharp" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Patches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="severities_csharp">
 <a href="#severities_csharp" style="color: inherit; text-decoration: inherit;">Severities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="withoptional_csharp">
 <a href="#withoptional_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-optional flag to zypper patch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="withupdate_csharp">
 <a href="#withupdate_csharp" style="color: inherit; text-decoration: inherit;">With<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-update flag, to zypper patch.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6148,72 +5633,65 @@ This field must not be used with other patch configurations.
             title="Optional">
         <span id="categories_go">
 <a href="#categories_go" style="color: inherit; text-decoration: inherit;">Categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludes_go">
 <a href="#excludes_go" style="color: inherit; text-decoration: inherit;">Excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_go">
 <a href="#exclusivepatches_go" style="color: inherit; text-decoration: inherit;">Exclusive<wbr>Patches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="severities_go">
 <a href="#severities_go" style="color: inherit; text-decoration: inherit;">Severities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="withoptional_go">
 <a href="#withoptional_go" style="color: inherit; text-decoration: inherit;">With<wbr>Optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-optional flag to zypper patch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="withupdate_go">
 <a href="#withupdate_go" style="color: inherit; text-decoration: inherit;">With<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-update flag, to zypper patch.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6222,72 +5700,65 @@ This field must not be used with other patch configurations.
             title="Optional">
         <span id="categories_nodejs">
 <a href="#categories_nodejs" style="color: inherit; text-decoration: inherit;">categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludes_nodejs">
 <a href="#excludes_nodejs" style="color: inherit; text-decoration: inherit;">excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusivepatches_nodejs">
 <a href="#exclusivepatches_nodejs" style="color: inherit; text-decoration: inherit;">exclusive<wbr>Patches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="severities_nodejs">
 <a href="#severities_nodejs" style="color: inherit; text-decoration: inherit;">severities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="withoptional_nodejs">
 <a href="#withoptional_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the --with-optional flag to zypper patch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="withupdate_nodejs">
 <a href="#withupdate_nodejs" style="color: inherit; text-decoration: inherit;">with<wbr>Update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Adds the --with-update flag, to zypper patch.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6296,75 +5767,65 @@ This field must not be used with other patch configurations.
             title="Optional">
         <span id="categories_python">
 <a href="#categories_python" style="color: inherit; text-decoration: inherit;">categories</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these categories. Common categories include security, recommended, and feature.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="excludes_python">
 <a href="#excludes_python" style="color: inherit; text-decoration: inherit;">excludes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}List of KBs to exclude from update.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="exclusive_patches_python">
 <a href="#exclusive_patches_python" style="color: inherit; text-decoration: inherit;">exclusive_<wbr>patches</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}An exclusive list of kbs to be updated. These are the only patches that will be updated.
 This field must not be used with other patch configurations.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="severities_python">
 <a href="#severities_python" style="color: inherit; text-decoration: inherit;">severities</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Install only patches with these severities. Common severities include critical, important, moderate, and low.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="with_optional_python">
 <a href="#with_optional_python" style="color: inherit; text-decoration: inherit;">with_<wbr>optional</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-optional flag to zypper patch.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="with_update_python">
 <a href="#with_update_python" style="color: inherit; text-decoration: inherit;">with_<wbr>update</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Adds the --with-update flag, to zypper patch.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentrecurringschedule">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule</h4>
 {{% choosable language nodejs %}}
@@ -6374,11 +5835,10 @@ This field must not be used with other patch configurations.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringSchedule.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6388,19 +5848,18 @@ This field must not be used with other patch configurations.
             title="Required">
         <span id="timeofday_csharp">
 <a href="#timeofday_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Of<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone<wbr>Args</a></span>
     </dt>
@@ -6408,84 +5867,76 @@ Structure is documented below.
 determined by the chosen time zone.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endtime_csharp">
 <a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time at which a recurring patch deployment schedule is no longer active.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastexecutetime_csharp">
 <a href="#lastexecutetime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monthly_csharp">
 <a href="#monthly_csharp" style="color: inherit; text-decoration: inherit;">Monthly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nextexecutetime_csharp">
 <a href="#nextexecutetime_csharp" style="color: inherit; text-decoration: inherit;">Next<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the next patch job is scheduled to run.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
 <a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekly_csharp">
 <a href="#weekly_csharp" style="color: inherit; text-decoration: inherit;">Weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6494,19 +5945,18 @@ Structure is documented below.
             title="Required">
         <span id="timeofday_go">
 <a href="#timeofday_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Of<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone</a></span>
     </dt>
@@ -6514,84 +5964,76 @@ Structure is documented below.
 determined by the chosen time zone.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endtime_go">
 <a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time at which a recurring patch deployment schedule is no longer active.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastexecutetime_go">
 <a href="#lastexecutetime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monthly_go">
 <a href="#monthly_go" style="color: inherit; text-decoration: inherit;">Monthly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nextexecutetime_go">
 <a href="#nextexecutetime_go" style="color: inherit; text-decoration: inherit;">Next<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the next patch job is scheduled to run.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
 <a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekly_go">
 <a href="#weekly_go" style="color: inherit; text-decoration: inherit;">Weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6600,19 +6042,18 @@ Structure is documented below.
             title="Required">
         <span id="timeofday_nodejs">
 <a href="#timeofday_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Of<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone</a></span>
     </dt>
@@ -6620,84 +6061,76 @@ Structure is documented below.
 determined by the chosen time zone.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="endtime_nodejs">
 <a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end time at which a recurring patch deployment schedule is no longer active.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lastexecutetime_nodejs">
 <a href="#lastexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monthly_nodejs">
 <a href="#monthly_nodejs" style="color: inherit; text-decoration: inherit;">monthly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nextexecutetime_nodejs">
 <a href="#nextexecutetime_nodejs" style="color: inherit; text-decoration: inherit;">next<wbr>Execute<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}-
 The time the next patch job is scheduled to run.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
 <a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekly_nodejs">
 <a href="#weekly_nodejs" style="color: inherit; text-decoration: inherit;">weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly</a></span>
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6706,19 +6139,18 @@ Structure is documented below.
             title="Required">
         <span id="time_of_day_python">
 <a href="#time_of_day_python" style="color: inherit; text-decoration: inherit;">time_<wbr>of_<wbr>day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Time of the day to run a recurring deployment.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone<wbr>Args</a></span>
     </dt>
@@ -6726,87 +6158,76 @@ Structure is documented below.
 determined by the chosen time zone.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="end_time_python">
 <a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The end time at which a recurring patch deployment schedule is no longer active.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="last_execute_time_python">
 <a href="#last_execute_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>execute_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The time the last patch job ran successfully.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="monthly_python">
 <a href="#monthly_python" style="color: inherit; text-decoration: inherit;">monthly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule with monthly executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="next_execute_time_python">
 <a href="#next_execute_time_python" style="color: inherit; text-decoration: inherit;">next_<wbr>execute_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}-
 The time the next patch job is scheduled to run.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
 <a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time that the recurring schedule becomes effective. Defaults to createTime of the patch deployment.
 A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekly_python">
 <a href="#weekly_python" style="color: inherit; text-decoration: inherit;">weekly</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule with weekly executions.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentrecurringschedulemonthly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly</h4>
 {{% choosable language nodejs %}}
@@ -6816,11 +6237,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleMonthlyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringScheduleMonthly.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6830,30 +6250,27 @@ Structure is documented below.
             title="Optional">
         <span id="monthday_csharp">
 <a href="#monthday_csharp" style="color: inherit; text-decoration: inherit;">Month<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
 will not run in February, April, June, etc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekdayofmonth_csharp">
 <a href="#weekdayofmonth_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Day<wbr>Of<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -6862,30 +6279,27 @@ Structure is documented below.
             title="Optional">
         <span id="monthday_go">
 <a href="#monthday_go" style="color: inherit; text-decoration: inherit;">Month<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
 will not run in February, April, June, etc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekdayofmonth_go">
 <a href="#weekdayofmonth_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Day<wbr>Of<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month</a></span>
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -6894,30 +6308,27 @@ Structure is documented below.
             title="Optional">
         <span id="monthday_nodejs">
 <a href="#monthday_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
 will not run in February, April, June, etc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="weekdayofmonth_nodejs">
 <a href="#weekdayofmonth_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Day<wbr>Of<wbr>Month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month</a></span>
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -6926,33 +6337,27 @@ Structure is documented below.
             title="Optional">
         <span id="month_day_python">
 <a href="#month_day_python" style="color: inherit; text-decoration: inherit;">month_<wbr>day</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}One day of the month. 1-31 indicates the 1st to the 31st day. -1 indicates the last day of the month.
 Months without the target day will be skipped. For example, a schedule to run "every month on the 31st"
 will not run in February, April, June, etc.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="week_day_of_month_python">
 <a href="#week_day_of_month_python" style="color: inherit; text-decoration: inherit;">week_<wbr>day_<wbr>of_<wbr>month</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Week day in a month.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentrecurringschedulemonthlyweekdayofmonth">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Monthly<wbr>Week<wbr>Day<wbr>Of<wbr>Month</h4>
 {{% choosable language nodejs %}}
@@ -6962,11 +6367,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -6976,28 +6380,25 @@ Structure is documented below.
             title="Required">
         <span id="dayofweek_csharp">
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weekordinal_csharp">
 <a href="#weekordinal_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Ordinal</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7006,28 +6407,25 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
             title="Required">
         <span id="dayofweek_go">
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weekordinal_go">
 <a href="#weekordinal_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Ordinal</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7036,28 +6434,25 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
             title="Required">
         <span id="dayofweek_nodejs">
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="weekordinal_nodejs">
 <a href="#weekordinal_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Ordinal</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7066,31 +6461,25 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
             title="Required">
         <span id="day_of_week_python">
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="week_ordinal_python">
 <a href="#week_ordinal_python" style="color: inherit; text-decoration: inherit;">week_<wbr>ordinal</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentrecurringscheduletimeofday">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Of<wbr>Day</h4>
 {{% choosable language nodejs %}}
@@ -7100,11 +6489,10 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeOfDayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeOfDayOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleTimeOfDayArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringScheduleTimeOfDay.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7114,50 +6502,45 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
             title="Optional">
         <span id="hours_csharp">
 <a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minutes_csharp">
 <a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_csharp">
 <a href="#nanos_csharp" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="seconds_csharp">
 <a href="#seconds_csharp" style="color: inherit; text-decoration: inherit;">Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7166,50 +6549,45 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
             title="Optional">
         <span id="hours_go">
 <a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minutes_go">
 <a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_go">
 <a href="#nanos_go" style="color: inherit; text-decoration: inherit;">Nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="seconds_go">
 <a href="#seconds_go" style="color: inherit; text-decoration: inherit;">Seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7218,50 +6596,45 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
             title="Optional">
         <span id="hours_nodejs">
 <a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minutes_nodejs">
 <a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_nodejs">
 <a href="#nanos_nodejs" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="seconds_nodejs">
 <a href="#seconds_nodejs" style="color: inherit; text-decoration: inherit;">seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7270,53 +6643,45 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
             title="Optional">
         <span id="hours_python">
 <a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23.
 An API may choose to allow the value "24:00:00" for scenarios like business closing time.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minutes_python">
 <a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="nanos_python">
 <a href="#nanos_python" style="color: inherit; text-decoration: inherit;">nanos</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="seconds_python">
 <a href="#seconds_python" style="color: inherit; text-decoration: inherit;">seconds</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentrecurringscheduletimezone">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Time<wbr>Zone</h4>
 {{% choosable language nodejs %}}
@@ -7326,11 +6691,10 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeZoneArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleTimeZoneOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleTimeZoneArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringScheduleTimeZone.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7340,27 +6704,24 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
             title="Required">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
 <a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database version number, e.g. "2019a".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7369,27 +6730,24 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
             title="Required">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
 <a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database version number, e.g. "2019a".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7398,27 +6756,24 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
             title="Required">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
 <a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database version number, e.g. "2019a".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7427,30 +6782,24 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
             title="Required">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database time zone, e.g. "America/New_York".
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
 <a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}IANA Time Zone Database version number, e.g. "2019a".
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentrecurringscheduleweekly">Patch<wbr>Deployment<wbr>Recurring<wbr>Schedule<wbr>Weekly</h4>
 {{% choosable language nodejs %}}
@@ -7460,11 +6809,10 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleWeeklyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRecurringScheduleWeeklyOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRecurringScheduleWeeklyArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRecurringScheduleWeekly.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7474,17 +6822,15 @@ An API may choose to allow the value "24:00:00" for scenarios like business clos
             title="Required">
         <span id="dayofweek_csharp">
 <a href="#dayofweek_csharp" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7493,17 +6839,15 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
             title="Required">
         <span id="dayofweek_go">
 <a href="#dayofweek_go" style="color: inherit; text-decoration: inherit;">Day<wbr>Of<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7512,17 +6856,15 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
             title="Required">
         <span id="dayofweek_nodejs">
 <a href="#dayofweek_nodejs" style="color: inherit; text-decoration: inherit;">day<wbr>Of<wbr>Week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7531,20 +6873,15 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
             title="Required">
         <span id="day_of_week_python">
 <a href="#day_of_week_python" style="color: inherit; text-decoration: inherit;">day_<wbr>of_<wbr>week</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A day of the week.
 Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentrollout">Patch<wbr>Deployment<wbr>Rollout</h4>
 {{% choosable language nodejs %}}
@@ -7554,11 +6891,10 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRolloutArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRollout.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7568,7 +6904,7 @@ Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SAT
             title="Required">
         <span id="disruptionbudget_csharp">
 <a href="#disruptionbudget_csharp" style="color: inherit; text-decoration: inherit;">Disruption<wbr>Budget</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget<wbr>Args</a></span>
     </dt>
@@ -7579,22 +6915,19 @@ For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the p
 For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_csharp">
 <a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.
 Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7603,7 +6936,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
             title="Required">
         <span id="disruptionbudget_go">
 <a href="#disruptionbudget_go" style="color: inherit; text-decoration: inherit;">Disruption<wbr>Budget</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</a></span>
     </dt>
@@ -7614,22 +6947,19 @@ For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the p
 For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_go">
 <a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.
 Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7638,7 +6968,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
             title="Required">
         <span id="disruptionbudget_nodejs">
 <a href="#disruptionbudget_nodejs" style="color: inherit; text-decoration: inherit;">disruption<wbr>Budget</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</a></span>
     </dt>
@@ -7649,22 +6979,19 @@ For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the p
 For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_nodejs">
 <a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.
 Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7673,7 +7000,7 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
             title="Required">
         <span id="disruption_budget_python">
 <a href="#disruption_budget_python" style="color: inherit; text-decoration: inherit;">disruption_<wbr>budget</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget<wbr>Args</a></span>
     </dt>
@@ -7684,25 +7011,19 @@ For zone-by-zone rollouts, if the disruption budget in a zone is exceeded, the p
 For example, if the disruption budget has a fixed value of 10, and 8 VMs fail to patch in the current zone, the patch job continues to patch 2 VMs at a time until the zone is completed. When that zone is completed successfully, patching begins with 10 VMs at a time in the next zone. If 10 VMs in the next zone fail to patch, the patch job stops.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="mode_python">
 <a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Mode of the patch rollout.
 Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="patchdeploymentrolloutdisruptionbudget">Patch<wbr>Deployment<wbr>Rollout<wbr>Disruption<wbr>Budget</h4>
 {{% choosable language nodejs %}}
@@ -7712,11 +7033,10 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutDisruptionBudgetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/osconfig?tab=doc#PatchDeploymentRolloutDisruptionBudgetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Inputs.PatchDeploymentRolloutDisruptionBudgetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.OsConfig.Outputs.PatchDeploymentRolloutDisruptionBudget.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -7726,27 +7046,24 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
             title="Optional">
         <span id="fixed_csharp">
 <a href="#fixed_csharp" style="color: inherit; text-decoration: inherit;">Fixed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_csharp">
 <a href="#percentage_csharp" style="color: inherit; text-decoration: inherit;">Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -7755,27 +7072,24 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
             title="Optional">
         <span id="fixed_go">
 <a href="#fixed_go" style="color: inherit; text-decoration: inherit;">Fixed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_go">
 <a href="#percentage_go" style="color: inherit; text-decoration: inherit;">Percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -7784,27 +7098,24 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
             title="Optional">
         <span id="fixed_nodejs">
 <a href="#fixed_nodejs" style="color: inherit; text-decoration: inherit;">fixed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_nodejs">
 <a href="#percentage_nodejs" style="color: inherit; text-decoration: inherit;">percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -7813,35 +7124,24 @@ Possible values are `ZONE_BY_ZONE` and `CONCURRENT_ZONES`.
             title="Optional">
         <span id="fixed_python">
 <a href="#fixed_python" style="color: inherit; text-decoration: inherit;">fixed</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies a fixed value.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="percentage_python">
 <a href="#percentage_python" style="color: inherit; text-decoration: inherit;">percentage</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the relative value defined as a percentage, which will be multiplied by a reference value.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 

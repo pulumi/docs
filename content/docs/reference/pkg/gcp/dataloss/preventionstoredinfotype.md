@@ -1,8 +1,8 @@
 
 ---
 title: "PreventionStoredInfoType"
-title_tag: "Resource PreventionStoredInfoType | Module dataloss | Package GCP"
-meta_desc: "Explore the PreventionStoredInfoType resource of the dataloss module, including examples, input properties, output properties, lookup functions, and supporting types. Allows creation of custom info types."
+title_tag: "gcp.dataloss.PreventionStoredInfoType"
+meta_desc: "Documentation for the gcp.dataloss.PreventionStoredInfoType resource with examples, input properties, output properties, lookup functions, and supporting types."
 ---
 
 
@@ -370,7 +370,7 @@ const large = new gcp.dataloss.PreventionStoredInfoType("large", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionStoredInfoType">PreventionStoredInfoType</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionStoredInfoTypeArgs">PreventionStoredInfoTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionStoredInfoType">PreventionStoredInfoType</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionStoredInfoTypeArgs">PreventionStoredInfoTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -378,11 +378,11 @@ const large = new gcp.dataloss.PreventionStoredInfoType("large", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoType">NewPreventionStoredInfoType</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeArgs">PreventionStoredInfoTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoType">PreventionStoredInfoType</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoType">NewPreventionStoredInfoType</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeArgs">PreventionStoredInfoTypeArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoType">PreventionStoredInfoType</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionStoredInfoType.html">PreventionStoredInfoType</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionStoredInfoTypeArgs.html">PreventionStoredInfoTypeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionStoredInfoType.html">PreventionStoredInfoType</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionStoredInfoTypeArgs.html">PreventionStoredInfoTypeArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -393,7 +393,7 @@ const large = new gcp.dataloss.PreventionStoredInfoType("large", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -462,7 +462,7 @@ const large = new gcp.dataloss.PreventionStoredInfoType("large", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -501,7 +501,7 @@ const large = new gcp.dataloss.PreventionStoredInfoType("large", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -542,7 +542,6 @@ The PreventionStoredInfoType resource accepts the following [input]({{< relref "
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -550,9 +549,9 @@ The PreventionStoredInfoType resource accepts the following [input]({{< relref "
             title="Required">
         <span id="parent_csharp">
 <a href="#parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -560,68 +559,61 @@ The PreventionStoredInfoType resource accepts the following [input]({{< relref "
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_csharp">
 <a href="#dictionary_csharp" style="color: inherit; text-decoration: inherit;">Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_csharp">
 <a href="#displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="largecustomdictionary_csharp">
 <a href="#largecustomdictionary_csharp" style="color: inherit; text-decoration: inherit;">Large<wbr>Custom<wbr>Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_csharp">
 <a href="#regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -630,9 +622,9 @@ Structure is documented below.
             title="Required">
         <span id="parent_go">
 <a href="#parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -640,68 +632,61 @@ Structure is documented below.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_go">
 <a href="#dictionary_go" style="color: inherit; text-decoration: inherit;">Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_go">
 <a href="#displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="largecustomdictionary_go">
 <a href="#largecustomdictionary_go" style="color: inherit; text-decoration: inherit;">Large<wbr>Custom<wbr>Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_go">
 <a href="#regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -710,9 +695,9 @@ Structure is documented below.
             title="Required">
         <span id="parent_nodejs">
 <a href="#parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -720,68 +705,61 @@ Structure is documented below.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_nodejs">
 <a href="#dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="displayname_nodejs">
 <a href="#displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="largecustomdictionary_nodejs">
 <a href="#largecustomdictionary_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>Custom<wbr>Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_nodejs">
 <a href="#regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -790,9 +768,9 @@ Structure is documented below.
             title="Required">
         <span id="parent_python">
 <a href="#parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -800,77 +778,66 @@ Structure is documented below.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="dictionary_python">
 <a href="#dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="display_name_python">
 <a href="#display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="large_custom_dictionary_python">
 <a href="#large_custom_dictionary_python" style="color: inherit; text-decoration: inherit;">large_<wbr>custom_<wbr>dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="regex_python">
 <a href="#regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the PreventionStoredInfoType resource produces the following output properties:
-
 
 
 
@@ -881,26 +848,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -909,26 +873,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -937,26 +898,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -965,29 +923,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -997,7 +949,7 @@ Get an existing PreventionStoredInfoType resource's state with the given name, I
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionStoredInfoTypeState">PreventionStoredInfoTypeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionStoredInfoType">PreventionStoredInfoType</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionStoredInfoTypeState">PreventionStoredInfoTypeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/dataloss/#PreventionStoredInfoType">PreventionStoredInfoType</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1006,11 +958,11 @@ Get an existing PreventionStoredInfoType resource's state with the given name, I
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionStoredInfoType<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeState">PreventionStoredInfoTypeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoType">PreventionStoredInfoType</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetPreventionStoredInfoType<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeState">PreventionStoredInfoTypeState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoType">PreventionStoredInfoType</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionStoredInfoType.html">PreventionStoredInfoType</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionStoredInfoTypeState.html">PreventionStoredInfoTypeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionStoredInfoType.html">PreventionStoredInfoType</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.PreventionStoredInfoTypeState.html">PreventionStoredInfoTypeState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1112,7 +1064,6 @@ Get an existing PreventionStoredInfoType resource's state with the given name, I
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1120,66 +1071,61 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dictionary_csharp">
 <a href="#state_dictionary_csharp" style="color: inherit; text-decoration: inherit;">Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_csharp">
 <a href="#state_displayname_csharp" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_largecustomdictionary_csharp">
 <a href="#state_largecustomdictionary_csharp" style="color: inherit; text-decoration: inherit;">Large<wbr>Custom<wbr>Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_csharp">
 <a href="#state_parent_csharp" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -1187,22 +1133,19 @@ Structure is documented below.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regex_csharp">
 <a href="#state_regex_csharp" style="color: inherit; text-decoration: inherit;">Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1211,66 +1154,61 @@ Structure is documented below.
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dictionary_go">
 <a href="#state_dictionary_go" style="color: inherit; text-decoration: inherit;">Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_go">
 <a href="#state_displayname_go" style="color: inherit; text-decoration: inherit;">Display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_largecustomdictionary_go">
 <a href="#state_largecustomdictionary_go" style="color: inherit; text-decoration: inherit;">Large<wbr>Custom<wbr>Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_go">
 <a href="#state_parent_go" style="color: inherit; text-decoration: inherit;">Parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -1278,22 +1216,19 @@ Structure is documented below.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regex_go">
 <a href="#state_regex_go" style="color: inherit; text-decoration: inherit;">Regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1302,66 +1237,61 @@ Structure is documented below.
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dictionary_nodejs">
 <a href="#state_dictionary_nodejs" style="color: inherit; text-decoration: inherit;">dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_displayname_nodejs">
 <a href="#state_displayname_nodejs" style="color: inherit; text-decoration: inherit;">display<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_largecustomdictionary_nodejs">
 <a href="#state_largecustomdictionary_nodejs" style="color: inherit; text-decoration: inherit;">large<wbr>Custom<wbr>Dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_nodejs">
 <a href="#state_parent_nodejs" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -1369,22 +1299,19 @@ Structure is documented below.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regex_nodejs">
 <a href="#state_regex_nodejs" style="color: inherit; text-decoration: inherit;">regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1393,66 +1320,61 @@ Structure is documented below.
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A description of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_dictionary_python">
 <a href="#state_dictionary_python" style="color: inherit; text-decoration: inherit;">dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_display_name_python">
 <a href="#state_display_name_python" style="color: inherit; text-decoration: inherit;">display_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User set display name of the info type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_large_custom_dictionary_python">
 <a href="#state_large_custom_dictionary_python" style="color: inherit; text-decoration: inherit;">large_<wbr>custom_<wbr>dictionary</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Dictionary which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_parent_python">
 <a href="#state_parent_python" style="color: inherit; text-decoration: inherit;">parent</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The parent of the info type in any of the following formats:
 * `projects/{{project}}`
@@ -1460,19 +1382,17 @@ Structure is documented below.
 * `organizations/{{organization_id}}`
 * `organizations/{{organization_id}}/locations/{{location}}`
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_regex_python">
 <a href="#state_regex_python" style="color: inherit; text-decoration: inherit;">regex</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Regular expression which defines the rule.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1481,11 +1401,8 @@ Structure is documented below.
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="preventionstoredinfotypedictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary</h4>
@@ -1496,11 +1413,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeDictionaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeDictionaryOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionStoredInfoTypeDictionaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionStoredInfoTypeDictionary.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1510,29 +1426,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloudstoragepath_csharp">
 <a href="#cloudstoragepath_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wordlist_csharp">
 <a href="#wordlist_csharp" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1541,29 +1454,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloudstoragepath_go">
 <a href="#cloudstoragepath_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wordlist_go">
 <a href="#wordlist_go" style="color: inherit; text-decoration: inherit;">Word<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1572,29 +1482,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloudstoragepath_nodejs">
 <a href="#cloudstoragepath_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="wordlist_nodejs">
 <a href="#wordlist_nodejs" style="color: inherit; text-decoration: inherit;">word<wbr>List</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1603,32 +1510,26 @@ Structure is documented below.
             title="Optional">
         <span id="cloud_storage_path_python">
 <a href="#cloud_storage_path_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="word_list_python">
 <a href="#word_list_python" style="color: inherit; text-decoration: inherit;">word_<wbr>list</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}List of words or phrases to search for.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionstoredinfotypedictionarycloudstoragepath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>Path</h4>
 {{% choosable language nodejs %}}
@@ -1638,11 +1539,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeDictionaryCloudStoragePathArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeDictionaryCloudStoragePathOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionStoredInfoTypeDictionaryCloudStoragePathArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionStoredInfoTypeDictionaryCloudStoragePath.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1652,16 +1552,14 @@ Structure is documented below.
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1670,16 +1568,14 @@ Structure is documented below.
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1688,16 +1584,14 @@ Structure is documented below.
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1706,19 +1600,14 @@ Structure is documented below.
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionstoredinfotypedictionarywordlist">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Dictionary<wbr>Word<wbr>List</h4>
 {{% choosable language nodejs %}}
@@ -1728,11 +1617,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeDictionaryWordListArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeDictionaryWordListOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionStoredInfoTypeDictionaryWordListArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionStoredInfoTypeDictionaryWordList.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1742,17 +1630,15 @@ Structure is documented below.
             title="Required">
         <span id="words_csharp">
 <a href="#words_csharp" style="color: inherit; text-decoration: inherit;">Words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1761,17 +1647,15 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="words_go">
 <a href="#words_go" style="color: inherit; text-decoration: inherit;">Words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1780,17 +1664,15 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="words_nodejs">
 <a href="#words_nodejs" style="color: inherit; text-decoration: inherit;">words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1799,20 +1681,15 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="words_python">
 <a href="#words_python" style="color: inherit; text-decoration: inherit;">words</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Words or phrases defining the dictionary. The dictionary must contain at least one
 phrase and every phrase must contain at least 2 characters that are letters or digits.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionstoredinfotypelargecustomdictionary">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary</h4>
 {{% choosable language nodejs %}}
@@ -1822,11 +1699,10 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionStoredInfoTypeLargeCustomDictionaryArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionStoredInfoTypeLargeCustomDictionary.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1836,7 +1712,7 @@ phrase and every phrase must contain at least 2 characters that are letters or d
             title="Required">
         <span id="outputpath_csharp">
 <a href="#outputpath_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path<wbr>Args</a></span>
     </dt>
@@ -1844,34 +1720,30 @@ phrase and every phrase must contain at least 2 characters that are letters or d
 If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigqueryfield_csharp">
 <a href="#bigqueryfield_csharp" style="color: inherit; text-decoration: inherit;">Big<wbr>Query<wbr>Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstoragefileset_csharp">
 <a href="#cloudstoragefileset_csharp" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>File<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1880,7 +1752,7 @@ Structure is documented below.
             title="Required">
         <span id="outputpath_go">
 <a href="#outputpath_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path</a></span>
     </dt>
@@ -1888,34 +1760,30 @@ Structure is documented below.
 If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigqueryfield_go">
 <a href="#bigqueryfield_go" style="color: inherit; text-decoration: inherit;">Big<wbr>Query<wbr>Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstoragefileset_go">
 <a href="#cloudstoragefileset_go" style="color: inherit; text-decoration: inherit;">Cloud<wbr>Storage<wbr>File<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1924,7 +1792,7 @@ Structure is documented below.
             title="Required">
         <span id="outputpath_nodejs">
 <a href="#outputpath_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path</a></span>
     </dt>
@@ -1932,34 +1800,30 @@ Structure is documented below.
 If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="bigqueryfield_nodejs">
 <a href="#bigqueryfield_nodejs" style="color: inherit; text-decoration: inherit;">big<wbr>Query<wbr>Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloudstoragefileset_nodejs">
 <a href="#cloudstoragefileset_nodejs" style="color: inherit; text-decoration: inherit;">cloud<wbr>Storage<wbr>File<wbr>Set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1968,7 +1832,7 @@ Structure is documented below.
             title="Required">
         <span id="output_path_python">
 <a href="#output_path_python" style="color: inherit; text-decoration: inherit;">output_<wbr>path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path<wbr>Args</a></span>
     </dt>
@@ -1976,37 +1840,30 @@ Structure is documented below.
 If any of these artifacts are modified, the dictionary is considered invalid and can no longer be used.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="big_query_field_python">
 <a href="#big_query_field_python" style="color: inherit; text-decoration: inherit;">big_<wbr>query_<wbr>field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="cloud_storage_file_set_python">
 <a href="#cloud_storage_file_set_python" style="color: inherit; text-decoration: inherit;">cloud_<wbr>storage_<wbr>file_<wbr>set</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Set of files containing newline-delimited lists of dictionary phrases.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionstoredinfotypelargecustomdictionarybigqueryfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field</h4>
 {{% choosable language nodejs %}}
@@ -2016,11 +1873,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2030,29 +1886,26 @@ Structure is documented below.
             title="Required">
         <span id="field_csharp">
 <a href="#field_csharp" style="color: inherit; text-decoration: inherit;">Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="table_csharp">
 <a href="#table_csharp" style="color: inherit; text-decoration: inherit;">Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2061,29 +1914,26 @@ Structure is documented below.
             title="Required">
         <span id="field_go">
 <a href="#field_go" style="color: inherit; text-decoration: inherit;">Field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="table_go">
 <a href="#table_go" style="color: inherit; text-decoration: inherit;">Table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2092,29 +1942,26 @@ Structure is documented below.
             title="Required">
         <span id="field_nodejs">
 <a href="#field_nodejs" style="color: inherit; text-decoration: inherit;">field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="table_nodejs">
 <a href="#table_nodejs" style="color: inherit; text-decoration: inherit;">table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2123,32 +1970,26 @@ Structure is documented below.
             title="Required">
         <span id="field_python">
 <a href="#field_python" style="color: inherit; text-decoration: inherit;">field</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Designated field in the BigQuery table.
 Structure is documented below.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="table_python">
 <a href="#table_python" style="color: inherit; text-decoration: inherit;">table</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Field in a BigQuery table where each cell represents a dictionary phrase.
 Structure is documented below.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionstoredinfotypelargecustomdictionarybigqueryfieldfield">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Field</h4>
 {{% choosable language nodejs %}}
@@ -2158,11 +1999,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2172,16 +2012,14 @@ Structure is documented below.
             title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2190,16 +2028,14 @@ Structure is documented below.
             title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2208,16 +2044,14 @@ Structure is documented below.
             title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2226,19 +2060,14 @@ Structure is documented below.
             title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name describing the field.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionstoredinfotypelargecustomdictionarybigqueryfieldtable">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Big<wbr>Query<wbr>Field<wbr>Table</h4>
 {{% choosable language nodejs %}}
@@ -2248,11 +2077,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2262,38 +2090,34 @@ Structure is documented below.
             title="Required">
         <span id="datasetid_csharp">
 <a href="#datasetid_csharp" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_csharp">
 <a href="#projectid_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_csharp">
 <a href="#tableid_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2302,38 +2126,34 @@ Structure is documented below.
             title="Required">
         <span id="datasetid_go">
 <a href="#datasetid_go" style="color: inherit; text-decoration: inherit;">Dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_go">
 <a href="#projectid_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_go">
 <a href="#tableid_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2342,38 +2162,34 @@ Structure is documented below.
             title="Required">
         <span id="datasetid_nodejs">
 <a href="#datasetid_nodejs" style="color: inherit; text-decoration: inherit;">dataset<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="projectid_nodejs">
 <a href="#projectid_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="tableid_nodejs">
 <a href="#tableid_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2382,41 +2198,34 @@ Structure is documented below.
             title="Required">
         <span id="dataset_id_python">
 <a href="#dataset_id_python" style="color: inherit; text-decoration: inherit;">dataset_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The dataset ID of the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_id_python">
 <a href="#project_id_python" style="color: inherit; text-decoration: inherit;">project_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Google Cloud Platform project ID of the project containing the table.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="table_id_python">
 <a href="#table_id_python" style="color: inherit; text-decoration: inherit;">table_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the table.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionstoredinfotypelargecustomdictionarycloudstoragefileset">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Cloud<wbr>Storage<wbr>File<wbr>Set</h4>
 {{% choosable language nodejs %}}
@@ -2426,11 +2235,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSetArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2440,16 +2248,14 @@ Structure is documented below.
             title="Required">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2458,16 +2264,14 @@ Structure is documented below.
             title="Required">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2476,16 +2280,14 @@ Structure is documented below.
             title="Required">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2494,19 +2296,14 @@ Structure is documented below.
             title="Required">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The url, in the format `gs://<bucket>/<path>`. Trailing wildcard in the path is allowed.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionstoredinfotypelargecustomdictionaryoutputpath">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Large<wbr>Custom<wbr>Dictionary<wbr>Output<wbr>Path</h4>
 {{% choosable language nodejs %}}
@@ -2516,11 +2313,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeLargeCustomDictionaryOutputPathOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionStoredInfoTypeLargeCustomDictionaryOutputPath.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2530,16 +2326,14 @@ Structure is documented below.
             title="Required">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2548,16 +2342,14 @@ Structure is documented below.
             title="Required">
         <span id="path_go">
 <a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2566,16 +2358,14 @@ Structure is documented below.
             title="Required">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2584,19 +2374,14 @@ Structure is documented below.
             title="Required">
         <span id="path_python">
 <a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A url representing a file or path (no wildcards) in Cloud Storage. Example: `gs://[BUCKET_NAME]/dictionary.txt`
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="preventionstoredinfotyperegex">Prevention<wbr>Stored<wbr>Info<wbr>Type<wbr>Regex</h4>
 {{% choosable language nodejs %}}
@@ -2606,11 +2391,10 @@ Structure is documented below.
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeRegexArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dataloss?tab=doc#PreventionStoredInfoTypeRegexOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Inputs.PreventionStoredInfoTypeRegexArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.DataLoss.Outputs.PreventionStoredInfoTypeRegex.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2620,28 +2404,25 @@ Structure is documented below.
             title="Required">
         <span id="pattern_csharp">
 <a href="#pattern_csharp" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_csharp">
 <a href="#groupindexes_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2650,28 +2431,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_go">
 <a href="#pattern_go" style="color: inherit; text-decoration: inherit;">Pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_go">
 <a href="#groupindexes_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type">[]int</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2680,28 +2458,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_nodejs">
 <a href="#pattern_nodejs" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupindexes_nodejs">
 <a href="#groupindexes_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2710,36 +2485,25 @@ Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the go
             title="Required">
         <span id="pattern_python">
 <a href="#pattern_python" style="color: inherit; text-decoration: inherit;">pattern</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pattern defining the regular expression.
 Its syntax (https://github.com/google/re2/wiki/Syntax) can be found under the google/re2 repository on GitHub.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_indexes_python">
 <a href="#group_indexes_python" style="color: inherit; text-decoration: inherit;">group_<wbr>indexes</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[int]</a></span>
+        <span class="property-type">Sequence[int]</span>
     </dt>
     <dd>{{% md %}}The index of the submatch to extract as findings. When not specified, the entire match is returned. No more than 3 may be included.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 ## Import
 
 
