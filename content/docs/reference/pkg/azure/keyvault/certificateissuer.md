@@ -26,11 +26,11 @@ class MyStack : Stack
 {
     public MyStack()
     {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
+            Location = "West Europe",
         });
-        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
         var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
         {
             Location = exampleResourceGroup.Location,
@@ -65,13 +65,13 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
-		})
+		current, err := core.GetClientConfig(ctx, nil, nil)
 		if err != nil {
 			return err
 		}
-		current, err := core.GetClientConfig(ctx, nil, nil)
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
 		if err != nil {
 			return err
 		}
@@ -106,8 +106,8 @@ func main() {
 import pulumi
 import pulumi_azure as azure
 
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
 current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
@@ -129,8 +129,8 @@ example_certificate_issuer = azure.keyvault.CertificateIssuer("exampleCertificat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
 const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,

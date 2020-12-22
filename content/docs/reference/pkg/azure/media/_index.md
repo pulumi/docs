@@ -12,7 +12,9 @@ Explore the resources and functions of the media module in the Azure package.
 <h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="asset" title="Asset"><span class="symbol resource"></span>Asset</a></li>
+    <li><a href="job" title="Job"><span class="symbol resource"></span>Job</a></li>
     <li><a href="serviceaccount" title="ServiceAccount"><span class="symbol resource"></span>ServiceAccount</a></li>
+    <li><a href="streamingendpoint" title="StreamingEndpoint"><span class="symbol resource"></span>StreamingEndpoint</a></li>
     <li><a href="transform" title="Transform"><span class="symbol resource"></span>Transform</a></li>
 </ul>
 
@@ -25,7 +27,7 @@ Explore the resources and functions of the media module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.40.0</dd>
+	<dd>3.41.0</dd>
 </dl>
 
 
