@@ -132,7 +132,6 @@ const kafka-es-con1 = aiven.getKafkaConnector({
 The following arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -140,123 +139,111 @@ The following arguments are supported:
             title="Required">
         <span id="connectorname_csharp">
 <a href="#connectorname_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pluginauthor_csharp">
 <a href="#pluginauthor_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector author.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pluginclass_csharp">
 <a href="#pluginclass_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector Java class.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugindocurl_csharp">
 <a href="#plugindocurl_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Doc<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector documentation URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugintitle_csharp">
 <a href="#plugintitle_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector title.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugintype_csharp">
 <a href="#plugintype_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pluginversion_csharp">
 <a href="#pluginversion_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_csharp">
 <a href="#tasks_csharp" style="color: inherit; text-decoration: inherit;">Tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectortask">List&lt;Get<wbr>Kafka<wbr>Connector<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -265,123 +252,111 @@ The following arguments are supported:
             title="Required">
         <span id="connectorname_go">
 <a href="#connectorname_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pluginauthor_go">
 <a href="#pluginauthor_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector author.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pluginclass_go">
 <a href="#pluginclass_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector Java class.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugindocurl_go">
 <a href="#plugindocurl_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Doc<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector documentation URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugintitle_go">
 <a href="#plugintitle_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector title.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugintype_go">
 <a href="#plugintype_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pluginversion_go">
 <a href="#pluginversion_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_go">
 <a href="#tasks_go" style="color: inherit; text-decoration: inherit;">Tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectortask">[]Get<wbr>Kafka<wbr>Connector<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -390,123 +365,111 @@ The following arguments are supported:
             title="Required">
         <span id="connectorname_nodejs">
 <a href="#connectorname_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pluginauthor_nodejs">
 <a href="#pluginauthor_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector author.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pluginclass_nodejs">
 <a href="#pluginclass_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector Java class.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugindocurl_nodejs">
 <a href="#plugindocurl_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Doc<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector documentation URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugintitle_nodejs">
 <a href="#plugintitle_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector title.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugintype_nodejs">
 <a href="#plugintype_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="pluginversion_nodejs">
 <a href="#pluginversion_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_nodejs">
 <a href="#tasks_nodejs" style="color: inherit; text-decoration: inherit;">tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectortask">Get<wbr>Kafka<wbr>Connector<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -515,126 +478,111 @@ The following arguments are supported:
             title="Required">
         <span id="connector_name_python">
 <a href="#connector_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugin_author_python">
 <a href="#plugin_author_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector author.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugin_class_python">
 <a href="#plugin_class_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector Java class.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugin_doc_url_python">
 <a href="#plugin_doc_url_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>doc_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector documentation URL.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugin_title_python">
 <a href="#plugin_title_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector title.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugin_type_python">
 <a href="#plugin_type_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector type.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="plugin_version_python">
 <a href="#plugin_version_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector version.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_python">
 <a href="#tasks_python" style="color: inherit; text-decoration: inherit;">tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectortask">Sequence[Get<wbr>Kafka<wbr>Connector<wbr>Task<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -645,7 +593,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -653,134 +600,121 @@ The following output properties are available:
             title="">
         <span id="connectorname_csharp">
 <a href="#connectorname_csharp" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pluginauthor_csharp">
 <a href="#pluginauthor_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector author.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pluginclass_csharp">
 <a href="#pluginclass_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector Java class.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugindocurl_csharp">
 <a href="#plugindocurl_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Doc<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector documentation URL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugintitle_csharp">
 <a href="#plugintitle_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector title.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugintype_csharp">
 <a href="#plugintype_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pluginversion_csharp">
 <a href="#pluginversion_csharp" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="servicename_csharp">
 <a href="#servicename_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tasks_csharp">
 <a href="#tasks_csharp" style="color: inherit; text-decoration: inherit;">Tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectortask">List&lt;Get<wbr>Kafka<wbr>Connector<wbr>Task&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="config_csharp">
 <a href="#config_csharp" style="color: inherit; text-decoration: inherit;">Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -789,134 +723,121 @@ The following output properties are available:
             title="">
         <span id="connectorname_go">
 <a href="#connectorname_go" style="color: inherit; text-decoration: inherit;">Connector<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pluginauthor_go">
 <a href="#pluginauthor_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector author.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pluginclass_go">
 <a href="#pluginclass_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector Java class.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugindocurl_go">
 <a href="#plugindocurl_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Doc<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector documentation URL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugintitle_go">
 <a href="#plugintitle_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector title.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugintype_go">
 <a href="#plugintype_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pluginversion_go">
 <a href="#pluginversion_go" style="color: inherit; text-decoration: inherit;">Plugin<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="servicename_go">
 <a href="#servicename_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tasks_go">
 <a href="#tasks_go" style="color: inherit; text-decoration: inherit;">Tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectortask">[]Get<wbr>Kafka<wbr>Connector<wbr>Task</a></span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="config_go">
 <a href="#config_go" style="color: inherit; text-decoration: inherit;">Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -925,134 +846,121 @@ The following output properties are available:
             title="">
         <span id="connectorname_nodejs">
 <a href="#connectorname_nodejs" style="color: inherit; text-decoration: inherit;">connector<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pluginauthor_nodejs">
 <a href="#pluginauthor_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector author.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pluginclass_nodejs">
 <a href="#pluginclass_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector Java class.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugindocurl_nodejs">
 <a href="#plugindocurl_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Doc<wbr>Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector documentation URL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugintitle_nodejs">
 <a href="#plugintitle_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector title.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugintype_nodejs">
 <a href="#plugintype_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="pluginversion_nodejs">
 <a href="#pluginversion_nodejs" style="color: inherit; text-decoration: inherit;">plugin<wbr>Version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kafka connector version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="servicename_nodejs">
 <a href="#servicename_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tasks_nodejs">
 <a href="#tasks_nodejs" style="color: inherit; text-decoration: inherit;">tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectortask">Get<wbr>Kafka<wbr>Connector<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="config_nodejs">
 <a href="#config_nodejs" style="color: inherit; text-decoration: inherit;">config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1061,137 +969,121 @@ The following output properties are available:
             title="">
         <span id="connector_name_python">
 <a href="#connector_name_python" style="color: inherit; text-decoration: inherit;">connector_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugin_author_python">
 <a href="#plugin_author_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>author</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector author.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugin_class_python">
 <a href="#plugin_class_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>class</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector Java class.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugin_doc_url_python">
 <a href="#plugin_doc_url_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>doc_<wbr>url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector documentation URL.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugin_title_python">
 <a href="#plugin_title_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>title</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector title.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugin_type_python">
 <a href="#plugin_type_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector type.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="plugin_version_python">
 <a href="#plugin_version_python" style="color: inherit; text-decoration: inherit;">plugin_<wbr>version</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Kafka connector version.
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="service_name_python">
 <a href="#service_name_python" style="color: inherit; text-decoration: inherit;">service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="tasks_python">
 <a href="#tasks_python" style="color: inherit; text-decoration: inherit;">tasks</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkafkaconnectortask">Sequence[Get<wbr>Kafka<wbr>Connector<wbr>Task]</a></span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="config_python">
 <a href="#config_python" style="color: inherit; text-decoration: inherit;">config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1213,7 +1105,6 @@ The following output properties are available:
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1221,27 +1112,24 @@ The following output properties are available:
             title="Required">
         <span id="connector_csharp">
 <a href="#connector_csharp" style="color: inherit; text-decoration: inherit;">Connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="task_csharp">
 <a href="#task_csharp" style="color: inherit; text-decoration: inherit;">Task</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1250,27 +1138,24 @@ The following output properties are available:
             title="Required">
         <span id="connector_go">
 <a href="#connector_go" style="color: inherit; text-decoration: inherit;">Connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="task_go">
 <a href="#task_go" style="color: inherit; text-decoration: inherit;">Task</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1279,27 +1164,24 @@ The following output properties are available:
             title="Required">
         <span id="connector_nodejs">
 <a href="#connector_nodejs" style="color: inherit; text-decoration: inherit;">connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="task_nodejs">
 <a href="#task_nodejs" style="color: inherit; text-decoration: inherit;">task</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1308,30 +1190,24 @@ The following output properties are available:
             title="Required">
         <span id="connector_python">
 <a href="#connector_python" style="color: inherit; text-decoration: inherit;">connector</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="task_python">
 <a href="#task_python" style="color: inherit; text-decoration: inherit;">task</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}List of tasks of a connector, each element contains `connector` 
 (Related connector name) and `task` (Task id / number).
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 

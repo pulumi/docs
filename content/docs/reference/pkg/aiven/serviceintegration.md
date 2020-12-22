@@ -114,19 +114,19 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ServiceIntegration">ServiceIntegration</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ServiceIntegrationArgs">ServiceIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ServiceIntegration">ServiceIntegration</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ServiceIntegrationArgs">ServiceIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.ServiceIntegration">ServiceIntegration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aiven/#pulumi_aiven.ServiceIntegration">ServiceIntegration</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegration">NewServiceIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationArgs">ServiceIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegration">ServiceIntegration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegration">NewServiceIntegration</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationArgs">ServiceIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegration">ServiceIntegration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ServiceIntegration.html">ServiceIntegration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ServiceIntegrationArgs.html">ServiceIntegrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ServiceIntegration.html">ServiceIntegration</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ServiceIntegrationArgs.html">ServiceIntegrationArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -137,7 +137,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -206,7 +206,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -245,7 +245,7 @@ const myintegration = new aiven.ServiceIntegration("myintegration", {
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -286,7 +286,6 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -294,122 +293,141 @@ The ServiceIntegration resource accepts the following [input]({{< relref "/docs/
             title="Required">
         <span id="integrationtype_csharp">
 <a href="#integrationtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values
 include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationendpointid_csharp">
 <a href="#destinationendpointid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
 the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
 to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationservicename_csharp">
 <a href="#destinationservicename_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalawscloudwatchlogsuserconfig_csharp">
+<a href="#externalawscloudwatchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalelasticsearchlogsuserconfig_csharp">
+<a href="#externalelasticsearchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalgooglecloudlogginguserconfig_csharp">
+<a href="#externalgooglecloudlogginguserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnectuserconfig_csharp">
 <a href="#kafkaconnectuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormakeruserconfig_csharp">
 <a href="#kafkamirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logsuserconfig_csharp">
 <a href="#logsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirrormakeruserconfig_csharp">
 <a href="#mirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceendpointid_csharp">
 <a href="#sourceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
 integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
 needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceservicename_csharp">
 <a href="#sourceservicename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -418,122 +436,141 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Required">
         <span id="integrationtype_go">
 <a href="#integrationtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values
 include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationendpointid_go">
 <a href="#destinationendpointid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
 the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
 to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationservicename_go">
 <a href="#destinationservicename_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalawscloudwatchlogsuserconfig_go">
+<a href="#externalawscloudwatchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalelasticsearchlogsuserconfig_go">
+<a href="#externalelasticsearchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalgooglecloudlogginguserconfig_go">
+<a href="#externalgooglecloudlogginguserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnectuserconfig_go">
 <a href="#kafkaconnectuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormakeruserconfig_go">
 <a href="#kafkamirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logsuserconfig_go">
 <a href="#logsuserconfig_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirrormakeruserconfig_go">
 <a href="#mirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceendpointid_go">
 <a href="#sourceendpointid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
 integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
 needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceservicename_go">
 <a href="#sourceservicename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -542,122 +579,141 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Required">
         <span id="integrationtype_nodejs">
 <a href="#integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values
 include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationendpointid_nodejs">
 <a href="#destinationendpointid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
 the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
 to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destinationservicename_nodejs">
 <a href="#destinationservicename_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalawscloudwatchlogsuserconfig_nodejs">
+<a href="#externalawscloudwatchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalelasticsearchlogsuserconfig_nodejs">
+<a href="#externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalgooglecloudlogginguserconfig_nodejs">
+<a href="#externalgooglecloudlogginguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kafkaconnectuserconfig_nodejs">
 <a href="#kafkaconnectuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafkamirrormakeruserconfig_nodejs">
 <a href="#kafkamirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logsuserconfig_nodejs">
 <a href="#logsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirrormakeruserconfig_nodejs">
 <a href="#mirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceendpointid_nodejs">
 <a href="#sourceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
 integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
 needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sourceservicename_nodejs">
 <a href="#sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -666,131 +722,146 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Required">
         <span id="integration_type_python">
 <a href="#integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values
 include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_endpoint_id_python">
 <a href="#destination_endpoint_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>endpoint_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
 the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
 to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="destination_service_name_python">
 <a href="#destination_service_name_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="external_aws_cloudwatch_logs_user_config_python">
+<a href="#external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="external_elasticsearch_logs_user_config_python">
+<a href="#external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="external_google_cloud_logging_user_config_python">
+<a href="#external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="kafka_connect_user_config_python">
 <a href="#kafka_connect_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>user_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="kafka_mirrormaker_user_config_python">
 <a href="#kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="logs_user_config_python">
 <a href="#logs_user_config_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>user_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="mirrormaker_user_config_python">
 <a href="#mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>user_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_endpoint_id_python">
 <a href="#source_endpoint_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>endpoint_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
 integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
 needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="source_service_name_python">
 <a href="#source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the ServiceIntegration resource produces the following output properties:
-
 
 
 
@@ -801,15 +872,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -818,15 +887,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -835,15 +902,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -852,18 +917,13 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -873,20 +933,20 @@ Get an existing ServiceIntegration resource's state with the given name, ID, and
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ServiceIntegrationState">ServiceIntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ServiceIntegration">ServiceIntegration</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ServiceIntegrationState">ServiceIntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aiven/#ServiceIntegration">ServiceIntegration</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceIntegration</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">destination_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">destination_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">external_aws_cloudwatch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalAwsCloudwatchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_elasticsearch_logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalElasticsearchLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">external_google_cloud_logging_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationExternalGoogleCloudLoggingUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">integration_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kafka_connect_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaConnectUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">kafka_mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationKafkaMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">logs_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationLogsUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">mirrormaker_user_config</span><span class="p">:</span> <span class="nx">Optional[ServiceIntegrationMirrormakerUserConfigArgs]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_endpoint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_service_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ServiceIntegration</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationState">ServiceIntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegration">ServiceIntegration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetServiceIntegration<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationState">ServiceIntegrationState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegration">ServiceIntegration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ServiceIntegration.html">ServiceIntegration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven..ServiceIntegrationState.html">ServiceIntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.ServiceIntegration.html">ServiceIntegration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven..ServiceIntegrationState.html">ServiceIntegrationState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -988,7 +1048,6 @@ Get an existing ServiceIntegration resource's state with the given name, ID, and
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -996,122 +1055,141 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_destinationendpointid_csharp">
 <a href="#state_destinationendpointid_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
 the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
 to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destinationservicename_csharp">
 <a href="#state_destinationservicename_csharp" style="color: inherit; text-decoration: inherit;">Destination<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalawscloudwatchlogsuserconfig_csharp">
+<a href="#state_externalawscloudwatchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalelasticsearchlogsuserconfig_csharp">
+<a href="#state_externalelasticsearchlogsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalgooglecloudlogginguserconfig_csharp">
+<a href="#state_externalgooglecloudlogginguserconfig_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationtype_csharp">
 <a href="#state_integrationtype_csharp" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values
 include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafkaconnectuserconfig_csharp">
 <a href="#state_kafkaconnectuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafkamirrormakeruserconfig_csharp">
 <a href="#state_kafkamirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logsuserconfig_csharp">
 <a href="#state_logsuserconfig_csharp" style="color: inherit; text-decoration: inherit;">Logs<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirrormakeruserconfig_csharp">
 <a href="#state_mirrormakeruserconfig_csharp" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceendpointid_csharp">
 <a href="#state_sourceendpointid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
 integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
 needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceservicename_csharp">
 <a href="#state_sourceservicename_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1120,122 +1198,141 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="state_destinationendpointid_go">
 <a href="#state_destinationendpointid_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
 the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
 to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destinationservicename_go">
 <a href="#state_destinationservicename_go" style="color: inherit; text-decoration: inherit;">Destination<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalawscloudwatchlogsuserconfig_go">
+<a href="#state_externalawscloudwatchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalelasticsearchlogsuserconfig_go">
+<a href="#state_externalelasticsearchlogsuserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalgooglecloudlogginguserconfig_go">
+<a href="#state_externalgooglecloudlogginguserconfig_go" style="color: inherit; text-decoration: inherit;">External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationtype_go">
 <a href="#state_integrationtype_go" style="color: inherit; text-decoration: inherit;">Integration<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values
 include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafkaconnectuserconfig_go">
 <a href="#state_kafkaconnectuserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafkamirrormakeruserconfig_go">
 <a href="#state_kafkamirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logsuserconfig_go">
 <a href="#state_logsuserconfig_go" style="color: inherit; text-decoration: inherit;">Logs<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirrormakeruserconfig_go">
 <a href="#state_mirrormakeruserconfig_go" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceendpointid_go">
 <a href="#state_sourceendpointid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
 integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
 needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceservicename_go">
 <a href="#state_sourceservicename_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1244,122 +1341,141 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="state_destinationendpointid_nodejs">
 <a href="#state_destinationendpointid_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
 the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
 to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destinationservicename_nodejs">
 <a href="#state_destinationservicename_nodejs" style="color: inherit; text-decoration: inherit;">destination<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalawscloudwatchlogsuserconfig_nodejs">
+<a href="#state_externalawscloudwatchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalelasticsearchlogsuserconfig_nodejs">
+<a href="#state_externalelasticsearchlogsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_externalgooglecloudlogginguserconfig_nodejs">
+<a href="#state_externalgooglecloudlogginguserconfig_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationtype_nodejs">
 <a href="#state_integrationtype_nodejs" style="color: inherit; text-decoration: inherit;">integration<wbr>Type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values
 include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafkaconnectuserconfig_nodejs">
 <a href="#state_kafkaconnectuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafkamirrormakeruserconfig_nodejs">
 <a href="#state_kafkamirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logsuserconfig_nodejs">
 <a href="#state_logsuserconfig_nodejs" style="color: inherit; text-decoration: inherit;">logs<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirrormakeruserconfig_nodejs">
 <a href="#state_mirrormakeruserconfig_nodejs" style="color: inherit; text-decoration: inherit;">mirrormaker<wbr>User<wbr>Config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceendpointid_nodejs">
 <a href="#state_sourceendpointid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Endpoint<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
 integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
 needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sourceservicename_nodejs">
 <a href="#state_sourceservicename_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Service<wbr>Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1368,119 +1484,139 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="state_destination_endpoint_id_python">
 <a href="#state_destination_endpoint_id_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>endpoint_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}or `destination_service_name` - (Required) identifies the target side of
 the integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the target needs
 to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_destination_service_name_python">
 <a href="#state_destination_service_name_python" style="color: inherit; text-decoration: inherit;">destination_<wbr>service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Destination service for the integration (if any)
 {{% /md %}}</dd>
-
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_external_aws_cloudwatch_logs_user_config_python">
+<a href="#state_external_aws_cloudwatch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>aws_<wbr>cloudwatch_<wbr>logs_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalawscloudwatchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Aws<wbr>Cloudwatch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External AWS Cloudwatch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_external_elasticsearch_logs_user_config_python">
+<a href="#state_external_elasticsearch_logs_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>elasticsearch_<wbr>logs_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalelasticsearchlogsuserconfig">Service<wbr>Integration<wbr>External<wbr>Elasticsearch<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External Elasticsearch logs specific user configurable settings
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_external_google_cloud_logging_user_config_python">
+<a href="#state_external_google_cloud_logging_user_config_python" style="color: inherit; text-decoration: inherit;">external_<wbr>google_<wbr>cloud_<wbr>logging_<wbr>user_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceintegrationexternalgooglecloudlogginguserconfig">Service<wbr>Integration<wbr>External<wbr>Google<wbr>Cloud<wbr>Logging<wbr>User<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}External Google Cloud Logging specific user configurable settings
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integration_type_python">
 <a href="#state_integration_type_python" style="color: inherit; text-decoration: inherit;">integration_<wbr>type</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}identifies the type of integration that is set up. Possible values
 include `dashboard`, `datadog`, `logs`, `metrics` and `mirrormaker`.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafka_connect_user_config_python">
 <a href="#state_kafka_connect_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect_<wbr>user_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kafka Connect specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_kafka_mirrormaker_user_config_python">
 <a href="#state_kafka_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>mirrormaker_<wbr>user_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 2 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_logs_user_config_python">
 <a href="#state_logs_user_config_python" style="color: inherit; text-decoration: inherit;">logs_<wbr>user_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Log integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_mirrormaker_user_config_python">
 <a href="#state_mirrormaker_user_config_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>user_<wbr>config</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Mirrormaker 1 integration specific user configurable settings
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}defines the project the integration belongs to.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_endpoint_id_python">
 <a href="#state_source_endpoint_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>endpoint_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}or `source_service_name` - (Optional) identifies the source side of the
 integration. Only either endpoint identifier (e.g. `aiven_service_integration_endpoint.XXX.id`) or
 service name (e.g. `aiven_kafka.XXX.service_name`) must be specified. In either case the source
 needs to be defined using the reference syntax described above to set up the dependency correctly.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_source_service_name_python">
 <a href="#state_source_service_name_python" style="color: inherit; text-decoration: inherit;">source_<wbr>service_<wbr>name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Source service for the integration (if any)
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1489,11 +1625,8 @@ needs to be defined using the reference syntax described above to set up the dep
 
 
 
-
-
-
-
 ## Supporting Types
+
 
 
 <h4 id="serviceintegrationkafkaconnectuserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config</h4>
@@ -1504,11 +1637,10 @@ needs to be defined using the reference syntax described above to set up the dep
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationKafkaConnectUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationKafkaConnectUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationKafkaConnectUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationKafkaConnectUserConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1518,15 +1650,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="kafkaconnect_csharp">
 <a href="#kafkaconnect_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1535,15 +1665,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="kafkaconnect_go">
 <a href="#kafkaconnect_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1552,15 +1680,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="kafkaconnect_nodejs">
 <a href="#kafkaconnect_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1569,18 +1695,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="kafka_connect_python">
 <a href="#kafka_connect_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>connect</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="serviceintegrationkafkaconnectuserconfigkafkaconnect">Service<wbr>Integration<wbr>Kafka<wbr>Connect<wbr>User<wbr>Config<wbr>Kafka<wbr>Connect</h4>
 {{% choosable language nodejs %}}
@@ -1590,11 +1711,10 @@ needs to be defined using the reference syntax described above to set up the dep
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationKafkaConnectUserConfigKafkaConnectArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationKafkaConnectUserConfigKafkaConnectOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationKafkaConnectUserConfigKafkaConnectArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationKafkaConnectUserConfigKafkaConnect.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1604,45 +1724,40 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="configstoragetopic_csharp">
 <a href="#configstoragetopic_csharp" style="color: inherit; text-decoration: inherit;">Config<wbr>Storage<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupid_csharp">
 <a href="#groupid_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offsetstoragetopic_csharp">
 <a href="#offsetstoragetopic_csharp" style="color: inherit; text-decoration: inherit;">Offset<wbr>Storage<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statusstoragetopic_csharp">
 <a href="#statusstoragetopic_csharp" style="color: inherit; text-decoration: inherit;">Status<wbr>Storage<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1651,45 +1766,40 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="configstoragetopic_go">
 <a href="#configstoragetopic_go" style="color: inherit; text-decoration: inherit;">Config<wbr>Storage<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupid_go">
 <a href="#groupid_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offsetstoragetopic_go">
 <a href="#offsetstoragetopic_go" style="color: inherit; text-decoration: inherit;">Offset<wbr>Storage<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statusstoragetopic_go">
 <a href="#statusstoragetopic_go" style="color: inherit; text-decoration: inherit;">Status<wbr>Storage<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1698,45 +1808,40 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="configstoragetopic_nodejs">
 <a href="#configstoragetopic_nodejs" style="color: inherit; text-decoration: inherit;">config<wbr>Storage<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupid_nodejs">
 <a href="#groupid_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offsetstoragetopic_nodejs">
 <a href="#offsetstoragetopic_nodejs" style="color: inherit; text-decoration: inherit;">offset<wbr>Storage<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="statusstoragetopic_nodejs">
 <a href="#statusstoragetopic_nodejs" style="color: inherit; text-decoration: inherit;">status<wbr>Storage<wbr>Topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1745,48 +1850,40 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="config_storage_topic_python">
 <a href="#config_storage_topic_python" style="color: inherit; text-decoration: inherit;">config_<wbr>storage_<wbr>topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_id_python">
 <a href="#group_id_python" style="color: inherit; text-decoration: inherit;">group_<wbr>id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="offset_storage_topic_python">
 <a href="#offset_storage_topic_python" style="color: inherit; text-decoration: inherit;">offset_<wbr>storage_<wbr>topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="status_storage_topic_python">
 <a href="#status_storage_topic_python" style="color: inherit; text-decoration: inherit;">status_<wbr>storage_<wbr>topic</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="serviceintegrationkafkamirrormakeruserconfig">Service<wbr>Integration<wbr>Kafka<wbr>Mirrormaker<wbr>User<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -1796,11 +1893,10 @@ needs to be defined using the reference syntax described above to set up the dep
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationKafkaMirrormakerUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationKafkaMirrormakerUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationKafkaMirrormakerUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationKafkaMirrormakerUserConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1810,15 +1906,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="clusteralias_csharp">
 <a href="#clusteralias_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1827,15 +1921,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="clusteralias_go">
 <a href="#clusteralias_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1844,15 +1936,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="clusteralias_nodejs">
 <a href="#clusteralias_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1861,18 +1951,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="cluster_alias_python">
 <a href="#cluster_alias_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>alias</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="serviceintegrationlogsuserconfig">Service<wbr>Integration<wbr>Logs<wbr>User<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -1882,11 +1967,10 @@ needs to be defined using the reference syntax described above to set up the dep
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationLogsUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationLogsUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationLogsUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationLogsUserConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1896,25 +1980,22 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="elasticsearchindexdaysmax_csharp">
 <a href="#elasticsearchindexdaysmax_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Index<wbr>Days<wbr>Max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchindexprefix_csharp">
 <a href="#elasticsearchindexprefix_csharp" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Index<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1923,25 +2004,22 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="elasticsearchindexdaysmax_go">
 <a href="#elasticsearchindexdaysmax_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Index<wbr>Days<wbr>Max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchindexprefix_go">
 <a href="#elasticsearchindexprefix_go" style="color: inherit; text-decoration: inherit;">Elasticsearch<wbr>Index<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1950,25 +2028,22 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="elasticsearchindexdaysmax_nodejs">
 <a href="#elasticsearchindexdaysmax_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Index<wbr>Days<wbr>Max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearchindexprefix_nodejs">
 <a href="#elasticsearchindexprefix_nodejs" style="color: inherit; text-decoration: inherit;">elasticsearch<wbr>Index<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1977,28 +2052,22 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="elasticsearch_index_days_max_python">
 <a href="#elasticsearch_index_days_max_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>index_<wbr>days_<wbr>max</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="elasticsearch_index_prefix_python">
 <a href="#elasticsearch_index_prefix_python" style="color: inherit; text-decoration: inherit;">elasticsearch_<wbr>index_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="serviceintegrationmirrormakeruserconfig">Service<wbr>Integration<wbr>Mirrormaker<wbr>User<wbr>Config</h4>
 {{% choosable language nodejs %}}
@@ -2008,11 +2077,10 @@ needs to be defined using the reference syntax described above to set up the dep
 {{% choosable language go %}}
 > See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationMirrormakerUserConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#ServiceIntegrationMirrormakerUserConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.ServiceIntegrationMirrormakerUserConfigArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.ServiceIntegrationMirrormakerUserConfig.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2022,15 +2090,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="mirrormakerwhitelist_csharp">
 <a href="#mirrormakerwhitelist_csharp" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>Whitelist</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2039,15 +2105,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="mirrormakerwhitelist_go">
 <a href="#mirrormakerwhitelist_go" style="color: inherit; text-decoration: inherit;">Mirrormaker<wbr>Whitelist</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2056,15 +2120,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="mirrormakerwhitelist_nodejs">
 <a href="#mirrormakerwhitelist_nodejs" style="color: inherit; text-decoration: inherit;">mirrormaker<wbr>Whitelist</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2073,23 +2135,13 @@ needs to be defined using the reference syntax described above to set up the dep
             title="Optional">
         <span id="mirrormaker_whitelist_python">
 <a href="#mirrormaker_whitelist_python" style="color: inherit; text-decoration: inherit;">mirrormaker_<wbr>whitelist</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>
