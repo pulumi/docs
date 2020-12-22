@@ -210,7 +210,7 @@ const exampleTrafficManagerProfile = new azure.network.TrafficManagerProfile("ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/trafficmanager/#pulumi_azure.trafficmanager.Profile">Profile</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ProfileDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[ProfileMonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/trafficmanager/#pulumi_azure.trafficmanager.Profile">Profile</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ProfileDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[ProfileMonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -423,6 +423,16 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="maxreturn_csharp">
+<a href="#maxreturn_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Return</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -496,6 +506,16 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to route traffic, possible values are:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxreturn_go">
+<a href="#maxreturn_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Return</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -575,6 +595,16 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="maxreturn_nodejs">
+<a href="#maxreturn_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Return</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -648,6 +678,16 @@ The Profile resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the algorithm used to route traffic, possible values are:
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_return_python">
+<a href="#max_return_python" style="color: inherit; text-decoration: inherit;">max_<wbr>return</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -802,7 +842,7 @@ Get an existing Profile resource's state with the given name, ID, and optional e
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ProfileDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[ProfileMonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Profile</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">dns_config</span><span class="p">:</span> <span class="nx">Optional[ProfileDnsConfigArgs]</span> = None<span class="p">, </span><span class="nx">fqdn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_return</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">monitor_config</span><span class="p">:</span> <span class="nx">Optional[ProfileMonitorConfigArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">profile_status</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">traffic_routing_method</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Profile</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -937,6 +977,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_maxreturn_csharp">
+<a href="#state_maxreturn_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Return</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_monitorconfig_csharp">
 <a href="#state_monitorconfig_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Config</a>
 </span>
@@ -1020,6 +1070,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the created Profile.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_maxreturn_go">
+<a href="#state_maxreturn_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Return</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1109,6 +1169,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_maxreturn_nodejs">
+<a href="#state_maxreturn_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Return</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_monitorconfig_nodejs">
 <a href="#state_monitorconfig_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Config</a>
 </span>
@@ -1192,6 +1262,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FQDN of the created Profile.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_max_return_python">
+<a href="#state_max_return_python" style="color: inherit; text-decoration: inherit;">max_<wbr>return</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of endpoints to return for DNS queries to this Profile. Possible values range from `1` to `8`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

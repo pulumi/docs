@@ -21,7 +21,6 @@ Manages a Key Vault Key.
 ```csharp
 using Pulumi;
 using Azure = Pulumi.Azure;
-using Random = Pulumi.Random;
 
 class MyStack : Stack
 {
@@ -30,15 +29,7 @@ class MyStack : Stack
         var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
         var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
         {
-            Location = "West US",
-        });
-        var server = new Random.RandomId("server", new Random.RandomIdArgs
-        {
-            Keepers = 
-            {
-                { "ami_id", 1 },
-            },
-            ByteLength = 8,
+            Location = "West Europe",
         });
         var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
         {
@@ -46,6 +37,8 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             TenantId = current.Apply(current => current.TenantId),
             SkuName = "premium",
+            SoftDeleteEnabled = true,
+            SoftDeleteRetentionDays = 7,
             AccessPolicies = 
             {
                 new Azure.KeyVault.Inputs.KeyVaultAccessPolicyArgs
@@ -56,16 +49,14 @@ class MyStack : Stack
                     {
                         "create",
                         "get",
+                        "purge",
+                        "recover",
                     },
                     SecretPermissions = 
                     {
                         "set",
                     },
                 },
-            },
-            Tags = 
-            {
-                { "environment", "Production" },
             },
         });
         var generated = new Azure.KeyVault.Key("generated", new Azure.KeyVault.KeyArgs
@@ -97,7 +88,6 @@ package main
 import (
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault"
-	"github.com/pulumi/pulumi-random/sdk/v2/go/random"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -108,25 +98,18 @@ func main() {
 			return err
 		}
 		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
-			Location: pulumi.String("West US"),
-		})
-		if err != nil {
-			return err
-		}
-		_, err = random.NewRandomId(ctx, "server", &random.RandomIdArgs{
-			Keepers: pulumi.Float64Map{
-				"ami_id": pulumi.Float64(1),
-			},
-			ByteLength: pulumi.Int(8),
+			Location: pulumi.String("West Europe"),
 		})
 		if err != nil {
 			return err
 		}
 		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
-			Location:          exampleResourceGroup.Location,
-			ResourceGroupName: exampleResourceGroup.Name,
-			TenantId:          pulumi.String(current.TenantId),
-			SkuName:           pulumi.String("premium"),
+			Location:                exampleResourceGroup.Location,
+			ResourceGroupName:       exampleResourceGroup.Name,
+			TenantId:                pulumi.String(current.TenantId),
+			SkuName:                 pulumi.String("premium"),
+			SoftDeleteEnabled:       pulumi.Bool(true),
+			SoftDeleteRetentionDays: pulumi.Int(7),
 			AccessPolicies: keyvault.KeyVaultAccessPolicyArray{
 				&keyvault.KeyVaultAccessPolicyArgs{
 					TenantId: pulumi.String(current.TenantId),
@@ -134,14 +117,13 @@ func main() {
 					KeyPermissions: pulumi.StringArray{
 						pulumi.String("create"),
 						pulumi.String("get"),
+						pulumi.String("purge"),
+						pulumi.String("recover"),
 					},
 					SecretPermissions: pulumi.StringArray{
 						pulumi.String("set"),
 					},
 				},
-			},
-			Tags: pulumi.StringMap{
-				"environment": pulumi.String("Production"),
 			},
 		})
 		if err != nil {
@@ -174,32 +156,27 @@ func main() {
 ```python
 import pulumi
 import pulumi_azure as azure
-import pulumi_random as random
 
 current = azure.core.get_client_config()
-example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West US")
-server = random.RandomId("server",
-    keepers={
-        "ami_id": 1,
-    },
-    byte_length=8)
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
 example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
     location=example_resource_group.location,
     resource_group_name=example_resource_group.name,
     tenant_id=current.tenant_id,
     sku_name="premium",
+    soft_delete_enabled=True,
+    soft_delete_retention_days=7,
     access_policies=[azure.keyvault.KeyVaultAccessPolicyArgs(
         tenant_id=current.tenant_id,
         object_id=current.object_id,
         key_permissions=[
             "create",
             "get",
+            "purge",
+            "recover",
         ],
         secret_permissions=["set"],
-    )],
-    tags={
-        "environment": "Production",
-    })
+    )])
 generated = azure.keyvault.Key("generated",
     key_vault_id=example_key_vault.id,
     key_type="RSA",
@@ -221,33 +198,27 @@ generated = azure.keyvault.Key("generated",
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
-import * as random from "@pulumi/random";
 
 const current = azure.core.getClientConfig({});
-const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West US"});
-const server = new random.RandomId("server", {
-    keepers: {
-        ami_id: 1,
-    },
-    byteLength: 8,
-});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
 const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
     location: exampleResourceGroup.location,
     resourceGroupName: exampleResourceGroup.name,
     tenantId: current.then(current => current.tenantId),
     skuName: "premium",
+    softDeleteEnabled: true,
+    softDeleteRetentionDays: 7,
     accessPolicies: [{
         tenantId: current.then(current => current.tenantId),
         objectId: current.then(current => current.objectId),
         keyPermissions: [
             "create",
             "get",
+            "purge",
+            "recover",
         ],
         secretPermissions: ["set"],
     }],
-    tags: {
-        environment: "Production",
-    },
 });
 const generated = new azure.keyvault.Key("generated", {
     keyVaultId: exampleKeyVault.id,
@@ -1814,7 +1785,7 @@ The following state arguments are supported:
 Key Vault Key which is Enabled can be imported using the `resource id`, e.g.
 
 ```sh
- $ pulumi import azure:keyvault/key:Key net/keys/example/fdf067c93bbb4b22bff4d8b7a9a56217
+ $ pulumi import azure:keyvault/key:Key example "https://example-keyvault.vault.azure.net/keys/example/fdf067c93bbb4b22bff4d8b7a9a56217"
 ```
 
 

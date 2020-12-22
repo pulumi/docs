@@ -55,7 +55,7 @@ class MyStack : Stack
             {
                 new Azure.Network.Inputs.SubnetDelegationArgs
                 {
-                    Name = "acctestdelegation",
+                    Name = "delegation",
                     ServiceDelegation = new Azure.Network.Inputs.SubnetDelegationServiceDelegationArgs
                     {
                         Name = "Microsoft.ContainerInstance/containerGroups",
@@ -111,7 +111,7 @@ func main() {
 			},
 			Delegations: network.SubnetDelegationArray{
 				&network.SubnetDelegationArgs{
-					Name: pulumi.String("acctestdelegation"),
+					Name: pulumi.String("delegation"),
 					ServiceDelegation: &network.SubnetDelegationServiceDelegationArgs{
 						Name: pulumi.String("Microsoft.ContainerInstance/containerGroups"),
 						Actions: pulumi.StringArray{
@@ -147,7 +147,7 @@ example_subnet = azure.network.Subnet("exampleSubnet",
     virtual_network_name=example_virtual_network.name,
     address_prefixes=["10.0.1.0/24"],
     delegations=[azure.network.SubnetDelegationArgs(
-        name="acctestdelegation",
+        name="delegation",
         service_delegation=azure.network.SubnetDelegationServiceDelegationArgs(
             name="Microsoft.ContainerInstance/containerGroups",
             actions=[
@@ -177,7 +177,7 @@ const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
     virtualNetworkName: exampleVirtualNetwork.name,
     addressPrefixes: ["10.0.1.0/24"],
     delegations: [{
-        name: "acctestdelegation",
+        name: "delegation",
         serviceDelegation: {
             name: "Microsoft.ContainerInstance/containerGroups",
             actions: [
@@ -203,7 +203,7 @@ const exampleSubnet = new azure.network.Subnet("exampleSubnet", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.Subnet">Subnet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">address_prefixes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">delegations</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetDelegationArgs]]</span> = None<span class="p">, </span><span class="nx">enforce_private_link_endpoint_network_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_private_link_service_network_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/network/#pulumi_azure.network.Subnet">Subnet</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">address_prefixes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">delegations</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetDelegationArgs]]</span> = None<span class="p">, </span><span class="nx">enforce_private_link_endpoint_network_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_private_link_service_network_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_endpoint_policy_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">service_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -456,6 +456,16 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="serviceendpointpolicyids_csharp">
+<a href="#serviceendpointpolicyids_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Policy<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of IDs of Service Endpoint Policies to associate with the subnet.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="serviceendpoints_csharp">
 <a href="#serviceendpoints_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoints</a>
 </span>
@@ -549,6 +559,16 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serviceendpointpolicyids_go">
+<a href="#serviceendpointpolicyids_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Policy<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of IDs of Service Endpoint Policies to associate with the subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -648,6 +668,16 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="serviceendpointpolicyids_nodejs">
+<a href="#serviceendpointpolicyids_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Policy<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of IDs of Service Endpoint Policies to associate with the subnet.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="serviceendpoints_nodejs">
 <a href="#serviceendpoints_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoints</a>
 </span>
@@ -744,6 +774,16 @@ The Subnet resource accepts the following [input]({{< relref "/docs/intro/concep
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="service_endpoint_policy_ids_python">
+<a href="#service_endpoint_policy_ids_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>policy_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of IDs of Service Endpoint Policies to associate with the subnet.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="service_endpoints_python">
 <a href="#service_endpoints_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoints</a>
 </span>
@@ -835,7 +875,7 @@ Get an existing Subnet resource's state with the given name, ID, and optional ex
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">address_prefixes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">delegations</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetDelegationArgs]]</span> = None<span class="p">, </span><span class="nx">enforce_private_link_endpoint_network_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_private_link_service_network_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subnet</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">address_prefix</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">address_prefixes</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">delegations</span><span class="p">:</span> <span class="nx">Optional[Sequence[SubnetDelegationArgs]]</span> = None<span class="p">, </span><span class="nx">enforce_private_link_endpoint_network_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_private_link_service_network_policies</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">service_endpoint_policy_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">service_endpoints</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">virtual_network_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Subnet</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1020,6 +1060,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_serviceendpointpolicyids_csharp">
+<a href="#state_serviceendpointpolicyids_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Policy<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of IDs of Service Endpoint Policies to associate with the subnet.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_serviceendpoints_csharp">
 <a href="#state_serviceendpoints_csharp" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoints</a>
 </span>
@@ -1113,6 +1163,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the subnet. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_serviceendpointpolicyids_go">
+<a href="#state_serviceendpointpolicyids_go" style="color: inherit; text-decoration: inherit;">Service<wbr>Endpoint<wbr>Policy<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of IDs of Service Endpoint Policies to associate with the subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1212,6 +1272,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_serviceendpointpolicyids_nodejs">
+<a href="#state_serviceendpointpolicyids_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoint<wbr>Policy<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of IDs of Service Endpoint Policies to associate with the subnet.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_serviceendpoints_nodejs">
 <a href="#state_serviceendpoints_nodejs" style="color: inherit; text-decoration: inherit;">service<wbr>Endpoints</a>
 </span>
@@ -1305,6 +1375,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource group in which to create the subnet. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_service_endpoint_policy_ids_python">
+<a href="#state_service_endpoint_policy_ids_python" style="color: inherit; text-decoration: inherit;">service_<wbr>endpoint_<wbr>policy_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of IDs of Service Endpoint Policies to associate with the subnet.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

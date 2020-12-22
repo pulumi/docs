@@ -14,7 +14,8 @@ Explore the resources and functions of the eventgrid module in the Azure package
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="domaintopic" title="DomainTopic"><span class="symbol resource"></span>DomainTopic</a></li>
     <li><a href="eventsubscription" title="EventSubscription"><span class="symbol resource"></span>EventSubscription</a></li>
-    <li><a href="getsystemtopic" title="GetSystemTopic"><span class="symbol resource"></span>GetSystemTopic</a></li>
+    <li><a href="systemtopic" title="SystemTopic"><span class="symbol resource"></span>SystemTopic</a></li>
+    <li><a href="systemtopiceventsubscription" title="SystemTopicEventSubscription"><span class="symbol resource"></span>SystemTopicEventSubscription</a></li>
     <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
 </ul>
 
@@ -32,7 +33,7 @@ Explore the resources and functions of the eventgrid module in the Azure package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.40.0</dd>
+	<dd>3.41.0</dd>
 </dl>
 
 

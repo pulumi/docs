@@ -54,6 +54,7 @@ Explore the resources and functions of the network module in the Azure package.
     <li><a href="subnetnatgatewayassociation" title="SubnetNatGatewayAssociation"><span class="symbol resource"></span>SubnetNatGatewayAssociation</a></li>
     <li><a href="subnetnetworksecuritygroupassociation" title="SubnetNetworkSecurityGroupAssociation"><span class="symbol resource"></span>SubnetNetworkSecurityGroupAssociation</a></li>
     <li><a href="subnetroutetableassociation" title="SubnetRouteTableAssociation"><span class="symbol resource"></span>SubnetRouteTableAssociation</a></li>
+    <li><a href="subnetserviceendpointstoragepolicy" title="SubnetServiceEndpointStoragePolicy"><span class="symbol resource"></span>SubnetServiceEndpointStoragePolicy</a></li>
     <li><a href="trafficmanagerendpoint" title="TrafficManagerEndpoint"><span class="symbol resource"></span>TrafficManagerEndpoint</a></li>
     <li><a href="trafficmanagerprofile" title="TrafficManagerProfile"><span class="symbol resource"></span>TrafficManagerProfile</a></li>
     <li><a href="virtualhub" title="VirtualHub"><span class="symbol resource"></span>VirtualHub</a></li>
@@ -108,7 +109,7 @@ Explore the resources and functions of the network module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.40.0</dd>
+	<dd>3.41.0</dd>
 </dl>
 
 

@@ -37,6 +37,8 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             TenantId = current.Apply(current => current.TenantId),
             SkuName = "standard",
+            SoftDeleteEnabled = true,
+            SoftDeleteRetentionDays = 7,
             AccessPolicies = 
             {
                 new Azure.KeyVault.Inputs.KeyVaultAccessPolicyArgs
@@ -55,6 +57,7 @@ class MyStack : Stack
                         "listissuers",
                         "managecontacts",
                         "manageissuers",
+                        "purge",
                         "setissuers",
                         "update",
                     },
@@ -89,10 +92,6 @@ class MyStack : Stack
                         "set",
                     },
                 },
-            },
-            Tags = 
-            {
-                { "environment", "Production" },
             },
         });
         var exampleCertificate = new Azure.KeyVault.Certificate("exampleCertificate", new Azure.KeyVault.CertificateArgs
@@ -187,10 +186,12 @@ func main() {
 			return err
 		}
 		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
-			Location:          exampleResourceGroup.Location,
-			ResourceGroupName: exampleResourceGroup.Name,
-			TenantId:          pulumi.String(current.TenantId),
-			SkuName:           pulumi.String("standard"),
+			Location:                exampleResourceGroup.Location,
+			ResourceGroupName:       exampleResourceGroup.Name,
+			TenantId:                pulumi.String(current.TenantId),
+			SkuName:                 pulumi.String("standard"),
+			SoftDeleteEnabled:       pulumi.Bool(true),
+			SoftDeleteRetentionDays: pulumi.Int(7),
 			AccessPolicies: keyvault.KeyVaultAccessPolicyArray{
 				&keyvault.KeyVaultAccessPolicyArgs{
 					TenantId: pulumi.String(current.TenantId),
@@ -206,6 +207,7 @@ func main() {
 						pulumi.String("listissuers"),
 						pulumi.String("managecontacts"),
 						pulumi.String("manageissuers"),
+						pulumi.String("purge"),
 						pulumi.String("setissuers"),
 						pulumi.String("update"),
 					},
@@ -238,9 +240,6 @@ func main() {
 						pulumi.String("set"),
 					},
 				},
-			},
-			Tags: pulumi.StringMap{
-				"environment": pulumi.String("Production"),
 			},
 		})
 		if err != nil {
@@ -316,6 +315,8 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
     resource_group_name=example_resource_group.name,
     tenant_id=current.tenant_id,
     sku_name="standard",
+    soft_delete_enabled=True,
+    soft_delete_retention_days=7,
     access_policies=[azure.keyvault.KeyVaultAccessPolicyArgs(
         tenant_id=current.tenant_id,
         object_id=current.object_id,
@@ -330,6 +331,7 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
             "listissuers",
             "managecontacts",
             "manageissuers",
+            "purge",
             "setissuers",
             "update",
         ],
@@ -361,10 +363,7 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
             "restore",
             "set",
         ],
-    )],
-    tags={
-        "environment": "Production",
-    })
+    )])
 example_certificate = azure.keyvault.Certificate("exampleCertificate",
     key_vault_id=example_key_vault.id,
     certificate_policy=azure.keyvault.CertificateCertificatePolicyArgs(
@@ -425,6 +424,8 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
     resourceGroupName: exampleResourceGroup.name,
     tenantId: current.then(current => current.tenantId),
     skuName: "standard",
+    softDeleteEnabled: true,
+    softDeleteRetentionDays: 7,
     accessPolicies: [{
         tenantId: current.then(current => current.tenantId),
         objectId: current.then(current => current.objectId),
@@ -439,6 +440,7 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
             "listissuers",
             "managecontacts",
             "manageissuers",
+            "purge",
             "setissuers",
             "update",
         ],
@@ -471,9 +473,6 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
             "set",
         ],
     }],
-    tags: {
-        environment: "Production",
-    },
 });
 const exampleCertificate = new azure.keyvault.Certificate("exampleCertificate", {
     keyVaultId: exampleKeyVault.id,
@@ -3453,7 +3452,7 @@ The following state arguments are supported:
 Key Vault Certificates can be imported using the `resource id`, e.g.
 
 ```sh
- $ pulumi import azure:keyvault/certificate:Certificate net/certificates/example/fdf067c93bbb4b22bff4d8b7a9a56217
+ $ pulumi import azure:keyvault/certificate:Certificate example "https://example-keyvault.vault.azure.net/certificates/example/fdf067c93bbb4b22bff4d8b7a9a56217"
 ```
 
 

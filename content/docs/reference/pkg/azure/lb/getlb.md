@@ -254,7 +254,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlbfrontendipconfiguration">List&lt;Get<wbr>LBFrontend<wbr>Ip<wbr>Configuration&gt;</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) A `frontend_ip_configuration` block as documented below.
+    <dd>{{% md %}}A `frontend_ip_configuration` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -349,7 +349,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlbfrontendipconfiguration">[]Get<wbr>LBFrontend<wbr>Ip<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) A `frontend_ip_configuration` block as documented below.
+    <dd>{{% md %}}A `frontend_ip_configuration` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -444,7 +444,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlbfrontendipconfiguration">Get<wbr>LBFrontend<wbr>Ip<wbr>Configuration[]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) A `frontend_ip_configuration` block as documented below.
+    <dd>{{% md %}}A `frontend_ip_configuration` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -539,7 +539,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getlbfrontendipconfiguration">Sequence[Get<wbr>LBFrontend<wbr>Ip<wbr>Configuration]</a></span>
     </dt>
-    <dd>{{% md %}}(Optional) A `frontend_ip_configuration` block as documented below.
+    <dd>{{% md %}}A `frontend_ip_configuration` block as documented below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

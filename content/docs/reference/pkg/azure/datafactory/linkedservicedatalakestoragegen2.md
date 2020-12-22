@@ -445,7 +445,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -581,7 +581,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -717,7 +717,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -853,7 +853,7 @@ The LinkedServiceDataLakeStorageGen2 resource accepts the following [input]({{< 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1169,7 +1169,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1305,7 +1305,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1441,7 +1441,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1577,7 +1577,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}(Required) The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
+    <dd>{{% md %}}The tenant id or name in which to authenticate against the Azure Data Lake Storage Gen2 account.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

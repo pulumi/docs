@@ -3,7 +3,7 @@ title: "Module digitaltwins"
 title_tag: "Module digitaltwins | Package @pulumi/azure | Node.js SDK"
 linktitle: "digitaltwins"
 meta_desc: "Explore members of the digitaltwins module in the @pulumi/azure package."
-git_sha: "a6cf64ad94f0d70c63d102bf0b450fe658cdc662"
+git_sha: "04a1756079c6f170cda88c2c8a1cebff49c8d597"
 block_external_search_index: true
 ---
 
@@ -45,7 +45,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="EndpointEventGrid" data-link-title="EndpointEventGrid">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L41">
         Resource <strong>EndpointEventGrid</strong>
     </a>
 </h3>
@@ -86,7 +86,7 @@ Digital Twins Eventgrid Endpoints can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -100,7 +100,7 @@ Create a EndpointEventGrid resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L51">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L51">method <b>get</b></a>
 </h4>
 
 
@@ -111,14 +111,14 @@ Get an existing EndpointEventGrid resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L41">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L41">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L62">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L62">method <b>isInstance</b></a>
 </h4>
 
 
@@ -129,7 +129,7 @@ Returns true if the given object is an instance of EndpointEventGrid.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-deadLetterStorageSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L72">property <b>deadLetterStorageSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L72">property <b>deadLetterStorageSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deadLetterStorageSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -137,7 +137,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-digitalTwinsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L76">property <b>digitalTwinsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L76">property <b>digitalTwinsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>digitalTwinsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ The storage secret of the dead-lettering, whose format is `https://<storageAccou
 The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-eventgridTopicEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L80">property <b>eventgridTopicEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L80">property <b>eventgridTopicEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventgridTopicEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ The resource ID of the Digital Twins Instance. Changing this forces a new Digita
 The endpoint of the Event Grid Topic.
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-eventgridTopicPrimaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L84">property <b>eventgridTopicPrimaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L84">property <b>eventgridTopicPrimaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventgridTopicPrimaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ The endpoint of the Event Grid Topic.
 The primary access key of the Event Grid Topic.
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-eventgridTopicSecondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L88">property <b>eventgridTopicSecondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L88">property <b>eventgridTopicSecondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventgridTopicSecondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ The primary access key of the Event Grid Topic.
 The secondary access key of the Event Grid Topic.
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L41">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L41">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -178,7 +178,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ deployments and may be missing (undefined) during planning phases.
 The name which should be used for this Digital Twins Eventgrid Endpoint. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointEventGrid-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L41">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L41">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -195,7 +195,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EndpointEventHub" data-link-title="EndpointEventHub">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L55">
         Resource <strong>EndpointEventHub</strong>
     </a>
 </h3>
@@ -250,7 +250,7 @@ Digital Twins Eventhub Endpoints can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="EndpointEventHub-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -264,7 +264,7 @@ Create a EndpointEventHub resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EndpointEventHub-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L65">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L65">method <b>get</b></a>
 </h4>
 
 
@@ -275,14 +275,14 @@ Get an existing EndpointEventHub resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EndpointEventHub-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L55">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L55">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EndpointEventHub-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L76">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L76">method <b>isInstance</b></a>
 </h4>
 
 
@@ -293,7 +293,7 @@ Returns true if the given object is an instance of EndpointEventHub.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EndpointEventHub-deadLetterStorageSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L86">property <b>deadLetterStorageSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L86">property <b>deadLetterStorageSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deadLetterStorageSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -301,7 +301,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
 
 <h4 class="pdoc-member-header" id="EndpointEventHub-digitalTwinsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L90">property <b>digitalTwinsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L90">property <b>digitalTwinsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>digitalTwinsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -309,7 +309,7 @@ The storage secret of the dead-lettering, whose format is `https://<storageAccou
 The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointEventHub-eventhubPrimaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L94">property <b>eventhubPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L94">property <b>eventhubPrimaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventhubPrimaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -317,7 +317,7 @@ The resource ID of the Digital Twins Instance. Changing this forces a new Digita
 The primary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
 
 <h4 class="pdoc-member-header" id="EndpointEventHub-eventhubSecondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L98">property <b>eventhubSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L98">property <b>eventhubSecondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventhubSecondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ The primary connection string of the Event Hub Authorization Rule with a minimum
 The secondary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
 
 <h4 class="pdoc-member-header" id="EndpointEventHub-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L55">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L55">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -334,7 +334,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EndpointEventHub-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L102">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L102">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -342,7 +342,7 @@ deployments and may be missing (undefined) during planning phases.
 The name which should be used for this Digital Twins Event Hub Endpoint. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointEventHub-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L55">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L55">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -351,7 +351,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EndpointServicebus" data-link-title="EndpointServicebus">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L53">
         Resource <strong>EndpointServicebus</strong>
     </a>
 </h3>
@@ -404,7 +404,7 @@ Digital Twins Service Bus Endpoints can be imported using the `resource id`, e.g
 ```
 
 <h4 class="pdoc-member-header" id="EndpointServicebus-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L100"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L100"> <b>constructor</b></a>
 </h4>
 
 
@@ -418,7 +418,7 @@ Create a EndpointServicebus resource with the given unique name, arguments, and 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EndpointServicebus-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L63">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L63">method <b>get</b></a>
 </h4>
 
 
@@ -429,14 +429,14 @@ Get an existing EndpointServicebus resource's state with the given name, ID, and
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EndpointServicebus-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L53">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L53">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EndpointServicebus-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L74">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L74">method <b>isInstance</b></a>
 </h4>
 
 
@@ -447,7 +447,7 @@ Returns true if the given object is an instance of EndpointServicebus.  This is 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EndpointServicebus-deadLetterStorageSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L84">property <b>deadLetterStorageSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L84">property <b>deadLetterStorageSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deadLetterStorageSecret: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -455,7 +455,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
 
 <h4 class="pdoc-member-header" id="EndpointServicebus-digitalTwinsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L88">property <b>digitalTwinsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L88">property <b>digitalTwinsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>digitalTwinsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -463,7 +463,7 @@ The storage secret of the dead-lettering, whose format is `https://<storageAccou
 The ID of the Digital Twins Instance. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointServicebus-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L53">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -472,7 +472,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EndpointServicebus-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L92">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L92">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -480,7 +480,7 @@ deployments and may be missing (undefined) during planning phases.
 The name which should be used for this Digital Twins Service Bus Endpoint. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointServicebus-servicebusPrimaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L96">property <b>servicebusPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L96">property <b>servicebusPrimaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servicebusPrimaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -488,7 +488,7 @@ The name which should be used for this Digital Twins Service Bus Endpoint. Chang
 The primary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission. .
 
 <h4 class="pdoc-member-header" id="EndpointServicebus-servicebusSecondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L100">property <b>servicebusSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L100">property <b>servicebusSecondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>servicebusSecondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -496,7 +496,7 @@ The primary connection string of the Service Bus Topic Authorization Rule with a
 The secondary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission.
 
 <h4 class="pdoc-member-header" id="EndpointServicebus-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L53">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L53">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -505,7 +505,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L34">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -539,7 +539,7 @@ Digital Twins instances can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L81"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L81"> <b>constructor</b></a>
 </h4>
 
 
@@ -553,7 +553,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -564,14 +564,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -582,7 +582,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-hostName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L65">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L65">property <b>hostName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>hostName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -590,7 +590,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Api endpoint to work with this Digital Twins instance.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -599,7 +599,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L69">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L69">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -607,7 +607,7 @@ deployments and may be missing (undefined) during planning phases.
 The Azure Region where the Digital Twins instance should exist. Changing this forces a new Digital Twins instance to be created.
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L73">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L73">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -615,7 +615,7 @@ The Azure Region where the Digital Twins instance should exist. Changing this fo
 The name which should be used for this Digital Twins instance. Changing this forces a new Digital Twins instance to be created.
 
 <h4 class="pdoc-member-header" id="Instance-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L77">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L77">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -623,7 +623,7 @@ The name which should be used for this Digital Twins instance. Changing this for
 The name of the Resource Group where the Digital Twins instance should exist. Changing this forces a new Digital Twins instance to be created.
 
 <h4 class="pdoc-member-header" id="Instance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L81">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L81">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -631,7 +631,7 @@ The name of the Resource Group where the Digital Twins instance should exist. Ch
 A mapping of tags which should be assigned to the Digital Twins instance.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -642,7 +642,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getInstance" data-link-title="getInstance">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/getInstance.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/getInstance.ts#L24">
         Function <strong>getInstance</strong>
     </a>
 </h3>
@@ -669,7 +669,7 @@ export const id = example.then(example => example.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EndpointEventGridArgs" data-link-title="EndpointEventGridArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L177">
         interface <strong>EndpointEventGridArgs</strong>
     </a>
 </h3>
@@ -679,7 +679,7 @@ export const id = example.then(example => example.id);
 The set of arguments for constructing a EndpointEventGrid resource.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridArgs-deadLetterStorageSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L181">property <b>deadLetterStorageSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L181">property <b>deadLetterStorageSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetterStorageSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -687,7 +687,7 @@ The set of arguments for constructing a EndpointEventGrid resource.
 The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridArgs-digitalTwinsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L185">property <b>digitalTwinsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L185">property <b>digitalTwinsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digitalTwinsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -695,7 +695,7 @@ The storage secret of the dead-lettering, whose format is `https://<storageAccou
 The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridArgs-eventgridTopicEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L189">property <b>eventgridTopicEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L189">property <b>eventgridTopicEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventgridTopicEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -703,7 +703,7 @@ The resource ID of the Digital Twins Instance. Changing this forces a new Digita
 The endpoint of the Event Grid Topic.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridArgs-eventgridTopicPrimaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L193">property <b>eventgridTopicPrimaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L193">property <b>eventgridTopicPrimaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventgridTopicPrimaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -711,7 +711,7 @@ The endpoint of the Event Grid Topic.
 The primary access key of the Event Grid Topic.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridArgs-eventgridTopicSecondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L197">property <b>eventgridTopicSecondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L197">property <b>eventgridTopicSecondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventgridTopicSecondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -719,7 +719,7 @@ The primary access key of the Event Grid Topic.
 The secondary access key of the Event Grid Topic.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L201">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L201">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -727,7 +727,7 @@ The secondary access key of the Event Grid Topic.
 The name which should be used for this Digital Twins Eventgrid Endpoint. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
 
 <h3 class="pdoc-module-header" id="EndpointEventGridState" data-link-title="EndpointEventGridState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L147">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L147">
         interface <strong>EndpointEventGridState</strong>
     </a>
 </h3>
@@ -737,7 +737,7 @@ The name which should be used for this Digital Twins Eventgrid Endpoint. Changin
 Input properties used for looking up and filtering EndpointEventGrid resources.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridState-deadLetterStorageSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L151">property <b>deadLetterStorageSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L151">property <b>deadLetterStorageSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetterStorageSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -745,7 +745,7 @@ Input properties used for looking up and filtering EndpointEventGrid resources.
 The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridState-digitalTwinsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L155">property <b>digitalTwinsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L155">property <b>digitalTwinsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digitalTwinsId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -753,7 +753,7 @@ The storage secret of the dead-lettering, whose format is `https://<storageAccou
 The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridState-eventgridTopicEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L159">property <b>eventgridTopicEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L159">property <b>eventgridTopicEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventgridTopicEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -761,7 +761,7 @@ The resource ID of the Digital Twins Instance. Changing this forces a new Digita
 The endpoint of the Event Grid Topic.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridState-eventgridTopicPrimaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L163">property <b>eventgridTopicPrimaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L163">property <b>eventgridTopicPrimaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventgridTopicPrimaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -769,7 +769,7 @@ The endpoint of the Event Grid Topic.
 The primary access key of the Event Grid Topic.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridState-eventgridTopicSecondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L167">property <b>eventgridTopicSecondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L167">property <b>eventgridTopicSecondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventgridTopicSecondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -777,7 +777,7 @@ The primary access key of the Event Grid Topic.
 The secondary access key of the Event Grid Topic.
 
 <h4 class="pdoc-member-header" id="EndpointEventGridState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L171">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventGrid.ts#L171">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -785,7 +785,7 @@ The secondary access key of the Event Grid Topic.
 The name which should be used for this Digital Twins Eventgrid Endpoint. Changing this forces a new Digital Twins Eventgrid Endpoint to be created.
 
 <h3 class="pdoc-module-header" id="EndpointEventHubArgs" data-link-title="EndpointEventHubArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L178">
         interface <strong>EndpointEventHubArgs</strong>
     </a>
 </h3>
@@ -795,7 +795,7 @@ The name which should be used for this Digital Twins Eventgrid Endpoint. Changin
 The set of arguments for constructing a EndpointEventHub resource.
 
 <h4 class="pdoc-member-header" id="EndpointEventHubArgs-deadLetterStorageSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L182">property <b>deadLetterStorageSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L182">property <b>deadLetterStorageSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetterStorageSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -803,7 +803,7 @@ The set of arguments for constructing a EndpointEventHub resource.
 The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
 
 <h4 class="pdoc-member-header" id="EndpointEventHubArgs-digitalTwinsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L186">property <b>digitalTwinsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L186">property <b>digitalTwinsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digitalTwinsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -811,7 +811,7 @@ The storage secret of the dead-lettering, whose format is `https://<storageAccou
 The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointEventHubArgs-eventhubPrimaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L190">property <b>eventhubPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L190">property <b>eventhubPrimaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubPrimaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -819,7 +819,7 @@ The resource ID of the Digital Twins Instance. Changing this forces a new Digita
 The primary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
 
 <h4 class="pdoc-member-header" id="EndpointEventHubArgs-eventhubSecondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L194">property <b>eventhubSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L194">property <b>eventhubSecondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubSecondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -827,7 +827,7 @@ The primary connection string of the Event Hub Authorization Rule with a minimum
 The secondary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
 
 <h4 class="pdoc-member-header" id="EndpointEventHubArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L198">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L198">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -835,7 +835,7 @@ The secondary connection string of the Event Hub Authorization Rule with a minim
 The name which should be used for this Digital Twins Event Hub Endpoint. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
 
 <h3 class="pdoc-module-header" id="EndpointEventHubState" data-link-title="EndpointEventHubState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L152">
         interface <strong>EndpointEventHubState</strong>
     </a>
 </h3>
@@ -845,7 +845,7 @@ The name which should be used for this Digital Twins Event Hub Endpoint. Changin
 Input properties used for looking up and filtering EndpointEventHub resources.
 
 <h4 class="pdoc-member-header" id="EndpointEventHubState-deadLetterStorageSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L156">property <b>deadLetterStorageSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L156">property <b>deadLetterStorageSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetterStorageSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -853,7 +853,7 @@ Input properties used for looking up and filtering EndpointEventHub resources.
 The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
 
 <h4 class="pdoc-member-header" id="EndpointEventHubState-digitalTwinsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L160">property <b>digitalTwinsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L160">property <b>digitalTwinsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digitalTwinsId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -861,7 +861,7 @@ The storage secret of the dead-lettering, whose format is `https://<storageAccou
 The resource ID of the Digital Twins Instance. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointEventHubState-eventhubPrimaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L164">property <b>eventhubPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L164">property <b>eventhubPrimaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubPrimaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -869,7 +869,7 @@ The resource ID of the Digital Twins Instance. Changing this forces a new Digita
 The primary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
 
 <h4 class="pdoc-member-header" id="EndpointEventHubState-eventhubSecondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L168">property <b>eventhubSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L168">property <b>eventhubSecondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventhubSecondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -877,7 +877,7 @@ The primary connection string of the Event Hub Authorization Rule with a minimum
 The secondary connection string of the Event Hub Authorization Rule with a minimum of `send` permission.
 
 <h4 class="pdoc-member-header" id="EndpointEventHubState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointEventHub.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointEventHub.ts#L172">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -885,7 +885,7 @@ The secondary connection string of the Event Hub Authorization Rule with a minim
 The name which should be used for this Digital Twins Event Hub Endpoint. Changing this forces a new Digital Twins Event Hub Endpoint to be created.
 
 <h3 class="pdoc-module-header" id="EndpointServicebusArgs" data-link-title="EndpointServicebusArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L176">
         interface <strong>EndpointServicebusArgs</strong>
     </a>
 </h3>
@@ -895,7 +895,7 @@ The name which should be used for this Digital Twins Event Hub Endpoint. Changin
 The set of arguments for constructing a EndpointServicebus resource.
 
 <h4 class="pdoc-member-header" id="EndpointServicebusArgs-deadLetterStorageSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L180">property <b>deadLetterStorageSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L180">property <b>deadLetterStorageSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetterStorageSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -903,7 +903,7 @@ The set of arguments for constructing a EndpointServicebus resource.
 The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
 
 <h4 class="pdoc-member-header" id="EndpointServicebusArgs-digitalTwinsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L184">property <b>digitalTwinsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L184">property <b>digitalTwinsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digitalTwinsId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -911,7 +911,7 @@ The storage secret of the dead-lettering, whose format is `https://<storageAccou
 The ID of the Digital Twins Instance. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointServicebusArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L188">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -919,7 +919,7 @@ The ID of the Digital Twins Instance. Changing this forces a new Digital Twins S
 The name which should be used for this Digital Twins Service Bus Endpoint. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointServicebusArgs-servicebusPrimaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L192">property <b>servicebusPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L192">property <b>servicebusPrimaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusPrimaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -927,7 +927,7 @@ The name which should be used for this Digital Twins Service Bus Endpoint. Chang
 The primary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission. .
 
 <h4 class="pdoc-member-header" id="EndpointServicebusArgs-servicebusSecondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L196">property <b>servicebusSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L196">property <b>servicebusSecondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusSecondaryConnectionString: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ The primary connection string of the Service Bus Topic Authorization Rule with a
 The secondary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission.
 
 <h3 class="pdoc-module-header" id="EndpointServicebusState" data-link-title="EndpointServicebusState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L150">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L150">
         interface <strong>EndpointServicebusState</strong>
     </a>
 </h3>
@@ -945,7 +945,7 @@ The secondary connection string of the Service Bus Topic Authorization Rule with
 Input properties used for looking up and filtering EndpointServicebus resources.
 
 <h4 class="pdoc-member-header" id="EndpointServicebusState-deadLetterStorageSecret">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L154">property <b>deadLetterStorageSecret</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L154">property <b>deadLetterStorageSecret</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deadLetterStorageSecret?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -953,7 +953,7 @@ Input properties used for looking up and filtering EndpointServicebus resources.
 The storage secret of the dead-lettering, whose format is `https://<storageAccountname>.blob.core.windows.net/<containerName>?<SASToken>`. When an endpoint can't deliver an event within a certain time period or after trying to deliver the event a certain number of times, it can send the undelivered event to a storage account.
 
 <h4 class="pdoc-member-header" id="EndpointServicebusState-digitalTwinsId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L158">property <b>digitalTwinsId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L158">property <b>digitalTwinsId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>digitalTwinsId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -961,7 +961,7 @@ The storage secret of the dead-lettering, whose format is `https://<storageAccou
 The ID of the Digital Twins Instance. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointServicebusState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L162">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L162">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -969,7 +969,7 @@ The ID of the Digital Twins Instance. Changing this forces a new Digital Twins S
 The name which should be used for this Digital Twins Service Bus Endpoint. Changing this forces a new Digital Twins Service Bus Endpoint to be created.
 
 <h4 class="pdoc-member-header" id="EndpointServicebusState-servicebusPrimaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L166">property <b>servicebusPrimaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L166">property <b>servicebusPrimaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusPrimaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -977,7 +977,7 @@ The name which should be used for this Digital Twins Service Bus Endpoint. Chang
 The primary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission. .
 
 <h4 class="pdoc-member-header" id="EndpointServicebusState-servicebusSecondaryConnectionString">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/endpointServicebus.ts#L170">property <b>servicebusSecondaryConnectionString</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/endpointServicebus.ts#L170">property <b>servicebusSecondaryConnectionString</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>servicebusSecondaryConnectionString?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -985,7 +985,7 @@ The primary connection string of the Service Bus Topic Authorization Rule with a
 The secondary connection string of the Service Bus Topic Authorization Rule with a minimum of `send` permission.
 
 <h3 class="pdoc-module-header" id="GetInstanceArgs" data-link-title="GetInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/getInstance.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/getInstance.ts#L41">
         interface <strong>GetInstanceArgs</strong>
     </a>
 </h3>
@@ -995,7 +995,7 @@ The secondary connection string of the Service Bus Topic Authorization Rule with
 A collection of arguments for invoking getInstance.
 
 <h4 class="pdoc-member-header" id="GetInstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/getInstance.ts#L45">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/getInstance.ts#L45">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1003,7 +1003,7 @@ A collection of arguments for invoking getInstance.
 The name of this Digital Twins instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/getInstance.ts#L49">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/getInstance.ts#L49">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1011,7 +1011,7 @@ The name of this Digital Twins instance.
 The name of the Resource Group where the Digital Twins instance exists.
 
 <h3 class="pdoc-module-header" id="GetInstanceResult" data-link-title="GetInstanceResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/getInstance.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/getInstance.ts#L55">
         interface <strong>GetInstanceResult</strong>
     </a>
 </h3>
@@ -1021,7 +1021,7 @@ The name of the Resource Group where the Digital Twins instance exists.
 A collection of values returned by getInstance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-hostName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/getInstance.ts#L59">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/getInstance.ts#L59">property <b>hostName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1029,7 +1029,7 @@ A collection of values returned by getInstance.
 The Api endpoint to work with this Digital Twins instance.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/getInstance.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/getInstance.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1037,7 +1037,7 @@ The Api endpoint to work with this Digital Twins instance.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/getInstance.ts#L67">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/getInstance.ts#L67">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1045,17 +1045,17 @@ The provider-assigned unique ID for this managed resource.
 The Azure Region where the Digital Twins instance exists.
 
 <h4 class="pdoc-member-header" id="GetInstanceResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/getInstance.ts#L68">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/getInstance.ts#L68">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/getInstance.ts#L69">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/getInstance.ts#L69">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetInstanceResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/getInstance.ts#L73">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/getInstance.ts#L73">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1063,7 +1063,7 @@ The Azure Region where the Digital Twins instance exists.
 A mapping of tags assigned to the Digital Twins instance.
 
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L151">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -1073,7 +1073,7 @@ A mapping of tags assigned to the Digital Twins instance.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L155">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L155">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1081,7 +1081,7 @@ The set of arguments for constructing a Instance resource.
 The Azure Region where the Digital Twins instance should exist. Changing this forces a new Digital Twins instance to be created.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L159">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L159">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1089,7 +1089,7 @@ The Azure Region where the Digital Twins instance should exist. Changing this fo
 The name which should be used for this Digital Twins instance. Changing this forces a new Digital Twins instance to be created.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L163">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L163">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1097,7 +1097,7 @@ The name which should be used for this Digital Twins instance. Changing this for
 The name of the Resource Group where the Digital Twins instance should exist. Changing this forces a new Digital Twins instance to be created.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L167">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L167">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1105,7 +1105,7 @@ The name of the Resource Group where the Digital Twins instance should exist. Ch
 A mapping of tags which should be assigned to the Digital Twins instance.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L125">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L125">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -1115,7 +1115,7 @@ A mapping of tags which should be assigned to the Digital Twins instance.
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-hostName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L129">property <b>hostName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L129">property <b>hostName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hostName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1123,7 +1123,7 @@ Input properties used for looking up and filtering Instance resources.
 The Api endpoint to work with this Digital Twins instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L133">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L133">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1131,7 +1131,7 @@ The Api endpoint to work with this Digital Twins instance.
 The Azure Region where the Digital Twins instance should exist. Changing this forces a new Digital Twins instance to be created.
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L137">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L137">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1139,7 +1139,7 @@ The Azure Region where the Digital Twins instance should exist. Changing this fo
 The name which should be used for this Digital Twins instance. Changing this forces a new Digital Twins instance to be created.
 
 <h4 class="pdoc-member-header" id="InstanceState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L141">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L141">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1147,7 +1147,7 @@ The name which should be used for this Digital Twins instance. Changing this for
 The name of the Resource Group where the Digital Twins instance should exist. Changing this forces a new Digital Twins instance to be created.
 
 <h4 class="pdoc-member-header" id="InstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/a6cf64ad94f0d70c63d102bf0b450fe658cdc662/sdk/nodejs/digitaltwins/instance.ts#L145">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/04a1756079c6f170cda88c2c8a1cebff49c8d597/sdk/nodejs/digitaltwins/instance.ts#L145">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

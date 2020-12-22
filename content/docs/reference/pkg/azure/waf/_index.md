@@ -28,7 +28,7 @@ Explore the resources and functions of the waf module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.40.0</dd>
+	<dd>3.41.0</dd>
 </dl>
 
 

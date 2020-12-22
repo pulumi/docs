@@ -370,6 +370,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="outboundipaddresslists_csharp">
+<a href="#outboundipaddresslists_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12"]`
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="outboundipaddresses_csharp">
 <a href="#outboundipaddresses_csharp" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Addresses</a>
 </span>
@@ -377,6 +387,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12`
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="possibleoutboundipaddresslists_csharp">
+<a href="#possibleoutboundipaddresslists_csharp" style="color: inherit; text-decoration: inherit;">Possible<wbr>Outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12", "52.143.43.17"]` - not all of which are necessarily in use. Superset of `outbound_ip_address_list`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -564,6 +584,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="outboundipaddresslists_go">
+<a href="#outboundipaddresslists_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12"]`
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="outboundipaddresses_go">
 <a href="#outboundipaddresses_go" style="color: inherit; text-decoration: inherit;">Outbound<wbr>Ip<wbr>Addresses</a>
 </span>
@@ -571,6 +601,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12`
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="possibleoutboundipaddresslists_go">
+<a href="#possibleoutboundipaddresslists_go" style="color: inherit; text-decoration: inherit;">Possible<wbr>Outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12", "52.143.43.17"]` - not all of which are necessarily in use. Superset of `outbound_ip_address_list`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -758,6 +798,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="outboundipaddresslists_nodejs">
+<a href="#outboundipaddresslists_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12"]`
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="outboundipaddresses_nodejs">
 <a href="#outboundipaddresses_nodejs" style="color: inherit; text-decoration: inherit;">outbound<wbr>Ip<wbr>Addresses</a>
 </span>
@@ -765,6 +815,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12`
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="possibleoutboundipaddresslists_nodejs">
+<a href="#possibleoutboundipaddresslists_nodejs" style="color: inherit; text-decoration: inherit;">possible<wbr>Outbound<wbr>Ip<wbr>Address<wbr>Lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12", "52.143.43.17"]` - not all of which are necessarily in use. Superset of `outbound_ip_address_list`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -952,6 +1012,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="outbound_ip_address_lists_python">
+<a href="#outbound_ip_address_lists_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>address_<wbr>lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12"]`
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="outbound_ip_addresses_python">
 <a href="#outbound_ip_addresses_python" style="color: inherit; text-decoration: inherit;">outbound_<wbr>ip_<wbr>addresses</a>
 </span>
@@ -959,6 +1029,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A comma separated list of outbound IP addresses - such as `52.23.25.3,52.143.43.12`
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="possible_outbound_ip_address_lists_python">
+<a href="#possible_outbound_ip_address_lists_python" style="color: inherit; text-decoration: inherit;">possible_<wbr>outbound_<wbr>ip_<wbr>address_<wbr>lists</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of outbound IP addresses - such as `["52.23.25.3", "52.143.43.12", "52.143.43.17"]` - not all of which are necessarily in use. Superset of `outbound_ip_address_list`.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">

@@ -16,6 +16,153 @@ Manages a Key Vault Access Policy.
 
 > **NOTE:** Azure permits a maximum of 1024 Access Policies per Key Vault - [more information can be found in this document](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-secure-your-key-vault#data-plane-access-control).
 
+{{% examples %}}
+## Example Usage
+
+{{< chooser language "typescript,python,go,csharp" / >}}
+
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Azure = Pulumi.Azure;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var current = Output.Create(Azure.Core.GetClientConfig.InvokeAsync());
+        var exampleResourceGroup = new Azure.Core.ResourceGroup("exampleResourceGroup", new Azure.Core.ResourceGroupArgs
+        {
+            Location = "West Europe",
+        });
+        var exampleKeyVault = new Azure.KeyVault.KeyVault("exampleKeyVault", new Azure.KeyVault.KeyVaultArgs
+        {
+            Location = exampleResourceGroup.Location,
+            ResourceGroupName = exampleResourceGroup.Name,
+            TenantId = current.Apply(current => current.TenantId),
+            SkuName = "premium",
+        });
+        var exampleAccessPolicy = new Azure.KeyVault.AccessPolicy("exampleAccessPolicy", new Azure.KeyVault.AccessPolicyArgs
+        {
+            KeyVaultId = exampleKeyVault.Id,
+            TenantId = current.Apply(current => current.TenantId),
+            ObjectId = current.Apply(current => current.ObjectId),
+            KeyPermissions = 
+            {
+                "get",
+            },
+            SecretPermissions = 
+            {
+                "get",
+            },
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
+	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/keyvault"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		current, err := core.GetClientConfig(ctx, nil, nil)
+		if err != nil {
+			return err
+		}
+		exampleResourceGroup, err := core.NewResourceGroup(ctx, "exampleResourceGroup", &core.ResourceGroupArgs{
+			Location: pulumi.String("West Europe"),
+		})
+		if err != nil {
+			return err
+		}
+		exampleKeyVault, err := keyvault.NewKeyVault(ctx, "exampleKeyVault", &keyvault.KeyVaultArgs{
+			Location:          exampleResourceGroup.Location,
+			ResourceGroupName: exampleResourceGroup.Name,
+			TenantId:          pulumi.String(current.TenantId),
+			SkuName:           pulumi.String("premium"),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = keyvault.NewAccessPolicy(ctx, "exampleAccessPolicy", &keyvault.AccessPolicyArgs{
+			KeyVaultId: exampleKeyVault.ID(),
+			TenantId:   pulumi.String(current.TenantId),
+			ObjectId:   pulumi.String(current.ObjectId),
+			KeyPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+			},
+			SecretPermissions: pulumi.StringArray{
+				pulumi.String("get"),
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_azure as azure
+
+current = azure.core.get_client_config()
+example_resource_group = azure.core.ResourceGroup("exampleResourceGroup", location="West Europe")
+example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
+    location=example_resource_group.location,
+    resource_group_name=example_resource_group.name,
+    tenant_id=current.tenant_id,
+    sku_name="premium")
+example_access_policy = azure.keyvault.AccessPolicy("exampleAccessPolicy",
+    key_vault_id=example_key_vault.id,
+    tenant_id=current.tenant_id,
+    object_id=current.object_id,
+    key_permissions=["get"],
+    secret_permissions=["get"])
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure from "@pulumi/azure";
+
+const current = azure.core.getClientConfig({});
+const exampleResourceGroup = new azure.core.ResourceGroup("exampleResourceGroup", {location: "West Europe"});
+const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
+    location: exampleResourceGroup.location,
+    resourceGroupName: exampleResourceGroup.name,
+    tenantId: current.then(current => current.tenantId),
+    skuName: "premium",
+});
+const exampleAccessPolicy = new azure.keyvault.AccessPolicy("exampleAccessPolicy", {
+    keyVaultId: exampleKeyVault.id,
+    tenantId: current.then(current => current.tenantId),
+    objectId: current.then(current => current.objectId),
+    keyPermissions: ["get"],
+    secretPermissions: ["get"],
+});
+```
+
+{{% /example %}}
+
+{{% /examples %}}
 
 
 ## Create a AccessPolicy Resource {#create}
