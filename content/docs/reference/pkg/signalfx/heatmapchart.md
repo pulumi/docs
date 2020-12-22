@@ -12,6 +12,7 @@ meta_desc: "Explore the HeatmapChart resource of the SignalFx package, including
 
 This chart type displays the specified plot in a heatmap fashion. This format is similar to the [Infrastructure Navigator](https://signalfx-product-docs.readthedocs-hosted.com/en/latest/built-in-content/infra-nav.html#infra), with squares representing each source for the selected metric, and the color of each square representing the value range of the metric.
 
+
 {{% examples %}}
 ## Example Usage
 
@@ -81,7 +82,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx"
+	"github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -222,7 +223,7 @@ data("cpu.total.idle", filter=myfilters).publish()
 
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChart">HeatmapChart</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChartArgs">HeatmapChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChart">HeatmapChart</a></span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChartArgs">HeatmapChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -230,11 +231,11 @@ data("cpu.total.idle", filter=myfilters).publish()
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChart">NewHeatmapChart</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartArgs">HeatmapChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChart">HeatmapChart</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#HeatmapChart">NewHeatmapChart</a></span><span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">args</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#HeatmapChartArgs">HeatmapChartArgs</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#HeatmapChart">HeatmapChart</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.HeatmapChart.html">HeatmapChart</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.HeatmapChartArgs.html">HeatmapChartArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.HeatmapChart.html">HeatmapChart</a></span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.HeatmapChartArgs.html">HeatmapChartArgs</a></span><span class="p"> </span><span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -245,7 +246,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -304,7 +305,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-optional" title="Optional">
         <span>ctx</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
       Context object for the current deployment.
@@ -314,7 +315,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -324,7 +325,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-required" title="Required">
         <span>args</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartArgs">HeatmapChartArgs</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#HeatmapChartArgs">HeatmapChartArgs</a></span>
     </dt>
     <dd>
       The arguments to resource properties.
@@ -334,7 +335,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-optional" title="Optional">
         <span>opts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
+        <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span>
     </dt>
     <dd>
       Bag of options to control resource&#39;s behavior.
@@ -353,7 +354,7 @@ data("cpu.total.idle", filter=myfilters).publish()
         class="property-required" title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>
       The unique name of the resource.
@@ -394,7 +395,6 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
 
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -402,148 +402,134 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="programtext_csharp">
 <a href="#programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorrange_csharp">
 <a href="#colorrange_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorscales_csharp">
 <a href="#colorscales_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
 <a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablesampling_csharp">
 <a href="#disablesampling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbies_csharp">
 <a href="#groupbies_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hidetimestamp_csharp">
 <a href="#hidetimestamp_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdelay_csharp">
 <a href="#maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimumresolution_csharp">
 <a href="#minimumresolution_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="refreshinterval_csharp">
 <a href="#refreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sortby_csharp">
 <a href="#sortby_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unitprefix_csharp">
 <a href="#unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -552,148 +538,134 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="programtext_go">
 <a href="#programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorrange_go">
 <a href="#colorrange_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorscales_go">
 <a href="#colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">[]Heatmap<wbr>Chart<wbr>Color<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
 <a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablesampling_go">
 <a href="#disablesampling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbies_go">
 <a href="#groupbies_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hidetimestamp_go">
 <a href="#hidetimestamp_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdelay_go">
 <a href="#maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimumresolution_go">
 <a href="#minimumresolution_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="refreshinterval_go">
 <a href="#refreshinterval_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sortby_go">
 <a href="#sortby_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unitprefix_go">
 <a href="#unitprefix_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -702,148 +674,134 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="programtext_nodejs">
 <a href="#programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorrange_nodejs">
 <a href="#colorrange_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="colorscales_nodejs">
 <a href="#colorscales_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale[]</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
 <a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disablesampling_nodejs">
 <a href="#disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="groupbies_nodejs">
 <a href="#groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hidetimestamp_nodejs">
 <a href="#hidetimestamp_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxdelay_nodejs">
 <a href="#maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimumresolution_nodejs">
 <a href="#minimumresolution_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="refreshinterval_nodejs">
 <a href="#refreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sortby_nodejs">
 <a href="#sortby_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unitprefix_nodejs">
 <a href="#unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -852,157 +810,139 @@ The HeatmapChart resource accepts the following [input]({{< relref "/docs/intro/
             title="Required">
         <span id="program_text_python">
 <a href="#program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="color_range_python">
 <a href="#color_range_python" style="color: inherit; text-decoration: inherit;">color_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="color_scales_python">
 <a href="#color_scales_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">Sequence[Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
 <a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="disable_sampling_python">
 <a href="#disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="group_bies_python">
 <a href="#group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="hide_timestamp_python">
 <a href="#hide_timestamp_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_delay_python">
 <a href="#max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_resolution_python">
 <a href="#minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="refresh_interval_python">
 <a href="#refresh_interval_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="sort_by_python">
 <a href="#sort_by_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>by</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="unit_prefix_python">
 <a href="#unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 ### Outputs
 
 All [input](#inputs) properties are implicitly available as output properties. Additionally, the HeatmapChart resource produces the following output properties:
-
 
 
 
@@ -1013,26 +953,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_csharp">
 <a href="#url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1041,26 +978,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_go">
 <a href="#url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1069,26 +1003,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_nodejs">
 <a href="#url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1097,29 +1028,23 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span id="url_python">
 <a href="#url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1129,7 +1054,7 @@ Get an existing HeatmapChart resource's state with the given name, ID, and optio
 {{< chooser language "typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChartState">HeatmapChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChart">HeatmapChart</a></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">public static </span><span class="nf">get</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#ID">Input&lt;ID&gt;</a></span><span class="p">, </span><span class="nx">state</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChartState">HeatmapChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p">?:</span> <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">): </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#HeatmapChart">HeatmapChart</a></span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -1138,11 +1063,11 @@ Get an existing HeatmapChart resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHeatmapChart<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartState">HeatmapChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChart">HeatmapChart</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetHeatmapChart<span class="p">(</span><span class="nx">ctx</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span><span class="p"> </span><span class="nx">string</span><span class="p">, </span><span class="nx">id</span><span class="p"> </span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span><span class="p"> *</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#HeatmapChartState">HeatmapChartState</a></span><span class="p">, </span><span class="nx">opts</span><span class="p"> ...</span><span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v4/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#HeatmapChart">HeatmapChart</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.HeatmapChart.html">HeatmapChart</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..HeatmapChartState.html">HeatmapChartState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.HeatmapChart.html">HeatmapChart</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx">string</span><span class="p"> </span><span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input-1.html">Input&lt;string&gt;</a></span><span class="p"> </span><span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx..HeatmapChartState.html">HeatmapChartState</a></span><span class="p">? </span><span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span><span class="p">? </span><span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1244,7 +1169,6 @@ Get an existing HeatmapChart resource's state with the given name, ID, and optio
 The following state arguments are supported:
 
 
-
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
@@ -1252,159 +1176,144 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_colorrange_csharp">
 <a href="#state_colorrange_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_colorscales_csharp">
 <a href="#state_colorscales_csharp" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
 <a href="#state_description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disablesampling_csharp">
 <a href="#state_disablesampling_csharp" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupbies_csharp">
 <a href="#state_groupbies_csharp" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hidetimestamp_csharp">
 <a href="#state_hidetimestamp_csharp" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_csharp">
 <a href="#state_maxdelay_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimumresolution_csharp">
 <a href="#state_minimumresolution_csharp" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
 <a href="#state_name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_programtext_csharp">
 <a href="#state_programtext_csharp" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_refreshinterval_csharp">
 <a href="#state_refreshinterval_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sortby_csharp">
 <a href="#state_sortby_csharp" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_csharp">
 <a href="#state_unitprefix_csharp" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_csharp">
 <a href="#state_url_csharp" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1413,159 +1322,144 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_colorrange_go">
 <a href="#state_colorrange_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_colorscales_go">
 <a href="#state_colorscales_go" style="color: inherit; text-decoration: inherit;">Color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">[]Heatmap<wbr>Chart<wbr>Color<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
 <a href="#state_description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disablesampling_go">
 <a href="#state_disablesampling_go" style="color: inherit; text-decoration: inherit;">Disable<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupbies_go">
 <a href="#state_groupbies_go" style="color: inherit; text-decoration: inherit;">Group<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hidetimestamp_go">
 <a href="#state_hidetimestamp_go" style="color: inherit; text-decoration: inherit;">Hide<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_go">
 <a href="#state_maxdelay_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimumresolution_go">
 <a href="#state_minimumresolution_go" style="color: inherit; text-decoration: inherit;">Minimum<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
 <a href="#state_name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_programtext_go">
 <a href="#state_programtext_go" style="color: inherit; text-decoration: inherit;">Program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_refreshinterval_go">
 <a href="#state_refreshinterval_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sortby_go">
 <a href="#state_sortby_go" style="color: inherit; text-decoration: inherit;">Sort<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_go">
 <a href="#state_unitprefix_go" style="color: inherit; text-decoration: inherit;">Unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_go">
 <a href="#state_url_go" style="color: inherit; text-decoration: inherit;">Url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -1574,159 +1468,144 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_colorrange_nodejs">
 <a href="#state_colorrange_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_colorscales_nodejs">
 <a href="#state_colorscales_nodejs" style="color: inherit; text-decoration: inherit;">color<wbr>Scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale[]</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
 <a href="#state_description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disablesampling_nodejs">
 <a href="#state_disablesampling_nodejs" style="color: inherit; text-decoration: inherit;">disable<wbr>Sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_groupbies_nodejs">
 <a href="#state_groupbies_nodejs" style="color: inherit; text-decoration: inherit;">group<wbr>Bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hidetimestamp_nodejs">
 <a href="#state_hidetimestamp_nodejs" style="color: inherit; text-decoration: inherit;">hide<wbr>Timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_maxdelay_nodejs">
 <a href="#state_maxdelay_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimumresolution_nodejs">
 <a href="#state_minimumresolution_nodejs" style="color: inherit; text-decoration: inherit;">minimum<wbr>Resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
 <a href="#state_name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_programtext_nodejs">
 <a href="#state_programtext_nodejs" style="color: inherit; text-decoration: inherit;">program<wbr>Text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_refreshinterval_nodejs">
 <a href="#state_refreshinterval_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sortby_nodejs">
 <a href="#state_sortby_nodejs" style="color: inherit; text-decoration: inherit;">sort<wbr>By</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unitprefix_nodejs">
 <a href="#state_unitprefix_nodejs" style="color: inherit; text-decoration: inherit;">unit<wbr>Prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_nodejs">
 <a href="#state_url_nodejs" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -1735,162 +1614,144 @@ The following state arguments are supported:
             title="Optional">
         <span id="state_color_range_python">
 <a href="#state_color_range_python" style="color: inherit; text-decoration: inherit;">color_<wbr>range</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Values and color for the color range. Example: `color_range : { min : 0, max : 100, color : "#0000ff" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_color_scales_python">
 <a href="#state_color_scales_python" style="color: inherit; text-decoration: inherit;">color_<wbr>scales</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#heatmapchartcolorscale">Sequence[Heatmap<wbr>Chart<wbr>Color<wbr>Scale<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}One to N blocks, each defining a single color range including both the color to display for that range and the borders of the range. Example: `color_scale { gt = 60, color = "blue" } color_scale { lte = 60, color = "yellow" }`. Look at this [link](https://docs.signalfx.com/en/latest/charts/chart-options-tab.html).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
 <a href="#state_description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_disable_sampling_python">
 <a href="#state_disable_sampling_python" style="color: inherit; text-decoration: inherit;">disable_<wbr>sampling</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `false`, samples a subset of the output MTS, which improves UI performance. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_group_bies_python">
 <a href="#state_group_bies_python" style="color: inherit; text-decoration: inherit;">group_<wbr>bies</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Sequence[str]</a></span>
+        <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}Properties to group by in the heatmap (in nesting order).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_hide_timestamp_python">
 <a href="#state_hide_timestamp_python" style="color: inherit; text-decoration: inherit;">hide_<wbr>timestamp</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to show the timestamp in the chart. `false` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_max_delay_python">
 <a href="#state_max_delay_python" style="color: inherit; text-decoration: inherit;">max_<wbr>delay</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How long (in seconds) to wait for late datapoints.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_minimum_resolution_python">
 <a href="#state_minimum_resolution_python" style="color: inherit; text-decoration: inherit;">minimum_<wbr>resolution</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum resolution (in seconds) to use for computing the underlying program.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
 <a href="#state_name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the chart.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_program_text_python">
 <a href="#state_program_text_python" style="color: inherit; text-decoration: inherit;">program_<wbr>text</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Signalflow program text for the chart. More info at <https://developers.signalfx.com/docs/signalflow-overview>.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_refresh_interval_python">
 <a href="#state_refresh_interval_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>interval</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">int</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How often (in seconds) to refresh the values of the heatmap.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_sort_by_python">
 <a href="#state_sort_by_python" style="color: inherit; text-decoration: inherit;">sort_<wbr>by</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The property to use when sorting the elements. Must be prepended with `+` for ascending or `-` for descending (e.g. `-foo`).
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_unit_prefix_python">
 <a href="#state_unit_prefix_python" style="color: inherit; text-decoration: inherit;">unit_<wbr>prefix</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Must be `"Metric"` or `"Binary`". `"Metric"` by default.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="state_url_python">
 <a href="#state_url_python" style="color: inherit; text-decoration: inherit;">url</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The URL of the chart.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 
 
@@ -1900,19 +1761,19 @@ The following state arguments are supported:
 ## Supporting Types
 
 
+
 <h4 id="heatmapchartcolorrange">Heatmap<wbr>Chart<wbr>Color<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#HeatmapChartColorRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#HeatmapChartColorRange">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartColorRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartColorRangeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#HeatmapChartColorRangeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#HeatmapChartColorRangeOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.HeatmapChartColorRangeArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.HeatmapChartColorRange.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -1922,38 +1783,34 @@ The following state arguments are supported:
             title="Required">
         <span id="color_csharp">
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxvalue_csharp">
 <a href="#maxvalue_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The maximum value within the coloring range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minvalue_csharp">
 <a href="#minvalue_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The minimum value within the coloring range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -1962,38 +1819,34 @@ The following state arguments are supported:
             title="Required">
         <span id="color_go">
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxvalue_go">
 <a href="#maxvalue_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The maximum value within the coloring range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minvalue_go">
 <a href="#minvalue_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The minimum value within the coloring range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2002,38 +1855,34 @@ The following state arguments are supported:
             title="Required">
         <span id="color_nodejs">
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="maxvalue_nodejs">
 <a href="#maxvalue_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum value within the coloring range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="minvalue_nodejs">
 <a href="#minvalue_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum value within the coloring range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2042,41 +1891,34 @@ The following state arguments are supported:
             title="Required">
         <span id="color_python">
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="max_value_python">
 <a href="#max_value_python" style="color: inherit; text-decoration: inherit;">max_<wbr>value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The maximum value within the coloring range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="min_value_python">
 <a href="#min_value_python" style="color: inherit; text-decoration: inherit;">min_<wbr>value</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The minimum value within the coloring range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
 
 <h4 id="heatmapchartcolorscale">Heatmap<wbr>Chart<wbr>Color<wbr>Scale</h4>
 {{% choosable language nodejs %}}
@@ -2084,13 +1926,12 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartColorScaleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v3/go/signalfx/?tab=doc#HeatmapChartColorScaleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#HeatmapChartColorScaleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/v4/go/signalfx/?tab=doc#HeatmapChartColorScaleOutput">output</a> API doc for this type.
 {{% /choosable %}}
+
 {{% choosable language csharp %}}
 > See the <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Inputs.HeatmapChartColorScaleArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.SignalFx/Pulumi.SignalFx.Outputs.HeatmapChartColorScale.html">output</a> API doc for this type.
 {{% /choosable %}}
-
-
 
 
 {{% choosable language csharp %}}
@@ -2100,60 +1941,54 @@ The following state arguments are supported:
             title="Required">
         <span id="color_csharp">
 <a href="#color_csharp" style="color: inherit; text-decoration: inherit;">Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gt_csharp">
 <a href="#gt_csharp" style="color: inherit; text-decoration: inherit;">Gt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gte_csharp">
 <a href="#gte_csharp" style="color: inherit; text-decoration: inherit;">Gte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lt_csharp">
 <a href="#lt_csharp" style="color: inherit; text-decoration: inherit;">Lt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lte_csharp">
 <a href="#lte_csharp" style="color: inherit; text-decoration: inherit;">Lte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language go %}}
 <dl class="resources-properties">
@@ -2162,60 +1997,54 @@ The following state arguments are supported:
             title="Required">
         <span id="color_go">
 <a href="#color_go" style="color: inherit; text-decoration: inherit;">Color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gt_go">
 <a href="#gt_go" style="color: inherit; text-decoration: inherit;">Gt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gte_go">
 <a href="#gte_go" style="color: inherit; text-decoration: inherit;">Gte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lt_go">
 <a href="#lt_go" style="color: inherit; text-decoration: inherit;">Lt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lte_go">
 <a href="#lte_go" style="color: inherit; text-decoration: inherit;">Lte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
@@ -2224,60 +2053,54 @@ The following state arguments are supported:
             title="Required">
         <span id="color_nodejs">
 <a href="#color_nodejs" style="color: inherit; text-decoration: inherit;">color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gt_nodejs">
 <a href="#gt_nodejs" style="color: inherit; text-decoration: inherit;">gt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gte_nodejs">
 <a href="#gte_nodejs" style="color: inherit; text-decoration: inherit;">gte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lt_nodejs">
 <a href="#lt_nodejs" style="color: inherit; text-decoration: inherit;">lt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lte_nodejs">
 <a href="#lte_nodejs" style="color: inherit; text-decoration: inherit;">lte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
 
 {{% choosable language python %}}
 <dl class="resources-properties">
@@ -2286,66 +2109,54 @@ The following state arguments are supported:
             title="Required">
         <span id="color_python">
 <a href="#color_python" style="color: inherit; text-decoration: inherit;">color</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The color range to use. Hex values are not supported here. Must be one of gray, blue, light_blue, navy, dark_orange, orange, dark_yellow, magenta, cerise, pink, violet, purple, gray_blue, dark_green, green, aquamarine, red, yellow, vivid_yellow, light_green, or lime_green.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gt_python">
 <a href="#gt_python" style="color: inherit; text-decoration: inherit;">gt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="gte_python">
 <a href="#gte_python" style="color: inherit; text-decoration: inherit;">gte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the lower threshold inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lt_python">
 <a href="#lt_python" style="color: inherit; text-decoration: inherit;">lt</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold non-inclusive value for this range.
 {{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span id="lte_python">
 <a href="#lte_python" style="color: inherit; text-decoration: inherit;">lte</a>
-</span> 
+</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Indicates the upper threshold inclusive value for this range.
 {{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
-
-
-
-
-
-
-
 
 
 <h2 id="package-details">Package Details</h2>

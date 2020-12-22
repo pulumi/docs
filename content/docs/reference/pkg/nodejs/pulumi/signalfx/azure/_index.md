@@ -3,7 +3,7 @@ title: "Module azure"
 title_tag: "Module azure | Package @pulumi/signalfx | Node.js SDK"
 linktitle: "azure"
 meta_desc: "Explore members of the azure module in the @pulumi/signalfx package."
-git_sha: "70b5688a845a4b65de5f2b4d2e0511e5b97ace8b"
+git_sha: "b122344defd7b11ca5db3e56f26bbff73084c8e7"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Integration" data-link-title="Integration">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L42">
         Resource <strong>Integration</strong>
     </a>
 </h3>
@@ -77,7 +77,7 @@ const azureMyteam = new signalfx.azure.Integration("azure_myteam", {
 > **NOTE** You can use the data source "signalfx.azure.getServices" to specify all services.
 
 <h4 class="pdoc-member-header" id="Integration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L117"> <b>constructor</b></a>
 </h4>
 
 
@@ -91,7 +91,7 @@ Create a Integration resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Integration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L53">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L52">method <b>get</b></a>
 </h4>
 
 
@@ -102,14 +102,14 @@ Get an existing Integration resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Integration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L43">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L42">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Integration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L64">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L63">method <b>isInstance</b></a>
 </h4>
 
 
@@ -120,7 +120,7 @@ Returns true if the given object is an instance of Integration.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Integration-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L74">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L73">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -128,7 +128,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Azure application ID for the SignalFx app. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure) in the product documentation.
 
 <h4 class="pdoc-member-header" id="Integration-customNamespacesPerServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L78">property <b>customNamespacesPerServices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L77">property <b>customNamespacesPerServices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customNamespacesPerServices: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#IntegrationCustomNamespacesPerService'>IntegrationCustomNamespacesPerService</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -136,7 +136,7 @@ Azure application ID for the SignalFx app. To learn how to get this ID, see the 
 Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `syncGuestOsNamespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
 
 <h4 class="pdoc-member-header" id="Integration-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L82">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L81">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ Allows for more fine-grained control of syncing of custom namespaces, should the
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="Integration-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L86">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L85">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>environment: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ Whether the integration is enabled.
 What type of Azure integration this is. The allowed values are `\"azure_us_government\"` and `\"azure\"`. Defaults to `\"azure\"`.
 
 <h4 class="pdoc-member-header" id="Integration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L43">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L42">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -161,7 +161,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Integration-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L90">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L89">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of the integration.
 
 <h4 class="pdoc-member-header" id="Integration-namedToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L94">property <b>namedToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L93">property <b>namedToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>namedToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ Name of the integration.
 A named token to use for ingest
 
 <h4 class="pdoc-member-header" id="Integration-pollRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L98">property <b>pollRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L97">property <b>pollRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pollRate: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -185,7 +185,7 @@ A named token to use for ingest
 AWS poll rate (in seconds). One of `60` or `300`.
 
 <h4 class="pdoc-member-header" id="Integration-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L102">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L101">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secretKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -193,7 +193,7 @@ AWS poll rate (in seconds). One of `60` or `300`.
 Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure) in the product documentation.
 
 <h4 class="pdoc-member-header" id="Integration-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L106">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L105">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>services: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -201,7 +201,7 @@ Azure secret key that associates the SignalFx app in Azure with the Azure tenant
 List of Microsoft Azure service names for the Azure services you want SignalFx to monitor. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 
 <h4 class="pdoc-member-header" id="Integration-subscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L110">property <b>subscriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L109">property <b>subscriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subscriptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -209,7 +209,7 @@ List of Microsoft Azure service names for the Azure services you want SignalFx t
 List of Azure subscriptions that SignalFx should monitor.
 
 <h4 class="pdoc-member-header" id="Integration-syncGuestOsNamespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L114">property <b>syncGuestOsNamespaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L113">property <b>syncGuestOsNamespaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>syncGuestOsNamespaces: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -217,7 +217,7 @@ List of Azure subscriptions that SignalFx should monitor.
 If enabled, SignalFx will try to sync additional namespaces for VMs (including VMs in scale sets): telegraf/mem, telegraf/cpu, azure.vm.windows.guest (these are namespaces recommended by Azure when enabling their Diagnostic Extension). If there are no metrics there, no new datapoints will be ingested. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Integration-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L118">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L117">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -225,7 +225,7 @@ If enabled, SignalFx will try to sync additional namespaces for VMs (including V
 Azure ID of the Azure tenant. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure) in the product documentation.
 
 <h4 class="pdoc-member-header" id="Integration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L43">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L42">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -236,7 +236,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getServices" data-link-title="getServices">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/getServices.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/getServices.ts#L24">
         Function <strong>getServices</strong>
     </a>
 </h3>
@@ -263,7 +263,7 @@ const azureMyteam = new signalfx.azure.Integration("azureMyteam", {services: [az
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetServicesArgs" data-link-title="GetServicesArgs">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/getServices.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/getServices.ts#L41">
         interface <strong>GetServicesArgs</strong>
     </a>
 </h3>
@@ -273,12 +273,12 @@ const azureMyteam = new signalfx.azure.Integration("azureMyteam", {services: [az
 A collection of arguments for invoking getServices.
 
 <h4 class="pdoc-member-header" id="GetServicesArgs-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/getServices.ts#L43">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/getServices.ts#L42">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#GetServicesService'>GetServicesService</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="GetServicesResult" data-link-title="GetServicesResult">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/getServices.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/getServices.ts#L48">
         interface <strong>GetServicesResult</strong>
     </a>
 </h3>
@@ -288,7 +288,7 @@ A collection of arguments for invoking getServices.
 A collection of values returned by getServices.
 
 <h4 class="pdoc-member-header" id="GetServicesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/getServices.ts#L53">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/getServices.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -296,12 +296,12 @@ A collection of values returned by getServices.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetServicesResult-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/getServices.ts#L54">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/getServices.ts#L53">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#GetServicesService'>GetServicesService</a>[];</code></pre>
 <h3 class="pdoc-module-header" id="IntegrationArgs" data-link-title="IntegrationArgs">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L245">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L244">
         interface <strong>IntegrationArgs</strong>
     </a>
 </h3>
@@ -311,7 +311,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Integration resource.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L249">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L248">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -319,7 +319,7 @@ The set of arguments for constructing a Integration resource.
 Azure application ID for the SignalFx app. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure) in the product documentation.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-customNamespacesPerServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L253">property <b>customNamespacesPerServices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L252">property <b>customNamespacesPerServices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customNamespacesPerServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationCustomNamespacesPerService'>IntegrationCustomNamespacesPerService</a>&gt;[]&gt;;</code></pre>
@@ -327,7 +327,7 @@ Azure application ID for the SignalFx app. To learn how to get this ID, see the 
 Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `syncGuestOsNamespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L257">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L256">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -335,7 +335,7 @@ Allows for more fine-grained control of syncing of custom namespaces, should the
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L261">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L260">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -343,7 +343,7 @@ Whether the integration is enabled.
 What type of Azure integration this is. The allowed values are `\"azure_us_government\"` and `\"azure\"`. Defaults to `\"azure\"`.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L265">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L264">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -351,7 +351,7 @@ What type of Azure integration this is. The allowed values are `\"azure_us_gover
 Name of the integration.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-namedToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L269">property <b>namedToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L268">property <b>namedToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namedToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ Name of the integration.
 A named token to use for ingest
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-pollRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L273">property <b>pollRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L272">property <b>pollRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pollRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -367,7 +367,7 @@ A named token to use for ingest
 AWS poll rate (in seconds). One of `60` or `300`.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L277">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L276">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -375,7 +375,7 @@ AWS poll rate (in seconds). One of `60` or `300`.
 Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure) in the product documentation.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L281">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L280">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -383,7 +383,7 @@ Azure secret key that associates the SignalFx app in Azure with the Azure tenant
 List of Microsoft Azure service names for the Azure services you want SignalFx to monitor. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-subscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L285">property <b>subscriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L284">property <b>subscriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -391,7 +391,7 @@ List of Microsoft Azure service names for the Azure services you want SignalFx t
 List of Azure subscriptions that SignalFx should monitor.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-syncGuestOsNamespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L289">property <b>syncGuestOsNamespaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L288">property <b>syncGuestOsNamespaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syncGuestOsNamespaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -399,7 +399,7 @@ List of Azure subscriptions that SignalFx should monitor.
 If enabled, SignalFx will try to sync additional namespaces for VMs (including VMs in scale sets): telegraf/mem, telegraf/cpu, azure.vm.windows.guest (these are namespaces recommended by Azure when enabling their Diagnostic Extension). If there are no metrics there, no new datapoints will be ingested. Defaults to false.
 
 <h4 class="pdoc-member-header" id="IntegrationArgs-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L293">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L292">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -407,7 +407,7 @@ If enabled, SignalFx will try to sync additional namespaces for VMs (including V
 Azure ID of the Azure tenant. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure) in the product documentation.
 
 <h3 class="pdoc-module-header" id="IntegrationState" data-link-title="IntegrationState">
-    <a href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L191">
+    <a href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L190">
         interface <strong>IntegrationState</strong>
     </a>
 </h3>
@@ -417,7 +417,7 @@ Azure ID of the Azure tenant. To learn how to get this ID, see the topic [Connec
 Input properties used for looking up and filtering Integration resources.
 
 <h4 class="pdoc-member-header" id="IntegrationState-appId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L195">property <b>appId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L194">property <b>appId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>appId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -425,7 +425,7 @@ Input properties used for looking up and filtering Integration resources.
 Azure application ID for the SignalFx app. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/getting-started/send-data.html#connect-to-microsoft-azure) in the product documentation.
 
 <h4 class="pdoc-member-header" id="IntegrationState-customNamespacesPerServices">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L199">property <b>customNamespacesPerServices</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L198">property <b>customNamespacesPerServices</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customNamespacesPerServices?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#IntegrationCustomNamespacesPerService'>IntegrationCustomNamespacesPerService</a>&gt;[]&gt;;</code></pre>
@@ -433,7 +433,7 @@ Azure application ID for the SignalFx app. To learn how to get this ID, see the 
 Allows for more fine-grained control of syncing of custom namespaces, should the boolean convenience parameter `syncGuestOsNamespaces` be not enough. The customer may specify a map of services to custom namespaces. If they do so, for each service which is a key in this map, we will attempt to sync metrics from namespaces in the value list in addition to the default namespaces.
 
 <h4 class="pdoc-member-header" id="IntegrationState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L203">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L202">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -441,7 +441,7 @@ Allows for more fine-grained control of syncing of custom namespaces, should the
 Whether the integration is enabled.
 
 <h4 class="pdoc-member-header" id="IntegrationState-environment">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L207">property <b>environment</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L206">property <b>environment</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>environment?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -449,7 +449,7 @@ Whether the integration is enabled.
 What type of Azure integration this is. The allowed values are `\"azure_us_government\"` and `\"azure\"`. Defaults to `\"azure\"`.
 
 <h4 class="pdoc-member-header" id="IntegrationState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L211">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L210">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -457,7 +457,7 @@ What type of Azure integration this is. The allowed values are `\"azure_us_gover
 Name of the integration.
 
 <h4 class="pdoc-member-header" id="IntegrationState-namedToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L215">property <b>namedToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L214">property <b>namedToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>namedToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -465,7 +465,7 @@ Name of the integration.
 A named token to use for ingest
 
 <h4 class="pdoc-member-header" id="IntegrationState-pollRate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L219">property <b>pollRate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L218">property <b>pollRate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pollRate?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -473,7 +473,7 @@ A named token to use for ingest
 AWS poll rate (in seconds). One of `60` or `300`.
 
 <h4 class="pdoc-member-header" id="IntegrationState-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L223">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L222">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -481,7 +481,7 @@ AWS poll rate (in seconds). One of `60` or `300`.
 Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure) in the product documentation.
 
 <h4 class="pdoc-member-header" id="IntegrationState-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L227">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L226">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -489,7 +489,7 @@ Azure secret key that associates the SignalFx app in Azure with the Azure tenant
 List of Microsoft Azure service names for the Azure services you want SignalFx to monitor. See the documentation for [Creating Integrations](https://developers.signalfx.com/integrations_reference.html#operation/Create%20Integration) for valida values.
 
 <h4 class="pdoc-member-header" id="IntegrationState-subscriptions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L231">property <b>subscriptions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L230">property <b>subscriptions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subscriptions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -497,7 +497,7 @@ List of Microsoft Azure service names for the Azure services you want SignalFx t
 List of Azure subscriptions that SignalFx should monitor.
 
 <h4 class="pdoc-member-header" id="IntegrationState-syncGuestOsNamespaces">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L235">property <b>syncGuestOsNamespaces</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L234">property <b>syncGuestOsNamespaces</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syncGuestOsNamespaces?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -505,7 +505,7 @@ List of Azure subscriptions that SignalFx should monitor.
 If enabled, SignalFx will try to sync additional namespaces for VMs (including VMs in scale sets): telegraf/mem, telegraf/cpu, azure.vm.windows.guest (these are namespaces recommended by Azure when enabling their Diagnostic Extension). If there are no metrics there, no new datapoints will be ingested. Defaults to false.
 
 <h4 class="pdoc-member-header" id="IntegrationState-tenantId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/70b5688a845a4b65de5f2b4d2e0511e5b97ace8b/sdk/nodejs/azure/integration.ts#L239">property <b>tenantId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-signalfx/blob/b122344defd7b11ca5db3e56f26bbff73084c8e7/sdk/nodejs/azure/integration.ts#L238">property <b>tenantId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tenantId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
