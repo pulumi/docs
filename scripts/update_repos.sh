@@ -54,6 +54,7 @@ TOOLS_REPOS=(
     "pulumi-rancher2"
     "pulumi-random"
     "pulumi-signalfx"
+    "pulumi-splunk"
     "pulumi-spotinst"
     "pulumi-terraform"
     "pulumi-tls"
