@@ -32,7 +32,7 @@ explore what's possible, you've come to the right place.
 
 ### Infrastructure
 
-{{< resource-providers "aiven,auth0,azuread,azuredevops,consul,docker,kafka,keycloak,kong,mailgun,okta,pagerduty,rabbitmq,rancher2,spotinst,vault,venafi" >}}
+{{< resource-providers "aiven,auth0,azuread,azuredevops,consul,docker,kafka,keycloak,kong,mailgun,okta,pagerduty,rabbitmq,rancher2,spotinst,splunk,vault,venafi" >}}
 
 ### Database
 
