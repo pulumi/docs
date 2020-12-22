@@ -3,7 +3,7 @@ title: "Module ecs"
 title_tag: "Module ecs | Package @pulumi/spotinst | Node.js SDK"
 linktitle: "ecs"
 meta_desc: "Explore members of the ecs module in the @pulumi/spotinst package."
-git_sha: "a5101b01c81b54d0bb11a8db9073b328b6b1c32e"
+git_sha: "aabf5943c9156643ed7e379271a64b959212b710"
 block_external_search_index: true
 ---
 
@@ -33,7 +33,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Ocean" data-link-title="Ocean">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L108">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L117">
         Resource <strong>Ocean</strong>
     </a>
 </h3>
@@ -60,6 +60,7 @@ const example = new spotinst.ecs.Ocean("example", {
                 sizePerResourceUnit: 20,
             },
             encrypted: false,
+            throughput: 500,
             volumeSize: 50,
             volumeType: "gp2",
         },
@@ -74,6 +75,14 @@ const example = new spotinst.ecs.Ocean("example", {
     maxSize: 1,
     minSize: 0,
     monitoring: true,
+    optimizeImages: {
+        performAt: "timeWindow",
+        shouldOptimizeEcsAmi: true,
+        timeWindows: [
+            "Sun:02:00-Sun:12:00",
+            "Sun:05:00-Sun:16:00",
+        ],
+    },
     region: "us-west-2",
     securityGroupIds: ["sg-12345"],
     subnetIds: ["subnet-12345"],
@@ -140,7 +149,7 @@ import * as pulumi from "@pulumi/pulumi";
 ```
 
 <h4 class="pdoc-member-header" id="Ocean-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L218"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L232"> <b>constructor</b></a>
 </h4>
 
 
@@ -154,7 +163,7 @@ Create a Ocean resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Ocean-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L118">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L127">method <b>get</b></a>
 </h4>
 
 
@@ -165,14 +174,14 @@ Get an existing Ocean resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Ocean-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L108">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L117">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Ocean-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L129">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L138">method <b>isInstance</b></a>
 </h4>
 
 
@@ -183,7 +192,7 @@ Returns true if the given object is an instance of Ocean.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Ocean-associatePublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L139">property <b>associatePublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L148">property <b>associatePublicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>associatePublicIpAddress: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -191,12 +200,12 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Configure public IP address allocation.
 
 <h4 class="pdoc-member-header" id="Ocean-autoscaler">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L140">property <b>autoscaler</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L149">property <b>autoscaler</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoscaler: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanAutoscaler'>OceanAutoscaler</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Ocean-blockDeviceMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L144">property <b>blockDeviceMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L153">property <b>blockDeviceMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blockDeviceMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanBlockDeviceMapping'>OceanBlockDeviceMapping</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -204,7 +213,7 @@ Configure public IP address allocation.
 Object. List of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 
 <h4 class="pdoc-member-header" id="Ocean-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L148">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L157">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -212,7 +221,7 @@ Object. List of block devices that are exposed to the instance, specify either v
 The ocean cluster name.
 
 <h4 class="pdoc-member-header" id="Ocean-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L152">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L161">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>desiredCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -220,7 +229,7 @@ The ocean cluster name.
 The number of instances to launch and maintain in the cluster.
 
 <h4 class="pdoc-member-header" id="Ocean-drainingTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L156">property <b>drainingTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L165">property <b>drainingTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>drainingTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -228,7 +237,7 @@ The number of instances to launch and maintain in the cluster.
 The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
 
 <h4 class="pdoc-member-header" id="Ocean-ebsOptimized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L160">property <b>ebsOptimized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L169">property <b>ebsOptimized</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ebsOptimized: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -236,7 +245,7 @@ The time in seconds, the instance is allowed to run while detached from the ELB.
 Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
 
 <h4 class="pdoc-member-header" id="Ocean-iamInstanceProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L164">property <b>iamInstanceProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L173">property <b>iamInstanceProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamInstanceProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -244,7 +253,7 @@ Enable EBS optimized for cluster. Flag will enable optimized capacity for high b
 The instance profile iam role.
 
 <h4 class="pdoc-member-header" id="Ocean-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L108">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L117">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -253,7 +262,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Ocean-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L168">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L177">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -261,7 +270,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the image used to launch the instances.
 
 <h4 class="pdoc-member-header" id="Ocean-keyPair">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L172">property <b>keyPair</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L181">property <b>keyPair</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyPair: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -269,7 +278,7 @@ ID of the image used to launch the instances.
 The key pair to attach the instances.
 
 <h4 class="pdoc-member-header" id="Ocean-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L176">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L185">property <b>maxSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -277,7 +286,7 @@ The key pair to attach the instances.
 The upper limit of instances the cluster can scale up to.
 
 <h4 class="pdoc-member-header" id="Ocean-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L180">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L189">property <b>minSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -285,7 +294,7 @@ The upper limit of instances the cluster can scale up to.
 The lower limit of instances the cluster can scale down to.
 
 <h4 class="pdoc-member-header" id="Ocean-monitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L184">property <b>monitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L193">property <b>monitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>monitoring: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -293,15 +302,23 @@ The lower limit of instances the cluster can scale down to.
 Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 
 <h4 class="pdoc-member-header" id="Ocean-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L188">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L197">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The Ocean cluster name.
 
+<h4 class="pdoc-member-header" id="Ocean-optimizeImages">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L201">property <b>optimizeImages</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>optimizeImages: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanOptimizeImages'>OceanOptimizeImages</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Object. Set auto image update settings.
+
 <h4 class="pdoc-member-header" id="Ocean-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L192">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L205">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -309,12 +326,12 @@ The Ocean cluster name.
 The region the cluster will run in.
 
 <h4 class="pdoc-member-header" id="Ocean-scheduledTasks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L193">property <b>scheduledTasks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L206">property <b>scheduledTasks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduledTasks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanScheduledTask'>OceanScheduledTask</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Ocean-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L197">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L210">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -322,7 +339,7 @@ The region the cluster will run in.
 One or more security group ids.
 
 <h4 class="pdoc-member-header" id="Ocean-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L201">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L214">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -330,7 +347,7 @@ One or more security group ids.
 A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
 
 <h4 class="pdoc-member-header" id="Ocean-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L205">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L218">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanTag'>OceanTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -338,12 +355,12 @@ A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs s
 Optionally adds tags to instances launched in an Ocean cluster.
 
 <h4 class="pdoc-member-header" id="Ocean-updatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L206">property <b>updatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L219">property <b>updatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanUpdatePolicy'>OceanUpdatePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Ocean-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L108">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L117">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -352,15 +369,20 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Ocean-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L210">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L223">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 
 Base64-encoded MIME user data to make available to the instances.
 
+<h4 class="pdoc-member-header" id="Ocean-utilizeCommitments">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L224">property <b>utilizeCommitments</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>utilizeCommitments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Ocean-utilizeReservedInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L214">property <b>utilizeReservedInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L228">property <b>utilizeReservedInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>utilizeReservedInstances: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -368,7 +390,7 @@ Base64-encoded MIME user data to make available to the instances.
 If Reserved instances exist, Ocean will utilize them before launching Spot instances.
 
 <h4 class="pdoc-member-header" id="Ocean-whitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L218">property <b>whitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L232">property <b>whitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>whitelists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -376,7 +398,7 @@ If Reserved instances exist, Ocean will utilize them before launching Spot insta
 Instance types allowed in the Ocean cluster, Cannot be configured if blacklist is configured.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpec" data-link-title="OceanLaunchSpec">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L76">
         Resource <strong>OceanLaunchSpec</strong>
     </a>
 </h3>
@@ -411,6 +433,7 @@ const example = new spotinst.ecs.OceanLaunchSpec("example", {
                 sizePerResourceUnit: 20,
             },
             encrypted: false,
+            throughput: 500,
             volumeSize: 50,
             volumeType: "gp2",
         },
@@ -450,7 +473,7 @@ export const oceanLaunchspecId = spotinst_ocean_ecs_launch_spec.example.id;
 ```
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L146"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L147"> <b>constructor</b></a>
 </h4>
 
 
@@ -464,7 +487,7 @@ Create a OceanLaunchSpec resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L85">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L86">method <b>get</b></a>
 </h4>
 
 
@@ -475,14 +498,14 @@ Get an existing OceanLaunchSpec resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L75">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L76">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L96">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L97">method <b>isInstance</b></a>
 </h4>
 
 
@@ -493,7 +516,7 @@ Returns true if the given object is an instance of OceanLaunchSpec.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L106">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L107">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>attributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecAttribute'>OceanLaunchSpecAttribute</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -501,7 +524,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Optionally adds labels to instances launched in an Ocean cluster.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-autoscaleHeadrooms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L110">property <b>autoscaleHeadrooms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L111">property <b>autoscaleHeadrooms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoscaleHeadrooms: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecAutoscaleHeadroom'>OceanLaunchSpecAutoscaleHeadroom</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -509,7 +532,7 @@ Optionally adds labels to instances launched in an Ocean cluster.
 Set custom headroom per launch spec. provide list of headrooms object.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-blockDeviceMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L114">property <b>blockDeviceMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L115">property <b>blockDeviceMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>blockDeviceMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecBlockDeviceMapping'>OceanLaunchSpecBlockDeviceMapping</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -517,7 +540,7 @@ Set custom headroom per launch spec. provide list of headrooms object.
 Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-iamInstanceProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L118">property <b>iamInstanceProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L119">property <b>iamInstanceProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>iamInstanceProfile: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -525,7 +548,7 @@ Object. Array list of block devices that are exposed to the instance, specify ei
 The ARN or name of an IAM instance profile to associate with launched instances.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -534,7 +557,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L122">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L123">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -542,7 +565,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the image used to launch the instances.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L126">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L127">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -550,7 +573,7 @@ ID of the image used to launch the instances.
 A list of instance types allowed to be provisioned for pods pending under the specified launch specification. The list overrides the list defined for the Ocean cluster.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L130">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L131">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -558,7 +581,7 @@ A list of instance types allowed to be provisioned for pods pending under the sp
 The Ocean Launch Specification name.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-oceanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L134">property <b>oceanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L135">property <b>oceanId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>oceanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -566,7 +589,7 @@ The Ocean Launch Specification name.
 The Ocean cluster ID .
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L138">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L139">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -574,7 +597,7 @@ The Ocean cluster ID .
 One or more security group ids.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L142">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L143">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanLaunchSpecTag'>OceanLaunchSpecTag</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -582,7 +605,7 @@ One or more security group ids.
 A key/value mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L75">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L76">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -591,7 +614,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpec-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L146">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L147">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -602,7 +625,7 @@ Base64-encoded MIME user data to make available to the instances.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="OceanArgs" data-link-title="OceanArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L396">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L419">
         interface <strong>OceanArgs</strong>
     </a>
 </h3>
@@ -612,7 +635,7 @@ Base64-encoded MIME user data to make available to the instances.
 The set of arguments for constructing a Ocean resource.
 
 <h4 class="pdoc-member-header" id="OceanArgs-associatePublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L400">property <b>associatePublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L423">property <b>associatePublicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associatePublicIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -620,12 +643,12 @@ The set of arguments for constructing a Ocean resource.
 Configure public IP address allocation.
 
 <h4 class="pdoc-member-header" id="OceanArgs-autoscaler">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L401">property <b>autoscaler</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L424">property <b>autoscaler</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaler?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanAutoscaler'>OceanAutoscaler</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanArgs-blockDeviceMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L405">property <b>blockDeviceMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L428">property <b>blockDeviceMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blockDeviceMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanBlockDeviceMapping'>OceanBlockDeviceMapping</a>&gt;[]&gt;;</code></pre>
@@ -633,7 +656,7 @@ Configure public IP address allocation.
 Object. List of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 
 <h4 class="pdoc-member-header" id="OceanArgs-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L409">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L432">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -641,7 +664,7 @@ Object. List of block devices that are exposed to the instance, specify either v
 The ocean cluster name.
 
 <h4 class="pdoc-member-header" id="OceanArgs-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L413">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L436">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -649,7 +672,7 @@ The ocean cluster name.
 The number of instances to launch and maintain in the cluster.
 
 <h4 class="pdoc-member-header" id="OceanArgs-drainingTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L417">property <b>drainingTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L440">property <b>drainingTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>drainingTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -657,7 +680,7 @@ The number of instances to launch and maintain in the cluster.
 The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
 
 <h4 class="pdoc-member-header" id="OceanArgs-ebsOptimized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L421">property <b>ebsOptimized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L444">property <b>ebsOptimized</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ebsOptimized?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -665,7 +688,7 @@ The time in seconds, the instance is allowed to run while detached from the ELB.
 Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
 
 <h4 class="pdoc-member-header" id="OceanArgs-iamInstanceProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L425">property <b>iamInstanceProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L448">property <b>iamInstanceProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -673,7 +696,7 @@ Enable EBS optimized for cluster. Flag will enable optimized capacity for high b
 The instance profile iam role.
 
 <h4 class="pdoc-member-header" id="OceanArgs-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L429">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L452">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -681,7 +704,7 @@ The instance profile iam role.
 ID of the image used to launch the instances.
 
 <h4 class="pdoc-member-header" id="OceanArgs-keyPair">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L433">property <b>keyPair</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L456">property <b>keyPair</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPair?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -689,7 +712,7 @@ ID of the image used to launch the instances.
 The key pair to attach the instances.
 
 <h4 class="pdoc-member-header" id="OceanArgs-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L437">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L460">property <b>maxSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -697,7 +720,7 @@ The key pair to attach the instances.
 The upper limit of instances the cluster can scale up to.
 
 <h4 class="pdoc-member-header" id="OceanArgs-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L441">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L464">property <b>minSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -705,7 +728,7 @@ The upper limit of instances the cluster can scale up to.
 The lower limit of instances the cluster can scale down to.
 
 <h4 class="pdoc-member-header" id="OceanArgs-monitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L445">property <b>monitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L468">property <b>monitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -713,15 +736,23 @@ The lower limit of instances the cluster can scale down to.
 Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 
 <h4 class="pdoc-member-header" id="OceanArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L449">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L472">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The Ocean cluster name.
 
+<h4 class="pdoc-member-header" id="OceanArgs-optimizeImages">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L476">property <b>optimizeImages</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>optimizeImages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanOptimizeImages'>OceanOptimizeImages</a>&gt;;</code></pre>
+
+Object. Set auto image update settings.
+
 <h4 class="pdoc-member-header" id="OceanArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L453">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L480">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -729,12 +760,12 @@ The Ocean cluster name.
 The region the cluster will run in.
 
 <h4 class="pdoc-member-header" id="OceanArgs-scheduledTasks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L454">property <b>scheduledTasks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L481">property <b>scheduledTasks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledTasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanScheduledTask'>OceanScheduledTask</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L458">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L485">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -742,7 +773,7 @@ The region the cluster will run in.
 One or more security group ids.
 
 <h4 class="pdoc-member-header" id="OceanArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L462">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L489">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -750,7 +781,7 @@ One or more security group ids.
 A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
 
 <h4 class="pdoc-member-header" id="OceanArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L466">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L493">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanTag'>OceanTag</a>&gt;[]&gt;;</code></pre>
@@ -758,20 +789,25 @@ A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs s
 Optionally adds tags to instances launched in an Ocean cluster.
 
 <h4 class="pdoc-member-header" id="OceanArgs-updatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L467">property <b>updatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L494">property <b>updatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanUpdatePolicy'>OceanUpdatePolicy</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanArgs-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L471">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L498">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Base64-encoded MIME user data to make available to the instances.
 
+<h4 class="pdoc-member-header" id="OceanArgs-utilizeCommitments">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L499">property <b>utilizeCommitments</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>utilizeCommitments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanArgs-utilizeReservedInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L475">property <b>utilizeReservedInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L503">property <b>utilizeReservedInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>utilizeReservedInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -779,7 +815,7 @@ Base64-encoded MIME user data to make available to the instances.
 If Reserved instances exist, Ocean will utilize them before launching Spot instances.
 
 <h4 class="pdoc-member-header" id="OceanArgs-whitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L479">property <b>whitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L507">property <b>whitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>whitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -787,7 +823,7 @@ If Reserved instances exist, Ocean will utilize them before launching Spot insta
 Instance types allowed in the Ocean cluster, Cannot be configured if blacklist is configured.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecArgs" data-link-title="OceanLaunchSpecArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L252">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L253">
         interface <strong>OceanLaunchSpecArgs</strong>
     </a>
 </h3>
@@ -797,7 +833,7 @@ Instance types allowed in the Ocean cluster, Cannot be configured if blacklist i
 The set of arguments for constructing a OceanLaunchSpec resource.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecArgs-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L256">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L257">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecAttribute'>OceanLaunchSpecAttribute</a>&gt;[]&gt;;</code></pre>
@@ -805,7 +841,7 @@ The set of arguments for constructing a OceanLaunchSpec resource.
 Optionally adds labels to instances launched in an Ocean cluster.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecArgs-autoscaleHeadrooms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L260">property <b>autoscaleHeadrooms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L261">property <b>autoscaleHeadrooms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleHeadrooms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecAutoscaleHeadroom'>OceanLaunchSpecAutoscaleHeadroom</a>&gt;[]&gt;;</code></pre>
@@ -813,7 +849,7 @@ Optionally adds labels to instances launched in an Ocean cluster.
 Set custom headroom per launch spec. provide list of headrooms object.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecArgs-blockDeviceMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L264">property <b>blockDeviceMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L265">property <b>blockDeviceMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blockDeviceMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecBlockDeviceMapping'>OceanLaunchSpecBlockDeviceMapping</a>&gt;[]&gt;;</code></pre>
@@ -821,7 +857,7 @@ Set custom headroom per launch spec. provide list of headrooms object.
 Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecArgs-iamInstanceProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L268">property <b>iamInstanceProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L269">property <b>iamInstanceProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -829,7 +865,7 @@ Object. Array list of block devices that are exposed to the instance, specify ei
 The ARN or name of an IAM instance profile to associate with launched instances.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecArgs-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L272">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L273">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -837,7 +873,7 @@ The ARN or name of an IAM instance profile to associate with launched instances.
 ID of the image used to launch the instances.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecArgs-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L276">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L277">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -845,7 +881,7 @@ ID of the image used to launch the instances.
 A list of instance types allowed to be provisioned for pods pending under the specified launch specification. The list overrides the list defined for the Ocean cluster.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L280">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L281">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -853,7 +889,7 @@ A list of instance types allowed to be provisioned for pods pending under the sp
 The Ocean Launch Specification name.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecArgs-oceanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L284">property <b>oceanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L285">property <b>oceanId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oceanId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -861,7 +897,7 @@ The Ocean Launch Specification name.
 The Ocean cluster ID .
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L288">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L289">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -869,7 +905,7 @@ The Ocean cluster ID .
 One or more security group ids.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L292">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L293">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecTag'>OceanLaunchSpecTag</a>&gt;[]&gt;;</code></pre>
@@ -877,7 +913,7 @@ One or more security group ids.
 A key/value mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecArgs-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L296">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L297">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -885,7 +921,7 @@ A key/value mapping of tags to assign to the resource.
 Base64-encoded MIME user data to make available to the instances.
 
 <h3 class="pdoc-module-header" id="OceanLaunchSpecState" data-link-title="OceanLaunchSpecState">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L202">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L203">
         interface <strong>OceanLaunchSpecState</strong>
     </a>
 </h3>
@@ -895,7 +931,7 @@ Base64-encoded MIME user data to make available to the instances.
 Input properties used for looking up and filtering OceanLaunchSpec resources.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecState-attributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L206">property <b>attributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L207">property <b>attributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>attributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecAttribute'>OceanLaunchSpecAttribute</a>&gt;[]&gt;;</code></pre>
@@ -903,7 +939,7 @@ Input properties used for looking up and filtering OceanLaunchSpec resources.
 Optionally adds labels to instances launched in an Ocean cluster.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecState-autoscaleHeadrooms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L210">property <b>autoscaleHeadrooms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L211">property <b>autoscaleHeadrooms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaleHeadrooms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecAutoscaleHeadroom'>OceanLaunchSpecAutoscaleHeadroom</a>&gt;[]&gt;;</code></pre>
@@ -911,7 +947,7 @@ Optionally adds labels to instances launched in an Ocean cluster.
 Set custom headroom per launch spec. provide list of headrooms object.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecState-blockDeviceMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L214">property <b>blockDeviceMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L215">property <b>blockDeviceMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blockDeviceMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecBlockDeviceMapping'>OceanLaunchSpecBlockDeviceMapping</a>&gt;[]&gt;;</code></pre>
@@ -919,7 +955,7 @@ Set custom headroom per launch spec. provide list of headrooms object.
 Object. Array list of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecState-iamInstanceProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L218">property <b>iamInstanceProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L219">property <b>iamInstanceProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -927,7 +963,7 @@ Object. Array list of block devices that are exposed to the instance, specify ei
 The ARN or name of an IAM instance profile to associate with launched instances.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecState-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L222">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L223">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -935,7 +971,7 @@ The ARN or name of an IAM instance profile to associate with launched instances.
 ID of the image used to launch the instances.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecState-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L226">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L227">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -943,7 +979,7 @@ ID of the image used to launch the instances.
 A list of instance types allowed to be provisioned for pods pending under the specified launch specification. The list overrides the list defined for the Ocean cluster.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L230">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L231">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -951,7 +987,7 @@ A list of instance types allowed to be provisioned for pods pending under the sp
 The Ocean Launch Specification name.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecState-oceanId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L234">property <b>oceanId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L235">property <b>oceanId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>oceanId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -959,7 +995,7 @@ The Ocean Launch Specification name.
 The Ocean cluster ID .
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L238">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L239">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -967,7 +1003,7 @@ The Ocean cluster ID .
 One or more security group ids.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L242">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L243">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanLaunchSpecTag'>OceanLaunchSpecTag</a>&gt;[]&gt;;</code></pre>
@@ -975,7 +1011,7 @@ One or more security group ids.
 A key/value mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="OceanLaunchSpecState-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/oceanLaunchSpec.ts#L246">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/oceanLaunchSpec.ts#L247">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -983,7 +1019,7 @@ A key/value mapping of tags to assign to the resource.
 Base64-encoded MIME user data to make available to the instances.
 
 <h3 class="pdoc-module-header" id="OceanState" data-link-title="OceanState">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L307">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L325">
         interface <strong>OceanState</strong>
     </a>
 </h3>
@@ -993,7 +1029,7 @@ Base64-encoded MIME user data to make available to the instances.
 Input properties used for looking up and filtering Ocean resources.
 
 <h4 class="pdoc-member-header" id="OceanState-associatePublicIpAddress">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L311">property <b>associatePublicIpAddress</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L329">property <b>associatePublicIpAddress</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associatePublicIpAddress?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1001,12 +1037,12 @@ Input properties used for looking up and filtering Ocean resources.
 Configure public IP address allocation.
 
 <h4 class="pdoc-member-header" id="OceanState-autoscaler">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L312">property <b>autoscaler</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L330">property <b>autoscaler</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoscaler?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanAutoscaler'>OceanAutoscaler</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanState-blockDeviceMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L316">property <b>blockDeviceMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L334">property <b>blockDeviceMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blockDeviceMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanBlockDeviceMapping'>OceanBlockDeviceMapping</a>&gt;[]&gt;;</code></pre>
@@ -1014,7 +1050,7 @@ Configure public IP address allocation.
 Object. List of block devices that are exposed to the instance, specify either virtual devices and EBS volumes.
 
 <h4 class="pdoc-member-header" id="OceanState-clusterName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L320">property <b>clusterName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L338">property <b>clusterName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clusterName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1022,7 +1058,7 @@ Object. List of block devices that are exposed to the instance, specify either v
 The ocean cluster name.
 
 <h4 class="pdoc-member-header" id="OceanState-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L324">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L342">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1030,7 +1066,7 @@ The ocean cluster name.
 The number of instances to launch and maintain in the cluster.
 
 <h4 class="pdoc-member-header" id="OceanState-drainingTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L328">property <b>drainingTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L346">property <b>drainingTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>drainingTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1038,7 +1074,7 @@ The number of instances to launch and maintain in the cluster.
 The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
 
 <h4 class="pdoc-member-header" id="OceanState-ebsOptimized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L332">property <b>ebsOptimized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L350">property <b>ebsOptimized</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ebsOptimized?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1046,7 +1082,7 @@ The time in seconds, the instance is allowed to run while detached from the ELB.
 Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
 
 <h4 class="pdoc-member-header" id="OceanState-iamInstanceProfile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L336">property <b>iamInstanceProfile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L354">property <b>iamInstanceProfile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>iamInstanceProfile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1054,7 +1090,7 @@ Enable EBS optimized for cluster. Flag will enable optimized capacity for high b
 The instance profile iam role.
 
 <h4 class="pdoc-member-header" id="OceanState-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L340">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L358">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1062,7 +1098,7 @@ The instance profile iam role.
 ID of the image used to launch the instances.
 
 <h4 class="pdoc-member-header" id="OceanState-keyPair">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L344">property <b>keyPair</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L362">property <b>keyPair</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyPair?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1070,7 +1106,7 @@ ID of the image used to launch the instances.
 The key pair to attach the instances.
 
 <h4 class="pdoc-member-header" id="OceanState-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L348">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L366">property <b>maxSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1078,7 +1114,7 @@ The key pair to attach the instances.
 The upper limit of instances the cluster can scale up to.
 
 <h4 class="pdoc-member-header" id="OceanState-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L352">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L370">property <b>minSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1086,7 +1122,7 @@ The upper limit of instances the cluster can scale up to.
 The lower limit of instances the cluster can scale down to.
 
 <h4 class="pdoc-member-header" id="OceanState-monitoring">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L356">property <b>monitoring</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L374">property <b>monitoring</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>monitoring?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1094,15 +1130,23 @@ The lower limit of instances the cluster can scale down to.
 Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 
 <h4 class="pdoc-member-header" id="OceanState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L360">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L378">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The Ocean cluster name.
 
+<h4 class="pdoc-member-header" id="OceanState-optimizeImages">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L382">property <b>optimizeImages</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>optimizeImages?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanOptimizeImages'>OceanOptimizeImages</a>&gt;;</code></pre>
+
+Object. Set auto image update settings.
+
 <h4 class="pdoc-member-header" id="OceanState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L364">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L386">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1110,12 +1154,12 @@ The Ocean cluster name.
 The region the cluster will run in.
 
 <h4 class="pdoc-member-header" id="OceanState-scheduledTasks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L365">property <b>scheduledTasks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L387">property <b>scheduledTasks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledTasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanScheduledTask'>OceanScheduledTask</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L369">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L391">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1123,7 +1167,7 @@ The region the cluster will run in.
 One or more security group ids.
 
 <h4 class="pdoc-member-header" id="OceanState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L373">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L395">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1131,7 +1175,7 @@ One or more security group ids.
 A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
 
 <h4 class="pdoc-member-header" id="OceanState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L377">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L399">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanTag'>OceanTag</a>&gt;[]&gt;;</code></pre>
@@ -1139,20 +1183,25 @@ A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs s
 Optionally adds tags to instances launched in an Ocean cluster.
 
 <h4 class="pdoc-member-header" id="OceanState-updatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L378">property <b>updatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L400">property <b>updatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanUpdatePolicy'>OceanUpdatePolicy</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanState-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L382">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L404">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 Base64-encoded MIME user data to make available to the instances.
 
+<h4 class="pdoc-member-header" id="OceanState-utilizeCommitments">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L405">property <b>utilizeCommitments</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>utilizeCommitments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="OceanState-utilizeReservedInstances">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L386">property <b>utilizeReservedInstances</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L409">property <b>utilizeReservedInstances</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>utilizeReservedInstances?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1160,7 +1209,7 @@ Base64-encoded MIME user data to make available to the instances.
 If Reserved instances exist, Ocean will utilize them before launching Spot instances.
 
 <h4 class="pdoc-member-header" id="OceanState-whitelists">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/a5101b01c81b54d0bb11a8db9073b328b6b1c32e/sdk/nodejs/ecs/ocean.ts#L390">property <b>whitelists</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/ecs/ocean.ts#L413">property <b>whitelists</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>whitelists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
